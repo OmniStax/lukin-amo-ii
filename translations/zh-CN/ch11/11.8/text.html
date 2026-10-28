@@ -1,0 +1,104 @@
+<section id="opening">
+<p>在讨论研究<span data-concept="optical-lattice-potential">光学格子</span>中冷原子的近期实验进展之前，我们先建立一个一般的理论框架，用来分析周期势中的<span data-concept="indistinguishability-statistics">不可分辨原子</span>。由位于$\{x_i\}$处的$N$个原子组成的系统，由包含两粒子相互作用的一般哈密顿量支配，</p>
+<div class="equation" id="eq-11-177">$$\kH = \sum_{i=1}^N\left(\frac{\kpcm_i^2}{2\km} + \kV(x_i)\right) + \sum_{j\neq i}\frac{1}{2}\kUpair(x_i - x_j), \tag{11.177}$$</div>
+<p>其中对于足够冷的原子，相互作用势可以用<span data-concept="s-wave-pseudopotential">s 波赝势</span>代替，</p>
+<div class="equation" id="eq-11-178">$$\kUpair(x_i - x_j) = \frac{4\pi\hbar^2\kas}{\km}\delta(x_i - x_j). \tag{11.178}$$</div>
+<p>用<span data-concept="second-quantization">二次量子化</span>的语言，其中$\hat{\psi}^\dagger(\mathbf{r})$在位置$\mathbf{r}$处产生一个玻色子或费米子，哈密顿量可以写成</p>
+<div class="equation" id="eq-11-179">$$\begin{aligned} \kH &amp;= \int\hat{\psi}^\dagger(\mathbf{r})\left(\frac{\kpcm^2}{2\km} + \kV(x)\right)\hat{\psi}(\mathbf{r})d^3\mathbf{r} \\ &amp;+ \frac{1}{2}\frac{4\pi\hbar^2\kas}{\km}\int\hat{\psi}^\dagger(\mathbf{r})\hat{\psi}^\dagger(\mathbf{r})\hat{\psi}(\mathbf{r})\hat{\psi}(\mathbf{r})d^3\mathbf{r}. \end{aligned} \tag{11.179}$$</div>
+<p>对于玻色子，<span data-concept="matter-field-operator">场算符</span>服从对易关系</p>
+<div class="equation" id="eq-11-180">$$[\hat{\psi}(\mathbf{r}), \hat{\psi}^\dagger(\mathbf{r}')] = \delta(\mathbf{r} - \mathbf{r}') \tag{11.180}$$</div>
+<div class="equation" id="eq-11-181">$$\quad \tag{11.181}$$</div>
+<p>而对于费米子，它们服从反对易关系</p>
+<div class="equation" id="eq-11-182">$$\{\hat{\psi}(\mathbf{r}), \hat{\psi}^\dagger(\mathbf{r}')\} = \delta(\mathbf{r} - \mathbf{r}'). \tag{11.182}$$</div>
+<p>我们先前对<span data-concept="bose-condensation">玻色凝聚体</span>的分析，把算符$\hat{\psi}$换成了一个表示凝聚体宏观波函数的经典数。只要相互作用不太强，即哈密顿量中的第一项比第二项占优，这一分析就是有效的。然而在<span data-concept="optical-lattice-potential">光学格子</span>中，这一大小关系不必成立，我们需要超出<span data-concept="gross-pitaevskii-equation">格罗斯-皮塔耶夫斯基方程</span>，才能理解系统的行为。</p>
+</section>
+
+<section id="periodic-potential">
+<h2>11.8.1 周期势中的原子</h2>
+<p>被约束在<span data-concept="optical-lattice-potential">光学格子</span>中的原子，会感受到一个周期性的势$\kV(\mathbf{r})$。在周期势很强的假设下，我们可以求得哈密顿量<a href="#eq-11-179">式 11.179</a>的一个近似形式，它为这个系统提供更简单的形式体系和更直观的物理图像。</p>
+<p>首先，我们简化周期势本身。如果格子的波腹出现在位置$\{\mathbf{r}_i\}$处，那么我们可以把势写成</p>
+<div class="equation" id="eq-11-183">$$\kV(\mathbf{r}) = \sum_i\tilde{\kV}(\mathbf{r} - \mathbf{r_i}). \tag{11.183}$$</div>
+<p>在光强极大处（或势能极小处）附近，原子的运动将趋近于谐振子的运动，因此我们可以把势近似为</p>
+<div class="equation" id="eq-11-184">$$\tilde{\kV}(\mathbf{r} - \mathbf{r_i}) = \kVzero\kKL^2(\mathbf{r} - \mathbf{r_i})^2. \tag{11.184}$$</div>
+<p><span data-concept="lattice-site-oscillator" id="site-oscillator">每个格点都是一个具有特征频率的谐振子势</span>。</p>
+<figure class="dv" id="drv-site-frequency"></figure>
+<p>$\kER = \frac{\hbar^2\kKL^2}{2\km}$是<span data-concept="lattice-recoil-energy" id="recoil-energy">格子的反冲能</span>。对于足够大的<span data-concept="trap-depth">阱深</span> $\kVzero \gg \kER$，原子将局域在势极小处附近（这一条件类似于离子阱的<span data-concept="lamb-dicke-regime">兰姆-迪克极限</span>）。每个格点都有一组与之相联系的谐振子波函数$\phi_n(\mathbf{r} - \mathbf{r}_i)$，而对于足够强的势$\kVzero \gg \kER$，不同阱中的波函数之间只有很小的重叠。最后，对于足够冷的原子，只有基态$\phi_0$会被占据。</p>
+<p>如果格点之间没有相互作用，那么原子波函数就可以按每个格点上的一组规范正交的谐振子波函数$\phi_n(\mathbf{r} - \mathbf{r}_i)$展开。正如我们在<span data-concept="double-well-model">双阱势</span>的情形中所见，<span data-concept="lattice-hopping">隧穿项</span>将使谐振子能级混杂，产生<span data-concept="wannier-expansion">布洛赫能带</span>，其宽度由隧穿强度给出，间隔由谐振子能级给出。</p>
+<p>为了推导周期势中原子的<span data-concept="wannier-expansion">布洛赫能带</span>，<span data-concept="wannier-expansion" id="localized-states">我们把场算符表示成对局域态的求和</span></p>
+<div class="equation" id="eq-11-186">$$\hat{\psi} = \sum_i\hat{b}_iW(\mathbf{r} - \mathbf{r}_i), \tag{11.186}$$</div>
+<p>其中$\hat{b}_i$湮没第$i$个格点上的一个粒子，并满足</p>
+<div class="equation" id="eq-11-187">$$[\hat{b}_i, \hat{b}_j] = \delta_{ij} \qquad \text{(玻色子)} \tag{11.187}$$<sup class="fn" data-note="c-eq-11-187"></sup></div>
+<div class="equation" id="eq-11-188">$$\{\hat{b}_i, \hat{b}_j\} = \delta_{ij} \qquad \text{(费米子).} \tag{11.188}$$<sup class="fn" data-note="c-eq-11-188"></sup></div>
+<p>严格地说，按<span data-concept="wannier-expansion">万尼尔函数</span> $W$展开，要求它们彼此正交。然而就我们的目的而言，用位于格点$\mathbf{r}_i$处的谐振子基态来代替<span data-concept="wannier-expansion">万尼尔函数</span>是一个很好的近似，</p>
+<div class="equation" id="eq-11-189">$$\hat{\psi} \approx \sum_i\hat{b}_i\phi(\mathbf{r} - \mathbf{r}_i). \tag{11.189}$$</div>
+<p>把它当作试探波函数代入哈密顿量，得到</p>
+<div class="equation">$$\begin{aligned} H &amp;= \sum_{i,j}\hat{b}_i^\dagger\hat{b}_j\int\phi^*(\mathbf{r} - \mathbf{r}_i)\left(\frac{\kpcm^2}{2\km} + \kV(\mathbf{r})\right)\phi(\mathbf{r} - \mathbf{r}_j)d^3\mathbf{r} \\ &amp;+ \frac{1}{2}\frac{4\pi\hbar^2\kas}{\km}\sum_{i,j,k,l}\int\hat{b}_i^\dagger\hat{b}_j^\dagger\hat{b}_k\hat{b}_l\phi^*(\mathbf{r} - \mathbf{r}_i)\phi^*(\mathbf{r} - \mathbf{r}_j)\phi(\mathbf{r} - \mathbf{r}_k)\phi(\mathbf{r} - \mathbf{r}_l)d^3\mathbf{r}. \end{aligned}$$</div>
+<p>由于不同格点上的波函数之间的重叠非常小，我们可以把哈密顿量算到这个小参数的领头阶。</p>
+<p>相互作用项的领头阶出现在$i = j = k = l$时，这意味着我们只考虑了局域在同一个格点上的粒子之间的相互作用。</p>
+<figure class="dv" id="drv-on-site-interaction"></figure>
+<p><span data-concept="on-site-interaction">格点上相互作用</span>的强度，近似由两个原子被约束在谐振子基态大小的体积内时所对应的相互作用能给出，</p>
+<div class="equation" id="eq-11-191">$$\kUzero \sim \frac{4\pi\kas\hbar^2}{\km\kaHO^3}. \tag{11.191}$$</div>
+<p>这一计算为哈密顿量<a href="#eq-11-179">式 11.179</a>中的相互作用项给出了一个简单而物理的形式。</p>
+<p>动能项既有对角的贡献（只涉及单个格点$i$），也有非对角的贡献（涉及$i$和$j$两个格点）。格点势导致一个与第$i$个格点的占据相联系的谐振子能量，而任何额外的外部势$\kVtrap(\mathbf{r})$都会加到该格点的能量上。此外，我们还需要保留最低阶的重叠积分。它们出现在$i = j \pm 1$的最近邻项中，于是动能项变为</p>
+<div class="equation" id="eq-11-192">$$\begin{aligned} \kH_\mathrm{kin} &amp;= \sum_i\left(\kVtrap(\mathbf{r}_i) + \frac{\hbar\knuT}{2}\right)\hat{b}_i^\dagger\hat{b}_i \\ &amp;- \sum_{&lt;i,j&gt;}\left(\kVzero\int\phi^*(\mathbf{r} - \mathbf{r}_i)\phi(\mathbf{r} - \mathbf{r}_j)d^3\mathbf{r}\right)\hat{b}_i^\dagger\hat{b}_j \end{aligned} \tag{11.192}$$</div>
+<div class="equation" id="eq-11-193">$$= \sum_i\kepsi\hat{b}_i^\dagger\hat{b}_i - \sum_{&lt;i,j&gt;}\kt_{i,j}\hat{b}_i^\dagger\hat{b}_j, \tag{11.193}$$</div>
+<p>其中$&lt; i, j &gt;$表示对所有最近邻求和。第一项是格点$i$上有一个粒子所对应的能量，而<span data-concept="lattice-hopping" id="hopping">第二项允许原子以速率$\kt$从一个格点跳跃到最近邻的格点</span>。注意<span data-concept="lattice-hopping">跳跃项</span>的符号为负。这是因为任一给定格点的实际势，相对其裸值被邻近格点的势降低了。用微扰论处理这个能量差，就允许了隧穿，并降低了系统的总能量。</p>
+<p>把动能项和相互作用项放在一起，就得到用每个格点上原子的<span data-concept="creation-annihilation-operators">产生算符与湮没算符</span>表示的哈密顿量的简单形式：</p>
+<div class="equation" id="eq-11-194">$$\kH = \sum_i\kepsi\hat{b}_i^\dagger\hat{b}_i - \sum_{&lt;i,j&gt;}\kt_{i,j}\hat{b}_i^\dagger\hat{b}_j + \frac{\kUzero}{2}\sum_i\hat{n}_i(\hat{n}_i - 1). \tag{11.194}$$</div>
+<p><span data-concept="bose-hubbard-model" id="hubbard">这个哈密顿量被称为“哈伯德模型”</span>，在凝聚态物理的背景下已被广泛研究。</p>
+</section>
+
+<section id="bose-hubbard">
+<h2>11.8.2 玻色-哈伯德模型的物理</h2>
+<p>把<span data-concept="bose-condensation">玻色凝聚体</span>装载到<span data-concept="optical-lattice-potential">光学格子</span>中，就可以造出<span data-concept="bose-hubbard-model">玻色-哈伯德模型</span>的一个物理实现，其中参数$U$和$\kt$可以分别通过改变<span data-concept="s-wave-scattering-length">原子散射长度</span>或格子深度来实验调节。正如我们将看到的，改变这些参数的相对大小，会使系统基态发生定性的变化。为了阐明这一转变，我们将考虑两种极限情形：$\kt \gg \kUzero$和$\kUzero \gg \kt$。</p>
+
+<h3>弱格子：$\kt \gg \kUzero$</h3>
+<p>当形成<span data-concept="optical-lattice-potential">光学格子</span>的激光束很弱时，凝聚体态由<span data-concept="bose-hubbard-model">玻色-哈伯德哈密顿量</span>中的<span data-concept="lattice-hopping">跳跃项</span>主导，</p>
+<div class="equation" id="eq-11-195">$$\kH_\mathrm{kin} = -\kt\sum_{&lt;ij&gt;}\hat{b}_i^\dagger\hat{b}_j, \tag{11.195}$$</div>
+<p>而相互作用项的效应可以忽略。哈密顿量的这一动能部分，通过在动量空间中定义<span data-concept="creation-annihilation-operators">湮没算符</span>，就可以很容易地对角化，</p>
+<div class="equation" id="eq-11-196">$$\hat{b}_{\kk} = \frac{1}{\sqrt{N}}\sum_i e^{-i\kk\cdot\mathbf{x_i}}\hat{b}_i \tag{11.196}$$</div>
+<div class="equation" id="eq-11-197">$$\hat{b}_i = \frac{1}{\sqrt{N}}\sum_{\kk} e^{i\kk\cdot\mathbf{x_i}}\hat{b}_{\kk} \tag{11.197}$$</div>
+<p>其中$N$是格子中格点的总数。</p>
+<figure class="dv" id="drv-weak-lattice-band"></figure>
+<p>显然，把所有原子都放入$\kkmag = 0$的态，就得到哈密顿量的基态：</p>
+<div class="equation" id="eq-11-200">$$|\kpsi_0\rangle = \frac{1}{\sqrt{N!}}\left(\hat{b}_{\kkmag=0}^\dagger\right)^N|\mathrm{vac}\rangle \tag{11.200}$$</div>
+<div class="equation" id="eq-11-201">$$= \frac{1}{\sqrt{N!}}\left(\frac{1}{\sqrt{N}}\sum_i\hat{b}_i^\dagger\right)^N|\mathrm{vac}\rangle. \tag{11.201}$$</div>
+<p>正如<span data-concept="double-well-model">双阱势</span>的情形，相邻格点之间的相干性是有限的，而在大$N$的极限下，<span data-concept="double-well-coherent-ground-state">基态趋近于一个<span data-concept="coherent-state">相干态</span></span>。<span data-concept="lattice-superfluid" id="superfluid">这个态表现出超流动性，因为原子可以在格点之间自由隧穿</span>。然而，由于格点之间的相对相位是确定的，原子数是涨落的。</p>
+
+<h3>强格子：$\kt \ll \kUzero$</h3>
+<p>在相反的强<span data-concept="optical-lattice-potential">光学格子</span>极限下，原子在格点之间的<span data-concept="lattice-hopping">跳跃</span>非常弱，哈密顿量由相互作用项主导</p>
+<div class="equation" id="eq-11-202">$$\kH_\mathrm{int} = \frac{\kUzero}{2}\sum_i\hat{n}_i\left(\hat{n}_i - 1\right). \tag{11.202}$$</div>
+<p>当格子被完美占据，即$N$个原子占据$N$个格点时，系统的最低能量本征态必定在每个格点上有一个原子：</p>
+<div class="equation" id="eq-11-203">$$|\kpsi_0\rangle = \prod_i\hat{b}_i^\dagger|\mathrm{vac}\rangle \tag{11.203}$$</div>
+<p>到微扰论的最低阶，<span data-concept="lattice-hopping">跳跃</span>的效应是由虚过程产生的一个整体能量移位。这个所谓的<span data-concept="mott-insulator">“交换能”</span>使每个原子的总能量降低$\kDeltaEex = -2\kt^2/\kUzero$，但不影响系统的基态。<span data-concept="mott-insulator" id="mott">这个基态被称为“莫特绝缘体”</span>，因为原子不会在格子中四处移动；它们被冻结在原位。与弱格子中$\kkmag = 0$的基态不同，每个格点中的粒子数是确定的，因此它们之间的相位就不确定。</p>
+
+<h3>莫特绝缘体到超流体的转变</h3>
+<p>强格子的基态，即<span data-concept="mott-insulator">莫特绝缘体</span>，与弱格子的基态，即<span data-concept="lattice-superfluid">超流体</span>，在性质上不同。通过改变参数$\kt/\kUzero$，可以在这两个极限之间移动，使系统发生<span data-concept="quantum-phase-transition">相变</span>。这一相变甚至可以在$\kT = 0$时发生，因为态的改变是由量子（而非热）涨落驱动的，所以<span data-concept="quantum-phase-transition" id="qpt">它被称为“量子相变”。</span></p>
+<p>为了分析这一相变，我们将作若干假设。首先，我们假设所处理的是均匀系统，从而不考虑谐振约束势的效应。其次，<span data-concept="filling-factor" id="commensurate">我们假设“公度”填充</span></p>
+<div class="equation" id="eq-11-204">$$\nu = \frac{N_\mathrm{atoms}}{N_\mathrm{sites}} = 1. \tag{11.204}$$</div>
+<p>注意，在<span data-concept="filling-factor">非公度填充</span> $\nu \neq \text{整数}$时，严格地说不存在相变，因为多出的原子或空穴会离域，以使其动能最小。最后，我们将使用平均场方法，假设态矢量可以分解为各格点态的乘积，</p>
+<div class="equation" id="eq-11-205">$$\begin{aligned} |\kpsi_0\rangle &amp;= \prod_i|\phi\rangle_i \\ &amp;= \prod_i\left(\sum_{n=0}^\infty \kcn\frac{(\hat{b}_i^\dagger)^n}{\sqrt{n!}}\right)|\mathrm{vac}\rangle \\ &amp;= \prod_i\left(\sum_{n=0}^\infty \kcn|n_i\rangle\right). \end{aligned} \tag{11.205}$$</div>
+<p>这一假设不完全成立，因为<span data-concept="lattice-superfluid">超流体</span>基态并不完全是<span data-concept="coherent-state">相干态</span>的乘积，但它能对相变给出有用的定性描述。</p>
+<p>有了这个拟设波函数，我们可以确定两个极限：在<span data-concept="mott-insulator">莫特绝缘体</span>态中，每个格点被单个原子占据</p>
+<div class="equation" id="eq-11-206">$$|\phi\rangle_i^\mathbf{(MI)} = |1\rangle_i, \tag{11.206}$$</div>
+<p>而在<span data-concept="lattice-superfluid">超流体</span>极限下，每个格点的占据对应一个<span data-concept="coherent-state">相干态</span></p>
+<div class="equation" id="eq-11-207">$$|\phi\rangle_i^\mathbf{(SF)} = e^{-1/2}\sum_n\frac{1}{\sqrt{n!}}|n\rangle_i, \tag{11.207}$$</div>
+<p>平均占据数为$|\kalpha|^2 = 1$。这个态$|\phi\rangle_i^\mathbf{(SF)}$对应于<span data-concept="gross-pitaevskii-equation">格罗斯-皮塔耶夫斯基波函数</span>，它在大 N 极限下趋近于<span data-concept="lattice-superfluid">超流体</span>态，与<span data-concept="double-well-model">双阱系统</span>的情形类似。<span data-concept="mean-field-mott-transition" id="mean-field">为了弄清超流体与莫特绝缘体之间的相变发生在何处，我们可以考察这两个极限波函数的能量，看哪一个的能量更低</span>。</p>
+<p>在这个简单的模型中，<span data-concept="mott-insulator">莫特绝缘体</span>态的能量为</p>
+<div class="equation" id="eq-11-209">$$\kEMI = -\frac{2\kt^2}{\kUzero}. \tag{11.209}$$</div>
+<figure class="dv" id="drv-mott-transition-estimate"></figure>
+<p>虽然这个模型抓住了相变的定性特征，但它低估了临界比值$\kUzero/(\kt\cdot z)$。更仔细的分析采用一个变分波函数，它既包含这两个极限，也包含二者之间的过渡，例如</p>
+<div class="equation" id="eq-11-211">$$|\phi\rangle_i = \frac{\sin\ktheta}{\sqrt{2}}|0\rangle_i + \cos\ktheta|1\rangle_i + \frac{\sin\ktheta}{\sqrt{2}}|2\rangle_i. \tag{11.211}$$</div>
+<p>这个试探波函数在相变附近效果很好，并给出</p>
+<div class="equation" id="eq-11-212">$$\kt\cdot z\cdot 5 \sim \kUzero \tag{11.212}$$</div>
+<p>作为$\ktheta = 0$成为基态的条件，这与精确值$\kUzero/(\kt\cdot z) = 5.8$<sup class="fn" data-note="c-exact-value"></sup> 吻合得很好。对于$\nu &gt; 1$，临界条件按$\kUzero \sim \kt\dot{\nu}$<sup class="fn" data-note="c-nu-dot"></sup> 变化，因为当几个粒子处于同一格点时，隧穿会增强。</p>
+<p>我们已经看到，当系统从<span data-concept="lattice-superfluid">超流体</span>态越过到<span data-concept="mott-insulator">莫特绝缘体</span>态时，其基态如何改变。此外，系统的激发在<span data-concept="quantum-phase-transition">量子相变</span>两侧在性质上也不同。在<span data-concept="lattice-superfluid">超流体</span>态中，系统表现出<span data-concept="bogoliubov-spectrum">博戈留波夫激发谱</span>；<span data-concept="mott-gap" id="gap">在莫特绝缘体态中，激发谱有能隙，因为使单个粒子离域要花费能量$\kDeltaeps \sim \kUzero - \kt$</span>。激发能隙的消失是<span data-concept="quantum-phase-transition">量子相变</span>的一个区别性特征。</p>
+<p>在真实的实验中，我们关于<span data-concept="filling-factor">公度填充</span>的假设需要重新审视。由于有一个整体的谐振陷俘势把原子束缚在<span data-concept="optical-lattice-potential">光学格子</span>中，阱的中心应当比外缘容纳更高的原子<span data-concept="atom-number-density">密度</span>。事实上，实际发生的是，在<span data-concept="mott-insulator">莫特绝缘体</span>相中，<span data-concept="wedding-cake-structure" id="wedding-cake">密度呈现“婚礼蛋糕”结构</span>，<span data-concept="filling-factor">填充因子</span> $\nu$向阱的中心逐级增大，见<a href="#sim-wedding-cake">图 11.14</a>。</p>
+<figure class="sim" id="sim-wedding-cake" data-figure="11.14" data-original="/media/ch11/fig-11-14.png" data-original-caption="光学格子势的实验实现总是包含一个额外的谐振约束势。在强相互作用系统中，具有不同填充因子 ν 的莫特绝缘体相出现在格子的不同部分，它们之间有一小块超流体（非整数 ν）相区域。">
+  <div class="sim-head"><span class="eyebrow">Figure 11.14</span><span>谐振阱中立方格子（$z = 6$）中心的一个截面：每个阱容纳它那一份原子，<span data-concept="mott-insulator">莫特绝缘体</span>的那些原子是整个的、用墨色画的，<span data-concept="lattice-superfluid">超流体</span>格点的那一份用灰色表示。每个格点都在其近邻的平均场中处理，阱使其<span data-concept="chemical-potential">化学势</span>降为$\kmuchem - \kVtrap(\mathbf{r}_i)$，下方的蛋糕是整个原子云上的<span data-concept="filling-factor">填充</span> $\nu$。增大$z\kt/\kUzero$，平台之间的<span data-concept="lattice-superfluid">超流体</span>壳层变宽，直至吞没这些平台，$\nu = 3$最先被吞没，$\nu = 1$最后，最后一个在$z\kt/\kUzero = 1/5.8$处；降低$\kmuchem$，中心则逐个平台地变空。</span></div>
+</figure>
+<p>一系列实验<span data-concept="mott-interference-signature" id="interference">通过观察格子势中不同格点上的原子之间是否存在干涉，观测到了超流体到莫特绝缘体的转变</span>。<span data-concept="lattice-superfluid">超流体</span>相具有<span data-concept="condensate-first-order-coherence">一级相干性</span>，所以<span data-concept="time-of-flight-imaging">随着原子膨胀</span>，它们会发生干涉，产生干涉图样，该图样显示出其周期陷俘势的倒易格子。然而，<span data-concept="mott-insulator">莫特绝缘体</span>相没有<span data-concept="condensate-first-order-coherence">一级相干性</span>，所以在<span data-concept="time-of-flight-imaging">膨胀图像</span>中看不到周期图样。通过先增大再减小$\kUzero/\kt$，实验表明可以可逆地斜变进入和离开<span data-concept="mott-insulator">莫特绝缘体</span>相，如<a href="#sim-mott-ramp">图 11.15</a>所示。</p>
+<figure class="sim" id="sim-mott-ramp" data-figure="11.15" data-original-caption="超流体到莫特绝缘体转变的实验观测［未经许可取自 Nature 415, 39］。(a) t/U₀ 取不同值时的膨胀图像，格子势从 0Eᵣ (a) 到 20Eᵣ (g)。超流体相与膨胀图像中形成的倒易格子图样相联系，而莫特绝缘体相不表现出一级相干性。(b) 莫特绝缘体转变是可逆的这一演示。格子深度被斜变到深入莫特绝缘体相，然后在时间 t 内减小。对于缓慢的斜变时间 t，超流体相得以恢复。">
+  <div class="sim-head"><span class="eyebrow">Figure 11.15</span><span>从处于<span data-concept="filling-factor">单位填充</span>的立方格子中释放的原子的<span data-concept="time-of-flight-imaging">膨胀图像</span>，同时$\kUzero/z\kt$斜变升至一个转折值再降回，斜变足够缓慢，使原子跟随基态，正如格赖纳<em>等</em>所做的那样（Nature 415, 39 (2002)）。每个格点处于<a href="#eq-11-211">式 (11.211)</a>的试探态，取使其能量最小的角$\ktheta$，倒易格子处的峰带有每个格点的相干份额$|\langle\hat{b}_i\rangle|^2$，其余部分则落在一个宽的团块上。越过$\kUzero/z\kt = 3 + 2\sqrt{2} \approx 5.8$之后，试探态是<span data-concept="mott-insulator">莫特绝缘体</span>，$\ktheta = 0$，峰消失；在回程中它们又回来。低于 5.8 的转折值只会使它们变暗。</span></div>
+</figure>
+</section>

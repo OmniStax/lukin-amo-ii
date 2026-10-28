@@ -1,0 +1,1035 @@
+{
+ "id": "8.6",
+ "chapter": "8",
+ "title": "亚多普勒冷却",
+ "short": "亚多普勒冷却",
+ "lead": "为什么原子在两束交叉线偏振的光束中会冷却到<span data-concept=\"doppler-limit\">多普勒极限</span>以下：在 J = 1/2 → 3/2 跃迁上，<span data-concept=\"polarization-gradient\">偏振梯度</span>给两个基态子能级带来相距四分之一波长的<span data-concept=\"ground-state-light-shift-potential\">光致频移山丘</span>，而滞后于运动原子的<span data-concept=\"optical-pumping\">光抽运</span>使它爬升得比下降得多；由此产生的摩擦、它的<span data-concept=\"capture-range\">俘获速度</span>，以及它停止时的温度。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-cg-levels",
+   "kind": "sim",
+   "number": "8.4",
+   "originals": [
+    "/media/ch08/fig-8-4.png"
+   ],
+   "original_caption": "用于解释亚多普勒冷却的能级构型。给出了每个跃迁的 CG 系数。注意 m = ±1/2 → m = ±1/2 的跃迁只通过自发发射耦合。",
+   "draws": [
+    "frequency",
+    "coupling",
+    "rate"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-sisyphus",
+   "kind": "sim",
+   "number": "8.5",
+   "originals": [
+    "/media/ch08/fig-8-5.png"
+   ],
+   "original_caption": "西西弗斯冷却机制。当原子穿过偏振梯度场运动时，它的内部能级（图中以绿色表示）跟随发生斯塔克偏移的基态。在σ±光占主导的区域，原子被光抽运到 m = ±1/2 能级。对于红失谐的光束，原子总是被光抽运到较低能量的态，因此每个循环都必须损失动能。",
+   "draws": [
+    "energy",
+    "velocity",
+    "time",
+    "length",
+    "coupling",
+    "frequency",
+    "mass",
+    "wavevector"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-sisyphus-doppler",
+   "kind": "sim",
+   "number": "8.6",
+   "originals": [
+    "/media/ch08/fig-8-6.png"
+   ],
+   "original_caption": "多普勒力与西西弗斯力的比较。多普勒力可以把相对较热的原子冷却到多普勒极限。只有缓慢运动的原子才能被西西弗斯机制冷却，但西西弗斯摩擦系数（与曲线在 v = 0 处的斜率成正比）要大得多，因此可以达到低得多的最终温度。",
+   "draws": [
+    "force",
+    "velocity",
+    "friction",
+    "frequency",
+    "coupling",
+    "rate",
+    "wavevector",
+    "mass"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "sigma-plus",
+   "label": "σ₊光，lin⊥lin场的σ₊驻波",
+   "figures": [
+    "sim-cg-levels",
+    "sim-sisyphus"
+   ]
+  },
+  {
+   "id": "sigma-minus",
+   "label": "σ₋光，lin⊥lin场的σ₋驻波",
+   "figures": [
+    "sim-cg-levels",
+    "sim-sisyphus"
+   ]
+  },
+  {
+   "id": "lvl-g-plus",
+   "label": "m = +1/2基态子能级",
+   "figures": [
+    "sim-cg-levels",
+    "sim-sisyphus"
+   ]
+  },
+  {
+   "id": "lvl-g-minus",
+   "label": "m = −1/2基态子能级",
+   "figures": [
+    "sim-cg-levels",
+    "sim-sisyphus"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "sub-doppler",
+   "concept": "sub-doppler-cooling",
+   "verb": "introduces"
+  },
+  {
+   "span": "lin-perp-lin",
+   "concept": "polarization-gradient",
+   "verb": "introduces"
+  },
+  {
+   "span": "light-shift-differs",
+   "concept": "ground-state-light-shift-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "sisyphus-name",
+   "concept": "sisyphus-cooling",
+   "verb": "introduces"
+  },
+  {
+   "span": "lag-force",
+   "concept": "sisyphus-force",
+   "verb": "introduces"
+  },
+  {
+   "span": "sisyphus-friction",
+   "concept": "sisyphus-friction",
+   "verb": "introduces"
+  },
+  {
+   "span": "compare",
+   "concept": "doppler-sisyphus-comparison",
+   "verb": "introduces"
+  },
+  {
+   "span": "time-lag",
+   "concept": "sisyphus-nonadiabaticity",
+   "verb": "introduces"
+  },
+  {
+   "span": "sisyphus-limit",
+   "concept": "sisyphus-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "recoil-limit",
+   "concept": "recoil-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "sub-recoil",
+   "concept": "sub-recoil-cooling",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "doppler-limit",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "doppler-cooling",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "lin-perp-lin",
+   "concept": "spherical-polarization-basis",
+   "verb": "uses"
+  },
+  {
+   "span": "detuning-observation",
+   "concept": "ac-stark-shift",
+   "verb": "uses"
+  },
+  {
+   "span": "detuning-observation",
+   "concept": "detuning",
+   "verb": "uses"
+  },
+  {
+   "span": "light-shift-differs",
+   "concept": "clebsch-gordan-coefficients",
+   "verb": "uses"
+  },
+  {
+   "span": "light-shift-differs",
+   "concept": "rabi-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "pumping",
+   "concept": "dipole-force",
+   "verb": "uses"
+  },
+  {
+   "span": "pumping",
+   "concept": "dressed-states",
+   "verb": "uses"
+  },
+  {
+   "span": "pumping",
+   "concept": "optical-pumping",
+   "verb": "uses"
+  },
+  {
+   "span": "rate-equation",
+   "concept": "optical-pumping-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-8-110",
+   "concept": "rate-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-8-110",
+   "concept": "adiabatic-elimination",
+   "verb": "uses"
+  },
+  {
+   "span": "expansion",
+   "concept": "adiabatic-expansion",
+   "verb": "uses"
+  },
+  {
+   "span": "compare",
+   "concept": "friction-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "time-lag",
+   "concept": "adiabatic-theorem",
+   "verb": "uses"
+  },
+  {
+   "span": "diffusion-sp",
+   "concept": "laser-cooling-diffusion",
+   "verb": "uses"
+  },
+  {
+   "span": "diffusion-sp",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "sisyphus-limit",
+   "concept": "einstein-relation",
+   "verb": "uses"
+  },
+  {
+   "span": "recoil-limit",
+   "concept": "recoil-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "sub-recoil",
+   "concept": "raman-transition",
+   "verb": "uses"
+  },
+  {
+   "span": "sub-recoil",
+   "concept": "dark-resonance",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-population-relaxation",
+   "concept": "sisyphus-pumping-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-sisyphus-solution",
+   "concept": "capture-range",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "footnotes": [
+  {
+   "id": "footnote-4",
+   "kind": "book",
+   "number": "4",
+   "html": "<p>更多细节参见达利巴尔和科恩-塔诺季，JOSA B，p2023（1989）。</p>"
+  },
+  {
+   "id": "c-early-1990s",
+   "kind": "correction",
+   "html": "首批低于多普勒极限的温度于1988年在钠光学黏团中测得（P. D. 莱特<i>等</i>，Phys. Rev. Lett. 61, 169 (1988)），达利巴尔和科恩-塔诺季的解释于1989年随之而来：这些实验属于20世纪80年代末。"
+  },
+  {
+   "id": "c-td-hbar-gamma",
+   "kind": "correction",
+   "html": "由式 (8.96)，对辐射增宽的原子，多普勒极限为$k_B\\kTD = \\hbar\\kgammaonetwo = \\hbar\\kgamma/2$；书中的$\\kTD = \\hbar\\kgamma$漏掉了玻尔兹曼常量和因子$1/2$。"
+  },
+  {
+   "id": "c-large-detuning",
+   "kind": "correction",
+   "html": "冷却需要红失谐，$\\kdelta < 0$，所以条件是$|\\kdelta| \\gg \\kgamma$。"
+  },
+  {
+   "id": "c-omega-squared",
+   "kind": "correction",
+   "html": "应为$|\\kOmega|^2$：$\\kRopt = |\\kOmega|^2\\kgamma/((\\kgamma/2)^2 + \\kdelta^2)$。"
+  },
+  {
+   "id": "c-capture-scaling",
+   "kind": "correction",
+   "html": "由式 (8.130)，西西弗斯俘获速度按光抽运率$|\\kOmega|^2\\kgamma/\\kdelta^2$标度，而不是按交流斯塔克偏移$|\\kOmega|^2/\\kdelta$标度：在固定的光致频移下，它仍按$1/|\\kdelta|$下降。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "lag-force",
+   "what": "滞后的布居所产生的力",
+   "source": "现代原子与光学物理 II，8.6.3 亚多普勒冷却的定量分析",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kFmag_\\mathrm{reactive} = \\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\sin(2\\kkmag z)\\left(|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}| - | -\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|\\right)",
+       "src": "(8.109)"
+      },
+      {
+       "tex": "\\kDeltarho \\approx \\cos(2\\kkmag\\kvmag\\kt) + 2\\kkmag\\kvmag\\ktauP\\sin(2\\kkmag\\kvmag\\kt)",
+       "src": "(8.119)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\langle \\kFmag\\rangle} = \\mk{R}{\\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\left\\langle\\sin(2\\kkmag z)\\kDeltarho\\right\\rangle}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\langle \\kFmag\\rangle} = \\mk{R}{\\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\left\\langle\\sin(2\\kkmag z)\\left(\\cos(2\\kkmag z) + 2\\kkmag\\kvmag\\tau_p\\sin(2\\kkmag z)\\right)\\right\\rangle}",
+       "uses": [
+        1
+       ],
+       "cap": "取$z = vt$。"
+      },
+      {
+       "tex": "\\mk{F}{\\langle \\kFmag\\rangle} = \\mk{R}{\\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}2\\kkmag\\kvmag\\ktauP\\left\\langle\\sin^2(2\\kkmag z)\\right\\rangle}",
+       "uses": [],
+       "cap": "$\\sin 2kz\\cos 2kz$项在一个波长上平均为零。"
+      },
+      {
+       "tex": "\\mk{F}{\\langle \\kFmag\\rangle} = \\mk{R}{\\frac{2}{3}\\hbar \\kkmag^2\\kvmag\\ktauP\\frac{|\\kOmega|^2}{\\kdelta}}",
+       "uses": [],
+       "cap": "$\\langle\\sin^2 2kz\\rangle = \\frac12$。"
+      }
+     ],
+     "num": "(8.122)"
+    }
+   ]
+  },
+  {
+   "id": "lin-perp-lin-field",
+   "what": "lin⊥lin构型的场",
+   "source": "现代原子与光学物理 II，8.6.1 实验观测",
+   "nodes": [
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{E}{\\kEfield} = \\mk{R}{E_0e^{i\\knu \\kt}\\left(\\hat{x}e^{i\\kkmag z} + i\\hat{y}e^{-i\\kkmag z}\\right)} + c.c.",
+      "src": "(8.97)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEfield} = \\mk{R}{E_0e^{i\\knu \\kt}\\left(\\hat{x}(\\cos \\kkmag z + i\\sin \\kkmag z) + i\\hat{y}(\\cos \\kkmag z - i\\sin \\kkmag z)\\right)} + c.c.",
+       "uses": [],
+       "cap": "欧拉公式，$e^{\\pm ikz} = \\cos kz \\pm i\\sin kz$。"
+      },
+      {
+       "tex": "\\mk{E}{\\kEfield} = \\mk{R}{E_0e^{i\\knu \\kt}\\left(\\underbrace{(\\hat{x} + i\\hat{y})}_{\\sigma_+}\\cos \\kkmag z + i\\underbrace{(\\hat{x} - i\\hat{y})}_{\\sigma_-}\\sin \\kkmag z\\right)} + c.c.",
+       "uses": []
+      }
+     ],
+     "num": "(8.98)"
+    }
+   ]
+  },
+  {
+   "id": "population-lag",
+   "what": "布居滞后于运动原子",
+   "source": "现代原子与光学物理 II，8.6.3 亚多普勒冷却的定量分析",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "速度很小：$\\Delta\\rho$保持在$\\cos(2kvt)$附近，这是绝热展开的第一步。",
+       "src": "8.6.3"
+      },
+      {
+       "text": "原子按$z = vt$运动。",
+       "src": "8.6.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{-\\frac{1}{\\ktauP}\\left(\\kDeltarho - \\cos(2\\kkmag\\kvmag\\kt)\\right)}",
+      "src": "(8.117)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{D}{\\kDeltarho} = \\mk{c}{\\cos(2\\kkmag\\kvmag\\kt)} - \\mk{L}{\\ktauP\\frac{d}{d\\kt}\\kDeltarho}",
+       "uses": [],
+       "map": {
+        "R": [
+         "D",
+         "c"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{D}{\\kDeltarho} \\approx \\mk{c}{\\cos(2\\kkmag\\kvmag\\kt)} - \\mk{L}{\\tau_p\\frac{d}{d\\kt}\\cos(2\\kkmag\\kvmag\\kt)}",
+       "uses": [
+        0
+       ],
+       "cap": "到$v$的一阶，$\\Delta\\rho$的导数就是$\\cos(2kvt)$的导数。"
+      },
+      {
+       "tex": "\\mk{D}{\\kDeltarho} \\approx \\mk{c}{\\cos(2\\kkmag\\kvmag\\kt)} + \\mk{L}{2\\kkmag\\kvmag\\ktauP\\sin(2\\kkmag\\kvmag\\kt)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{D}{\\kDeltarho} \\approx \\mk{c}{\\cos 2\\kkmag(z - \\kvmag\\ktauP)}",
+       "uses": [
+        1
+       ],
+       "cap": "到$b$的一阶，$\\cos a + b\\sin a \\approx \\cos(a - b)$，其中$a = 2kz$，$b = 2kv\\tau_P$。",
+       "map": {
+        "L": "c"
+       }
+      }
+     ],
+     "num": "(8.120)"
+    }
+   ]
+  },
+  {
+   "id": "population-relaxation",
+   "what": "基态布居的弛豫",
+   "source": "现代原子与光学物理 II，8.6.3 亚多普勒冷却的定量分析",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\frac{d}{d\\kt}\\rho_{\\frac{1}{2}\\frac{1}{2}} = -\\frac{2}{9}\\kRopt\\sin^2(\\kkmag z)\\rho_{\\frac{1}{2}\\frac{1}{2}} + \\frac{2}{9}\\kRopt\\cos^2(\\kkmag z)\\rho_{-\\frac{1}{2}-\\frac{1}{2}}",
+       "src": "(8.110)"
+      },
+      {
+       "tex": "\\rho_{\\frac{1}{2}\\frac{1}{2}} + \\rho_{-\\frac{1}{2}-\\frac{1}{2}} = 1",
+       "src": "(8.111)"
+      },
+      {
+       "text": "布居差为$\\Delta\\rho = \\rho_{\\frac12\\frac12} - \\rho_{-\\frac12-\\frac12}$。",
+       "src": "8.6.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{\\frac{d}{d\\kt}\\rho_{\\frac{1}{2}\\frac{1}{2}} - \\frac{d}{d\\kt}\\rho_{-\\frac{1}{2}-\\frac{1}{2}}}",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{2\\frac{d}{d\\kt}\\rho_{\\frac{1}{2}\\frac{1}{2}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{2\\left(-\\frac{2}{9}\\kRopt\\sin^2(\\kkmag z)\\rho_{\\frac{1}{2}\\frac{1}{2}} + \\frac{2}{9}\\kRopt\\cos^2(\\kkmag z)\\rho_{-\\frac{1}{2}-\\frac{1}{2}}\\right)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{\\frac{2}{9}\\kRopt\\left(-\\sin^2(\\kkmag z)(1 + \\kDeltarho) + \\cos^2(\\kkmag z)(1 - \\kDeltarho)\\right)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "$\\rho_{\\pm\\frac12\\pm\\frac12} = (1 \\pm \\Delta\\rho)/2$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{\\frac{2}{9}\\kRopt\\left(\\cos(2\\kkmag z) - \\kDeltarho\\right)}",
+       "uses": [],
+       "cap": "$\\cos^2 - \\sin^2 = \\cos 2kz$，且$\\cos^2 + \\sin^2 = 1$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{-\\frac{2}{9}\\kRopt\\left(\\kDeltarho - \\cos(2\\kkmag z)\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(8.112)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{-\\frac{2}{9}\\kRopt\\left(\\kDeltarho - \\cos(2\\kkmag z)\\right)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{-\\frac{1}{\\ktauP}\\left(\\kDeltarho - \\cos(2\\kkmag z)\\right)},\\qquad \\mk{t}{\\frac{1}{\\ktauP} = \\frac{2}{9}\\kRopt}",
+       "uses": [],
+       "cap": "一个弛豫过程：把它的速率记为$1/\\tau_P$。"
+      }
+     ],
+     "num": "(8.113)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "在定常态下，布居差不再变化。",
+       "src": "8.6.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{-\\frac{1}{\\ktauP}\\left(\\kDeltarho - \\cos(2\\kkmag z)\\right)},\\qquad \\mk{t}{\\frac{1}{\\ktauP} = \\frac{2}{9}\\kRopt}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{0} = \\mk{R}{-\\frac{1}{\\ktauP}\\left(\\kDeltarho_{SS} - \\cos(2\\kkmag z)\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{R}{\\kDeltarho_{SS}} = \\mk{c}{\\cos(2\\kkmag z)}",
+       "uses": []
+      }
+     ],
+     "num": "(8.114)"
+    }
+   ]
+  },
+  {
+   "id": "sisyphus-friction",
+   "what": "西西弗斯摩擦系数",
+   "source": "现代原子与光学物理 II，8.6.3 亚多普勒冷却的定量分析",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kvc = \\frac{\\klambda}{18\\pi}\\kRopt = \\frac{\\kRopt}{9\\kkmag}",
+       "src": "(8.124)"
+      },
+      {
+       "text": "对于低功率和大失谐，$|\\delta| \\gg \\gamma, \\Omega$，光抽运率为$R_{opt} \\approx |\\Omega|^2\\gamma/\\delta^2$。",
+       "src": "8.6.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\ketaS\\kvmag\\km} = \\mk{R}{\\frac{1}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\frac{\\kvmag/\\kvc}{1 + (\\kvmag/\\kvc)^2}}",
+      "src": "(8.125)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\ketaS} = \\mk{R}{\\frac{1}{3}\\frac{\\hbar \\kkmag|\\kOmega|^2}{\\kdelta\\km\\kvc}\\left(\\frac{1}{1 + (\\kvmag/\\kvc)^2}\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{e}{\\ketaS} = \\mk{R}{\\frac{1}{3}\\frac{9\\hbar \\kkmag^2|\\kOmega|^2}{\\kdelta\\km\\kRopt}\\left(\\frac{1}{1 + (\\kvmag/\\kvc)^2}\\right)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\ketaS} = \\mk{R}{3\\frac{\\hbar \\kkmag^2|\\kOmega|^2\\kdelta^2}{\\kdelta\\km|\\kOmega|^2\\kgamma}\\left(\\frac{1}{1 + (\\kvmag/\\kvc)^2}\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "外加场的强度相消。"
+      },
+      {
+       "tex": "\\mk{e}{\\ketaS} = \\mk{R}{3\\frac{\\hbar \\kkmag^2}{\\km}\\frac{\\kdelta}{\\kgamma}\\left(\\frac{1}{1 + (\\kvmag/\\kvc)^2}\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(8.126)"
+    }
+   ]
+  },
+  {
+   "id": "sisyphus-light-shifts",
+   "what": "lin⊥lin光中两个基态的光致频移",
+   "source": "现代原子与光学物理 II，8.6.2 西西弗斯冷却",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kDelta^{\\sigma_+}_{1/2} = \\frac{|\\kOmegap|^2}{\\kdelta}",
+       "src": "(8.99)"
+      },
+      {
+       "tex": "\\kDelta^{\\sigma_+}_{-1/2} = \\frac{|\\kOmegap|^2}{3\\kdelta}",
+       "src": "(8.100)"
+      },
+      {
+       "tex": "\\kDelta^{\\sigma_-}_{1/2} = \\frac{|\\kOmegam|^2}{3\\kdelta}",
+       "src": "(8.101)"
+      },
+      {
+       "tex": "\\kDelta^{\\sigma_-}_{-1/2} = \\frac{|\\kOmegam|^2}{\\kdelta}",
+       "src": "(8.102)"
+      },
+      {
+       "tex": "\\kOmegap = \\kOmega\\cos \\kkmag z",
+       "src": "(8.103)"
+      },
+      {
+       "tex": "\\kOmegam = \\kOmega\\sin \\kkmag z",
+       "src": "(8.104)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH^\\mathrm{eff}_{AL}} = \\mk{R}{\\hbar\\sum_{m=\\pm\\frac{1}{2}}(\\kDelta^{\\sigma_+}_m + \\kDelta^{\\sigma_-}_m)|m\\rangle\\langle m|}",
+      "src": "(8.105)",
+      "uses": [],
+      "why": "在远失谐情形下，两种偏振的光致频移相加。"
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{H}{\\kH^\\mathrm{eff}_{AL}} &= \\mk{u}{\\hbar\\left(\\frac{|\\kOmegap|^2}{\\kdelta} + \\frac{|\\kOmegam|^2}{3\\kdelta}\\right)|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}|} \\\\ &\\quad + \\mk{d}{\\hbar\\left(\\frac{|\\kOmegap|^2}{3\\kdelta} + \\frac{|\\kOmegam|^2}{\\kdelta}\\right)| -\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|}\\end{aligned}",
+       "uses": [
+        0,
+        1,
+        2,
+        3
+       ],
+       "map": {
+        "R": [
+         "u",
+         "d"
+        ]
+       }
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{H}{\\kH^\\mathrm{eff}_{AL}} &= \\mk{u}{\\hbar\\frac{|\\kOmega|^2}{\\kdelta}\\left(\\cos^2 \\kkmag z + \\frac{1}{3}\\sin^2 \\kkmag z\\right)|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}|} \\\\ &\\quad + \\mk{d}{\\hbar\\frac{|\\kOmega|^2}{\\kdelta}\\left(\\frac{1}{3}\\cos^2 \\kkmag z + \\sin^2 \\kkmag z\\right)| -\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|}\\end{aligned}",
+       "uses": [
+        4,
+        5
+       ]
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{H}{\\kH^\\mathrm{eff}_{AL}} &= \\mk{u}{\\hbar\\frac{|\\kOmega|^2}{\\kdelta}\\left(1 - \\frac{2}{3}\\sin^2 \\kkmag z\\right)|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}|} \\\\ &\\quad + \\mk{d}{\\hbar\\frac{|\\kOmega|^2}{\\kdelta}\\left(1 - \\frac{2}{3}\\cos^2 \\kkmag z\\right)| -\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|}\\end{aligned}",
+       "uses": [],
+       "cap": "$\\cos^2 kz + \\frac{1}{3}\\sin^2 kz = 1 - \\frac{2}{3}\\sin^2 kz$，$\\sin$与$\\cos$互换后同理。"
+      }
+     ],
+     "num": "(8.106), (8.107)",
+     "note": "书中印出的第二行，即式 (8.107)，没有把它与式 (8.106) 连接起来的加号：哈密顿量是两行之和。"
+    }
+   ]
+  },
+  {
+   "id": "sisyphus-limit",
+   "what": "西西弗斯冷却极限",
+   "source": "现代原子与光学物理 II，8.6.4 西西弗斯冷却极限",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kDdiff = \\km\\keta k_B\\kT",
+       "src": "(8.48)"
+      },
+      {
+       "text": "爱因斯坦关系中的摩擦率是其大小$|\\eta_S|$；$\\eta_S$的符号与$\\delta$相同，在光起冷却作用处为负。",
+       "src": "8.6.3"
+      },
+      {
+       "tex": "\\kDdiff_{sp} = (\\hbar \\kkmag)^2\\frac{|\\kOmega|^2\\kgamma/2}{(\\kgamma/2)^2 + \\kdelta^2}",
+       "src": "(8.131)"
+      },
+      {
+       "tex": "\\kDdiff_{dp} = \\frac{3(\\hbar \\kkmag)^2\\kdelta^2}{4\\kgamma}\\frac{\\kOmega^2/2}{\\kdelta^2 + (\\kgamma/2)^2}",
+       "src": "(8.132)"
+      },
+      {
+       "tex": "\\ketaS = 3\\frac{\\hbar \\kkmag^2}{\\km}\\frac{\\kdelta}{\\kgamma}",
+       "src": "(8.127)"
+      },
+      {
+       "text": "失谐很大，$|\\delta| \\gg \\gamma$。",
+       "src": "8.6.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{T}{k_B\\kTS} = \\mk{a}{\\frac{\\kDdiff_{sp} + \\kDdiff_{dp}}{\\km|\\ketaS|}}",
+      "uses": [
+       0,
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{T}{k_B\\kTS} = \\mk{a}{\\frac{\\kDdiff_{sp} + \\kDdiff_{dp}}{\\km|\\ketaS|}} \\approx \\mk{R}{\\frac{\\kDdiff_{dp}}{\\km|\\ketaS|}}",
+       "uses": [
+        2,
+        3,
+        5
+       ],
+       "cap": "对于大失谐，$D_{sp}$按$1/\\delta^2$下降，而$D_{dp}$保持有限，所以第二项占主导。"
+      },
+      {
+       "tex": "\\mk{T}{k_B\\kTS} = \\mk{a}{\\frac{\\kDdiff_{sp} + \\kDdiff_{dp}}{\\km|\\ketaS|}} \\approx \\mk{R}{\\frac{3(\\hbar\\kkmag)^2|\\kOmega|^2/8\\kgamma}{3\\hbar\\kkmag^2|\\kdelta|/\\kgamma}}",
+       "uses": [
+        3,
+        4,
+        5
+       ]
+      },
+      {
+       "tex": "\\mk{T}{k_B\\kTS} = \\mk{a}{\\frac{\\kDdiff_{sp} + \\kDdiff_{dp}}{\\km|\\ketaS|}} \\approx \\mk{R}{\\frac{\\hbar|\\kOmega|^2}{8|\\kdelta|}}",
+       "uses": []
+      }
+     ],
+     "num": "(8.133)",
+     "note": "书中印出的是$\\hbar|\\Omega|^2/8\\delta$，对于冷却所需的失谐$\\delta < 0$，它为负；分母中取$m|\\eta_S|$时，温度为$\\hbar|\\Omega|^2/8|\\delta|$。"
+    }
+   ]
+  },
+  {
+   "id": "sisyphus-reactive-force",
+   "what": "lin⊥lin光中的反应力",
+   "source": "现代原子与光学物理 II，8.6.3 亚多普勒冷却的定量分析",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kH^\\mathrm{eff}_{AL} = \\hbar\\frac{|\\kOmega|^2}{\\kdelta}\\left(1 - \\frac{2}{3}\\sin^2 \\kkmag z\\right)|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}| + \\hbar\\frac{|\\kOmega|^2}{\\kdelta}\\left(1 - \\frac{2}{3}\\cos^2 \\kkmag z\\right)| -\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|",
+       "src": "(8.106), (8.107)"
+      },
+      {
+       "text": "保守力是其势的负梯度，偶极力即如此。",
+       "src": "(8.20)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kFmag_\\mathrm{reactive}} = \\mk{R}{-\\sum_{m=\\pm 1/2}\\hbar\\nabla(\\kDelta^{\\sigma_+}_m + \\kDelta^{\\sigma_-}_m)|m\\rangle\\langle m|}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kFmag_\\mathrm{reactive}} = \\mk{u}{-\\hbar\\nabla\\left[\\frac{|\\kOmega|^2}{\\kdelta}\\left(1 - \\frac{2}{3}\\sin^2 \\kkmag z\\right)\\right]|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}|} - \\mk{d}{\\hbar\\nabla\\left[\\frac{|\\kOmega|^2}{\\kdelta}\\left(1 - \\frac{2}{3}\\cos^2 \\kkmag z\\right)\\right]| -\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "R": [
+         "u",
+         "d"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{F}{\\kFmag_\\mathrm{reactive}} = \\mk{u}{\\frac{2}{3}\\hbar\\kkmag\\frac{|\\kOmega|^2}{\\kdelta}2\\sin \\kkmag z\\cos \\kkmag z\\,|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}|} - \\mk{d}{\\frac{2}{3}\\hbar\\kkmag\\frac{|\\kOmega|^2}{\\kdelta}2\\sin \\kkmag z\\cos \\kkmag z\\,| -\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|}",
+       "uses": [],
+       "cap": "$\\frac{d}{dz}\\sin^2 kz = 2k\\sin kz\\cos kz = -\\frac{d}{dz}\\cos^2 kz$。"
+      },
+      {
+       "tex": "\\mk{F}{\\kFmag_\\mathrm{reactive}} = \\mk{S}{\\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\sin(2\\kkmag z)\\left(|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}| - | -\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|\\right)}",
+       "uses": [],
+       "cap": "$2\\sin kz\\cos kz = \\sin 2kz$。",
+       "map": {
+        "u": "S",
+        "d": "S"
+       }
+      }
+     ],
+     "num": "(8.109)",
+     "note": "书中印出的式 (8.108) 没有由势导出的力所带的负号；式 (8.109) 是带上负号取梯度的结果。"
+    }
+   ]
+  },
+  {
+   "id": "sisyphus-solution",
+   "what": "任意速度下的西西弗斯力",
+   "source": "现代原子与光学物理 II，8.6.3 亚多普勒冷却的定量分析",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "速度在光抽运时间$\\tau_P$内不变，所以布居差以驱动的频率跟随驱动：$\\Delta\\rho = A\\cos 2kvt + B\\sin 2kvt$。",
+       "src": "8.6.3"
+      },
+      {
+       "text": "原子按$z = vt$运动。",
+       "src": "8.6.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kDeltarho} = \\mk{R}{-\\frac{1}{\\ktauP}\\left(\\kDeltarho - \\cos(2\\kkmag\\kvmag\\kt)\\right)}",
+      "src": "(8.117)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{2\\kkmag\\kvmag\\ktauP\\left(-A\\sin(2\\kkmag\\kvmag\\kt) + B\\cos(2\\kkmag\\kvmag\\kt)\\right)} = \\mk{R}{(1 - A)\\cos(2\\kkmag\\kvmag\\kt) - B\\sin(2\\kkmag\\kvmag\\kt)}",
+       "uses": [
+        0
+       ],
+       "cap": "乘以$\\tau_P$并代入试探解。"
+      },
+      {
+       "tex": "\\mk{c}{2\\kkmag\\kvmag\\ktauP B = 1 - A},\\qquad \\mk{s}{2\\kkmag\\kvmag\\ktauP A = B}",
+       "uses": [],
+       "cap": "匹配余弦项和正弦项。",
+       "map": {
+        "L": [
+         "c",
+         "s"
+        ],
+        "R": [
+         "c",
+         "s"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{c}{(\\kvmag/\\kvc)B = 1 - A},\\qquad \\mk{s}{(\\kvmag/\\kvc)A = B}",
+       "uses": [],
+       "cap": "把俘获速度记为$v_c = 1/2k\\tau_P$。"
+      },
+      {
+       "tex": "\\mk{c}{A = \\frac{1}{1 + (\\kvmag/\\kvc)^2}},\\qquad \\mk{s}{B = \\frac{\\kvmag/\\kvc}{1 + (\\kvmag/\\kvc)^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{D}{\\kDeltarho} = \\mk{c}{\\frac{1}{1 + (\\kvmag/\\kvc)^2}\\cos(2\\kkmag z)} + \\mk{s}{\\frac{\\kvmag/\\kvc}{1 + (\\kvmag/\\kvc)^2}\\sin(2\\kkmag z)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(8.123)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\frac{1}{\\ktauP} = \\frac{2}{9}\\kRopt",
+       "src": "(8.113)"
+      },
+      {
+       "text": "波矢量为$k = 2\\pi/\\lambda$。",
+       "src": "8.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{v}{\\kvc} = \\mk{R}{\\frac{1}{2\\kkmag\\ktauP}}",
+      "uses": [
+       0
+      ],
+      "why": "解中所命名的俘获速度。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{v}{\\kvc} = \\mk{R}{\\frac{1}{2\\kkmag\\ktauP}} = \\mk{a}{\\frac{2\\kRopt}{9\\cdot 2\\kkmag}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{v}{\\kvc} = \\mk{R}{\\frac{1}{2\\kkmag\\ktauP}} = \\mk{a}{\\frac{\\klambda}{18\\pi}\\kRopt}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(8.124)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kFmag_\\mathrm{reactive} = \\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\sin(2\\kkmag z)\\left(|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}| - | -\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|\\right)",
+       "src": "(8.109)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\langle \\kFmag_\\mathrm{reactive}\\rangle} = \\mk{R}{\\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\left\\langle\\sin(2\\kkmag z)\\kDeltarho\\right\\rangle}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\langle \\kFmag_\\mathrm{reactive}\\rangle} = \\mk{R}{\\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\left\\langle\\sin(2\\kkmag z)\\left(\\frac{\\cos(2\\kkmag z)}{1 + (\\kvmag/\\kvc)^2} + \\frac{(\\kvmag/\\kvc)\\sin(2\\kkmag z)}{1 + (\\kvmag/\\kvc)^2}\\right)\\right\\rangle}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\langle \\kFmag_\\mathrm{reactive}\\rangle} = \\mk{R}{\\frac{1}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\frac{\\kvmag/\\kvc}{1 + (\\kvmag/\\kvc)^2}}",
+       "uses": [],
+       "cap": "在几个波长上取平均，$\\langle\\sin 2kz\\cos 2kz\\rangle = 0$，$\\langle\\sin^2 2kz\\rangle = \\frac12$。"
+      },
+      {
+       "tex": "\\mk{F}{\\langle \\kFmag_\\mathrm{reactive}\\rangle} = \\mk{R}{\\frac{1}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\frac{\\kvmag/\\kvc}{1 + (\\kvmag/\\kvc)^2}} = \\mk{e}{\\ketaS\\kvmag\\km}",
+       "uses": [],
+       "cap": "把西西弗斯摩擦系数记为$\\eta_S$。"
+      }
+     ],
+     "num": "(8.125)"
+    }
+   ]
+  },
+  {
+   "id": "steady-state-force",
+   "what": "定常态布居下的力",
+   "source": "现代原子与光学物理 II，8.6.3 亚多普勒冷却的定量分析",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kFmag_\\mathrm{reactive} = \\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\sin(2\\kkmag z)\\left(|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}| - | -\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|\\right)",
+       "src": "(8.109)"
+      },
+      {
+       "tex": "\\kDeltarho_{SS} = \\cos(2\\kkmag z)",
+       "src": "(8.114)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kFmag^{SS}_\\mathrm{reactive}} = \\mk{R}{\\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\sin(2\\kkmag z)\\kDeltarho_{SS}}",
+      "src": "(8.115)",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kFmag^{SS}_\\mathrm{reactive}} = \\mk{R}{\\frac{2}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\sin(2\\kkmag z)\\cos(2\\kkmag z)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\kFmag^{SS}_\\mathrm{reactive}} = \\mk{R}{\\frac{1}{3}\\hbar \\kkmag\\frac{|\\kOmega|^2}{\\kdelta}\\sin(4\\kkmag z)}",
+       "uses": [],
+       "cap": "$\\sin 2x\\cos 2x = \\frac12\\sin 4x$。"
+      }
+     ],
+     "num": "(8.116)"
+    }
+   ]
+  }
+ ]
+}

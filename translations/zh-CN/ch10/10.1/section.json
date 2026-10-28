@@ -1,0 +1,125 @@
+{
+ "id": "10.1",
+ "chapter": "10",
+ "title": "离子阱",
+ "short": "离子阱",
+ "lead": "为什么离子不能仅靠静电场来约束，以及绕开这一点的两种阱：<span data-concept=\"penning-trap\">彭宁阱</span>，在带电端盖之外加入磁场；<span data-concept=\"paul-trap\">保罗阱</span>，其<span data-concept=\"quadrupole-potential\">四极势</span>以射频振荡。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-penning",
+   "kind": "sim",
+   "number": "10.1",
+   "draws": [
+    "magnetic-field",
+    "frequency"
+   ],
+   "conventions": [
+    "Be"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ],
+   "withheld": "图 10.1 是一幅来源不明的栅格图像，本书不得复制。"
+  },
+  {
+   "id": "sim-paul",
+   "kind": "sim",
+   "number": "10.2",
+   "draws": [
+    "frequency",
+    "length",
+    "time"
+   ],
+   "conventions": [
+    "Ca"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ],
+   "withheld": "图 10.2 是从已发表论文中扫描的图，本书不得复制。"
+  }
+ ],
+ "coverage": [
+  {
+   "span": "static-minimum",
+   "concept": "ion-trap-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "penning",
+   "concept": "penning-trap",
+   "verb": "introduces"
+  },
+  {
+   "span": "quadrupole",
+   "concept": "quadrupole-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "paul",
+   "concept": "paul-trap",
+   "verb": "introduces"
+  },
+  {
+   "span": "micromotion",
+   "concept": "micromotion",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [],
+ "footnotes": [
+  {
+   "id": "c-rotates",
+   "kind": "correction",
+   "html": "保罗阱并不使其势旋转：驱动以射频反转其符号，<a href=\"#eq-10-1\">式 (10.1)</a>中的$\\alpha = -\\beta = \\cos \\kOmegaRF \\kt$，因此约束方向与排斥方向每半个周期交换一次，是该段其余部分所描述的振荡。旋转的鞍面通过同样的平均来约束，是该阱的力学模型。"
+  }
+ ]
+}

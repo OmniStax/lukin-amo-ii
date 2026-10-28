@@ -1,0 +1,81 @@
+<section id="opening">
+<p>我们已经定性地论证了，随着<span data-concept="dark-state-preparation">反直觉脉冲序列</span>的施加，系统<span data-concept="adiabatic-theorem">绝热跟随</span><span data-concept="dark-state">暗态</span>，并且已经找到了相干演化下<span data-concept="adiabatic-theorem">绝热定理</span>成立的条件。我们还没有定量地说明，在存在退相位和衰变的系统中，<span data-ref="pump">探测脉冲</span>必须变化得多慢，这幅简单的图像才能继续成立。</p>
+</section>
+
+<section id="analysis">
+<h2>绝热条件的分析</h2>
+<p>为了定量地分析非绝热损耗，我们假设一个发生在特征时标$\ktau$上的具体脉冲形状。例如，设照射原子云的<span data-ref="pump stokes">两个脉冲</span>的时间依赖关系为</p>
+<div class="equation" id="eq-7-39">$$\kOmegaone(\kt) = \kOmega\sin\frac{\kt}{\ktau} \tag{7.39}$$</div>
+<div class="equation" id="eq-7-40">$$\kOmegatwo(\kt) = \kOmega\cos\frac{\kt}{\ktau}. \tag{7.40}$$</div>
+<p id="follow">如果系统在$\kt = 0$时从<span data-ref="lvl-1">$|1\rangle$</span>出发，并且在<span data-ref="pump stokes">脉冲</span>改变振幅时<span data-concept="adiabatic-theorem">绝热跟随</span><span data-concept="dark-state">暗态</span>，那么在$\kt = (\pi/2)\ktau$时，系统将处于<span data-ref="lvl-2">$-|2\rangle$</span>。我们想要找出最短的时间$\ktau$，在该时间下原子态能够跟随场的演化而不离开<span data-concept="dark-state">暗态</span>。</p>
+<figure class="sim" id="sim-four-level-pulses" data-figure="7.5 + 7.6" data-original="/media/ch07/fig-7-5.png" data-original-caption="四能级系统的脉冲序列。三个场 S = Ω₃，C = Ω₄ 和 P = Ω₁ 用来把原子可控地从初态 |1⟩ 转移到 |3⟩ 与 |4⟩ 的某种叠加。末态中的概率幅由控制脉冲 Ω₄ 的时刻、相位和功率决定。">
+  <div class="sim-head"><span class="eyebrow">Figure 7.5 + 7.6</span><span>三个脉冲把 7.3.2 节的四能级原子从<span data-ref="four-1">$|1\rangle$</span>送入<span data-ref="four-3">$|3\rangle$</span>与<span data-ref="four-4">$|4\rangle$</span>的叠加：<span data-ref="four-s">S = $\kOmegathree$</span>和 <span data-ref="four-c">C = $\kOmegafour$</span>把两个末态耦合到激发态$|2\rangle$，而峰值在$0.8T$的 <span data-ref="pump">P = $\kOmegaone$</span>最后把<span data-ref="four-1">$|1\rangle$</span>耦合到它。上方的条带是脉冲，下方的条带是布居，由薛定谔方程算出，其中每个场都共振，高斯脉冲的宽度为$T$，峰值拉比频率为$20/T$，$|2\rangle$以$5/T$衰变出系统。让 <span data-ref="four-c">C</span> 滑过 <span data-ref="four-s">S</span>：当 <span data-ref="four-c">C</span> 在 <span data-ref="four-s">S</span> 之后时，原子大多终止于<span data-ref="four-4">$|4\rangle$</span>，两者重合处各占一半，当 <span data-ref="four-c">C</span> 在前时，大多终止于<span data-ref="four-3">$|3\rangle$</span>；它的功率以同样的方式使这种分配倾斜。条带旁边是原子最终的横向动量：处于<span data-ref="four-3">$|3\rangle$</span>和<span data-ref="four-4">$|4\rangle$</span>的原子以相反的光子动量$\hbar k$反冲：H. 托伊尔、R. G. 乌纳尼扬、C. 哈布沙伊德、K. 克莱因和 K. 贝格曼为亚稳氖建成的<span data-concept="adiabatic-atomic-beamsplitter">原子分束器</span>，Optics Express 4, 77 (1999)。</span></div>
+</figure>
+<p id="stochastic">为了把退相位和衰变纳入我们的描述，我们将采用<span data-concept="monte-carlo-wavefunction">随机波函数表述</span>。为使问题简单，我们忽略<span data-ref="lvl-2">$|2\rangle$</span>的任何衰变，也忽略<span data-ref="lvl-3">$|3\rangle$</span>衰变造成的任何下态重新布居。<sup class="fn" data-note="footnote-2"></sup>一般态$|\kpsi(\kt))\rangle = \kcone(\kt)|1\rangle + \kctwo(\kt)|2\rangle + \kcthree(\kt)|3\rangle$<sup class="fn" data-note="c-psi-paren"></sup>的<span data-concept="non-hermitian-evolution">非厄米薛定谔方程</span>给出<span data-concept="probability-amplitude">概率幅</span>的如下运动方程：</p>
+<div class="equation" id="eq-7-41">$$\dot{\kcone} = i\kOmegaone^*(\kt)\kcthree \tag{7.41}$$</div>
+<div class="equation" id="eq-7-42">$$\dot{\kctwo} = i\kOmegatwo^*(\kt)\kcthree \tag{7.42}$$</div>
+<div class="equation" id="eq-7-43">$$\dot{\kcthree} = -\kgammaonethree\kcthree + i\left(\kOmegaone(\kt)\kcone + \kOmegatwo(\kt)\kctwo\right). \tag{7.43}$$</div>
+<p>我们将寻找这些波动方程的解，其形式为</p>
+<div class="equation" id="eq-7-44">$$\kcinst_i = \kcinst_i^{(0)} + \kcinst_i^{(1)} + \ldots \tag{7.44}$$</div>
+<p id="zeroth">其中和式中的每一项都代表按小参数$\propto 1/\ktau$的幂展开的更高阶修正。最低阶解$\kcinst_i^{(0)}$是定态解，可以通过忽略运动方程中的所有时间导数求得。前两个方程意味着$\kcthree^{(0)} = 0$，同时求解第三个方程和归一化条件$\langle\kpsi|\kpsi\rangle = 1$，我们就可以求得零阶概率幅。</p>
+<figure class="dv" id="drv-stirap-zeroth-order"></figure>
+<p>注意，忽略时间导数恰好给出了我们先前找到的<span data-concept="dark-state">暗态</span>。</p>
+<p>然而严格地说，$\kcone^{(0)}$和$\kctwo^{(0)}$并不给出这些波动方程的精确解，因为它们的时间导数不为零。到$1/\ktau$的第一个非零阶，我们必须计入$\kcone^{(0)}$和$\kctwo^{(0)}$中时间变化的效应，从而得到关于一阶修正的一组方程。</p>
+<figure class="dv" id="drv-stirap-first-order"></figure>
+<p id="expansion-note">这个方程对$\kcone^{(1)}$和$\kctwo^{(2)}$<sup class="fn" data-note="c-c2-2"></sup>无法求解<sup class="fn" data-note="footnote-3"></sup>；不过，我们立刻可以看出，这些一阶修正$\kcone^{(1)}$和$\kctwo^{(1)}$都正比于$\kgammaonethree/\kOmega^2\ktau$。当这些修正很小时，原子态的演化近似是<span data-concept="adiabatic-theorem">绝热</span>的，于是<span data-concept="dark-state-adiabaticity-condition">绝热条件变为</span></p>
+<div class="equation" id="eq-7-53">$$\frac{\kgammaonethree}{\kOmega^2\ktau} \ll 1. \tag{7.53}$$</div>
+<p>这一结果说明了衰变在<span data-concept="adiabatic-theorem">绝热</span>过程中的重要性，因为这一结果与我们对<span data-concept="adiabaticity-condition">相干演化系统的绝热跟随</span>所得的结果大不相同。</p>
+</section>
+
+<section id="jumps">
+<h2>量子跳跃引起的误差</h2>
+<p id="jumps-intro">在计算<span data-concept="dark-state">暗态</span>形成的非绝热修正时，我们忽略了另一个误差来源：<span data-concept="quantum-jump">量子跳跃</span>。在特征时标$\ktau$内，<span data-concept="jump-probability">系统发生量子跳跃的概率</span>为</p>
+<div class="equation" id="eq-7-56">$$\kPjump = \kgammaonethree\int_0^{\ktau} |\kcthree|^2 = \frac{\kgammaonethree}{\kOmega^2\ktau}. \tag{7.56}$$<sup class="fn" data-note="c-eq-7-56"></sup></div>
+<p><span data-concept="monte-carlo-wavefunction">随机波函数方法</span>成立的条件因此是</p>
+<div class="equation" id="eq-7-57">$$\kPjump \ll 1 \Rightarrow \frac{\kgammaonethree}{\kOmega^2\ktau} \ll 1, \tag{7.57}$$</div>
+<p>所以<span data-concept="adiabatic-theorem">绝热</span>近似和推导它所用的<span data-concept="non-hermitian-evolution">非厄米演化</span>在相同的情形下成立。</p>
+<p id="fidelity">注意，对非厄米波函数的非绝热修正和<span data-concept="quantum-jump">量子跳跃</span>都限制了从<span data-ref="lvl-1">$|1\rangle$</span>到<span data-ref="lvl-2">$-|2\rangle$</span>的<span data-concept="stirap-fidelity">绝热通道的保真度</span>。特别地，最终处于正确末态的概率（$\kOmega\ktau = \pi/2$）<sup class="fn" data-note="c-final-time"></sup>可以明确地算出。</p>
+<figure class="dv" id="drv-stirap-fidelity"></figure>
+<p id="landau">与上面讨论的<span data-concept="landau-zener">朗道-齐纳问题</span>不同，这个精确解允许按小参数$\kgammaonethree/\kOmega^2\ktau$展开。虽然对于相干的<span data-concept="adiabatic-theorem">绝热</span>过程我们无法求得微扰解，但在存在衰变时，这样的展开可以成为可能。</p>
+</section>
+
+<section id="remarks">
+<h2>7.4.1 评注</h2>
+<h3>部分对角化基：一种直观的方法</h3>
+<p id="partial-basis">我们的分析是用<span data-concept="bare-states">裸态基</span><span data-ref="lvl-1">$|1\rangle$</span>、<span data-ref="lvl-2">$|2\rangle$</span>和<span data-ref="lvl-3">$|3\rangle$</span>进行的。通过完全对角化<span data-concept="hamiltonian">哈密顿量</span>，可以定义一个含时的<span data-concept="three-level-dressed-states">缀饰态基</span>。然而在实践中，这个问题最容易在由<span data-ref="dark"><span data-concept="dark-state">暗态</span>$|D\rangle$</span>、<span data-ref="bright"><span data-concept="bright-state">亮态</span>$|B\rangle$</span>和<span data-ref="lvl-3">激发态$|E\rangle$</span>组成的<span data-concept="bright-dark-basis">部分对角化基</span>中求解和理解：</p>
+<div class="equation" id="eq-7-59">$$|B\rangle = \frac{\kOmegaone|1\rangle + \kOmegatwo|2\rangle}{\sqrt{|\kOmegaone|^2 + |\kOmegatwo|^2}} \tag{7.59}$$</div>
+<div class="equation" id="eq-7-60">$$|D\rangle = \frac{\kOmegatwo|1\rangle - \kOmegaone|2\rangle}{\sqrt{|\kOmegaone|^2 + |\kOmegatwo|^2}} \tag{7.60}$$</div>
+<div class="equation" id="eq-7-61">$$|E\rangle = |3\rangle. \tag{7.61}$$</div>
+<p>通过选择这种混杂基，我们使相互作用<span data-concept="hamiltonian">哈密顿量</span>得到了相当大的简化，</p>
+<div class="equation" id="eq-7-62">$$\kH_\mathrm{int} = -\sqrt{|\kOmegaone|^2 + |\kOmegatwo|^2}\left(|B\rangle\langle E| + |E\rangle\langle B|\right). \tag{7.62}$$</div>
+<p><span data-ref="dark"><span data-concept="dark-state">暗态</span></span>不参与动力学，因为<span data-ref="lvl-3">激发态</span>只与<span data-ref="lvl-1">$|1\rangle$</span>和<span data-ref="lvl-2">$|2\rangle$</span>的<span data-ref="bright"><span data-concept="bright-state">亮态</span>叠加</span>耦合。</p>
+<p id="omega-na">在这个新基中工作，使我们对非绝热修正有了直观的认识。态<span data-ref="bright">$|B\rangle$</span>和<span data-ref="lvl-3">$|E\rangle$</span>由$\kOmega = \sqrt{|\kOmegaone|^2 + |\kOmegatwo|^2}$耦合，而有限的脉冲时间在<span data-ref="dark bright">暗态和<span data-concept="bright-state">亮态</span></span>之间诱导出一个弱耦合。<span data-ref="dark">$|D\rangle$</span> $\to$ <span data-ref="bright">$|B\rangle$</span>跃迁的强度为</p>
+<div class="equation" id="eq-7-63">$$i\hbar\langle B|\frac{d}{d\kt}|D\rangle = -i\hbar\frac{1}{\ktau}. \tag{7.63}$$</div>
+<p><span data-concept="nonadiabatic-rabi-frequency">非绝热耦合</span>的作用如同一个<span data-concept="rabi-frequency">拉比频率</span>为$\kOmegaNA = 1/\ktau$的弱场，驱动<span data-ref="dark">$|D\rangle$</span>到<span data-ref="bright">$|B\rangle$</span>的跃迁。<sup class="fn" data-note="footnote-4"></sup></p>
+<p id="escape">这正是在双共振实验中，原子被光辐射和微波辐射激发时所遇到的那类情形。$\kOmega$和$\kgammaonethree$的净效果是引入<span data-ref="bright">$|B\rangle$</span>的有限寿命，因为<span data-ref="bright">$|B\rangle$</span>可以被激发到<span data-ref="lvl-3">$|E\rangle$</span>，随后会衰变。离开<span data-ref="bright">$|B\rangle$</span>的<span data-concept="bright-state-escape-rate">逃逸率</span>与光激发率同量级，</p>
+<div class="equation" id="eq-7-64">$$\kgammaB = \frac{\kOmega^2}{\kgammaonethree}. \tag{7.64}$$</div>
+<p>原子将保持在<span data-ref="dark"><span data-concept="dark-state">暗态</span></span>中，前提是<span data-ref="dark">$|D\rangle$</span>与<span data-ref="bright">$|B\rangle$</span>之间的混合率$\kOmegaNA$弱于<span data-ref="bright">$|B\rangle$</span>寿命的倒数，</p>
+<div class="equation" id="eq-7-65">$$\frac{1}{\ktau} \ll \frac{\kOmega^2}{\kgammaonethree}. \tag{7.65}$$</div>
+<p>在这里，来自<span data-ref="bright"><span data-concept="bright-state">亮态</span></span>的衰变有助于迫使原子进入<span data-ref="dark"><span data-concept="dark-state">暗态</span></span>。通过物理推理，我们得到了与数学推导所得的完全相同的<span data-concept="dark-state-adiabaticity-condition">绝热条件</span>。</p>
+<figure class="sim" id="sim-dark-loss">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>式 (7.39)–(7.40) 的脉冲把原子从<span data-ref="lvl-1">$|1\rangle$</span>送到<span data-ref="lvl-2">$-|2\rangle$</span>，同时<span data-ref="lvl-3">$|3\rangle$</span>以$\kgammaonethree$衰变，式 (7.41)–(7.43) 已精确求解。左侧是转移过程中的布居，画在<span data-concept="bare-states">裸态基</span>或<span data-concept="bright-dark-basis">部分对角化基</span>中；右侧是到达的份额$\krhotwotwo$随$\ktau$的变化，指数律用虚线表示。缩短$\ktau$或提高$\kgammaonethree$，原子就会从<span data-ref="dark">$|D\rangle$</span>经<span data-ref="bright">$|B\rangle$</span>泄漏到<span data-ref="lvl-3">$|E\rangle$</span>并衰变：一旦$\kOmegaNA$与$\kgammaB$之比$\kgammaonethree/\kOmega^2\ktau$不再很小，转移便失败。把$\kgammaonethree$调到远低于$|\kOmega|$，则在$\ktau$较短处，运行结果偏离该定律，那里首先失效的是相干条件$\kOmega\ktau \gg 1$。时间以 μs 为单位，速率以 μs⁻¹ 为单位。</span></div>
+</figure>
+<h3>绝热通道与 EIT</h3>
+<p id="eit"><span data-concept="adiabatic-theorem">绝热跟随</span>的条件与脉冲在 <span data-concept="electromagnetically-induced-transparency">EIT</span> 介质内传播的条件之间，存在一种有趣的关系。<span data-concept="electromagnetically-induced-transparency">电磁感生透明</span>的光谱窗口允许<span data-ref="pump">探测脉冲</span>无损耗地传播，仅当其所有谱分量都落在<span data-concept="dark-resonance">暗共振</span>谱线宽度$\kDeltaomega$之内，即仅当<span data-ref="pump">探测脉冲</span>的持续时间足够长，$\ktau \gg 1/\kDeltaomega$。由于$\kDeltaomega = \kOmega^2/\kgammaonethree$，<span data-concept="electromagnetically-induced-transparency">EIT</span> 脉冲透射的条件恰好对应于<span data-concept="dark-state-adiabaticity-condition">绝热跟随条件</span>。</p>
+<p>这种对应关系突出了 <span data-concept="electromagnetically-induced-transparency">EIT</span> 与<span data-concept="adiabatic-theorem">绝热</span>过程之间的联系。如果<span data-ref="pump">脉冲</span>进入得足够缓慢，原子系统就<span data-concept="adiabatic-theorem">绝热跟随</span><span data-concept="dark-state">暗态</span>，进入无损耗地在介质中传播的<span data-ref="lvl-1">$|1\rangle$</span>和<span data-ref="lvl-2">$|2\rangle$</span>的叠加。当<span data-ref="pump">脉冲</span>离开时，原子态<span data-concept="adiabatic-theorem">绝热跟随</span><span data-concept="dark-state">暗态</span>回到<span data-ref="lvl-1">$|1\rangle$</span>，把原子相干性转移给透射光。</p>
+<h3>非绝热暗态制备</h3>
+<p id="mixture"><span data-concept="dark-state">暗态</span>也可以不借助<span data-concept="adiabatic-theorem">绝热</span>过程来制备。例如，设系统从各态的<span data-concept="pure-and-mixed-states">非相干混合态</span>出发，$\krhooneone = \krhotwotwo = 1/2$。由于所需的末态是<span data-concept="pure-and-mixed-states">纯态</span>，任何<span data-concept="hamiltonian">哈密顿量</span>演化（无论是否<span data-concept="adiabatic-theorem">绝热</span>）都不可能把这种<span data-concept="pure-and-mixed-states">混合态</span>变成<span data-concept="dark-state">暗态</span>。</p>
+<p id="discovery">然而，<span data-concept="dark-state">暗态</span>的实验发现 [阿尔泽塔 <em>等</em> Novvo Cirr. 36B, 5/76]<sup class="fn" data-note="c-alzetta"></sup>是通过监测被两个连续波场照射的热钠蒸气室的荧光完成的。由于<span data-concept="zeeman-effect">塞曼效应</span>，沿蒸气室的磁场梯度产生了<span data-concept="detuning">失谐</span>的空间梯度。在沿蒸气室的、经塞曼移位的<span data-concept="lambda-detunings">双光子失谐</span>消失的精确位置，荧光信号中出现了一条暗条纹。这被解释为形成了<span data-concept="dark-state">暗态</span>——然而热蒸气一开始处于<span data-concept="pure-and-mixed-states">统计混合</span>。</p>
+<p id="pumping-dark">这个难题很容易通过在<span data-ref="bright dark">亮态和<span data-concept="dark-state">暗态</span></span>的<span data-concept="bright-dark-basis">部分对角化基</span>中分析该实验来解决。原来的<span data-concept="pure-and-mixed-states">混合态</span>是<span data-ref="bright"><span data-concept="bright-state">亮态</span></span>和<span data-ref="dark"><span data-concept="dark-state">暗态</span></span>的<span data-concept="pure-and-mixed-states">统计混合</span>。考虑施加<span data-ref="pump stokes">连续波场$\kOmegaone$和$\kOmegatwo$</span>，使得与<span data-ref="bright">$|B\rangle$</span>和<span data-ref="dark">$|D\rangle$</span>的非绝热耦合消失的情形。同时，<span data-ref="pump stokes">这一对场</span>起到<span data-concept="optical-pumping">光抽运</span>光束的作用，把处于<span data-ref="bright">$|B\rangle$</span>的原子激发到<span data-ref="lvl-3">$|E\rangle$</span>，原子在那里或者衰变到<span data-ref="dark">$|D\rangle$</span>（此后它停留在那里），或者衰变到<span data-ref="bright">$|B\rangle$</span>（它从那里又被抽运回<span data-ref="lvl-3">$|E\rangle$</span>）。因此，<span data-concept="dark-state-optical-pumping">部分对角化基中的光抽运</span>通过纯粹的非相干过程把系统制备在<span data-concept="dark-state">暗态</span>。</p>
+<h3>布居与相干性：基的重要性</h3>
+<p id="coherence-population">从<span data-concept="dark-state">暗态</span>形成的例子中我们看到，原子相干性的制备与<span data-concept="optical-pumping">光抽运</span>有某种联系。这并不太令人意外，因为<span data-concept="coherence-population-basis">一个基中的相干性（例如$\{|1\rangle, |2\rangle\}$）恰是另一个基中的布居差（例如$\{|B\rangle, |D\rangle\}$）</span>。</p>
+<p>布居与相干性之间的关系，可以通过原子在$J = 1$到$J' = 1$跃迁上与线偏振光相互作用这一简单例子来阐明。在没有外加磁场时，我们可以自由地选择量子化轴平行或垂直于光的<span data-concept="light-polarization">偏振</span>。</p>
+<figure class="sim" id="sim-two-bases" data-figure="7.7" data-original="/media/ch07/fig-7-7.png" data-original-caption="与 J = 1 到 J’ = 1 跃迁近共振的线偏振光，若选取量子化轴平行于偏振轴，则最容易理解。在这第一种情形中，这些场显然会把原子抽运到 m∥ = 0 态。如果我们选择在垂直基中分析这个问题，就必须找出以红色标出的 Λ 型系统。光将把布居抽运到相应的 m⊥ = ±1 的暗态叠加，它恰好等于态 m∥ = 0。">
+  <div class="sim-head"><span class="eyebrow">Figure 7.7</span><span>$J = 1$到$J' = 1$跃迁上的线偏振光，在<span data-concept="optical-pumping">光抽运</span>完成其作用之后，量子化轴平行或垂直于偏振。平行时，光只把$m = \pm 1$耦合到$m' = \pm 1$，原子处于<span data-ref="pumped">$m_\parallel = 0$</span>，这是一个布居。垂直时，两个圆偏振分量耦合四个跃迁，其中有一个从$m_\perp = \pm 1$到$m'_\perp = 0$的<span data-concept="lambda-system">Λ 型系统</span>，同样的原子处于<span data-ref="pumped">其暗叠加态</span>，在$m_\perp = \pm 1$各占一半，二者之间有相干性。切换轴，看这同一个态改变它的描述：读数把它的密度算符$\krhohat$写在每个基中。</span></div>
+</figure>
+<p id="parallel">假设我们选择使$m_J$子能级沿平行于光<span data-concept="light-polarization">偏振</span>的方向量子化。由于对称性考虑禁止$\Delta J = 0, \Delta m_J = 0$的跃迁，光将只耦合$m_J = \pm 1 \to m_J' = \pm 1$，任何<span data-concept="pure-and-mixed-states">混合态</span>都将被光抽运到<span data-ref="pumped">较低的$m_J = 0$态</span>。</p>
+<p id="perpendicular">现在假设我们选择在光的偏振垂直于量子化轴的情形下分析同一个问题。任何线<span data-concept="light-polarization">偏振</span>都可以分解为两个圆<span data-concept="light-polarization">偏振</span>，它们耦合四个$\Delta m_J = \pm 1$的跃迁。在这一堆能级和跃迁中，我们可以辨认出一个<span data-concept="lambda-system">$\Lambda$构型</span>：$m_J = 1$态和$m_J = -1$态现在都耦合到同一个$m_J' = 0$激发态。因此，系统有一个<span data-concept="dark-state">暗态</span>，原子将被光抽运到<span data-ref="pumped">$m_J = -1$和$m_J = 1$的暗叠加</span>中，它恰好对应于<span data-ref="pumped">沿<span data-concept="light-polarization">偏振</span>轴量子化的$m_J = 0$态</span>。</p>
+<p>这一讨论的要点是，<span data-concept="coherence-population-basis">一个基中的相干性就是另一个基中的布居分布</span>。通常，后一个基将为复杂的问题提供最多的物理洞察。</p>
+<h3>暗态的应用</h3>
+<p id="applications"><span data-concept="dark-state">暗态</span>是一种重要的工具，既被用来制备和操控原子态，也被用来控制光脉冲。此外，动量传递与<span data-concept="dark-state">暗态</span>的形成相关联。因此，<span data-concept="dark-state">暗态</span>技术也可以用来产生动量态或空间态的叠加。例如，如上一讲所述，绝热通道已被用来制造可控的<span data-concept="adiabatic-atomic-beamsplitter">原子分束器</span>。</p>
+</section>

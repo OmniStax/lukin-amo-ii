@@ -1,0 +1,613 @@
+{
+  "id": "10.2",
+  "chapter": "10",
+  "title": "模型：谐振阱中的离子",
+  "short": "谐振阱中的离子",
+  "lead": "作为置于谐振子阶梯之上的<span data-concept=\"two-level-atom\">二能级系统</span>的陷俘离子：其运动基态的大小，把它与激光波长相比较的<span data-concept=\"lamb-dicke-parameter\">兰姆-迪克参数</span>，激光在裸共振以及<span data-concept=\"sideband-couplings\">红边带和蓝边带</span>上所寻址的跃迁，它们与<span data-concept=\"cavity-qed\">腔量子电动力学</span>的<span data-concept=\"jaynes-cummings-model\">J-C 模型</span>的亲缘关系，以及<span data-concept=\"sideband-cooling\">边带冷却</span>至阱的基态。",
+  "objectives": [],
+  "summary_html": "",
+  "notes": "",
+  "ai": {
+    "text": [
+      {
+        "model": "claude-opus-5-5",
+        "effort": "high"
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "effort": "medium"
+      }
+    ],
+    "figures": [
+      {
+        "model": "claude-opus-5-5",
+        "effort": "high"
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "effort": "medium"
+      }
+    ]
+  },
+  "built": "2026-10-26",
+  "exercises_lead": "",
+  "exercise_notes": "MIT 8.422 习题集 10 的第 2 题按 (a) 至 (c) 几个小问给出，改用卢金的记号重述，并附有 AI 撰写的解答，因为该课程没有公布答案；(d) 小问，即⁸⁸Sr 的定常态温度和时间常量，是数值题且没有答案，被暂扣。",
+  "figures": [
+    {
+      "id": "fig-ion-trap",
+      "kind": "figure",
+      "number": "10.3",
+      "originals": [
+        "/media/ch10/fig-10-3.png"
+      ],
+      "original_caption": "受约束于一维谐振子阱中的离子的模型，受激光激发与自发发射的作用。",
+      "draws": [
+        "coupling",
+        "rate",
+        "energy"
+      ],
+      "ai": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "part": "built"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "medium",
+          "part": "翻译"
+        }
+      ]
+    },
+    {
+      "id": "fig-ion-levels",
+      "kind": "figure",
+      "number": "10.4",
+      "originals": [
+        "/media/ch10/fig-10-4.png"
+      ],
+      "original_caption": "谐振子阱中离子的内部自由度和外部自由度。请注意，偶极容许跃迁用于冷却离子，而偶极禁戒跃迁用于在离子中编码信息。",
+      "draws": [
+        "rate",
+        "energy"
+      ],
+      "ai": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "part": "built"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "medium",
+          "part": "翻译"
+        }
+      ]
+    },
+    {
+      "id": "sim-sideband-ladder",
+      "kind": "sim",
+      "number": "10.5",
+      "folds": [
+        "10.6"
+      ],
+      "originals": [
+        "/media/ch10/fig-10-5.png",
+        "/media/ch10/fig-10-6.png"
+      ],
+      "original_caption": "（图 10.5）当激光被调谐到裸原子共振时，原子在内态之间循环，而不改变其运动态。把激光调谐到蓝边带或红边带，也可以对不同的运动态寻址。（图 10.6）调谐到红边带或蓝边带的激光所诱导的跃迁。请注意，与垂直跃迁不同，边带跃迁的拉比频率随声子数而变化，$\\sim \\eta\\Omega\\sqrt{n}$。",
+      "draws": [
+        "coupling",
+        "frequency",
+        "population",
+        "time"
+      ],
+      "ai": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "part": "built"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "medium",
+          "part": "翻译"
+        }
+      ]
+    },
+    {
+      "id": "sim-sideband-cooling",
+      "kind": "sim",
+      "draws": [
+        "frequency",
+        "rate",
+        "population"
+      ],
+      "ai": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "part": "built"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "medium",
+          "part": "翻译"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "span": "model",
+      "concept": "trapped-ion-model",
+      "verb": "introduces"
+    },
+    {
+      "span": "qubit-levels",
+      "concept": "ion-qubit-levels",
+      "verb": "introduces"
+    },
+    {
+      "span": "hilbert-space",
+      "concept": "ion-hilbert-space",
+      "verb": "introduces"
+    },
+    {
+      "span": "trap-frequency",
+      "concept": "trap-frequency",
+      "verb": "introduces"
+    },
+    {
+      "span": "eq-10-2",
+      "concept": "ion-position-momentum",
+      "verb": "introduces"
+    },
+    {
+      "span": "eq-10-4",
+      "concept": "motional-hamiltonian",
+      "verb": "introduces"
+    },
+    {
+      "span": "eq-10-5",
+      "concept": "harmonic-oscillator-length",
+      "verb": "introduces"
+    },
+    {
+      "span": "eq-10-6",
+      "concept": "ion-electronic-hamiltonian",
+      "verb": "introduces"
+    },
+    {
+      "span": "gamma-tau",
+      "concept": "negligible-decay-condition",
+      "verb": "introduces"
+    },
+    {
+      "span": "momentum-kick",
+      "concept": "ion-momentum-kick",
+      "verb": "introduces"
+    },
+    {
+      "span": "x-operator",
+      "concept": "ion-laser-hamiltonian",
+      "verb": "introduces"
+    },
+    {
+      "span": "ld-parameter",
+      "concept": "lamb-dicke-parameter",
+      "verb": "introduces"
+    },
+    {
+      "span": "ld-regime",
+      "concept": "lamb-dicke-regime",
+      "verb": "introduces"
+    },
+    {
+      "span": "eq-10-14",
+      "concept": "lamb-dicke-hamiltonian",
+      "verb": "introduces"
+    },
+    {
+      "span": "eq-10-16",
+      "concept": "ion-bare-spectrum",
+      "verb": "introduces"
+    },
+    {
+      "span": "lowest-order",
+      "concept": "sideband-couplings",
+      "verb": "introduces"
+    },
+    {
+      "span": "carrier",
+      "concept": "carrier-transition",
+      "verb": "introduces"
+    },
+    {
+      "span": "red-jc",
+      "concept": "red-sideband-jaynes-cummings",
+      "verb": "introduces"
+    },
+    {
+      "span": "strong",
+      "concept": "trapped-ion-strong-coupling",
+      "verb": "introduces"
+    },
+    {
+      "span": "anti-jc",
+      "concept": "anti-jaynes-cummings",
+      "verb": "introduces"
+    },
+    {
+      "span": "standing",
+      "concept": "standing-wave-couplings",
+      "verb": "introduces"
+    },
+    {
+      "span": "cooling",
+      "concept": "sideband-cooling",
+      "verb": "introduces"
+    },
+    {
+      "span": "resolved",
+      "concept": "resolved-sideband-condition",
+      "verb": "introduces"
+    },
+    {
+      "span": "model",
+      "concept": "spontaneous-emission",
+      "verb": "uses"
+    },
+    {
+      "span": "qubit-levels",
+      "concept": "laser-cooling",
+      "verb": "uses"
+    },
+    {
+      "span": "hilbert-space",
+      "concept": "fock-states",
+      "verb": "uses"
+    },
+    {
+      "span": "hilbert-space",
+      "concept": "two-level-atom",
+      "verb": "uses"
+    },
+    {
+      "span": "eq-10-2",
+      "concept": "creation-annihilation-operators",
+      "verb": "uses"
+    },
+    {
+      "span": "gamma-tau",
+      "concept": "raman-transition",
+      "verb": "uses"
+    },
+    {
+      "span": "x-operator",
+      "concept": "rotating-wave-approximation",
+      "verb": "uses"
+    },
+    {
+      "span": "eq-10-13",
+      "concept": "recoil-frequency",
+      "verb": "uses"
+    },
+    {
+      "span": "eq-10-14",
+      "concept": "rotating-frame",
+      "verb": "uses"
+    },
+    {
+      "span": "red-jc",
+      "concept": "jaynes-cummings-model",
+      "verb": "uses"
+    },
+    {
+      "span": "red-jc",
+      "concept": "cavity-qed",
+      "verb": "uses"
+    },
+    {
+      "span": "strong",
+      "concept": "strong-coupling-regime",
+      "verb": "uses"
+    },
+    {
+      "span": "strong",
+      "concept": "single-photon-rabi-frequency",
+      "verb": "uses"
+    },
+    {
+      "span": "cooling",
+      "concept": "optical-pumping",
+      "verb": "uses"
+    },
+    {
+      "span": "resolved",
+      "concept": "spontaneous-emission-rate",
+      "verb": "uses"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "hw10-2a",
+      "source_id": "hw10.2a",
+      "source_number": "Problem Set 10, Problem 2(a)",
+      "origin": "mit-8422",
+      "changes": "改用卢金的记号重述：MIT的$\\Omega$记为$2\\Omega$，所以$\\Omega$是式 (10.9) 的拉比频率；$\\omega_0$记为$\\omega_{eg}$，$x_0$记为$a_0$，态$|n\\rangle|g\\rangle$记为$|g\\rangle|n\\rangle$，MIT的圆括号右矢记为$|\\,\\rangle$。",
+      "kind": "problem",
+      "bloom": "Apply",
+      "place": {
+        "at": "end"
+      },
+      "cite": "cooling",
+      "prompt": "正如我们在课上所见，光抽运是利用激光把一系列原子跃迁驱动到某个特定的态中，从该态出发不会再发生进一步的跃迁。当所涉及的跃迁发生在具有不同运动能量（声子）的分立态之间时，这一方法可用于对原子进行激光冷却。边带冷却就是这种情形，它本质上是对空间上被约束在谐振势中的原子的光抽运；例如，这个原子可以是一个陷俘离子。边带冷却是一种非常强大的激光冷却技术，可用于把离子冷却到其运动基态。本题考察一维二能级离子的边带冷却。考虑一个二能级原子的哈密顿量，其升算符和降算符为$\\hat{\\sigma}_\\pm$，它通过通常的 J-C 相互作用与量子化的激光场相互作用：$$\\hat{H}_I = 2\\hbar\\Omega(\\hat{\\sigma}_+ + \\hat{\\sigma}_-)\\cos(k\\hat{x} - \\omega t).$$设该原子是一个（质量为$m$的）离子，被约束在谐振势中，使得兰姆-迪克参数$\\eta = ka_0 \\ll 1$，其中$a_0 = \\sqrt{\\hbar/(2m\\nu)}$是基态波函数的大小，$\\nu$是离子的运动频率。把相互作用哈密顿量展开到$\\eta$的一阶，并变换到由$$\\hat{H}_0 = \\frac{\\hbar\\omega_{eg}}{2}\\hat{\\sigma}_z + \\hbar\\nu\\hat{a}^\\dagger\\hat{a},$$定义的参考系，其中$\\hat{\\sigma}_+ = |e\\rangle\\langle g|$和$\\hat{\\sigma}_- = |g\\rangle\\langle e|$是升算符和降算符，$\\hat{\\sigma}_z = |e\\rangle\\langle e| - |g\\rangle\\langle g|$是$\\hat{z}$轴泡利矩阵，$\\hat{a}$和$\\hat{a}^\\dagger$是运动的升算符和降算符。对于跃迁$|g\\rangle|n\\rangle \\to |e\\rangle|n-1\\rangle$（红边带）和$|g\\rangle|n\\rangle \\to |e\\rangle|n+1\\rangle$（蓝边带），拉比频率$\\Omega_{n,n-1}$和$\\Omega_{n,n+1}$各是多少？",
+      "answer": {
+        "type": "open",
+        "generated_by": "ai",
+        "solution": "由式 (10.2)，$k\\hat{x} = ka_0(\\hat{a} + \\hat{a}^\\dagger) = \\eta(\\hat{a} + \\hat{a}^\\dagger)$，所以到一阶有$e^{\\pm ik\\hat{x}} \\approx 1 \\pm i\\eta(\\hat{a} + \\hat{a}^\\dagger)$。在$\\hat{H}_0$的参考系中，$\\hat{\\sigma}_+ \\to \\hat{\\sigma}_+e^{i\\omega_{eg}t}$，$\\hat{a} \\to \\hat{a}e^{-i\\nu t}$，$\\hat{a}^\\dagger \\to \\hat{a}^\\dagger e^{i\\nu t}$。把余弦写成两个指数，并丢掉以$\\omega + \\omega_{eg}$旋转的项（旋转波近似），$$\\hat{H}_I \\approx \\hbar\\Omega\\,\\hat{\\sigma}_+e^{-i\\Delta t}\\left[1 + i\\eta\\left(\\hat{a}e^{-i\\nu t} + \\hat{a}^\\dagger e^{i\\nu t}\\right)\\right] + h.c.,$$其中$\\Delta = \\omega - \\omega_{eg}$：到$\\eta$一阶的式 (10.14)，耦合的符号除外。出现三项：$\\hat{\\sigma}_+$，在$\\Delta = 0$处共振，强度为$\\Omega$（式 10.20）；$\\hat{\\sigma}_+\\hat{a}$，在$\\Delta = -\\nu$处共振；以及$\\hat{\\sigma}_+\\hat{a}^\\dagger$，在$\\Delta = +\\nu$处共振。由$\\langle n-1|\\hat{a}|n\\rangle = \\sqrt{n}$和$\\langle n+1|\\hat{a}^\\dagger|n\\rangle = \\sqrt{n+1}$，$$\\Omega_{n,n-1} = \\eta\\Omega\\sqrt{n}, \\qquad \\Omega_{n,n+1} = \\eta\\Omega\\sqrt{n+1},$$如式 (10.21) 和 (10.22) 所述。这些是卢金意义上的耦合：在其共振上，边带使布居按$\\sin^2(\\eta\\Omega\\sqrt{n}\\,t)$翻转。在MIT的约定中，拉比频率是耦合的两倍，它们写作$2\\eta\\Omega\\sqrt{n}$和$2\\eta\\Omega\\sqrt{n+1}$，即$\\eta\\Omega_\\mathrm{MIT}\\sqrt{n}$和$\\eta\\Omega_\\mathrm{MIT}\\sqrt{n+1}$。红边带对于$n = 0$没有伙伴：$|g\\rangle|0\\rangle$对它是暗的。"
+      }
+    },
+    {
+      "id": "hw10-2b",
+      "source_id": "hw10.2b",
+      "source_number": "Problem Set 10, Problem 2(b)",
+      "origin": "mit-8422",
+      "changes": "改用卢金的记号重述：MIT的$\\Omega$记为$2\\Omega$，所以$\\Omega$是式 (10.9) 的拉比频率；$\\omega_0$记为$\\omega_{eg}$，$x_0$记为$a_0$，态$|n\\rangle|g\\rangle$记为$|g\\rangle|n\\rangle$，MIT的圆括号右矢记为$|\\,\\rangle$；$\\Gamma$记为$\\gamma$，本小问开头重复了题目的设定。",
+      "kind": "problem",
+      "bloom": "Apply",
+      "place": {
+        "at": "end"
+      },
+      "cite": "cooling",
+      "prompt": "对于质量为$m$、处于频率为$\\nu$的谐振阱中的二能级离子，经由$\\hat{H}_I = 2\\hbar\\Omega(\\hat{\\sigma}_+ + \\hat{\\sigma}_-)\\cos(k\\hat{x} - \\omega t)$驱动，兰姆-迪克参数为$\\eta \\ll 1$，其激发态$|e\\rangle$以速率$\\gamma$衰变，以及 (a) 小问中的红边带和蓝边带拉比频率$\\Omega_{n,n-1}$、$\\Omega_{n,n+1}$：由于每个冷却循环都涉及自发发射，相干性迅速衰变，冷却动力学可以用速率方程充分描述。谐振子能级$|n\\rangle$的布居$p_n = \\mathrm{Tr}_A\\langle n|\\rho|n\\rangle$，其中$\\mathrm{Tr}_A$表示对原子态的阵迹，由于自发拉曼跃迁$|g\\rangle|n-1\\rangle \\to |g\\rangle|n\\rangle$和$|g\\rangle|n+1\\rangle \\to |g\\rangle|n\\rangle$而增加，由于自发拉曼跃迁$|g\\rangle|n\\rangle \\to |g\\rangle|n-1\\rangle$和$|g\\rangle|n\\rangle \\to |g\\rangle|n+1\\rangle$而减少。注意，每一种自发拉曼跃迁都可以通过两种方式发生；例如$|g\\rangle|n\\rangle \\to |g\\rangle|n+1\\rangle$可以经由$|g\\rangle|n\\rangle \\to |e\\rangle|n\\rangle \\to |g\\rangle|n+1\\rangle$或$|g\\rangle|n\\rangle \\to |e\\rangle|n+1\\rangle \\to |g\\rangle|n+1\\rangle$进行。利用 (a) 小问中的拉比频率$\\Omega_{n,n-1}$和$\\Omega_{n,n+1}$，写出$p_n$的速率方程。为简单起见，假定激光功率低于饱和（$\\Omega \\ll \\gamma$），并将答案写成形式$$\\frac{dp_n}{dt} = nA_+p_{n-1} + (n+1)A_-p_{n+1} - (n+1)A_+p_n - nA_-p_n.$$速率$A_\\pm$是多少？",
+      "answer": {
+        "type": "open",
+        "generated_by": "ai",
+        "solution": "低于饱和时，每条路径都是一次激发紧接着一次衰变。以耦合$\\Omega'$在失谐$\\delta'$处被驱动的跃迁，其激发速率为$$R = \\frac{\\gamma\\Omega'^2}{\\delta'^2 + \\gamma^2/4},$$式 (4.55) 的光抽运率$R_{opt}$，取$\\gamma_{12} = \\gamma/2$。取$\\Delta = \\omega - \\omega_{eg}$，裸共振的失谐为$\\Delta$，红边带的失谐为$\\Delta + \\nu$，蓝边带的失谐为$\\Delta - \\nu$。衰变使$n$发生的改变来自光子反冲$e^{-ik\\hat{x}}$的同一展开：以概率$\\eta^2 n$减小一，以概率$\\eta^2(n+1)$增大一，其余情况下则完全不变（发射取沿阱轴方向，如本题的一维所设）。于是$|g\\rangle|n\\rangle \\to |g\\rangle|n-1\\rangle$的速率为$$n\\,\\eta^2\\Omega^2\\gamma\\left[\\frac{1}{(\\Delta + \\nu)^2 + \\gamma^2/4} + \\frac{1}{\\Delta^2 + \\gamma^2/4}\\right],$$第一项是一次红边带激发（耦合$\\eta\\Omega\\sqrt{n}$），随后是保持$n - 1$的衰变；第二项是一次裸共振上的激发（耦合$\\Omega$），随后是红边带上的衰变。同样，$|g\\rangle|n\\rangle \\to |g\\rangle|n+1\\rangle$的速率是同一括号的$n+1$倍，其第一项中取$\\Delta - \\nu$。把来自$n \\mp 1$的增益和来自$n$的损失合起来，就得到所述的形式，其中$$A_\\mp = \\eta^2\\Omega^2\\gamma\\left[\\frac{1}{(\\Delta \\pm \\nu)^2 + \\gamma^2/4} + \\frac{1}{\\Delta^2 + \\gamma^2/4}\\right],$$ $A_-$是每个声子的冷却率，$A_+$是加热率。用这里两倍大的MIT的$\\Omega$表示，前置因子写作$\\eta^2\\Omega_\\mathrm{MIT}^2\\gamma/4$。"
+      }
+    },
+    {
+      "id": "hw10-2c",
+      "source_id": "hw10.2c",
+      "source_number": "Problem Set 10, Problem 2(c)",
+      "origin": "mit-8422",
+      "changes": "改用卢金的记号重述：MIT的$\\Omega$记为$2\\Omega$，所以$\\Omega$是式 (10.9) 的拉比频率；$\\omega_0$记为$\\omega_{eg}$，$x_0$记为$a_0$，态$|n\\rangle|g\\rangle$记为$|g\\rangle|n\\rangle$，MIT的圆括号右矢记为$|\\,\\rangle$；$\\Gamma$记为$\\gamma$，$\\delta$记为$\\Delta = \\omega - \\omega_{eg}$，本小问开头重复了 (b) 小问的速率方程。",
+      "kind": "problem",
+      "bloom": "Apply",
+      "place": {
+        "at": "end"
+      },
+      "cite": "cooling",
+      "prompt": "对于 (a) 和 (b) 小问中的陷俘离子，其声子布居满足$\\frac{dp_n}{dt} = nA_+p_{n-1} + (n+1)A_-p_{n+1} - (n+1)A_+p_n - nA_-p_n$，激光的失谐为$\\Delta = \\omega - \\omega_{eg}$，激发态以$\\gamma$衰变：写出关于$$\\langle n\\rangle = \\sum_{n=0}^{\\infty} np_n$$的微分方程并求解。你应当发现，当$A_- > A_+$时发生冷却。在可分辨边带极限（$\\gamma \\ll \\nu$）下，当$\\Delta = -\\nu$时，定常态温度是多少？达到该温度需要多长时间？",
+      "answer": {
+        "type": "open",
+        "generated_by": "ai",
+        "solution": "把速率方程乘以$n$并求和，对前两项移动下标：$\\sum_n n^2 p_{n-1} = \\sum_m (m+1)^2 p_m$和$\\sum_n n(n+1)p_{n+1} = \\sum_m (m-1)m\\,p_m$。$A_+$项留下$\\sum_m[(m+1)^2 - m(m+1)]p_m = \\langle n\\rangle + 1$，$A_-$项留下$\\sum_m[(m-1)m - m^2]p_m = -\\langle n\\rangle$，所以$$\\frac{d\\langle n\\rangle}{dt} = -(A_- - A_+)\\langle n\\rangle + A_+,$$其解为$$\\langle n\\rangle(t) = \\langle n\\rangle_{ss} + \\left(\\langle n\\rangle(0) - \\langle n\\rangle_{ss}\\right)e^{-(A_- - A_+)t}, \\qquad \\langle n\\rangle_{ss} = \\frac{A_+}{A_- - A_+}.$$只有当$A_- > A_+$时它才会稳定下来；否则$\\langle n\\rangle$无界地增长。在$\\Delta = -\\nu$且$\\gamma \\ll \\nu$时，红边带是共振的，$A_- \\approx \\eta^2\\Omega^2\\gamma(4/\\gamma^2 + 1/\\nu^2) \\approx 4\\eta^2\\Omega^2/\\gamma$，而加热只来自偏离共振处，即相距$2\\nu$的蓝边带和相距$\\nu$的裸共振：$A_+ \\approx \\eta^2\\Omega^2\\gamma\\left(\\frac{1}{4\\nu^2} + \\frac{1}{\\nu^2}\\right) = \\frac{5}{4}\\frac{\\eta^2\\Omega^2\\gamma}{\\nu^2}$。于是$$\\langle n\\rangle_{ss} \\approx \\frac{A_+}{A_-} = \\frac{5}{16}\\left(\\frac{\\gamma}{\\nu}\\right)^2 \\ll 1,$$因而离子几乎总是处于$|0\\rangle$态。对于热分布$\\langle n\\rangle = 1/(e^{\\hbar\\nu/k_BT} - 1)$，所以定常态温度为$$k_BT = \\frac{\\hbar\\nu}{\\ln(1 + 1/\\langle n\\rangle_{ss})} \\approx \\frac{\\hbar\\nu}{\\ln\\left(16\\nu^2/5\\gamma^2\\right)},$$它由$\\nu$设定，对$\\gamma$则只是对数式的依赖。达到这一温度需要几倍的时间常量$$\\frac{1}{A_- - A_+} \\approx \\frac{\\gamma}{4\\eta^2\\Omega^2},$$由于驱动很弱，$\\Omega \\ll \\gamma$，这比$1/\\gamma$长，而且因$1/\\eta^2$还要更长。"
+      }
+    }
+  ],
+  "exercise_concepts": [
+    {
+      "exercise": "hw10-2a",
+      "concept": "sideband-couplings"
+    },
+    {
+      "exercise": "hw10-2a",
+      "concept": "lamb-dicke-regime"
+    },
+    {
+      "exercise": "hw10-2b",
+      "concept": "sideband-cooling"
+    },
+    {
+      "exercise": "hw10-2b",
+      "concept": "sideband-couplings"
+    },
+    {
+      "exercise": "hw10-2c",
+      "concept": "sideband-cooling"
+    },
+    {
+      "exercise": "hw10-2c",
+      "concept": "resolved-sideband-condition"
+    }
+  ],
+  "referents": [
+    {
+      "id": "lvl-g",
+      "label": "基态|g⟩",
+      "figures": [
+        "fig-ion-levels",
+        "sim-sideband-ladder"
+      ]
+    },
+    {
+      "id": "lvl-e",
+      "label": "激发态|e⟩",
+      "figures": [
+        "fig-ion-levels",
+        "sim-sideband-ladder"
+      ]
+    }
+  ],
+  "footnotes": [
+    {
+      "id": "c-fig-10-4",
+      "kind": "correction",
+      "figure": "fig-ion-levels",
+      "html": "书中的图把偶极容许跃迁的上能级标为$|e\\rangle$，把偶极禁戒跃迁的上能级标为$|r\\rangle$。正文则把禁戒跃迁的长寿命上能级，即编码信息的那个能级，称为$|e\\rangle$（10.2.2），这里的图也照此处理。"
+    },
+    {
+      "id": "c-eta-numbers",
+      "kind": "correction",
+      "html": "这两个估计并不一致。取$\\komegaR \\sim$ kHz和$\\knu \\sim 10$ MHz，<a href=\"#eq-10-13\">式 (10.13)</a>给出$\\ketaLD \\sim 0.01$，而不是<a href=\"#eq-10-12\">式 (10.12)</a>中的$0.1$。对于钙离子的729 nm谱线，$\\komegaR/2\\pi \\approx 10$ kHz，$\\knu/2\\pi \\approx 1$ MHz的阱给出$\\ketaLD \\approx 0.1$。"
+    },
+    {
+      "id": "c-eq-10-16",
+      "kind": "correction",
+      "html": "书中印的是$-\\hbar\\omega_{ge}|e\\rangle\\langle e|$。激发能级比$|g\\rangle$高$\\hbar\\komegaeg$，如<a href=\"#eq-10-6\">式 (10.6)</a>以及<a href=\"#eq-10-18\">式 (10.18)</a>的本征值$\\hbar(n\\knu + \\komegaeg)$所示，因此该项为$+\\hbar\\komegaeg|e\\rangle\\langle e|$。"
+    },
+    {
+      "id": "c-eq-10-24",
+      "kind": "correction",
+      "html": "有了因子$i$，耦合项就不是厄米的。将<a href=\"#eq-10-14\">式 (10.14)</a>中的$e^{i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)} \\approx 1 + i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)$展开并保留红边带项，得到$-i\\hbar\\ketaLD\\left(\\kOmega|e\\rangle\\langle g|\\hat{a} - \\kOmega^*|g\\rangle\\langle e|\\hat{a}^\\dagger\\right)$：对于实的$\\kOmega$，书中印的项带有一个相对负号。它与$-\\hbar\\ketaLD\\kOmega\\left(|e\\rangle\\langle g|\\hat{a} + |g\\rangle\\langle e|\\hat{a}^\\dagger\\right)$的差别只在于$|e\\rangle$的相位，因此动力学相同。"
+    },
+    {
+      "id": "c-eq-10-25",
+      "kind": "correction",
+      "html": "与式 (10.24) 中一样，因子$i$使耦合项成为非厄米的。<a href=\"#eq-10-14\">式 (10.14)</a>的蓝边带项为$-i\\hbar\\ketaLD\\left(\\kOmega|e\\rangle\\langle g|\\hat{a}^\\dagger - \\kOmega^*|g\\rangle\\langle e|\\hat{a}\\right)$。"
+    }
+  ],
+  "derivations": [
+    {
+      "id": "sideband-couplings",
+      "what": "陷俘离子的载波与边带耦合",
+      "source": "现代原子与光学物理 II，10.2 陷俘离子，10.2.3",
+      "nodes": [
+        {
+          "assumes": [
+            {
+              "text": "在式 (10.14) 的耦合项中，只有它的厄米共轭$-\\hbar\\kOmega^*e^{-i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)}|g\\rangle\\langle e|$把$|e\\rangle$连到$\\langle g|$。",
+              "src": "(10.14)"
+            }
+          ],
+          "then": {
+            "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|m\\rangle} = \\mk{R}{\\langle g|\\langle n|\\kHr|e\\rangle|m\\rangle}",
+            "src": "(10.14)",
+            "uses": []
+          },
+          "steps": [
+            {
+              "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|m\\rangle} = \\mk{R}{-\\hbar\\kOmega^*\\langle n|e^{-i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)}|m\\rangle}",
+              "uses": [
+                0
+              ]
+            }
+          ],
+          "num": "(10.19)",
+          "note": "书中印的是$-\\hbar\\kOmega\\langle n|e^{i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)}|m\\rangle$，它是$\\langle e|\\langle n|$与$|g\\rangle|m\\rangle$之间的矩阵元。在$\\langle g|\\langle n|$与$|e\\rangle|m\\rangle$之间，耦合通过它的厄米共轭进入。"
+        },
+        {
+          "assumes": [
+            {
+              "step": 0
+            },
+            {
+              "text": "到$\\ketaLD$的最低阶，$e^{-i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)} \\approx 1 - i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)$。",
+              "src": "10.2.3"
+            },
+            {
+              "text": "运动态$|n\\rangle$是规范正交的。",
+              "src": "(11.116)"
+            }
+          ],
+          "then": {
+            "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|m\\rangle} = \\mk{R}{-\\hbar\\kOmega^*\\langle n|e^{-i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)}|m\\rangle}",
+            "uses": []
+          },
+          "steps": [
+            {
+              "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|n\\rangle} = \\mk{R}{-\\hbar\\kOmega^*\\left(\\langle n|n\\rangle - i\\ketaLD\\langle n|(\\hat{a}+\\hat{a}^\\dagger)|n\\rangle + \\mathcal{O}(\\ketaLD^2)\\right)}",
+              "uses": [
+                1
+              ]
+            },
+            {
+              "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|n\\rangle} = \\mk{R}{-\\hbar\\kOmega^*\\left(1 + \\mathcal{O}(\\ketaLD^2)\\right)}",
+              "uses": [
+                2
+              ],
+              "cap": "$\\hat{a}$和$\\hat{a}^\\dagger$使$n$改变1，所以$\\langle n|(\\hat{a}+\\hat{a}^\\dagger)|n\\rangle = 0$。"
+            }
+          ],
+          "num": "(10.20)",
+          "note": "书中印的是$\\kOmega$，而不是$\\kOmega^*$；对于实的$\\kOmega$，二者一致。"
+        },
+        {
+          "assumes": [
+            {
+              "step": 0
+            },
+            {
+              "text": "到$\\ketaLD$的最低阶，$e^{-i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)} \\approx 1 - i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)$。",
+              "src": "10.2.3"
+            },
+            {
+              "text": "运动态$|n\\rangle$是规范正交的。",
+              "src": "(11.116)"
+            },
+            {
+              "tex": "\\hat{a}|n+1\\rangle = \\sqrt{n+1}|n\\rangle",
+              "src": "(11.118)"
+            }
+          ],
+          "then": {
+            "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|m\\rangle} = \\mk{R}{-\\hbar\\kOmega^*\\langle n|e^{-i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)}|m\\rangle}",
+            "uses": []
+          },
+          "steps": [
+            {
+              "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|n+1\\rangle} = \\mk{R}{-\\hbar\\kOmega^*\\left(\\langle n|n+1\\rangle - i\\ketaLD\\langle n|(\\hat{a}+\\hat{a}^\\dagger)|n+1\\rangle + \\mathcal{O}(\\ketaLD^3)\\right)}",
+              "uses": [
+                1
+              ],
+              "cap": "$\\eta^2$项使$n$改变0或2，所以下一个修正是$\\eta^3$阶的。"
+            },
+            {
+              "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|n+1\\rangle} = \\mk{R}{-\\hbar\\kOmega^*\\left(-i\\ketaLD\\sqrt{n+1} + \\mathcal{O}(\\ketaLD^3)\\right)}",
+              "uses": [
+                2,
+                3
+              ]
+            }
+          ],
+          "num": "(10.21)",
+          "note": "书中印的是$-\\hbar\\kOmega\\left(\\ketaLD\\sqrt{n+1} + \\mathcal{O}(\\ketaLD^3)\\right)$：用$\\kOmega$代替了$\\kOmega^*$，二者对实的$\\kOmega$一致，并且没有一阶项所带的相位$-i$。"
+        },
+        {
+          "assumes": [
+            {
+              "step": 0
+            },
+            {
+              "text": "到$\\ketaLD$的最低阶，$e^{-i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)} \\approx 1 - i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)$。",
+              "src": "10.2.3"
+            },
+            {
+              "text": "运动态$|n\\rangle$是规范正交的。",
+              "src": "(11.116)"
+            },
+            {
+              "tex": "\\hat{a}^\\dagger|n-1\\rangle = \\sqrt{n}|n\\rangle",
+              "src": "(11.117)"
+            }
+          ],
+          "then": {
+            "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|m\\rangle} = \\mk{R}{-\\hbar\\kOmega^*\\langle n|e^{-i\\ketaLD(\\hat{a}+\\hat{a}^\\dagger)}|m\\rangle}",
+            "uses": []
+          },
+          "steps": [
+            {
+              "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|n-1\\rangle} = \\mk{R}{-\\hbar\\kOmega^*\\left(\\langle n|n-1\\rangle - i\\ketaLD\\langle n|(\\hat{a}+\\hat{a}^\\dagger)|n-1\\rangle + \\mathcal{O}(\\ketaLD^3)\\right)}",
+              "uses": [
+                1
+              ],
+              "cap": "$\\eta^2$项使$n$改变0或2，所以下一个修正是$\\eta^3$阶的。"
+            },
+            {
+              "tex": "\\mk{L}{\\langle g|\\langle n|\\kH|e\\rangle|n-1\\rangle} = \\mk{R}{-\\hbar\\kOmega^*\\left(-i\\ketaLD\\sqrt{n} + \\mathcal{O}(\\ketaLD^3)\\right)}",
+              "uses": [
+                2,
+                3
+              ]
+            }
+          ],
+          "num": "(10.22)",
+          "note": "书中印的是$-\\hbar\\kOmega\\left(\\ketaLD\\sqrt{n} + \\mathcal{O}(\\ketaLD^3)\\right)$：用$\\kOmega$代替了$\\kOmega^*$，并且没有一阶项所带的相位$-i$。"
+        }
+      ]
+    }
+  ]
+}

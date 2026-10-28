@@ -1,0 +1,1222 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "rho_hat",
+   "latex": "\\hat{\\rho}",
+   "macro": "\\krhohat"
+  },
+  {
+   "sym": "rho_nn",
+   "latex": "\\rho_{nn}",
+   "macro": "\\krhonn"
+  },
+  {
+   "sym": "rho_nm",
+   "latex": "\\rho_{nm}",
+   "macro": "\\krhonm"
+  },
+  {
+   "sym": "rho_11",
+   "latex": "\\rho_{11}",
+   "macro": "\\krhooneone"
+  },
+  {
+   "sym": "rho_22",
+   "latex": "\\rho_{22}",
+   "macro": "\\krhotwotwo"
+  },
+  {
+   "sym": "rho_12",
+   "latex": "\\rho_{12}",
+   "macro": "\\krhoonetwo"
+  },
+  {
+   "sym": "rho_21",
+   "latex": "\\rho_{21}",
+   "macro": "\\krhotwoone"
+  },
+  {
+   "sym": "rho_S",
+   "latex": "\\hat{\\rho}_S",
+   "macro": "\\krhoS"
+  },
+  {
+   "sym": "rho_tilde",
+   "latex": "\\tilde{\\rho}",
+   "macro": "\\krhotilde"
+  },
+  {
+   "sym": "n_bar",
+   "latex": "\\bar{n}",
+   "macro": "\\knbar"
+  },
+  {
+   "sym": "T",
+   "latex": "T",
+   "macro": "\\kT"
+  },
+  {
+   "sym": "H_S",
+   "latex": "\\hat{H}_S",
+   "macro": "\\kHS"
+  },
+  {
+   "sym": "H_R",
+   "latex": "\\hat{H}_R",
+   "macro": "\\kHR"
+  },
+  {
+   "sym": "H_SR",
+   "latex": "\\hat{H}_{SR}",
+   "macro": "\\kHSR"
+  },
+  {
+   "sym": "S_hat",
+   "latex": "\\hat{S}",
+   "macro": "\\kShat"
+  },
+  {
+   "sym": "F_R",
+   "latex": "\\hat{F}_R",
+   "macro": "\\kFR"
+  },
+  {
+   "sym": "f_t",
+   "latex": "f",
+   "macro": "\\kft"
+  },
+  {
+   "sym": "tau_c",
+   "latex": "\\tau_c",
+   "macro": "\\ktauc"
+  },
+  {
+   "sym": "tau_S",
+   "latex": "\\tau_S",
+   "macro": "\\ktauS"
+  },
+  {
+   "sym": "Delta_t",
+   "latex": "\\Delta t",
+   "macro": "\\kDeltat"
+  },
+  {
+   "sym": "gamma_p",
+   "latex": "\\gamma_p",
+   "macro": "\\kgammap"
+  },
+  {
+   "sym": "gamma_12",
+   "latex": "\\gamma_{12}",
+   "macro": "\\kgammaonetwo"
+  },
+  {
+   "sym": "gamma_d",
+   "latex": "\\gamma_d",
+   "macro": "\\kgammad"
+  },
+  {
+   "sym": "R_opt",
+   "latex": "R_{opt}",
+   "macro": "\\kRopt"
+  },
+  {
+   "sym": "Gamma_21",
+   "latex": "\\Gamma_{21}",
+   "macro": "\\kGammatwoone"
+  },
+  {
+   "sym": "gamma_21",
+   "latex": "\\gamma_{21}",
+   "macro": "\\kgammatwoone"
+  },
+  {
+   "sym": "gamma_1",
+   "latex": "\\gamma_1",
+   "macro": "\\kgammaone"
+  },
+  {
+   "sym": "gamma_2",
+   "latex": "\\gamma_2",
+   "macro": "\\kgammatwo"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "density-operator",
+   "kind": "definition",
+   "section": "3.1",
+   "name": "密度算符",
+   "symbol": "rho_hat",
+   "terms": [
+    "密度算符"
+   ],
+   "type": "state",
+   "statement": "以概率 p_α 占据各量子态 |ψ_α⟩ 的系统由密度算符表示，密度算符既能描述量子态，也能描述经典系综。",
+   "forms": [
+    {
+     "id": "eq-3-1",
+     "latex": "\\hat{\\rho} = \\sum_\\alpha p_\\alpha|\\psi_\\alpha\\rangle\\langle\\psi_\\alpha|",
+     "anchor": "3.1-eq-3-1"
+    }
+   ]
+  },
+  {
+   "id": "pure-and-mixed-states",
+   "kind": "definition",
+   "section": "3.1",
+   "name": "纯态与混合态",
+   "terms": [
+    "纯态",
+    "混合态",
+    "统计混合"
+   ],
+   "type": "state",
+   "statement": "若存在一组基，使密度算符在其中为 |φ⟩⟨φ|，则系统处于纯态；若不存在，则处于混合态；若非对角元为零，则为基矢态的统计混合。"
+  },
+  {
+   "id": "density-operator-properties",
+   "kind": "result",
+   "section": "3.1",
+   "name": "密度算符的性质",
+   "statement": "任何密度算符都是厄米的，且具有单位阵迹，不等式 ρ̂² ≤ ρ̂ 仅对纯态取等号。",
+   "forms": [
+    {
+     "id": "eq-3-trace",
+     "latex": "\\mathrm{Tr}[\\hat{\\rho}] = \\sum_n\\langle n|\\hat{\\rho}|n\\rangle = 1",
+     "anchor": "3.1-prop-2"
+    },
+    {
+     "id": "eq-3-hermitian",
+     "latex": "\\hat{\\rho} = \\hat{\\rho}^\\dagger",
+     "anchor": "3.1-prop-1"
+    }
+   ]
+  },
+  {
+   "id": "density-operator-expectation",
+   "kind": "result",
+   "section": "3.1",
+   "name": "由密度算符求期望值",
+   "statement": "可观测量的期望值是它与密度算符之积的阵迹。",
+   "forms": [
+    {
+     "id": "eq-3-5",
+     "latex": "\\langle\\hat{S}\\rangle = \\mathrm{Tr}[\\hat{\\rho}\\hat{S}]",
+     "anchor": "3.1-drv-expectation-as-trace"
+    },
+    {
+     "id": "eq-3-2",
+     "latex": "\\langle\\hat{S}\\rangle = \\sum_\\alpha p_\\alpha\\langle\\psi_\\alpha|\\hat{S}|\\psi_\\alpha\\rangle",
+     "anchor": "3.1-drv-expectation-as-trace"
+    }
+   ]
+  },
+  {
+   "id": "density-matrix",
+   "kind": "definition",
+   "section": "3.1",
+   "name": "密度矩阵",
+   "terms": [
+    "密度矩阵"
+   ],
+   "statement": "在基 {|n⟩} 中，密度算符是一个矩阵，其矩阵元为 ρ_{n,n'} = ⟨n|ρ̂|n'⟩。",
+   "forms": [
+    {
+     "id": "eq-3-6",
+     "latex": "\\hat{\\rho} = \\sum_{n,n'}|n\\rangle\\langle n|\\hat{\\rho}|n'\\rangle\\langle n'|",
+     "anchor": "3.1-eq-3-6"
+    },
+    {
+     "id": "eq-3-7",
+     "latex": "\\hat{\\rho} = \\rho_{11}|1\\rangle\\langle 1| + \\rho_{12}|1\\rangle\\langle 2| + \\rho_{21}|2\\rangle\\langle 1| + \\rho_{22}|2\\rangle\\langle 2|",
+     "anchor": "3.1-eq-3-7"
+    }
+   ]
+  },
+  {
+   "id": "density-matrix-populations",
+   "kind": "definition",
+   "section": "3.1",
+   "name": "布居",
+   "symbol": "rho_nn",
+   "type": "population",
+   "statement": "密度矩阵的对角元 ρ_nn 是占据态 |n⟩ 的概率。"
+  },
+  {
+   "id": "density-matrix-coherences",
+   "kind": "definition",
+   "section": "3.1",
+   "name": "相干性",
+   "symbol": "rho_nm",
+   "type": "coherence",
+   "statement": "非对角元 ρ_nm 是能级 |n⟩ 与 |m⟩ 之间相干性的期望值，例如原子偶极算符。"
+  },
+  {
+   "id": "coherence-bound",
+   "kind": "result",
+   "section": "3.1",
+   "name": "相干性的界",
+   "terms": [
+    "最大相干性"
+   ],
+   "statement": "纯态具有所允许的最大非对角分量，即最大相干性；混合态只满足该不等式。",
+   "forms": [
+    {
+     "id": "eq-3-9",
+     "latex": "|\\rho_{ij}|^2 \\leq \\rho_{ii}\\rho_{jj}",
+     "anchor": "3.1-eq-3-9"
+    },
+    {
+     "id": "eq-3-8",
+     "latex": "|\\rho_{ij}|^2 = \\rho_{ii}\\rho_{jj}",
+     "anchor": "3.1-eq-3-8"
+    }
+   ]
+  },
+  {
+   "id": "thermal-two-level-atom",
+   "kind": "result",
+   "section": "3.1",
+   "name": "热平衡中的二能级原子",
+   "type": "state",
+   "statement": "处于热平衡的二能级原子处于混合态，其布居取决于跃迁频率相对于温度的大小：远高于 k_BT/ℏ 时，原子处于基态。",
+   "forms": [
+    {
+     "id": "eq-3-12",
+     "latex": "\\hat{\\rho} = \\frac{1}{2\\cosh\\hbar\\omega/2k_B T}\\begin{pmatrix} e^{\\hbar\\omega/2k_B T} & 0 \\\\ 0 & e^{-\\hbar\\omega/2k_B T} \\end{pmatrix}",
+     "anchor": "3.1-eq-3-12"
+    },
+    {
+     "id": "eq-3-10",
+     "latex": "\\hat{\\rho} = \\frac{e^{-\\hat{H}/k_B T}}{\\mathrm{Tr}[e^{-\\hat{H}/k_B T}]}",
+     "anchor": "3.1-eq-3-10"
+    }
+   ]
+  },
+  {
+   "id": "thermal-radiation-field",
+   "kind": "result",
+   "section": "3.1",
+   "name": "热平衡中的辐射场",
+   "type": "state",
+   "statement": "辐射场的热模是光子数态的统计混合，因此其湮没算符的期望值为零。",
+   "forms": [
+    {
+     "id": "eq-3-14",
+     "latex": "\\hat{\\rho}^{(j)}_{nm} = \\delta_{nm}e^{-\\hbar\\nu_j n/k_B T}\\left(1 - e^{-\\hbar\\nu_j/k_B T}\\right)",
+     "anchor": "3.1-eq-3-14"
+    },
+    {
+     "id": "eq-3-13",
+     "latex": "\\hat{\\rho}^{(j)} = \\frac{e^{-\\hbar\\nu_j\\hat{a}_j^\\dagger\\hat{a}_j/k_B T}}{\\mathrm{Tr}[e^{-\\hbar\\nu_j\\hat{a}_j^\\dagger\\hat{a}_j/k_B T}]}",
+     "anchor": "3.1-eq-3-13"
+    },
+    {
+     "id": "eq-3-15",
+     "latex": "\\langle\\hat{a}_j\\rangle = 0",
+     "anchor": "3.1-eq-3-15"
+    }
+   ]
+  },
+  {
+   "id": "mean-thermal-photon-number",
+   "kind": "result",
+   "section": "3.1",
+   "name": "平均热光子数",
+   "symbol": "n_bar",
+   "statement": "热模的平均光子数服从玻色-爱因斯坦分布。",
+   "forms": [
+    {
+     "id": "eq-3-16",
+     "latex": "\\bar{n}_j = \\langle\\hat{a}_j^\\dagger\\hat{a}_j\\rangle = \\frac{1}{e^{(\\hbar\\nu_j/k_B T)} - 1}",
+     "anchor": "3.1-eq-3-16"
+    }
+   ]
+  },
+  {
+   "id": "open-system",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "开放系统",
+   "terms": [
+    "开放系统",
+    "环境",
+    "热库",
+    "宇宙"
+   ],
+   "statement": "宇宙由系统与环境（即热库）组成，热库是我们无法控制的大量自由度；与环境相互作用的系统是开放系统。"
+  },
+  {
+   "id": "reduced-density-operator",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "约化密度算符",
+   "symbol": "rho_S",
+   "terms": [
+    "约化密度算符"
+   ],
+   "type": "state",
+   "statement": "系统算符的期望值总可由约化密度算符求得，它是宇宙密度算符对热库态的阵迹；它不一定描述纯态。",
+   "forms": [
+    {
+     "id": "eq-3-21",
+     "latex": "\\hat{\\rho}_S = \\mathrm{Tr}_R[\\hat{\\rho}]",
+     "anchor": "3.2-drv-reduced-density-operator"
+    },
+    {
+     "id": "eq-3-20",
+     "latex": "\\langle\\hat{S}\\rangle = \\mathrm{Tr}_S[\\hat{S}\\hat{\\rho}_S]",
+     "anchor": "3.2-drv-reduced-density-operator"
+    }
+   ]
+  },
+  {
+   "id": "density-operator-equation-of-motion",
+   "kind": "result",
+   "section": "3.3",
+   "name": "密度算符的运动方程",
+   "statement": "仅在哈密顿量作用下，密度算符按它与哈密顿量的对易式演化。",
+   "forms": [
+    {
+     "id": "eq-3-28",
+     "latex": "\\dot{\\hat{\\rho}} = \\frac{1}{i\\hbar}[\\hat{H}, \\hat{\\rho}]",
+     "anchor": "3.3-drv-reduced-density-equation"
+    },
+    {
+     "id": "eq-3-23",
+     "latex": "i\\hbar\\dot{\\hat{\\rho}}_S = [\\hat{H}_S, \\hat{\\rho}_S]",
+     "anchor": "3.3-drv-density-operator-evolution"
+    }
+   ]
+  },
+  {
+   "id": "system-environment-entanglement",
+   "kind": "idea",
+   "section": "3.3",
+   "name": "系统-环境纠缠",
+   "terms": [
+    "纠缠"
+   ],
+   "statement": "耦合使系统态与环境态的初始直积态演化为不能因子化的态；此时系统与环境是纠缠的。"
+  },
+  {
+   "id": "decaying-atom-reduced-state",
+   "kind": "result",
+   "section": "3.3",
+   "name": "衰变原子的约化态",
+   "type": "state",
+   "statement": "向真空自发发射的原子，其约化密度矩阵的非对角元以激发态布居一半的速率衰变，任何保持能量守恒的相互作用都是如此。",
+   "forms": [
+    {
+     "id": "eq-3-26",
+     "latex": "\\hat{\\rho}_S = \\begin{pmatrix} 1 - \\rho_{22}(0)e^{-\\gamma t} & \\rho_{12}(0)e^{-\\gamma t/2} \\\\ \\rho_{21}(0)e^{-\\gamma t/2} & \\rho_{22}(0)e^{-\\gamma t} \\end{pmatrix}",
+     "anchor": "3.3-drv-decaying-atom-density-matrix"
+    }
+   ]
+  },
+  {
+   "id": "system-reservoir-hamiltonian",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "系统、热库与相互作用哈密顿量",
+   "symbol": "H_SR",
+   "type": "energy",
+   "statement": "总哈密顿量是系统项、热库项与相互作用项之和，相互作用项含有系统算符与热库算符的乘积。",
+   "forms": [
+    {
+     "id": "eq-3-27",
+     "latex": "\\hat{H} = \\hat{H}_S + \\hat{H}_R + \\hat{H}_{SR}",
+     "anchor": "3.3-eq-3-27"
+    }
+   ]
+  },
+  {
+   "id": "reduced-density-operator-dynamics",
+   "kind": "result",
+   "section": "3.3",
+   "name": "约化密度算符的演化",
+   "statement": "对运动方程对热库取阵迹，系统哈密顿量的作用如同它单独作用时一样，热库哈密顿量没有净效应，相互作用则需要特殊处理。",
+   "forms": [
+    {
+     "id": "eq-3-31",
+     "latex": "\\dot{\\hat{\\rho}}_S = \\frac{1}{i\\hbar}[\\hat{H}_S, \\hat{\\rho}_S] + \\frac{1}{i\\hbar}\\mathrm{Tr}_R[[\\hat{H}_{SR}, \\hat{\\rho}]]",
+     "anchor": "3.3-drv-reduced-density-equation"
+    }
+   ]
+  },
+  {
+   "id": "spin-in-fluctuating-field",
+   "kind": "idea",
+   "section": "3.3",
+   "name": "涨落磁场中的自旋",
+   "statement": "分裂 ħf(t) 为无规场的自旋，在其非对角元上获得无规相位，该非对角元取决于 f(t) 的矩。",
+   "forms": [
+    {
+     "id": "eq-3-32",
+     "latex": "\\hat{H}_{SR} = \\hbar f(t)\\hat{S}_z",
+     "anchor": "3.3-eq-3-32"
+    },
+    {
+     "id": "eq-3-34",
+     "latex": "\\langle\\hat{S}_+\\rangle = \\langle e^{i\\int_0^t f(t')dt'}\\hat{S}_+(0)\\rangle",
+     "anchor": "3.3-eq-3-34"
+    }
+   ]
+  },
+  {
+   "id": "stationary-random-process",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "平稳无规过程",
+   "terms": [
+    "平稳过程"
+   ],
+   "statement": "在每一时刻由概率分布刻画的无规过程，当其期望值为常数时是平稳的；其方差描述偏离该平均值的典型程度。",
+   "forms": [
+    {
+     "id": "eq-3-35",
+     "latex": "f(t) = \\langle f\\rangle + \\delta f(t)",
+     "anchor": "3.3-eq-3-35"
+    }
+   ]
+  },
+  {
+   "id": "correlation-time",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "关联时间",
+   "symbol": "tau_c",
+   "type": "time",
+   "statement": "关联时间表示无规过程变化所在的时标：当 |t − t'| < τ_c 时，其方差 ⟨δf(t)δf(t')⟩ 近似为常数。"
+  },
+  {
+   "id": "gaussian-random-process",
+   "kind": "result",
+   "section": "3.3",
+   "name": "高斯无规过程",
+   "terms": [
+    "高斯"
+   ],
+   "statement": "对于高斯概率分布，平均值与方差决定所有的高阶矩，这些矩按两两因子化；平均值为零时所有奇数阶矩都为零。",
+   "forms": [
+    {
+     "id": "eq-3-36",
+     "latex": "\\langle\\delta f(t_1)\\delta f(t_2)\\ldots\\delta f(t_n)\\rangle = \\sum\\langle\\delta f(t_1)\\delta f(t_2)\\rangle\\langle\\delta f(t_3)\\ldots\\rangle",
+     "anchor": "3.3-eq-3-36"
+    }
+   ]
+  },
+  {
+   "id": "reversible-evolution",
+   "kind": "idea",
+   "section": "3.3",
+   "name": "可逆退相位",
+   "terms": [
+    "可逆演化",
+    "自旋回波"
+   ],
+   "statement": "在短于关联时间的时间上，每个实现都以随机但固定的速率进动，因此系综发生可逆的退相位，自旋回波可以将其消除。"
+  },
+  {
+   "id": "markovian-environment",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "马尔可夫环境",
+   "terms": [
+    "马尔可夫环境",
+    "马尔可夫"
+   ],
+   "statement": "在远长于关联时间的时间上，退相位是不可逆的；记忆如此之短的热库是马尔可夫环境，由关联时间无限短的马尔可夫过程描述。"
+  },
+  {
+   "id": "open-system-interaction-picture",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "开放系统的相互作用绘景",
+   "statement": "按系统和热库的自由演化做变换后，只剩下由相互作用引起的动力学。",
+   "forms": [
+    {
+     "id": "eq-3-40",
+     "latex": "\\frac{d}{dt}\\tilde{\\rho} = \\frac{1}{i\\hbar}[\\tilde{H}_{SR}, \\tilde{\\rho}]",
+     "anchor": "3.3-eq-3-40"
+    },
+    {
+     "id": "eq-3-38",
+     "latex": "\\tilde{\\rho} = e^{i(\\hat{H}_R + \\hat{H}_S)t/\\hbar}\\hat{\\rho}e^{-i(\\hat{H}_R + \\hat{H}_S)t/\\hbar}",
+     "anchor": "3.3-eq-3-38"
+    }
+   ]
+  },
+  {
+   "id": "bilinear-system-reservoir-coupling",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "系统-热库双线性耦合",
+   "symbol": "F_R",
+   "statement": "相互作用是系统算符与热库算符的双线性乘积；在相互作用绘景中，它的全部时间依赖都进入热库算符 F̂_R(t)。",
+   "forms": [
+    {
+     "id": "eq-3-41",
+     "latex": "\\hat{H}_{SR} = \\hat{S}\\hat{R}^\\dagger + \\hat{R}\\hat{S}^\\dagger",
+     "anchor": "3.3-eq-3-41"
+    },
+    {
+     "id": "eq-3-42",
+     "latex": "\\tilde{H}_{SR} = \\hat{S}\\hat{F}_R(t)^\\dagger + \\hat{F}_R(t)\\hat{S}^\\dagger",
+     "anchor": "3.3-eq-3-42"
+    },
+    {
+     "id": "eq-3-44",
+     "latex": "\\tilde{H}_{SR} = -\\sum_j\\hbar g_j\\hat{a}_j e^{-i(\\nu_j - \\omega)t}|2\\rangle\\langle 1| - \\sum_j\\hbar g_j^*\\hat{a}_j^\\dagger e^{i(\\nu_j - \\omega)t}|1\\rangle\\langle 2|",
+     "anchor": "3.3-eq-3-44"
+    }
+   ]
+  },
+  {
+   "id": "born-markov-approximation",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "玻恩-马尔可夫近似",
+   "terms": [
+    "玻恩-马尔可夫近似",
+    "玻恩近似"
+   ],
+   "statement": "热库很大，因此不受系统影响，宇宙保持可因子化；热库带宽很宽，因此其关联时间远短于系统演化的时间；于是对满足 τ_c ≪ ∆t ≪ τ_S 的步长求平均，就得到仅关于系统的运动方程。",
+   "forms": [
+    {
+     "id": "eq-3-49",
+     "latex": "\\tilde{\\rho}(t) = \\tilde{\\rho}_S(t) \\otimes \\tilde{\\rho}_R(t)",
+     "anchor": "3.3-eq-3-49"
+    },
+    {
+     "id": "eq-3-coarse",
+     "latex": "\\tau_c \\ll \\Delta t \\ll \\tau_S",
+     "anchor": "3.3-coarse"
+    }
+   ]
+  },
+  {
+   "id": "reservoir-energy-shift",
+   "kind": "result",
+   "section": "3.3",
+   "name": "热库的一阶项",
+   "statement": "到一阶，热库给系统哈密顿量增加一项，由热库算符的平均值决定，对于原子-场相互作用，该项消失。",
+   "forms": [
+    {
+     "id": "eq-3-54",
+     "latex": "\\Delta\\tilde{\\rho}_S^{(1)} = \\frac{1}{i\\hbar}\\int_t^{t+\\Delta t}dt'\\ [\\hat{S}\\langle\\hat{F}_R(t')^\\dagger\\rangle + \\hat{S}^\\dagger\\langle\\hat{F}_R(t')\\rangle, \\tilde{\\rho}_S(t)]",
+     "anchor": "3.3-drv-first-reservoir-term"
+    }
+   ]
+  },
+  {
+   "id": "reservoir-correlation-functions",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "热库关联函数",
+   "statement": "热库的二阶效应通过热库算符的双时关联函数来表示。",
+   "forms": [
+    {
+     "id": "eq-3-59",
+     "latex": "g^{+-}(t', t'') = \\mathrm{Tr}_R[\\hat{F}_R(t')^\\dagger\\hat{F}_R(t'')\\tilde{\\rho}_R]",
+     "anchor": "3.3-eq-3-59"
+    },
+    {
+     "id": "eq-3-58",
+     "latex": "g^{--}(t', t'') = \\mathrm{Tr}_R[\\hat{F}_R(t')\\hat{F}_R(t'')\\tilde{\\rho}_R]",
+     "anchor": "3.3-eq-3-58"
+    },
+    {
+     "id": "eq-3-60",
+     "latex": "g^{-+}(t', t'') = \\mathrm{Tr}_R[\\hat{F}_R(t')\\hat{F}_R(t'')^\\dagger\\tilde{\\rho}_R]",
+     "anchor": "3.3-eq-3-60"
+    },
+    {
+     "id": "eq-3-61",
+     "latex": "g^{++}(t', t'') = \\mathrm{Tr}_R[\\hat{F}_R(t')^\\dagger\\hat{F}_R(t'')^\\dagger\\tilde{\\rho}_R]",
+     "anchor": "3.3-eq-3-61"
+    }
+   ]
+  },
+  {
+   "id": "thermal-field-correlator",
+   "kind": "result",
+   "section": "3.3",
+   "name": "热辐射场的关联函数",
+   "statement": "对于热辐射场，关联函数只依赖于时间差，并且有尖锐的峰，峰宽为热库的关联时间；随着体积增大，它成为 δ 函数，即维格纳-韦斯科普夫近似。",
+   "forms": [
+    {
+     "id": "eq-3-72",
+     "latex": "g^{+-}(t', t'') = \\hbar^2\\sum_j|g_j|^2\\bar{n}_j e^{i(\\nu_j - \\omega)(t' - t'')}",
+     "anchor": "3.3-drv-thermal-correlator"
+    },
+    {
+     "id": "eq-3-76",
+     "latex": "-\\frac{1}{\\hbar^2}\\int_t^{t'}dt''g^{+-}(t', t'') = -\\frac{\\gamma}{2}\\bar{n}(\\omega)",
+     "anchor": "3.3-drv-master-equation"
+    }
+   ]
+  },
+  {
+   "id": "master-equation",
+   "kind": "result",
+   "section": "3.3",
+   "name": "主方程",
+   "terms": [
+    "主方程"
+   ],
+   "type": "state",
+   "statement": "主方程是与马尔可夫热库耦合的系统的约化密度算符经时间平均的运动方程；它处理非幺正行为，并保持阵迹不变。",
+   "forms": [
+    {
+     "id": "eq-3-78",
+     "latex": "\\frac{\\Delta\\tilde{\\rho}_S}{\\Delta t} = -\\frac{\\gamma}{2}\\bar{n}(\\omega)\\left(\\hat{S}\\hat{S}^\\dagger\\tilde{\\rho}_S - \\hat{S}^\\dagger\\tilde{\\rho}_S\\hat{S}\\right) - \\frac{\\gamma}{2}(\\bar{n}(\\omega) + 1)\\left(\\hat{S}^\\dagger\\hat{S}\\tilde{\\rho}_S - \\hat{S}\\tilde{\\rho}_S\\hat{S}^\\dagger\\right) + h.c.",
+     "anchor": "3.3-drv-master-equation"
+    }
+   ]
+  },
+  {
+   "id": "generalized-master-equation",
+   "kind": "result",
+   "section": "3.4",
+   "name": "广义主方程",
+   "type": "state",
+   "statement": "在薛定谔绘景中，主方程对非相干的系统-热库相互作用求和，每个相互作用有各自的速率 γ_p，并加上系统哈密顿量。",
+   "forms": [
+    {
+     "id": "eq-3-79",
+     "latex": "\\frac{\\Delta\\hat{\\rho}_S}{\\Delta t} = -\\sum_p\\frac{\\gamma_p}{2}\\bar{n}\\left(\\hat{S}_p\\hat{S}_p^\\dagger\\hat{\\rho}_S - \\hat{S}_p^\\dagger\\hat{\\rho}_S\\hat{S}_p\\right) - \\sum_p\\frac{\\gamma_p}{2}(\\bar{n} + 1)\\left(\\hat{S}_p^\\dagger\\hat{S}_p\\hat{\\rho}_S - \\hat{S}_p\\hat{\\rho}_S\\hat{S}_p^\\dagger\\right) + h.c. + \\frac{1}{i\\hbar}[\\hat{H}_S, \\hat{\\rho}_S]",
+     "anchor": "3.4-eq-3-79"
+    }
+   ]
+  },
+  {
+   "id": "master-equation-cost",
+   "kind": "idea",
+   "section": "3.4",
+   "name": "主方程的代价",
+   "statement": "n 能级系统的概率幅需要 n 个方程，而一旦计入环境，其密度矩阵需要 O(n²) 个方程。"
+  },
+  {
+   "id": "memoryless-reservoir-factorization",
+   "kind": "result",
+   "section": "3.4",
+   "name": "无记忆热库的因子化",
+   "statement": "对于没有记忆的热库，一个区间之前建立的关联不会在该区间内起作用，因此因子化假设成立；修正按 τ_c² 标度。",
+   "forms": [
+    {
+     "id": "eq-3-83",
+     "latex": "\\Delta\\tilde{\\rho}_S \\propto \\int_{t_i}^t dt'\\int_t^{t+\\Delta t}dt''\\langle\\tilde{H}_{SR}(t'')\\tilde{H}_{SR}(t')\\rangle",
+     "anchor": "3.4-drv-memoryless-factorization"
+    }
+   ]
+  },
+  {
+   "id": "irreversibility-boundary",
+   "kind": "idea",
+   "section": "3.4",
+   "name": "不可逆性作为系统的边界",
+   "statement": "无记忆的热库会忘掉以前所有的关联，因此信息丢失，动力学是不可逆的；环境中任何时间可逆的部分都纳入系统之中。当相互作用项发生干涉，或热库相互作用可逆时，主方程可能不够用。"
+  },
+  {
+   "id": "two-level-master-equation",
+   "kind": "result",
+   "section": "3.4",
+   "name": "受驱二能级原子的主方程",
+   "type": "state",
+   "statement": "与热场耦合的受驱二能级原子，在相干驱动项和热库项的作用下演化，其中 Ŝ = σ₁₂。",
+   "forms": [
+    {
+     "id": "eq-3-85",
+     "latex": "\\frac{\\Delta\\hat{\\rho}_S}{\\Delta t} = -\\frac{\\gamma}{2}(\\bar{n} + 1)\\left(\\sigma_{22}\\hat{\\rho}_S - \\sigma_{12}\\hat{\\rho}_S\\sigma_{21}\\right) - \\frac{\\gamma}{2}\\bar{n}\\left(\\sigma_{11}\\hat{\\rho}_S - \\sigma_{21}\\hat{\\rho}_S\\sigma_{12}\\right) + h.c. + \\frac{1}{i\\hbar}[\\hat{H}_S, \\hat{\\rho}_S]",
+     "anchor": "3.4-drv-optical-bloch-equations"
+    },
+    {
+     "id": "eq-3-84",
+     "latex": "\\hat{H}_S = -\\hbar\\delta|2\\rangle\\langle 2| + \\hbar\\Omega^*|1\\rangle\\langle 2| + \\hbar\\Omega|2\\rangle\\langle 1|",
+     "anchor": "3.4-eq-3-84"
+    }
+   ]
+  },
+  {
+   "id": "optical-bloch-equations",
+   "kind": "result",
+   "section": "3.4",
+   "name": "光学布洛赫方程",
+   "terms": [
+    "光学布洛赫方程"
+   ],
+   "statement": "主方程的矩阵元给出密度矩阵的四个微分方程，其中只有两个独立，包含相干驱动、热光子和自发发射的贡献。",
+   "forms": [
+    {
+     "id": "eq-3-86",
+     "latex": "\\dot{\\rho}_{22} = -\\gamma(\\bar{n} + 1)\\rho_{22} + \\gamma\\bar{n}\\rho_{11} + i\\Omega^*\\rho_{21} - i\\Omega\\rho_{12}",
+     "anchor": "3.4-drv-optical-bloch-equations"
+    },
+    {
+     "id": "eq-3-87",
+     "latex": "\\dot{\\rho}_{11} = \\gamma(\\bar{n} + 1)\\rho_{22} - \\gamma\\bar{n}\\rho_{11} - i\\Omega^*\\rho_{21} + i\\Omega\\rho_{12}",
+     "anchor": "3.4-drv-optical-bloch-equations"
+    },
+    {
+     "id": "eq-3-88",
+     "latex": "\\dot{\\rho}_{12} = -\\frac{\\gamma}{2}(2\\bar{n} + 1)\\rho_{12} - i\\delta\\rho_{12} - i\\Omega^*(\\rho_{22} - \\rho_{11})",
+     "anchor": "3.4-drv-optical-bloch-equations"
+    },
+    {
+     "id": "eq-3-89",
+     "latex": "\\dot{\\rho}_{21} = -\\frac{\\gamma}{2}(2\\bar{n} + 1)\\rho_{21} + i\\delta\\rho_{21} + i\\Omega(\\rho_{22} - \\rho_{11})",
+     "anchor": "3.4-drv-optical-bloch-equations"
+    }
+   ]
+  },
+  {
+   "id": "thermal-and-spontaneous-transitions",
+   "kind": "result",
+   "section": "3.4",
+   "name": "热跃迁与自发跃迁",
+   "statement": "热光子引起两个方向上的非相干跃迁，而自发发射只让布居从 ρ₂₂ 泄漏到 ρ₁₁。",
+   "forms": [
+    {
+     "id": "eq-3-90",
+     "latex": "\\dot{\\rho}_{22} = \\gamma\\bar{n}(\\rho_{11} - \\rho_{22}) - \\gamma\\rho_{22} + \\ldots",
+     "anchor": "3.4-eq-3-90"
+    },
+    {
+     "id": "eq-3-91",
+     "latex": "\\dot{\\rho}_{11} = \\gamma\\bar{n}(\\rho_{22} - \\rho_{11}) + \\gamma\\rho_{22} + \\ldots",
+     "anchor": "3.4-eq-3-91"
+    }
+   ]
+  },
+  {
+   "id": "coherence-decay-rate",
+   "kind": "result",
+   "section": "3.4",
+   "name": "相干性的衰变率",
+   "symbol": "gamma_12",
+   "type": "rate",
+   "statement": "非相干过程只会使相干性减小，其速率为两个态的布居衰变出去（而非衰变进来）的速率之和的一半。",
+   "forms": [
+    {
+     "id": "eq-3-92",
+     "latex": "\\gamma_{12} = \\frac{\\gamma_1 + \\gamma_2}{2} = \\frac{2\\bar{n} + 1}{2}\\gamma = \\gamma_{21}",
+     "anchor": "3.4-eq-3-92"
+    }
+   ]
+  },
+  {
+   "id": "dephasing-rate",
+   "kind": "definition",
+   "section": "3.4",
+   "name": "退相位率",
+   "symbol": "gamma_d",
+   "terms": [
+    "退相干",
+    "退相位率"
+   ],
+   "type": "rate",
+   "statement": "使相干性减小而不影响布居的过程，例如激光的有限谱线宽度或原子间相互作用，以唯象方式作为退相干率或退相位率进入主方程。",
+   "forms": [
+    {
+     "id": "eq-3-93",
+     "latex": "\\gamma_{12} = \\gamma_{21} = \\frac{\\gamma_1 + \\gamma_2}{2} + \\gamma_d",
+     "anchor": "3.4-eq-3-93"
+    }
+   ]
+  },
+  {
+   "id": "weak-field-response",
+   "kind": "result",
+   "section": "3.4",
+   "name": "弱场响应",
+   "statement": "在弱场中，布居被冻结，每个频率上的相干性是有效失谐的洛伦兹线型，对场是线性的，如同经典偶极子。",
+   "forms": [
+    {
+     "id": "eq-3-97",
+     "latex": "\\rho_{21}(\\delta\\nu) = \\Omega(\\delta\\nu)\\frac{i(\\rho_{22}^{(0)} - \\rho_{11}^{(0)})}{\\gamma_{21} - i(\\delta + \\delta\\nu)}",
+     "anchor": "3.4-drv-weak-field-response"
+    },
+    {
+     "id": "eq-3-94",
+     "latex": "\\dot{\\rho}_{21} \\approx -(\\gamma_{21} - i\\delta)\\rho_{21} + i\\Omega(\\rho_{22}^{(0)} - \\rho_{11}^{(0)})",
+     "anchor": "3.4-drv-weak-field-response"
+    },
+    {
+     "id": "eq-3-98",
+     "latex": "\\rho_{ij}(\\delta\\nu) = \\Omega_{ij}(\\delta\\nu)\\frac{i(\\rho_{ii}^{(0)} - \\rho_{jj}^{(0)})}{\\gamma_{ij} - i(\\delta_{ij} + \\delta\\nu)}",
+     "anchor": "3.4-eq-3-98"
+    }
+   ]
+  },
+  {
+   "id": "steady-state-coherence",
+   "kind": "result",
+   "section": "3.4",
+   "name": "定常态相干性",
+   "type": "coherence",
+   "statement": "恒定的场驱动阻尼拉比振荡进入定常态，此时相干性跟随布居差。",
+   "forms": [
+    {
+     "id": "eq-3-99",
+     "latex": "\\rho_{21} = \\frac{i\\Omega(\\rho_{22} - \\rho_{11})}{\\gamma_{21} - i\\delta}",
+     "anchor": "3.4-drv-steady-state-population"
+    }
+   ]
+  },
+  {
+   "id": "optical-pumping-rate",
+   "kind": "definition",
+   "section": "3.4",
+   "name": "光抽运率",
+   "symbol": "R_opt",
+   "type": "rate",
+   "statement": "外加的相干场的作用类似于非相干抽运率 R_opt。",
+   "forms": [
+    {
+     "id": "eq-3-101",
+     "latex": "R_{opt} = 2\\gamma_{21}\\left|\\frac{\\Omega}{\\Gamma_{21}}\\right|^2",
+     "anchor": "3.4-drv-steady-state-population"
+    }
+   ]
+  },
+  {
+   "id": "steady-state-population",
+   "kind": "result",
+   "section": "3.4",
+   "name": "定常态激发态布居",
+   "type": "population",
+   "statement": "没有热光子时，定常态的激发态布居由抽运率与衰变率之比决定。",
+   "forms": [
+    {
+     "id": "eq-3-100",
+     "latex": "\\rho_{22} = \\frac{R_{opt}}{\\gamma + 2R_{opt}}",
+     "anchor": "3.4-drv-steady-state-population"
+    }
+   ]
+  },
+  {
+   "id": "saturation",
+   "kind": "result",
+   "section": "3.4",
+   "name": "饱和",
+   "terms": [
+    "饱和"
+   ],
+   "statement": "弱场使原子留在基态，激发态布居与光强成正比；强场留下基态与激发态的等量混合，响应是饱和的。",
+   "forms": [
+    {
+     "id": "eq-3-103",
+     "latex": "R_{opt} \\gg \\gamma \\quad \\Rightarrow \\quad \\rho_{22} \\to \\frac{1}{2}",
+     "anchor": "3.4-eq-3-103"
+    },
+    {
+     "id": "eq-3-102",
+     "latex": "R_{opt} \\ll \\gamma \\quad \\Rightarrow \\quad \\rho_{22} \\to 0",
+     "anchor": "3.4-eq-3-102"
+    }
+   ]
+  },
+  {
+   "id": "rate-equations",
+   "kind": "result",
+   "section": "3.4",
+   "name": "速率方程",
+   "terms": [
+    "速率方程"
+   ],
+   "statement": "当相干性绝热跟随布居差，即 |Ω|² ≪ γ₂₁² + δ² 时，布居服从速率方程，如同处于非相干辐射中的原子。",
+   "forms": [
+    {
+     "id": "eq-3-104",
+     "latex": "\\dot{\\rho}_{22} = -\\gamma\\rho_{22} + R_{opt}(\\rho_{11} - \\rho_{22}) \\ \\text{ with } \\ \\dot{\\rho}_{11} = -\\dot{\\rho}_{22}",
+     "anchor": "3.4-eq-3-104"
+    }
+   ]
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "density-operator",
+   "prereq": "state-vector"
+  },
+  {
+   "concept": "density-operator",
+   "prereq": "born-rule"
+  },
+  {
+   "concept": "pure-and-mixed-states",
+   "prereq": "density-operator"
+  },
+  {
+   "concept": "density-operator-properties",
+   "prereq": "pure-and-mixed-states"
+  },
+  {
+   "concept": "density-operator-expectation",
+   "prereq": "density-operator"
+  },
+  {
+   "concept": "density-operator-expectation",
+   "prereq": "expectation-value"
+  },
+  {
+   "concept": "density-matrix",
+   "prereq": "density-operator"
+  },
+  {
+   "concept": "density-matrix-populations",
+   "prereq": "density-matrix"
+  },
+  {
+   "concept": "density-matrix-coherences",
+   "prereq": "density-matrix"
+  },
+  {
+   "concept": "coherence-bound",
+   "prereq": "density-matrix-populations"
+  },
+  {
+   "concept": "coherence-bound",
+   "prereq": "density-matrix-coherences"
+  },
+  {
+   "concept": "coherence-bound",
+   "prereq": "density-operator-properties"
+  },
+  {
+   "concept": "thermal-two-level-atom",
+   "prereq": "pure-and-mixed-states"
+  },
+  {
+   "concept": "thermal-two-level-atom",
+   "prereq": "density-matrix"
+  },
+  {
+   "concept": "thermal-two-level-atom",
+   "prereq": "two-level-atom"
+  },
+  {
+   "concept": "thermal-radiation-field",
+   "prereq": "pure-and-mixed-states"
+  },
+  {
+   "concept": "thermal-radiation-field",
+   "prereq": "density-matrix"
+  },
+  {
+   "concept": "thermal-radiation-field",
+   "prereq": "creation-annihilation-operators"
+  },
+  {
+   "concept": "mean-thermal-photon-number",
+   "prereq": "thermal-radiation-field"
+  },
+  {
+   "concept": "mean-thermal-photon-number",
+   "prereq": "density-operator-expectation"
+  },
+  {
+   "concept": "open-system",
+   "prereq": "density-operator"
+  },
+  {
+   "concept": "reduced-density-operator",
+   "prereq": "open-system"
+  },
+  {
+   "concept": "reduced-density-operator",
+   "prereq": "density-operator-expectation"
+  },
+  {
+   "concept": "density-operator-equation-of-motion",
+   "prereq": "density-operator"
+  },
+  {
+   "concept": "density-operator-equation-of-motion",
+   "prereq": "schrodinger-equation"
+  },
+  {
+   "concept": "system-environment-entanglement",
+   "prereq": "open-system"
+  },
+  {
+   "concept": "decaying-atom-reduced-state",
+   "prereq": "reduced-density-operator"
+  },
+  {
+   "concept": "decaying-atom-reduced-state",
+   "prereq": "system-environment-entanglement"
+  },
+  {
+   "concept": "decaying-atom-reduced-state",
+   "prereq": "spontaneous-emission-rate"
+  },
+  {
+   "concept": "decaying-atom-reduced-state",
+   "prereq": "density-matrix-coherences"
+  },
+  {
+   "concept": "system-reservoir-hamiltonian",
+   "prereq": "open-system"
+  },
+  {
+   "concept": "system-reservoir-hamiltonian",
+   "prereq": "hamiltonian"
+  },
+  {
+   "concept": "reduced-density-operator-dynamics",
+   "prereq": "reduced-density-operator"
+  },
+  {
+   "concept": "reduced-density-operator-dynamics",
+   "prereq": "density-operator-equation-of-motion"
+  },
+  {
+   "concept": "reduced-density-operator-dynamics",
+   "prereq": "system-reservoir-hamiltonian"
+  },
+  {
+   "concept": "spin-in-fluctuating-field",
+   "prereq": "system-reservoir-hamiltonian"
+  },
+  {
+   "concept": "spin-in-fluctuating-field",
+   "prereq": "density-matrix-coherences"
+  },
+  {
+   "concept": "spin-in-fluctuating-field",
+   "prereq": "time-evolution-operator"
+  },
+  {
+   "concept": "correlation-time",
+   "prereq": "stationary-random-process"
+  },
+  {
+   "concept": "gaussian-random-process",
+   "prereq": "stationary-random-process"
+  },
+  {
+   "concept": "reversible-evolution",
+   "prereq": "spin-in-fluctuating-field"
+  },
+  {
+   "concept": "reversible-evolution",
+   "prereq": "correlation-time"
+  },
+  {
+   "concept": "markovian-environment",
+   "prereq": "reversible-evolution"
+  },
+  {
+   "concept": "open-system-interaction-picture",
+   "prereq": "reduced-density-operator-dynamics"
+  },
+  {
+   "concept": "bilinear-system-reservoir-coupling",
+   "prereq": "open-system-interaction-picture"
+  },
+  {
+   "concept": "bilinear-system-reservoir-coupling",
+   "prereq": "atom-field-interaction"
+  },
+  {
+   "concept": "born-markov-approximation",
+   "prereq": "markovian-environment"
+  },
+  {
+   "concept": "born-markov-approximation",
+   "prereq": "bilinear-system-reservoir-coupling"
+  },
+  {
+   "concept": "reservoir-energy-shift",
+   "prereq": "born-markov-approximation"
+  },
+  {
+   "concept": "reservoir-correlation-functions",
+   "prereq": "born-markov-approximation"
+  },
+  {
+   "concept": "thermal-field-correlator",
+   "prereq": "reservoir-correlation-functions"
+  },
+  {
+   "concept": "thermal-field-correlator",
+   "prereq": "mean-thermal-photon-number"
+  },
+  {
+   "concept": "thermal-field-correlator",
+   "prereq": "spontaneous-emission-rate"
+  },
+  {
+   "concept": "master-equation",
+   "prereq": "thermal-field-correlator"
+  },
+  {
+   "concept": "generalized-master-equation",
+   "prereq": "master-equation"
+  },
+  {
+   "concept": "master-equation-cost",
+   "prereq": "generalized-master-equation"
+  },
+  {
+   "concept": "memoryless-reservoir-factorization",
+   "prereq": "generalized-master-equation"
+  },
+  {
+   "concept": "irreversibility-boundary",
+   "prereq": "memoryless-reservoir-factorization"
+  },
+  {
+   "concept": "two-level-master-equation",
+   "prereq": "generalized-master-equation"
+  },
+  {
+   "concept": "optical-bloch-equations",
+   "prereq": "two-level-master-equation"
+  },
+  {
+   "concept": "thermal-and-spontaneous-transitions",
+   "prereq": "optical-bloch-equations"
+  },
+  {
+   "concept": "coherence-decay-rate",
+   "prereq": "optical-bloch-equations"
+  },
+  {
+   "concept": "dephasing-rate",
+   "prereq": "coherence-decay-rate"
+  },
+  {
+   "concept": "weak-field-response",
+   "prereq": "coherence-decay-rate"
+  },
+  {
+   "concept": "steady-state-coherence",
+   "prereq": "coherence-decay-rate"
+  },
+  {
+   "concept": "optical-pumping-rate",
+   "prereq": "steady-state-coherence"
+  },
+  {
+   "concept": "steady-state-population",
+   "prereq": "optical-pumping-rate"
+  },
+  {
+   "concept": "saturation",
+   "prereq": "steady-state-population"
+  },
+  {
+   "concept": "rate-equations",
+   "prereq": "optical-pumping-rate"
+  },
+  {
+   "concept": "rate-equations",
+   "prereq": "adiabatic-elimination"
+  }
+ ]
+}

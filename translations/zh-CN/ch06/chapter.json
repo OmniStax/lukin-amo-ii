@@ -1,0 +1,206 @@
+{
+ "id": "6",
+ "dir": "ch06",
+ "title": "随机波函数",
+ "intro": {},
+ "sections": [
+  {
+   "id": "6.1",
+   "title": "形式体系"
+  },
+  {
+   "id": "6.2",
+   "title": "例：二能级原子的衰变"
+  },
+  {
+   "id": "6.3",
+   "title": "非厄米演化：小结"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "H_eff",
+   "concept": "effective-hamiltonian",
+   "meaning": "有效哈密顿量：系统哈密顿量加上非厄米部分 −iℏΣ_k γ_k ĉ_k†ĉ_k/2",
+   "anchor": "6.1-effective-hamiltonian",
+   "section": "6.1"
+  },
+  {
+   "sym": "c_hat_k",
+   "concept": "quantum-jump",
+   "meaning": "跳跃通道 k 的算符，量子跳跃把它作用于态上",
+   "anchor": "6.1-eq-6-2",
+   "section": "6.1"
+  },
+  {
+   "sym": "gamma_k",
+   "type": "rate",
+   "meaning": "跳跃通道 k 的速率",
+   "anchor": "6.1-eq-6-2",
+   "section": "6.1"
+  },
+  {
+   "sym": "delta_p",
+   "concept": "jump-probability",
+   "meaning": "在时间 δt 内态通过任一通道跳跃的概率",
+   "anchor": "6.1-eq-6-15",
+   "section": "6.1"
+  },
+  {
+   "sym": "delta_p_k",
+   "concept": "jump-probability",
+   "meaning": "在时间 δt 内态通过通道 k 跳跃的概率",
+   "anchor": "6.1-eq-6-14",
+   "section": "6.1"
+  },
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "anchor": "6.1-eq-6-1",
+   "section": "6.1"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "section": "6.1"
+  },
+  {
+   "sym": "t",
+   "meaning": "时间",
+   "section": "6.1",
+   "type": "time"
+  },
+  {
+   "sym": "rho_S",
+   "concept": "reduced-density-operator",
+   "meaning": "系统的约化密度算符",
+   "anchor": "6.1-eq-6-1",
+   "section": "6.1"
+  },
+  {
+   "sym": "n_bar",
+   "concept": "mean-thermal-photon-number",
+   "meaning": "热库的一个模中的平均热光子数",
+   "anchor": "6.1-eq-6-3",
+   "section": "6.1"
+  },
+  {
+   "sym": "p_2",
+   "concept": "born-rule",
+   "meaning": "激发态 |2⟩ 的布居",
+   "section": "6.1"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "拉比频率 Ω = ℰμ/ℏ",
+   "section": "6.1"
+  },
+  {
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 的衰变，以场的真空模为连续谱",
+   "section": "6.1"
+  },
+  {
+   "sym": "a_1",
+   "concept": "probability-amplitude",
+   "meaning": "初态 |ψ(0)⟩ = a₁|1⟩ + a₂|2⟩ 中 |1⟩ 的概率幅",
+   "anchor": "6.2-initial-state",
+   "section": "6.2"
+  },
+  {
+   "sym": "a_2",
+   "concept": "probability-amplitude",
+   "meaning": "初态 |ψ(0)⟩ = a₁|1⟩ + a₂|2⟩ 中 |2⟩ 的概率幅",
+   "anchor": "6.2-initial-state",
+   "section": "6.2"
+  },
+  {
+   "sym": "delta_p_atom",
+   "concept": "jump-probability",
+   "meaning": "衰变的二能级原子在时间 δt 内跳出其态的概率",
+   "anchor": "6.2-eq-6-22",
+   "section": "6.2"
+  },
+  {
+   "sym": "Delta",
+   "concept": "detuning",
+   "meaning": "|2⟩ 的失谐：它在衰变二能级原子的有效哈密顿量中的频率，ℏ = 1",
+   "unit": "rad/s",
+   "anchor": "6.2-eq-6-24",
+   "redefines": true,
+   "section": "6.2"
+  },
+  {
+   "sym": "H_eff",
+   "concept": "effective-hamiltonian",
+   "meaning": "有效哈密顿量：系统哈密顿量加上非厄米部分 −iℏΣ_k γ_k ĉ_k†ĉ_k/2",
+   "anchor": "6.2-eq-6-24",
+   "section": "6.2"
+  },
+  {
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 的衰变，以场的真空模为连续谱",
+   "section": "6.2"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "section": "6.2"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "section": "6.2"
+  },
+  {
+   "sym": "p_2",
+   "concept": "born-rule",
+   "meaning": "激发态 |2⟩ 的布居",
+   "section": "6.2"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "拉比频率 Ω = ℰμ/ℏ",
+   "anchor": "6.3-weak-drive",
+   "section": "6.3"
+  },
+  {
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 的衰变，以场的真空模为连续谱",
+   "section": "6.3"
+  },
+  {
+   "sym": "rho_22",
+   "concept": "density-matrix-populations",
+   "meaning": "能级 |2⟩ 的布居",
+   "section": "6.3"
+  },
+  {
+   "sym": "rho_11",
+   "concept": "density-matrix-populations",
+   "meaning": "能级 |1⟩ 的布居",
+   "section": "6.3"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "section": "6.3"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "section": "6.3"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+<section id="opening">
+<p class="cite-target" id="higher-order"><span data-concept="nonclassical-light">光的量子态</span>常常不表现出一级相干性，却可以具有<span data-concept="second-order-correlation">高阶相干性</span>。我们想知道，类似的非经典态是否也能出现在<span data-concept="bose-condensation">BEC</span>中。特别地，可以问两个凝聚体是否必定总会产生<span data-concept="condensate-interference-fringes">干涉图样</span>，或者是否存在<span data-concept="gross-pitaevskii-equation">格罗斯-皮塔耶夫斯基方程</span>无法描述的、在物理上很重要的效应。由于原子间相互作用把非线性引入了物质波场，这样的非线性看来确实有可能产生非经典态。</p>
+</section>
+
+<section id="double-well">
+<h2>11.7.1 玩具模型：双阱势中相互作用的冷原子</h2>
+<p>作为物质的非经典态如何由原子间相互作用产生的一个例子，我们考虑<span data-concept="double-well-model" id="double-well-span">被约束在双阱势中的$N$个冷原子</span>，如<a href="#sim-double-well">图 11.13</a>所示。</p>
+<h3>无相互作用的原子</h3>
+<p>如果原子之间没有相互作用，系统的哈密顿量只包含动能项或隧穿项：</p>
+<div class="equation" id="eq-11-168">$$\hat{H}_\mathrm{kin} = -\kt\hat{a}_R^\dagger\hat{a}_L - \kt^*\hat{a}_L^\dagger\hat{a}_R \tag{11.168}$$</div>
+<figure class="sim" id="sim-double-well" data-figure="11.13" data-original="/media/ch11/fig-11-13.png" data-original-caption="冷原子的双阱势。有限高的势垒把两个局域态隔开，因此原子可以以速率 t 在二者之间隧穿。这种隧穿产生两个离域态：基态是左态与右态的对称组合 |+⟩ = (1/√2)(|L⟩ + |R⟩)，激发态 |−⟩ = (1/√2)(|L⟩ − |R⟩) 的能量高 2t。">
+  <div class="sim-head"><span class="eyebrow">Figure 11.13</span><span><span data-concept="double-well-model">双阱势</span>中的$N$个原子。以$\kt$的隧穿把局域态<span data-ref="well-L">$|L\rangle$</span>和<span data-ref="well-R">$|R\rangle$</span>结合成比它们低$\kt$的离域态$|+\rangle$和比它们高$\kt$的$|-\rangle$；这两个能级上的条形表示基态在每个能级中放入的原子数。下方是在<span data-ref="well-L">左阱</span>中找到$n_L$个原子的概率$P(n_L)$，取自<a href="#eq-11-168">式 (11.168)</a>加<a href="#eq-11-173">式 (11.173)</a>的精确基态。当$\kUzero \ll \kt$时，每个原子都处于$|+\rangle$中，$n_L$呈<a href="#eq-11-169">式 (11.169)</a>的二项分布（空心标记），且$\langle\hat{a}_L^\dagger\hat{a}_R\rangle = N/2$。增大$\kUzero/\kt$，分布变窄，同时原子上移到$|-\rangle$中；到$\kUzero \approx 10N\kt$时，只剩下$n_L = N/2$，即<span data-concept="double-well-fock-ground-state">福克态</span>，每个能级中各有一半的原子，而$\langle\hat{a}_L^\dagger\hat{a}_R\rangle$接近零。</span></div>
+</figure>
+<p id="ground-state"><span data-concept="double-well-coherent-ground-state" id="coherent-gs">系统的基态$|\phi_N\rangle$中全部$N$个原子都处于单粒子对称叠加态$|+\rangle$</span>。分别把<span data-ref="well-L">左</span>、<span data-ref="well-R">右</span>势阱的<span data-concept="creation-annihilation-operators">湮没算符</span>定义为$\{\hat{a}_L, \hat{a}_R\}$，我们就可以用<span data-concept="second-quantization">二次量子化</span>记号把这一基态写成</p>
+<div class="equation" id="eq-11-169">$$|\phi_N\rangle = \frac{\left(\hat{a}_L^\dagger + \hat{a}_R^\dagger\right)^N}{\sqrt{N!}\cdot 2^{N/2}}|\mathrm{vac}\rangle. \tag{11.169}$$</div>
+<p>这一状态在<span data-ref="well-L">左边</span>的粒子与<span data-ref="well-R">右边</span>的粒子之间具有明确的相位，因此$\langle\hat{a}_L^\dagger\hat{a}_R\rangle \neq 0$。</p>
+<p>事实上，对于大的$N$，这一基态非常接近于<span data-concept="coherent-state">相干态</span>，满足</p>
+<div class="equation" id="eq-11-170">$$\hat{a}_R|\kalphacoh\rangle = \kalphacoh|\kalphacoh\rangle \tag{11.170}$$</div>
+<div class="equation" id="eq-11-171">$$\hat{a}_L|\kalphacoh\rangle = \kalphacoh|\kalphacoh\rangle, \tag{11.171}$$<sup class="fn" data-note="c-eq-11-171"></sup></div>
+<p id="josephson">其中$|\kalphacoh_R|^2 = |\kalphacoh|^2 = N/2$。这种相似性的出现，是因为<span data-concept="coherent-state">相干态</span>的原子数不确定度按$1/\sqrt{N}$变化，<sup class="fn" data-note="c-number-uncertainty"></sup>而对于大的$N$，<span data-concept="coherent-state">相干态</span>会给我们一幅关于系统行为的直观图像。特别地，如果我们确实有两个<span data-concept="coherent-state">相干态</span>处于<span data-ref="well-L well-R">两个阱</span>中，相位分别为$\kphiR$和$\kphiL$，这一器件就对应于<span data-concept="double-well-coherent-ground-state">一个经典约瑟夫森器件</span>，其动能为$\kEdw = -(N\kt/2)\cos(\kphiR - \kphiL)$。<sup class="fn" data-note="c-josephson"></sup>值得强调的是，<span data-concept="double-well-coherent-ground-state">经典约瑟夫森器件</span>与量子双阱势之间的对应只有在占有数$N$很大的极限下才会出现。</p>
+<h3>强相互作用的原子</h3>
+<p>我们现在考虑相反的极限，即强排斥相互作用占主导。因此我们可以忽略隧穿项，于是哈密顿量可以写成</p>
+<div class="equation" id="eq-11-172">$$\hat{H}_\mathrm{int} = \kUzero\left(\hat{a}_L^\dagger\hat{a}_L^\dagger\hat{a}_L\hat{a}_L + \hat{a}_R^\dagger\hat{a}_R^\dagger\hat{a}_R\hat{a}_R\right), \tag{11.172}$$</div>
+<p>或者，用占有数表示，</p>
+<div class="equation" id="eq-11-173">$$\hat{H}_\mathrm{int} = \kUzero\left(\hat{n}_L(\hat{n}_L - 1) + \hat{n}_R(\hat{n}_R - 1)\right). \tag{11.173}$$</div>
+<p>如果$\kUzero \gg \kt$，则$|\phi_N\rangle$不是多粒子系统的基态，因为排斥相互作用带来的势能代价压过了离域态所获得的动能好处。例如，考虑双阱势中的两个强排斥的原子。避开相互作用的最好办法是每个原子占据各自的阱，所以基态为</p>
+<div class="equation" id="eq-11-174">$$|\psi_2\rangle = \hat{a}_L^\dagger\hat{a}_R^\dagger|\mathrm{vac}\rangle. \tag{11.174}$$</div>
+<p>虽然每个原子要付出$\sim \kt$的能量代价，但避开相互作用所得的巨大收益$\sim \kUzero$足以补偿随之增加的动能而有余。同样，在$N-$粒子系统的基态中，原子均匀地堆积在<span data-ref="well-L well-R">两个阱</span>中，<span data-concept="double-well-fock-ground-state" id="fock-gs">产生出高度非经典的福克态</span></p>
+<div class="equation" id="eq-11-175">$$|\psi_N\rangle = (\hat{a}_L^\dagger\hat{a}_R^\dagger)^N|\mathrm{vac}\rangle. \tag{11.175}$$<sup class="fn" data-note="c-eq-11-175"></sup></div>
+<p>这样的态不表现出<span data-concept="condensate-interference-fringes">一级干涉图样</span>，也不能用<span data-concept="gross-pitaevskii-equation">格罗斯-皮塔耶夫斯基方程</span>描述。</p>
+<p id="making-fock">这个例子表明，<span data-concept="nonclassical-matter-requirements" id="nonclassical">制造物质的非经典态需要这样一个系统：其中相互作用强于动能</span>。不过，保持低损失也很重要，因为<span data-concept="dissipation-destroys-nonclassicality">损失会破坏非经典相干性</span>。实际上，目前有两种方法用来产生原子的<span data-concept="fock-states">福克态</span>。第一，通过更紧地约束原子，例如在<span data-concept="optical-lattice">光学格子</span>中，可以降低不同格点之间的隧穿速率，从而降低动能的标度。第二，可以增大<span data-concept="s-wave-scattering-length">散射长度$\kascat$</span>，例如利用<span data-concept="feshbach-resonance">费希巴赫共振</span>，来增强相互作用。</p>
+</section>
+
+<section id="optical-lattice">
+<h2>11.7.2 光学格子势</h2>
+<p>各种实验利用<span data-concept="optical-lattice-potential" id="lattice-potential">光学格子势来约束原子</span>或其他可极化的物体，使其处于一维、二维或三维阵列中。</p>
+<p id="lattice-light"><span data-concept="optical-lattice-potential">光学格子</span>基于与红失谐光源产生的<span data-concept="ac-stark-shift">交流斯塔克偏移</span>相联系、吸引可极化粒子到强度极大处的<span data-concept="dipole-force">光学偶极力</span>。反向传播的光束产生周期为$\klambda/2$的驻波，其中$\klambda$是红失谐光源的波长。通过在多个维度上组合驻波，可以产生<span data-concept="optical-lattice-potential">简单立方格子，势为</span></p>
+<div class="equation" id="eq-11-176">$$\kV(\mathbf{r}) \propto \sin^2\left(\frac{2\pi x}{\klambda}\right) + \sin^2\left(\frac{2\pi y}{\klambda}\right) + \sin^2\left(\frac{2\pi z}{\klambda}\right), \tag{11.176}$$</div>
+<p>再加上一个约束性的谐振子势。<span data-concept="optical-lattice-potential">光学格子势</span>与上面讨论的<span data-concept="double-well-model">双阱势</span>类似之处在于，它可以用两个量来参数化：格点之间的隧穿速率，以及占据同一格点的原子的相互作用强度。</p>
+</section>

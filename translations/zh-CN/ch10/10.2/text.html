@@ -1,0 +1,94 @@
+<section id="opening">
+<p class="cite-target" id="model">就我们的目的而言，离子阱的物理可以通过<span data-concept="trapped-ion-model">用谐振子势来近似该阱</span>来理解。</p>
+<figure class="sim" id="fig-ion-trap" data-figure="10.3" data-original="/media/ch10/fig-10-3.png" data-original-caption="受约束于一维谐振子阱中的离子的模型，受激光激发与自发发射的作用。">
+  <div class="sim-head"><span class="eyebrow">Figure 10.3</span><span>一个离子被束缚在一维谐振阱的底部，该阱的势是抛物线。激光激发离子，离子通过<span data-concept="spontaneous-emission">自发发射</span>弛豫，发出一个光子。</span></div>
+</figure>
+<p>离子可以与将耦合内部电子自由度之间跃迁的激光束相互作用。如果内部跃迁是<span data-concept="selection-rules">偶极容许</span>的，离子将迅速弛豫，<span data-concept="spontaneous-emission">自发发射</span>一个光子。这类跃迁可用于把离子<span data-concept="laser-cooling">激光冷却</span>到其运动基态，也可用于通过观察它是否<span data-concept="spontaneous-emission">发荧光</span>来读出<span data-concept="qubit">量子比特</span>的态。然而，对于量子态工程，人们希望有<span data-concept="ion-qubit-levels" id="qubit-levels">一个长寿命的亚稳态，可以在四极跃迁上被驱动</span>。离子具有这样的<span data-concept="ion-qubit-levels">亚稳态</span>，寿命约为一秒，我们将着重讨论这些<span data-concept="selection-rules">偶极禁戒</span>跃迁，其中<span data-concept="spontaneous-emission">自发发射</span>可以忽略。这些内部能级如<a href="#fig-ion-levels">图 10.4</a>所示。</p>
+<p id="hilbert-space">由于离子被阱紧紧束缚，其运动态也具有量子化的能级。<span data-concept="ion-hilbert-space">离子的希尔伯特空间</span>于是可以理解为一个<span data-concept="two-level-atom">二能级系统</span>，带有一个由<span data-concept="fock-states">福克态</span>构成的谐振子阶梯，描述其运动。由于我们主要关心量子态工程，我们将忽略声子加热效应，并假定离子可以制备在其运动基态。因此，我们考虑的陷俘离子与构成其环境的辐射热浴和声子热库都是隔离的。</p>
+<figure class="sim" id="fig-ion-levels" data-figure="10.4" data-original="/media/ch10/fig-10-4.png" data-original-caption="谐振子阱中离子的内部自由度和外部自由度。请注意，偶极容许跃迁用于冷却离子，而偶极禁戒跃迁用于在离子中编码信息。">
+  <div class="sim-head"><span class="eyebrow">Figure 10.4</span><span>左侧，离子的内部能级：从<span data-ref="lvl-g">基态$|g\rangle$</span>出发，有一条<span data-concept="selection-rules">偶极容许</span>跃迁通向一个立即衰变并用于冷却的短寿命能级，还有一条<span data-concept="selection-rules">偶极禁戒</span>跃迁通向用于编码信息的<span data-ref="lvl-e">长寿命的$|e\rangle$</span>。右侧，阱的运动态阶梯$|0\rangle$、$|1\rangle$、$|2\rangle$、…，在能量上等间距。</span></div>
+</figure>
+</section>
+
+<section id="oscillator">
+<h2>10.2.1 谐振子势</h2>
+<p class="cite-target" id="trap-frequency">强库仑相互作用使离子能够被约束在<span data-concept="trap-frequency">谐振子频率$\knu \sim 10$ MHz</span>的阱中。离子的位置和动量可以用振动能量子的<span data-concept="creation-annihilation-operators">产生算符和湮没算符</span>表示：</p>
+<div class="equation" id="eq-10-2">$$\kxion = \sqrt{\frac{\hbar}{2\km\knu}}\left(\hat{a} + \hat{a}^\dagger\right) \tag{10.2}$$</div>
+<div class="equation" id="eq-10-3">$$\kp = i\sqrt{\frac{\hbar\km\knu}{2}}\left(\hat{a}^\dagger - \hat{a}\right), \tag{10.3}$$</div>
+<p>而<span data-concept="motional-hamiltonian">离子运动的哈密顿量</span>就是</p>
+<div class="equation" id="eq-10-4">$$\kHmotion = \hbar\knu\hat{a}^\dagger\hat{a}. \tag{10.4}$$</div>
+<p>离子波函数在其运动基态中的特征尺寸为</p>
+<div class="equation" id="eq-10-5">$$\kazero = \sqrt{\frac{\hbar}{2\km\knu}}, \tag{10.5}$$</div>
+<p>而对于被紧密陷俘的离子，这一<span data-concept="harmonic-oscillator-length">谐振子长度</span>显著小于光波长。</p>
+</section>
+
+<section id="internal">
+<h2>10.2.2 内部能级</h2>
+<p class="cite-target">电子能量结构可以简单地用一个<span data-concept="two-level-atom">二能级系统</span>表示，它具有<span data-ref="lvl-g">基态$|g\rangle$</span>和<span data-ref="lvl-e">激发态$|e\rangle$</span>。如果我们忽略<span data-concept="spontaneous-emission">自发发射</span>过程，<span data-concept="ion-electronic-hamiltonian">哈密顿量</span>就是</p>
+<div class="equation" id="eq-10-6">$$\kHelectronic = \hbar\komegaeg|e\rangle\langle e|. \tag{10.6}$$</div>
+<p id="gamma-tau">为了忽略来自<span data-ref="lvl-e">激发态</span>的衰变，我们要求<span data-concept="spontaneous-emission-rate">衰变率$\kgamma$</span>与我们希望在其间操控离子的时标$\ktau$的倒数相比要小。有两种常用的方法可以实现<span data-concept="negligible-decay-condition">$\kgamma\ktau \ll 1$</span>：</p>
+<p>(1) 使用<span data-concept="ion-qubit-levels">可在四极跃迁上被驱动的亚稳态</span>。</p>
+<p>(2) 使用远失谐的<span data-concept="raman-transition">拉曼跃迁</span>，将有效谱线宽度减小$(\kOmega/\kDelta)^2 \ll 1$。</p>
+</section>
+
+<section id="ion-laser">
+<h2>10.2.3 离子-激光相互作用</h2>
+<p class="cite-target" id="momentum-kick">离子吸收一个光子时，<span data-concept="ion-momentum-kick">与之相伴的动量冲击可以激发阱中更高的振动态</span>。为了定量地理解这一点从何而来，考虑与行波相联系的电场</p>
+<div class="equation" id="eq-10-7">$$E_\mathrm{running} = \kEenv e^{i(\kkmag x-\komega \kt)} + c.c. \tag{10.7}$$</div>
+<p>或驻波</p>
+<div class="equation" id="eq-10-8">$$E_\mathrm{standing} = \kEenv\sin{(\kkmag x + \kphi)}e^{-i\komega \kt} + c.c. \tag{10.8}$$</div>
+<p id="x-operator">这一电场与离子的相互作用发生在离子所在的位置，因此我们将经典量$x$替换为算符量$\kxion$。于是所得的<span data-concept="ion-laser-hamiltonian">相互作用哈密顿量</span>（在<span data-concept="rotating-wave-approximation">旋转波近似</span>下）为</p>
+<div class="equation" id="eq-10-9">$$\hat{H}_\mathrm{running} = -\hbar\left(\kOmega|e\rangle\langle g|e^{i(\kkmag\kxion-\komega \kt)} + h.c\right) \tag{10.9}$$</div>
+<div class="equation" id="eq-10-10">$$\hat{H}_\mathrm{standing} = -\hbar\left(\kOmega|e\rangle\langle g|\sin{(\kkmag\kxion + \kphi)}e^{-i\komega \kt} + h.c\right). \tag{10.10}$$</div>
+<p>如果我们在动量基中写出态，传递给原子的<span data-concept="ion-momentum-kick">动量冲击</span>就可以显式地看出来，在该基中<span data-concept="ion-laser-hamiltonian">哈密顿量</span>可以诱导跃迁</p>
+<div class="equation" id="eq-10-11">$$|g\rangle|p\rangle \rightarrow |e\rangle e^{i\kkmag\kxion}|p\rangle = |e\rangle|p + \hbar \kkmag\rangle. \tag{10.11}$$</div>
+<p>因此，我们可以通过激光激发来操控离子的质心运动。</p>
+<h3>兰姆-迪克参数</h3>
+<p>正如我们先前所暗示的，与激光波长和离子空间范围相联系的长度尺度是不同的。对于紧阱，<span data-concept="lamb-dicke-parameter" id="ld-parameter">它们之比提供了一个小参数</span></p>
+<div class="equation" id="eq-10-12">$$\ketaLD = \frac{2\pi \kazero}{\klambda} \sim 0.1, \tag{10.12}$$</div>
+<p>而通过对这一参数展开，我们可以突出<span data-concept="ion-laser-hamiltonian">相互作用哈密顿量</span>在所谓的<span data-concept="lamb-dicke-regime" id="ld-regime">“兰姆-迪克情形”</span>中所容许的物理过程。我们还可以用<span data-concept="recoil-frequency">反冲能</span>$\komegaR = \hbar \kkmag^2/2\km$来解释<span data-concept="lamb-dicke-parameter">兰姆-迪克参数</span>$\ketaLD$</p>
+<div class="equation" id="eq-10-13">$$\ketaLD = \sqrt{\frac{\komegaR}{\knu}}. \tag{10.13}$$</div>
+<p>由于$\komegaR \sim$ kHz而$\knu \sim 10$ MHz，可见$\ketaLD$可以相当小。<sup class="fn" data-note="c-eta-numbers"></sup>从物理上看，<span data-concept="lamb-dicke-regime">兰姆-迪克情形</span>对应于这样的极限：离子被束缚得如此之紧，以至于一个光子的<span data-concept="recoil-frequency">反冲能</span>不足以激发更高的振动态，因此光子动量被阱而不是离子吸收。</p>
+<p>用<span data-concept="lamb-dicke-parameter">兰姆-迪克参数</span>表示，<span data-concept="lamb-dicke-hamiltonian">总哈密顿量</span>在行波的<span data-concept="rotating-frame">转动参考系</span>中为</p>
+<div class="equation" id="eq-10-14">$$\kHr = \hbar\knu\hat{a}^\dagger\hat{a} - \hbar\kDelta|e\rangle\langle e| - \hbar\left(\kOmega|e\rangle\langle g|e^{i\ketaLD(\hat{a}+\hat{a}^\dagger)} + h.c\right) \tag{10.14}$$</div>
+<p>而<span data-concept="lamb-dicke-hamiltonian">驻波哈密顿量</span>为</p>
+<div class="equation" id="eq-10-15">$$\kHs = \hbar\knu\hat{a}^\dagger\hat{a} - \hbar\kDelta|e\rangle\langle e| - \hbar\left(\kOmega|e\rangle\langle g|\sin\left(\ketaLD(\hat{a} + \hat{a}^\dagger) + \kphi\right) + h.c\right). \tag{10.15}$$</div>
+<p>注意$\ketaLD$出现在指数或正弦函数中，因此对<span data-concept="lamb-dicke-parameter">兰姆-迪克参数</span>展开可以使这些<span data-concept="lamb-dicke-hamiltonian">哈密顿量</span>得到显著的简化。特别地，我们将看到，所得的动力学与<span data-concept="cavity-qed">腔量子电动力学</span>中的<span data-concept="jaynes-cummings-model">J-C 哈密顿量</span>惊人地相似，其中腔光子被离子运动态的量子化激发所取代。</p>
+<h3>裸能谱</h3>
+<p>在分析激光-离子相互作用的效应之前，我们应当理解作为如下算符的本征态的<span data-concept="ion-bare-spectrum">裸能级</span>的结构</p>
+<div class="equation" id="eq-10-16">$$\kHzero = \hbar\knu\hat{a}^\dagger\hat{a} - \hbar\omega_{ge}|e\rangle\langle e|. \tag{10.16}$$<sup class="fn" data-note="c-eq-10-16"></sup></div>
+<p>由于$\komegaeg \gg \knu$，电子结构的<span data-ref="lvl-g lvl-e">基态和激发态</span>被很好地分开，但又细分为不同的运动态。特别地，<span data-concept="ion-bare-spectrum">裸态</span>的形式为</p>
+<div class="equation" id="eq-10-17">$$\kHzero|g\rangle|n\rangle = \hbar n\knu|g\rangle|n\rangle \tag{10.17}$$</div>
+<div class="equation" id="eq-10-18">$$\kHzero|e\rangle|n\rangle = \hbar(n\knu + \komegaeg)|e\rangle|n\rangle. \tag{10.18}$$</div>
+<h3>激光诱导的耦合：行波</h3>
+<p>离子-激光相互作用耦合陷俘离子的<span data-concept="ion-bare-spectrum">裸能态</span>。</p>
+<p id="lowest-order">将指数展开到$\ketaLD$的最低阶，<span data-concept="sideband-couplings">仅有的非零矩阵元把$n$与$m = n, n+1, n-1$耦合起来</span>。</p>
+<figure class="dv" id="drv-sideband-couplings"></figure>
+<p>注意，事实上真正的展开参数是$\ketaLD\sqrt{n}$，因为我们展开的是$\ketaLD(\hat{a} + \hat{a}^\dagger)$的指数，而$\hat{a}$按$\sqrt{n}$变化。</p>
+<p>这三个矩阵元诱导内态与运动态之间的耦合，如<a href="#sim-sideband-ladder">图 10.5</a>所示。通过调谐激光频率，可以逐一对这三种跃迁寻址。</p>
+<p id="carrier">假设激光频率被调谐到与<span data-concept="atomic-transition-frequency">裸原子跃迁频率</span>$\komega = \komegaeg$共振。如果功率足够小，<span id="carrier-condition">$\kOmega \ll \knu/\ketaLD$</span>，<span data-concept="sideband-couplings">边带跃迁</span>的激发就被强烈抑制，因此内部和外部自由度解耦。在这一极限下，系统可以很好地用<span data-concept="carrier-transition">二能级哈密顿量</span>描述</p>
+<div class="equation" id="eq-10-23">$$\kH = \hbar\knu\hat{a}^\dagger\hat{a} - \hbar\kDelta|e\rangle\langle e| - \hbar\kOmega\left(|e\rangle\langle g| + |g\rangle\langle e|\right). \tag{10.23}$$</div>
+<p>从物理上看，这一极限对应于一个局域得很好的离子，其动量分布远大于激光激发所传递的反冲动量。离子吸收一个光子时，其能量不足以把离子激发到更高的运动态，其动量被传递给阱。</p>
+<figure class="sim" id="sim-sideband-ladder" data-figure="10.5 + 10.6" data-original="/media/ch10/fig-10-5.png,/media/ch10/fig-10-6.png" data-original-caption="（图 10.5）当激光被调谐到裸原子共振时，原子在内态之间循环，而不改变其运动态。把激光调谐到蓝边带或红边带，也可以对不同的运动态寻址。（图 10.6）调谐到红边带或蓝边带的激光所诱导的跃迁。请注意，与垂直跃迁不同，边带跃迁的拉比频率随声子数而变化，∼ ηΩ√n。">
+  <div class="sim-head"><span class="eyebrow">Figure 10.5 + 10.6</span><span><span data-concept="ion-bare-spectrum">裸态</span><span data-ref="lvl-g">$|g, n\rangle$</span>和<span data-ref="lvl-e">$|e, n\rangle$</span>，每个阶梯的梯级相隔$\knu$，两个阶梯相隔$\komegaeg$，未按比例绘制。位于裸共振的激光以强度$\kOmega$把<span data-ref="lvl-g">$|g, n\rangle$</span>径直向上驱动到<span data-ref="lvl-e">$|e, n\rangle$</span>；位于红边带时，它以$\ketaLD\kOmega\sqrt{n}$到达<span data-ref="lvl-e">$|e, n-1\rangle$</span>，位于蓝边带时，以$\ketaLD\kOmega\sqrt{n+1}$到达<span data-ref="lvl-e">$|e, n+1\rangle$</span>。选择调谐和离子起始所在的梯级，观察布居跨越：在边带上，它翻转得更慢，慢了因子$\ketaLD$，梯级越高则越快，而在裸共振上，每个梯级的翻转都相同。在红边带上，<span data-ref="lvl-g">$|g, 0\rangle$</span>没有伙伴，保持不动。时间以$1/\kOmega$为单位。</span></div>
+</figure>
+<p id="red-jc">如果激光被调谐到<span data-concept="sideband-couplings">红边带</span>，有效动力学可以用<span data-concept="jaynes-cummings-model">J-C 模型</span>描述</p>
+<div class="equation" id="eq-10-24">$$\kH = \hbar\knu\hat{a}^\dagger\hat{a} - \hbar\kDelta|e\rangle\langle e| - i\hbar\ketaLD\kOmega\left(|e\rangle\langle g|\hat{a} + |g\rangle\langle e|\hat{a}^\dagger\right), \tag{10.24}$$<sup class="fn" data-note="c-eq-10-24"></sup></div>
+<p>其中内部跃迁伴随着一个声子的产生或湮没。完全相同的<span data-concept="jaynes-cummings-model">哈密顿量</span>出现在<span data-concept="cavity-qed">腔量子电动力学</span>中，因此我们可以运用来自<span data-concept="cavity-qed">腔量子电动力学</span>的直觉来理解陷俘离子如何演化。然而，这两个系统之间存在一些重要的物理差异。光学光子的频率尺度$\sim$ THz远大于离子运动的频率尺度$\sim$ MHz。此外，<span data-concept="single-photon-rabi-frequency">真空拉比耦合</span>被<span data-concept="sideband-couplings">有效拉比频率</span>$\kg \rightarrow \ketaLD\kOmega$所取代。<span id="strong">因此，<span data-concept="strong-coupling-regime">强耦合情形</span>对离子阱而言显著更容易达到，因为只需增大激光功率即可增大耦合强度。</span>此外，耦合参数可以用激光开启和关闭，从而实现对离子内态和运动态的受控操控。</p>
+<p>类似的考虑适用于<span data-concept="sideband-couplings">蓝边带</span>跃迁。在这种情形下，系统遵从一个<span data-concept="anti-jaynes-cummings" id="anti-jc">“反 J-C”</span>哈密顿量</p>
+<div class="equation" id="eq-10-25">$$\kH = \hbar\knu\hat{a}^\dagger\hat{a} - \hbar\kDelta|e\rangle\langle e| - i\hbar\ketaLD\kOmega\left(|e\rangle\langle g|\hat{a}^\dagger + |g\rangle\langle e|\hat{a}\right), \tag{10.25}$$<sup class="fn" data-note="c-eq-10-25"></sup></div>
+<p>其中内态的激发伴随着一个声子的发射，反之亦然。</p>
+<h3>激光诱导的耦合：驻波</h3>
+<p id="standing">当离子被驻波照射时，驻波相对于离子阱极小值的相位提供了另一种操控系统的手段。对<span data-concept="lamb-dicke-hamiltonian">哈密顿量</span>进行<span data-concept="lamb-dicke-parameter">兰姆-迪克展开</span>得到</p>
+<div class="equation" id="eq-10-26">$$\kHs = \hbar\knu\hat{a}^\dagger\hat{a} - \hbar\kDelta|e\rangle\langle e| - \hbar\left(\kOmega|e\rangle\langle g|\left(\sin\kphi + \ketaLD(\hat{a} + \hat{a}^\dagger)\cos\kphi + \mathcal{O}(\ketaLD^2)\right) + h.c\right). \tag{10.26}$$</div>
+<p>类似的跃迁发生在<span data-concept="ion-bare-spectrum">裸能级</span>之间，但令相位$\kphi = 0$，就可以消除离子的垂直跃迁。</p>
+</section>
+
+<section id="cooling-block">
+<h2>10.2.4 边带冷却</h2>
+<p class="cite-target" id="cooling">通过光学地对运动态之间的跃迁寻址，就有可能<span data-concept="sideband-cooling">把离子冷却到阱的基态</span>。通常，这是通过施加一束与容许跃迁的<span data-concept="sideband-couplings">红边带</span>共振的激光来实现的。每个激发循环都使运动能量减少，而发射发生在全部三种可能的跃迁上；平均而言，这把离子<span data-concept="optical-pumping">抽运</span>到阱的基态，该基态对<span data-concept="detuning">红失谐</span>激光是暗的。</p>
+<p>冷却发生的速率由离子激发态的<span data-concept="spontaneous-emission-rate">荧光率</span>$\kgamma$决定。最初，人们希望有较大的<span data-concept="spontaneous-emission-rate">荧光率</span>以提高冷却速率；然而，<span data-concept="resolved-sideband-condition" id="resolved">要冷却到基态，需要$\kgamma \ll \knu$</span>，这样对直接跃迁和<span data-concept="sideband-couplings">蓝边带</span>跃迁的非共振激发就可以忽略。实际上，衰变率常常通过选择一条名义上禁戒的冷却跃迁来调节。通过施加另一束激光，把（禁戒的）激发态耦合到另一个对基态具有容许跃迁的激发态，就可以控制有效的<span data-concept="spontaneous-emission-rate">自发发射率</span>。利用这类技术，实验者已经把离子冷却到阱的基态，效率超过99%。</p>
+<figure class="sim" id="sim-sideband-cooling">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>一束虚线所示的、相对于裸共振的<span data-concept="detuning">失谐</span>为$\kDelta$的弱激光驱动一个起初处于热态的离子，平均有$\langle n\rangle = 5$个声子。上方是弱探测光会测得的谱：零处的裸共振，远高于图框；位于$-\knu$的红边带，高度为$\ketaLD^2\langle n\rangle$；位于$+\knu$的蓝边带，高度为$\ketaLD^2(\langle n\rangle + 1)$；各自的宽度均为$\kgamma$。下方是运动态的布居$p_n$，起始分布画成空心。在红边带上，每次激发都带走一个声子，而发射多半不放回声子，因此布居流入$|0\rangle$，激光无法激发该态，红线逐渐消失而蓝线保持不变。把$\kgamma$加宽到接近$\knu$，裸共振的线翼就触及边带：离子止步于基态之前。调谐到裸共振或蓝边带，离子就被加热。$\kDelta$和$\kgamma$以$\knu$为单位，$\ketaLD = 0.1$，时间以$\kgamma/(\ketaLD\kOmega)^2$为单位。</span></div>
+</figure>
+</section>

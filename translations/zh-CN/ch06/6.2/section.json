@@ -1,0 +1,228 @@
+{
+ "id": "6.2",
+ "chapter": "6",
+ "title": "例：二能级原子的衰变",
+ "short": "二能级原子的衰变",
+ "lead": "将<span data-concept=\"monte-carlo-wavefunction\">蒙特卡罗波函数法</span>应用于从<span data-concept=\"superposition\">叠加态</span>衰变的<span data-concept=\"two-level-atom\">二能级原子</span>：小时间步长内的<span data-concept=\"jump-probability\">跳跃概率</span>、不发射光子的原子的态、未探测到光子对该态的影响，以及该方法何时值得使用。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "figures": [
+  {
+   "id": "sim-no-jump",
+   "kind": "sim",
+   "draws": [
+    "population",
+    "amplitude",
+    "rate",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {"span": "null-measurement", "concept": "null-measurement", "verb": "introduces"},
+  {"span": "use-cases", "concept": "monte-carlo-use-cases", "verb": "introduces"},
+  {"span": "mcwf-method", "concept": "monte-carlo-wavefunction", "verb": "uses"},
+  {"span": "initial-state", "concept": "two-level-atom", "verb": "uses"},
+  {"span": "initial-state", "concept": "pure-and-mixed-states", "verb": "uses"},
+  {"span": "eq-6-22", "concept": "quantum-jump", "verb": "uses"},
+  {"span": "eq-6-22", "concept": "jump-probability", "verb": "uses"},
+  {"span": "eq-6-24", "concept": "effective-hamiltonian", "verb": "uses"},
+  {"span": "mc-average", "concept": "monte-carlo-procedure", "verb": "uses"},
+  {"span": "use-cases", "concept": "density-matrix", "verb": "uses"},
+  {"span": "use-cases", "concept": "master-equation", "verb": "uses"},
+  {"span": "drv-no-jump-two-level-state", "concept": "mcwf-two-level-decay", "verb": "introduces"}
+ ],
+ "footnotes": [
+  {
+   "id": "c-eq-6-24",
+   "kind": "correction",
+   "html": "书中印的是$+\\frac{i\\kgamma}{2}\\hat{c}^\\dagger\\hat{c}$。式 (6.7) 给出的非厄米部分带负号，而在$\\hbar = 1$时，只有负号才能使$|2\\rangle$的概率幅如式 (6.25) 和 (6.26) 所述那样衰变：$\\kHeff = \\kDelta|2\\rangle\\langle 2| - \\frac{i\\kgamma}{2}\\hat{c}^\\dagger\\hat{c}$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "two-level-jump-probability",
+   "what": "衰变的二能级原子的跳跃概率",
+   "source": "现代原子与光学物理 II，6.2 例：二能级原子的衰变",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "原子通过一个通道以速率$\\kgamma$衰变，$\\hat{c} = |1\\rangle\\langle 2|$。",
+       "src": "6.2"
+      },
+      {
+       "tex": "|\\kpsi\\rangle = \\kaone|1\\rangle + \\katwo|2\\rangle",
+       "src": "6.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kdeltapatom} = \\mk{R}{\\delta\\kt\\kgamma\\langle\\kpsi|\\hat{c}^\\dagger\\hat{c}|\\kpsi\\rangle}",
+      "src": "(6.22)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kdeltapatom} = \\mk{R}{\\delta\\kt\\kgamma\\langle\\kpsi|2\\rangle\\langle 2|\\kpsi\\rangle}",
+       "uses": [
+        0
+       ],
+       "cap": "$\\hat{c}^\\dagger\\hat{c} = |2\\rangle\\langle 1|1\\rangle\\langle 2| = |2\\rangle\\langle 2|$。"
+      },
+      {
+       "tex": "\\mk{p}{\\kdeltapatom} = \\mk{R}{\\delta\\kt\\kgamma|\\katwo|^2}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(6.23)"
+    }
+   ]
+  },
+  {
+   "id": "no-jump-two-level-state",
+   "what": "未发射过的二能级原子的态",
+   "source": "现代原子与光学物理 II，6.2 例：二能级原子的衰变",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kHeff = \\kDelta|2\\rangle\\langle 2| - \\frac{i\\kgamma}{2}\\hat{c}^\\dagger\\hat{c}",
+       "src": "(6.24)"
+      },
+      {
+       "text": "原子通过一个通道以速率$\\kgamma$衰变，$\\hat{c} = |1\\rangle\\langle 2|$。",
+       "src": "6.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\kHeff|\\kpsi\\rangle}",
+      "src": "(6.9)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\left(\\kDelta|2\\rangle\\langle 2| - \\frac{i\\kgamma}{2}\\hat{c}^\\dagger\\hat{c}\\right)|\\kpsi\\rangle}",
+       "uses": [
+        0
+       ],
+       "cap": "在$\\hbar = 1$的单位中，(6.24) 即是以此写出的。"
+      },
+      {
+       "tex": "\\mk{L}{i\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\left(\\kDelta - \\frac{i\\kgamma}{2}\\right)|2\\rangle\\langle 2|\\kpsi\\rangle}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\hat{c}^\\dagger\\hat{c} = |2\\rangle\\langle 2|$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{-\\left(\\frac{\\kgamma}{2} + i\\kDelta\\right)|2\\rangle\\langle 2|\\kpsi\\rangle}",
+       "uses": [],
+       "cap": "除以$i$：$-i(\\Delta - i\\gamma/2) = -(\\gamma/2 + i\\Delta)$。"
+      }
+     ],
+     "num": "(6.25)",
+     "note": "书中把右边印成$-\\left(\\frac{\\kgamma}{2} + i\\kDelta\\right)|2\\rangle$，没有写出它所作用的概率幅$\\langle 2|\\kpsi\\rangle$，并把 (6.24) 印成带$+\\frac{i\\kgamma}{2}\\hat{c}^\\dagger\\hat{c}$；(6.7) 的负号才使$|2\\rangle$的概率幅衰变。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "|\\kpsi\\rangle = \\kaone|1\\rangle + \\katwo|2\\rangle",
+       "src": "6.2"
+      },
+      {
+       "text": "未发生跳跃的原子的态，是演化后的态除以其模。",
+       "src": "(6.17)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{-\\left(\\frac{\\kgamma}{2} + i\\kDelta\\right)|2\\rangle\\langle 2|\\kpsi\\rangle}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}|1\\rangle + \\dot{\\kctwo}|2\\rangle} = \\mk{R}{-\\left(\\frac{\\kgamma}{2} + i\\kDelta\\right)\\kctwo|2\\rangle}",
+       "uses": [],
+       "cap": "写成$|\\psi\\rangle = c_1|1\\rangle + c_2|2\\rangle$，于是$\\langle 2|\\psi\\rangle = c_2$。"
+      },
+      {
+       "tex": "\\mk{a}{\\dot{\\kcone}} = \\mk{z}{0},\\quad \\mk{b}{\\dot{\\kctwo}} = \\mk{R}{-\\left(\\frac{\\kgamma}{2} + i\\kDelta\\right)\\kctwo}",
+       "uses": [],
+       "cap": "比较沿$|1\\rangle$和沿$|2\\rangle$的部分。",
+       "map": {
+        "L": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{a}{\\kcone(\\kt)} = \\mk{z}{\\kaone},\\quad \\mk{b}{\\kctwo(\\kt)} = \\mk{R}{\\katwo e^{-(\\kgamma/2+i\\kDelta)\\kt}}",
+       "uses": [
+        1
+       ],
+       "cap": "每个概率幅都从其在$|\\psi(0)\\rangle$中的值出发；$c_2$按指数衰减。"
+      },
+      {
+       "tex": "\\mk{K}{|\\kpsi(\\kt)\\rangle} = \\mk{R}{\\kaone|1\\rangle + \\katwo e^{-(\\kgamma/2+i\\kDelta)\\kt}|2\\rangle}",
+       "uses": [],
+       "map": {
+        "a": "K",
+        "b": "K",
+        "z": "R"
+       }
+      },
+      {
+       "tex": "\\mk{K}{|\\tilde{\\kpsi}(\\kt)\\rangle} = \\mk{n}{\\frac{1}{\\sqrt{|\\kaone^2| + |\\katwo|^2e^{-\\kgamma\\kt}}}}\\mk{R}{\\left(\\kaone|1\\rangle + \\katwo e^{-(\\kgamma/2+i\\kDelta)\\kt}|2\\rangle\\right)}",
+       "uses": [
+        2
+       ],
+       "cap": "模的平方为$|a_1|^2 + |a_2e^{-(\\gamma/2 + i\\Delta)t}|^2 = |a_1|^2 + |a_2|^2e^{-\\gamma t}$。"
+      }
+     ],
+     "num": "(6.26)"
+    }
+   ]
+  }
+ ]
+}

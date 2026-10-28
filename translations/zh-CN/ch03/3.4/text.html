@@ -1,0 +1,69 @@
+<section id="remarks">
+<h2>3.4.1 关于广义主方程的说明</h2>
+<p class="cite-target">在上一讲中，我们推导了支配<span data-concept="open-system">开放系统</span>演化的方程，该系统与<span data-concept="markovian-environment">马尔可夫热库</span>耦合。在薛定谔绘景中，这个所谓的<span data-concept="master-equation">主方程</span>具有如下形式</p>
+<div class="equation" id="eq-3-79">$$\begin{aligned} \frac{\Delta\krhoS}{\kDeltat} = &amp;-\sum_p\frac{\kgammap}{2}\knbar\left(\kShat_p\kShat_p^\dagger\krhoS - \kShat_p^\dagger\krhoS\kShat_p\right) + h.c. \\ &amp;-\sum_p\frac{\kgammap}{2}(\knbar + 1)\left(\kShat_p^\dagger\kShat_p\krhoS - \kShat_p\krhoS\kShat_p^\dagger\right) + h.c. \\ &amp;+\frac{1}{i\hbar}[\kHS, \krhoS]. \end{aligned} \tag{3.79}$$</div>
+<p id="channels">系统的时间依赖已内含于最后一项中，并且我们加入了对与<span data-concept="open-system">热库</span>的各种不同相互作用的求和。具体地说，<span data-concept="system-reservoir-hamiltonian">系统-热库相互作用</span>的形式为$\kHSR = \sum_p\kShat_p\hat{R}_p^\dagger + h.c.$，每一项都有各自对应的速率$\kgammap$。为了纳入多个<span data-concept="system-reservoir-hamiltonian">系统-热库相互作用</span>项，我们隐含地做了一个假定：不同的项是非相干的，因此它们之间的干涉消失。虽然这一要求在大多数时候是满足的，但应当记住，存在这种干涉很重要的情形。</p>
+<p id="cost">虽然<a href="#eq-3-79">式 (3.79)</a>使我们能够有效地计入<span data-concept="open-system">热库</span>的效应，但这些增加的信息要付出<span data-concept="master-equation-cost">计算代价</span>。假设我们有兴趣研究一个孤立的$n$能级系统。在波函数方法中，该系统的演化由$n$个关于<span data-concept="probability-amplitude">态的概率幅</span>$\{c_i(\kt)\}$的微分方程支配。当计入<span data-concept="open-system">环境</span>的效应时，系统必须用构成<a href="#eq-3-79">式 (3.79)</a>的$\mathcal{O}(n^2)$个微分方程来描述。方程数目之多会使数学变得复杂，我们将经常需要更精巧的工具来求出解。</p>
+<p id="memoryless">还有一点告诫值得注意：在我们先前的推导中，我们假定<span data-concept="open-system">宇宙</span>的状态是可因子化的，即</p>
+<div class="equation" id="eq-3-80">$$\krhotilde(\kt') \approx \krhotilde_S(\kt) \otimes \krhotilde_R(\kt), \tag{3.80}$$</div>
+<p>其中$\kt' - \kt \leq \kDeltat$。我们在几乎没有论证的情况下做出了这一陈述，但现在我们将证明，对于<span data-concept="markovian-environment">无记忆的热库</span>，$\ktauc = 0$，我们的假定是成立的。</p>
+<p>假设系统和<span data-concept="open-system">热库</span>在时刻$\kt = \kt_i$之前没有相互作用，于是在$\kt_i$之前的所有时刻，<span data-concept="open-system">宇宙</span>的<span data-concept="density-operator">密度算符</span>都是可因子化的。在某个时刻$\kt &gt; \kt_i$，我们当然可以写出</p>
+<div class="equation" id="eq-3-81">$$\krhotilde(\kt) = \krhotilde_S(\kt_i) \otimes \krhotilde_R(\kt_i) + \krhotilde_{corr}(\kt_i, \kt) \tag{3.81}$$</div>
+<p>其中$\krhotilde_{corr}(\kt_i, \kt)$取决于系统与<span data-concept="open-system">热库</span>之间在我们计算关联的时间间隔$\kt \to \kt + \kDeltat$<em>之前</em>建立起的关联。我们将用微扰论来估计对$\Delta\krhoS = \krhotilde_S(\kt + \kDeltat) - \krhotilde_S(\kt)$的那些贡献，它们在我们令$\krhotilde_{corr}(\kt_i, \kt) = 0$时被忽略了。</p>
+<p id="factorization">回忆一下，无记忆<span data-concept="open-system">热库</span>的<span data-concept="reservoir-correlation-functions">时间关联函数</span>是一个 δ 函数；由于积分的时间间隔不重叠，δ 函数在积分区域内处处为零。因此，对$\Delta\krhoS$的、由$\krhotilde_{corr}(\kt_i, \kt)$引起的贡献，在$\ktauc = 0$时于领头阶（以及所有更高阶）消失。事实上，更严格的分析表明，修正按$\ktauc^2$标度。</p>
+<figure class="dv" id="drv-memoryless-factorization"></figure>
+<p id="irreversibility">我们现在已经证明，<span data-concept="markovian-environment">无记忆的热库</span>与系统的相互作用是局域的；也就是说，它立即忘掉所有先前的关联，只依赖于当前的状态。这种失忆意味着<span data-concept="irreversibility-boundary">不可逆性</span>，因为信息丢失了（所以熵必然增加）。出于实际目的，不可逆动力学与<span data-concept="reversible-evolution">可逆</span>动力学将给出我们划分系统与<span data-concept="open-system">环境</span>的界线。<span data-concept="open-system">环境</span>中任何表现出<span data-concept="reversible-evolution">时间可逆性</span>的部分，即使我们对其演化并不明确感兴趣，我们也将把它纳入系统之中。</p>
+<p>我们已经强调了<span data-concept="master-equation">主方程</span>可能不够用的两种情形：(1) 不同的相互作用项之间存在干涉；(2) <span data-concept="system-reservoir-hamiltonian">热库相互作用</span>是<span data-concept="reversible-evolution">可逆</span>的。关于<span data-concept="master-equation">主方程</span>中隐含的假设和近似的更透彻的讨论，可见于<em>例如</em>科恩-塔诺季<em>等</em>的“Atom-Photon Interactions”。</p>
+</section>
+
+<section id="two-level">
+<h2>3.4.2 例：二能级原子</h2>
+<p class="cite-target"><span data-concept="master-equation">主方程</span>常用于描述耦合到<span data-concept="open-system">耗散环境</span>的受驱<span data-concept="two-level-atom">二能级系统</span>的演化。与驱动场的相干相互作用具有如下形式</p>
+<div class="equation" id="eq-3-84">$$\kHS = -\hbar\kdelta|2\rangle\langle 2| + \hbar\kOmega^*|1\rangle\langle 2| + \hbar\kOmega|2\rangle\langle 1|, \tag{3.84}$$<sup class="fn" data-note="c-eq-3-84"></sup></div>
+<p>而<span data-concept="open-system">热库</span>的效应则进入<span data-concept="density-matrix">密度矩阵</span>方程。</p>
+<figure class="dv" id="drv-optical-bloch-equations"></figure>
+<p id="obe">这些方程被称为“<span data-concept="optical-bloch-equations">光学布洛赫方程</span>”。注意，这些方程中只有两个是独立的，因为演化方程必须保持概率，$\krhooneone + \krhotwotwo = \mathrm{Tr}[\krhoS] = 1$，并保持厄米性，$\krhoonetwo = \krhotwoone^*$。</p>
+<p>有三类过程对<a href="#drv-optical-bloch-equations">式 (3.89)</a>所描述的系统演化有贡献：</p>
+<p id="process-1">(1) 相干驱动$\propto \kOmega$，</p>
+<p id="process-2">(2) <span data-concept="mean-thermal-photon-number">热光子</span>$\propto \kgamma\knbar$，以及</p>
+<p id="process-3">(3) <span data-concept="spontaneous-emission">自发发射</span>$\propto \kgamma$。</p>
+<p>相干相互作用是先前各讲中介绍的理想<span data-concept="two-level-atom">二能级系统</span>的特征，它们来自系统哈密顿量项。</p>
+<p id="thermal-spontaneous"><span data-concept="mean-thermal-photon-number">热光子</span>导致<em>两个</em>方向上的<span data-concept="thermal-and-spontaneous-transitions">非相干跃迁</span>，而<span data-concept="spontaneous-emission">自发发射</span>只允许$\krhotwotwo$中的布居泄漏到$\krhooneone$中：</p>
+<div class="equation" id="eq-3-90">$$\dot{\krhotwotwo} = \kgamma\knbar(\krhooneone - \krhotwotwo) - \kgamma\krhotwotwo + \ldots \tag{3.90}$$</div>
+<div class="equation" id="eq-3-91">$$\dot{\krhooneone} = \kgamma\knbar(\krhotwotwo - \krhooneone) + \kgamma\krhotwotwo + \ldots \tag{3.91}$$</div>
+<p id="coherence-decay">虽然非相干过程既能增加也能减少<span data-concept="density-matrix-populations">布居</span>$\krhooneone$和$\krhotwotwo$，但它们只会减小<span data-concept="density-matrix-coherences">非对角项</span>。<span data-concept="coherence-decay-rate">相干性的衰变率$\kgammaonetwo$</span>（通过$\dot{\krhoonetwo} = -\kgammaonetwo\krhoonetwo + \cdots$定义）与布居衰变出<span data-ref="lvl-1">态$|1\rangle$</span>的速率$\kgammaone = \kgamma\knbar$以及<span data-ref="lvl-2">$|2\rangle$</span>的速率$\kgammatwo = \kgamma(\knbar + 1)$之间的关系为</p>
+<div class="equation" id="eq-3-92">$$\kgammaonetwo = \frac{\kgammaone + \kgammatwo}{2} = \frac{2\knbar + 1}{2}\kgamma = \kgammatwoone. \tag{3.92}$$</div>
+<p>对于多能级原子，这一关系对任意两个态及其相应的相干性成立，并且只依赖于离开这些态的速率，而不依赖于进入这些态的速率。</p>
+<p id="dephasing">虽然我们看到存在与布居衰变相关联的相干性衰变率，但一般说来还存在一些过程，它们减小<span data-concept="density-matrix-coherences">相干性</span>而不影响<span data-concept="density-matrix-populations">布居</span>。这些过程通常以唯象方式纳入<span data-concept="master-equation">主方程</span>，通过令</p>
+<div class="equation" id="eq-3-93">$$\kgammaonetwo = \kgammatwoone = \frac{\kgammaone + \kgammatwo}{2} + \kgammad, \tag{3.93}$$</div>
+<p>其中$\kgammad$是<span data-concept="dephasing-rate">所谓的退相干率或退相位率</span>。这种<span data-concept="dephasing-rate">退相干</span>可由多种来源引起，例如，外加激光场的有限谱线宽度或原子间相互作用。</p>
+</section>
+
+<section id="response">
+<h2>3.4.3 原子对共振场的响应</h2>
+<p class="cite-target">我们将考虑两种特殊情形，以获得对原子在同时受到相干抽运和非相干抽运时动力学的物理洞察。</p>
+<h3>弱外加场</h3>
+<p id="weak-field">对于足够小的外加场$\kOmega$，<span data-concept="master-equation">主方程</span>可以按微扰处理。由于<span data-concept="density-matrix-populations">布居</span>按$\propto \kOmega^2$的项变化，到最低阶我们可以令$\krhooneone \approx \krhooneone^{(0)} + O(\kOmega^2)$，$\krhotwotwo \approx \krhotwotwo^{(0)} + O(\kOmega^2)$，而只考虑<span data-concept="density-matrix-coherences">相干性</span>的演化。</p>
+<p>由于这个方程现在对$\kOmega$是线性的，我们可以通过对$\krhotwoone$和$\kOmega$作傅里叶变换来求解，</p>
+<div class="equation" id="eq-3-95">$$\krhotwoone(\kt) = \int d(\kdeltanu)e^{-i\kdeltanu \kt}\krhoonetwo(\kdeltanu) \tag{3.95}$$<sup class="fn" data-note="c-eq-3-95"></sup></div>
+<div class="equation" id="eq-3-96">$$\kOmega(\kt) = \int d(\kdeltanu)e^{-i\kdeltanu \kt}\kOmega(\kdeltanu). \tag{3.96}$$</div>
+<p id="lorentzian">作了这一代换后，我们发现在<span data-concept="weak-field-response">弱场极限</span>下，频率为$\kdeltanu$的相干性是一个洛伦兹线型，其有效<span data-concept="detuning">失谐</span>为$\kdelta + \kdeltanu$：</p>
+<figure class="dv" id="drv-weak-field-response"></figure>
+<p>这一方法可以推广到多能级原子，从而</p>
+<div class="equation" id="eq-3-98">$$\rho_{ij}(\kdeltanu) = \kOmega_{ij}(\kdeltanu)\frac{i(\rho_{ii}^{(0)} - \rho_{jj}^{(0)})}{\gamma_{ij} - i(\kdelta_{ij} + \kdeltanu)}, \tag{3.98}$$</div>
+<p>只要<span data-concept="density-matrix-populations">布居</span>$\rho_{ii}$和$\rho_{jj}$在时间上基本被冻结。对于近似处于<span data-ref="lvl-1">基态</span>（$\krhooneone^{(0)}\approx 1, \krhotwotwo^{(0)}\approx 0$）的原子，原子响应类似于经典偶极子，因为原子获得的偶极矩与场强成线性关系。另一方面，对于足够大的$\kOmega$，原子的量子化本性变得重要。此时<span data-ref="lvl-2">上态</span>中的布居不能忽略，并导致诸如原子响应的非线性和<span data-concept="saturation">饱和</span>之类的效应。</p>
+<h3>任意强度的连续波场</h3>
+<p id="steady-state">当外加场不随时间变化时，我们预期系统将经历被<span data-concept="system-reservoir-hamiltonian">热库相互作用</span>阻尼的<span data-concept="rabi-oscillations">拉比振荡</span>。衰变项在经过$\propto 1/\kgammatwoone$的时间后把系统驱动到平衡态，令其<span data-concept="density-matrix">密度矩阵</span>元的时间导数为零，就很容易求得系统的<span data-concept="steady-state-coherence">定常态描述</span>。</p>
+<figure class="dv" id="drv-steady-state-population"></figure>
+<p id="pumping-rate"><span data-concept="optical-pumping-rate">$\kRopt$的作用类似于与外加（相干）场相关联的非相干抽运率</span>。</p>
+<p>抽运率$\kRopt$决定了两个重要的极限：</p>
+<div class="equation" id="eq-3-102">$$\kRopt \ll \kgamma \quad \Rightarrow \quad \krhotwotwo \to 0 \tag{3.102}$$</div>
+<div class="equation" id="eq-3-103">$$\kRopt \gg \kgamma \quad \Rightarrow \quad \krhotwotwo \to \frac{1}{2}. \tag{3.103}$$</div>
+<p id="saturated">在第一种情形中，相干场很弱，因此原子最终以几乎为一的概率处于<span data-ref="lvl-1">基态</span>。更具体地说，可以看出在这一极限下<span data-ref="lvl-2">激发态</span>中的布居正比于场的光强（$\krhotwotwo \propto |\kOmega|^2$），并且<span data-concept="weak-field-response">微扰的弱场方法</span>是成立的。在第二种情形中，外加场使原子处于<span data-ref="lvl-1 lvl-2">基态和激发态</span>等权重的<span data-concept="pure-and-mixed-states">统计混合</span>，此时称<span data-concept="saturation">原子响应是饱和的</span>。</p>
+<figure class="sim" id="sim-damped-bloch">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>受驱原子的状态画成其布洛赫矢量，<span data-ref="lvl-2">$|2\rangle$</span>位于球面顶部，<span data-ref="lvl-1">$|1\rangle$</span>位于底部。<span data-concept="pure-and-mixed-states">纯态</span>位于球面上，此处$|\krhoonetwo|^2 = \krhooneone\krhotwotwo$；<span data-concept="pure-and-mixed-states">混合态</span>位于球内，此处$|\krhoonetwo|^2 &lt; \krhooneone\krhotwotwo$。矢量绕驱动$\kOmega$摆动，如同<span data-concept="rabi-oscillations">拉比振荡</span>，而<span data-concept="spontaneous-emission">自发发射</span>$\kgamma$和<span data-concept="dephasing-rate">退相位</span>$\kgammad$把它拉入球内，拉向它的<span data-concept="steady-state-coherence">定常态</span>。下方，$\krhotwotwo$随时间作阻尼振荡，并稳定于$\kRopt/(\kgamma + 2\kRopt)$；其旁边画出的是该定常值随<span data-concept="detuning">失谐</span>的变化。增大$|\kOmega|$，定常的$\krhotwotwo$向½攀升但永不越过它，谱线随其<span data-concept="saturation">饱和</span>而谱线增宽；增大$\kgammad$，振荡衰灭得更快。从叠加态出发，取$|\kOmega| = 0$，并把$\kgammad$增大到超过$\kgamma/2$，可以看到相干性比布居消退得更快。速率和频率以$\kgamma$为单位，时间以$1/\kgamma$为单位，且$\knbar = 0$。</span></div>
+</figure>
+<p id="adiabatic">注意，<span data-concept="weak-field-response">弱场极限</span>对于忽略<span data-concept="density-matrix-coherences">相干性</span>的演化（<em>即</em>，令$\dot{\krhotwoone} \approx 0$）是充分的但不是必要的；只需要$|\kOmega|^2 \ll \kgammatwoone^2 + \kdelta^2$。<a href="#drv-steady-state-population">式 (3.99)</a>给出的$\krhotwoone$的解类似于作一个<span data-concept="adiabatic-elimination">绝热近似</span>，即<span data-concept="density-matrix-coherences">相干性</span><span data-concept="adiabatic-elimination">绝热跟随</span>布居差。另一种说法是，在极限$|\kOmega|^2 \ll \kgammatwoone^2 + \kdelta^2$下，<span data-concept="density-matrix-populations">布居</span>变化的时标比相干性的固有衰变/振荡时间慢得多。所得的<span data-concept="density-matrix-populations">布居</span>方程，</p>
+<div class="equation" id="eq-3-104">$$\dot{\krhotwotwo} = -\kgamma\krhotwotwo + \kRopt(\krhooneone - \krhotwotwo) \ \text{ 且 } \ \dot{\krhooneone} = -\dot{\krhotwotwo}, \tag{3.104}$$</div>
+<p id="rate-equations">被称为“<span data-concept="rate-equations">速率方程</span>”。它们适用于存在相干性$\krhotwoone$、但其动力学并不重要的情形。例如，<span data-concept="rate-equations">速率方程</span>可用于描述与非相干辐射相互作用的原子，因为在这种情形下，由于<span data-concept="dephasing-rate">退相位</span>，$\kgammatwoone$非常大。</p>
+</section>

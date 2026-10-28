@@ -1,0 +1,59 @@
+<section id="opening">
+<p class="cite-target">我们已经看到，<span data-concept="linear-optical-transformations">线性变换</span>保持相干经典场的性质。现在我们将考虑几个相反的例子，其中非线性变换可以显著改变<span data-concept="single-mode-field">单模场</span>的性质。特别地，我们将考虑辐射场的单个模与<span data-concept="two-level-atom">单个二能级原子</span>之间的相互作用。尽管概念上很简单，<span data-concept="two-level-atom">二能级原子</span>提供了一种将说明非线性变换下量子场非平庸动力学的、本质上非谐的介质。</p>
+<p>实验上这样的系统很难实现。<span data-concept="single-mode-field">单模场</span>必须被隔离在高<span data-concept="cavity-finesse">精细度</span>腔（光学腔或微波腔）内，并且单个原子必须被约束在这个腔内。这一领域被称为“<span data-concept="cavity-qed" id="cavity-qed">腔量子电动力学</span>”，最近实验人员已经开始能够探测可以用单模和单原子很好描述的情形。</p>
+</section>
+
+<section id="jaynes-cummings">
+<h2>9.2.1 J-C 模型</h2>
+<p class="cite-target">起初，我们只考虑原子与腔模之间的相干相互作用。这一分析忽略了与辐射热库中不受约束的<span data-concept="cavity-modes">模</span>相关的耗散和<span data-concept="dephasing-rate">退相干</span>，也忽略了<span data-concept="single-mode-field">单模场</span>通过构成腔的反射镜的衰变。在这种情况下，原子和场的演化可以精确求解。</p>
+<p>如果原子与腔模共振，则<span data-concept="jaynes-cummings-model">哈密顿量</span>在<span data-concept="rotating-frame">转动参考系</span>中变为</p>
+<div class="equation" id="eq-9-53">$$\kH = -\hbar \kg\hat{a}|2\rangle\langle 1| - \hbar \kg^*\hat{a}^\dagger|1\rangle\langle 2|. \tag{9.53}$$</div>
+<p><span data-concept="jaynes-cummings-model">哈密顿量</span>中的第一项允许原子的激发和光子的吸收同时发生，而第二项描述原子弛豫到基态并发射一个光子。</p>
+<p>假设原子一开始处于激发态，初始场是<span data-concept="fock-states">福克态</span>的任意叠加，</p>
+<div class="equation" id="eq-9-54">$$|\kpsi_0\rangle = |2\rangle_a\otimes\sum_n \kcn(0)|n\rangle. \tag{9.54}$$</div>
+<p><span data-concept="jaynes-cummings-model">哈密顿量</span><span data-concept="jaynes-cummings-solution" id="jc-pairs">把态$|2\rangle_a|n\rangle$耦合到态$|1\rangle_a|n+1\rangle$并耦合回来</span>，所以经过一段时间$\kt$之后，系统将处于态</p>
+<div class="equation" id="eq-9-55">$$|\kpsi(\kt)\rangle = \sum_n \kcn^{(1)}(\kt)|1\rangle_a\otimes|n\rangle + \kcn^{(2)}(\kt)|2\rangle_a\otimes|n\rangle. \tag{9.55}$$</div>
+<p>由于我们只考虑相干演化，所以可以用<span data-concept="schrodinger-equation">薛定谔方程</span>求出含时<span data-concept="probability-amplitude">概率幅</span>的演化方程。</p>
+<figure class="dv" id="drv-jaynes-cummings-equations"></figure>
+<p>这些方程对每一对$\kcnpone^{(1)}, \kcn^{(2)}$独立成立，所以我们可以很容易地求出<span data-concept="probability-amplitude">概率幅</span>的通解。</p>
+<figure class="dv" id="drv-jaynes-cummings-solution"></figure>
+<p>注意，即使原子一开始处于某个叠加态，同样类型的运算也会再次给出通解。</p>
+</section>
+
+<section id="vacuum">
+<h2>9.2.2 初始真空场：真空拉比振荡</h2>
+<p class="cite-target">当辐射场最初处于真空态时，<span data-concept="jaynes-cummings-model">J-C 模型</span>背后的物理尤其清楚，</p>
+<div class="equation" id="eq-9-60">$$|\kpsi_0\rangle = |2\rangle_a\otimes|0\rangle. \tag{9.60}$$</div>
+<p>在这种情况下，系统只与另一个态$|1\rangle_a\otimes|1\rangle$耦合。我们可以把<span data-concept="jaynes-cummings-model">哈密顿量</span>投影到这两个态上，得到耦合强度为$\kg$的有效<span data-concept="two-level-atom">二能级系统</span>：</p>
+<div class="equation" id="eq-9-61">$$\kHeff = -\hbar \kg|2\rangle_a|0\rangle\langle 1|_a\langle 1| - \hbar \kg^*|1\rangle_a|1\rangle\langle 2|_a\langle 0|. \tag{9.61}$$</div>
+<p>这样的系统表现出<span data-concept="vacuum-rabi-oscillations" id="vacuum-rabi">以真空拉比频率$\kg$进行的振荡</span>，其态由波函数描述：</p>
+<div class="equation" id="eq-9-62">$$|\kpsi(\kt)\rangle = \cos \kg\kt|2\rangle_a|0\rangle + i\sin \kg\kt|1\rangle_a|1\rangle. \tag{9.62}$$</div>
+<p>与相干激光诱导的经典<span data-concept="rabi-oscillations">拉比振荡</span>不同，这些动力学涉及辐射场的<span data-concept="fock-states">福克态</span>。特别地，经过时间$\kt = \pi/2\kg$之后，系统处于光子数算符的本征态$\hat{a}^\dagger\hat{a}|\kpsi\rangle = i\hat{a}^\dagger\hat{a}|1\rangle_a|1\rangle = |\kpsi\rangle$。我们强调，恰好含有一个光子的<span data-concept="fock-states">福克态</span>与经典电流产生的<span data-concept="coherent-state">相干态</span>非常不同；例如，<span data-concept="fock-states">福克态</span>的经典相干性为零，$\langle\hat{a}\rangle = 0$。</p>
+<p>态的演化看起来可能类似于激发态原子的单个光子的<span data-concept="spontaneous-emission">自发发射</span>，但有一个重要的差别。<span data-concept="spontaneous-emission">自发发射</span>产生单个<span data-concept="emitted-photon-wavepacket">光子波包</span>，分布于无穷多个自由空间<span data-concept="cavity-modes">模</span>之上，而<span data-concept="vacuum-rabi-oscillations">真空拉比振荡</span>在一个定义明确的模中产生单个光子。因此发射过程是完全可逆的，光子可以被原子重新吸收。这样的重新吸收在<span data-concept="wigner-weisskopf">维格纳-韦斯科普夫理论</span>中是不可能的，但这一分析预言了它，因为我们忽略了非相干相互作用。我们隐含地假设<span data-concept="vacuum-rabi-oscillations">真空拉比频率</span>$\kg$远大于耗散率或<span data-concept="dephasing-rate">退相干</span>率。实现这种所谓的“<span data-concept="strong-coupling-regime" id="strong-coupling">强耦合情形</span>”对实验人员是一个相当大的挑战。</p>
+<h3 id="coherent-field">初始相干态场</h3>
+<p>如果辐射场一开始处于<span data-concept="coherent-state">相干态</span>，系统的行为就大不相同，</p>
+<div class="equation" id="eq-9-63">$$|\kpsi_0\rangle = |2\rangle_a\otimes|\kalphacoh\rangle. \tag{9.63}$$</div>
+<p>经典地说，我们预期会看到<span data-concept="rabi-oscillations">拉比振荡</span>，现在我们来考察这种振荡的量子极限。</p>
+<p>我们可以用一般形式表示<span data-concept="coherent-state">相干态</span>，并利用$\kcn^{(i)}(\kt)$的解写出$|\kpsi\rangle$的通解。</p>
+<figure class="dv" id="drv-coherent-field-state"></figure>
+<p id="naive">人们可能会认为，由$|\kpsi(\kt)\rangle$表示的原子动力学和场态应当由对$n$求和中权重最大的<span data-concept="fock-states">福克态</span>主导。<span data-concept="coherent-state">相干态</span>中的平均光子数由$\knbar = |\kalphacoh|^2$给出，当$\knbar$很大时，以$n = \knbar$为中心的<span data-concept="poisson-photon-statistics">泊松分布</span>具有很窄的宽度$\Delta n/\knbar = 1/\sqrt{\knbar}$。我们在<a href="#drv-coherent-field-state">式 (11.6)</a><sup class="fn" data-note="c-eq-11-6-cited"></sup>中能做的最低阶近似是简单地代入$\sqrt{n+1} \approx \sqrt{\knbar}$，这应当在上面的求和中、在范围$n\in[\knbar - \Delta n, \knbar + \Delta n]$内大致给出正确的结果。</p>
+<p>我们发现，<span data-concept="coherent-state-rabi-oscillations" id="classical-rabi">当原子在基态和激发态之间循环时，场仍保持在相干态</span>。</p>
+<figure class="dv" id="drv-naive-rabi-oscillation"></figure>
+<p>因此这一朴素的分析只给出了经典的<span data-concept="rabi-oscillations">拉比振荡</span>，所以要找到量子修正，需要更仔细的处理。</p>
+<h3 id="quantum-limit">拉比振荡的量子极限</h3>
+<p>假设我们关心原子处于其激发态的概率，这需要对场的所有<span data-concept="fock-states">福克态</span>求和。如果我们仍然假设$\knbar$很大，就可以按小量$\delta n/\knbar$展开。</p>
+<figure class="dv" id="drv-rabi-phase-expansion"></figure>
+<p>到$\delta n/n$的一阶，相位线性地依赖于$n$。这一观察使我们能够抓住光子数涨落的主要效应，因为它表明在长时间下，即使很小的$\delta n$也会对相位有不可忽略的贡献。定性地说，这些修正在求和中引入了依赖于$\delta n$精确值的相位，从而使波包退相位。</p>
+<p>当相位修正$\kg\kt\delta n/\sqrt{\knbar}$接近于一时，<span data-concept="rabi-collapse" id="collapse">光子数涨落首先变得显著</span>：</p>
+<div class="equation" id="eq-9-70">$$\ktaucollapse \sim \frac{\sqrt{\knbar}}{\delta n\, \kg} \sim \frac{1}{\kg}. \tag{9.70}$$</div>
+<p>不同的<span data-concept="fock-states">福克态</span>彼此相位错开，所以<span data-concept="rabi-collapse">拉比振荡衰减消失</span>。然而，如果我们演化更长的时间，<span data-concept="rabi-revival" id="revival">拉比振荡又会恢复</span>。<span data-concept="rabi-revival">恢复时间</span>，</p>
+<div class="equation" id="eq-9-71">$$\ktaurevival \sim 2\pi\frac{\sqrt{\knbar}}{\kg} \sim 2\frac{\pi|\kalphacoh|}{\kg}, \tag{9.71}$$</div>
+<p>对应于主导的<span data-concept="fock-states">福克态</span>的相位修正$\kg\kt\sqrt{\knbar}\frac{\delta n}{2\knbar}$等于$\pi$的倍数所需的时间（可以看出，只需$\pi$的倍数而不必$2\pi$，因为正弦项和余弦项至多只会引起一个整体相移）。<span data-concept="rabi-revival">坍缩与恢复</span>代表了许多与其<span data-concept="open-system">环境</span>隔离的量子非线性系统的一个普遍特征。在这种情况下，<span data-concept="rabi-revival">恢复</span>是不完全的，但存在其他非线性系统，表现出振荡的<span data-concept="rabi-revival">完全恢复</span>。</p>
+<figure class="sim" id="sim-collapse-revival" data-figure="9.3" data-original="/media/ch09/fig-9-3.png" data-original-caption="初始处于相干态且 α = 4 的腔场的拉比振荡的坍缩与恢复。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.3</span><span>原子开始时处于激发态，腔场处于<span data-concept="coherent-state">相干态</span>，平均光子数为$\knbar = |\kalphacoh|^2$。曲线图是原子处于激发态的概率$\kptwo$，对<a href="#drv-coherent-field-state">(9.65)</a>的每个<span data-concept="fock-states">福克态</span>求和。度盘上每个福克分量$|n\rangle$是一根以$2\kg\sqrt{n+1}$转动的指针，从以$2\kg\sqrt{\knbar+1}$转动的参考系中看，权重越大颜色越深；箭头是各指针的加权和，其长度是$\kptwo$的摆幅。在$\hat{x}$，$\hat{p}$平面上，阴影是场与每个相干态$|\beta\rangle$的重叠$\langle\beta|\krhohat|\beta\rangle/\pi$，虚线圆盘是<a href="#drv-field-splitting">(9.78)</a>的两个分量<span data-ref="comp-plus">$|\kalphacoh e^{i\kg\kt/2\sqrt{\knbar}}\rangle$</span>和<span data-ref="comp-minus">$|\kalphacoh e^{-i\kg\kt/2\sqrt{\knbar}}\rangle$</span>。观察指针随着振荡<span data-concept="rabi-collapse">坍缩</span>、场分裂而散开，并在两个分量于原点后方相遇的<span data-concept="rabi-revival">恢复</span>时重新排成一线。将$\knbar$设为零可得<span data-concept="vacuum-rabi-oscillations">真空拉比振荡</span>，它从不坍缩。</span></div>
+</figure>
+<p><span data-concept="rabi-revival">坍缩与恢复</span>的起因在于场的演化。如果让单模相干场与非线性介质（如<span data-concept="two-level-atom">二能级原子</span>）相互作用，在长时间下它将不再保持在<span data-concept="coherent-state">相干态</span>。用我们对$\kphi_n$的近似值求出较晚时刻$\kt &gt; 0$的态，这种情况也许最为明显。</p>
+<figure class="dv" id="drv-field-splitting"></figure>
+<p>原子和场一般不再可因子分解，场态与<span data-concept="coherent-state">相干态</span>非常不同。</p>
+<p id="cat-coherence">在时刻$\kg\kt = \pi\sqrt{\knbar}\sim \kg\ktaurevival/2$，假设我们测量原子的内态，这又把场的分量投影到态$|\alpha_+\rangle$或$|\alpha_-\rangle$之一，其中$|\alpha_\pm\rangle \sim$ <span data-ref="comp-plus">$|\kalphacoh e^{i\pi/2}\rangle$</span>$\,\pm e^{-i\pi\knbar}$<span data-ref="comp-minus">$|\kalphacoh e^{-i\pi/2}\rangle$</span>。注意，这个态的经典相干性$\langle\hat{a}\rangle \sim e^{-|\kalphacoh|^2}$<sup class="fn" data-note="c-coherence"></sup>对于大的$\kalphacoh$是指数级小的，但它具有更高阶的量子相干性。这种叠加态常被称为“<span data-concept="schrodinger-cat-state" id="cat">薛定谔猫</span>”：就像那只臭名昭著的猫，<span data-ref="comp-plus comp-minus">这两个叠加的态$|\pm i\kalphacoh\rangle$</span>在宏观上是可区分的。因此这种态很难在实验上制备，因为它容易被<span data-concept="dephasing-rate">退相干</span>和耗散破坏。尽管如此，这类技术已经被演示过（参见，<em>例如</em>，Phys. Rev. Lett. <strong>94</strong>, 010401 (2005)）。</p>
+</section>

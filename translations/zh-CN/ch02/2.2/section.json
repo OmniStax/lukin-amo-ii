@@ -1,0 +1,481 @@
+{
+ "id": "2.2",
+ "chapter": "2",
+ "title": "束缚态到连续谱的跃迁",
+ "short": "束缚态到连续谱",
+ "lead": "一个束缚态通过外加场与非束缚态的<span data-concept=\"bound-continuum-transition\">连续谱</span>耦合，如光致电离：概率幅的运动方程，把它们化为束缚态的一个方程的近似，这个方程关于束缚态的<span data-concept=\"born-rule\">布居</span>和能量说了什么，以及<span data-concept=\"bound-continuum-transition\">连续谱</span>最终所处的态。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-continuum-decay",
+   "kind": "sim",
+   "draws": [
+    "time",
+    "population",
+    "frequency",
+    "rate"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "bound-continuum",
+   "concept": "bound-continuum-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "memory",
+   "concept": "memoryless-continuum",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-2-49",
+   "concept": "principal-value-identity",
+   "verb": "introduces"
+  },
+  {
+   "span": "decay",
+   "concept": "continuum-decay-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "golden-rule",
+   "concept": "fermi-golden-rule",
+   "verb": "introduces"
+  },
+  {
+   "span": "stark",
+   "concept": "continuum-stark-shift",
+   "verb": "introduces"
+  },
+  {
+   "span": "wavepacket",
+   "concept": "outgoing-wavepacket",
+   "verb": "introduces"
+  },
+  {
+   "span": "model",
+   "concept": "rotating-wave-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "model",
+   "concept": "rotating-frame",
+   "verb": "uses"
+  },
+  {
+   "span": "model",
+   "concept": "rabi-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "model",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-2-43",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-2-43",
+   "concept": "schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-2-43",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-2-43",
+   "concept": "state-vector",
+   "verb": "uses"
+  },
+  {
+   "span": "stark",
+   "concept": "ac-stark-shift",
+   "verb": "uses"
+  },
+  {
+   "span": "wavepacket",
+   "concept": "rabi-oscillations",
+   "verb": "uses"
+  },
+  {
+   "span": "wavepacket",
+   "concept": "superposition",
+   "verb": "uses"
+  },
+  {
+   "span": "decay-law",
+   "concept": "born-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-continuum-decay",
+   "concept": "detuning",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [
+  {
+   "id": "bound-1",
+   "label": "束缚态 |1⟩",
+   "figures": [
+    "sim-continuum-decay"
+   ]
+  },
+  {
+   "id": "continuum-k",
+   "label": "连续谱态 |k⟩",
+   "figures": [
+    "sim-continuum-decay"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "footnote-2",
+   "kind": "book",
+   "number": "2",
+   "html": "例如，$\\mathcal{P}\\int_{-|a|}^{|b|}\\frac{1}{x}dx = \\mathop{\\mathrm{lim}}\\limits_{\\epsilon\\to 0}\\left(\\int_{-|a|}^{-\\epsilon}\\frac{1}{x}dx + \\int_{\\epsilon}^{|b|}\\frac{1}{x}dx\\right)$"
+  },
+  {
+   "id": "c-unbound",
+   "kind": "correction",
+   "html": "书中印的是“每个束缚态$|k\\rangle$”。态$|k\\rangle$是连续谱的非束缚态，每一个都与单个束缚态$|1\\rangle$耦合。"
+  },
+  {
+   "id": "c-decay-law",
+   "kind": "correction",
+   "html": "书中印的是 $\\kcone(\\kt) = \\kcone(0)e^{-\\kgamma \\kt/2 + i\\kDeltaStark \\kt}$，其中移位的符号取自式 (2.50)。恒等式 (2.49) 给出 $\\dot{\\kcone} = -\\kcone(\\kgamma/2 + i\\kDeltaStark)$，所以 $\\kcone(\\kt) = \\kcone(0)e^{-\\kgamma \\kt/2 - i\\kDeltaStark \\kt}$，这是式 (2.22) 中光致频移的符号。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "continuum-decay",
+   "what": "与连续谱耦合的态的衰变和能量移位",
+   "source": "现代原子与光学物理 II，2.2 束缚态到连续谱的跃迁",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = \\sum_k \\hbar\\left(\\komegak - \\knu\\right)|k\\rangle\\langle k| - \\hbar\\sum_k \\left(\\kOmegak|k\\rangle\\langle 1| + \\kOmegak^*|1\\rangle\\langle k|\\right)",
+       "src": "(2.42)"
+      },
+      {
+       "tex": "|\\kpsi\\rangle = \\kcone|1\\rangle + \\sum_k \\kck|k\\rangle",
+       "src": "(2.43)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\kH|\\kpsi\\rangle}",
+      "src": "(1.11)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcone}} = \\mk{R}{\\langle 1|\\kH|\\kpsi\\rangle}",
+       "uses": [
+        1
+       ],
+       "cap": "取与$\\langle 1|$的内积；这些态是规范正交的，所以$\\langle 1|\\psi\\rangle = c_1$。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcone}} = \\mk{R}{-\\hbar\\sum_k \\kOmegak^* \\kck}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "$\\hat{H}$中只有$|1\\rangle\\langle k|$项能到达$\\langle 1|$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{i\\sum_k \\kOmegak^* \\kck}",
+       "uses": [],
+       "cap": "除以$i\\hbar$，其中$1/i = -i$。"
+      }
+     ],
+     "num": "(2.44)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = \\sum_k \\hbar\\left(\\komegak - \\knu\\right)|k\\rangle\\langle k| - \\hbar\\sum_k \\left(\\kOmegak|k\\rangle\\langle 1| + \\kOmegak^*|1\\rangle\\langle k|\\right)",
+       "src": "(2.42)"
+      },
+      {
+       "tex": "|\\kpsi\\rangle = \\kcone|1\\rangle + \\sum_k \\kck|k\\rangle",
+       "src": "(2.43)"
+      },
+      {
+       "tex": "\\kdeltak = \\knu - \\komegak",
+       "src": "2.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\kH|\\kpsi\\rangle}",
+      "src": "(1.11)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kck}} = \\mk{R}{\\langle k|\\kH|\\kpsi\\rangle}",
+       "uses": [
+        1
+       ],
+       "cap": "取与$\\langle k|$的内积。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kck}} = \\mk{w}{\\hbar(\\komegak - \\knu)\\kck} - \\mk{R}{\\hbar\\kOmegak\\kcone}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "$\\hat{H}$中只有$\\hbar(\\omega_k - \\nu)|k\\rangle\\langle k|$和含$|k\\rangle\\langle 1|$的项能到达$\\langle k|$。",
+       "map": {
+        "R": [
+         "w",
+         "R"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kck}} = \\mk{w}{-i(\\komegak - \\knu)\\kck} + \\mk{R}{i\\kOmegak \\kcone}",
+       "uses": [],
+       "cap": "除以$i\\hbar$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kck}} = \\mk{w}{i\\kdeltak \\kck} + \\mk{R}{i\\kOmegak \\kcone}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(2.45)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "原子从基态出发：$\\kcone = 1$且$\\kck = 0$。",
+       "src": "2.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kck}} = \\mk{w}{i\\kdeltak \\kck} + \\mk{R}{i\\kOmegak \\kcone}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kck(\\kt)} = \\mk{R}{i\\kOmegak\\int_0^{\\kt} \\kcone(\\kt')e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'}",
+       "uses": [
+        1
+       ],
+       "cap": "形式积分：$\\dot{x} = i\\delta_k x + f(t)$在$x(0) = 0$时的解为$\\int_0^t f(t')e^{i\\delta_k(t - t')}dt'$，对它求导即可看出。",
+       "map": {
+        "w": "R"
+       }
+      }
+     ],
+     "num": "(2.46)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{i\\sum_k \\kOmegak^* \\kck}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}(\\kt)} = \\mk{R}{i\\sum_k \\kOmegak^*\\, i\\kOmegak\\int_0^{\\kt} \\kcone(\\kt')e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}(\\kt)} = \\mk{R}{-\\sum_k |\\kOmegak|^2\\int_0^{\\kt} \\kcone(\\kt')e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'}",
+       "uses": []
+      }
+     ],
+     "num": "(2.47)"
+    },
+    {
+     "assumes": [
+      {
+       "text": "给$\\kdeltak$加上一个无穷小的虚部，$\\kdeltak \\to \\kdeltak + i\\epsilon$，其中$\\epsilon \\to 0$，使被积函数在早期时刻衰减消失。",
+       "src": "2.2"
+      },
+      {
+       "text": "取长时极限，所以分子中的项$e^{(i\\kdeltak - \\epsilon)\\kt}$消失。",
+       "src": "2.2"
+      },
+      {
+       "tex": "\\mathop{\\mathrm{lim}}\\limits_{\\epsilon\\to 0}\\frac{i}{\\kdeltak + i\\epsilon} = \\pi\\delta(\\kdeltak) + i\\mathcal{P}\\frac{1}{\\kdeltak}",
+       "src": "(2.49)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{I}{\\int_0^{\\kt} e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'} = \\mk{R}{\\mathop{\\mathrm{lim}}\\limits_{\\epsilon\\to 0}\\int_0^{\\kt} e^{-i(\\kdeltak + i\\epsilon)(\\kt'-\\kt)}d\\kt'}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{I}{\\int_0^{\\kt} e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'} = \\mk{R}{\\mathop{\\mathrm{lim}}\\limits_{\\epsilon\\to 0}\\frac{i(1 - e^{(i\\kdeltak - \\epsilon)\\kt})}{\\kdeltak + i\\epsilon}}",
+       "uses": [],
+       "cap": "$s = t' - t$从$-t$取到$0$，则$\\int_{-t}^0 e^{-i(\\delta_k + i\\epsilon)s}ds = \\frac{1 - e^{i(\\delta_k + i\\epsilon)t}}{-i(\\delta_k + i\\epsilon)}$。"
+      },
+      {
+       "tex": "\\mk{I}{\\int_0^{\\kt} e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'} = \\mk{R}{\\mathop{\\mathrm{lim}}\\limits_{\\epsilon\\to 0}\\frac{i}{\\kdeltak + i\\epsilon}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{I}{\\int_0^{\\kt} e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'} = \\mk{R}{\\pi\\delta(\\kdeltak) + i\\mathcal{P}\\frac{1}{\\kdeltak}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "note": "书中把指数印成$-i(\\kdeltak - i\\epsilon)(\\kt'-\\kt)$，它的积分在长时间下增长；能给出其右边的指数是$-i(\\kdeltak + i\\epsilon)(\\kt'-\\kt)$。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "step": 4
+      },
+      {
+       "text": "由于要对失谐$\\kdeltak$求和，只有当$\\kt' = \\kt$时，该指数才会明显不为零；取到最低阶，$\\kcone$变化缓慢，$\\kcone(\\kt') = \\kcone(\\kt)$。",
+       "src": "2.2"
+      },
+      {
+       "tex": "\\kdeltak = \\knu - \\komegak",
+       "src": "2.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcone}(\\kt)} = \\mk{R}{-\\sum_k |\\kOmegak|^2\\int_0^{\\kt} \\kcone(\\kt')e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}(\\kt)} = \\mk{R}{-\\kcone(\\kt)\\sum_k |\\kOmegak|^2\\int_0^{\\kt} e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{-\\kcone\\sum_k |\\kOmegak|^2\\left(\\pi\\delta(\\kdeltak) + i\\mathcal{P}\\frac{1}{\\kdeltak}\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{-\\kcone(\\underbrace{\\pi\\sum_k |\\kOmegak|^2\\delta(\\knu - \\komegak)}_{\\kgamma/2} + i\\underbrace{\\sum_k |\\kOmegak|^2\\mathcal{P}\\frac{1}{\\knu - \\komegak}}_{\\kDeltaStark})}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(2.50)",
+     "note": "书中在$\\kDeltaStark$前印的是$-i$，由此得到$\\kcone(\\kt) = \\kcone(0)e^{-\\kgamma \\kt/2 + i\\kDeltaStark \\kt}$。恒等式 (2.49) 给出$+i$，所以$\\kcone(\\kt) = \\kcone(0)e^{-\\kgamma\\kt/2 - i\\kDeltaStark\\kt}$，这是式 (2.22) 中单个能级的光致频移的符号。"
+    }
+   ]
+  },
+  {
+   "id": "continuum-amplitudes",
+   "what": "连续谱态的概率幅",
+   "source": "现代原子与光学物理 II，2.2 束缚态到连续谱的跃迁",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "忽略能量移位或把它并入重正化的原子频率之后，基态的概率幅按$\\kcone(\\kt) = \\kcone(0)e^{-\\kgamma \\kt/2}$演化，其中$\\kcone(0) = 1$。",
+       "src": "2.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kck(\\kt)} = \\mk{R}{i\\kOmegak\\int_0^{\\kt} \\kcone(\\kt')e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'}",
+      "src": "(2.46)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kck(\\kt)} = \\mk{R}{i\\kOmegak\\int_0^{\\kt} e^{-\\kgamma \\kt'/2}e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt'}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\kck(\\kt)} = \\mk{R}{i\\kOmegak e^{i\\kdeltak\\kt}\\int_0^{\\kt} e^{-(\\kgamma/2 + i\\kdeltak)\\kt'}d\\kt'}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\kck(\\kt)} = \\mk{R}{i\\frac{\\kOmegak}{\\kgamma/2 + i\\kdeltak}(1 - e^{-(\\kgamma/2 + i\\kdeltak)\\kt})e^{i\\kdeltak \\kt}}",
+       "uses": [],
+       "cap": "$\\int_0^t e^{-at'}dt' = (1 - e^{-at})/a$，其中$a = \\gamma/2 + i\\delta_k$。"
+      }
+     ],
+     "num": "(2.54)"
+    }
+   ]
+  }
+ ]
+}

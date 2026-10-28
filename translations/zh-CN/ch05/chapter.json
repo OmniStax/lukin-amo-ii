@@ -1,0 +1,652 @@
+{
+ "id": "5",
+ "dir": "ch05",
+ "title": "多能级系统中的相干相互作用",
+ "intro": {},
+ "sections": [
+  {
+   "id": "5.1",
+   "title": "Λ 型能级构型中的拉曼跃迁"
+  },
+  {
+   "id": "5.2",
+   "title": "共振激发：电磁感生透明"
+  },
+  {
+   "id": "5.3",
+   "title": "参量过程"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "Delta_1",
+   "concept": "lambda-detunings",
+   "ref": "field-1",
+   "meaning": "探测场相对于跃迁 |1⟩ → |3⟩ 的单光子失谐 Δ₁ = ν₁ − ω₁₃",
+   "unit": "rad/s",
+   "anchor": "5.1-detunings",
+   "section": "5.1"
+  },
+  {
+   "sym": "Delta_2",
+   "concept": "lambda-detunings",
+   "ref": "field-2",
+   "meaning": "耦合场相对于跃迁 |2⟩ → |3⟩ 的单光子失谐 Δ₂ = ν₂ − ω₂₃",
+   "unit": "rad/s",
+   "anchor": "5.1-detunings",
+   "section": "5.1"
+  },
+  {
+   "sym": "delta",
+   "concept": "lambda-detunings",
+   "meaning": "Λ 型系统的双光子失谐 δ = Δ₁ − Δ₂",
+   "unit": "rad/s",
+   "anchor": "5.1-detunings",
+   "redefines": true,
+   "section": "5.1"
+  },
+  {
+   "sym": "Delta",
+   "concept": "lambda-detunings",
+   "meaning": "Λ 型系统的公共单光子失谐，两个场都远失谐时 Δ₁ ∼ Δ₂ = Δ",
+   "unit": "rad/s",
+   "anchor": "5.1-drv-raman-coupling",
+   "redefines": true,
+   "section": "5.1"
+  },
+  {
+   "sym": "Omega_1",
+   "concept": "rabi-frequency",
+   "ref": "field-1",
+   "meaning": "探测场在跃迁 |1⟩ → |3⟩ 上的拉比频率",
+   "unit": "rad/s",
+   "anchor": "5.1-eq-5-1",
+   "section": "5.1"
+  },
+  {
+   "sym": "Omega_2",
+   "concept": "rabi-frequency",
+   "ref": "field-2",
+   "meaning": "耦合场在跃迁 |2⟩ → |3⟩ 上的拉比频率",
+   "unit": "rad/s",
+   "anchor": "5.1-eq-5-1",
+   "section": "5.1"
+  },
+  {
+   "sym": "Omega_eff",
+   "concept": "effective-raman-coupling",
+   "meaning": "通过远失谐的 |3⟩ 耦合 |1⟩ 和 |2⟩ 的有效拉比频率",
+   "unit": "rad/s",
+   "anchor": "5.1-drv-raman-coupling",
+   "section": "5.1"
+  },
+  {
+   "sym": "c_1",
+   "concept": "probability-amplitude",
+   "ref": "lvl-1",
+   "meaning": "基态 |1⟩ 的概率幅",
+   "anchor": "5.1-eq-5-2",
+   "section": "5.1"
+  },
+  {
+   "sym": "c_2",
+   "concept": "probability-amplitude",
+   "ref": "lvl-2",
+   "meaning": "Λ 型系统的亚稳下态 |2⟩ 的概率幅",
+   "anchor": "5.1-eq-5-2",
+   "redefines": true,
+   "section": "5.1"
+  },
+  {
+   "sym": "c_3",
+   "concept": "lambda-equations-of-motion",
+   "ref": "lvl-3",
+   "meaning": "Λ 型系统的激发态 |3⟩ 的概率幅",
+   "anchor": "5.1-eq-5-2",
+   "section": "5.1"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "anchor": "5.1-eq-5-2",
+   "section": "5.1"
+  },
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "anchor": "5.1-eq-5-1",
+   "section": "5.1"
+  },
+  {
+   "sym": "H_eff",
+   "concept": "effective-hamiltonian",
+   "meaning": "有效哈密顿量：带有非厄米部分 −iℏΣ_k γ_k ĉ_k†ĉ_k/2 的系统哈密顿量",
+   "anchor": "5.1-eq-5-21",
+   "section": "5.1"
+  },
+  {
+   "sym": "t",
+   "meaning": "时间",
+   "type": "time",
+   "unit": "s",
+   "section": "5.1"
+  },
+  {
+   "sym": "nu",
+   "concept": "optical-frequency",
+   "meaning": "外加场的频率",
+   "unit": "rad/s",
+   "anchor": "5.1-raman",
+   "section": "5.1"
+  },
+  {
+   "sym": "k",
+   "meaning": "外加场的波矢量",
+   "type": "wavevector",
+   "unit": "m⁻¹",
+   "anchor": "5.1-eq-5-43",
+   "section": "5.1"
+  },
+  {
+   "sym": "lambda",
+   "meaning": "跃迁的波长，λ = 2π/k₀",
+   "type": "length",
+   "unit": "m",
+   "anchor": "5.1-eq-5-36",
+   "section": "5.1"
+  },
+  {
+   "sym": "mu",
+   "meaning": "探测跃迁 |1⟩ → |3⟩ 的偶极矩阵元",
+   "type": "dipole",
+   "unit": "C·m",
+   "anchor": "5.1-eq-5-31",
+   "redefines": true,
+   "section": "5.1"
+  },
+  {
+   "sym": "gamma",
+   "meaning": "从 |3⟩ 到 |1⟩ 的衰变率，是总衰变率 γ₃ 的一部分",
+   "type": "rate",
+   "unit": "s⁻¹",
+   "redefines": true,
+   "section": "5.1"
+  },
+  {
+   "sym": "gamma_3",
+   "concept": "lambda-non-hermitian-evolution",
+   "ref": "lvl-3",
+   "meaning": "离开 |3⟩ 的总衰变率",
+   "unit": "s⁻¹",
+   "anchor": "5.1-eq-5-21",
+   "section": "5.1"
+  },
+  {
+   "sym": "gamma_12",
+   "concept": "coherence-decay-rate",
+   "meaning": "两个下态之间的相干性 ρ₁₂ 的衰变率",
+   "unit": "s⁻¹",
+   "anchor": "5.1-drv-lambda-density-matrix",
+   "redefines": true,
+   "section": "5.1"
+  },
+  {
+   "sym": "Gamma_12",
+   "concept": "complex-decay-rate",
+   "meaning": "相干性 ρ₂₁ 的复衰变参量 Γ₁₂ = γ₁₂ − iδ",
+   "unit": "s⁻¹",
+   "anchor": "5.1-eq-5-17",
+   "section": "5.1"
+  },
+  {
+   "sym": "Gamma_13",
+   "concept": "complex-decay-rate",
+   "meaning": "相干性 ρ₃₁ 的复衰变参量 Γ₁₃ = γ₁₃ − iΔ",
+   "unit": "s⁻¹",
+   "anchor": "5.1-eq-5-18",
+   "section": "5.1"
+  },
+  {
+   "sym": "rho_11",
+   "concept": "density-matrix-populations",
+   "ref": "lvl-1",
+   "meaning": "能级 |1⟩ 的布居",
+   "anchor": "5.1-drv-lambda-density-matrix",
+   "section": "5.1"
+  },
+  {
+   "sym": "rho_22",
+   "concept": "density-matrix-populations",
+   "ref": "lvl-2",
+   "meaning": "能级 |2⟩ 的布居",
+   "anchor": "5.1-drv-lambda-density-matrix",
+   "section": "5.1"
+  },
+  {
+   "sym": "rho_12",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |1⟩ 与 |2⟩ 之间的相干性",
+   "anchor": "5.1-drv-lambda-density-matrix",
+   "section": "5.1"
+  },
+  {
+   "sym": "rho_21",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |2⟩ 与 |1⟩ 之间的相干性，是 ρ₁₂ 的复共轭",
+   "anchor": "5.1-raman",
+   "section": "5.1"
+  },
+  {
+   "sym": "P_jump",
+   "concept": "jump-probability",
+   "meaning": "演化过程中发生量子跳跃的概率",
+   "anchor": "5.1-eq-5-22",
+   "section": "5.1"
+  },
+  {
+   "sym": "omega",
+   "meaning": "变换后的运动方程中与时间共轭的傅里叶频率",
+   "type": "frequency",
+   "unit": "rad/s",
+   "anchor": "5.1-eq-5-26",
+   "redefines": true,
+   "section": "5.1"
+  },
+  {
+   "sym": "chi_1",
+   "concept": "probe-susceptibility",
+   "ref": "field-1",
+   "meaning": "探测跃迁上的线性电极化率",
+   "anchor": "5.1-eq-5-31",
+   "section": "5.1"
+  },
+  {
+   "sym": "gamma_eff",
+   "concept": "two-photon-resonance",
+   "meaning": "双光子共振的有效宽度",
+   "unit": "s⁻¹",
+   "anchor": "5.1-drv-raman-resonance",
+   "section": "5.1"
+  },
+  {
+   "sym": "delta_prime",
+   "concept": "two-photon-detuning-shifted",
+   "meaning": "有效双光子失谐 δ′ = δ − |Ω₂|²/Δ",
+   "unit": "rad/s",
+   "anchor": "5.1-drv-raman-resonance",
+   "section": "5.1"
+  },
+  {
+   "sym": "Delta_1",
+   "section": "5.2",
+   "concept": "lambda-detunings",
+   "ref": "field-1",
+   "unit": "rad/s",
+   "meaning": "探测场相对于跃迁 |1⟩ → |3⟩ 的单光子失谐 Δ₁ = ν₁ − ω₁₃"
+  },
+  {
+   "sym": "Delta_2",
+   "section": "5.2",
+   "concept": "lambda-detunings",
+   "ref": "field-2",
+   "unit": "rad/s",
+   "meaning": "耦合场相对于跃迁 |2⟩ → |3⟩ 的单光子失谐 Δ₂ = ν₂ − ω₂₃"
+  },
+  {
+   "sym": "delta",
+   "section": "5.2",
+   "concept": "lambda-detunings",
+   "unit": "rad/s",
+   "meaning": "Λ 型系统的双光子失谐 δ = Δ₁ − Δ₂"
+  },
+  {
+   "sym": "Delta",
+   "section": "5.2",
+   "concept": "lambda-detunings",
+   "unit": "rad/s",
+   "meaning": "Λ 型系统的公共单光子失谐，两个场都远失谐时 Δ₁ ∼ Δ₂ = Δ"
+  },
+  {
+   "sym": "Omega_1",
+   "section": "5.2",
+   "concept": "rabi-frequency",
+   "ref": "field-1",
+   "unit": "rad/s",
+   "meaning": "探测场在跃迁 |1⟩ → |3⟩ 上的拉比频率"
+  },
+  {
+   "sym": "Omega_2",
+   "section": "5.2",
+   "concept": "rabi-frequency",
+   "ref": "field-2",
+   "unit": "rad/s",
+   "meaning": "耦合场在跃迁 |2⟩ → |3⟩ 上的拉比频率"
+  },
+  {
+   "sym": "gamma_3",
+   "section": "5.2",
+   "concept": "lambda-non-hermitian-evolution",
+   "ref": "lvl-3",
+   "unit": "s⁻¹",
+   "meaning": "离开 |3⟩ 的总衰变率"
+  },
+  {
+   "sym": "gamma_12",
+   "section": "5.2",
+   "concept": "coherence-decay-rate",
+   "unit": "s⁻¹",
+   "meaning": "两个下态之间的相干性 ρ₁₂ 的衰变率"
+  },
+  {
+   "sym": "Gamma_12",
+   "section": "5.2",
+   "concept": "complex-decay-rate",
+   "unit": "s⁻¹",
+   "meaning": "相干性 ρ₂₁ 的复衰变参量 Γ₁₂ = γ₁₂ − iδ"
+  },
+  {
+   "sym": "Gamma_13",
+   "section": "5.2",
+   "concept": "complex-decay-rate",
+   "unit": "s⁻¹",
+   "meaning": "相干性 ρ₃₁ 的复衰变参量 Γ₁₃ = γ₁₃ − iΔ"
+  },
+  {
+   "sym": "H_eff",
+   "section": "5.2",
+   "concept": "effective-hamiltonian",
+   "meaning": "有效哈密顿量：带有非厄米部分 −iℏΣ_k γ_k ĉ_k†ĉ_k/2 的系统哈密顿量"
+  },
+  {
+   "sym": "rho_21",
+   "section": "5.2",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |2⟩ 与 |1⟩ 之间的相干性，是 ρ₁₂ 的复共轭"
+  },
+  {
+   "sym": "chi",
+   "section": "5.2",
+   "concept": "susceptibility",
+   "meaning": "介质对探测场的电极化率"
+  },
+  {
+   "sym": "n_ref",
+   "section": "5.2",
+   "concept": "refractive-index",
+   "meaning": "探测光的折射率 n(ω) = 1 + Re[χ]/2"
+  },
+  {
+   "sym": "v_g",
+   "section": "5.2",
+   "concept": "group-velocity",
+   "unit": "m/s",
+   "meaning": "探测脉冲的群速度"
+  },
+  {
+   "sym": "nu_bar",
+   "section": "5.2",
+   "type": "frequency",
+   "unit": "rad/s",
+   "meaning": "近单色场的中心频率，即它的载频"
+  },
+  {
+   "sym": "V",
+   "section": "5.2",
+   "type": "volume",
+   "unit": "m³",
+   "meaning": "容纳 N 个原子的体积"
+  },
+  {
+   "sym": "lambda",
+   "section": "5.2",
+   "type": "length",
+   "unit": "m",
+   "meaning": "跃迁的波长，λ = 2π/k₀"
+  },
+  {
+   "sym": "omega",
+   "section": "5.2",
+   "type": "frequency",
+   "unit": "rad/s",
+   "meaning": "探测光的角频率，见于其色散关系 ω(k)",
+   "redefines": true
+  },
+  {
+   "sym": "chi_2nd",
+   "concept": "second-order-susceptibility",
+   "meaning": "二阶非线性电极化率 χ⁽²⁾，即和频极化强度与 ε₀ℰ₁ℰ₂ 之比",
+   "anchor": "5.3-eq-5-61",
+   "section": "5.3"
+  },
+  {
+   "sym": "delta_eff",
+   "concept": "cascade-nonlinear-susceptibility",
+   "meaning": "级联系统的有效双光子失谐，经外加场的斯塔克偏移重正化",
+   "unit": "rad/s",
+   "anchor": "5.3-eq-5-63",
+   "section": "5.3"
+  },
+  {
+   "sym": "Delta_k",
+   "concept": "wavevector-mismatch",
+   "meaning": "三个场的波矢量失配 Δk = k₁ + k₂ − k₃",
+   "unit": "m⁻¹",
+   "anchor": "5.3-drv-sfg-propagation",
+   "section": "5.3"
+  },
+  {
+   "sym": "E_env_1",
+   "concept": "slowly-varying-envelope",
+   "ref": "field-1",
+   "meaning": "频率为 ν₁ 的外加场的缓变振幅 ℰ₁",
+   "unit": "V/m",
+   "anchor": "5.3-cascade-intro",
+   "section": "5.3"
+  },
+  {
+   "sym": "E_env_2",
+   "concept": "slowly-varying-envelope",
+   "ref": "field-2",
+   "meaning": "频率为 ν₂ 的外加场的缓变振幅 ℰ₂",
+   "unit": "V/m",
+   "anchor": "5.3-cascade-intro",
+   "section": "5.3"
+  },
+  {
+   "sym": "E_env_3",
+   "concept": "sum-frequency-propagation",
+   "ref": "field-3",
+   "meaning": "和频 ν₃ = ν₁ + ν₂ 处产生场的缓变振幅 ℰ₃",
+   "unit": "V/m",
+   "anchor": "5.3-eq-5-66",
+   "section": "5.3"
+  },
+  {
+   "sym": "E_env",
+   "concept": "slowly-varying-envelope",
+   "meaning": "场 i 的缓变振幅 ℰ_i，以及吸收了线性相位的 Ẽ_i（式 5.72）；单独的 ℰ 是式 (5.66) 的总场和式 (5.80) 的公共振幅 ℰ₁ ∼ ℰ₂ ∼ ℰ",
+   "unit": "V/m",
+   "anchor": "5.3-eq-5-66",
+   "redefines": true,
+   "section": "5.3"
+  },
+  {
+   "sym": "z_prop",
+   "type": "length",
+   "meaning": "沿传播方向 ẑ 的距离",
+   "unit": "m",
+   "anchor": "5.3-eq-5-66",
+   "section": "5.3"
+  },
+  {
+   "sym": "L_med",
+   "type": "length",
+   "meaning": "非线性介质的长度，输出场在其末端读取",
+   "unit": "m",
+   "anchor": "5.3-drv-sum-frequency-output",
+   "section": "5.3"
+  },
+  {
+   "sym": "P_nl",
+   "concept": "macroscopic-polarization",
+   "meaning": "介质的非线性极化强度：和频处的 P_{ν₁+ν₂} 或 P₃，以及式 (5.82) 中由三个外加场产生的极化强度",
+   "unit": "C/m²",
+   "anchor": "5.3-eq-5-60",
+   "section": "5.3"
+  },
+  {
+   "sym": "chi",
+   "concept": "susceptibility",
+   "meaning": "介质在场 i 的频率 ν_i 处的线性电极化率 χ_i；χ₃⁽¹⁾ 是产生场的线性电极化率",
+   "anchor": "5.3-eq-5-67",
+   "redefines": true,
+   "section": "5.3"
+  },
+  {
+   "sym": "chi_3",
+   "concept": "third-order-susceptibility",
+   "meaning": "三阶电极化率 χ⁽³⁾，是对线性电极化率的下一阶修正",
+   "anchor": "5.3-eq-5-82",
+   "section": "5.3"
+  },
+  {
+   "sym": "nu",
+   "meaning": "场 i 的频率 ν_i，外加的（i = 1, 2）或产生的（ν₃ = ν₁ + ν₂）",
+   "unit": "rad/s",
+   "anchor": "5.3-cascade-intro",
+   "redefines": true,
+   "section": "5.3",
+   "concept": "optical-frequency"
+  },
+  {
+   "sym": "k_mag",
+   "meaning": "场 i 在介质内的波矢量 k_i",
+   "unit": "m⁻¹",
+   "type": "wavevector",
+   "anchor": "5.3-drv-sfg-propagation",
+   "redefines": true,
+   "section": "5.3"
+  },
+  {
+   "sym": "n_ref",
+   "concept": "refractive-index",
+   "meaning": "介质在场 i 的频率 ν_i 处的折射率 n_i",
+   "anchor": "5.3-drv-sfg-propagation",
+   "redefines": true,
+   "section": "5.3"
+  },
+  {
+   "sym": "mu",
+   "meaning": "级联系统能级 |i⟩ 与 |j⟩ 之间的偶极矩阵元 μ_ij；式 (5.64) 中的 μ* 是 μ₁₂*",
+   "unit": "C·m",
+   "concept": "dipole-matrix-element",
+   "anchor": "5.3-eq-5-60",
+   "redefines": true,
+   "section": "5.3"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "场 ℰ₁ 和 ℰ₂ 在其到居间态 |i⟩ 的跃迁上的拉比频率 Ω_1i 和 Ω_2i",
+   "unit": "rad/s",
+   "anchor": "5.3-eq-5-62",
+   "redefines": true,
+   "section": "5.3"
+  },
+  {
+   "sym": "Delta",
+   "type": "frequency",
+   "meaning": "外加场相对于级联系统居间态 |i⟩ 的失谐 Δ_i",
+   "unit": "rad/s",
+   "anchor": "5.3-eq-5-62",
+   "redefines": true,
+   "section": "5.3"
+  },
+  {
+   "sym": "Omega_eff",
+   "concept": "effective-raman-coupling",
+   "meaning": "通过远失谐的居间态 |i⟩ 耦合级联系统的 |1⟩ 和 |2⟩ 的有效双光子拉比频率",
+   "unit": "rad/s",
+   "anchor": "5.3-eq-5-62",
+   "redefines": true,
+   "section": "5.3"
+  },
+  {
+   "sym": "rho_12",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |1⟩ 与 |2⟩ 之间的相干性",
+   "anchor": "5.3-sfg",
+   "section": "5.3"
+  },
+  {
+   "sym": "rho_21",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |2⟩ 与 |1⟩ 之间的相干性，是 ρ₁₂ 的复共轭",
+   "anchor": "5.3-eq-5-63",
+   "section": "5.3"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "容纳 N 个原子的体积",
+   "unit": "m³",
+   "anchor": "5.3-drv-cascade-susceptibility",
+   "section": "5.3"
+  },
+  {
+   "sym": "t",
+   "meaning": "时间",
+   "anchor": "5.3-eq-5-66",
+   "section": "5.3",
+   "type": "time",
+   "unit": "s"
+  },
+  {
+   "sym": "rho_31",
+   "concept": "density-matrix-coherences",
+   "meaning": "激发态 |3⟩ 与基态 |1⟩ 之间的相干性，由探测光驱动",
+   "anchor": "5.1-drv-lambda-density-matrix",
+   "section": "5.1"
+  },
+  {
+   "sym": "gamma_13",
+   "concept": "coherence-decay-rate",
+   "meaning": "基态与激发态之间的相干性 ρ₁₃ 的衰变率",
+   "unit": "s⁻¹",
+   "anchor": "5.1-eq-5-18",
+   "section": "5.1"
+  },
+  {
+   "sym": "gamma_2",
+   "type": "rate",
+   "ref": "lvl-2",
+   "meaning": "态 |2⟩ 的布居衰变率",
+   "unit": "s⁻¹",
+   "anchor": "5.1-eq-5-21",
+   "section": "5.1"
+  },
+  {
+   "sym": "v",
+   "type": "velocity",
+   "meaning": "原子的速度",
+   "unit": "m/s",
+   "anchor": "5.1-eq-5-43",
+   "section": "5.1"
+  },
+  {
+   "sym": "rho_31",
+   "concept": "density-matrix-coherences",
+   "meaning": "激发态 |3⟩ 与基态 |1⟩ 之间的相干性，由探测光驱动",
+   "section": "5.2"
+  },
+  {
+   "sym": "gamma_13",
+   "concept": "coherence-decay-rate",
+   "meaning": "基态与激发态之间的相干性 ρ₁₃ 的衰变率",
+   "unit": "s⁻¹",
+   "section": "5.2"
+  }
+ ]
+}

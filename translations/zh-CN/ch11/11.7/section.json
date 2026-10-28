@@ -1,0 +1,342 @@
+{
+ "id": "11.7",
+ "chapter": "11",
+ "title": "原子物质波的高阶相干性",
+ "short": "高阶相干性",
+ "lead": "原子间相互作用能否制造出<span data-concept=\"nonclassical-matter-requirements\">物质的非经典态</span>：$N$个原子在<span data-concept=\"double-well-model\">双阱势</span>两侧之间隧穿的玩具模型，分别在无相互作用和强排斥的情形下；以及把原子约束在由这类阱组成的阵列中的<span data-concept=\"optical-lattice-potential\">光学格子势</span>。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "MIT 8.422 习题集 4 第 2 题分为五个小问，改用卢金的记号重述，并附有 AI 撰写的解答，因为该课程没有公布答案；其中的数值部分因没有答案而被暂扣：(b) 中 500 µK 的 ⁶Li 磁光阱的德布罗意波长及其尺寸的界，(c)(ii) 中探测器的计时分辨率，以及 (d) 中胞元增长的数量级和一个胞元的占有数。该题逐个探测原子，而本节处理的是双阱；它是该课程中唯一一道关于物质波高阶相干性的题。",
+ "figures": [
+  {
+   "id": "sim-double-well",
+   "kind": "sim",
+   "number": "11.13",
+   "originals": [
+    "/media/ch11/fig-11-13.png"
+   ],
+   "original_caption": "冷原子的双阱势。有限高的势垒把两个局域态隔开，因此原子可以以速率$t$在二者之间隧穿。这种隧穿产生两个离域态：基态是左态与右态的对称组合$|+\\rangle = (1/\\sqrt{2})\\left(|L\\rangle + |R\\rangle\\right)$，激发态$|-\\rangle = (1/\\sqrt{2})\\left(|L\\rangle - |R\\rangle\\right)$的能量高$2t$。",
+   "draws": [
+    "coupling",
+    "energy",
+    "population"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "double-well-span",
+   "concept": "double-well-model",
+   "verb": "introduces"
+  },
+  {
+   "span": "coherent-gs",
+   "concept": "double-well-coherent-ground-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "fock-gs",
+   "concept": "double-well-fock-ground-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "nonclassical",
+   "concept": "nonclassical-matter-requirements",
+   "verb": "introduces"
+  },
+  {
+   "span": "lattice-potential",
+   "concept": "optical-lattice-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "nonclassical-light",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "second-order-correlation",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "bose-condensation",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "condensate-interference-fringes",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "gross-pitaevskii-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "double-well",
+   "concept": "second-quantization",
+   "verb": "uses"
+  },
+  {
+   "span": "double-well",
+   "concept": "coherent-state",
+   "verb": "uses"
+  },
+  {
+   "span": "double-well",
+   "concept": "coherent-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "double-well",
+   "concept": "fock-states",
+   "verb": "uses"
+  },
+  {
+   "span": "double-well",
+   "concept": "dissipation-destroys-nonclassicality",
+   "verb": "uses"
+  },
+  {
+   "span": "double-well",
+   "concept": "optical-lattice",
+   "verb": "uses"
+  },
+  {
+   "span": "double-well",
+   "concept": "s-wave-scattering-length",
+   "verb": "uses"
+  },
+  {
+   "span": "double-well",
+   "concept": "feshbach-resonance",
+   "verb": "uses"
+  },
+  {
+   "span": "optical-lattice",
+   "concept": "dipole-force",
+   "verb": "uses"
+  },
+  {
+   "span": "optical-lattice",
+   "concept": "ac-stark-shift",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "hw4-2a",
+   "source_id": "hw4.2a",
+   "source_number": "Problem Set 4, Problem 2(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：题目的设定在该小问开头重复给出，其图（取自拜姆的 Lectures on Quantum Mechanics）改用文字描述。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "higher-order",
+   "prompt": "本题说明用原子进行汉伯里·布朗和特维斯（HBT）实验时对相干性和准直的要求（忽略重力）。若一个自由粒子在时刻$t = 0$从点$A$出发，概率幅（波函数）为$\\psi_A$，则它在另一点 1 和时刻$t = \\tau$的概率幅正比于$\\psi_A e^{i(\\mathbf{k}\\cdot\\mathbf{r}_{A1} - \\omega\\tau)}$，其中$\\mathbf{r}_{A1}$是从$A$到 1 的矢量，$\\mathbf{k}$是粒子的波矢量，$\\hbar\\omega$是它的总能量。粒子从横向尺度为$W$的源的点$A$和$B$出发，在相距$d$、横向尺度为$w$的探测器的点 1 和 2 被探测到。设在$A$有一个粒子，概率幅为$\\psi_A$，在$B$有一个粒子，概率幅为$\\psi_B$。在 1 处找到一个粒子且在 2 处找到一个粒子的联合概率$P$为$$P = \\left|\\psi_A e^{i\\phi_{A1}}\\psi_B e^{i\\phi_{B2}} \\pm \\psi_A e^{i\\phi_{A2}}\\psi_B e^{i\\phi_{B1}}\\right|^2$$并正比于二阶相干函数$g^{(2)}(1, 2)$。$\\pm$对应玻色子/费米子，使双粒子波函数在交换粒子时对称/反对称。这里，$\\phi_{A1} = \\mathbf{k}_A\\cdot\\mathbf{r}_{A1} - \\omega\\tau$是从点$A$到探测器 1 的路径的相位因子，其余类推。计算作为$\\mathbf{r}_{21}$的函数的$P$，$\\mathbf{r}_{21}$是探测器上从点 2 到点 1 的矢量。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "提出概率幅，$$P = |\\psi_A|^2|\\psi_B|^2\\left|e^{i(\\phi_{A1}+\\phi_{B2})} \\pm e^{i(\\phi_{A2}+\\phi_{B1})}\\right|^2 = 2|\\psi_A|^2|\\psi_B|^2\\left[1 \\pm \\cos(\\phi_{A1}+\\phi_{B2}-\\phi_{A2}-\\phi_{B1})\\right].$$能量在差中相消，因为每一项都带有两个粒子的$-\\omega\\tau$。由于$\\mathbf{r}_{A1} - \\mathbf{r}_{A2} = \\mathbf{r}_1 - \\mathbf{r}_2 = \\mathbf{r}_{21}$且$\\mathbf{r}_{B2} - \\mathbf{r}_{B1} = -\\mathbf{r}_{21}$，相位为$(\\mathbf{k}_A - \\mathbf{k}_B)\\cdot\\mathbf{r}_{21}$，所以$$P = 2|\\psi_A|^2|\\psi_B|^2\\left[1 \\pm \\cos\\left((\\mathbf{k}_A - \\mathbf{k}_B)\\cdot\\mathbf{r}_{21}\\right)\\right].$$可分辨粒子会给出常量$2|\\psi_A|^2|\\psi_B|^2$，所以$g^{(2)}(1,2) = 1 \\pm \\cos((\\mathbf{k}_A - \\mathbf{k}_B)\\cdot\\mathbf{r}_{21})$：在$\\mathbf{r}_{21} = 0$处，玻色子一同到达的概率是两倍（$g^{(2)} = 2$，群聚），费米子则从不一同到达（$g^{(2)} = 0$，反群聚），这是 9.3 节中光的群聚与反群聚在原子上的对应。"
+   }
+  },
+  {
+   "id": "hw4-2b",
+   "source_id": "hw4.2b",
+   "source_number": "Problem Set 4, Problem 2(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：题目的设定在该小问开头重复给出，其图（取自拜姆的 Lectures on Quantum Mechanics）改用文字描述；MIT 的$\\lambda_{dB}$是$\\mathbf{k}_0$处的德布罗意波长$h/p$，文中说明它不是式 (11.1) 的热$\\lambda_{dB}$；省略了对 500 µK 的${}^6$Li 磁光阱在$d = 10$ cm 时的数值估计。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "higher-order",
+   "prompt": "本题说明用原子进行汉伯里·布朗和特维斯（HBT）实验时对相干性和准直的要求（忽略重力）。若一个自由粒子在时刻$t = 0$从点$A$出发，概率幅（波函数）为$\\psi_A$，则它在另一点 1 和时刻$t = \\tau$的概率幅正比于$\\psi_A e^{i(\\mathbf{k}\\cdot\\mathbf{r}_{A1} - \\omega\\tau)}$，其中$\\mathbf{r}_{A1}$是从$A$到 1 的矢量，$\\mathbf{k}$是粒子的波矢量，$\\hbar\\omega$是它的总能量。粒子从横向尺度为$W$的源的点$A$和$B$出发，在相距$d$、横向尺度为$w$的探测器的点 1 和 2 被探测到。假设给定一个横向尺度为$W$的源（例如一团被陷俘的原子）和一个横向尺度为$w$的探测器，其中$|\\mathbf{r}_{21}| \\le w$。源与探测器之间的距离$d$远大于所有其他距离。其$P = 2|\\psi_A|^2|\\psi_B|^2[1 \\pm \\cos((\\mathbf{k}_A - \\mathbf{k}_B)\\cdot\\mathbf{r}_{21})]$的 (a) 问中，相位因子的横向分量可以写成：$\\phi_t = (\\mathbf{k}_A - \\mathbf{k}_B)_t\\cdot(\\mathbf{r}_{21})_t$。假设探测器处的信号主要来自波矢量分布在$\\mathbf{k}_0$附近的原子。论证观察到二阶关联效应所需的横向准直可以表示为$Ww \\ll d\\lambda_{dB}$，其中$\\lambda_{dB}$是对应于$\\mathbf{k}_0$的德布罗意波长，$2\\pi/|\\mathbf{k}_0| = h/p$，而不是式 (11.1) 的热德布罗意波长。（提示：对于从源中不同点出发、在探测器上不同点被探测到的原子，$\\phi_t$如何变化？）",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "波矢量大小为$k_0$的原子从源的横向位置$\\mathbf{x}_s$出发，到达探测器的$\\mathbf{x}_d$，几乎沿轴线行进，横向波矢量为$\\mathbf{k}_t \\approx k_0(\\mathbf{x}_d - \\mathbf{x}_s)/d$。对于一次符合事件中分别来自$A$和$B$的两个原子，当$A$和$B$遍历整个源时，差$(\\mathbf{k}_A - \\mathbf{k}_B)_t$的范围可达约$k_0W/d$，而$(\\mathbf{r}_{21})_t$的范围可达$w$，所以$$|\\phi_t| \\lesssim \\frac{k_0Ww}{d} = \\frac{2\\pi Ww}{d\\lambda_{dB}}.$$信号是对所有源点和探测器点求和。如果$\\phi_t$在它们之间的变化达到$2\\pi$或更多，(a) 问中的余弦就会被平均掉，$P$降到可分辨粒子的常量。只有对每一对都有$\\phi_t \\ll 2\\pi$，关联才会保留下来，即$$Ww \\ll d\\lambda_{dB}:$$从探测器看去，源必须小于一个横向相干长度$d\\lambda_{dB}/w$。"
+   }
+  },
+  {
+   "id": "hw4-2c-i",
+   "source_id": "hw4.2ci",
+   "source_number": "Problem Set 4, Problem 2(c)(i)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：题目的设定在该小问开头重复给出，其图（取自拜姆的 Lectures on Quantum Mechanics）改用文字描述；MIT 在$p(\\mathbf{k}_A - \\mathbf{k}_B) = e^{-|\\mathbf{k}_A - \\mathbf{k}_B|^2\\gamma^2}$中的宽度$\\gamma$改用$\\Delta k = 1/\\gamma$写出，因为在卢金的记号中$\\gamma$是衰变率。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "higher-order",
+   "prompt": "本题说明用原子进行汉伯里·布朗和特维斯（HBT）实验时对相干性和准直的要求（忽略重力）。若一个自由粒子在时刻$t = 0$从点$A$出发，概率幅（波函数）为$\\psi_A$，则它在另一点 1 和时刻$t = \\tau$的概率幅正比于$\\psi_A e^{i(\\mathbf{k}\\cdot\\mathbf{r}_{A1} - \\omega\\tau)}$，其中$\\mathbf{r}_{A1}$是从$A$到 1 的矢量，$\\mathbf{k}$是粒子的波矢量，$\\hbar\\omega$是它的总能量。粒子从横向尺度为$W$的源的点$A$和$B$出发，在相距$d$、横向尺度为$w$的探测器的点 1 和 2 被探测到。其$P = 2|\\psi_A|^2|\\psi_B|^2[1 \\pm \\cos((\\mathbf{k}_A - \\mathbf{k}_B)\\cdot\\mathbf{r}_{21})]$的 (a) 问中，相位因子的纵向分量可以写成：$\\phi_l = (\\mathbf{k}_A - \\mathbf{k}_B)_l\\cdot(\\mathbf{r}_{21})_l$。假设波矢量差呈高斯分布$p(\\mathbf{k}_A - \\mathbf{k}_B) = e^{-|\\mathbf{k}_A - \\mathbf{k}_B|^2/\\Delta k^2}$，其中宽度$\\Delta k$与原子的温度有关。利用这一分布和你在 (a) 问中的结果计算$\\langle P\\rangle$。分别画出费米子和玻色子的$\\langle P\\rangle$的草图，并标明可以看到二阶关联效应的$(\\mathbf{r}_{21})_l$的范围。（提示：利用 (b) 问得到的$\\phi_t \\ll 2\\pi$来化简积分。）",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由于$\\phi_t \\ll 2\\pi$，只有纵向相位起作用：$P = 2|\\psi_A|^2|\\psi_B|^2[1 \\pm \\cos(qx)]$，其中$q = (\\mathbf{k}_A - \\mathbf{k}_B)_l$，$x = (\\mathbf{r}_{21})_l$。对归一化的高斯分布求平均，$$\\langle\\cos(qx)\\rangle = \\int_{-\\infty}^{\\infty}\\frac{e^{-q^2/\\Delta k^2}}{\\sqrt{\\pi}\\,\\Delta k}\\cos(qx)\\,dq = e^{-\\Delta k^2x^2/4},$$所以$$\\langle P\\rangle = 2|\\psi_A|^2|\\psi_B|^2\\left[1 \\pm e^{-\\Delta k^2(\\mathbf{r}_{21})_l^2/4}\\right].$$对玻色子，$\\langle P\\rangle$是一个高斯隆起，在$(\\mathbf{r}_{21})_l = 0$处升到背景的两倍；对费米子，它是一个高斯凹陷，在该处降到零。二者在$|(\\mathbf{r}_{21})_l| \\approx 2/\\Delta k$之外都回到背景$2|\\psi_A|^2|\\psi_B|^2$，这就是关联的范围。对热气体，每个波矢量分量按$e^{-\\hbar^2k^2/2mk_BT}$展宽，所以差有$\\Delta k^2 = 4mk_BT/\\hbar^2$，指数为$-2\\pi(\\mathbf{r}_{21})_l^2/\\lambda_\\mathrm{dB}^2$，其中$\\lambda_\\mathrm{dB}$为式 (11.1) 的热德布罗意波长：关联延伸约一个热德布罗意波长的范围。"
+   }
+  },
+  {
+   "id": "hw4-2c-ii",
+   "source_id": "hw4.2cii",
+   "source_number": "Problem Set 4, Problem 2(c)(ii)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：题目的设定在该小问开头重复给出，其图（取自拜姆的 Lectures on Quantum Mechanics）改用文字描述；省略了对$\\tau = 0.1$ s 时${}^6$Li 磁光阱的探测器计时分辨率的估计。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "higher-order",
+   "prompt": "本题说明用原子进行汉伯里·布朗和特维斯（HBT）实验时对相干性和准直的要求（忽略重力）。若一个自由粒子在时刻$t = 0$从点$A$出发，概率幅（波函数）为$\\psi_A$，则它在另一点 1 和时刻$t = \\tau$的概率幅正比于$\\psi_A e^{i(\\mathbf{k}\\cdot\\mathbf{r}_{A1} - \\omega\\tau)}$，其中$\\mathbf{r}_{A1}$是从$A$到 1 的矢量，$\\mathbf{k}$是粒子的波矢量，$\\hbar\\omega$是它的总能量。粒子从横向尺度为$W$的源的点$A$和$B$出发，在相距$d$、横向尺度为$w$的探测器的点 1 和 2 被探测到。现在假设有一个纵向尺度为$L$的脉冲原子源。原子在时刻$t = 0$被释放，并在稍后的某个时刻$t = \\tau$被探测到。给出几何论证，证明被探测到的原子的波矢量必须满足$|(\\mathbf{k}_A - \\mathbf{k}_B)_l| \\le \\frac{mvL}{\\hbar d}$，其中速度$v = \\frac{d}{\\tau}$。这意味着不同的速度组在膨胀过程中分开，使任一特定时刻探测到的原子的速度分布变窄（变窄的因子为$\\frac{L}{d}$）。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在时刻$\\tau$被探测到的原子是从源沿其长度的某处出发的，纵向位置$z$介于$-L/2$和$L/2$之间，在时间$\\tau$内走过了距离$d - z$，所以它的速度为$(d - z)/\\tau$。因此在$\\tau$一同到达的原子，其速度的展宽至多为$L/\\tau = vL/d$，其中$v = d/\\tau$，它们的波矢量$m\\mathbf{v}/\\hbar$至多相差$$|(\\mathbf{k}_A - \\mathbf{k}_B)_l| \\le \\frac{m}{\\hbar}\\frac{L}{\\tau} = \\frac{mvL}{\\hbar d}.$$飞行期间每个速度组各自运动到自己的位置，来自原子云后部的较快原子追上来自前部的较慢原子，所以在某一瞬间打开的探测器只看到速度分布的一个切片，其相对宽度为$\\Delta v/v = L/d$，无论源有多热。"
+   }
+  },
+  {
+   "id": "hw4-2d",
+   "source_id": "hw4.2d",
+   "source_number": "Problem Set 4, Problem 2(d)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：题目的设定在该小问开头重复给出，其图（取自拜姆的 Lectures on Quantum Mechanics）改用文字描述；MIT 的$\\lambda_{dB}$是$\\mathbf{k}_0$处的德布罗意波长$h/p$，文中说明它不是式 (11.1) 的热$\\lambda_{dB}$；省略了增长的数量级，以及对${}^6$Li 磁光阱、BEC 和简并费米云中一个胞元的平均占有数的估计。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "higher-order",
+   "prompt": "本题说明用原子进行汉伯里·布朗和特维斯（HBT）实验时对相干性和准直的要求（忽略重力）。若一个自由粒子在时刻$t = 0$从点$A$出发，概率幅（波函数）为$\\psi_A$，则它在另一点 1 和时刻$t = \\tau$的概率幅正比于$\\psi_A e^{i(\\mathbf{k}\\cdot\\mathbf{r}_{A1} - \\omega\\tau)}$，其中$\\mathbf{r}_{A1}$是从$A$到 1 的矢量，$\\mathbf{k}$是粒子的波矢量，$\\hbar\\omega$是它的总能量。粒子从横向尺度为$W$的源的点$A$和$B$出发，在相距$d$、横向尺度为$w$的探测器的点 1 和 2 被探测到。现在我们把所有部分汇总起来，使用 (c)(ii) 问中纵向尺度为$L$的脉冲源。$g^{(2)}(1, 2)$的峰在$(\\mathbf{k}_A - \\mathbf{k}_B)\\cdot\\mathbf{r}_{21} \\le 2\\pi$时可见。这等价于说，我们必须探测来自单个相空间胞元之内的原子，该胞元由$\\delta p_x\\delta x \\le h$定义（$y$和$z$同理）。在我们被陷俘的原子样品中，相空间胞元的三维体积为$\\delta x\\delta y\\delta z = (\\lambda_{dB})^3$，其中$\\lambda_{dB} = h/p$，如 (b) 问所述。刘维尔定理指出，随着我们的原子球膨胀，相空间胞元的数目保持不变。验证：使用这一脉冲源时，到原子到达探测器时，相干相空间胞元的体积增大的因子为$d^3/W^2L$。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在阱中，一个相空间胞元满足$\\delta p_i\\,\\delta x_i = h$，原子的动量展宽为$\\delta p \\approx p$时，其边长为$h/p = \\lambda_{dB}$。到达探测器某一点的原子，其动量展宽被几何条件窄化：由 (c)(ii) 问，纵向窄化到$\\delta p_l = mvL/d = pL/d$；在每个横向方向上窄化到$\\delta p_t \\approx pW/d$，即如 (b) 问，宽度为$W$的源在距离$d$处所张的方向范围。于是相干胞元$\\delta x_i = h/\\delta p_i$具有$$\\delta x\\,\\delta y\\,\\delta z = \\frac{h}{pW/d}\\cdot\\frac{h}{pW/d}\\cdot\\frac{h}{pL/d} = \\lambda_{dB}^3\\,\\frac{d^3}{W^2L}.$$这正是刘维尔定理在起作用：相空间体积，因而胞元的数目，是固定的，所以当一点处所见的动量展宽按$W/d$、$W/d$和$L/d$减小时，胞元的范围按$d/W$、$d/W$和$d/L$增大。小于这个胞元的探测器和计时窗口看到的是单个胞元中的原子，玻色子的群聚和费米子的反群聚就在其中显现。"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "hw4-2a",
+   "concept": "hanbury-brown-twiss"
+  },
+  {
+   "exercise": "hw4-2a",
+   "concept": "photon-bunching"
+  },
+  {
+   "exercise": "hw4-2a",
+   "concept": "second-order-correlation"
+  },
+  {
+   "exercise": "hw4-2b",
+   "concept": "hanbury-brown-twiss"
+  },
+  {
+   "exercise": "hw4-2b",
+   "concept": "de-broglie-wavelength"
+  },
+  {
+   "exercise": "hw4-2c-i",
+   "concept": "second-order-correlation"
+  },
+  {
+   "exercise": "hw4-2c-i",
+   "concept": "photon-bunching"
+  },
+  {
+   "exercise": "hw4-2c-ii",
+   "concept": "hanbury-brown-twiss"
+  },
+  {
+   "exercise": "hw4-2d",
+   "concept": "hanbury-brown-twiss"
+  },
+  {
+   "exercise": "hw4-2d",
+   "concept": "de-broglie-wavelength"
+  }
+ ],
+ "referents": [
+  {
+   "id": "well-L",
+   "label": "左阱",
+   "figures": [
+    "sim-double-well"
+   ]
+  },
+  {
+   "id": "well-R",
+   "label": "右阱",
+   "figures": [
+    "sim-double-well"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-eq-11-171",
+   "kind": "correction",
+   "html": "书中在式 (11.170) 和式 (11.171) 中印的是同一个本征值$\\kalphacoh$，随后又写$|\\kalphacoh_R|^2 = |\\kalphacoh|^2 = N/2$。每个阱有各自的振幅：$\\hat{a}_R|\\kalphacoh\\rangle = \\kalphacoh_R|\\kalphacoh\\rangle$和$\\hat{a}_L|\\kalphacoh\\rangle = \\kalphacoh_L|\\kalphacoh\\rangle$，其中$|\\kalphacoh_R|^2 = |\\kalphacoh_L|^2 = N/2$。"
+  },
+  {
+   "id": "c-number-uncertainty",
+   "kind": "correction",
+   "html": "平均含有$N/2$个原子的相干态的原子数不确定度为$\\sqrt{N/2}$，它随$N$增大；按$1/\\sqrt{N}$减小的是相对不确定度$\\sqrt{N/2}/(N/2) = \\sqrt{2/N}$。"
+  },
+  {
+   "id": "c-josephson",
+   "kind": "correction",
+   "html": "书中印的是因子$N\\kt/2$。当$|\\kalphacoh_L|^2 = |\\kalphacoh_R|^2 = N/2$且$\\kt$为实数时，<a href=\"#eq-11-168\">式 (11.168)</a>给出$\\kEdw = -\\kt(\\kalphacoh_R^*\\kalphacoh_L + \\kalphacoh_L^*\\kalphacoh_R) = -N\\kt\\cos(\\kphiR - \\kphiL)$，其最小值$-N\\kt$是$N$个原子都处于$|+\\rangle$时的能量，每个原子的能量为$-\\kt$。"
+  },
+  {
+   "id": "c-eq-11-175",
+   "kind": "correction",
+   "html": "书中的态含有$2N$个原子，每个阱中$N$个，且未归一化。$N$个原子、每个阱中$N/2$个的基态为$|\\psi_N\\rangle = (\\hat{a}_L^\\dagger\\hat{a}_R^\\dagger)^{N/2}|\\mathrm{vac}\\rangle/(N/2)!$。"
+  }
+ ]
+}

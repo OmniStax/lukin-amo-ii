@@ -1,0 +1,281 @@
+<section id="opening">
+<p>我们已经看到如何把<span data-concept="trapping-and-cooling">陷俘与冷却</span>结合起来，使原子系综达到量子简并，理想气体在此时会出现<span data-concept="bose-condensation">玻色凝聚</span>。然而，真实的原子并不是理想气体，它们的相互作用对决定原子玻色凝聚体的行为起着重要作用。</p>
+<p>原则上，在我们的理论中计入原子间相互作用可能会很棘手。然而，<span data-concept="dilute-quantum-gas">稀薄原子气体</span>提供了一个很有吸引力的机会，可以在极低的<span data-concept="atom-number-density">密度</span>$\kndens \sim 10^{12} - 10^{15}\ \mathrm{cm}^{-3}$下工作，此时原子之间相距$\kndens^{-1/3} \sim 100\mathrm{nm} - 1\mu\mathrm{m}$。相比之下，液体的<span data-concept="atom-number-density">密度</span>通常高达$\kndens \sim 10^{21}\ \mathrm{cm}^{-3}$，以致原子间距$\kndens \sim 1nm$<sup class="fn" data-note="c-spacing"></sup>几乎不比由<span data-concept="van-der-waals-potential">范德瓦耳斯相互作用</span>的尾部决定的原子大小$\krzero \sim 1\mathrm{nm}$大。因此，<span data-concept="dilute-quantum-gas">稀薄气体</span>的理论比液体的理论简单得多，因为我们可以确定一个小参数$\kndens^{-1/3}\krzero$，据此作微扰展开。例如，碱金属原子的典型大小为$\krzero \sim 1 - 10\mathrm{nm}$，所以$\kndens^{-1/3}\krzero &lt; 0.1$。</p>
+<p id="degenerate">然而，小参数$\kndens^{-1/3}\krzero$并不完全是我们想要的。为了在低密度极限下有效地描述散射过程，最好按另一个小参数$\kkmag\krzero \ll 1$展开。不过，如果气体足够冷，$\kT &lt; \kTc$，其中$\kTc \sim \hbar^2\kndens^{2/3}/\km$对应于玻色子的<span data-concept="critical-temperature">凝聚温度</span>或费米子的简并温度，那么$\kndens^{-1/3}\krzero \ll 1$就意味着$\kkmag\krzero \ll 1$。<span data-concept="dilute-quantum-gas" id="dilute">这些所谓的稀薄量子气体提供了一个在理论上易于处理的系统，可用来研究原子间相互作用。</span></p>
+</section>
+
+<section id="van-der-waals">
+<h2>11.4.1 范德瓦耳斯势</h2>
+<p id="vdw-intro"><span data-concept="van-der-waals-potential" id="vdw">间隔较远的中性基态原子之间的相互作用以范德瓦耳斯势为主。</span>考虑两个这样的原子，它们的间距远大于原子的玻尔半径，$r \gg a_0$。在这样大的距离上，原子之间的静电相互作用可以写成多极展开</p>
+<div class="equation" id="eq-11-39">$$\kUr = \frac{c_1}{r} + \frac{c_2}{r^2} + \frac{c_3}{r^3} + \frac{c_4}{r^4} + \frac{c_5}{r^5} + \frac{c_6}{r^6} + \ldots. \tag{11.39}$$</div>
+<p>第一项对应库仑势，仅当原子带电时才不为零。第二项代表电荷-偶极相互作用，r 的幂次更高的项代表更高阶的相互作用。对于碱金属原子，所有这些项在一阶微扰论中都为零，因为偶极、四极等算符的对角<span data-concept="dipole-matrix-element" id="diagonal-elements">矩阵元</span>为零。要求出领头阶的势，需要用到二阶微扰论，而主要的贡献（对处于基态的中性原子而言）来自偶极-偶极相互作用</p>
+<div class="equation" id="eq-11-40">$$\hat{V}_d(r) = \frac{\mathbf{d_1}\cdot\mathbf{d_2}}{r^3} - 3\frac{(\mathbf{d_1}\cdot\mathbf{r})(\mathbf{d_2}\cdot\mathbf{r})}{r^5}. \tag{11.40}$$</div>
+<p>如果原子处于态$|n\rangle$时的能量为$E_n$，那么到$1/r$的领头阶，所得的势为</p>
+<div class="equation" id="eq-11-41">$$\kUr = \frac{6}{r^6}\sum_{n,n'}\frac{|\langle 0|d_z|n\rangle|^2|\langle 0|d_z|n'\rangle|^2}{2E_0 - E_{n'} - E_n} \tag{11.41}$$</div>
+<div class="equation" id="eq-11-42">$$= -\frac{\hbar^2}{2\kmured}\frac{\krzero^4}{r^6}, \tag{11.42}$$</div>
+<p id="vdw-attractive">其中$\kmured = m_1m_2/(m_1 + m_2)$是原子的<span data-concept="relative-motion-scattering">约化质量</span>。注意$E_0 &lt; E_{n\neq 0}$，所以二阶修正总是负的，因此在大距离上<span data-concept="van-der-waals-potential">范德瓦耳斯势</span>是吸引的。碱金属的$\krzero$典型值在 1 nm 到 10 nm 之间，远大于它们的实际大小$\sim 0.1$ nm。如果原子间距变得与$\krzero$同量级，多极展开就会失效，势也不再必然是吸引的。此外，对于$r \gg \krzero$，与任何离心势相比，$\kUr$都可以忽略。在短距离上，电子交换主导着原子间的相互作用，产生很强的短程排斥势。</p>
+</section>
+
+<section id="scattering-theory">
+<h2>11.4.2 散射理论基础</h2>
+<p>我们对二体散射理论的分析将只考虑两个原子之间的相对运动。当质心运动与相对运动解耦时，这一假设成立，例如两个原子在均匀的背景势中碰撞，或被限制在抛物线形的外部势中。着眼于相对运动，<span data-concept="relative-motion-scattering" id="relative-motion">我们可以把原子间的碰撞重新表述为单个物体在固定势$\kUr$上的散射</span>，其中$r$是原子间距。唯一重要的区别是质量的改变：由原子的裸质量$m_1, m_2$变为单个物体的<span data-concept="relative-motion-scattering">约化质量</span>$\kmured = m_1m_2/(m_1 + m_2)$。</p>
+<p>沿$\hat{z}$方向入射到势上的单个物体的波函数可以写成如下形式</p>
+<div class="equation" id="eq-11-43">$$\kpsi_k(\mathbf{r}) = e^{i\kkmag z} + \kpsi_{sc}(\mathbf{r}), \tag{11.43}$$</div>
+<p>其中$\kpsi_k$满足<span data-concept="schrodinger-equation">薛定谔方程</span></p>
+<div class="equation" id="eq-11-44">$$-\frac{\hbar^2\nabla^2}{2\kmured}\kpsi_k + U(\mathbf{r})\kpsi_k = \frac{\hbar^2\kkmag^2}{2\kmured}\kpsi_k. \tag{11.44}$$</div>
+<p>在$r \to \infty$的极限下，散射波趋于具有某种角度依赖性的出射波</p>
+<div class="equation" id="eq-11-45">$$\lim_{r\to\infty}\kpsi_k(\mathbf{r}) = e^{i\kkmag z} + \kfk\frac{e^{i\kkmag r}}{r}, \tag{11.45}$$</div>
+<p>其中$\theta$是$\mathbf{r}$与$z$轴之间的夹角。</p>
+<p>波函数中的入射平面波部分可以借助下面这个有用的公式，用球谐函数表示：</p>
+<div class="equation" id="eq-11-46">$$e^{i\kkmag z} = \sum_{l=0}^{\infty} i^l(2l+1)P_l(\cos\theta)j_l(\kkmag r), \tag{11.46}$$</div>
+<p>其中$j_l(\kkmag r)$是 l 阶球面贝塞尔函数。在$\kkmag r \gg 1$的极限下，即远离散射体处，贝塞尔函数趋于正弦函数，于是</p>
+<div class="equation" id="eq-11-47">$$e^{i\kkmag z} \approx \sum_{l=0}^{\infty}\frac{2l+1}{2i\kkmag}P_l(\cos\theta)\frac{1}{r}\left((-1)^{l+1}e^{-i\kkmag r} + e^{i\kkmag r}\right). \tag{11.47}$$</div>
+<p>整个波函数因此可以写成入射球面波与出射球面波的相干叠加。</p>
+<h3>散射截面</h3>
+<p>涉及散射的实验通常测量诸如沿某一方向散射的原子数这样的量。因此，方便的做法是确定<span data-concept="scattering-cross-section" id="cross-section">分散射截面</span></p>
+<div class="equation" id="eq-11-48">$$\frac{d\ksigmasc}{d\Omega} = \frac{\text{单位时间内散射进立体角 d}\Omega}{\text{入射束的强度}}. \tag{11.48}$$</div>
+<p>由于分子的单位是 1/时间，分母的单位是 1/(面积·时间)，<span data-concept="scattering-cross-section">截面</span>的单位是面积，可以解释为散射势的大小。用<a href="#eq-11-45">式 (11.45)</a>中定义的散射波函数表示，<span data-concept="scattering-cross-section">分散射截面</span>为</p>
+<div class="equation" id="eq-11-49">$$\frac{d\ksigmasc}{d\Omega} = |\kfk|^2\frac{v_\mathrm{final}}{v_\mathrm{initial}}, \tag{11.49}$$</div>
+<p>其中$v_\mathrm{final}$和$v_\mathrm{initial}$是原子的末速度和初速度。我们将着重讨论弹性碰撞，此时$v_\mathrm{final} = v_\mathrm{initial}$。</p>
+<p><span data-concept="scattering-cross-section">总截面</span>由<span data-concept="scattering-cross-section">分散射截面</span>对所有立体角积分得到</p>
+<div class="equation" id="eq-11-50">$$\ksigmasc = \int d\Omega\frac{d\ksigmasc}{d\Omega} = 2\pi\int_0^{\pi}|\kfk|^2\sin\theta d\theta. \tag{11.50}$$</div>
+<h3>玻恩近似</h3>
+<p>为了计算<span data-concept="scattering-cross-section">截面</span>这类有用的量，我们需要知道如何用散射势$\kUr$表示$\kfk$。如果我们知道散射波函数$\kpsi_k(\mathbf{r})$，就可以对薛定谔方程积分，得到</p>
+<div class="equation" id="eq-11-51">$$\kfk = \frac{-\kmured}{2\pi\hbar^2}\int d^3\mathbf{r}'e^{-i\kk'\cdot\mathbf{r}'}U(\mathbf{r}')\kpsi_k(\mathbf{r}'), \tag{11.51}$$</div>
+<p>其中$\theta$是入射波$\kk$与散射波$\kk'$之间的夹角。<span data-concept="born-approximation" id="born">玻恩近似对应于对势的微扰展开。</span>在<span data-concept="born-approximation">玻恩近似</span>下，入射波受散射体的影响不大，于是</p>
+<div class="equation" id="eq-11-52">$$\kpsi_k(\mathbf{r}) \approx e^{i\kkmag z}, \tag{11.52}$$</div>
+<p>而<span data-concept="scattering-cross-section">分散射截面</span>由势的傅里叶变换给出。</p>
+<figure class="dv" id="drv-born-amplitude"></figure>
+<p>虽然<span data-concept="born-approximation">玻恩近似</span>在大多数情形下并不能给出好的解，但它确实为冷碰撞提供了一些有用的直观认识。特别是，当入射粒子能量较低，使得$\kkmag$相对于势的有效大小$\krzero$很小时，可以在一级<span data-concept="born-approximation">玻恩近似</span>中展开指数函数，</p>
+<div class="equation" id="eq-11-54">$$\kfk \approx \frac{-\kmured}{2\pi\hbar^2}\int d^3\mathbf{r}'(1 - i(\kk' - \kk)\cdot\mathbf{r}' + \cdots)U(\mathbf{r}'). \tag{11.54}$$</div>
+<p>在低能量下，只有第一项有贡献，因此分<span data-concept="scattering-amplitude">散射振幅</span>$\kfk$没有角度依赖性。换句话说，在低温下出射的散射波是各向同性的。</p>
+<h3>分波展开</h3>
+<p>为了得到低能散射的定量描述，我们将使用<span data-concept="partial-wave-expansion" id="partial-waves">分波分析</span>。假设原子间势$\kUr$是球对称的，我们可以用球谐函数展开波函数，</p>
+<div class="equation" id="eq-11-55">$$\kpsi = \sum_{l=0}^{\infty}A_lP_l(\cos\theta)R_l(r), \tag{11.55}$$</div>
+<p>其中$P_l$是第$l$个勒让德多项式。将$\kpsi$代入薛定谔方程</p>
+<div class="equation" id="eq-11-56">$$-\frac{\hbar^2\nabla^2}{2\kmured}\kpsi_k + U(\mathbf{r})\kpsi_k = \frac{\hbar^2\kkmag^2}{2\kmured}\kpsi_k. \tag{11.56}$$</div>
+<p>并利用$U(\mathbf{r}) = \kUr$，我们得到一组互不耦合的方程，每个$R_l(r)$对应一个：</p>
+<div class="equation" id="eq-11-57">$$\frac{d^2}{dr^2}R_l(r) + \frac{2}{r}\frac{d}{dr}R_l(r) - \frac{l(l+1)}{r^2}R_l(r) - \frac{2\kmured}{\hbar^2}\kUr R_l(r) = -\kkmag^2R_l(r). \tag{11.57}$$</div>
+<p id="regions">由于$\kUr$的短程性（因为$\kkmag\krzero \ll 1$），我们可以把空间分成两个区域，在其中分别适用不同的近似（见<a href="#sim-regions">图 11.5</a>）。只要我们处于<span data-concept="s-wave-dominance">超冷极限</span>$\kkmag\krzero \ll 1$，两个区域就会重叠，我们就可以匹配两个解，求出<span data-concept="scattering-amplitude">散射振幅</span>。</p>
+<figure class="sim" id="sim-regions" data-figure="11.5" data-original="/media/ch11/fig-11-5.png" data-original-caption="薛定谔方程在 A 区中对小的 r、在 B 区中对大的 r 可以近似求解。在超冷极限 kr₀ ≪ 1 下，两个适用范围重叠，两个解可以在 r₀ &lt; r &lt; 1/k 内匹配。">
+  <div class="sim-head"><span class="eyebrow">Figure 11.5</span><span>两个原子之间的势$\kUr$随它们间距$r$的变化，$r$取对数标度：<a href="#eq-11-42">式 (11.42)</a>的范德瓦耳斯尾部叠加在陡峭的排斥芯上，以$\hbar^2/2\kmured\krzero^2$为单位，因此尾部在$\krzero$处达到$-1$。A 区，其中$\kkmag r \ll 1$，从$1/\kkmag$向内延伸；B 区，其中势已不再重要，从$\krzero$向外延伸。拖动$1/\kkmag$：在<span data-concept="s-wave-dominance">超冷极限</span>下，两个区域在阴影窗口$\krzero &lt; r &lt; 1/\kkmag$上重叠，解在其中匹配，而当$\kkmag\krzero$趋近于 1 时，窗口闭合。</span></div>
+</figure>
+<p>在 A 区，$\kkmag \ll 1/r$，所以我们可以忽略薛定谔方程中的能量项。原则上，我们可以求解这个方程得到$R_l^{(A)}(r &lt; \krzero)$，这个解依赖于短程势的细节，但不依赖于能量$\kkmag$。</p>
+<p>在$B$区，$r > \krzero$，势的作用可以忽略，薛定谔方程化为球坐标下的自由空间薛定谔方程。因此该区域的解是球面贝塞尔函数，对于小的距离$1 > \kkmag r > \kkmag\krzero$</p>
+<div class="equation" id="eq-11-58">$$R_l^{(B)}(r) = c_1r^l + c_2r^{-(l+1)}. \tag{11.58}$$</div>
+<p>通过在$R_l^{(B)}(r)$与$R_l^{(A)}(r)$同时适用的区域内将二者匹配，我们可以得到两个系数$c_1$和$c_2$。此外，由于$R_l^{(A)}(r)$和$R_l^{(B)}(r &lt; 1/\kkmag)$与$\kkmag$无关，我们发现两个系数$c_1$和$c_2$也不依赖于$\kkmag$。这两个系数之比可以通过论证当$r \sim \krzero$时两项的量级应当相当来定性地估计，于是</p>
+<div class="equation" id="eq-11-59">$$\frac{c_2}{c_1} \propto \krzero^{2l+1}. \tag{11.59}$$</div>
+<p>比例常量的量级通常为一，但在特殊情形下它可以被显著增强。</p>
+<p>球面贝塞尔函数解$R_l^{(B)}(r)$在$\kkmag r \gg 1$时有不同的渐近行为：</p>
+<div class="equation" id="eq-11-60">$$R_l^{(B)}(r) \propto \frac{\sin\left(\kkmag r - \frac{\pi l}{2} + \kdeltal\right)}{r} \sim \frac{(-1)^{l+1}e^{-i\kkmag r} + e^{i\kkmag r+2i\kdeltal}}{r}, \tag{11.60}$$</div>
+<p>其中<span data-concept="scattering-phase-shift" id="phase-shift">相移$\kdeltal$由系数$c_1$和$c_2$决定</span>：</p>
+<div class="equation" id="eq-11-61">$$\tan\kdeltal = \frac{c_2}{c_1}\frac{\kkmag^{2l+1}}{(2l-1)!!(2l+1)!!}. \tag{11.61}$$</div>
+<p>双阶乘符号 !! 的定义为$n!! = n(n-2)(n-4)\ldots$，对于$l = 0$有$(-1)!! = 1$。由定义可知，在零能量极限$\kkmag \to 0$下，<span data-concept="scattering-phase-shift">相移</span>为零。这是一种运动学效应，是短程势的结果。</p>
+<p>我们已经看到如何利用短程势计算$c_1$和$c_2$，并由此导出<span data-concept="scattering-phase-shift">相移</span>$\kdeltal$。如果我们能用<span data-concept="scattering-phase-shift">相移</span>表示$\kfk$，那么至少在原则上，我们就可以由原子间势能导出<span data-concept="scattering-cross-section">散射截面</span>。请考察<a href="#eq-11-60">式 (11.60)</a>和<a href="#eq-11-45">式 (11.45)</a>，注意平面波可以写成<a href="#eq-11-47">式 (11.47)</a>的形式。</p>
+<figure class="dv" id="drv-partial-wave-amplitude"></figure>
+<p>在<span data-concept="s-wave-dominance">超冷极限</span>$\kkmag\krzero \ll 1$下，<span data-concept="scattering-phase-shift">相移</span>很小，所以$\tan\kdeltal \approx \kdeltal \approx c(\krzero\kkmag)^{2l+1}$，其中$c$是量级为一的常量。</p>
+<figure class="dv" id="drv-partial-wave-ultracold"></figure>
+<p>在低温下，$f_{l\neq 0} \ll f_0$，除非存在使$c$的值增大的共振。由于这种共振极不可能出现，<span data-concept="s-wave-dominance" id="s-wave-only">在超冷极限下，我们可以放心地忽略除 s 波散射振幅$f_0$以外的所有振幅</span>。</p>
+</section>
+
+<section id="s-wave">
+<h2>11.4.3 s 波散射</h2>
+<p><span data-concept="s-wave-dominance">s 波（$l = 0$）散射在低温下占主导，</span>所以我们将相当详细地讨论它的性质。特别是，它的性质可以完全由单个参数刻画，即<span data-concept="s-wave-scattering-length" id="scattering-length">s 波散射长度</span>。</p>
+<p>$l = 0$的径向波函数在$\krzero &lt; r &lt; 1/\kkmag$时具有特别简单的形式：</p>
+<div class="equation" id="eq-11-64">$$R_0^{(B)}(r) = c_1 + \frac{c_2}{r} \propto 1 - \frac{\kascat}{r}, \tag{11.64}$$</div>
+<p>其中我们确定出<span data-concept="s-wave-scattering-length">s 波散射长度</span></p>
+<div class="equation" id="eq-11-65">$$\kascat = -\frac{c_2}{c_1}. \tag{11.65}$$</div>
+<figure class="dv" id="drv-s-wave-amplitude"></figure>
+<p>注意在低能极限下，$f_0 \approx -\kascat$；这给出了<span data-concept="s-wave-scattering-length">散射长度</span>的另一种定义。</p>
+<p>不过，重要的是要记住，当$\kkmag\kascat \sim 1$时，<span data-concept="scattering-amplitude">散射振幅</span>将不同于<span data-concept="s-wave-scattering-length">散射长度</span>。</p>
+<h3>物理解释</h3>
+<p><span data-concept="scattering-length-signs" id="interpretation">为了对 s 波散射长度获得一些物理直观，我们将考虑三个例子：硬球、一般的排斥势和一般的吸引势。</span>硬球由势刻画</p>
+<div class="equation" id="eq-11-69">$$U_H = \left\{\begin{array}{cc} \infty &amp; r &lt; \krzero \\ 0 &amp; r > \krzero \end{array}\right\}. \tag{11.69}$$</div>
+<p>显然，径向波函数在边界上必须为零，所以波函数渐近线的截距必定是</p>
+<div class="equation" id="eq-11-70">$$a_H = \krzero. \tag{11.70}$$</div>
+<p>因此在低能量下，任何具有正<span data-concept="s-wave-scattering-length">散射长度</span>的势的作用都像半径为$\kascat$的硬球。例如，一个高度有限的排斥势</p>
+<div class="equation" id="eq-11-71">$$U_R = \left\{\begin{array}{cc} |\kVzero| &amp; r &lt; \krzero \\ 0 &amp; r > \krzero \end{array}\right\}, \tag{11.71}$$</div>
+<p>其<span data-concept="s-wave-scattering-length">散射长度</span>为正，但小于$\krzero$：</p>
+<div class="equation" id="eq-11-72">$$0 &lt; a_R &lt; \krzero. \tag{11.72}$$</div>
+<p>吸引势的行为不那么显而易见。一般的吸引势，例如</p>
+<div class="equation" id="eq-11-73">$$U_A = \left\{\begin{array}{cc} -|\kVzero| &amp; r &lt; \krzero \\ 0 &amp; r > \krzero \end{array}\right\} \tag{11.73}$$</div>
+<p>其<span data-concept="s-wave-scattering-length">散射长度</span>可正可负，取决于能量最高的束缚态的接近程度。对于足够浅、不存在束缚态的势，<span data-concept="s-wave-scattering-length">散射长度</span>将为负</p>
+<div class="equation" id="eq-11-74">$$a_A^{(0)} &lt; 0. \tag{11.74}$$</div>
+<p>随着吸引势变深，最终会有一个束缚态进入，把一个节点从$r = \infty$带入波函数，并改变<span data-concept="s-wave-scattering-length">散射长度</span>的符号。我们将会看到，束缚态共振导致<span data-concept="s-wave-scattering-length">散射长度</span>增强，这可以用来在实验上操控原子间相互作用的强度。</p>
+<figure class="sim" id="sim-square-well" data-figure="11.6 + 11.7" data-original="/media/ch11/fig-11-6.png,/media/ch11/fig-11-7.png" data-original-caption="（图 11.6）散射长度可以形象地看作波函数的渐近线在 r₀ ≪ r ≪ 1/k 区域内的截距。（图 11.7）硬球、排斥势和吸引势的波函数与散射长度">
+  <div class="sim-head"><span class="eyebrow">Figure 11.6 + 11.7</span><span>半径为$\krzero$的方势的零能径向波函数$u = rR_0(r)$：<a href="#eq-11-69">式 (11.69)</a>的硬球，高度为$|\kVzero|$的排斥势垒，<a href="#eq-11-71">式 (11.71)</a>，或深度为$|\kVzero|$的吸引势阱，<a href="#eq-11-73">式 (11.73)</a>。在$\krzero$之外，波函数是<a href="#eq-11-64">式 (11.64)</a>的直线$r - \kascat$，用虚线回延到它与坐标轴相交的位置，即<span data-concept="s-wave-scattering-length">散射长度</span>$\kascat$。下方的图给出$\kascat/\krzero$随势的强度$\sqrt{2\kmured|\kVzero|}\,\krzero/\hbar$的变化。抬高势垒，$\kascat$向硬球的$\krzero$攀升；加深势阱，$\kascat$变为负，在束缚态进入时发散，然后重新变为正，且内部多出一个节点。</span></div>
+</figure>
+<h3>s 波赝势</h3>
+<p>在<span data-concept="s-wave-dominance">超冷极限</span>$\kkmag\krzero \ll 1$下，<span data-concept="s-wave-pseudopotential" id="pseudopotential">所有具有相同散射长度$\kascat$的原子间势都等价于赝势$\kUr$</span>，其中</p>
+<div class="equation" id="eq-11-75">$$\kUr\kpsi(r) = \frac{4\pi\hbar^2\kascat}{2\kmured}\delta^3(\mathbf{r})\frac{\partial}{\partial r}\left(r\cdot\kpsi(r)\right). \tag{11.75}$$</div>
+<p>反过来，这个势等价于对波函数设定一个边界条件</p>
+<div class="equation" id="eq-11-76">$$\lim_{r\to 0}\kpsi(r) \propto \left(1 - \frac{\kascat}{r}\right). \tag{11.76}$$</div>
+<p><span data-concept="s-wave-pseudopotential">赝势</span>的薛定谔方程为</p>
+<div class="equation" id="eq-11-77">$$-\frac{\hbar^2\nabla^2}{2\kmured}\kpsi(r) + \frac{4\pi\hbar^2\kascat}{2\kmured}\delta^3(\mathbf{r})\frac{\partial}{\partial r}\left(r\cdot\kpsi(r)\right) = 0, \tag{11.77}$$</div>
+<p>不难验证$\kpsi(r) = 1 - \kascat/r$满足这个方程。</p>
+<p><span data-concept="s-wave-pseudopotential">赝势</span>之所以有用，是因为它只作用于波函数的正则部分，忽略$1/r$奇点。对于光滑函数（没有任何奇点），它的作用就像一个简单的δ 函数势</p>
+<div class="equation" id="eq-11-78">$$\kUr = \frac{4\pi\hbar^2\kascat}{2\kmured}\delta^3(\mathbf{r}). \tag{11.78}$$</div>
+<p>这对一阶微扰论很重要。</p>
+<figure class="dv" id="drv-mean-field-energy"></figure>
+</section>
+
+<section id="statistics">
+<h2>11.4.4 粒子统计</h2>
+<p id="indist">到目前为止，我们的分析一直假定碰撞的粒子是可分辨的，例如不同种类的原子，或处于不同电子态的同种原子。为了把分析应用于<span data-concept="indistinguishability-statistics">不可分辨粒子</span>，我们必须考虑这样一个事实：全同粒子散射$\theta$角与散射$\pi + \theta$角产生相同的结果<sup class="fn" data-note="c-identical-angle"></sup>。因此我们需要对两种可能性求和：</p>
+<div class="equation" id="eq-11-81">$$\kpsi_k(r) = \frac{e^{i\kkmag z} + \epsilon e^{-i\kkmag z}}{\sqrt{2}} + \frac{\kfk + \epsilon f_k(\pi + \theta)}{\sqrt{2}}\frac{e^{i\kkmag r}}{r} \tag{11.81}$$<sup class="fn" data-note="c-eq-11-81"></sup></div>
+<p>由于两粒子波函数在粒子交换下必须是对称或反对称的，对玻色子$\epsilon = +1$，对费米子为$-1$。</p>
+<figure class="dv" id="drv-identical-particle-cross-section"></figure>
+<p>对于偶数$l$的分波，两个振幅对玻色子相加、对费米子相减；对于奇数$l$的分波，振幅对玻色子相消、对费米子相加。特别是，全同玻色子的 s 波相互作用<span data-concept="scattering-cross-section">截面</span>会增大到 2 倍，而全同费米子则完全不通过 s 波通道相互作用。</p>
+</section>
+
+<section id="ensemble">
+<h2>11.4.5 原子系综上的散射</h2>
+<p>处理两粒子散射事件的形式体系可以与光在单个原子上散射的量子光学问题相比较。在这两种情形下，入射光或物质波都被出射的径向（或偶极）波所修改。同样，这两种情形都可以推广到包含许多相干散射体的效应：每个发射出的波同相叠加，产生一个平面波，它相对入射波因吸收和<span data-concept="refractive-index" id="refraction">折射</span>而发生了改变。</p>
+<p>为了说明这一类比，我们考虑一个入射到宽度为$L$的平板上的冷粒子（或物质波），板内含有由$N$个冷原子组成的稀薄云，其<span data-concept="atom-number-density">密度</span>$\kndens$满足$\kndens\kascat^3 &lt;&lt; 1$。我们假定入射粒子的波矢量为$\mathbf{K} = K_z$、位置为$\mathbf{r_0}$，并用$\mathbf{r_j}$标记第$j$个散射体的位置。对于这个系综，$\kfk = -\kascat$，所以多体波函数可以写成</p>
+<div class="equation" id="eq-11-83">$$\begin{aligned} \kpsi_\mathbf{K}(\mathbf{r_0}, \mathbf{r_1}, \mathbf{r_2}, \cdots\mathbf{r_N}) &amp;= e^{iK_zx_0} - \sum_j\frac{\kascat}{|\mathbf{r_0} - \mathbf{r_j}|}e^{i|K||\mathbf{r_0} - \mathbf{r_j}|} \\ &amp;= e^{iKz_0} - \sum_j\frac{\kascat}{|\mathbf{r_0} - \mathbf{r_j}|}e^{iK(r_0-r_j)/2}e^{iK(z_0+z_j)/2}. \end{aligned} \tag{11.83}$$<sup class="fn" data-note="c-eq-11-83"></sup></div>
+<p>对散射粒子的位置$\mathbf{r_1}, \mathbf{r_2}, \ldots, \mathbf{r_N}$取迹，我们可以得到透射的物质波</p>
+<div class="equation" id="eq-11-84">$$\kpsi_K(\mathbf{r_0}) = e^{iKz_0} - \kndens\int d^3\mathbf{r_j}\frac{\kascat}{|\mathbf{r_0} - \mathbf{r_j}|}e^{iK(r_0-r_j)/2}e^{iK(z_0+z_j)/2} \tag{11.84}$$</div>
+<p>在远离散射体平板之处，$z_0 \gg L$，波的形式为</p>
+<div class="equation" id="eq-11-85">$$\kpsi_k(z_0) = Ae^{iKz_0}, \tag{11.85}$$</div>
+<p>其中</p>
+<div class="equation" id="eq-11-86">$$A \approx e^{i4\pi\kascat\kndens L/K}. \tag{11.86}$$<sup class="fn" data-note="c-eq-11-86"></sup></div>
+<p><span data-concept="matter-wave-index" id="slab-phase">平板产生了一个相移</span></p>
+<div class="equation" id="eq-11-87">$$\delta K = \frac{-4\pi\kascat\kndens}{K}, \tag{11.87}$$</div>
+<p>它对应于与平板中的原子相互作用所引起的有效势能移位。特别是，粒子在平板中时动能的变化为</p>
+<div class="equation" id="eq-11-88">$$\delta\left(\frac{\hbar^2K^2}{2\km}\right) = \frac{4\pi\hbar^2\kascat\kndens}{\km}. \tag{11.88}$$<sup class="fn" data-note="c-eq-11-88"></sup></div>
+<p>动能的这一变化对应于与平板中<span data-concept="matter-wave-index">平均场势能</span>相关的能量代价。</p>
+</section>
+
+<section id="resonances">
+<h2>11.4.6 共振</h2>
+<p>在量子<span data-concept="dilute-quantum-gas">稀薄气体</span>中，有可能找到这样的情形：<span data-concept="s-wave-scattering-length">散射长度</span>远超过范德瓦耳斯尾部的大小，$\kascat \gg \krzero$。在这一情形下，</p>
+<div class="equation" id="eq-11-89">$$\kkmag\kascat \sim 1 \tag{11.89}$$</div>
+<div class="equation" id="eq-11-90">$$\kkmag\krzero \ll 1, \tag{11.90}$$</div>
+<p><span data-concept="strongly-interacting-dilute-gas" id="strong-dilute">所以气体既冷又稀薄，但相互作用很强。</span>液体的相互作用很强，但由于它们不稀薄，$\kkmag\krzero \sim 1$，按分波的微扰展开不成立，所以除了 s 波通道外，我们还必须考虑 p 波、d 波等的<span data-concept="scattering-amplitude">散射振幅</span>。因此，冷的稀薄强相互作用气体提供了一个研究纯粹的<span data-concept="s-wave-dominance">s 波</span>强相互作用的新系统。</p>
+<p>稀薄气体的一个特别有趣的特征是，有可能找到$\kascat \gg \krzero$的情形。这一极限对应于<span data-concept="strongly-interacting-dilute-gas">s 波共振</span>，此时$\kkmag\kascat \sim 1$，但仍存在小参数$\kkmag\krzero \ll 1$。对于大的正$\kascat$，<span data-concept="s-wave-scattering-length">散射长度</span>的共振与<span data-concept="weakly-bound-state" id="weakly-bound">一个奇特的弱束缚态</span>的出现有关。</p>
+<figure class="dv" id="drv-weakly-bound-state"></figure>
+<p>这对应于吸引性范德瓦耳斯尾部的一个束缚态，其能量非常接近于零。</p>
+<p>在这个共振附近会出现许多有趣的现象，并且有可能在这些<span data-concept="weakly-bound-state">弱束缚态</span>中形成分子。形成分子有两种方法：</p>
+<ol>
+<li>把具有正<span data-concept="s-wave-scattering-length">散射长度</span>$\kascat > 0$的气体冷却到低于结合能的温度，$k_B\kT &lt; E_0$</li>
+<li>制备一个具有负<span data-concept="s-wave-scattering-length">散射长度</span>$\kascat &lt; 0$的冷气体，并扫过共振$\kascat \to -\infty \to \infty \to \kascat > 0$。</li>
+</ol>
+<p>只有当我们能以某种方式可控地操控原子间势$\kUr$以改变<span data-concept="s-wave-scattering-length">散射长度</span>时，第二种方法才能实现。<span data-concept="feshbach-resonance" id="feshbach">费希巴赫共振提供了一种控制散射长度的技术。</span></p>
+<h3>费希巴赫共振</h3>
+<p>到目前为止，我们考虑的是处于基态的原子的散射，并忽略了与原子内态有关的任何效应。实际上，我们必须考虑其他散射通道，例如两个原子的单重态或三重态。例如，假设有两个通道，各有其自己的有效原子间势<span data-ref="open-channel">$U_o(r)$</span>和<span data-ref="closed-channel">$U_c(r)$</span>。<span data-ref="closed-channel">能量较高的通道</span>被称为<span data-ref="closed-channel">“<span data-concept="feshbach-resonance">闭</span>”通道</span>，因为它对准束缚态呈现出更高的势垒。</p>
+<figure class="sim" id="sim-feshbach" data-figure="11.8 + 11.9" data-original="/media/ch11/fig-11-8.png,/media/ch11/fig-11-9.png" data-original-caption="（图 11.8）上方的势对应于“闭”通道，其中有许多未被占据的束缚态。下方的势，即“开”通道，对应于原子的初始内态。当闭通道中的一个束缚态接近开通道中的阈值能量时，两个通道之间任何微小的耦合都可能产生很大的影响，使开通道中的散射长度发生剧烈变化。（图 11.9）费希巴赫共振附近散射长度的形式">
+  <div class="sim-head"><span class="eyebrow">Figure 11.8 + 11.9</span><span>左图，<span data-ref="open-channel">开通道</span>和<span data-ref="closed-channel">闭通道</span>的势随间距$r$的变化，闭通道的束缚态用虚线表示，最靠近阈值的那个在$\kEres$处用实线画出，这里$\kEres = \kmuB(B_0 - B)$。在阈值附近，能量被放大了：束缚态移动了一毫开尔文，而势阱要深得多。右图，<a href="#eq-11-106">式 (11.106)</a>的<span data-concept="s-wave-scattering-length">散射长度</span>随磁场的变化。拖动$B$，<span data-ref="closed-channel">闭通道</span>滑过阈值：当它的束缚态刚好在阈值之下时，$\kascat$大且为正；刚好在上方时，大且为负；而在$B_0 - \Delta B$处，原子根本不相互作用。$|\kDeltaFesh|$决定宽度$\Delta B = |\kDeltaFesh|/\kmuB$。</span></div>
+</figure>
+<p>两个通道都服从薛定谔方程，如果两个通道之间有某种小的相互作用$g$，它们的薛定谔方程就是耦合的：</p>
+<div class="equation" id="eq-11-93">$$\left(\hat{\xi} + U_o(r) - E\right)\psi_o + g\psi_c = 0 \tag{11.93}$$</div>
+<div class="equation" id="eq-11-94">$$\left(\hat{\xi} + U_c(r) - E\right)\psi_c + g\psi_o = 0, \tag{11.94}$$</div>
+<p>其中$\hat{\xi}$是动能算符。令$\psi_c^m$为</p>
+<div class="equation" id="eq-11-95">$$\left(\hat{\xi} + U_c(r) - E_m\right)\psi_c^m = 0, \tag{11.95}$$</div>
+<p>的一组完备的规范正交本征函数，并用它们展开$\psi_c$：</p>
+<div class="equation" id="eq-11-96">$$\psi_c = \sum_{m=1}^{\infty}\alpha_m\psi_c^m. \tag{11.96}$$</div>
+<figure class="dv" id="drv-closed-channel-coupling"></figure>
+<p>在共振附近，这些系数中只有一个$\alpha_{res}$会有可观的物理效应。</p>
+<p>为了求解这个方程，我们可以利用齐次解</p>
+<div class="equation" id="eq-11-100">$$\left(\hat{\xi} + U_o(r) - E\right)\chi = 0 \to \chi = 1 - \frac{\kabg}{r}, \tag{11.100}$$</div>
+<p>其中$\kabg$是<span data-ref="open-channel"><span data-concept="feshbach-resonance">开通道</span></span>在没有来自<span data-ref="closed-channel"><span data-concept="feshbach-resonance">闭通道</span></span>的任何效应时的<span data-concept="feshbach-resonance">背景散射长度</span>。对于非齐次方程</p>
+<div class="equation" id="eq-11-101">$$\left(\hat{\xi} + U_o(r) - E\right)\eta = g(r)\psi_c^{res}(r), \tag{11.101}$$</div>
+<p>有许多可能的解，我们将选取其行为如下的那个解</p>
+<div class="equation" id="eq-11-102">$$\eta = A\left(1 - \frac{b}{r}\right), \tag{11.102}$$</div>
+<p>其中常量 A 和 b 由势能曲线和耦合常数决定。完整的解是齐次解与非齐次解的叠加。</p>
+<figure class="dv" id="drv-feshbach-scattering-length"></figure>
+<p id="fesh-tune">分母可以用移位后的共振能量重写。<span data-concept="zeeman-effect">如果不同的通道对应于具有不同磁矩的原子态，则共振能量可以通过调节磁场来移位</span>$\kEres \propto \kmuB(B - B_0^*)$。对于超冷原子气体中所预期的低能碰撞，</p>
+<div class="equation" id="eq-11-106">$$\kascat = \kabg\left(1 + \frac{\kDeltaFesh}{\kEres - E}\right) \tag{11.106}$$</div>
+<div class="equation" id="eq-11-107">$$\approx \kabg\left(1 + \frac{\kDeltaFesh}{\kEres}\right), \tag{11.107}$$</div>
+<div class="equation" id="eq-11-108">$$\quad \tag{11.108}$$</div>
+<p><span data-concept="s-wave-scattering-length">散射长度</span>在临界磁场附近发散，此时<span data-ref="closed-channel"><span data-concept="feshbach-resonance">闭通道</span>束缚态</span>与<span data-ref="open-channel"><span data-concept="feshbach-resonance">开通道</span></span>的阈值能量共振。</p>
+<p><span data-concept="feshbach-resonance">费希巴赫共振</span>通常极窄，典型宽度为几高斯。对于超冷原子，<span data-concept="s-wave-scattering-length">散射长度</span>有明确的定义，$\Delta B \sim 10G \Rightarrow \kDeltaFesh \sim 500\mu\mathrm{K}$，因为共振宽度远大于典型的原子温度$\sim 1\mu\mathrm{K}$。</p>
+<p>应当注意，<span data-concept="weakly-bound-state">弱束缚能级</span>的结合能并不等于共振能级的能量。</p>
+<figure class="dv" id="drv-feshbach-binding-energy"></figure>
+</section>
+
+<section id="bose-gas">
+<h2>11.4.7 相互作用玻色气体的量子理论</h2>
+<p>弱相互作用的稀薄原子气体可以很好地用一个包含单粒子项和二体相互作用的哈密顿量来描述，</p>
+<div class="equation" id="eq-11-110">$$\kH = \sum_{i=1}^{N}\left(\frac{p_i^2}{2\km} + \kVtrap(r_i)\right) + \sum_{i&lt;j}V_\mathrm{int}(r_i - r_j), \tag{11.110}$$</div>
+<p>其中$\krzero$是相互作用势的典型力程。在$\kkmag\krzero \ll 1$的冷的稀薄原子气体中，相互作用势可以用<span data-concept="s-wave-pseudopotential">s 波赝势</span>代替</p>
+<div class="equation" id="eq-11-111">$$V_\mathrm{int}(r) \approx \underbrace{\frac{4\pi\hbar^2\kascat}{\km}}_{\kUzero}\delta(r), \tag{11.111}$$</div>
+<p>其中原子间势的所有性质都由一个参数表示，即<span data-concept="s-wave-scattering-length">散射长度</span>$\kascat$。原则上，我们现在可以开始计算系综中$N$个原子的基态和动力学。然而，由于原子是<span data-concept="indistinguishability-statistics">不可分辨的</span>，我们必须小心地把波函数对称化（对玻色子）或反对称化（对费米子），这在原子数很多时变得相当不便。因此，我们将改用<span data-concept="second-quantization" id="second-quantization">二次量子化</span>的语言重写这个哈密顿量，它隐含地包含了原子的不可分辨性。</p>
+<h3>二次量子化</h3>
+<p id="sq-operators">物质波的<span data-concept="second-quantization">二次量子化</span>形式体系与量子化电磁场所用的方法非常相似。与光子的情形一样，我们将考虑一组完备的单原子态$\{|\zeta\rangle\}$，并定义<span data-concept="creation-annihilation-operators">产生算符与湮没算符</span>$\hat{b}_\zeta, \hat{b}_\zeta^\dagger$，它们可以在这些态中增加或移去一个原子</p>
+<div class="equation" id="eq-11-112">$$\hat{b}_\zeta|\zeta\rangle = |\mathrm{vac}\rangle \tag{11.112}$$</div>
+<div class="equation" id="eq-11-113">$$\hat{b}_\zeta^\dagger|\mathrm{vac}\rangle = |\zeta\rangle. \tag{11.113}$$</div>
+<p>原子的统计性质决定这些算符的对易性质。</p>
+<div class="equation" id="eq-11-114">$$\text{玻色子:} \quad [\hat{b}_\zeta, \hat{b}_{\zeta'}^\dagger] = \delta_{\zeta,\zeta'} \tag{11.114}$$</div>
+<div class="equation" id="eq-11-115">$$\text{费米子:} \quad \{\hat{b}_\zeta, \hat{b}_{\zeta'}^\dagger\} = \delta_{\zeta,\zeta'}, \tag{11.115}$$</div>
+<p>其中$[A, B] = AB - BA$是对易式，$\{A, B\} = AB + BA$是反对易式。由于对易关系保证了所得波函数的对称性或反对称性，这一形式体系为处理<span data-concept="indistinguishability-statistics">不可分辨粒子</span>提供了方便的工具。</p>
+<p>多体态很容易用这些作用于真空态的<span data-concept="creation-annihilation-operators">产生算符与湮没算符</span>表示。例如，在单粒子态$|\zeta_i\rangle$中有$n_i$个原子的态$|\phi\rangle$可以表示为</p>
+<div class="equation" id="eq-11-116">$$|\phi\rangle = |n_1, n_2\ldots\rangle = \prod_i(\hat{b}_i^\dagger)^{n_i}|\mathrm{vac}\rangle. \tag{11.116}$$<sup class="fn" data-note="c-eq-11-116"></sup></div>
+<p>例如，对于玻色子，场算符类似于电磁场模的<span data-concept="creation-annihilation-operators">产生算符与湮没算符</span>：</p>
+<div class="equation" id="eq-11-117">$$\hat{b}_\zeta^\dagger|\phi\rangle = \sqrt{n_\zeta + 1}|n_1, n_2\ldots n_\zeta + 1, \ldots\rangle \tag{11.117}$$</div>
+<div class="equation" id="eq-11-118">$$\hat{b}_\zeta|\phi\rangle = \sqrt{n_\zeta}|n_1, n_2\ldots n_\zeta - 1, \ldots\rangle. \tag{11.118}$$</div>
+<p>虽然我们在这里将集中讨论玻色子，但值得指出的是，升高和降低费米子数的规则与之相似，只是必须留意由反对易产生的负号。</p>
+<p>一个特别有用的基是动量基$|\kk\rangle$，以及与之相联系的<span data-concept="creation-annihilation-operators">产生算符与湮没算符</span>$\hat{b}_\mathbf{k}$和$\hat{b}_\mathbf{k}^\dagger$。在这种情形下，玻色原子与光子之间有精确的类比。此外，我们可以对这些算符作傅里叶变换，定义物质场的实空间算符</p>
+<div class="equation" id="eq-11-119">$$\kpsihat = \frac{1}{\sqrt{\kV}}\sum_\mathbf{k}e^{i\kk\cdot\mathbf{r}}\hat{b}_\mathbf{k}, \tag{11.119}$$</div>
+<p>其中允许的 k 矢量由量子化体积$\kV$边缘处的边界条件决定。利用对易关系$[\hat{b}_\mathbf{k}, \hat{b}_{\mathbf{k}'}^\dagger] = \delta_{\mathbf{k},\mathbf{k}'}$和恒等式$\sum_k e^{i\kk\cdot(\mathbf{r}-\mathbf{r}')} = \kV\delta(\mathbf{r} - \mathbf{r}')$，我们可以求出$\hat{\psi}(r)$的对易规则。</p>
+<figure class="dv" id="drv-field-commutator"></figure>
+<p>在物理上，$\kpsihat$可以解释为在位置$\mathbf{r}$处湮没一个粒子的算符。</p>
+<h3>二次量子化表象中的算符</h3>
+<p>每个原子的可观测量都可以用物质场的<span data-concept="creation-annihilation-operators">产生算符与湮没算符</span>表示。例如，粒子数算符是</p>
+<div class="equation" id="eq-11-121">$$\hat{N} = \sum_\zeta\hat{b}_\zeta^\dagger\hat{b}_\zeta = \int d^3\mathbf{r}\hat{\psi}^\dagger(\mathbf{r})\kpsihat. \tag{11.121}$$</div>
+<p><a href="#eq-11-110">式 (11.110)</a>中的哈密顿量也可以用$\kpsihat$写出：</p>
+<div class="equation" id="eq-11-122">$$\kH = \int d^3\mathbf{r}\ \hat{\psi}^\dagger(\mathbf{r})\left(\frac{\kp^2}{2\km} + \kVtrap(\mathbf{r})\right)\kpsihat \tag{11.122}$$</div>
+<div class="equation" id="eq-11-123">$$+ \frac{1}{2}\int d^3\mathbf{r}\int d^3\mathbf{r}'\ \hat{\psi}^\dagger(\mathbf{r})\hat{\psi}^\dagger(\mathbf{r}')V_{int}(\mathrm{r} - \mathrm{r}')\hat{\psi}(\mathbf{r}')\kpsihat. \tag{11.123}$$</div>
+<p>当原子间势可以用<span data-concept="s-wave-pseudopotential">s 波赝势</span>代替时，第二项可以大大简化。</p>
+<figure class="dv" id="drv-contact-hamiltonian"></figure>
+<h3>零温无相互作用 BEC</h3>
+<p>考虑零温下两类势中的基态是有启发性的：</p>
+<ol>
+<li>均匀势</li>
+<li>谐振子势</li>
+</ol>
+<p>这些势的单粒子态是众所周知的，在零温下我们预期所有原子都堆积到基态中。对于无限高势壁的方势阱，</p>
+<div class="equation" id="eq-11-125">$$\psi_0(r) \sim \sin\pi x/L\sin\pi y/L\sin\pi z/L. \tag{11.125}$$</div>
+<p>谐振子的基态波函数是高斯函数</p>
+<div class="equation" id="eq-11-126">$$\phi_0(r) = \frac{e^{-\left(\frac{x^2}{2a_x^2} + \frac{y^2}{2a_y^2} + \frac{z^2}{2a_z^2}\right)}}{\pi^{3/4}(a_xa_ya_z)^{1/2}}, \tag{11.126}$$</div>
+<p>其中$\{a_x, a_y, a_z\}$是与各个维度上的阱频率$\{\omega_x, \omega_y, \omega_z\}$相联系的谐振子长度：$a_j^2 = \frac{\hbar}{\km\omega_j}$。如果原子之间不相互作用，那么多体态可以写成</p>
+<div class="equation" id="eq-11-127">$$|\Psi\rangle = (\hat{b}_0^\dagger)^N|\mathrm{vac}\rangle, \tag{11.127}$$<sup class="fn" data-note="c-eq-11-127"></sup></div>
+<p>其中$\hat{b}_0$湮没相应势的基态中的一个原子。</p>
+<h3>弱相互作用：格罗斯-皮塔耶夫斯基方程</h3>
+<p>如果相互作用足够弱，那么我们定性地预期<span data-concept="bose-condensation">玻色凝聚</span>仍应发生，大多数原子占据同一个量子态。我们现在需要确定哪个态将被宏观占据。</p>
+<p>利用<a href="#drv-contact-hamiltonian">式 (11.124)</a>中给出的哈密顿量，我们可以求出物质场算符的海森伯运动方程。</p>
+<figure class="dv" id="drv-field-equation-of-motion"></figure>
+<p>这类非线性算符方程一般很难求解，但我们可以利用物理直觉找到一个合适的近似。特别是，既然我们预期有一个态被宏观占据，场算符就应当接近经典相干场</p>
+<div class="equation" id="eq-11-129">$$\hat{\psi} = \kpsiGP + \delta\hat{\psi}, \tag{11.129}$$</div>
+<p>其中$\langle\delta\hat{\psi}\rangle = 0$。当这些围绕平均值的涨落很小时</p>
+<div class="equation" id="eq-11-130">$$\langle\delta\hat{\psi}^\dagger\delta\hat{\psi}\rangle \ll \langle\hat{\psi}^\dagger\hat{\psi}\rangle, \tag{11.130}$$</div>
+<p>玻色凝聚体就可以用关于$\kpsiGP$的经典非线性方程很好地描述，这个方程称为<span data-concept="gross-pitaevskii-equation" id="gp">格罗斯-皮塔耶夫斯基方程</span>。</p>
+<figure class="dv" id="drv-gross-pitaevskii-equation"></figure>
+<p><span data-concept="gross-pitaevskii-equation">格罗斯-皮塔耶夫斯基方程</span>类似于带有一个非线性项的薛定谔方程，其中$\kpsiGP$起着玻色凝聚体波函数的作用。</p>
+<p>由于$\kpsiGP$起着波函数的作用，我们应当小心它的归一化，它由粒子总数确定</p>
+<div class="equation" id="eq-11-132">$$N = \int d^3\mathbf{r}|\kpsiGP|^2. \tag{11.132}$$</div>
+<p>这一归一化条件促使我们把$|\kpsiGP(\mathbf{r})|^2$解释为<span data-concept="condensate-density" id="condensate-density">凝聚体空间密度</span>。</p>
+<p id="coherent-assumption">在继续之前，我们指出，严格说来，只有当原子场处于<span data-concept="coherent-state">相干态</span>$\hat{\psi}|\kpsiGP\rangle = \kpsiGP|\kpsiGP\rangle$时，才能用经典数$\kpsiGP$代替算符量$\hat{\psi}$。物质波<span data-concept="coherent-state">相干态</span>与电磁<span data-concept="coherent-state">相干态</span>的类似之处在于，它具有不为零的经典相干性$\langle\hat{\psi}\rangle = \kpsiGP$、明确的相位$\propto \kpsiGP$，以及以$\langle\int dV\hat{\psi}^\dagger\hat{\psi}\rangle = \int dV|\kpsiGP|^2$为中心的可能原子数分布。我们对<span data-concept="gross-pitaevskii-equation">格罗斯-皮塔耶夫斯基方程</span>的推导隐含地假定凝聚体处于具有任意相位的<span data-concept="coherent-state">相干态</span><span data-concept="matter-wave-symmetry-breaking" id="symmetry-breaking">（这代表所谓的对称性破缺描述）</span>。这一假设的有效性并不显然，但对于大的原子数，它能很好地描述凝聚体的动力学。</p>
+<p><span data-concept="gross-pitaevskii-equation">格罗斯-皮塔耶夫斯基方程</span>能够充分描述零温玻色凝聚体的大多数性质，并且它与电磁场在<span data-concept="kerr-effect" id="kerr">克尔介质</span>中的演化十分相似。然而，物质场所关心的问题与光所关心的问题大不相同。</p>
+<h3>T=0 时凝聚体的基态</h3>
+<p>电磁场的基态是真空，但物质的行为大不相同，因为原子总数守恒，这导致有限的<span data-concept="chemical-potential">化学势</span>。基态是<span data-concept="gross-pitaevskii-equation">格罗斯-皮塔耶夫斯基方程</span>带有相位演化的定态解</p>
+<div class="equation" id="eq-11-133">$$\kpsiGP = \tilde{\psi}e^{-i\kmuchem \kt/\hbar}, \tag{11.133}$$</div>
+<p>其中$\tilde{\psi}$满足</p>
+<div class="equation" id="eq-11-134">$$\kmuchem\tilde{\psi} = (\underbrace{-\frac{\hbar^2}{2\km}\nabla^2 + \kVr}_{\sim\hbar\komegat} + \underbrace{\kUzero|\tilde{\psi}|^2}_{\kEmf})\tilde{\psi}. \tag{11.134}$$</div>
+<p>解$\tilde{\psi}$的性质由动能项和相互作用项的相对重要性决定。阱频率$\hbar\komegat$与平均场相互作用能$\kEmf \sim \kUzero N/\kV$之比为</p>
+<div class="equation" id="eq-11-135">$$\frac{\kEmf}{\hbar\komegat} \approx \frac{4\pi N\kascat\kat^2}{\kV} \sim \frac{N\kascat}{\kat}, \tag{11.135}$$</div>
+<p>其中$\kascat$是<span data-concept="s-wave-scattering-length">散射长度</span>，<span data-concept="trap-length" id="trap-size">$\kat$是谐振子阱的特征尺寸</span>。注意，凝聚的原子数出现在这个表达式的分子中，所以即使气体的相互作用很弱（$\kascat \ll \kat$），相互作用仍然可以对凝聚体的行为产生重要影响。当$\hbar\komegat \gg \kEmf$时，凝聚体的行为基本上就像无相互作用的气体。在相反的极限$\hbar\komegat \ll \kEmf$下（对于$\kUzero > 0$，称为<span data-concept="thomas-fermi-approximation" id="thomas-fermi">托马斯-费米情形</span>），相互作用占主导。</p>
+<h3>托马斯-费米近似</h3>
+<p>当原子之间的相互作用很强且为排斥性的，$\kUzero > 0$时，我们可以忽略动能项。</p>
+<figure class="dv" id="drv-thomas-fermi-condensate"></figure>
+<p>由于我们处于强相互作用情形，因子$N\kascat/\kat \gg 1$使<span data-concept="chemical-potential">化学势</span>显著增大。凝聚体的大小$\bar{a}$也因相互作用而增大。</p>
+<p>这种膨胀在物理上是合理的，因为它降低了排斥相互作用的能量代价。</p>
+<h3>恢复长度</h3>
+<p><span data-concept="thomas-fermi-approximation">托马斯-费米近似</span>在原子<span data-concept="atom-number-density">密度</span>不足以满足平均场能量压倒动能这一假设的区域效果不佳。特别是，在阱壁附近，动能不能再被忽略。例如，考虑一个处于具有无限高势壁的盒子中的凝聚体。<span data-concept="thomas-fermi-approximation">托马斯-费米近似</span>会预言$|\tilde{\psi}|^2 = N/\kV$是常量，在盒子边缘处突然降为零。在物理上，这是没有意义的：波函数即使在壁上也必须是光滑的，因为$\tilde{\psi}(r)$的急剧变化要付出很高的动能代价。我们预期波函数在某个特征长度$\kxiheal$上平滑地衰减。<span data-concept="healing-length" id="healing">这个所谓的“恢复长度”</span>可以通过令长度$\kxiheal$上的变化所对应的动能等于相互作用能$\sim \kUzero N/\kV$来估计，由此得到</p>
+<div class="equation" id="eq-11-140">$$\kxiheal^2 = \frac{1}{8\pi\kascat N/\kV} = \frac{1}{8\pi\knzero\kascat}. \tag{11.140}$$</div>
+<p>只要气体足够稀薄，$\knzero\kascat^3 \ll 1$，<span data-concept="healing-length">恢复长度</span>就延伸到许多个原子上</p>
+<div class="equation" id="eq-11-141">$$\kxiheal \gg \frac{1}{\knzero^{1/3}}. \tag{11.141}$$</div>
+<p>当这一稀薄气体假设失效时，<span data-concept="gross-pitaevskii-equation">格罗斯-皮塔耶夫斯基方程</span>就不能再对凝聚体给出充分的描述。我们还指出，上述讨论只对相互排斥的原子有效；我们将会发现，当动能接近平均场能量时，吸引性相互作用会出现问题。</p>
+<figure class="sim" id="sim-thomas-fermi">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>各向同性谐振阱中凝聚体的基态，由<a href="#eq-11-134">式 (11.134)</a>求得，画成它沿过中心的一条直线的<span data-concept="condensate-density">密度</span>，以其中心值为标度，长度以阱的<span data-concept="trap-length">特征尺寸</span>$\kat$为单位。虚线是<a href="#eq-11-126">式 (11.126)</a>的无相互作用的高斯函数，点线是<a href="#drv-thomas-fermi-condensate">式 (11.136)</a>的<span data-concept="thomas-fermi-approximation">托马斯-费米</span>抛物线。增大$N\kascat/\kat$，凝聚体就从高斯函数膨胀成抛物线，其半径按$(15N\kascat/\kat)^{1/5}$增长，而它的边缘在<span data-concept="healing-length">恢复长度</span>$\kxiheal$上始终保持圆滑。</span></div>
+</figure>
+</section>

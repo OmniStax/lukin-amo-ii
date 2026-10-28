@@ -1,0 +1,24 @@
+{
+ "id": "intro",
+ "chapter": "3",
+ "title": "引言",
+ "short": "引言",
+ "lead": "",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "本章的开篇，共两段，原文照录。“系统”“环境”和“热库”在此首次用引号标出；它们所指的概念开放系统在 3.2 节讲授，读者将在那里再次遇到它。",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "figures": []
+}

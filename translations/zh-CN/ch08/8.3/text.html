@@ -1,0 +1,57 @@
+<section id="opening">
+<p class="cite-target">我们已经看到光子对原子施力的两种方式，原则上可以使原子束减速。然而，施加给原子的<span data-concept="atomic-recoil">动量冲击</span>不一定会使原子冷却。<span data-concept="laser-cooling">冷却</span>需要黏性的类似物，使得所施加的场不仅使原子减速，还使其速度分布变窄。特别是，如果所施加的场使热原子减速比使冷原子更有效，原子系综就会被冷却。因此，<span data-concept="laser-cooling">冷却</span>力必须依赖于原子的速度。<span data-concept="doppler-cooling" id="doppler-cooling">多普勒冷却技术</span>利用<span data-concept="dissipative-force">耗散力</span>中依赖速度的项，在原子上产生<span data-concept="friction-coefficient">黏性力</span>。</p>
+</section>
+
+<section id="molasses">
+<h2>光学黏团</h2>
+<p class="cite-target">为了理解黏性从何而来，我们将考察慢速运动原子所受的<span data-concept="dissipative-force">耗散力</span>，$\kk\cdot\kv \ll \kdelta, \kgammaonetwo$。</p>
+<figure class="dv" id="drv-doppler-force-expansion"></figure>
+<p>这里我们将<span data-concept="zero-velocity-excitation-rate" id="zero-velocity-rate">$\kRoptzero$认作零速度原子的光激发率</span>。<a href="#drv-doppler-force-expansion">式 (8.28)</a>中出现两项：第一项与速度无关，给予原子一个定向的<span data-concept="atomic-recoil">动量冲击</span>，而第二项则提供依赖速度的<span data-concept="doppler-cooling">冷却</span>力。注意第一项正比于$\kk$，而第二项$\propto \kkmag^2$，因此只有第一项依赖于$\kk$的符号。通过施加<span data-ref="beam-plus beam-minus">对传光束</span>，人们因此可望抵消第一项的效应，同时保留第二项的<span data-concept="doppler-cooling">冷却</span>力。</p>
+<figure class="sim" id="sim-doppler-force" data-figure="8.1 + 8.2" data-original="/media/ch08/fig-8-1.png,/media/ch08/fig-8-2.png" data-original-caption="（图 8.1）用于多普勒冷却的对传光束。（图 8.2）有限速度下的多普勒冷却力。对于红失谐的光束，速度为正的原子受到负的力，反之亦然。以临界速度±v_c运动的原子受到最大的力。">
+  <div class="sim-head"><span class="eyebrow">Figure 8.1 + 8.2</span><span>以速度$\kvmag$在<span data-ref="beam-plus">沿$+z$的光束</span>与<span data-ref="beam-minus">沿$-z$的光束</span>之间运动的原子，朝其中一束发生<span data-concept="recoil-shifted-resonance">多普勒频移</span>。图中给出虚线所示的每束光的力$\kFp$和$\kFm$以及它们的和$\kFmag$随$\kvmag$的变化；阴影带是<span data-concept="capture-range">俘获范围</span>$-\kvc &lt; \kvmag &lt; \kvc$，笔直的虚线是<a href="#drv-friction-coefficient">式 (8.30)</a>的<span data-concept="friction-coefficient">黏性力</span>$\keta\km\kvmag$，在$\kvmag = 0$附近，二者之和遵循它。拖动$\kvmag$可看出哪一束光推得更强，拖动$\kdelta$越过共振可把冷却变成加热；更大的红<span data-concept="detuning">失谐</span>会使$\kvc$向外移动并使斜率变平。频率以$\kgammaonetwo$为单位，速度以$\kgammaonetwo/\kkmag$为单位，力以$\hbar\kkmag\kRoptzero(\kdelta = 0)$为单位，即一束光在共振时的推力。</span></div>
+</figure>
+<p>考虑一个被<span data-ref="beam-plus beam-minus">沿$\pm z$方向反向传播的两束光</span>照射的原子。只要<span data-concept="optical-pumping-rate">光抽运率</span>很小，原子所受的总力就恰是<span data-ref="beam-plus beam-minus">每束光</span>的力之和，$\kFmag = \kFp + \kFm$。的确，与速度无关的力会精确抵消，而第二项则贡献一个<span data-concept="friction-coefficient">黏性力</span></p>
+<div class="equation" id="eq-8-29">$$\kFmag = \kFp + \kFm = \keta \km \kvz \tag{8.29}$$</div>
+<p id="friction-coefficient">其中 m 是原子的质量，<span data-concept="friction-coefficient">$\keta$是摩擦系数</span>。</p>
+<figure class="dv" id="drv-friction-coefficient"></figure>
+<p>注意$\keta$的符号取决于<span data-concept="detuning">失谐</span>的符号：对于$\kdelta &lt; 0$，<span data-concept="friction-coefficient">黏性力</span>将使原子冷却，而对于$\kdelta &gt; 0$，它将使原子加热。</p>
+<p id="doppler-picture"><span data-concept="doppler-cooling">多普勒冷却</span>机制背后的物理可以用能量守恒作朴素的解释。对于$\kdelta &lt; 0$，原子吸收一个<span data-concept="detuning">红失谐</span>光子，然后<span data-concept="spontaneous-emission">自发发射</span>一个与原子跃迁共振的光子，于是原子每个循环都损失能量。<span data-concept="detuning">蓝失谐</span>的光以类似的方式增加原子的动能。更诚实的解释必须计入原子的<span data-concept="recoil-shifted-resonance">多普勒频移</span>，但结果是相似的。当$\kdelta &lt; 0$时，较快的原子经<span data-concept="recoil-shifted-resonance">多普勒频移</span>而更接近与<span data-ref="beam-plus beam-minus">两束对传光束之一</span>共振，因而比较慢的原子吸收更多的光。当$\kdelta &gt; 0$时，情形相反，所以<span data-ref="beam-plus beam-minus">对传光束</span>倾向于加热样品。</p>
+<p id="optical-molasses">读者会注意到，<span data-concept="doppler-cooling">冷却</span>力只在一个维度上起作用。在三维中<span data-concept="doppler-cooling">冷却</span>一个原子需要三组正交的对传光束。对于较小的<span data-concept="optical-pumping-rate">光抽运率</span>，各个方向上的力相互独立，上述分析在每个方向上都成立。<span data-concept="optical-molasses">这种三维黏滞冷却称为光学黏团</span>。</p>
+</section>
+
+<section id="max-friction">
+<h2>摩擦系数的最大值</h2>
+<p class="cite-target" id="friction-largest"><span data-concept="maximum-friction-coefficient">摩擦系数$\keta$最大</span>出现在<span data-concept="detuning">失谐</span>接近<span data-concept="coherence-decay-rate">退相干率</span>时，<i>即</i>$\kdelta \sim \kgammaonetwo$，使得</p>
+<div class="equation" id="eq-8-31">$$\keta = \frac{\hbar \kkmag^2}{\km}\frac{\kRoptzero(\kdelta = 0)}{\kgammaonetwo}. \tag{8.31}$$</div>
+<p>这里，$\kRoptzero(\kdelta = 0) = 2|\kOmega|^2/\kgammaonetwo$是共振时的<span data-concept="optical-pumping-rate">光抽运率</span>。尽管我们是在所施加功率$\kOmega$很小的极限下推导先前结果的，但我们可以猜测功率增大时会发生什么。<span data-concept="optical-pumping-rate">光抽运率</span>最终将在接近原子<span data-concept="spontaneous-emission-rate">自发发射率</span>$\kgamma$的值处饱和。更仔细的分析表明，大功率下的<span data-concept="friction-coefficient">摩擦系数</span></p>
+<div class="equation" id="eq-8-32">$$\keta \to \frac{\hbar \kkmag^2}{8\km}\frac{\kgamma}{\kgammaonetwo}. \tag{8.32}$$</div>
+<p>最大可能的$\keta = \hbar\kkmag^2/4\km$因而在原子跃迁被辐射增宽时达到。这个最大值可以用<span data-concept="recoil-frequency">反冲频率</span>$\komegaR$重写为：</p>
+<div class="equation" id="eq-8-33">$$\keta_\mathrm{max} = \frac{1}{2}\komegaR. \tag{8.33}$$</div>
+<p id="rate-omega-r">由于$\frac{d}{dt}\kpcm = -\keta \kpcm$，<sup class="fn" data-note="c-eta-sign"></sup>我们发现原子以$\sim \komegaR$的速率损失动量。这一发现表明，原子运动的动力学时标为$\sim 1/\komegaR \gg 1/\kgammaonetwo, 1/\kdelta$，这从事后证明了推导<span data-concept="semiclassical-light-force">光力</span>时所用的绝热近似是合理的。由于<span data-concept="doppler-cooling">冷却</span>的典型时标为$\komegaR \sim 10$ kHz，<sup class="fn" data-note="c-cooling-timescale"></sup>我们看到<span data-concept="doppler-cooling">多普勒冷却</span>可以是一个相当迅速的过程。</p>
+</section>
+
+<section id="finite-velocity">
+<h2>有限速度下的行为</h2>
+<p class="cite-target" id="capture-range">在零速度附近，处于<span data-concept="detuning">红失谐</span>黏团中的原子受到近似线性的<span data-concept="friction-coefficient">黏性力</span>。随着其速度增大，<span data-concept="friction-coefficient">摩擦系数</span>变得依赖于速度，我们必须求助于<span data-concept="dissipative-force">多普勒力</span>的完整表达式。事实上，对于$\kk\cdot\kv \gg \kdelta, \kgammaonetwo$，力消失。被有效冷却的速度范围称为“<span data-concept="capture-range">俘获范围</span>”，定义为$-\kvc &lt; \kvmag &lt; \kvc$，其中<span data-concept="capture-range">临界速度</span>对应于最大力$\kFmag_\mathrm{max} = |\kFmag(\pm \kvc)|$。</p>
+<p><span data-concept="capture-range">俘获范围</span>依赖于许多参量，但在某些极限下它有简单的形式。当<span data-concept="optical-pumping-rate">光抽运率</span>与<span data-concept="detuning">失谐</span>和<span data-concept="coherence-decay-rate">退相位率</span>大小相同时，<span data-concept="doppler-cooling">冷却</span>力最大，<span data-concept="capture-range">俘获范围</span>为$\sim \kgammaonetwo/\kkmag$。强驱动的系统$\kRopt \geq \kgammaonetwo$发生功率谱线增宽，所以$\kvc \sim \kOmega/\kkmag$。最后，<span data-concept="detuning">远失谐</span>的场$\kdelta \geq \kgammaonetwo$导致<span data-concept="capture-range">俘获速度</span>$\kvc \sim \kdelta/\kkmag$。在所有这些情形下，<span data-concept="capture-range">俘获速度</span>大致正比于波长乘以问题中的主导速率。</p>
+<figure class="sim" id="sim-molasses">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>一维黏团中的两千个原子，起初速度的分布如同热气体中那样（虚线轮廓），每个原子都服从$\km\,d\kvmag/dt = \kFmag(\kvmag)$，其中的力即上面各光束的力。<span data-concept="capture-range">俘获范围</span>$\pm\kvc$内的原子以<a href="#drv-friction-coefficient">式 (8.30)</a>的速率$\keta$堆积在$\kvmag = 0$处，而更快的原子几乎不被减速。把$\kdelta$移到蓝<span data-concept="detuning">失谐</span>，分布就会分裂并向外跑开。这个力中没有任何东西能阻止变窄：使之停止的加热是下文多普勒极限的主题。时间以$1/\komegaR$为单位，其中$|\kOmega| = 0.3\,\kgammaonetwo$；速度以$\kgammaonetwo/\kkmag$为单位。</span></div>
+</figure>
+</section>
+
+<section id="mot">
+<h2>磁光阱（MOT）</h2>
+<p class="cite-target"><span data-concept="dissipative-force">耗散力</span>可用来冷却原子，使其速度分布变窄，但它们不提供约束势。通过把<span data-concept="optical-molasses">光学黏团</span>与磁场梯度结合，<span data-concept="magneto-optical-trap" id="mot-idea">有可能同时冷却和陷俘原子</span>。</p>
+<p id="mot-config">磁场感生<span data-concept="zeeman-effect">塞曼移位</span>，它可以提供依赖于位置的<span data-concept="detuning">失谐</span>。通过选择<span data-ref="beam-plus beam-minus">对传光束</span>具有不同的<span data-concept="spherical-polarization-basis">圆偏振</span>，我们可以确保这种位置依赖使原子被推回阱的中心。由于我们希望不同的<span data-concept="light-polarization">偏振</span><span data-concept="polarization-selection-rules">耦合不同的原子跃迁</span>，<span data-concept="magneto-optical-trap">磁光阱</span>的运行需要多能级原子。如<a href="#sim-mot">图 8.3</a>所示，最简单的可能构型使用<span data-ref="lvl-ground">$J = 0$</span> $\to$ <span data-ref="lvl-m-minus lvl-m-zero lvl-m-plus">$J = 1$</span>原子跃迁，由<span data-ref="beam-plus beam-minus">两束对传的、交叉圆偏振的光束</span>耦合。施加线性磁场会使<span data-ref="lvl-m-minus lvl-m-zero lvl-m-plus">三个原子上能级</span>发生移位，从而主导的力把该原子推回阱的中心。由于<span data-concept="doppler-cooling">多普勒冷却</span>技术对<span data-concept="light-polarization">偏振</span>不敏感，<span data-concept="magneto-optical-trap">磁光阱</span>同时使原子局域化并冷却。</p>
+<figure class="sim" id="sim-mot" data-figure="8.3" data-original="/media/ch08/fig-8-3.png" data-original-caption="磁光阱。上图：红失谐激光束与磁场的典型构型。下图：J=0 → J = 1 原子跃迁的陷俘力。">
+  <div class="sim-head"><span class="eyebrow">Figure 8.3</span><span>上图为阱：三对对传光束在两个线圈之间交叉，两线圈的电流方向相反，于是场$\kB$在中心为零并向外线性增长；沿线圈的轴$z$，它为$B_0 z\hat{z}$。下图沿$z$：<span data-ref="lvl-m-minus lvl-m-zero lvl-m-plus">$J = 1$的三个子能级</span>因其<span data-concept="zeeman-effect">塞曼移位</span>而分裂，激光频率位于$\kdelta$（虚线），以及<span data-ref="beam-plus">沿$+z$的σ₊光束</span>与<span data-ref="beam-minus">沿$-z$的σ₋光束</span>在原子处从<span data-ref="lvl-ground">$J = 0$</span>驱动的跃迁；其下是每束光的力$\kFp$和$\kFm$，以及它们的和$\kFmag$随$z$的变化。沿$z$拖动原子：在中心的任一侧，塞曼移位使指回中心的那束光的跃迁更接近激光，该束光推得更强。让$\kdelta$取正，阱就把原子向外推。失谐以$\kgammaonetwo$为单位，位置以$z_0$为单位，即$m = \pm 1$的塞曼移位达到$\kgammaonetwo$时的距离，力以$\hbar\kkmag\kRoptzero(\kdelta = 0)$为单位。</span></div>
+</figure>
+<p>关于相关主题的精彩论述，可见于比尔·菲利普斯在 Les Houches LXXII（1999）的讲义，或梅特卡夫与范德斯特拉滕合著的“Laser Cooling and Trapping”。</p>
+</section>
+
+<section id="doppler-limit">
+<h2>多普勒极限</h2>
+<p class="cite-target">我们已经展示了光力如何使原子系综减速和冷却，但尚未考虑<span data-concept="doppler-cooling">多普勒冷却</span>所能达到的最终温度。到目前为止，我们的分析表明原子的能量将减小到零。显然，我们漏掉了某些东西，因为在实际情形中人们通常会发现任何<span data-concept="laser-cooling">冷却</span>方法都有极限。</p>
+<p id="limit-kicks">定性地，我们可以用<span data-concept="spontaneous-emission">自发发射</span>给予原子的<span data-concept="atomic-recoil">动量冲击</span>来理解这一极限。每个原子向$4\pi$<span data-concept="spontaneous-emission">自发发射</span>时，它会沿任意方向受到一次<span data-concept="atomic-recoil">动量冲击</span>，使系综升温。因此，我们预期<span data-concept="doppler-cooling">冷却</span>将持续到<span data-concept="spontaneous-emission">自发发射</span>加热率等于<span data-concept="doppler-cooling">多普勒冷却</span>率。然而，这类考虑超出了我们已经建立的理论，它们促成了一种推广的<span data-concept="doppler-cooling">多普勒冷却</span>理论，其中包括<span data-concept="spontaneous-emission">自发发射</span>的加热效应。</p>
+<p id="limit-approach">处理无规过程的加热效应有许多方法；我们将使用<span data-concept="heisenberg-langevin-equation">海森伯-朗之万方法</span>。在着手计算温度之前，考虑这一方法背后的基本理论思想是有益的，因为它们为原子与相干源和辐射热浴的相互作用提供了进一步的直观认识。</p>
+</section>

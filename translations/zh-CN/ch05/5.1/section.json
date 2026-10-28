@@ -1,0 +1,1067 @@
+{
+ "id": "5.1",
+ "chapter": "5",
+ "title": "Λ 型能级构型中的拉曼跃迁",
+ "short": "Λ 型系统中的拉曼跃迁",
+ "lead": "两个场通过一个激发态连接两个较低能级：<span data-concept=\"lambda-system\">Λ 型系统</span>在薛定谔、密度矩阵和随机波函数图像下的方程，远离共振时的<span data-concept=\"effective-raman-coupling\">有效拉曼耦合</span>，探测光的<span data-concept=\"two-photon-resonance\">双光子共振</span>及其缀饰态解读，<span data-concept=\"two-photon-rabi-oscillations\">双光子拉比振荡</span>，以及多个激发态、多普勒频移、相位和其他构型如何改变这一图像。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "fig-lambda",
+   "kind": "figure",
+   "number": "5.2",
+   "originals": [
+    "/media/ch05/fig-5-2.png"
+   ],
+   "original_caption": "所考虑的 Λ 型系统，图中标出了单光子失谐和双光子失谐。波浪线表示可能的衰变路径",
+   "draws": [
+    "frequency",
+    "coupling",
+    "rate"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-raman-absorption",
+   "kind": "sim",
+   "number": "5.3",
+   "originals": [
+    "/media/ch05/fig-5-3.png"
+   ],
+   "original_caption": "探测光束电极化率的虚部随探测光束失谐的变化。在远离共振的耦合光束 Ω₂ 存在时，Ω₁ 的吸收呈现双共振线型。在此计算中，γ₁₂ = 0，所以单光子共振与双光子共振具有相同的峰值，但双光子峰的谱线宽度显著更窄。",
+   "draws": [
+    "susceptibility",
+    "frequency",
+    "coupling",
+    "rate"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-two-photon-rabi",
+   "kind": "sim",
+   "draws": [
+    "coupling",
+    "frequency",
+    "population",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "focus",
+   "concept": "multiphoton-process-classes",
+   "verb": "introduces"
+  },
+  {
+   "span": "lambda-def",
+   "concept": "lambda-system",
+   "verb": "introduces"
+  },
+  {
+   "span": "detunings",
+   "concept": "lambda-detunings",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-1",
+   "concept": "lambda-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-3",
+   "concept": "lambda-equations-of-motion",
+   "verb": "introduces"
+  },
+  {
+   "span": "raman",
+   "concept": "raman-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-10",
+   "concept": "lambda-density-matrix-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-17",
+   "concept": "complex-decay-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-21",
+   "concept": "lambda-non-hermitian-evolution",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-31",
+   "concept": "probe-susceptibility",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-photon-res",
+   "concept": "two-photon-resonance",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-36",
+   "concept": "raman-unitarity-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "dresses",
+   "concept": "raman-dressed-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-41",
+   "concept": "two-photon-rabi-oscillations",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-42",
+   "concept": "many-excited-states-raman",
+   "verb": "introduces"
+  },
+  {
+   "span": "doppler-free",
+   "concept": "doppler-free-raman",
+   "verb": "introduces"
+  },
+  {
+   "span": "phase-sensitivity",
+   "concept": "raman-phase-insensitivity",
+   "verb": "introduces"
+  },
+  {
+   "span": "configurations",
+   "concept": "three-level-configurations",
+   "verb": "introduces"
+  },
+  {
+   "span": "cascade",
+   "concept": "cascade-two-photon-differences",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-3",
+   "concept": "schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-3",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-10",
+   "concept": "density-matrix",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-10",
+   "concept": "lindblad-master-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-17",
+   "concept": "coherence-decay-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-21",
+   "concept": "monte-carlo-wavefunction",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-21",
+   "concept": "effective-hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-21",
+   "concept": "quantum-jump",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-22",
+   "concept": "jump-probability",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-31",
+   "concept": "susceptibility",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-36",
+   "concept": "unitary-limit",
+   "verb": "uses"
+  },
+  {
+   "span": "dresses",
+   "concept": "dressed-states",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-42",
+   "concept": "ac-stark-shift",
+   "verb": "uses"
+  },
+  {
+   "span": "doppler",
+   "concept": "doppler-broadening",
+   "verb": "uses"
+  },
+  {
+   "span": "cascade",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-raman-coupling",
+   "concept": "effective-raman-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-weak-probe-coherences",
+   "concept": "weak-probe-solution",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-raman-resonance",
+   "concept": "two-photon-detuning-shifted",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-raman-coupling",
+   "concept": "adiabatic-elimination",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-raman-coupling",
+   "concept": "rabi-frequency",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [
+  {
+   "id": "lvl-1",
+   "label": "基态|1⟩",
+   "figures": [
+    "fig-lambda",
+    "sim-two-photon-rabi"
+   ]
+  },
+  {
+   "id": "lvl-2",
+   "label": "亚稳态|2⟩",
+   "figures": [
+    "fig-lambda",
+    "sim-two-photon-rabi"
+   ]
+  },
+  {
+   "id": "lvl-3",
+   "label": "激发态|3⟩",
+   "figures": [
+    "fig-lambda",
+    "sim-two-photon-rabi"
+   ]
+  },
+  {
+   "id": "field-1",
+   "label": "探测场Ω₁，ν₁",
+   "figures": [
+    "fig-lambda",
+    "sim-two-photon-rabi"
+   ]
+  },
+  {
+   "id": "field-2",
+   "label": "耦合场Ω₂，ν₂",
+   "figures": [
+    "fig-lambda",
+    "sim-two-photon-rabi"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-fig-9-3",
+   "kind": "correction",
+   "html": "书中引用了图 9.3。它所描述的 Λ 型系统画在图 5.2 中。"
+  },
+  {
+   "id": "c-eq-5-20",
+   "kind": "correction",
+   "html": "书中在 (5.19) 下面的一个空行上印出了编号 (5.20)；并没有遗漏方程。"
+  },
+  {
+   "id": "c-schrodinger",
+   "kind": "correction",
+   "html": "书中印的是$i\\hbar|\\kpsi\\rangle = \\kHeff|\\kpsi\\rangle$，没有时间导数。薛定谔方程是$i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle = \\kHeff|\\kpsi\\rangle$。"
+  },
+  {
+   "id": "c-real-complex",
+   "kind": "correction",
+   "html": "书中写的是“实部和复数部分”。第二个是分母的虚部，$-i\\kdeltaprime$。"
+  },
+  {
+   "id": "c-fig-7-3",
+   "kind": "correction",
+   "html": "书中引用了图 7.3。三能级构型画在图 5.1 中，即本章开头。"
+  },
+  {
+   "id": "c-eq-5-21",
+   "kind": "correction",
+   "html": "式 (5.21) 把带有$\\hbar$的衰变项加到式 (5.1) 的哈密顿量上，而后者不带。在式 (5.1) 的频率单位下，衰变项是$-\\frac{i\\kgammathree}{2}|3\\rangle\\langle 3| - \\frac{i\\kgammatwo}{2}|2\\rangle\\langle 2|$，后面的运动方程正是这样使用它们的。"
+  },
+  {
+   "id": "c-eq-5-10",
+   "kind": "correction",
+   "html": "书中印的是$+i[\\kH, \\rho]$，且只有$\\mathcal{L}_{31}$和$\\mathcal{L}_{32}$。后面的运动方程 (5.12)–(5.16) 是$\\dot{\\rho} = \\mathcal{L}_{31}(\\rho) + \\mathcal{L}_{32}(\\rho) + \\mathcal{L}_{21}(\\rho) - i[\\kH, \\rho]$的方程：薛定谔演化$-i[\\kH, \\rho]$，其中$\\kH$以$\\hbar$为单位，并包含了速率为$\\gamma'$的从$|2\\rangle$到$|1\\rangle$的衰变。"
+  },
+  {
+   "id": "c-eq-5-38",
+   "kind": "correction",
+   "html": "对于耦合带有负号的哈密顿量 (5.1)，到$\\kOmegatwo/\\kDelta$的一阶，这两个态是$|+\\rangle \\approx |3\\rangle + \\frac{\\kOmegatwo^*}{\\kDelta}|2\\rangle$和$|-\\rangle \\approx |2\\rangle - \\frac{\\kOmegatwo}{\\kDelta}|3\\rangle$；$|3\\rangle$在$|-\\rangle$中的混入量，就是 (5.6) 在$\\kctwo = 1$时给予$\\kcthree$的$-\\kOmegatwo/\\kDelta$。书中两者印的符号相反。后面的宽度只依赖于$|\\kOmegatwo|^2/\\kDelta^2$，保持不变。"
+  },
+  {
+   "id": "c-eq-5-31",
+   "kind": "correction",
+   "html": "书中漏掉了原子的密度。电极化率是$N/\\kV$个原子在单位场下的极化强度，如式 (4.43)：$\\kchione = \\frac{N}{\\kV}\\frac{|\\kmu|^2}{\\hbar\\epsilon_0}\\frac{\\krhothreeone}{\\kOmegaone}$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "raman-coupling",
+   "what": "远失谐 Λ 型系统的有效双光子耦合",
+   "source": "现代原子与光学物理 II，5.1 Λ 型能级构型中的拉曼跃迁，5.1.1 薛定谔方程方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "单光子失谐大且相近，$\\kDeltaone \\sim \\kDeltatwo = \\kDelta \\gg \\kOmegaone, \\kOmegatwo, \\kgammathree, \\kdelta$，所以到$\\kOmega_{1,2}/\\kDelta$的最低阶，激发态概率幅是常数。",
+       "src": "5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcthree}} = \\mk{D}{i\\kDeltaone \\kcthree} + \\mk{R}{i\\kOmegaone \\kcone + i\\kOmegatwo \\kctwo}",
+      "src": "(5.5)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{0} = \\mk{D}{i\\kDelta \\kcthree} + \\mk{R}{i\\kOmegaone \\kcone + i\\kOmegatwo \\kctwo}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{D}{\\kcthree} = \\mk{R}{-\\frac{\\kOmegaone\\kcone + \\kOmegatwo\\kctwo}{\\kDelta}}",
+       "uses": []
+      }
+     ],
+     "num": "(5.6)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{i\\kOmegaone^* \\kcthree}",
+      "src": "(5.3)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{-i\\kOmegaone^*\\frac{\\kOmegaone\\kcone + \\kOmegatwo\\kctwo}{\\kDelta}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{a}{-i\\frac{|\\kOmegaone|^2}{\\kDelta}\\kcone} - \\mk{b}{i\\frac{\\kOmegatwo\\kOmegaone^*}{\\kDelta}\\kctwo}",
+       "uses": [],
+       "map": {
+        "R": [
+         "a",
+         "b"
+        ]
+       }
+      }
+     ],
+     "num": "(5.7)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kctwo}} = \\mk{d}{i\\kdelta \\kctwo} + \\mk{R}{i\\kOmegatwo^* \\kcthree}",
+      "src": "(5.4)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kctwo}} = \\mk{d}{i\\kdelta \\kctwo} - \\mk{R}{i\\kOmegatwo^*\\frac{\\kOmegaone\\kcone + \\kOmegatwo\\kctwo}{\\kDelta}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kctwo}} = \\mk{d}{i\\kdelta \\kctwo} - \\mk{s}{i\\frac{|\\kOmegatwo|^2}{\\kDelta}\\kctwo} - \\mk{b}{i\\frac{\\kOmegaone\\kOmegatwo^*}{\\kDelta}\\kcone}",
+       "uses": [],
+       "map": {
+        "R": [
+         "s",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kctwo}} = \\mk{d}{i(\\kdelta - \\frac{|\\kOmegatwo|^2}{\\kDelta})\\kctwo} - \\mk{b}{i\\frac{\\kOmegaone\\kOmegatwo^*}{\\kDelta}\\kcone}",
+       "uses": [],
+       "map": {
+        "s": "d"
+       }
+      }
+     ],
+     "num": "(5.8)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\dot{\\kctildetwo} = i\\kdelta\\kctildetwo + i\\kOmega \\kcone",
+       "src": "(2.10)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{i\\kOmegaeff\\kcone} = \\mk{b}{-i\\frac{\\kOmegaone\\kOmegatwo^*}{\\kDelta}\\kcone}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "(5.8) 中$c_1$的项所处的位置，正是二能级方程 (2.10) 中$i\\Omega c_1$所处的位置。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\kOmegaeff} = \\mk{b}{-\\frac{\\kOmegatwo^*\\kOmegaone}{\\kDelta}}",
+       "uses": []
+      }
+     ],
+     "num": "(5.9)"
+    }
+   ]
+  },
+  {
+   "id": "lambda-density-matrix",
+   "what": "Λ 型系统的密度矩阵方程",
+   "source": "现代原子与光学物理 II，5.1 Λ 型能级构型中的拉曼跃迁，5.1.2 密度矩阵方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = -\\kDeltaone|3\\rangle\\langle 3| - \\kdelta|2\\rangle\\langle 2| - \\left(\\kOmegaone|3\\rangle\\langle 1| + \\kOmegatwo|3\\rangle\\langle 2| + \\kOmegaone^*|1\\rangle\\langle 3| + \\kOmegatwo^*|2\\rangle\\langle 3|\\right)",
+       "src": "(5.1)"
+      },
+      {
+       "tex": "\\mathcal{L}_{31} = -\\frac{\\gamma_{3\\rightarrow 1}}{2}\\left(\\sigma_{31}\\sigma_{13}\\rho - \\sigma_{13}\\rho\\sigma_{31} + h.c.\\right)",
+       "src": "(5.11)"
+      },
+      {
+       "text": "刘维尔算符包含从$|3\\rangle$到$|1\\rangle$、速率为$\\kgamma$的衰变，从$|3\\rangle$到$|2\\rangle$、速率为$\\tilde{\\gamma}$的衰变，以及从$|2\\rangle$到$|1\\rangle$、速率为$\\gamma'$的衰变。",
+       "src": "5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhooneone}} = \\mk{H}{-i\\langle 1|[\\kH, \\rho]|1\\rangle} + \\mk{D}{\\langle 1|\\mathcal{L}(\\rho)|1\\rangle}",
+      "src": "(5.10)",
+      "uses": [],
+      "why": "运动方程的元素$\\langle 1|\\cdot|1\\rangle$，$\\mathcal{L}$为各刘维尔算符之和。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\krhooneone}} = \\mk{H}{-i\\left(-\\kOmegaone^*\\krhothreeone + \\rho_{13}\\kOmegaone\\right)} + \\mk{D}{\\langle 1|\\mathcal{L}(\\rho)|1\\rangle}",
+       "uses": [
+        0
+       ],
+       "cap": "在$\\hat{H}$中，只有$-\\Omega_1^*|1\\rangle\\langle 3|$在左侧到达$\\langle 1|$，只有$-\\Omega_1|3\\rangle\\langle 1|$在右侧到达$|1\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhooneone}} = \\mk{H}{-i\\kOmegaone\\rho_{13} + i\\kOmegaone^*\\krhothreeone} + \\mk{D}{\\langle 1|\\mathcal{L}(\\rho)|1\\rangle}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhooneone}} = \\mk{H}{-i\\kOmegaone\\rho_{13} + i\\kOmegaone^*\\krhothreeone} + \\mk{D}{\\kgamma\\rho_{33} + \\gamma'\\krhotwotwo}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "由 (5.11)，从$|i\\rangle$到$|j\\rangle$、速率为$\\Gamma$的衰变通过$\\sigma_{ji}\\rho\\sigma_{ij} = \\rho_{ii}|j\\rangle\\langle j|$给$\\dot{\\rho}_{jj}$加上$\\Gamma\\rho_{ii}$，并从$\\dot{\\rho}_{ii}$中减去$\\Gamma\\rho_{ii}$。"
+      }
+     ],
+     "num": "(5.12)",
+     "note": "书中 (5.10) 带有$+i[\\kH, \\rho]$，且只有$\\mathcal{L}_{31}$和$\\mathcal{L}_{32}$。它给出的方程 (5.12)–(5.16) 由$\\dot{\\rho} = -i[\\kH, \\rho]$得出，其中包含从$|2\\rangle$到$|1\\rangle$的衰变$\\gamma'$，这正是这里所推演的。"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = -\\kDeltaone|3\\rangle\\langle 3| - \\kdelta|2\\rangle\\langle 2| - \\left(\\kOmegaone|3\\rangle\\langle 1| + \\kOmegatwo|3\\rangle\\langle 2| + \\kOmegaone^*|1\\rangle\\langle 3| + \\kOmegatwo^*|2\\rangle\\langle 3|\\right)",
+       "src": "(5.1)"
+      },
+      {
+       "tex": "\\mathcal{L}_{31} = -\\frac{\\gamma_{3\\rightarrow 1}}{2}\\left(\\sigma_{31}\\sigma_{13}\\rho - \\sigma_{13}\\rho\\sigma_{31} + h.c.\\right)",
+       "src": "(5.11)"
+      },
+      {
+       "text": "刘维尔算符包含从$|3\\rangle$到$|1\\rangle$、速率为$\\kgamma$的衰变，从$|3\\rangle$到$|2\\rangle$、速率为$\\tilde{\\gamma}$的衰变，以及从$|2\\rangle$到$|1\\rangle$、速率为$\\gamma'$的衰变。",
+       "src": "5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{H}{-i\\langle 2|[\\kH, \\rho]|2\\rangle} + \\mk{D}{\\langle 2|\\mathcal{L}(\\rho)|2\\rangle}",
+      "src": "(5.10)",
+      "uses": [],
+      "why": "运动方程的元素$\\langle 2|\\cdot|2\\rangle$，$\\mathcal{L}$为各刘维尔算符之和。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{H}{-i\\left(-\\kOmegatwo^*\\rho_{32} + \\rho_{23}\\kOmegatwo\\right)} + \\mk{D}{\\langle 2|\\mathcal{L}(\\rho)|2\\rangle}",
+       "uses": [
+        0
+       ],
+       "cap": "在$\\hat{H}$中，$-\\Omega_2^*|2\\rangle\\langle 3|$到达$\\langle 2|$，$-\\Omega_2|3\\rangle\\langle 2|$到达$|2\\rangle$；项$-\\delta|2\\rangle\\langle 2|$在对易式两侧相互抵消。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{H}{-i\\kOmegatwo\\rho_{23} + i\\kOmegatwo^*\\rho_{32}} + \\mk{D}{\\langle 2|\\mathcal{L}(\\rho)|2\\rangle}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{H}{-i\\kOmegatwo\\rho_{23} + i\\kOmegatwo^*\\rho_{32}} + \\mk{D}{-\\gamma'\\krhotwotwo + \\tilde{\\gamma}\\rho_{33}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "由 (5.11)，从$|i\\rangle$到$|j\\rangle$、速率为$\\Gamma$的衰变通过$\\sigma_{ji}\\rho\\sigma_{ij} = \\rho_{ii}|j\\rangle\\langle j|$给$\\dot{\\rho}_{jj}$加上$\\Gamma\\rho_{ii}$，并从$\\dot{\\rho}_{ii}$中减去$\\Gamma\\rho_{ii}$。"
+      }
+     ],
+     "num": "(5.13)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = -\\kDeltaone|3\\rangle\\langle 3| - \\kdelta|2\\rangle\\langle 2| - \\left(\\kOmegaone|3\\rangle\\langle 1| + \\kOmegatwo|3\\rangle\\langle 2| + \\kOmegaone^*|1\\rangle\\langle 3| + \\kOmegatwo^*|2\\rangle\\langle 3|\\right)",
+       "src": "(5.1)"
+      },
+      {
+       "text": "每个相干性$\\rho_{ij}$以速率$\\gamma_{ij}$衰变，其中包含非辐射退相干。",
+       "src": "5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhotwoone}} = \\mk{H}{-i\\langle 2|[\\kH, \\rho]|1\\rangle} + \\mk{D}{\\langle 2|\\mathcal{L}(\\rho)|1\\rangle}",
+      "src": "(5.10)",
+      "uses": [],
+      "why": "运动方程的元素$\\langle 2|\\cdot|1\\rangle$，$\\mathcal{L}$为各刘维尔算符之和。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwoone}} = \\mk{H}{-i\\left(-\\kdelta\\krhotwoone - \\kOmegatwo^*\\krhothreeone + \\rho_{23}\\kOmegaone\\right)} + \\mk{D}{\\langle 2|\\mathcal{L}(\\rho)|1\\rangle}",
+       "uses": [
+        0
+       ],
+       "cap": "在$\\hat{H}$中，$-\\delta|2\\rangle\\langle 2|$和$-\\Omega_2^*|2\\rangle\\langle 3|$到达$\\langle 2|$，$-\\Omega_1|3\\rangle\\langle 1|$到达$|1\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwoone}} = \\mk{H}{i\\kdelta\\krhotwoone + i\\kOmegatwo^*\\krhothreeone - i\\kOmegaone\\rho_{23}} + \\mk{D}{\\langle 2|\\mathcal{L}(\\rho)|1\\rangle}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwoone}} = \\mk{H}{i\\kdelta\\krhotwoone + i\\kOmegatwo^*\\krhothreeone - i\\kOmegaone\\rho_{23}} - \\mk{D}{\\kgammaonetwo\\krhotwoone}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwoone}} = \\mk{D}{-\\left(\\kgammaonetwo - i\\kdelta\\right)\\krhotwoone} + \\mk{H}{i\\kOmegatwo^*\\krhothreeone - i\\kOmegaone\\rho_{23}}",
+       "uses": [],
+       "map": {
+        "H": [
+         "D",
+         "H"
+        ]
+       }
+      }
+     ],
+     "num": "(5.14)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = -\\kDeltaone|3\\rangle\\langle 3| - \\kdelta|2\\rangle\\langle 2| - \\left(\\kOmegaone|3\\rangle\\langle 1| + \\kOmegatwo|3\\rangle\\langle 2| + \\kOmegaone^*|1\\rangle\\langle 3| + \\kOmegatwo^*|2\\rangle\\langle 3|\\right)",
+       "src": "(5.1)"
+      },
+      {
+       "text": "每个相干性$\\rho_{ij}$以速率$\\gamma_{ij}$衰变，其中包含非辐射退相干。",
+       "src": "5.1"
+      },
+      {
+       "text": "$\\kDelta = \\kDeltaone$。",
+       "src": "5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\rho}_{31}} = \\mk{H}{-i\\langle 3|[\\kH, \\rho]|1\\rangle} + \\mk{D}{\\langle 3|\\mathcal{L}(\\rho)|1\\rangle}",
+      "src": "(5.10)",
+      "uses": [],
+      "why": "运动方程的元素$\\langle 3|\\cdot|1\\rangle$，$\\mathcal{L}$为各刘维尔算符之和。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\rho}_{31}} = \\mk{H}{-i\\left(-\\kDeltaone\\krhothreeone - \\kOmegaone\\krhooneone - \\kOmegatwo\\krhotwoone + \\rho_{33}\\kOmegaone\\right)} + \\mk{D}{\\langle 3|\\mathcal{L}(\\rho)|1\\rangle}",
+       "uses": [
+        0
+       ],
+       "cap": "在$\\hat{H}$中，$-\\Delta_1|3\\rangle\\langle 3|$、$-\\Omega_1|3\\rangle\\langle 1|$和$-\\Omega_2|3\\rangle\\langle 2|$到达$\\langle 3|$，$-\\Omega_1|3\\rangle\\langle 1|$到达$|1\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\rho}_{31}} = \\mk{H}{i\\kDelta\\krhothreeone + i\\kOmegatwo\\krhotwoone + i\\kOmegaone\\left(\\krhooneone - \\rho_{33}\\right)} + \\mk{D}{\\langle 3|\\mathcal{L}(\\rho)|1\\rangle}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\rho}_{31}} = \\mk{H}{i\\kDelta\\krhothreeone + i\\kOmegatwo\\krhotwoone + i\\kOmegaone\\left(\\krhooneone - \\rho_{33}\\right)} - \\mk{D}{\\kgammaonethree\\krhothreeone}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\rho}_{31}} = \\mk{D}{-\\left(\\kgammaonethree - i\\kDelta\\right)\\krhothreeone} + \\mk{H}{i\\kOmegatwo\\krhotwoone + i\\kOmegaone\\left(\\krhooneone - \\rho_{33}\\right)}",
+       "uses": [],
+       "map": {
+        "H": [
+         "D",
+         "H"
+        ]
+       }
+      }
+     ],
+     "num": "(5.15)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = -\\kDeltaone|3\\rangle\\langle 3| - \\kdelta|2\\rangle\\langle 2| - \\left(\\kOmegaone|3\\rangle\\langle 1| + \\kOmegatwo|3\\rangle\\langle 2| + \\kOmegaone^*|1\\rangle\\langle 3| + \\kOmegatwo^*|2\\rangle\\langle 3|\\right)",
+       "src": "(5.1)"
+      },
+      {
+       "text": "每个相干性$\\rho_{ij}$以速率$\\gamma_{ij}$衰变，其中包含非辐射退相干。",
+       "src": "5.1"
+      },
+      {
+       "text": "$\\kDelta = \\kDeltaone$。",
+       "src": "5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\rho}_{32}} = \\mk{H}{-i\\langle 3|[\\kH, \\rho]|2\\rangle} + \\mk{D}{\\langle 3|\\mathcal{L}(\\rho)|2\\rangle}",
+      "src": "(5.10)",
+      "uses": [],
+      "why": "运动方程的元素$\\langle 3|\\cdot|2\\rangle$，$\\mathcal{L}$为各刘维尔算符之和。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\rho}_{32}} = \\mk{H}{-i\\left(-\\kDeltaone\\rho_{32} - \\kOmegaone\\krhoonetwo - \\kOmegatwo\\krhotwotwo + \\kdelta\\rho_{32} + \\kOmegatwo\\rho_{33}\\right)} + \\mk{D}{\\langle 3|\\mathcal{L}(\\rho)|2\\rangle}",
+       "uses": [
+        0
+       ],
+       "cap": "在$\\hat{H}$中，$-\\Delta_1|3\\rangle\\langle 3|$、$-\\Omega_1|3\\rangle\\langle 1|$和$-\\Omega_2|3\\rangle\\langle 2|$到达$\\langle 3|$，$-\\delta|2\\rangle\\langle 2|$和$-\\Omega_2|3\\rangle\\langle 2|$到达$|2\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\rho}_{32}} = \\mk{H}{i(\\kDelta - \\kdelta)\\rho_{32} + i\\kOmegatwo\\left(\\krhotwotwo - \\rho_{33}\\right) + i\\kOmegaone\\krhoonetwo} + \\mk{D}{\\langle 3|\\mathcal{L}(\\rho)|2\\rangle}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\rho}_{32}} = \\mk{H}{i(\\kDelta - \\kdelta)\\rho_{32} + i\\kOmegatwo\\left(\\krhotwotwo - \\rho_{33}\\right) + i\\kOmegaone\\krhoonetwo} - \\mk{D}{\\gamma_{23}\\rho_{32}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\rho}_{32}} = \\mk{D}{-\\left(\\gamma_{23} - i(\\kDelta - \\kdelta)\\right)\\rho_{32}} + \\mk{H}{i\\kOmegatwo\\left(\\krhotwotwo - \\rho_{33}\\right) + i\\kOmegaone\\krhoonetwo}",
+       "uses": [],
+       "map": {
+        "H": [
+         "D",
+         "H"
+        ]
+       }
+      }
+     ],
+     "num": "(5.16)"
+    }
+   ]
+  },
+  {
+   "id": "weak-probe-coherences",
+   "what": "弱探测下的 Λ 型系统",
+   "source": "现代原子与光学物理 II，5.1 Λ 型能级构型中的拉曼跃迁，5.1.3 随机波函数方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "到$\\kOmegaone$的零阶，起初处于$|1\\rangle$的系统保持在那里：$\\kcone \\approx 1$。",
+       "src": "5.1"
+      },
+      {
+       "text": "对于纯态$\\rho_{ij} = c_ic_j^*$，如$\\krhotwoone = \\kctwo\\kcone^*$。",
+       "src": "5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{\\krhooneone} = \\mk{c}{|\\kcone|^2}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\krhooneone} = \\mk{c}{|\\kcone|^2} = \\mk{o}{1}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(5.28)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kGammaonetwo\\kctwo = i\\kOmegatwo^* \\kcthree",
+       "src": "(5.26)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{G}{\\kGammaonethree\\kcthree} = \\mk{a}{i\\kOmegaone} + \\mk{b}{i\\kOmegatwo \\kctwo}",
+      "src": "(5.27)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{G}{\\kGammaonethree\\kcthree} = \\mk{a}{i\\kOmegaone} + \\mk{b}{i\\kOmegatwo\\frac{i\\kOmegatwo^*\\kcthree}{\\kGammaonetwo}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{G}{\\kGammaonethree\\kcthree} = \\mk{a}{i\\kOmegaone} - \\mk{b}{\\frac{|\\kOmegatwo|^2}{\\kGammaonetwo}\\kcthree}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{G}{\\left(\\kGammaonethree + \\frac{|\\kOmegatwo|^2}{\\kGammaonetwo}\\right)\\kcthree} = \\mk{a}{i\\kOmegaone}",
+       "uses": [],
+       "map": {
+        "b": "G"
+       }
+      },
+      {
+       "tex": "\\mk{G}{\\kcthree} = \\mk{a}{\\frac{i\\kOmegaone\\kGammaonetwo}{\\kGammaonetwo\\kGammaonethree + |\\kOmegatwo|^2}}",
+       "uses": [],
+       "cap": "作除法，并将分子分母同乘$\\Gamma_{12}$。"
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "到$\\kOmegaone$的零阶，起初处于$|1\\rangle$的系统保持在那里：$\\kcone \\approx 1$。",
+       "src": "5.1"
+      },
+      {
+       "text": "对于纯态$\\rho_{ij} = c_ic_j^*$，如$\\krhotwoone = \\kctwo\\kcone^*$。",
+       "src": "5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{G}{\\kGammaonetwo\\kctwo} = \\mk{R}{i\\kOmegatwo^* \\kcthree}",
+      "src": "(5.26)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{G}{\\kctwo} = \\mk{R}{\\frac{i\\kOmegatwo^*\\kcthree}{\\kGammaonetwo}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{G}{\\kctwo} = \\mk{R}{\\frac{i\\kOmegatwo^*}{\\kGammaonetwo}\\frac{i\\kOmegaone\\kGammaonetwo}{\\kGammaonetwo\\kGammaonethree + |\\kOmegatwo|^2}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{G}{\\kctwo} = \\mk{R}{-\\frac{\\kOmegaone\\kOmegatwo^*}{\\kGammaonetwo\\kGammaonethree + |\\kOmegatwo|^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{r}{\\krhotwoone} = \\mk{G}{\\kcone^* \\kctwo} = \\mk{R}{-\\frac{\\kOmegaone\\kOmegatwo^*}{\\kGammaonetwo\\kGammaonethree + |\\kOmegatwo|^2}}",
+       "uses": [
+        1,
+        2
+       ]
+      }
+     ],
+     "num": "(5.29)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "到$\\kOmegaone$的零阶，起初处于$|1\\rangle$的系统保持在那里：$\\kcone \\approx 1$。",
+       "src": "5.1"
+      },
+      {
+       "text": "对于纯态$\\rho_{ij} = c_ic_j^*$，如$\\krhotwoone = \\kctwo\\kcone^*$。",
+       "src": "5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{\\krhothreeone} = \\mk{c}{\\kcone^* \\kcthree}",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\krhothreeone} = \\mk{c}{\\kcone^* \\kcthree} = \\mk{R}{i\\kOmegaone\\frac{\\kGammaonetwo}{\\kGammaonetwo\\kGammaonethree + |\\kOmegatwo|^2}}",
+       "uses": [
+        0,
+        1
+       ]
+      }
+     ],
+     "num": "(5.30)"
+    }
+   ]
+  },
+  {
+   "id": "probe-response",
+   "what": "Λ 型系统对探测光的响应",
+   "source": "现代原子与光学物理 II，5.1 Λ 型能级构型中的拉曼跃迁，5.1.4 大失谐 Δ，弱 Ω₁",
+   "nodes": [
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{L}{\\krhothreeone} = \\mk{R}{i\\kOmegaone\\frac{\\kGammaonetwo}{\\kGammaonetwo\\kGammaonethree + |\\kOmegatwo|^2}}",
+      "src": "(5.30)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone}} = \\mk{R}{\\frac{i\\kGammaonetwo}{\\kGammaonetwo\\kGammaonethree + |\\kOmegatwo|^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone}} = \\mk{R}{\\frac{i}{\\kGammaonethree}\\left(\\frac{\\kGammaonetwo}{\\kGammaonetwo + |\\kOmegatwo|^2/\\kGammaonethree}\\right)}",
+       "uses": [],
+       "cap": "将分子分母同除以$\\Gamma_{13}$。"
+      }
+     ],
+     "num": "(5.32)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone}} = \\mk{R}{\\frac{i}{\\kGammaonethree}\\left(\\frac{\\kGammaonetwo}{\\kGammaonetwo + |\\kOmegatwo|^2/\\kGammaonethree}\\right)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone}} = \\mk{R}{\\frac{i}{\\kGammaonethree}\\left(1 - \\frac{|\\kOmegatwo|^2/\\kGammaonethree}{\\kGammaonetwo + |\\kOmegatwo|^2/\\kGammaonethree}\\right)}",
+       "uses": [],
+       "cap": "写成$a/(a + b) = 1 - b/(a + b)$。"
+      }
+     ],
+     "num": "(5.33)"
+    }
+   ]
+  },
+  {
+   "id": "raman-resonance",
+   "what": "双光子共振的宽度和偏移",
+   "source": "现代原子与光学物理 II，5.1 Λ 型能级构型中的拉曼跃迁，5.1.4 大失谐 Δ，弱 Ω₁",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kGammaonethree = \\kgammaonethree - i\\kDelta",
+       "src": "(5.18)"
+      },
+      {
+       "text": "$\\kDelta \\gg \\kgammaonethree$，所以$\\kGammaonethree \\approx -i\\kDelta$。",
+       "src": "5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone}} = \\mk{R}{\\frac{i}{\\kGammaonethree}\\left(1 - \\frac{|\\kOmegatwo|^2/\\kGammaonethree}{\\kGammaonetwo + |\\kOmegatwo|^2/\\kGammaonethree}\\right)}",
+      "src": "(5.33)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone}} = \\mk{a}{\\frac{i}{\\kGammaonethree}} - \\mk{b}{\\frac{i}{\\kGammaonethree}\\frac{|\\kOmegatwo|^2/\\kGammaonethree}{\\kGammaonetwo + |\\kOmegatwo|^2/\\kGammaonethree}}",
+       "uses": [],
+       "map": {
+        "R": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone} - \\frac{i}{\\kGammaonethree}} = \\mk{b}{-\\frac{i}{\\kGammaonethree}\\frac{|\\kOmegatwo|^2/\\kGammaonethree}{\\kGammaonetwo + |\\kOmegatwo|^2/\\kGammaonethree}}",
+       "uses": [],
+       "map": {
+        "a": "L"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone} - \\frac{i}{\\kGammaonethree}} = \\mk{b}{-\\frac{i|\\kOmegatwo|^2/\\kGammaonethree^2}{\\kGammaonetwo + |\\kOmegatwo|^2/\\kGammaonethree}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone} - \\frac{i}{\\kGammaonethree}} \\approx \\mk{b}{\\frac{i|\\kOmegatwo|^2/\\kDelta^2}{\\kGammaonetwo + |\\kOmegatwo|^2/\\kGammaonethree}}",
+       "uses": [
+        1
+       ],
+       "cap": "在分子中，到领头阶，$\\Gamma_{13}^2 \\approx -\\Delta^2$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone} - \\frac{i}{\\kGammaonethree}} \\approx \\mk{b}{\\frac{i|\\kOmegatwo|^2/\\kDelta^2}{\\kGammaonetwo + (|\\kOmegatwo|^2/\\kDelta^2)(\\kgammaonethree + i\\kDelta)}}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "在分母中，衰变保留到一阶：$1/\\Gamma_{13} = (\\gamma_{13} + i\\Delta)/(\\gamma_{13}^2 + \\Delta^2) \\approx (\\gamma_{13} + i\\Delta)/\\Delta^2$。"
+      }
+     ],
+     "num": "(5.34)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kGammaonetwo = \\kgammaonetwo - i\\kdelta",
+       "src": "(5.17)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone} - \\frac{i}{\\kGammaonethree}} \\approx \\mk{b}{\\frac{i|\\kOmegatwo|^2/\\kDelta^2}{\\kGammaonetwo + (|\\kOmegatwo|^2/\\kDelta^2)(\\kgammaonethree + i\\kDelta)}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone} - \\frac{i}{\\kGammaonethree}} \\approx \\mk{b}{\\frac{i|\\kOmegatwo|^2/\\kDelta^2}{\\kgammaonetwo - i\\kdelta + \\kgammaonethree|\\kOmegatwo|^2/\\kDelta^2 + i|\\kOmegatwo|^2/\\kDelta}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\krhothreeone}{\\kOmegaone} - \\frac{i}{\\kGammaonethree}} \\approx \\mk{b}{\\frac{i|\\kOmegatwo|^2/\\kDelta^2}{\\underbrace{\\kgammaonetwo + \\kgammaonethree(|\\kOmegatwo|^2/\\kDelta^2)}_{\\kgammaeff} - i\\underbrace{(\\kdelta - |\\kOmegatwo|^2/\\kDelta)}_{\\kdeltaprime}}}",
+       "uses": [],
+       "cap": "收集分母的实部和虚部。"
+      }
+     ],
+     "num": "(5.35)",
+     "note": "书中把分母的实部印成$(\\kgammaonetwo/2) + (\\kgammaonethree/2)(|\\kOmegatwo|^2/\\kDelta^2)$；展开 (5.34) 得到的是不带二分之一的形式，正如其后的文字和 (5.39) 所述。"
+    }
+   ]
+  }
+ ]
+}

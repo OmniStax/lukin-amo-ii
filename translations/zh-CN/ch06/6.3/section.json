@@ -1,0 +1,35 @@
+{
+ "id": "6.3",
+ "chapter": "6",
+ "title": "非厄米演化：小结",
+ "short": "非厄米演化",
+ "lead": "何时可以仅用<span data-concept=\"effective-hamiltonian\">非厄米哈密顿量</span>处理一个系统而略去<span data-concept=\"quantum-jump\">量子跳跃</span>，以及这种处理对受弱驱动的<span data-concept=\"two-level-atom\">二能级原子</span>遗漏了什么。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "high"}, {"model": "claude-sonnet-5-5", "effort": "medium"}],
+  "figures": [{"model": "claude-opus-5-5", "effort": "high"}, {"model": "claude-sonnet-5-5", "effort": "medium"}]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-weak-leak",
+   "kind": "sim",
+   "draws": ["population", "coupling", "time", "rate"],
+   "ai": [{"model": "claude-opus-5-5", "effort": "high", "part": "built"}, {"model": "claude-sonnet-5-5", "effort": "medium", "part": "翻译"}]
+  }
+ ],
+ "coverage": [
+  {"span": "non-hermitian-evolution", "concept": "non-hermitian-evolution", "verb": "introduces"},
+  {"span": "stochastic-method", "concept": "monte-carlo-wavefunction", "verb": "uses"},
+  {"span": "two-parts", "concept": "effective-hamiltonian", "verb": "uses"},
+  {"span": "two-parts", "concept": "quantum-jump", "verb": "uses"},
+  {"span": "weak-drive", "concept": "two-level-atom", "verb": "uses"},
+  {"span": "weak-drive", "concept": "rabi-frequency", "verb": "uses"},
+  {"span": "missing-term", "concept": "master-equation", "verb": "uses"},
+  {"span": "missing-term", "concept": "density-matrix-populations", "verb": "uses"}
+ ]
+}

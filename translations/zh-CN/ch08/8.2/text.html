@@ -1,0 +1,49 @@
+<section id="opening">
+<p>原子与平面波的相互作用说明了原子在相干吸收光子的过程中如何改变其动量和能量。非相干过程也会对运动态产生影响，因为<span data-concept="spontaneous-emission">自发发射</span>将产生<span data-concept="atomic-recoil">动量冲击</span>的无规分布。要真正描述这类过程，就需要对电磁场和原子动量态作量子处理。然而，要描述经典情形下的质心运动，并不需要这样的细节。因此我们将采用<span data-concept="semiclassical-light-force" id="semiclassical">半经典方法</span>来理解光对原子施加的力。</p>
+<p>经典动力学与量子动力学之间的对应关系在<span data-concept="heisenberg-picture">海森伯绘景</span>中最容易看出，其中动量与<span data-concept="moving-atom-hamiltonian">哈密顿量</span>的<span data-concept="commutator">对易式</span>给出<span data-concept="light-force-operator" id="force-operator">有效力</span>：</p>
+<div class="equation" id="eq-8-9">$$\frac{d}{d\kt}\kp = \frac{1}{i\hbar}[\kp, \kH] = \kF. \tag{8.9}$$</div>
+<figure class="dv" id="drv-light-force-operator"></figure>
+<p>我们现在引入这样的想法：我们的原子非常接近于一个经典运动的球，所受的是平均力。</p>
+<p id="ratio">由于$\krhotwoone/\kOmega \propto \kchi$与$\kOmega$的相位无关，用这个比值来表示力是方便的。</p>
+<p>把<span data-concept="susceptibility">电极化率</span>的实部和虚部分开，我们发现原子响应的<span data-concept="semiclassical-light-force">反应</span>分量和<span data-concept="semiclassical-light-force">耗散</span>分量分别给出贡献。</p>
+<figure class="dv" id="drv-semiclassical-light-force"></figure>
+<p id="validity-estimate">当我们可以用<span data-concept="steady-state-coherence">密度矩阵方程的定常态解</span>来求解$\krhotwoone$时，这个力特别容易计算和理解。定常态解在时标$\kt$远大于<span data-concept="dephasing-rate">退相位时间</span>$1/\kgammaonetwo$或<span data-concept="detuning">失谐</span>的倒数$1/\kdelta$时成立。为使我们对力的描述成立，原子波包的宽度必须远小于光波长，$\Delta r(0) \ll \klambda$，这样原子才能分辨场的相位。在稍后的某一时刻，质心运动近似地由$r(\kt) \sim r(0) + p(0)\kt/\km$给出，其不确定度为$\Delta r(\kt) \sim \Delta r(0) + \Delta p(0)\kt/\km$。为使力的方程在时刻$\kt$仍然成立，必须有$\Delta p(0)\kt/\km \ll \klambda$，即$\kkmag\Delta p(0)\kt/\km \ll 1$。利用<span data-concept="heisenberg-uncertainty-principle">不确定度关系</span>$\Delta r(0)\Delta p(0) \sim \hbar$和$\Delta r(0) \ll \klambda$，对时间的限制可以写成$\kt \ll (1/\komegaR)$，其中<span data-concept="recoil-frequency" id="recoil-energy">反冲能$\hbar\komegaR = (\hbar \kkmag)^2/2\km$</span>。于是，<span data-concept="semiclassical-force-validity" id="validity">这种半经典的力的描述成立的情形为</span></p>
+<div class="equation" id="eq-8-19">$$\komegaR \ll 1/\kt \ll \max(\kgammaonetwo, \kdelta). \tag{8.19}$$</div>
+<p id="weak-field-ratio">当这个条件满足、且光强较小时，我们可以用$\krhotwoone/\kOmega = i/(\kgammaonetwo - i(\kdelta - \kkmag\kvmag))$求出光致力，并分析其背后的物理。</p>
+</section>
+
+<section id="dipole">
+<h2>大失谐：偶极力</h2>
+<p>当入射光远<span data-concept="detuning">失谐</span>于原子共振时，<span data-concept="susceptibility">电极化率</span>的实部占主导，响应几乎纯粹是<span data-concept="semiclassical-light-force">反应性的</span>。在此极限下，$\krhotwoone/\kOmega = -1/\kdelta$，且</p>
+<div class="equation" id="eq-8-20">$$\kFmag = -\hbar\nabla\left(\frac{|\kOmega|^2}{\kdelta}\right). \tag{8.20}$$</div>
+<p id="v-eff">这类力称为<span data-concept="dipole-force" id="dipole-force-name">“偶极力”</span>，它是保守的，因为它可以写成势的梯度。注意，势$\kVeff = \hbar|\kOmega|^2/\kdelta$对应于外加场所感生的<span data-concept="ac-stark-shift">交流斯塔克偏移</span>。实际上，我们可以通过在<span data-concept="dressed-states">缀饰态图像</span>中考察原子能级来解释<span data-concept="dipole-force">偶极力</span>的起源。对于远离共振的光束，原子保持在基态，但它们可以通过移动到<span data-concept="ac-stark-shift">交流斯塔克偏移</span>使基态能量降低的区域来减小其势能。因此，<span data-concept="dipole-force">偶极力</span>表示处于<span data-concept="dressed-states">缀饰态</span>势中的原子所受的吸引或排斥。</p>
+<p><span data-concept="detuning">失谐</span>的符号决定<span data-concept="dipole-force">偶极力</span>的符号。特别地，</p>
+<div class="equation" id="eq-detuning-sign">$$\begin{aligned} &amp;\kdelta &lt; 0 \Rightarrow \text{原子被吸引到场极大处} \\ &amp;\kdelta &gt; 0 \Rightarrow \text{原子被吸引到场极小处。} \end{aligned}$$</div>
+<p>因此，<span data-concept="dipole-force">偶极力</span>可以按需要调节成吸引或排斥原子。对<span data-concept="detuning">失谐</span>的符号依赖关系也可以从经典论证中得到。如果我们把原子看作可极化的经典偶极子$d$，置于极化电场$E$中，则它的能量为$-E\cdot d$。频率低于共振的外加场将感生一个与场同相振荡的偶极子，使能量降低。高于共振的激发感生一个与外加场异相$\pi$的偶极子，使能量升高。因此，处于<span data-concept="detuning">红失谐</span>场中的原子将趋向场极大处，而处于<span data-concept="detuning">蓝失谐</span>场中的原子将趋向场极小处。</p>
+<p><span data-concept="dipole-force">偶极力</span>只有在大<span data-concept="detuning">失谐</span>时才占主导，需要同样大的功率$|\kOmega|^2$才能产生强约束的阱。在此极限下，<span data-concept="dipole-force">偶极力</span>提供了一种有效的方法来约束原子，而不引入大量<span data-concept="spontaneous-emission">自发发射</span>。</p>
+<p id="applications"><span data-concept="dipole-force">偶极力</span>的两个重要例子已在原子物理学中得到广泛应用。<span data-concept="dipole-trap" id="dipole-trap">偶极阱</span>是通过将<span data-concept="detuning">红失谐</span>光束紧紧聚焦而形成的，该光束把原子吸引到光强最大的区域。这种简单的设计已被用于操控和研究冷原子和玻色-爱因斯坦凝聚体。<span data-concept="dipole-force">偶极力</span>的第二个重要应用称为<span data-concept="optical-lattice" id="optical-lattice">“光学格子”</span>。被驻波照射的原子被吸引到波节或波腹，间隔为$\sim \klambda/2$。单个驻波将产生一维格子，而加上正交的光束就可以产生更高维的格子。这些<span data-concept="optical-lattice">光学格子</span>近似等价于<span data-concept="optical-lattice">“原子晶体”</span>，并且可以通过用原子和激光搭建一个模型晶体，来研究与固体物理学中类似的现象。</p>
+<figure class="sim" id="sim-dipole-potential">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>上方的条带是光沿$x$的强度$|\kOmega(x)|^2$，如<span data-concept="dipole-trap">偶极阱</span>中那样紧聚焦的光束或如<span data-concept="optical-lattice">光学格子</span>中那样的驻波；下方的曲线是它产生的势$\kVeff = \hbar|\kOmega(x)|^2/\kdelta$，箭头表示其斜坡上的<span data-concept="dipole-force">偶极力</span>。<span data-concept="detuning">红失谐</span>，$\kdelta &lt; 0$，使每个光强极大处变成一口势阱，原子聚集在那里；<span data-concept="detuning">蓝失谐</span>使它变成一座山丘，并把原子驱赶到其间的暗处。在驻波中，势阱相距$\klambda/2$。增大$|\kOmega_0|$，势阱按$|\kOmega_0|^2$变深；增大$|\kdelta|$，势阱按$1/\kdelta$变浅，而每个原子散射的光则下降得更快，按$1/\kdelta^2$。频率以$\kgammaonetwo$为单位，$x$以波长$\klambda$为单位。</span></div>
+</figure>
+<p id="multilevel"><span data-concept="dipole-force">偶极力</span>常常可以推广到许多态$\{|i\rangle\}$，每个态都有一个与之相关联的有效势，</p>
+<div class="equation" id="eq-8-21">$$\kVeff = \hbar\sum_i \frac{|\kOmega_i|^2}{\kdelta_i}|i\rangle\langle i|. \tag{8.21}$$</div>
+<p>这个有效势只包含多能级原子所经历的<span data-concept="ac-stark-shift">交流斯塔克偏移</span>；一般来说，考虑近简并原子能级之间的双光子过程所引起的贡献（量级也是$1/\kdelta$）可能是重要的。在这种情况下，内态$\{|i\rangle\}$不再是良好的本征态，我们需要对<span data-concept="hamiltonian">哈密顿量</span>重新对角化，才能得到真正的<span data-concept="dressed-states">缀饰态</span>势。</p>
+</section>
+
+<section id="dissipative">
+<h2>平面波：耗散力</h2>
+<p>被平面波照射的原子不受<span data-concept="dipole-force">偶极力</span>，因为$\nabla|\kOmega^2| = 0$。<span data-concept="dissipative-force" id="dissipative-force">耗散力</span>取决于$\mathrm{Im}(\krhotwoone/\kOmega)$。</p>
+<p id="doppler-term">$\kkmag\kvmag$项反映了以速度$\kvmag$运动的原子看到经<span data-concept="recoil-shifted-resonance">多普勒频移</span>的激光频率这一事实。</p>
+<figure class="dv" id="drv-dissipative-force"></figure>
+<p>这里$\kRopt$是<span data-concept="optical-pumping-rate">光抽运率</span>。上面的表达式只在弱场极限下成立，即当$\kRopt \ll \kgamma$时。</p>
+<p id="kicks"><span data-concept="dissipative-force">耗散力</span>背后的物理直觉很直截了当。每吸收一个光子，光就向原子施加一个<span data-concept="atomic-recoil">动量冲击$\hbar\kk$</span>。当原子非相干地弛豫到基态时，它向$4\pi$发射一个光子，不会导致动量的净变化。因此，每当一个光子被吸收然后<span data-concept="spontaneous-emission">自发发射</span>时，运动态平均改变$\hbar\kk$。吸收/再发射以<span data-concept="optical-pumping-rate">光抽运率</span>发生，所以动量的变化率必定是$\kFforce = \hbar\kk\kRopt$。更一般地，沿着这一思路，<span data-concept="dissipative-force">耗散力</span>$\kFforce$也可以看作每次散射事件的动量变化$\hbar\kk$乘以散射率$\kgamma\krhotwotwo$。</p>
+<p>把$\krhotwoone/\kOmega$用<span data-concept="steady-state-population">激发态布居</span>重新表示，用一点代数就可以直接证实这个结果。</p>
+<figure class="dv" id="drv-scattering-force"></figure>
+<p><span data-concept="dissipative-force">耗散力</span>能有多大？我们在前面的讲义中已经看到，随着施加的功率越来越大，跃迁会<span data-concept="saturation">饱和</span>。对于大功率，</p>
+<div class="equation" id="eq-8-25">$$\mathrm{Im}\left(\frac{\krhotwoone}{\kOmega}\right) = \frac{\kgammaonetwo}{\kgammaonetwo^2 + (\kdelta - \kkmag\kvmag)^2}\frac{\kgamma}{\kgamma + 2\kRopt}, \tag{8.25}$$</div>
+<p id="max-force-text">在大功率极限下，$\kOmega \gg \kgamma$，$\kRopt \to \infty$，<span data-concept="maximum-dissipative-force" id="max-force">可达到的最大耗散力</span>由原子的<span data-concept="spontaneous-emission-rate">自发发射率</span>决定。</p>
+<figure class="dv" id="drv-maximum-dissipative-force"></figure>
+<p>考虑到<a href="#drv-scattering-force">式 (8.24)</a>，这个极限在直觉上是说得通的，因为原子处于激发态的时间不能超过一半，因而达到的最大散射率为$\kgamma/2$。</p>
+<p id="magnitudes">考察<span data-concept="dissipative-force">耗散力</span>的典型数量级是有益的。单个<span data-concept="atomic-recoil">动量冲击$\hbar \kkmag$</span>通常会使原子速度改变每秒几厘米。与室温速度$\sim 100 - 1000$ m/s相比，这个<span data-concept="atomic-recoil">反冲速度</span>微乎其微。要把室温原子减速到<span data-concept="atomic-recoil">反冲速度</span>，需要数量巨大的事件，$\sim 10^4$次。对于碱金属原子，$\kgamma \sim 10^6$ Hz<sup class="fn" data-note="c-gamma-alkali"></sup>，所以减速过程将需要几毫秒，在此期间原子将飞行约一米。这类考虑决定了<span data-concept="laser-cooling">激光冷却</span>实验的物理尺度。</p>
+<p id="slowing">对于实际的实验，考虑原子随空间和时间变化的速度是很重要的。特别是，当原子被<span data-concept="dissipative-force">耗散力</span>减速时，它会因<span data-concept="recoil-shifted-resonance">多普勒频移</span>而偏离与外加激光束的共振。<span data-concept="atomic-beam-slowing" id="beam-slowing">为了使原子束减速，必须改变共振条件，使典型的原子在整个减速过程中始终与外加的光共振。</span>实际上，这通过两种方式实现：要么外加的激光被<span data-concept="atomic-beam-slowing">啁啾</span>（其频率被扫描），要么空间变化的磁场给原子加上<span data-concept="zeeman-effect">塞曼移位</span>，使它们在减速时保持共振。</p>
+</section>

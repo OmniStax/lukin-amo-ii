@@ -1,0 +1,822 @@
+{
+ "id": "4.2",
+ "chapter": "4",
+ "title": "线性光学传播",
+ "short": "线性传播",
+ "lead": "弱到原子可作线性响应的场如何在共振介质中传播：<span data-concept=\"susceptibility\">电极化率</span>，以及它所编码的<span data-concept=\"absorption-coefficient\">吸收</span>、<span data-concept=\"refractive-index\">折射</span>和<span data-concept=\"dispersion\">色散</span>，由<span data-concept=\"two-level-atom\">二能级原子</span>构成的气体在共振处和远离共振处的电极化率及其<span data-concept=\"absorption-cross-section\">吸收截面</span>，以及<span data-concept=\"homogeneous-broadening\">均匀</span>和<span data-concept=\"inhomogeneous-broadening\">非均匀谱线增宽</span>、尤其是<span data-concept=\"doppler-broadening\">多普勒谱线增宽</span>如何决定吸收谱的形状。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-susceptibility",
+   "kind": "sim",
+   "number": "4.1",
+   "originals": [
+    "/media/ch04/fig-4-1.png"
+   ],
+   "original_caption": "共振附近二能级原子电极化率的实部（折射性的）和虚部（吸收性的）",
+   "draws": [
+    "susceptibility",
+    "frequency",
+    "rate"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-doppler",
+   "kind": "sim",
+   "number": "4.2",
+   "originals": [
+    "/media/ch04/fig-4-2.png"
+   ],
+   "original_caption": "多普勒谱线增宽的原子系综的吸收谱，比单个速度类的吸收谱宽得多，后者的谱线宽度由退相位率γ₁₂决定。",
+   "draws": [
+    "susceptibility",
+    "frequency",
+    "rate"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "susceptibility",
+   "concept": "susceptibility",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-solution",
+   "concept": "linear-propagation-solution",
+   "verb": "introduces"
+  },
+  {
+   "span": "effect-absorption",
+   "concept": "absorption-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "effect-refraction",
+   "concept": "refractive-index",
+   "verb": "introduces"
+  },
+  {
+   "span": "effect-dispersion",
+   "concept": "dispersion",
+   "verb": "introduces"
+  },
+  {
+   "span": "resonant-absorption",
+   "concept": "resonant-absorption",
+   "verb": "introduces"
+  },
+  {
+   "span": "unitary-limit",
+   "concept": "unitary-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "far-detuned",
+   "concept": "far-detuned-refraction",
+   "verb": "introduces"
+  },
+  {
+   "span": "homogeneous",
+   "concept": "homogeneous-broadening",
+   "verb": "introduces"
+  },
+  {
+   "span": "inhomogeneous",
+   "concept": "inhomogeneous-broadening",
+   "verb": "introduces"
+  },
+  {
+   "span": "doppler",
+   "concept": "doppler-broadening",
+   "verb": "introduces"
+  },
+  {
+   "span": "inhomogeneous-cross-section",
+   "concept": "inhomogeneous-cross-section",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-4-31",
+   "concept": "plane-wave-propagation-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "svea-valid",
+   "concept": "slowly-varying-envelope-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "opening-weak",
+   "concept": "slowly-varying-polarization",
+   "verb": "uses"
+  },
+  {
+   "span": "opening-weak",
+   "concept": "weak-field-response",
+   "verb": "uses"
+  },
+  {
+   "span": "opening-weak",
+   "concept": "density-matrix-coherences",
+   "verb": "uses"
+  },
+  {
+   "span": "two-level-obe",
+   "concept": "optical-bloch-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "two-level-obe",
+   "concept": "steady-state-coherence",
+   "verb": "uses"
+  },
+  {
+   "span": "two-level-obe",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "two-level-gamma",
+   "concept": "spontaneous-emission-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "two-level-gamma",
+   "concept": "dipole-matrix-element",
+   "verb": "uses"
+  },
+  {
+   "span": "two-level-gamma",
+   "concept": "coherence-decay-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-group-velocity",
+   "concept": "group-velocity",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-two-level-susceptibility",
+   "concept": "two-level-susceptibility",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-resonant-cross-section",
+   "concept": "absorption-cross-section",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [
+  {
+   "id": "resonant-class",
+   "label": "与场共振的速度类",
+   "figures": [
+    "sim-doppler"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-resonant-field",
+   "kind": "correction",
+   "html": "书中写作“在共振场中”。光传播所在的是共振介质：即本节求出其线性响应的原子气体，正如本章标题所说。"
+  },
+  {
+   "id": "c-eq-4-50",
+   "kind": "correction",
+   "html": "书中略去了式 (4.43)的因子$i\\kmu^2/\\hbar\\epsilon_0$，因此按印刷的形式，两边只是成比例的。对于处于基态的原子，$\\kchi(\\kdeltanu) = i\\frac{\\kmu^2}{\\hbar\\epsilon_0}\\int d\\kvz\\frac{\\knv}{\\kgammaonetwo - i(\\kdeltanu - k\\kvz)}$，密度$N/\\kV$由式 (4.51)的$\\knv$携带。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "linear-propagation",
+   "what": "线性传播的一般解",
+   "source": "现代原子与光学物理 II，4.2 线性光学传播，开篇",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kchi(\\kdeltanu) = \\frac{\\kPenv(\\kdeltanu)}{\\epsilon_0\\kEenv(\\kdeltanu)}",
+       "src": "(4.30)"
+      },
+      {
+       "text": "时间的函数与其频率分量由$f(\\kt) = \\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}f(\\kdeltanu)$联系，因此$\\partial/\\partial\\kt$对分量的作用为$-i\\kdeltanu$。",
+       "src": "(3.95)–(3.96)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{z}{\\frac{\\partial\\kEenv}{\\partial z}} + \\mk{t}{\\frac{1}{c}\\frac{\\partial\\kEenv}{\\partial \\kt}} = \\mk{P}{\\frac{i\\kkbar}{2\\epsilon_0}\\kPenv}",
+      "src": "(4.31)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{z}{\\frac{\\partial\\kEenv}{\\partial z}} - \\mk{t}{\\frac{i\\kdeltanu}{c}\\kEenv} = \\mk{P}{\\frac{i\\kkbar}{2\\epsilon_0}\\kPenv(\\kdeltanu)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{z}{\\frac{\\partial\\kEenv}{\\partial z}} - \\mk{t}{\\frac{i\\kdeltanu}{c}\\kEenv} = \\mk{P}{\\frac{i\\kkbar}{2}\\underbrace{\\kchi(\\kdeltanu)\\kEenv}_{\\propto\\kPenv}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{z}{\\frac{\\partial\\kEenv}{\\partial z}} = \\mk{t}{\\frac{i\\kdeltanu}{c}\\kEenv} + \\mk{P}{\\frac{i\\kkbar}{2}\\underbrace{\\kchi(\\kdeltanu)\\kEenv}_{\\propto\\kPenv}}",
+       "uses": []
+      }
+     ],
+     "num": "(4.32)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{z}{\\frac{\\partial\\kEenv}{\\partial z}} = \\mk{t}{\\frac{i\\kdeltanu}{c}\\kEenv} + \\mk{P}{\\frac{i\\kkbar}{2}\\underbrace{\\kchi(\\kdeltanu)\\kEenv}_{\\propto\\kPenv}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEenv(\\kdeltanu, z)} = \\mk{R}{\\kEenv(\\kdeltanu, 0)e^{iz(\\kdeltanu/c + \\kkbar\\kchi(\\kdeltanu)/2)}}",
+       "uses": [],
+       "cap": "每个频率分量服从$\\partial\\mathcal{E}/\\partial z = a\\,\\mathcal{E}$，其中$a$沿$z$固定，因此它从$z = 0$处的值开始按$e^{az}$增长。"
+      }
+     ],
+     "num": "(4.33)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "时间的函数与其频率分量由$f(\\kt) = \\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}f(\\kdeltanu)$联系，因此$\\partial/\\partial\\kt$对分量的作用为$-i\\kdeltanu$。",
+       "src": "(3.95)–(3.96)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEenv(\\kt, z)} = \\mk{R}{\\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}\\kEenv(\\kdeltanu, z)}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEenv(\\kt, z)} = \\mk{R}{\\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}\\kEenv(\\kdeltanu, 0)e^{iz(\\kdeltanu/c + \\kkbar\\kchi(\\kdeltanu)/2)}}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(4.34)"
+    }
+   ]
+  },
+  {
+   "id": "group-velocity",
+   "what": "脉冲的群速度",
+   "source": "现代原子与光学物理 II，4.2 线性光学传播，4.2.2 色散",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kchi(\\kdeltanu) \\approx \\kchi(0) + \\frac{d\\kchi}{d\\knu}\\kdeltanu",
+       "src": "(4.38)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEenv(\\kt, z)} = \\mk{R}{\\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}\\kEenv(\\kdeltanu, 0)e^{iz(\\kdeltanu/c + \\kkbar\\kchi(\\kdeltanu)/2)}}",
+      "src": "(4.34)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEenv(\\kt, z)} = \\mk{R}{\\int d(\\kdeltanu)\\kEenv(\\kdeltanu, 0)e^{-i\\kdeltanu \\kt}e^{iz(\\kdeltanu/c + \\kkbar(\\kchi(0) + \\frac{d\\kchi}{d\\knu}\\kdeltanu)/2)}}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(4.39)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEenv(\\kt, z)} = \\mk{R}{\\int d(\\kdeltanu)\\kEenv(\\kdeltanu, 0)e^{-i\\kdeltanu \\kt}e^{iz(\\kdeltanu/c + \\kkbar(\\kchi(0) + \\frac{d\\kchi}{d\\knu}\\kdeltanu)/2)}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEenv(\\kt, z)} = \\mk{p}{e^{iz\\kkbar\\kchi(0)/2}}\\mk{R}{\\int d(\\kdeltanu)\\kEenv(\\kdeltanu, 0)e^{-i\\kdeltanu\\left(\\kt - z\\left(\\frac{1}{c} + \\frac{\\kkbar}{2}\\frac{d\\kchi}{d\\knu}\\right)\\right)}}",
+       "uses": [],
+       "cap": "按$\\delta\\nu$的幂次整理指数；项$iz\\bar{k}\\chi(0)/2$不依赖于$\\delta\\nu$，并移出积分。",
+       "map": {
+        "R": [
+         "p",
+         "R"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{E}{\\kEenv(\\kt, z)} = \\mk{p}{e^{iz\\kkbar\\kchi(0)/2}}\\mk{R}{\\int d(\\kdeltanu)\\kEenv(\\kdeltanu, 0)e^{-i\\kdeltanu(\\kt - z/\\kvg)}}",
+       "uses": [],
+       "cap": "把单位长度的延迟写成$1/v_g = 1/c + (\\bar{k}/2)\\,d\\chi/d\\nu$。"
+      }
+     ],
+     "num": "(4.40)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "在$z = 0$处，(4.34)为$\\kEenv(\\kt, 0) = \\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}\\kEenv(\\kdeltanu, 0)$。",
+       "src": "(4.34)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEenv(\\kt, z)} = \\mk{p}{e^{iz\\kkbar\\kchi(0)/2}}\\mk{R}{\\int d(\\kdeltanu)\\kEenv(\\kdeltanu, 0)e^{-i\\kdeltanu(\\kt - z/\\kvg)}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEenv(\\kt, z)} = \\mk{p}{e^{iz\\kkbar\\kchi(0)/2}}\\mk{R}{\\kEenv(\\kt - z/\\kvg, z = 0)}",
+       "uses": [
+        1
+       ],
+       "cap": "该积分是$z = 0$处的场在较早时刻$t - z/v_g$的取值。"
+      }
+     ],
+     "num": "(4.41)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kkbar = \\knubar/c",
+       "src": "4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{v}{\\frac{1}{\\kvg}} = \\mk{R}{\\frac{1}{c} + \\frac{\\kkbar}{2}\\frac{d\\kchi}{d\\knu}}",
+      "uses": [
+       0
+      ],
+      "why": "(4.40)中单位长度的延迟。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{v}{\\kvg} = \\mk{R}{\\frac{1}{\\frac{1}{c} + \\frac{\\kkbar}{2}\\frac{d\\kchi}{d\\knu}}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{v}{\\kvg} = \\mk{R}{\\frac{c}{1 + \\frac{c\\kkbar}{2}\\frac{d\\kchi}{d\\knu}}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{v}{\\kvg} = \\mk{R}{\\frac{c}{1 + \\frac{\\knubar}{2}\\frac{d\\kchi}{d\\knu}}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(4.42)"
+    }
+   ]
+  },
+  {
+   "id": "two-level-susceptibility",
+   "what": "二能级原子气体的电极化率",
+   "source": "现代原子与光学物理 II，4.2 线性光学传播，4.2.3 二能级系统",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kPenv(\\kdeltanu) = \\frac{N}{\\kV}\\kmu\\krhotwoone(\\kdeltanu)e^{-i\\kkbar z}",
+       "src": "(4.29)"
+      },
+      {
+       "text": "对于弱场，布居保持为$\\krhooneone^0$和$\\krhotwotwo^0$，在定常态下频率$\\kdeltanu$处的相干性为$\\krhotwoone(\\kdeltanu) = \\frac{i\\kOmega(\\kdeltanu)(\\krhooneone^0 - \\krhotwotwo^0)}{\\kgammaonetwo - i\\kdeltanu}$，载波在共振处。",
+       "src": "(3.97)"
+      },
+      {
+       "text": "驱动$\\krhotwoone$的局域场带有快速相位$e^{i\\kkbar z}$。",
+       "src": "4.1"
+      },
+      {
+       "tex": "\\kOmega = \\kmu\\kEenv/\\hbar",
+       "src": "4.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{chi}{\\kchi(\\kdeltanu)} = \\mk{P}{\\frac{\\kPenv(\\kdeltanu)}{\\epsilon_0\\kEenv(\\kdeltanu)}}",
+      "src": "(4.30)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{chi}{\\kchi(\\kdeltanu)} = \\mk{pre}{\\frac{N}{\\kV}\\frac{\\kmu}{\\epsilon_0\\kEenv}}\\mk{rho}{\\krhotwoone(\\kdeltanu)}\\mk{ph}{e^{-i\\kkbar z}}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "P": [
+         "pre",
+         "rho",
+         "ph"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{chi}{\\kchi(\\kdeltanu)} = \\mk{pre}{\\frac{N}{\\kV}\\frac{\\kmu}{\\epsilon_0\\kEenv}}\\mk{rho}{\\frac{i\\kOmega e^{i\\kkbar z}(\\krhooneone^0 - \\krhotwotwo^0)}{\\kgammaonetwo - i\\kdeltanu}}\\mk{ph}{e^{-i\\kkbar z}}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{chi}{\\kchi(\\kdeltanu)} = \\mk{pre}{\\frac{N}{\\kV}\\frac{\\kmu}{\\epsilon_0\\kEenv}}\\mk{rho}{\\frac{i\\kOmega(\\krhooneone^0 - \\krhotwotwo^0)}{\\kgammaonetwo - i\\kdeltanu}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{chi}{\\kchi(\\kdeltanu)} = \\mk{pre}{\\frac{N}{\\kV}\\frac{\\kmu}{\\epsilon_0\\kEenv}}\\mk{rho}{\\frac{i\\kmu\\kEenv(\\krhooneone^0 - \\krhotwotwo^0)}{\\hbar(\\kgammaonetwo - i\\kdeltanu)}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{chi}{\\kchi(\\kdeltanu)} = \\mk{pre}{i\\frac{N}{\\kV}\\frac{\\kmu^2}{\\hbar\\epsilon_0}}\\mk{rho}{(\\krhooneone^0 - \\krhotwotwo^0)\\frac{1}{\\kgammaonetwo - i\\kdeltanu}}",
+       "uses": []
+      }
+     ],
+     "num": "(4.43)",
+     "note": "(3.97)含有$i(\\krhotwotwo^{(0)} - \\krhooneone^{(0)})$，采用哈密顿量 (3.84)所取的$\\kOmega$的符号；第 4 章采用 2.1 节运动方程的符号，如 (4.43)所示，因此$\\mathrm{Im}[\\kchi] > 0$表示吸收。"
+    }
+   ]
+  },
+  {
+   "id": "resonant-cross-section",
+   "what": "共振吸收截面",
+   "source": "现代原子与光学物理 II，4.2 线性光学传播，4.2.3 二能级系统，共振场",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "场是共振的，$\\kdeltanu = 0$。"
+      },
+      {
+       "text": "$\\krhooneone^0 = 1$，$\\krhotwotwo^0 = 0$：上态的布居可以忽略。",
+       "src": "4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{chi}{\\kchi(\\kdeltanu)} = \\mk{pre}{i\\frac{3}{8\\pi^2}\\frac{N}{\\kV}\\klambda^3}\\mk{pop}{(\\krhooneone^0 - \\krhotwotwo^0)}\\mk{L}{\\frac{\\kgamma}{\\kgammaonetwo - i\\kdeltanu}}",
+      "src": "(4.44)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{chi}{\\kchi(0)} = \\mk{pre}{i\\frac{3}{8\\pi^2}\\frac{N}{\\kV}\\klambda^3}\\mk{pop}{(\\krhooneone^0 - \\krhotwotwo^0)}\\mk{L}{\\frac{\\kgamma}{\\kgammaonetwo}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{chi}{\\kchi(0)} = \\mk{pre}{i\\frac{3}{8\\pi^2}\\frac{N}{\\kV}\\klambda^3}\\mk{L}{\\frac{\\kgamma}{\\kgammaonetwo}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(4.45)"
+    },
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{E}{\\kEenv(\\kt, z)} = \\mk{R}{\\kEenv e^{i\\kkbar\\kchi(0)z/2}}",
+      "src": "(4.35)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEenv(z)} = \\mk{R}{\\kEenv(0)e^{(-\\mathrm{Im}[\\kchi(0)] + i\\mathrm{Re}[\\kchi(0)])\\kkbar z/2}}",
+       "uses": [],
+       "cap": "写出$\\chi(0) = \\mathrm{Re}[\\chi(0)] + i\\,\\mathrm{Im}[\\chi(0)]$，其中$i^2 = -1$。"
+      }
+     ],
+     "num": "(4.46)"
+    },
+    {
+     "assumes": [
+      {
+       "text": "$\\mathrm{Im}[\\kchi]$使光束光强随距离按指数衰减，速率为$\\kalpha = \\kkbar\\,\\mathrm{Im}[\\kchi(0)]$。",
+       "src": "(4.36)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{I}{\\kIint(z)} = \\mk{R}{\\kIint(0)e^{-\\kalpha z}}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{I}{\\kIint(z)} = \\mk{R}{\\kIint(0)e^{-N\\ksigmatilde z/\\kV}}",
+       "uses": [],
+       "cap": "截面$\\tilde{\\sigma}$由$N\\tilde{\\sigma}/V = \\alpha$定义，即单位体积内由各原子分担的损耗率。"
+      }
+     ],
+     "num": "(4.47)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "$\\mathrm{Im}[\\kchi]$使光束光强随距离按指数衰减，速率为$\\kalpha = \\kkbar\\,\\mathrm{Im}[\\kchi(0)]$。",
+       "src": "(4.36)"
+      },
+      {
+       "step": 0
+      },
+      {
+       "text": "在共振处$\\kkbar = k_0 = 2\\pi/\\klambda$。",
+       "src": "4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\ksigmatilde} = \\mk{R}{\\frac{\\kV}{N}\\kalpha}",
+      "uses": [
+       0
+      ],
+      "why": "(4.47)中$\\tilde{\\sigma}$的定义。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\ksigmatilde} = \\mk{R}{\\frac{\\kV}{N}\\kkbar\\,\\mathrm{Im}[\\kchi(0)]}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\ksigmatilde} = \\mk{R}{\\frac{\\kV}{N}\\kkbar\\frac{3}{8\\pi^2}\\frac{N}{\\kV}\\klambda^3\\frac{\\kgamma}{\\kgammaonetwo}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\ksigmatilde} = \\mk{R}{\\kkbar\\frac{3}{8\\pi^2}\\klambda^3\\frac{\\kgamma}{\\kgammaonetwo}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{s}{\\ksigmatilde} = \\mk{R}{\\frac{3}{4\\pi}\\klambda^2\\frac{\\kgamma}{\\kgammaonetwo}}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(4.48)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "对于纯辐射增宽，$\\kgammaonetwo = \\kgamma/2$。",
+       "src": "4.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\ksigmatilde} = \\mk{R}{\\frac{3}{4\\pi}\\klambda^2\\frac{\\kgamma}{\\kgammaonetwo}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\ksigmatilde} = \\mk{R}{\\frac{3}{2\\pi}\\klambda^2}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(4.49)"
+    }
+   ]
+  },
+  {
+   "id": "doppler-cross-section",
+   "what": "多普勒谱线增宽气体的共振截面",
+   "source": "现代原子与光学物理 II，4.2 线性光学传播，4.2.4 谱线致宽机制，多普勒谱线增宽",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "速度为$\\kvz$的原子看到的场发生了多普勒频移，因此它们的失谐为$\\kdeltanu - \\kkmag\\kvz$。",
+       "src": "4.2"
+      },
+      {
+       "text": "电极化率是所有速度类的响应之和，速度为$\\kvz$的速度类每单位体积含有$\\knv\\,d\\kvz$个原子。",
+       "src": "4.2"
+      },
+      {
+       "tex": "\\knv = \\frac{N}{\\kV}e^{-\\kvz^2/\\kvT^2}\\frac{1}{\\sqrt{\\pi}\\kvT}",
+       "src": "(4.51)"
+      },
+      {
+       "text": "原子处于基态，$\\krhooneone^0 = 1$，$\\krhotwotwo^0 = 0$。",
+       "src": "4.2"
+      },
+      {
+       "tex": "\\mathop{\\mathrm{lim}}\\limits_{\\epsilon\\to 0}\\frac{i}{\\kdeltak + i\\epsilon} = \\pi\\delta(\\kdeltak) + i\\mathcal{P}\\frac{1}{\\kdeltak}",
+       "src": "(2.49)"
+      },
+      {
+       "text": "非均匀谱线增宽占主导，$\\kkmag\\kvT \\gg \\kgammaonetwo$。",
+       "src": "4.2"
+      },
+      {
+       "text": "截面取在$\\kdeltanu = 0$处。"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{chi}{\\kchi(\\kdeltanu)} = \\mk{pre}{i\\frac{N}{\\kV}\\frac{\\kmu^2}{\\hbar\\epsilon_0}}\\mk{pop}{(\\krhooneone^0 - \\krhotwotwo^0)}\\mk{L}{\\frac{1}{\\kgammaonetwo - i\\kdeltanu}}",
+      "src": "(4.43)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{chi}{\\kchi(\\kdeltanu)} = \\mk{pre}{i\\frac{N}{\\kV}\\frac{\\kmu^2}{\\hbar\\epsilon_0}}\\mk{L}{\\frac{1}{\\kgammaonetwo - i\\kdeltanu}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{chi}{\\kchi(\\kdeltanu)} = \\mk{pre}{i\\frac{\\kmu^2}{\\hbar\\epsilon_0}\\int d\\kvz\\,\\knv}\\mk{L}{\\frac{1}{\\kgammaonetwo - i(\\kdeltanu - \\kkmag\\kvz)}}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{chi}{\\kchi(0)} = \\mk{pre}{i\\frac{\\kmu^2}{\\hbar\\epsilon_0}\\int d\\kvz\\,\\knv}\\mk{L}{\\frac{1}{\\kgammaonetwo + i\\kkmag\\kvz}}",
+       "uses": [
+        6
+       ]
+      },
+      {
+       "tex": "\\mk{chi}{\\kchi(0)} = \\mk{pre}{i\\frac{\\kmu^2}{\\hbar\\epsilon_0}\\int d\\kvz\\,\\knv}\\mk{L}{\\frac{\\kgammaonetwo - i\\kkmag\\kvz}{\\kgammaonetwo^2 + \\kkmag^2\\kvz^2}}",
+       "uses": [],
+       "cap": "分子分母同乘以$\\gamma_{12} - ikv_z$。"
+      },
+      {
+       "tex": "\\mk{chi}{\\mathrm{Im}[\\kchi(0)]} = \\mk{pre}{\\frac{\\kmu^2}{\\hbar\\epsilon_0}\\int d\\kvz\\,\\knv}\\mk{L}{\\frac{\\kgammaonetwo}{\\kgammaonetwo^2 + \\kkmag^2\\kvz^2}}",
+       "uses": [],
+       "cap": "当$a$和$b$为实数时，$i(a - ib)$的虚部为$a$。"
+      },
+      {
+       "tex": "\\mk{chi}{\\mathrm{Im}[\\kchi(0)]} = \\mk{pre}{\\frac{\\kmu^2}{\\hbar\\epsilon_0}\\int d\\kvz\\,\\knv}\\mk{L}{\\pi\\delta(\\kkmag\\kvz)}",
+       "uses": [
+        4,
+        5
+       ],
+       "cap": "(2.49)的实部为$\\epsilon/(x^2 + \\epsilon^2) \\to \\pi\\delta(x)$；当$kv_T \\gg \\gamma_{12}$时，洛伦兹线型相对于$n(v_z)$很窄，对它的作用为$\\pi\\delta(kv_z)$。"
+      },
+      {
+       "tex": "\\mk{chi}{\\mathrm{Im}[\\kchi(0)]} = \\mk{pre}{\\frac{\\kmu^2}{\\hbar\\epsilon_0}\\frac{\\pi}{\\kkmag}n(0)}",
+       "uses": [],
+       "cap": "$\\delta(kv_z) = \\delta(v_z)/k$，它选出静止的原子。",
+       "map": {
+        "L": "pre"
+       }
+      },
+      {
+       "tex": "\\mk{chi}{\\mathrm{Im}[\\kchi(0)]} = \\mk{pre}{\\frac{\\kmu^2}{\\hbar\\epsilon_0}\\frac{N}{\\kV}\\frac{\\sqrt{\\pi}}{\\kkmag\\kvT}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "note": "第二行是(4.50)乘以(4.43)的因子$i\\kmu^2/\\hbar\\epsilon_0$，书中在那里略去了该因子。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "截面$\\tilde{\\sigma}$由$\\kIint(z) = \\kIint(0)e^{-N\\tilde{\\sigma}z/\\kV}$定义，损耗率为$N\\tilde{\\sigma}/\\kV = \\kkmag\\,\\mathrm{Im}[\\kchi(0)]$。",
+       "src": "(4.36), (4.47)"
+      },
+      {
+       "tex": "\\kgamma = \\frac{\\kmu^2 k_0^3}{3\\pi\\epsilon_0\\hbar}",
+       "src": "4.2"
+      },
+      {
+       "text": "在共振处$\\kkmag = k_0 = 2\\pi/\\klambda$。",
+       "src": "4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\sigma_{inhom.}(0)} = \\mk{R}{\\frac{\\kV}{N}\\kkmag\\,\\mathrm{Im}[\\kchi(0)]}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\sigma_{inhom.}(0)} = \\mk{R}{\\frac{\\kV}{N}\\kkmag\\frac{\\kmu^2}{\\hbar\\epsilon_0}\\frac{N}{\\kV}\\frac{\\sqrt{\\pi}}{\\kkmag\\kvT}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\sigma_{inhom.}(0)} = \\mk{R}{\\frac{\\kmu^2}{\\hbar\\epsilon_0}\\frac{\\sqrt{\\pi}}{\\kvT}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{s}{\\sigma_{inhom.}(0)} = \\mk{R}{\\frac{3\\pi\\kgamma}{\\kkmag^3}\\frac{\\sqrt{\\pi}}{\\kvT}}",
+       "uses": [
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\sigma_{inhom.}(0)} = \\mk{R}{\\frac{3}{4\\pi}\\klambda^2\\frac{\\sqrt{\\pi}\\kgamma}{\\kkmag\\kvT}}",
+       "uses": [
+        3
+       ],
+       "cap": "三个$k$因子中的两个写成$2\\pi/\\lambda$。"
+      }
+     ],
+     "num": "(4.52)"
+    }
+   ]
+  }
+ ]
+}

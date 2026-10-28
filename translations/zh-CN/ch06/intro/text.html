@@ -1,0 +1,5 @@
+<section id="stochastic-wavefunctions">
+<p><span data-concept="master-equation">主方程</span>是研究与周围环境相互作用的系统的动力学的重要工具。然而，在某些情形下，系统的复杂性或解释上的微妙之处，促使人们发展出求解<span data-concept="master-equation">主方程</span>的更精细的技术。其中一种方法利用无规过程来模拟系统的态。我们将推导支配这些<span data-concept="monte-carlo-wavefunction">随机波函数或蒙特卡罗波函数</span>演化的方程，并讨论这一技术的适当应用。</p>
+<p><span data-concept="monte-carlo-wavefunction">蒙特卡罗波函数</span>是20世纪90年代由两个关注截然不同问题的小组同时推导出来的。法国的一组科学家达利巴尔、卡斯坦和默尔默，想以量子力学的方式在三维中模拟原子的激光冷却。他们的数值解需要把空间离散化为40x40x40个位置的网格；要在这样的空间上实现<span data-concept="master-equation">主方程</span>，就需要一个有 $\mathcal{O}(40^6) \sim 10^9$ 个元素的<span data-concept="density-matrix">密度矩阵</span>——这样的计算超出了即使是现代计算机的能力范围。然而，模拟一个有 $\mathcal{O}(40^3)$ 个元素的波函数是相当可行的。因此，该小组设法把<span data-concept="master-equation">主方程</span>转化为更像<span data-concept="schrodinger-equation">薛定谔方程</span>的东西。</p>
+<p>与此同时，卡迈克尔关注的是连续监测会对系统产生什么影响。例如，制备在各态的等权<span data-concept="superposition">叠加</span>中的<span data-concept="two-level-atom">二能级原子</span>可以通过发射一个光子而衰变；如果探测到该光子，实验者就确定地知道原子处于基态。但是，在50%的情形中没有探测到光子时又会怎样？当然，经过很长时间之后，原子必定处于基态，但这是如何发生的？为了研究这些以及类似的问题，卡迈克尔想要纳入连续监测的效应，并理解一次测量如何能使系统的态突然<span data-concept="quantum-jump">跳跃</span>到另一个不同的态。</p>
+</section>

@@ -1,0 +1,929 @@
+{
+ "id": "3.4",
+ "chapter": "3",
+ "title": "主方程",
+ "short": "主方程",
+ "lead": "一般形式的<span data-concept=\"open-system\">开放系统</span><span data-concept=\"master-equation\">主方程</span>，它的代价和何时可以信赖它，以及它在受驱<span data-concept=\"two-level-atom\">二能级原子</span>上的应用：<span data-concept=\"optical-bloch-equations\">光学布洛赫方程</span>、<span data-concept=\"density-matrix-populations\">布居</span>和<span data-concept=\"density-matrix-coherences\">相干性</span>如何衰变、<span data-concept=\"dephasing-rate\">退相位</span>，以及原子如何响应弱场和任意强度的恒定场。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "MIT 8.422 第6次习题集第3题和第7次习题集第1题按小问给出，已改用卢金的记号重述，并附有AI撰写的解答，因为该课程未发布答案；没有小问是数值题，因此没有任何一问被暂扣。",
+ "figures": [
+  {
+   "id": "sim-damped-bloch",
+   "kind": "sim",
+   "draws": [
+    "state",
+    "coupling",
+    "frequency",
+    "rate",
+    "population",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "eq-3-79",
+   "concept": "generalized-master-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "cost",
+   "concept": "master-equation-cost",
+   "verb": "introduces"
+  },
+  {
+   "span": "factorization",
+   "concept": "memoryless-reservoir-factorization",
+   "verb": "introduces"
+  },
+  {
+   "span": "irreversibility",
+   "concept": "irreversibility-boundary",
+   "verb": "introduces"
+  },
+  {
+   "span": "obe",
+   "concept": "optical-bloch-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermal-spontaneous",
+   "concept": "thermal-and-spontaneous-transitions",
+   "verb": "introduces"
+  },
+  {
+   "span": "coherence-decay",
+   "concept": "coherence-decay-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "dephasing",
+   "concept": "dephasing-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "lorentzian",
+   "concept": "weak-field-response",
+   "verb": "introduces"
+  },
+  {
+   "span": "steady-state",
+   "concept": "steady-state-coherence",
+   "verb": "introduces"
+  },
+  {
+   "span": "pumping-rate",
+   "concept": "optical-pumping-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "saturated",
+   "concept": "saturation",
+   "verb": "introduces"
+  },
+  {
+   "span": "rate-equations",
+   "concept": "rate-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "remarks",
+   "concept": "master-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "remarks",
+   "concept": "markovian-environment",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-3-79",
+   "concept": "reduced-density-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "channels",
+   "concept": "system-reservoir-hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "cost",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "cost",
+   "concept": "density-matrix",
+   "verb": "uses"
+  },
+  {
+   "span": "factorization",
+   "concept": "correlation-time",
+   "verb": "uses"
+  },
+  {
+   "span": "factorization",
+   "concept": "reservoir-correlation-functions",
+   "verb": "uses"
+  },
+  {
+   "span": "irreversibility",
+   "concept": "reversible-evolution",
+   "verb": "uses"
+  },
+  {
+   "span": "irreversibility",
+   "concept": "open-system",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-3-84",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "obe",
+   "concept": "density-matrix-populations",
+   "verb": "uses"
+  },
+  {
+   "span": "obe",
+   "concept": "density-matrix-coherences",
+   "verb": "uses"
+  },
+  {
+   "span": "thermal-spontaneous",
+   "concept": "mean-thermal-photon-number",
+   "verb": "uses"
+  },
+  {
+   "span": "thermal-spontaneous",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "steady-state",
+   "concept": "rabi-oscillations",
+   "verb": "uses"
+  },
+  {
+   "span": "saturated",
+   "concept": "pure-and-mixed-states",
+   "verb": "uses"
+  },
+  {
+   "span": "rate-equations",
+   "concept": "adiabatic-elimination",
+   "verb": "uses"
+  },
+  {
+   "span": "sim-damped-bloch",
+   "concept": "coherence-bound",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-optical-bloch-equations",
+   "concept": "two-level-master-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-steady-state-population",
+   "concept": "steady-state-population",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "hw6-3a",
+   "source_id": "hw6.3a",
+   "source_number": "Problem Set 6, Problem 3(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的$|e\\rangle$、$|g\\rangle$对应$|2\\rangle$、$|1\\rangle$，其$\\rho_{eg}$、$\\rho_{ge}$对应$\\rho_{21}$、$\\rho_{12}$，并且$T_2$在题目开头被命名为$1/\\gamma_{12}$，本小问沿用了这一点；MIT关于下一周讲课的前言略去。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dephasing",
+   "prompt": "原子密度矩阵的非对角元$\\rho_{21}$和$\\rho_{12}$因自发发射和其他过程而衰变，其物理意义是什么？下面是这类量子噪声的三个非常简单的模型，它导致<em>相位相干</em>的丧失，并产生以$T_2 = 1/\\gamma_{12}$表征的退相干时间。原子密度矩阵非对角元衰变（这种衰变称为“相位阻尼”）的一个物理起源是随机相位噪声。假设我们有一个处于任意态$$\\rho = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix},$$的原子，受到强度随机的远离共振的光的激发。这束光对该态的作用是一个交流斯塔克偏移$|2\\rangle \\to e^{i\\theta}|2\\rangle$，我们可以将其建模为一个旋转$R_z(\\theta)$，其中旋转角$\\theta$是随机的，服从均值为0、方差为$2\\lambda t$的高斯分布。给出$\\rho(\\theta) = R_z(\\theta)\\rho R_z^\\dagger(\\theta)$，以及对该高斯分布求平均所得的期望密度矩阵$\\bar{\\rho}(t) = \\langle\\rho(\\theta)\\rangle$。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在基$\\{|1\\rangle, |2\\rangle\\}$中，该偏移为$R_z(\\theta) = \\mathrm{diag}(1, e^{i\\theta})$，所以$$\\rho(\\theta) = R_z(\\theta)\\rho R_z^\\dagger(\\theta) = \\begin{bmatrix} a & b\\,e^{-i\\theta} \\\\ c\\,e^{i\\theta} & d \\end{bmatrix}.$$对于高斯分布的$\\theta$，其均值为0、方差为$\\sigma^2 = 2\\lambda t$，$\\langle e^{\\pm i\\theta}\\rangle = e^{-\\sigma^2/2} = e^{-\\lambda t}$，所以$$\\bar{\\rho}(t) = \\begin{bmatrix} a & b\\,e^{-\\lambda t} \\\\ c\\,e^{-\\lambda t} & d \\end{bmatrix}.$$布居$\\rho_{11} = a$和$\\rho_{22} = d$不受影响，而相干性以速率$\\lambda$衰变：每个原子保持一个确定但未知的相位，对未知相位求平均就抹去了$\\rho_{12}$和$\\rho_{21}$。这就是式 (3.93) 的退相位，其中$\\gamma_d = \\lambda$；在没有布居衰变时$\\gamma_{12} = \\gamma_d$，且$T_2 = 1/\\lambda$。对称的$R_z(\\theta) = \\mathrm{diag}(e^{-i\\theta/2}, e^{i\\theta/2})$给出相同的矩阵。"
+   }
+  },
+  {
+   "id": "hw6-3b",
+   "source_id": "hw6.3b",
+   "source_number": "Problem Set 6, Problem 3(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的$|e\\rangle$、$|g\\rangle$对应$|2\\rangle$、$|1\\rangle$，其$\\rho_{eg}$、$\\rho_{ge}$对应$\\rho_{21}$、$\\rho_{12}$；MIT称为$\\gamma$的耦合常数改记为$\\chi$，因为这里$\\gamma$是衰变率，环境的态$|0\\rangle$、$|1\\rangle$写成$|0\\rangle_E$、$|1\\rangle_E$，因为$|1\\rangle$是原子的基态；本小问开头用一行说明了什么是相位阻尼。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dephasing",
+   "prompt": "二能级原子的相位阻尼，即其密度矩阵非对角元$\\rho_{21}$和$\\rho_{12}$的衰变：相位阻尼的另一个物理起源是弹性碰撞。假设二能级原子沿波导来回反弹，与壁相互作用而不损失动能，但每次反弹都以依赖于原子状态的方式略微改变其轨迹。这可以用一个使原子与单模环境相互作用的哈密顿量来建模，$$H_{SE} = |2\\rangle\\langle 2| \\otimes \\left[\\chi|0\\rangle_E\\langle 1|_E + \\chi^*|1\\rangle_E\\langle 0|_E\\right],$$耦合常数为$\\chi$。当原子处于激发态时，这个哈密顿量使环境的态在$|0\\rangle_E$和$|1\\rangle_E$之间以速率$\\chi$翻转。这是与环境发生依赖于状态的相互作用的一个简单模型。计算初始原子态$a|1\\rangle + b|2\\rangle$与环境$|0\\rangle_E$耦合后、经过一个小的微分时间步$dt$的演化，并给出$t$较小时原子的密度矩阵$\\rho(t)$。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "取$\\hbar = 1$，如题中的“速率”$\\chi$所暗示的，$H_{SE}$不作用于$|1\\rangle|0\\rangle_E$，而使$|2\\rangle|0\\rangle_E$在$\\{|2\\rangle|0\\rangle_E, |2\\rangle|1\\rangle_E\\}$内转动：$$|\\psi(t)\\rangle = a|1\\rangle|0\\rangle_E + b|2\\rangle\\left[\\cos(|\\chi|t)|0\\rangle_E - i\\frac{\\chi^*}{|\\chi|}\\sin(|\\chi|t)|1\\rangle_E\\right],$$对于一个时间步$dt$，它是$a|1\\rangle|0\\rangle_E + b|2\\rangle\\left[(1 - |\\chi|^2dt^2/2)|0\\rangle_E - i\\chi^*dt\\,|1\\rangle_E\\right]$。对环境求阵迹，每个相干性都乘以两个能级各自留给环境的态的重叠，$\\langle 0|_E\\left(\\cos|\\chi|t\\,|0\\rangle_E - \\ldots\\right) = \\cos|\\chi|t$：$$\\rho(t) = \\begin{bmatrix} |a|^2 & ab^*\\cos|\\chi|t \\\\ a^*b\\cos|\\chi|t & |b|^2 \\end{bmatrix} \\approx \\begin{bmatrix} |a|^2 & ab^*(1 - |\\chi|^2t^2/2) \\\\ a^*b(1 - |\\chi|^2t^2/2) & |b|^2 \\end{bmatrix}.$$布居不变，而相干性缩小，因为环境现在部分地记录了原子处于哪个能级：这就是式 (3.21) 的约化密度算符丧失纯度。对于一次反弹，损失与时间成二次关系；如果每次持续$dt$的反弹都遇到一个处于$|0\\rangle_E$的新环境，这些因子就累积为$(1 - |\\chi|^2dt^2/2)^{t/dt} \\approx e^{-|\\chi|^2 dt\\, t/2}$，即$\\gamma_d = |\\chi|^2dt/2$的相位阻尼，也就是 (a) 和 (c) 中的指数衰变。"
+   }
+  },
+  {
+   "id": "hw6-3c",
+   "source_id": "hw6.3c",
+   "source_number": "Problem Set 6, Problem 3(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的$|e\\rangle$对应$|2\\rangle$，其$\\rho_{eg}$、$\\rho_{ge}$对应$\\rho_{21}$、$\\rho_{12}$；本小问开头用一行说明了什么是相位阻尼，随后接上MIT关于这三个模型的结尾段落。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dephasing",
+   "prompt": "二能级原子的相位阻尼，即其密度矩阵非对角元$\\rho_{21}$和$\\rho_{12}$的衰变：相位阻尼的第三个物理模型是下面的情形（你可能觉得它有点不符合物理）。假设二能级原子受到一个力的作用，该力随机地把原子的相位翻转$-1$，即$|2\\rangle \\to -|2\\rangle$，在每一时刻的概率为$(1 - e^{-\\lambda t})/2$。假设密度矩阵初始时是任意的，给出对这一随机相位翻转过程求平均后的$\\rho(t)$。关于这三个模型有一个惊人的事实：如果已知一个原子正在发生相位阻尼，比如在穿过某个黑箱的过程中，而对黑箱里面是什么没有额外的了解，那么<em>原则上无法区分</em>上述哪一种物理过程造成了相位阻尼！它们完全等价，同样合理。这正是量子纠错能够起作用的根本原因：相位噪声可以建模为要么态没有发生错误，要么发生一次相位翻转“错误”（类似于通信信道中的比特差错），即使实际的物理过程是另一种。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "令$p = (1 - e^{-\\lambda t})/2$，翻转$Z = \\mathrm{diag}(1, -1)$以概率$p$作用，所以$$\\rho(t) = (1 - p)\\rho + pZ\\rho Z.$$ $Z\\rho Z$保持对角元不变而使非对角元反号，所以布居不变，相干性乘以$(1 - p) - p = 1 - 2p = e^{-\\lambda t}$：$$\\rho(t) = \\begin{bmatrix} \\rho_{11} & \\rho_{12}e^{-\\lambda t} \\\\ \\rho_{21}e^{-\\lambda t} & \\rho_{22} \\end{bmatrix}.$$这与 (a) 小问中的$\\bar{\\rho}(t)$相同：$\\gamma_d = \\lambda$的纯退相位，把$\\lambda$加到式 (3.93) 中的$\\gamma_{12}$上，而不触及$\\rho_{11}$或$\\rho_{22}$。"
+   }
+  },
+  {
+   "id": "hw7-1a",
+   "source_id": "hw7.1a",
+   "source_number": "Problem Set 7, Problem 1(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的$\\rho_{ee}$、$\\rho_{gg}$、$\\rho_{ge}$、$\\rho_{eg}$对应$\\rho_{22}$、$\\rho_{11}$、$\\rho_{12}$、$\\rho_{21}$；MIT的拉比频率$\\Omega$写成$2\\Omega$，因此其$\\frac{1}{4}|\\Omega|^2$就是$|\\Omega|^2$，其条件$|\\Omega| \\ll \\Gamma$和$|\\Omega|t \\ll 1$读作$2|\\Omega| \\ll \\gamma$和$2|\\Omega|t \\ll 1$；$\\Gamma$对应$\\gamma$，$\\omega_0 - \\omega_L$对应$-\\delta$，其中$\\delta = \\nu - \\omega$。这两个方程于是就是$\\bar{n} = 0$且$\\Omega$为实数时的式 (3.86) 和 (3.88)。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "lorentzian",
+   "prompt": "包含自发发射和旋转波近似的光学布洛赫方程的不含时形式（例如，见API第359页）为：$$\\dot{\\rho}_{22} = i\\Omega(\\rho_{21} - \\rho_{12}) - \\gamma\\rho_{22}$$ $$\\dot{\\rho}_{12} = -i\\delta\\rho_{12} - i\\Omega(\\rho_{22} - \\rho_{11}) - \\frac{\\gamma}{2}\\rho_{12},$$其中密度矩阵的其余两个分量由$\\rho_{11} = 1 - \\rho_{22}$和$\\rho_{21} = \\rho_{12}^*$给出。在弱激发的极限下、对短的演化时间研究这些方程是很有启发的。证明：这些方程到$|\\Omega|$的最低阶、在$2|\\Omega| \\ll \\gamma$的极限下、初始条件为$\\rho_{22} = 0$和$\\rho_{12} = 0$时的解为$$\\rho_{22} = \\frac{|\\Omega|^2}{\\delta^2 + \\left(\\frac{\\gamma}{2}\\right)^2}\\left[1 + e^{-\\gamma t} - 2\\cos(\\delta t)e^{-\\gamma t/2}\\right].$$在无限窄谱线宽度的极限（$\\gamma \\to 0$）下，这个解化为什么？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "到$\\Omega$的最低阶，布居停留在起始值，所以相干性方程中$\\rho_{22} - \\rho_{11} \\approx -1$：$$\\dot{\\rho}_{12} = -\\left(\\frac{\\gamma}{2} + i\\delta\\right)\\rho_{12} + i\\Omega \\quad\\Rightarrow\\quad \\rho_{12}(t) = \\frac{i\\Omega}{\\gamma/2 + i\\delta}\\left[1 - e^{-(\\gamma/2 + i\\delta)t}\\right].$$布居方程为$\\dot{\\rho}_{22} = -\\gamma\\rho_{22} + 2\\Omega\\,\\mathrm{Im}\\,\\rho_{12}$，因为$i\\Omega(\\rho_{12}^* - \\rho_{12}) = 2\\Omega\\,\\mathrm{Im}\\,\\rho_{12}$。$|\\rho_{12}|^2$满足同一个方程：$\\frac{d}{dt}|\\rho_{12}|^2 = 2\\,\\mathrm{Re}(\\rho_{12}^*\\dot{\\rho}_{12}) = -\\gamma|\\rho_{12}|^2 + 2\\Omega\\,\\mathrm{Im}\\,\\rho_{12}$，并且两者都从0开始，所以$\\rho_{22} = |\\rho_{12}|^2$：$$\\rho_{22} = \\frac{|\\Omega|^2}{\\delta^2 + \\gamma^2/4}\\left|1 - e^{-\\gamma t/2}e^{-i\\delta t}\\right|^2 = \\frac{|\\Omega|^2}{\\delta^2 + (\\gamma/2)^2}\\left[1 + e^{-\\gamma t} - 2\\cos(\\delta t)e^{-\\gamma t/2}\\right].$$条件$2|\\Omega| \\ll \\gamma$使$\\rho_{22} \\ll 1$在所有时刻都成立，所以最低阶始终有效；在长时间下$\\rho_{22} \\to |\\Omega|^2/(\\delta^2 + \\gamma^2/4)$，即式 (3.100) 的弱场极限$R_{opt}/\\gamma$。对于$\\gamma \\to 0$，$$\\rho_{22} = \\frac{2|\\Omega|^2}{\\delta^2}\\left(1 - \\cos\\delta t\\right) = \\frac{4|\\Omega|^2}{\\delta^2}\\sin^2\\frac{\\delta t}{2},$$这是小$\\Omega$形式的失谐拉比振荡$\\frac{4|\\Omega|^2}{4|\\Omega|^2 + \\delta^2}\\sin^2\\left(\\frac{\\sqrt{4|\\Omega|^2 + \\delta^2}}{2}t\\right)$：它以$\\delta$振荡而不趋于稳定，并且只在$\\rho_{22} \\ll 1$时成立，即$|\\Omega| \\ll |\\delta|$或$|\\Omega|t \\ll 1$时。"
+   }
+  },
+  {
+   "id": "hw7-1b",
+   "source_id": "hw7.1b",
+   "source_number": "Problem Set 7, Problem 1(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的$\\rho_{ee}$、$\\rho_{gg}$、$\\rho_{ge}$、$\\rho_{eg}$对应$\\rho_{22}$、$\\rho_{11}$、$\\rho_{12}$、$\\rho_{21}$；MIT的拉比频率$\\Omega$写成$2\\Omega$，因此其$\\frac{1}{4}|\\Omega|^2$就是$|\\Omega|^2$，其条件$|\\Omega| \\ll \\Gamma$和$|\\Omega|t \\ll 1$读作$2|\\Omega| \\ll \\gamma$和$2|\\Omega|t \\ll 1$；$\\Gamma$对应$\\gamma$，$\\omega_0 - \\omega_L$对应$-\\delta$，其中$\\delta = \\nu - \\omega$。这两个方程于是就是$\\bar{n} = 0$且$\\Omega$为实数时的式 (3.86) 和 (3.88)。本小问重复了这两个方程。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "lorentzian",
+   "prompt": "对于带有自发发射的光学布洛赫方程，$$\\dot{\\rho}_{22} = i\\Omega(\\rho_{21} - \\rho_{12}) - \\gamma\\rho_{22}$$ $$\\dot{\\rho}_{12} = -i\\delta\\rho_{12} - i\\Omega(\\rho_{22} - \\rho_{11}) - \\frac{\\gamma}{2}\\rho_{12},$$其中$\\rho_{11} = 1 - \\rho_{22}$和$\\rho_{21} = \\rho_{12}^*$：证明：这些方程到$|\\Omega|$的最低阶、在$2|\\Omega|t \\ll 1$的极限下、初始条件为$\\rho_{22} = 0$和$\\rho_{12} = 0$时的解为$$\\rho_{22} = |\\Omega|^2t^2.$$这个结果与失谐$-\\delta$和衰变率$\\gamma$无关。为什么？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "到$|\\Omega|$的最低阶，解就是 (a) 小问的解，$\\rho_{22} = |\\rho_{12}|^2$，其中$\\rho_{12} = \\frac{i\\Omega}{\\gamma/2 + i\\delta}\\left[1 - e^{-(\\gamma/2 + i\\delta)t}\\right]$。在短时间下$1 - e^{-(\\gamma/2 + i\\delta)t} \\approx (\\gamma/2 + i\\delta)t$，所以$\\rho_{12} \\approx i\\Omega t$，并且$$\\rho_{22} = |\\Omega|^2t^2;$$等价地，(a) 小问的方括号展开为$(\\delta^2 + \\gamma^2/4)t^2$，它与分母相消。失谐和衰变消失，是因为它们只通过因子$e^{-(\\gamma/2 + i\\delta)t}$起作用，而在短时间下这个因子还没有离开1：相干性$\\rho_{12} \\approx i\\Omega t$线性地并与驱动同相地建立起来，正如一阶微扰论中$|2\\rangle$的概率幅那样，此时衰变还没有移除其中任何部分（$\\gamma t \\ll 1$），失谐也还没有使它的相位与驱动反向（$|\\delta|t \\ll 1$）。布居是该概率幅的平方，按$t^2$增长。因此这个结果需要$\\gamma t \\ll 1$和$|\\delta|t \\ll 1$，也需要$2|\\Omega|t \\ll 1$，后者使$\\rho_{22} \\ll 1$，从而最低阶成立。"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "hw6-3a",
+   "concept": "dephasing-rate"
+  },
+  {
+   "exercise": "hw6-3a",
+   "concept": "density-matrix-coherences"
+  },
+  {
+   "exercise": "hw6-3b",
+   "concept": "dephasing-rate"
+  },
+  {
+   "exercise": "hw6-3b",
+   "concept": "reduced-density-operator"
+  },
+  {
+   "exercise": "hw6-3c",
+   "concept": "dephasing-rate"
+  },
+  {
+   "exercise": "hw6-3c",
+   "concept": "coherence-decay-rate"
+  },
+  {
+   "exercise": "hw7-1a",
+   "concept": "optical-bloch-equations"
+  },
+  {
+   "exercise": "hw7-1a",
+   "concept": "weak-field-response"
+  },
+  {
+   "exercise": "hw7-1b",
+   "concept": "optical-bloch-equations"
+  },
+  {
+   "exercise": "hw7-1b",
+   "concept": "weak-field-response"
+  }
+ ],
+ "referents": [
+  {
+   "id": "lvl-1",
+   "label": "基态 |1⟩",
+   "figures": [
+    "sim-damped-bloch"
+   ]
+  },
+  {
+   "id": "lvl-2",
+   "label": "激发态 |2⟩",
+   "figures": [
+    "sim-damped-bloch"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-eq-3-95",
+   "kind": "correction",
+   "html": "书中把$\\krhoonetwo(\\kdeltanu)$印在了$\\krhotwoone(\\kt)$的变换式中。应为$\\krhotwoone(\\kt) = \\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}\\krhotwoone(\\kdeltanu)$，即式 (3.97) 所解出的分量$\\krhotwoone(\\kdeltanu)$。"
+  },
+  {
+   "id": "c-eq-3-84",
+   "kind": "correction",
+   "html": "这不是印刷错误，而是一处未加说明的符号变化：2.1 节通过$-\\hbar\\kOmega|2\\rangle\\langle 1|$（来自$-\\hat{\\mu}\\cdot\\mathbf{E}$）耦合两个能级，使得$\\dot{\\kctildetwo} = i\\kdelta\\kctildetwo + i\\kOmega\\kcone$，而式 (3.84) 取的是$+\\hbar\\kOmega|2\\rangle\\langle 1|$。式 (3.86)–(3.89) 和 (3.99) 由 (3.84) 正确推出；在2.1 节的约定下，其中每个$\\kOmega$都要变号，(3.99) 写作$\\krhotwoone = i\\kOmega(\\krhooneone - \\krhotwotwo)/(\\kgammatwoone - i\\kdelta)$，如同式 (4.43) 所取的那样。布居和速率在两种约定下都相同。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "memoryless-factorization",
+   "what": "无记忆热库的因子化",
+   "source": "现代原子与光学物理 II，3.4 主方程，3.4.1 关于广义主方程的说明",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\krhotilde(\\kt) = \\krhotilde_S(\\kt_i) \\otimes \\krhotilde_R(\\kt_i) + \\krhotilde_{corr}(\\kt_i, \\kt)",
+       "src": "(3.81)"
+      },
+      {
+       "text": "系统和热库在$\\kt_i$之前没有相互作用，所以直到$\\kt_i$的状态都是可因子化的。",
+       "src": "3.4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\krhotilde} = \\mk{R}{\\frac{1}{i\\hbar}[\\kHtilde_{SR}, \\krhotilde]}",
+      "src": "(3.40)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\krhotilde(\\kt) - \\krhotilde(\\kt_i)} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt_i}^{\\kt}d\\kt'[\\kHtilde_{SR}(\\kt'), \\krhotilde(\\kt')]}",
+       "uses": [],
+       "cap": "对两边从$t_i$到$t$积分。"
+      },
+      {
+       "tex": "\\mk{L}{\\krhotilde_{corr}(\\kt_i, \\kt)} \\approx \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt_i}^{\\kt}d\\kt'[\\kHtilde_{SR}(\\kt'), \\krhotilde_S(\\kt_i) \\otimes \\krhotilde_R(\\kt_i)]}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "到领头阶，$\\tilde{\\rho}(t')$被替换为$t_i$时的因子化态，而$\\tilde{\\rho}(t)$在此之外所含的就是关联。"
+      }
+     ],
+     "num": "(3.82)",
+     "note": "书中印出的式 (3.82) 的积分没有$d\\kt'$。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "被忽略的变化就是$\\krhotilde_{corr}(\\kt_i, \\kt)$加到式 (3.48) 第一项上的部分。",
+       "src": "(3.48)"
+      },
+      {
+       "text": "无记忆热库的时间关联函数是时间上的 δ 函数。",
+       "src": "3.3.3"
+      },
+      {
+       "text": "积分区间，$\\kt_i$到$\\kt$和$\\kt$到$\\kt + \\kDeltat$，不重叠。",
+       "src": "3.4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\Delta\\krhotilde_S} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{\\kt+\\kDeltat}d\\kt''\\ \\mathrm{Tr}_R[\\kHtilde_{SR}(\\kt''), \\krhotilde_{corr}(\\kt_i, \\kt)]}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\Delta\\krhotilde_S} \\approx \\mk{R}{\\frac{1}{(i\\hbar)^2}\\int_{\\kt_i}^{\\kt}d\\kt'\\int_{\\kt}^{\\kt+\\kDeltat}d\\kt''\\ \\mathrm{Tr}_R[\\kHtilde_{SR}(\\kt''), [\\kHtilde_{SR}(\\kt'), \\krhotilde_S(\\kt_i) \\otimes \\krhotilde_R(\\kt_i)]]}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\Delta\\krhotilde_S} \\propto \\mk{R}{\\int_{\\kt_i}^{\\kt} d\\kt'\\int_{\\kt}^{\\kt+\\kDeltat}d\\kt''\\underbrace{\\langle\\kHtilde_{SR}(\\kt'')\\kHtilde_{SR}(\\kt')\\rangle}_{\\propto\\ \\delta(\\kt'' - \\kt')}}",
+       "uses": [
+        2
+       ],
+       "cap": "展开对易式，每一项都带有热库在时刻$t'$与$t''$之间的关联。"
+      },
+      {
+       "tex": "\\mk{L}{\\Delta\\krhotilde_S} = \\mk{R}{0}",
+       "uses": [
+        3
+       ],
+       "cap": "δ 函数在积分区域内处处为零。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "optical-bloch-equations",
+   "what": "光学布洛赫方程",
+   "source": "现代原子与光学物理 II，3.4 主方程，3.4.2 例：二能级原子",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "对于二能级原子，式 (3.79) 中$\\kShat = |1\\rangle\\langle 2| = \\sigma_{12}$，其中$\\sigma_{ij} = |i\\rangle\\langle j|$，且只有一个速率为$\\kgamma$的衰变通道。",
+       "src": "3.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\begin{aligned}\\mk{L}{\\frac{\\Delta\\krhoS}{\\kDeltat}} = {} &\\mk{b}{-\\sum_p\\frac{\\kgammap}{2}\\knbar\\left(\\kShat_p\\kShat_p^\\dagger\\krhoS - \\kShat_p^\\dagger\\krhoS\\kShat_p\\right) + h.c.} \\\\ &\\mk{a}{-\\sum_p\\frac{\\kgammap}{2}(\\knbar + 1)\\left(\\kShat_p^\\dagger\\kShat_p\\krhoS - \\kShat_p\\krhoS\\kShat_p^\\dagger\\right) + h.c.} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]}\\end{aligned}",
+      "src": "(3.79)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\frac{\\Delta\\krhoS}{\\kDeltat}} = {} &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\left(\\sigma_{12}\\sigma_{21}\\krhoS - \\sigma_{21}\\krhoS\\sigma_{12}\\right) + h.c.} \\\\ &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\left(\\sigma_{21}\\sigma_{12}\\krhoS - \\sigma_{12}\\krhoS\\sigma_{21}\\right) + h.c.} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]}\\end{aligned}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\frac{\\Delta\\krhoS}{\\kDeltat}} = {} &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\left(\\sigma_{22}\\krhoS - \\sigma_{12}\\krhoS\\sigma_{21}\\right) + h.c.} \\\\ &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\left(\\sigma_{11}\\krhoS - \\sigma_{21}\\krhoS\\sigma_{12}\\right) + h.c.} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]}\\end{aligned}",
+       "uses": [],
+       "cap": "$\\sigma_{12}\\sigma_{21} = \\sigma_{11}$和$\\sigma_{21}\\sigma_{12} = \\sigma_{22}$；含$\\bar{n} + 1$的一行先写出。"
+      }
+     ],
+     "num": "(3.85)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "取矩阵元$\\langle i|\\frac{\\Delta\\krhoS}{\\kDeltat}|j\\rangle = \\dot{\\rho}_{ij}$，其中$\\sigma_{ij}|k\\rangle = \\delta_{jk}|i\\rangle$。",
+       "src": "3.4.2"
+      },
+      {
+       "tex": "\\kHS = -\\hbar\\kdelta|2\\rangle\\langle 2| + \\hbar\\kOmega^*|1\\rangle\\langle 2| + \\hbar\\kOmega|2\\rangle\\langle 1|",
+       "src": "(3.84)"
+      }
+     ],
+     "then": {
+      "tex": "\\begin{aligned}\\mk{L}{\\frac{\\Delta\\krhoS}{\\kDeltat}} = {} &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\left(\\sigma_{22}\\krhoS - \\sigma_{12}\\krhoS\\sigma_{21}\\right) + h.c.} \\\\ &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\left(\\sigma_{11}\\krhoS - \\sigma_{21}\\krhoS\\sigma_{12}\\right) + h.c.} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]}\\end{aligned}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\frac{\\Delta\\krhoS}{\\kDeltat}} = {} &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\left(\\sigma_{22}\\krhoS + \\krhoS\\sigma_{22} - 2\\sigma_{12}\\krhoS\\sigma_{21}\\right)} \\\\ &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\left(\\sigma_{11}\\krhoS + \\krhoS\\sigma_{11} - 2\\sigma_{21}\\krhoS\\sigma_{12}\\right)} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]}\\end{aligned}",
+       "uses": [],
+       "cap": "写出每个厄米共轭，$(\\sigma_{22}\\rho - \\sigma_{12}\\rho\\sigma_{21})^\\dagger = \\rho\\sigma_{22} - \\sigma_{12}\\rho\\sigma_{21}$和$(\\sigma_{11}\\rho - \\sigma_{21}\\rho\\sigma_{12})^\\dagger = \\rho\\sigma_{11} - \\sigma_{21}\\rho\\sigma_{12}$。"
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\dot{\\krhotwotwo}} = {} &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\langle 2|\\sigma_{22}\\krhoS + \\krhoS\\sigma_{22} - 2\\sigma_{12}\\krhoS\\sigma_{21}|2\\rangle} \\\\ &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\langle 2|\\sigma_{11}\\krhoS + \\krhoS\\sigma_{11} - 2\\sigma_{21}\\krhoS\\sigma_{12}|2\\rangle} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}\\langle 2|[\\kHS, \\krhoS]|2\\rangle}\\end{aligned}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)(2\\krhotwotwo)} \\mk{b}{-\\frac{\\kgamma}{2}\\knbar(-2\\krhooneone)} + \\mk{c}{\\frac{1}{i\\hbar}(\\hbar\\kOmega\\krhoonetwo - \\hbar\\kOmega^*\\krhotwoone)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "$\\sigma_{12}\\rho\\sigma_{21} = \\rho_{22}|1\\rangle\\langle 1|$和$\\sigma_{21}\\rho\\sigma_{12} = \\rho_{11}|2\\rangle\\langle 2|$；利用式 (3.84)，$\\langle 2|\\hat{H}_S\\rho|2\\rangle = -\\hbar\\delta\\rho_{22} + \\hbar\\Omega\\rho_{12}$和$\\langle 2|\\rho\\hat{H}_S|2\\rangle = -\\hbar\\delta\\rho_{22} + \\hbar\\Omega^*\\rho_{21}$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\kgamma(\\knbar + 1)\\krhotwotwo} + \\mk{b}{\\kgamma\\knbar\\krhooneone} + \\mk{c}{i\\kOmega^*\\krhotwoone - i\\kOmega\\krhoonetwo}",
+       "uses": []
+      }
+     ],
+     "num": "(3.86)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "取矩阵元$\\langle i|\\frac{\\Delta\\krhoS}{\\kDeltat}|j\\rangle = \\dot{\\rho}_{ij}$，其中$\\sigma_{ij}|k\\rangle = \\delta_{jk}|i\\rangle$。",
+       "src": "3.4.2"
+      },
+      {
+       "tex": "\\kHS = -\\hbar\\kdelta|2\\rangle\\langle 2| + \\hbar\\kOmega^*|1\\rangle\\langle 2| + \\hbar\\kOmega|2\\rangle\\langle 1|",
+       "src": "(3.84)"
+      }
+     ],
+     "then": {
+      "tex": "\\begin{aligned}\\mk{L}{\\frac{\\Delta\\krhoS}{\\kDeltat}} = {} &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\left(\\sigma_{22}\\krhoS - \\sigma_{12}\\krhoS\\sigma_{21}\\right) + h.c.} \\\\ &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\left(\\sigma_{11}\\krhoS - \\sigma_{21}\\krhoS\\sigma_{12}\\right) + h.c.} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]}\\end{aligned}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\frac{\\Delta\\krhoS}{\\kDeltat}} = {} &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\left(\\sigma_{22}\\krhoS + \\krhoS\\sigma_{22} - 2\\sigma_{12}\\krhoS\\sigma_{21}\\right)} \\\\ &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\left(\\sigma_{11}\\krhoS + \\krhoS\\sigma_{11} - 2\\sigma_{21}\\krhoS\\sigma_{12}\\right)} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]}\\end{aligned}",
+       "uses": [],
+       "cap": "写出每个厄米共轭，$(\\sigma_{22}\\rho - \\sigma_{12}\\rho\\sigma_{21})^\\dagger = \\rho\\sigma_{22} - \\sigma_{12}\\rho\\sigma_{21}$和$(\\sigma_{11}\\rho - \\sigma_{21}\\rho\\sigma_{12})^\\dagger = \\rho\\sigma_{11} - \\sigma_{21}\\rho\\sigma_{12}$。"
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\dot{\\krhooneone}} = {} &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\langle 1|\\sigma_{22}\\krhoS + \\krhoS\\sigma_{22} - 2\\sigma_{12}\\krhoS\\sigma_{21}|1\\rangle} \\\\ &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\langle 1|\\sigma_{11}\\krhoS + \\krhoS\\sigma_{11} - 2\\sigma_{21}\\krhoS\\sigma_{12}|1\\rangle} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}\\langle 1|[\\kHS, \\krhoS]|1\\rangle}\\end{aligned}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhooneone}} = \\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)(-2\\krhotwotwo)} \\mk{b}{-\\frac{\\kgamma}{2}\\knbar(2\\krhooneone)} + \\mk{c}{\\frac{1}{i\\hbar}(\\hbar\\kOmega^*\\krhotwoone - \\hbar\\kOmega\\krhoonetwo)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "$\\sigma_{12}\\rho\\sigma_{21} = \\rho_{22}|1\\rangle\\langle 1|$和$\\sigma_{21}\\rho\\sigma_{12} = \\rho_{11}|2\\rangle\\langle 2|$；利用式 (3.84)，$\\langle 1|\\hat{H}_S\\rho|1\\rangle = \\hbar\\Omega^*\\rho_{21}$和$\\langle 1|\\rho\\hat{H}_S|1\\rangle = \\hbar\\Omega\\rho_{12}$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhooneone}} = \\mk{a}{\\kgamma(\\knbar + 1)\\krhotwotwo} \\mk{b}{- \\kgamma\\knbar\\krhooneone} \\mk{c}{- i\\kOmega^*\\krhotwoone + i\\kOmega\\krhoonetwo}",
+       "uses": []
+      }
+     ],
+     "num": "(3.87)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "取矩阵元$\\langle i|\\frac{\\Delta\\krhoS}{\\kDeltat}|j\\rangle = \\dot{\\rho}_{ij}$，其中$\\sigma_{ij}|k\\rangle = \\delta_{jk}|i\\rangle$。",
+       "src": "3.4.2"
+      },
+      {
+       "tex": "\\kHS = -\\hbar\\kdelta|2\\rangle\\langle 2| + \\hbar\\kOmega^*|1\\rangle\\langle 2| + \\hbar\\kOmega|2\\rangle\\langle 1|",
+       "src": "(3.84)"
+      }
+     ],
+     "then": {
+      "tex": "\\begin{aligned}\\mk{L}{\\frac{\\Delta\\krhoS}{\\kDeltat}} = {} &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\left(\\sigma_{22}\\krhoS - \\sigma_{12}\\krhoS\\sigma_{21}\\right) + h.c.} \\\\ &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\left(\\sigma_{11}\\krhoS - \\sigma_{21}\\krhoS\\sigma_{12}\\right) + h.c.} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]}\\end{aligned}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\frac{\\Delta\\krhoS}{\\kDeltat}} = {} &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\left(\\sigma_{22}\\krhoS + \\krhoS\\sigma_{22} - 2\\sigma_{12}\\krhoS\\sigma_{21}\\right)} \\\\ &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\left(\\sigma_{11}\\krhoS + \\krhoS\\sigma_{11} - 2\\sigma_{21}\\krhoS\\sigma_{12}\\right)} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]}\\end{aligned}",
+       "uses": [],
+       "cap": "写出每个厄米共轭，$(\\sigma_{22}\\rho - \\sigma_{12}\\rho\\sigma_{21})^\\dagger = \\rho\\sigma_{22} - \\sigma_{12}\\rho\\sigma_{21}$和$(\\sigma_{11}\\rho - \\sigma_{21}\\rho\\sigma_{12})^\\dagger = \\rho\\sigma_{11} - \\sigma_{21}\\rho\\sigma_{12}$。"
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\dot{\\krhoonetwo}} = {} &\\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\langle 1|\\sigma_{22}\\krhoS + \\krhoS\\sigma_{22} - 2\\sigma_{12}\\krhoS\\sigma_{21}|2\\rangle} \\\\ &\\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\langle 1|\\sigma_{11}\\krhoS + \\krhoS\\sigma_{11} - 2\\sigma_{21}\\krhoS\\sigma_{12}|2\\rangle} \\\\ &+\\mk{c}{\\frac{1}{i\\hbar}\\langle 1|[\\kHS, \\krhoS]|2\\rangle}\\end{aligned}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhoonetwo}} = \\mk{a}{-\\frac{\\kgamma}{2}(\\knbar + 1)\\krhoonetwo} \\mk{b}{-\\frac{\\kgamma}{2}\\knbar\\krhoonetwo} + \\mk{c}{\\frac{1}{i\\hbar}(\\hbar\\kOmega^*\\krhotwotwo + \\hbar\\kdelta\\krhoonetwo - \\hbar\\kOmega^*\\krhooneone)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "只有$\\langle 1|\\rho\\sigma_{22}|2\\rangle$和$\\langle 1|\\sigma_{11}\\rho|2\\rangle$保留下来，各为$\\rho_{12}$；利用式 (3.84)，$\\langle 1|\\hat{H}_S\\rho|2\\rangle = \\hbar\\Omega^*\\rho_{22}$和$\\langle 1|\\rho\\hat{H}_S|2\\rangle = -\\hbar\\delta\\rho_{12} + \\hbar\\Omega^*\\rho_{11}$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhoonetwo}} = \\mk{a}{-\\frac{\\kgamma}{2}(2\\knbar + 1)\\krhoonetwo} \\mk{c}{- i\\kdelta\\krhoonetwo - i\\kOmega^*(\\krhotwotwo - \\krhooneone)}",
+       "uses": [],
+       "map": {
+        "b": "a"
+       }
+      }
+     ],
+     "num": "(3.88)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "厄米性，$\\krhoonetwo = \\krhotwoone^*$；布居是实数。",
+       "src": "3.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhoonetwo}} = \\mk{a}{-\\frac{\\kgamma}{2}(2\\knbar + 1)\\krhoonetwo} \\mk{c}{- i\\kdelta\\krhoonetwo - i\\kOmega^*(\\krhotwotwo - \\krhooneone)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwoone}} = \\mk{a}{-\\frac{\\kgamma}{2}(2\\knbar + 1)\\krhotwoone} \\mk{c}{+ i\\kdelta\\krhotwoone + i\\kOmega(\\krhotwotwo - \\krhooneone)}",
+       "uses": [
+        1
+       ],
+       "cap": "取复共轭。"
+      }
+     ],
+     "num": "(3.89)"
+    }
+   ]
+  },
+  {
+   "id": "weak-field-response",
+   "what": "相干性对弱场的响应",
+   "source": "现代原子与光学物理 II，3.4 主方程，3.4.3 原子对共振场的响应",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "对于弱场，布居按$\\propto \\kOmega^2$的项变化，所以到最低阶$\\krhooneone \\approx \\krhooneone^{(0)}$和$\\krhotwotwo \\approx \\krhotwotwo^{(0)}$。",
+       "src": "3.4.3"
+      },
+      {
+       "tex": "\\kgammatwoone = \\frac{2\\knbar + 1}{2}\\kgamma",
+       "src": "(3.92)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhotwoone}} = \\mk{a}{-\\frac{\\kgamma}{2}(2\\knbar + 1)\\krhotwoone} \\mk{c}{+ i\\kdelta\\krhotwoone} + \\mk{o}{i\\kOmega(\\krhotwotwo - \\krhooneone)}",
+      "src": "(3.89)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwoone}} = \\mk{a}{-\\kgammatwoone\\krhotwoone} \\mk{c}{+ i\\kdelta\\krhotwoone} + \\mk{o}{i\\kOmega(\\krhotwotwo - \\krhooneone)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwoone}} \\approx \\mk{a}{-(\\kgammatwoone - i\\kdelta)\\krhotwoone} + \\mk{o}{i\\kOmega(\\krhotwotwo^{(0)} - \\krhooneone^{(0)})}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "c": "a"
+       }
+      }
+     ],
+     "num": "(3.94)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\krhotwoone(\\kt) = \\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}\\krhotwoone(\\kdeltanu)",
+       "src": "(3.95)"
+      },
+      {
+       "tex": "\\kOmega(\\kt) = \\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}\\kOmega(\\kdeltanu)",
+       "src": "(3.96)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhotwoone}} \\approx \\mk{a}{-(\\kgammatwoone - i\\kdelta)\\krhotwoone} + \\mk{o}{i\\kOmega(\\krhotwotwo^{(0)} - \\krhooneone^{(0)})}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}(-i\\kdeltanu)\\krhotwoone(\\kdeltanu)} = \\mk{a}{\\int d(\\kdeltanu)e^{-i\\kdeltanu \\kt}\\Big[-(\\kgammatwoone - i\\kdelta)\\krhotwoone(\\kdeltanu)} + \\mk{o}{i\\kOmega(\\kdeltanu)(\\krhotwotwo^{(0)} - \\krhooneone^{(0)})\\Big]}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "代入这些变换；时间导数带下$-i\\delta\\nu$。"
+      },
+      {
+       "tex": "\\mk{L}{-i\\kdeltanu\\krhotwoone(\\kdeltanu)} = \\mk{a}{-(\\kgammatwoone - i\\kdelta)\\krhotwoone(\\kdeltanu)} + \\mk{o}{i\\kOmega(\\kdeltanu)(\\krhotwotwo^{(0)} - \\krhooneone^{(0)})}",
+       "uses": [],
+       "cap": "两个相等的变换在每个频率$\\delta\\nu$处有相同的分量。"
+      },
+      {
+       "tex": "\\mk{a}{(\\kgammatwoone - i\\kdelta - i\\kdeltanu)\\krhotwoone(\\kdeltanu)} = \\mk{o}{i\\kOmega(\\kdeltanu)(\\krhotwotwo^{(0)} - \\krhooneone^{(0)})}",
+       "uses": [],
+       "map": {
+        "L": "a"
+       }
+      },
+      {
+       "tex": "\\mk{a}{\\krhotwoone(\\kdeltanu)} = \\mk{o}{\\kOmega(\\kdeltanu)\\frac{i(\\krhotwotwo^{(0)} - \\krhooneone^{(0)})}{\\kgammatwoone - i(\\kdelta + \\kdeltanu)}}",
+       "uses": []
+      }
+     ],
+     "num": "(3.97)"
+    }
+   ]
+  },
+  {
+   "id": "steady-state-population",
+   "what": "受驱原子的定常态布居",
+   "source": "现代原子与光学物理 II，3.4 主方程，3.4.3 原子对共振场的响应",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "在定常态中，密度矩阵元的时间导数为零。",
+       "src": "3.4.3"
+      },
+      {
+       "tex": "\\kgammatwoone = \\frac{2\\knbar + 1}{2}\\kgamma",
+       "src": "(3.92)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhotwoone}} = \\mk{a}{-\\frac{\\kgamma}{2}(2\\knbar + 1)\\krhotwoone} \\mk{c}{+ i\\kdelta\\krhotwoone} + \\mk{o}{i\\kOmega(\\krhotwotwo - \\krhooneone)}",
+      "src": "(3.89)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwoone}} = \\mk{a}{-\\kgammatwoone\\krhotwoone} \\mk{c}{+ i\\kdelta\\krhotwoone} + \\mk{o}{i\\kOmega(\\krhotwotwo - \\krhooneone)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{0} = \\mk{a}{-(\\kgammatwoone - i\\kdelta)\\krhotwoone} + \\mk{o}{i\\kOmega(\\krhotwotwo - \\krhooneone)}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "c": "a"
+       }
+      },
+      {
+       "tex": "\\mk{a}{\\krhotwoone} = \\mk{o}{\\frac{i\\kOmega(\\krhotwotwo - \\krhooneone)}{\\kgammatwoone - i\\kdelta}}",
+       "uses": [],
+       "map": {
+        "L": "o"
+       }
+      }
+     ],
+     "num": "(3.99)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "没有热光子，$\\knbar = 0$。",
+       "src": "3.4.3"
+      },
+      {
+       "tex": "\\kGammatwoone = \\kgammatwoone - i\\kdelta",
+       "src": "3.4.3"
+      },
+      {
+       "tex": "\\kRopt = 2\\kgammatwoone\\left|\\frac{\\kOmega}{\\kGammatwoone}\\right|^2",
+       "src": "(3.101)"
+      },
+      {
+       "text": "厄米性，$\\krhoonetwo = \\krhotwoone^*$；布居是实数。",
+       "src": "3.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\kgamma(\\knbar + 1)\\krhotwotwo} + \\mk{b}{\\kgamma\\knbar\\krhooneone} + \\mk{c}{i\\kOmega^*\\krhotwoone - i\\kOmega\\krhoonetwo}",
+      "src": "(3.86)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\kgamma\\krhotwotwo} + \\mk{c}{i\\kOmega^*\\krhotwoone - i\\kOmega\\krhoonetwo}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "b": "a"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\kgamma\\krhotwotwo} + \\mk{c}{i\\kOmega^*\\frac{i\\kOmega(\\krhotwotwo - \\krhooneone)}{\\kGammatwoone} - i\\kOmega\\frac{-i\\kOmega^*(\\krhotwotwo - \\krhooneone)}{\\kGammatwoone^*}}",
+       "uses": [
+        0,
+        2,
+        4
+       ],
+       "cap": "$\\rho_{12}$是$\\rho_{21}$的共轭。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\kgamma\\krhotwotwo} \\mk{c}{- |\\kOmega|^2\\left(\\frac{1}{\\kGammatwoone} + \\frac{1}{\\kGammatwoone^*}\\right)(\\krhotwotwo - \\krhooneone)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\kgamma\\krhotwotwo} \\mk{c}{- 2\\kgammatwoone\\left|\\frac{\\kOmega}{\\kGammatwoone}\\right|^2(\\krhotwotwo - \\krhooneone)}",
+       "uses": [
+        2
+       ],
+       "cap": "$1/\\Gamma + 1/\\Gamma^* = 2\\,\\mathrm{Re}\\,\\Gamma/|\\Gamma|^2 = 2\\gamma_{21}/|\\Gamma_{21}|^2$."
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\kgamma\\krhotwotwo} + \\mk{c}{\\kRopt(\\krhooneone - \\krhotwotwo)}",
+       "uses": [
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "在定常态中，密度矩阵元的时间导数为零。",
+       "src": "3.4.3"
+      },
+      {
+       "tex": "\\krhooneone + \\krhotwotwo = \\mathrm{Tr}[\\krhoS] = 1",
+       "src": "3.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\kgamma\\krhotwotwo} + \\mk{c}{\\kRopt(\\krhooneone - \\krhotwotwo)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{0} = \\mk{a}{-\\kgamma\\krhotwotwo} + \\mk{c}{\\kRopt(1 - 2\\krhotwotwo)}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\krhotwotwo(\\kgamma + 2\\kRopt)} = \\mk{c}{\\kRopt}",
+       "uses": [],
+       "map": {
+        "L": "a"
+       }
+      },
+      {
+       "tex": "\\mk{a}{\\krhotwotwo} = \\mk{c}{\\frac{\\kRopt}{\\kgamma + 2\\kRopt}}",
+       "uses": []
+      }
+     ],
+     "num": "(3.100)"
+    }
+   ]
+  }
+ ]
+}

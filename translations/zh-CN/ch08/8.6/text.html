@@ -1,0 +1,102 @@
+<section id="opening">
+<p class="cite-target"><span data-concept="doppler-cooling">多普勒冷却</span>的最终温度由<span data-concept="spontaneous-emission">自发发射</span>加热与<span data-concept="laser-cooling">激光冷却</span>力的平衡所决定，长期以来被认为代表了所有<span data-concept="laser-cooling">激光冷却</span>方案的根本极限。然而，在20世纪90年代初，<sup class="fn" data-note="c-early-1990s"></sup>一批用碱金属（Na、Rb、Cs）进行的实验<span data-concept="sub-doppler-cooling" id="sub-doppler">测得的温度比多普勒冷却极限的预言值低十倍</span>。这一结果令人费解：<span data-concept="doppler-limit">多普勒冷却极限</span>相当直观合理。而且，它基于原子运动是经典的这一假设，该假设在温度接近$\kTD = \hbar\kgamma$时成立。<sup class="fn" data-note="c-td-hbar-gamma"></sup>由于原子在$\kTD \sim 10$ nm时的德布罗意波长远小于辐射的波长，原子确实表现得像经典的点粒子。然而，还有另一个假设不一定成立：我们忽略了真实原子的多能级结构。</p>
+</section>
+
+<section id="observations">
+<h2>8.6.1 实验观测</h2>
+<p class="cite-target">对<span data-concept="sub-doppler-cooling">亚多普勒温度</span>的解释是由两项实验观测促成的。</p>
+<h3>偏振梯度</h3>
+<p id="lin-perp-lin">第一，发现原子系综的最终温度敏感地依赖于外加激光束的<span data-concept="light-polarization">偏振</span>。<span data-concept="sub-doppler-cooling">冷却</span>对<span data-concept="polarization-gradient">交叉线偏振光束（“lin$\perp$lin”构型）</span>效果尤其好。在这种构型中，电场的<span data-concept="spherical-polarization-basis">圆偏振</span>依赖于位置。</p>
+<figure class="dv" id="drv-lin-perp-lin-field"></figure>
+<p>电场是<span data-ref="sigma-plus sigma-minus">两个交叉圆偏振的驻波</span>之和，二者彼此相移$\pi/2$。穿过这样的场运动的原子会在入射光中经历<span data-concept="polarization-gradient">偏振梯度</span>。由于<span data-concept="polarization-gradient">偏振梯度</span>对<span data-concept="two-level-atom">二能级原子</span>几乎没有影响，<span data-concept="light-polarization">偏振</span>在<span data-concept="sub-doppler-cooling">亚多普勒冷却</span>中的重要性表明，原子的多能级结构可能起着关键作用。</p>
+<h3>失谐</h3>
+<p id="detuning-observation">第二项实验观测涉及外加<span data-concept="laser-cooling">冷却</span>光束的<span data-concept="detuning">失谐</span>。发现<span data-concept="sub-doppler-cooling">亚多普勒温度</span>在大<span data-concept="detuning">失谐</span>$\kdelta \gg \kgamma$的极限下特别容易获得。<sup class="fn" data-note="c-large-detuning"></sup><span data-concept="detuning">远失谐</span>激光束的主要效应是原子能级的<span data-concept="ac-stark-shift">交流斯塔克偏移</span>，因此这一实验结果表明，<span data-concept="ac-stark-shift">交流斯塔克偏移</span>在<span data-concept="sub-doppler-cooling">亚多普勒冷却</span>中也应起重要作用。</p>
+</section>
+
+<section id="sisyphus">
+<h2>8.6.2 西西弗斯冷却</h2>
+<p class="cite-target"><span data-concept="sub-doppler-cooling">亚多普勒冷却</span>的理论由科恩-塔诺季及其合作者建立。我们将结合一种特定的原子能级构型来考察他们的解释：J = 1/2 $\rightarrow$ J’ = 3/2 跃迁。</p>
+<figure class="sim" id="sim-cg-levels" data-figure="8.4" data-original="/media/ch08/fig-8-4.png" data-original-caption="用于解释亚多普勒冷却的能级构型。给出了每个跃迁的 CG 系数。注意 m = ±1/2 → m = ±1/2 的跃迁只通过自发发射耦合。">
+  <div class="sim-head"><span class="eyebrow">Figure 8.4</span><span>$J = 1/2 \rightarrow J' = 3/2$跃迁，每条线都标有其<span data-concept="clebsch-gordan-coefficients">CG 系数</span>。选择<span data-ref="sigma-plus">$\sigma_+$光</span>或<span data-ref="sigma-minus">$\sigma_-$光</span>：它驱动其中两条线，每个系数的平方决定该线所起始的基态子能级的<span data-concept="ac-stark-shift">光致频移</span>，此处按红<span data-concept="detuning">失谐</span>以$|\kOmega|^2/|\kdelta|$为单位绘出，因此一个子能级移动的距离是另一个的三倍。波浪线是使<span data-concept="optical-pumping">光抽运</span>循环闭合的<span data-concept="spontaneous-emission">自发衰变</span>：在弱线上吸收，概率为强线的$1/3$，并在概率为$2/3$的线上衰变，使原子以速率$(2/9)\kRopt$转移到另一个基态子能级。</span></div>
+</figure>
+<p id="light-shift-differs">当这样的原子受到<span data-concept="rabi-frequency">拉比频率</span>为$\kOmega$、<span data-concept="detuning">失谐</span>为$|\kdelta| \gg |\kOmega|$的圆偏振<span data-ref="sigma-plus">$\sigma_+$光</span>作用时，它所经历的主要效应是<span data-ref="lvl-g-plus lvl-g-minus">基态能级</span>的<span data-concept="ac-stark-shift">交流斯塔克偏移</span>。由于两个容许跃迁<span data-ref="lvl-g-minus">$m = -1/2$</span> $\rightarrow m = 1/2$、<span data-ref="lvl-g-plus">$m = 1/2$</span> $\rightarrow m = 3/2$的<span data-concept="clebsch-gordan-coefficients">CG 系数</span>不相等，<span data-ref="lvl-g-plus lvl-g-minus">两个基态</span>的<span data-concept="ground-state-light-shift-potential">交流斯塔克偏移不同</span>：</p>
+<div class="equation" id="eq-8-99">$$\kDelta^{\sigma_+}_{1/2} = \frac{|\kOmegap|^2}{\kdelta} \tag{8.99}$$</div>
+<div class="equation" id="eq-8-100">$$\kDelta^{\sigma_+}_{-1/2} = \frac{|\kOmegap|^2}{3\kdelta}. \tag{8.100}$$</div>
+<p>另一种<span data-concept="light-polarization">偏振</span><span data-ref="sigma-minus">$\sigma_-$</span>的效应恰好相反，</p>
+<div class="equation" id="eq-8-101">$$\kDelta^{\sigma_-}_{1/2} = \frac{|\kOmegam|^2}{3\kdelta} \tag{8.101}$$</div>
+<div class="equation" id="eq-8-102">$$\kDelta^{\sigma_-}_{-1/2} = \frac{|\kOmegam|^2}{\kdelta}. \tag{8.102}$$</div>
+<p>我们之前发现，<span data-concept="polarization-gradient">lin$\perp$lin构型</span>会产生<span data-ref="sigma-plus sigma-minus">两个交叉圆偏振的驻波</span>，因此我们关心与空间有关的<span data-concept="rabi-frequency">拉比频率</span></p>
+<div class="equation" id="eq-8-103">$$\kOmegap = \kOmega\cos \kkmag z \tag{8.103}$$</div>
+<div class="equation" id="eq-8-104">$$\kOmegam = \kOmega\sin \kkmag z. \tag{8.104}$$</div>
+<figure class="dv" id="drv-sisyphus-light-shifts"></figure>
+<p>这里$\kdelta &lt; 0$将导致<span data-concept="laser-cooling">冷却</span>效应。回想一下，在之前的讲义中我们讨论过，这种<span data-concept="ac-stark-shift">交流斯塔克偏移</span>的有效势仅适用于<span data-concept="raman-transition">双光子跃迁</span>可以忽略的情形。通过仔细选择我们的模型系统和<span data-concept="light-polarization">偏振</span>，我们排除了任何可能的$\Lambda$型构型。因此，<span data-concept="effective-hamiltonian">有效哈密顿量</span>对所考虑的能级构型提供了恰当的描述。</p>
+<p id="pumping">有效的<span data-concept="ground-state-light-shift-potential">缀饰态势</span>产生一种类似于<span data-concept="dipole-force">偶极力</span>的保守力，它不能提供<span data-concept="laser-cooling">冷却</span>。要理解<span data-concept="sub-doppler-cooling">亚多普勒冷却</span>从何而来，我们必须超越<span data-concept="ac-stark-shift">交流斯塔克效应</span>，考察<span data-concept="optical-pumping">光抽运</span>。由<a href="#sim-cg-levels">图 (8.4)</a>可见，<span data-ref="sigma-plus">$\sigma_+$光</span>把原子<span data-concept="optical-pumping">光抽运</span>到<span data-ref="lvl-g-plus">$m = 1/2$态</span>，而<span data-ref="sigma-minus">$\sigma_-$光</span>把它抽运到<span data-ref="lvl-g-minus">$m = -1/2$态</span>。当原子穿过<span data-concept="ground-state-light-shift-potential">缀饰态势</span>运动时，它还会在<span data-concept="dressed-states">缀饰态</span>之间被其所在位置的主导场<span data-concept="optical-pumping">光抽运</span>。对于<span data-concept="detuning">红失谐</span>的场，占主导的<span data-concept="light-polarization">偏振</span>倾向于把原子<span data-concept="optical-pumping">光抽运</span>到能量较低的<span data-concept="dressed-states">缀饰态</span>，因此在两次<span data-concept="optical-pumping">光抽运</span>循环之间，原子必须不断爬升势能曲线。爬上山丘使原子在获得势能的同时损失一部分动能；这部分势能随后被倾泻到<span data-concept="spontaneous-emission">自发发射的光子</span>中，该光子把原子抽运到较低的态。<span data-concept="sisyphus-cooling" id="sisyphus-name">这一物理机制赢得了形象的名称“西西弗斯”冷却</span>。</p>
+<figure class="sim" id="sim-sisyphus" data-figure="8.5" data-original="/media/ch08/fig-8-5.png" data-original-caption="西西弗斯冷却机制。当原子穿过偏振梯度场运动时，它的内部能级（图中以绿色表示）跟随发生斯塔克偏移的基态。在σ±光占主导的区域，原子被光抽运到 m = ±1/2 能级。对于红失谐的光束，原子总是被光抽运到较低能量的态，因此每个循环都必须损失动能。">
+  <div class="sim-head"><span class="eyebrow">Figure 8.5</span><span>一个原子穿过<span data-concept="polarization-gradient">lin$\perp$lin场</span>，沿着<span data-ref="lvl-g-plus">$m = 1/2$</span>的<span data-concept="ground-state-light-shift-potential">光致频移势</span>$\kU_{1/2}$（实线）和<span data-ref="lvl-g-minus">$m = -1/2$</span>的$\kU_{-1/2}$（虚线），<a href="#drv-sisyphus-light-shifts">式 (8.106)</a>–<a href="#drv-sisyphus-light-shifts">(8.107)</a>的两条线；下方的条带显示<span data-ref="sigma-plus">$\sigma_+$</span>光和<span data-ref="sigma-minus">$\sigma_-$</span>光在何处占主导。原子按<a href="#eq-8-110">式 (8.110)</a>的局域速率被无规地<span data-concept="optical-pumping">光抽运</span>到占主导的光所偏爱的子能级；每次跳跃用一条波浪线标出，<span data-concept="spontaneous-emission">自发光子</span>带走两条曲线之间的能量。红<span data-concept="detuning">失谐</span>时，跳跃最常发生在波峰附近，因此原子的能量$E$，上方的虚线和下方的图线，逐级下降，直到原子再也无法爬上山丘。增大$\kvc = 1/2\kkmag\ktauP$，抽运就变得很快，以致原子大多跟随较低的曲线，冷却得慢得多；选择蓝失谐，它就被加热。能量以$\hbar|\kOmega|^2/|\kdelta|$为单位，速度以$u$为单位，动能为$\hbar|\kOmega|^2/|\kdelta|$的速率，时间以$1/\kkmag u$为单位；反冲冲击被略去。</span></div>
+</figure>
+</section>
+
+<section id="quantitative">
+<h2>8.6.3 亚多普勒冷却的定量分析</h2>
+<p class="cite-target">虽然我们现在已经理解了<span data-concept="sisyphus-cooling">西西弗斯冷却</span>背后的物理，但要验证它会导致<span data-concept="sub-doppler-cooling">亚多普勒温度</span>，我们必须推导出更定量的描述。</p>
+<h3>西西弗斯冷却力</h3>
+<p>在大<span data-concept="detuning">失谐</span>的极限下，相关的运动动力学必定来自<span data-concept="sisyphus-force">反应力</span>。</p>
+<figure class="dv" id="drv-sisyphus-reactive-force"></figure>
+<p>唯一剩下的未知量是布居差$\kDeltarho = \left(|\frac{1}{2}\rangle\langle\frac{1}{2}| - | -\frac{1}{2}\rangle\langle -\frac{1}{2}|\right)$。</p>
+<p id="rate-equation">求$\kDeltarho$的第一步是计算相关的<span data-concept="optical-pumping-rate">光抽运率</span>。<span data-concept="clebsch-gordan-coefficients">CG 系数</span>表明，对于<span data-ref="sigma-plus">$\sigma_+$光</span>，原子以速率$\kRopt^+/3$从<span data-ref="lvl-g-minus">$m_g = -1/2$基态</span>被抽运到$m_e = 1/2$激发态，而原子从$m_e = 1/2 \rightarrow$<span data-ref="lvl-g-plus">$m_g = 1/2$</span>衰变的概率为$2/3$。因此，从<span data-ref="lvl-g-minus">$m_g = -1/2$</span>到<span data-ref="lvl-g-plus">$m_g = 1/2$</span>的<span data-concept="optical-pumping-rate">光抽运率</span>是$(2/9)\kRopt^+ = (2/9)\kRopt\cos^2 \kkmag z$，其中$\kRopt = |\kOmega^2|\kgamma/((\kgamma/2)^2 + \kdelta^2)$。<sup class="fn" data-note="c-omega-squared"></sup>类似的计算对<span data-ref="sigma-minus">$\sigma_-$光</span>也成立，它以速率$(2/9)\kRopt\sin^2 \kkmag z$把原子从<span data-ref="lvl-g-plus">$m_g = 1/2$</span><span data-concept="optical-pumping">光抽运</span>到<span data-ref="lvl-g-minus">$m_g = -1/2$态</span>。</p>
+<p>由于我们选取的能级构型避免了<span data-concept="raman-transition">拉曼跃迁</span>，我们可以计算原子布居，而不必同时求出相干性。此外，本着<span data-concept="adiabatic-elimination">绝热消除</span>的精神，我们可以忽略激发态布居，并写出基态布居的<span data-concept="rate-equations">速率方程</span>：</p>
+<div class="equation" id="eq-8-110">$$\frac{d}{d\kt}\rho_{\frac{1}{2}\frac{1}{2}} = -\frac{2}{9}\kRopt\sin^2(\kkmag z)\rho_{\frac{1}{2}\frac{1}{2}} + \frac{2}{9}\kRopt\cos^2(\kkmag z)\rho_{-\frac{1}{2}-\frac{1}{2}} \tag{8.110}$$</div>
+<div class="equation" id="eq-8-111">$$\rho_{\frac{1}{2}\frac{1}{2}} + \rho_{-\frac{1}{2}-\frac{1}{2}} = 1. \tag{8.111}$$</div>
+<p>由这两个方程可以直接求出布居差的演化，它描述一个以速率$1/\ktauP$趋向定常态值$\kDeltarho_{SS}$的弛豫过程。</p>
+<figure class="dv" id="drv-population-relaxation"></figure>
+<p>人们很想用这个定常态值来计算<span data-concept="sisyphus-force">耗散力</span>。</p>
+<figure class="dv" id="drv-steady-state-force"></figure>
+<p>定常态力在几个波长上平均为零，所以我们显然还没有找到我们所追求的耗散效应。为什么这样行不通？在代入定常态布居差时，我们假设<span data-concept="optical-pumping-rate">光抽运率</span>远快于原子运动动力学的典型时标。与<span data-concept="doppler-cooling">多普勒冷却</span>中存在明确的时标层次$\kgamma \gg \komegaR$不同，<span data-concept="sisyphus-pumping-rate">西西弗斯阻尼常数</span>$1/\ktauP$不必比动量变化的速率大。</p>
+<p id="expansion">特别是，我们需要考虑原子位置随时间的变化$z = \kvmag\kt$。修改$\kDeltarho$的<span data-concept="rate-equations">速率方程</span>以纳入原子运动，我们得到</p>
+<div class="equation" id="eq-8-117">$$\frac{d}{d\kt}\kDeltarho = -\frac{1}{\ktauP}\left(\kDeltarho - \cos(2\kkmag\kvmag\kt)\right), \tag{8.117}$$</div>
+<p>因此$\kDeltarho_{SS} = \cos(2\kkmag\kvmag\kt)$不再是精确解。对于小速度，我们可以利用<span data-concept="adiabatic-expansion">绝热展开</span>方法来求解<a href="#eq-8-117">式 (8.117)</a>。</p>
+<figure class="dv" id="drv-population-lag"></figure>
+<p id="lag-force">我们立刻看到，布居差落后于瞬时定常态值，这是因为<span data-concept="optical-pumping">光抽运</span>使布居达到平衡需要一些时间$\sim \ktauP$。此外，<span data-concept="sisyphus-force">这一时间延迟给出的力的贡献不会平均为零，并且与速度成正比</span>。</p>
+<figure class="dv" id="drv-lag-force"></figure>
+<p>假设速度在由<span data-concept="optical-pumping">光抽运</span>$\ktauP$所定义的时标上不变，就可以精确求解<a href="#eq-8-117">式 (8.117)</a>。</p>
+<figure class="dv" id="drv-sisyphus-solution"></figure>
+<p>看起来这个力依赖于<span data-concept="ac-stark-shift">交流斯塔克偏移</span>，而且每个<span data-concept="optical-pumping">光抽运</span>循环中损失的能量确实是$|\kOmega|^2/\kdelta$量级。然而，<span data-concept="optical-pumping-rate">光抽运率</span>也通过$\kvc$决定这个力，而由于$\kvc \propto \kRopt{\sim}|\kOmega|^2\kgamma/\kdelta^2$（当$|\kdelta|{\gg}\kgamma, \kOmega$时），在低功率下外加场的强度恰好抵消。</p>
+<figure class="dv" id="drv-sisyphus-friction"></figure>
+<p id="sisyphus-friction">特别是，对于远小于$\kvc$的速度，<span data-concept="sisyphus-friction">西西弗斯摩擦系数趋于</span></p>
+<div class="equation" id="eq-8-127">$$\ketaS = 3\frac{\hbar \kkmag^2}{\km}\frac{\kdelta}{\kgamma}. \tag{8.127}$$</div>
+<p>当$\kdelta &lt; 0$时，<span data-concept="sisyphus-friction">摩擦系数</span>起到冷却原子的作用，而<span data-concept="detuning">蓝失谐</span>的场则引起加热。</p>
+<h3>多普勒冷却与西西弗斯冷却的比较</h3>
+<p id="compare"><span data-concept="doppler-sisyphus-comparison">很有启发的是比较</span><span data-concept="sisyphus-friction">西西弗斯冷却的摩擦系数</span>$\ketaS$与<span data-concept="doppler-cooling">多普勒冷却</span>的摩擦系数$\keta_D$，在小功率和大<span data-concept="detuning">失谐</span>的极限下：</p>
+<div class="equation" id="eq-8-128">$$\keta_D = 8\frac{\hbar \kkmag^2}{\km}\frac{\kgammaonetwo|\kOmega|^2}{\kdelta^3} \tag{8.128}$$</div>
+<div class="equation" id="eq-8-129">$$\ketaS = 3\frac{\hbar \kkmag^2}{\km\kgamma}\kdelta. \tag{8.129}$$</div>
+<p><span data-concept="friction-coefficient">多普勒摩擦系数</span>随着场变得更弱、<span data-concept="detuning">失谐</span>更大而趋于零，而<span data-concept="sisyphus-cooling">西西弗斯冷却机制</span>与功率无关，并且随着外加场的<span data-concept="detuning">红失谐</span>更大而增大，因此在这一情形下$\ketaS \gg \keta_D$。然而，这种增大的黏性是有代价的：虽然<span data-concept="sisyphus-cooling">西西弗斯冷却</span>在零速度附近可以强得多，但它的<span data-concept="capture-range">俘获速度</span>也比多普勒<span data-concept="capture-range">俘获速度</span>小得多。</p>
+<figure class="sim" id="sim-sisyphus-doppler" data-figure="8.6" data-original="/media/ch08/fig-8-6.png" data-original-caption="多普勒力与西西弗斯力的比较。多普勒力可以把相对较热的原子冷却到多普勒极限。只有缓慢运动的原子才能被西西弗斯机制冷却，但西西弗斯摩擦系数（与曲线在 v = 0 处的斜率成正比）要大得多，因此可以达到低得多的最终温度。">
+  <div class="sim-head"><span class="eyebrow">Figure 8.6</span><span>两束对传光束的<span data-concept="dissipative-force">多普勒力</span>$\kFmag_D$，每束的<span data-concept="rabi-frequency">拉比频率</span>为$|\kOmega|$，如 8.3 节（虚线），以及<a href="#drv-sisyphus-solution">式 (8.125)</a>的<span data-concept="sisyphus-force">西西弗斯力</span>$\kFmag_S$（实线）：二者的大小随原子速度$\kvmag &gt; 0$的变化，画在对数坐标轴上。两种力都与运动方向相反，且是$\kvmag$的奇函数。在这些坐标轴上，<span data-concept="friction-coefficient">黏性力</span>$\keta\km\kvmag$是一条斜率为一的直线，其高度给出$\keta$：西西弗斯线远高于多普勒线，高出的倍数为括号标出的$\ketaS/\keta_D$，但在小得多的<span data-concept="capture-range">俘获速度</span>处转折，即$\kvc^S$与$\kvc^D$相比；在线性标度上，西西弗斯力会太小太窄，在多普勒力旁边看不见。拖动$|\kOmega|$，上升的西西弗斯线保持不动，而它的峰值沿着它滑动；把$\kdelta$拖得更偏红，西西弗斯摩擦就增大，而它的俘获速度缩小。频率以$\kgamma$为单位，其中$\kgammaonetwo = \kgamma/2$，速度以$\kgamma/\kkmag$为单位，力以$\hbar\kkmag\kgamma$为单位。</span></div>
+</figure>
+<h3>俘获速度</h3>
+<p>对于相对较弱的场，多普勒<span data-concept="capture-range">俘获速度</span>与功率无关，$\kvc^D \sim \kgamma/\kkmag, \kdelta/\kkmag$。然而，仔细的计算表明，<span data-concept="sisyphus-cooling">西西弗斯</span><span data-concept="capture-range">俘获速度</span>与<span data-concept="ac-stark-shift">交流斯塔克偏移</span>呈标度关系：<sup class="fn" data-note="c-capture-scaling"></sup>由<a href="#drv-sisyphus-solution">式 (8.124)</a>，<span data-concept="capture-range">俘获速度</span>的大失谐极限为</p>
+<div class="equation" id="eq-8-130">$$\kvc^S \sim \frac{\klambda}{18\pi}\frac{|\kOmega|^2}{\kdelta^2}\kgamma. \tag{8.130}$$</div>
+<p>于是我们发现，当$\kdelta \rightarrow \infty$时，<span data-concept="sisyphus-friction">摩擦系数</span>增大，但<span data-concept="capture-range">俘获速度</span>趋于零。</p>
+<h3>西西弗斯冷却中的非绝热性</h3>
+<p id="time-lag">从我们对<span data-concept="sisyphus-cooling">西西弗斯冷却</span>的定量分析中，我们看到，如果原子遵循<span data-concept="density-matrix">密度矩阵</span>方程的瞬时定常态解，<span data-concept="sisyphus-force">冷却力</span>就会消失。<span data-concept="sisyphus-nonadiabaticity">只有当我们考虑时间滞后时，摩擦力才会出现，因此它对西西弗斯机制必定是关键的</span>。从物理上看，如果原子布居被<span data-concept="optical-pumping">光抽运</span>的速度远快于原子速度，那么原子穿过<span data-concept="ground-state-light-shift-potential">缀饰态势</span>运动时就不必损失势能。特别是，如果布居分布<span data-concept="adiabatic-theorem">绝热跟随</span>原子位置，那么上坡运动的原子布居损失能量的速率与下坡运动的原子布居获得能量的速率恰好相同。反过来，对<span data-concept="sisyphus-cooling">冷却</span>最理想的情形是，原子爬上势能山丘的速度如此之快，以致它的布居都不能被<span data-concept="optical-pumping">光抽运</span>到较低的（加速）态。</p>
+</section>
+
+<section id="limit">
+<h2>8.6.4 西西弗斯冷却极限</h2>
+<p class="cite-target" id="diffusion-sp"><span data-concept="sisyphus-cooling">西西弗斯冷却</span>的极限由我们在<span data-concept="doppler-cooling">多普勒冷却</span>中遇到过的同一<span data-concept="laser-cooling-diffusion">动量扩散</span>过程所决定。我们发现，<span data-concept="spontaneous-emission">自发发射</span>引起的动量冲击导致<span data-concept="laser-cooling-diffusion">扩散率</span></p>
+<div class="equation" id="eq-8-131">$$\kDdiff_{sp} = (\hbar \kkmag)^2\frac{|\kOmega|^2\kgamma/2}{(\kgamma/2)^2 + \kdelta^2}. \tag{8.131}$$</div>
+<p>此外，原子在<span data-ref="lvl-g-plus lvl-g-minus">$m_s = \pm 1/2$态</span>之间以速率$1/\tau_p$<span data-concept="quantum-jump">跳跃</span>时，瞬时<span data-concept="dipole-force">偶极力</span>的涨落也带来<span data-concept="laser-cooling-diffusion">动量扩散</span>。当涨落在一个波长上取平均时，<sup class="fn" data-note="footnote-4"></sup></p>
+<div class="equation" id="eq-8-132">$$\kDdiff_{dp} = \left\langle 2\hbar^2\kkmag^2\frac{\kdelta^2}{\kgamma}\frac{\kOmega^2/2}{\kdelta^2 + (\kgamma/2)^2}\sin^4(2\kkmag z)\right\rangle = \frac{3(\hbar \kkmag)^2\kdelta^2}{4\kgamma}\frac{\kOmega^2/2}{\kdelta^2 + (\kgamma/2)^2}. \tag{8.132}$$</div>
+<p id="sisyphus-limit">实际上，这第二个<span data-concept="laser-cooling-diffusion">扩散系数</span>在大<span data-concept="detuning">失谐</span>时占主导。利用<span data-concept="einstein-relation">爱因斯坦关系</span>和我们得到的<span data-concept="sisyphus-friction">西西弗斯摩擦系数</span>的结果，我们可以求出<span data-concept="sisyphus-limit">原子在大失谐极限下所达到的最终温度</span>。</p>
+<figure class="dv" id="drv-sisyphus-limit"></figure>
+<p>这表明最低温度与<span data-concept="ground-state-light-shift-potential">缀饰态势</span>的深度同量级。一旦原子的动能小到原子无法爬上山丘，<span data-concept="sisyphus-cooling">西西弗斯冷却机制</span>就不复存在。</p>
+<p id="recoil-limit">看起来$\kTS$可以被降到任意小的值，只要令$|\kOmega|^2/\kdelta \rightarrow 0$。实际上，一旦原子慢到其运动不能再按经典处理，我们的分析就失效了。当原子冷到基本上局域在一个势阱之内时，它的动量具有不确定度</p>
+<div class="equation" id="eq-8-134">$$\delta \kpcm \approx \frac{2\pi\hbar}{\klambda} \tag{8.134}$$</div>
+<p>这<span data-concept="recoil-limit">为原子能量设定了一个下限</span>，等于<span data-concept="recoil-frequency">反冲能</span></p>
+<div class="equation" id="eq-8-135">$$E^\mathrm{kinetic}_\mathrm{min} \sim \hbar\komegaR. \tag{8.135}$$</div>
+<p><span data-concept="recoil-frequency">反冲能</span>的典型值$\kTR \approx 2.4\mu$K（Na）或$\kTR \approx 0.37\mu$K（Rb）远小于<span data-concept="doppler-limit">多普勒极限</span>。</p>
+<h3>其他亚多普勒冷却机制</h3>
+<p>我们只讨论了众多<span data-concept="sub-doppler-cooling">亚多普勒冷却</span>方案中的一种，且应用于一种特定的原子能级构型。具体特征各不相同，但这个模型让人对为达到<span data-concept="sub-doppler-cooling">亚多普勒温度</span>而采用的机制类型有所了解。关于其他<span data-concept="laser-cooling">冷却</span>技术的好参考资料是梅特卡夫和范德斯特拉滕的“Laser Cooling and Trapping”，或科恩-塔诺季在 Les Houches LXXII（1999）的讲义。</p>
+<p id="sub-recoil">注意，<span data-concept="recoil-frequency">反冲能</span>并不为<span data-concept="laser-cooling">激光冷却</span>设定最终极限，但要进一步推进，我们就需要用量子力学的方式处理原子运动。超越$\komegaR$的<span data-concept="laser-cooling">激光冷却</span>方案被称为<span data-concept="sub-recoil-cooling">“亚反冲”机制</span>，它们需要<span data-concept="raman-transition">双光子跃迁</span>或诸如<span data-concept="dark-resonance">暗共振</span>之类的效应。</p>
+<p>最后，请注意我们只考虑了自由中性原子的<span data-concept="laser-cooling">冷却</span>。在许多方面，受约束的原子和离子的<span data-concept="laser-cooling">冷却</span>可以简单得多，将在后续讲义中讨论。</p>
+</section>

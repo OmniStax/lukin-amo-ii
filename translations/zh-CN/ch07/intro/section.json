@@ -1,0 +1,34 @@
+{
+ "id": "intro",
+ "chapter": "7",
+ "title": "引言",
+ "short": "引言",
+ "lead": "",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "书中的笔误“to is applicability”（应为“its”）予以保留。",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "figures": []
+}

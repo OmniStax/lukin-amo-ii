@@ -1,0 +1,91 @@
+<section id="opening">
+<p>无规过程的量子描述与经典统计力学中的无规涨落理论密切相关。为引出后面量子力学理论的发展，我们简要回顾<span data-concept="langevin-equation">布朗运动</span>这一经典问题。</p>
+</section>
+
+<section id="brownian">
+<h2>8.4.1 布朗运动</h2>
+<p>考虑一个重粒子，周围是由较轻粒子构成的热浴。较重的粒子在粒子云中运动时，它与较轻粒子的相互作用产生<span data-concept="friction-coefficient">黏滞阻力</span>，使它减速。然而，重粒子永远不会完全静止，因为它不断受到较轻粒子施加的无规动量冲击。在长时间下，重粒子将与它的热浴达到热平衡。</p>
+<h3>朗之万方程</h3>
+<p id="langevin-equation"><span data-concept="langevin-equation">布朗运动</span>这一经典问题在数学上由<span data-concept="langevin-equation" id="langevin-equation-name">朗之万方程</span>描述，它把重粒子所受的力建模为<span data-concept="friction-coefficient">黏滞阻力</span>加上一个涨落的“<span data-concept="langevin-equation">朗之万力</span>”，</p>
+<div class="equation" id="eq-8-34">$$\frac{d}{d\kt}\kpcm = -\keta \kpcm + \kft(\kt), \tag{8.34}$$</div>
+<p>其中$\keta$是<span data-concept="friction-coefficient">摩擦系数</span>，$\kft(\kt)$是重粒子与轻粒子碰撞产生的无规力。平均而言，<span data-concept="langevin-equation">朗之万力</span>为零，</p>
+<div class="equation" id="eq-8-35">$$\langle \kft(\kt)\rangle = 0 \tag{8.35}$$</div>
+<p>并且我们定义它的双时期望值</p>
+<div class="equation" id="eq-8-36">$$\langle \kft(\kt)\kft(\kt')\rangle = 2\kDdiff g(\kt-\kt') \tag{8.36}$$</div>
+<p id="diffusion-coefficient">用<span data-concept="diffusion-coefficient" id="diffusion-coefficient-name">扩散系数$\kDdiff$</span>和二阶关联函数$g(\kt-\kt')$表示，满足</p>
+<div class="equation" id="eq-8-37">$$\int_{-\infty}^{\infty} g(\kt-\kt')d\kt = 1. \tag{8.37}$$</div>
+<p>注意$g(\kt-\kt')$的时间依赖由碰撞频率决定。我们特别感兴趣的情形是：较轻的粒子频繁地与重粒子碰撞，但每次碰撞的效果很小。这样，重粒子将缓慢地损失动量，而无规力$\kft(\kt)$将涨落得非常快。在这一快速碰撞极限下，我们可以把两个时标分开，关联函数趋于一个 δ 函数</p>
+<div class="equation" id="eq-8-38">$$g(\kt-\kt') \rightarrow \delta(\kt-\kt'). \tag{8.38}$$</div>
+<p>对于任意的$\kft(\kt)$，我们都可以求得<span data-concept="langevin-equation">朗之万方程</span>的通解。</p>
+<figure class="dv" id="drv-langevin-solution"></figure>
+<p>所以平均动量不受<span data-concept="langevin-equation">朗之万力</span>的影响。然而，它的方差将有来自随机动量冲击的贡献。在快速碰撞极限下，我们可以计算<span data-concept="langevin-momentum-spread">方均动量</span>。</p>
+<figure class="dv" id="drv-mean-square-momentum"></figure>
+<p>注意，$\langle \kft(\kt)\rangle$的线性项为零，因为平均<span data-concept="langevin-equation">朗之万力</span>为零。这一计算表明，与平均速度不同，<span data-concept="langevin-momentum-spread">方均动量</span>受到<span data-concept="diffusion-coefficient">扩散项</span>存在的影响。对于很短的时间$\keta \kt \ll 1$，动量平方只是指数式衰减，</p>
+<div class="equation" id="eq-8-45">$$\overline{\kpcm(\kt)^2} \approx \overline{\kpcm(0)^2}e^{-2\keta \kt}. \tag{8.45}$$<sup class="fn" data-note="c-eq-8-45"></sup></div>
+<p>然而，对于长时间$\keta \kt \gg 1$，第一个黏滞项被指数式阻尼，动量由<span data-concept="langevin-equation">朗之万力</span>决定。</p>
+<figure class="dv" id="drv-long-time-momentum"></figure>
+<h3>爱因斯坦关系</h3>
+<p id="einstein-relation">如果我们可以假定系统在这样的长时间下趋于热平衡，那么对一维系统有$E_\mathrm{kinetic} = (1/2)k_B\kT$。由此得到的用温度和<span data-concept="friction-coefficient">摩擦系数</span>表示<span data-concept="diffusion-coefficient">扩散常量</span>的方程称为“<span data-concept="einstein-relation" id="einstein-relation-name">爱因斯坦关系</span>”。</p>
+<figure class="dv" id="drv-einstein-relation"></figure>
+<p>从物理上说，有限的平衡温度$\kT$由阻尼与扩散的平衡决定。特别要注意，有限温度下的耗散（$\keta$）总会导致涨落（$\kDdiff$）。在我们对<span data-concept="laser-cooling">激光冷却</span>的应用中，<span data-concept="einstein-relation">爱因斯坦关系</span>将使我们能够计算原子在平衡时达到的温度。利用微观描述找到涨落力$\kft(\kt)$的量子类比，我们就能预言可以达到的最低温度。</p>
+<h3>无规行走</h3>
+<p>如果我们作出摩擦项为零$\keta \rightarrow 0$这一不符合物理的假设，重粒子就只受到来自较轻粒子的无规冲击，没有耗散。它的动量将无限增长，</p>
+<div class="equation" id="eq-8-49">$$\overline{\kpcm^2} = \kDdiff\kt, \tag{8.49}$$<sup class="fn" data-note="c-eq-8-49"></sup></div>
+<p id="random-walk">并且达不到热平衡，所以<span data-concept="einstein-relation">爱因斯坦关系</span>不成立。这个所谓的“<span data-concept="random-walk" id="random-walk-name">无规行走</span>”问题表明，在没有阻尼时，重粒子将在较轻粒子的云中无规地扩散。关于这一主题，一份很好的参考文献是科恩-塔诺季的“Atom-Photon Interactions”。</p>
+<figure class="sim" id="sim-brownian">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>六十个重粒子，初始动量都是$\kpcm(0)$，各自经历自己的<span data-concept="langevin-equation">朗之万力</span>$\kft(\kt)$历程，<span data-concept="friction-coefficient">摩擦系数</span>$\keta$和<span data-concept="diffusion-coefficient">扩散系数</span>$\kDdiff$相同。上图是每个粒子的动量$\kpcm(\kt)$，其中一个用墨色描出，平均值$\overline{\kpcm} = \kpcm(0)e^{-\keta\kt}$用虚线表示；下图是<span data-concept="langevin-momentum-spread">方均动量</span>，即六十个粒子的平均，用墨色画在式 (8.44) 之上，它的平衡值$\kDdiff/\keta$用虚线表示。看平均值滑向零，而冲击使粒子散开，直到$\overline{\kpcm^2}$稳定在$\kDdiff/\keta$，不论$\kpcm(0)$是多少；把$\keta$拖到零就是<span data-concept="random-walk">无规行走</span>，其中$\overline{\kpcm^2}$按$2\kDdiff\kt$无限增长。动量以$\hbar\kkmag$为单位，时间以 μs 为单位，这是激光中原子的尺度。</span></div>
+</figure>
+</section>
+
+<section id="heisenberg-langevin">
+<h2>8.4.2 海森伯-朗之万方法</h2>
+<p id="hl-opening">要把朗之万方法应用于<span data-concept="doppler-cooling">多普勒冷却</span>的量子力学描述，我们必须确定系统中的涨落。我们的<span data-concept="semiclassical-light-force">半经典</span>分析对力和原子算符取了平均$\kF \rightarrow \langle\kF\rangle, \hat{\sigma}_{\alpha,\beta} \rightarrow \langle\hat{\sigma}_{\alpha,\beta}\rangle$（其中$\hat{\sigma}_{\alpha,\beta} = |\alpha\rangle\langle\beta|$），这立刻就消去了任何相关的噪声。显然，我们需要做得更好。</p>
+<p>原则上，我们只需回到<span data-concept="heisenberg-picture">海森伯运动方程</span>，并避免取任何期望值：</p>
+<div class="equation" id="eq-8-50">$$\frac{d}{d\kt}\hat{\sigma}_{\alpha,\beta} = \frac{i}{\hbar}[\kH, \hat{\sigma}_{\alpha,\beta}]. \tag{8.50}$$</div>
+<p id="naive-damping">原子的演化有两个主要的贡献：哈密顿量的演化，以及与<span data-concept="open-system">热库</span>算符的耦合。我们已经计入了哈密顿量的贡献，只需再加上耗散的效应。事实上，这些运动方程看起来与<span data-concept="optical-bloch-equations">密度矩阵方程</span>非常相似，很容易让人想到引入退相位项$\dot{\hat{\sigma}}_{\alpha,\beta} \sim -\gamma_{\alpha,\beta}\hat{\sigma}_{\alpha,\beta}$来计入耗散。不幸的是，这种朴素的做法会导致不符合物理的结果。特别是，这样的<span data-concept="dephasing-rate">退相干</span>项意味着$[\hat{\sigma}_{\beta,\alpha}, \hat{\sigma}_{\alpha,\beta}]$随时间指数式衰减。</p>
+<figure class="dv" id="drv-naive-commutator-decay"></figure>
+<p>我们更仔细地重新处理这个问题，考虑按照哈密顿量演化的一个一般的系统和<span data-concept="open-system">热库</span></p>
+<div class="equation" id="eq-8-53">$$\kH = \kHS + \kHR + \kHSR \tag{8.53}$$</div>
+<p>其中</p>
+<div class="equation" id="eq-8-54">$$\kHSR = -\hat{R}^\dagger\kShat - \kShat^\dagger\hat{R}. \tag{8.54}$$</div>
+<p>在<span data-concept="two-level-atom">二能级原子</span>与辐射场的<span data-concept="cavity-modes">模</span>$\hat{a}_i$相互作用、<span data-concept="single-photon-rabi-frequency">耦合常数</span>为$\kg_i$的情形下，系统算符和<span data-concept="open-system">热库</span>算符为</p>
+<div class="equation" id="eq-8-55">$$\hat{R} = \sum_j \hbar \kg_j\hat{a}_j \tag{8.55}$$</div>
+<div class="equation" id="eq-8-56">$$\kShat = \hat{\sigma}_{12} = |1\rangle\langle 2|, \tag{8.56}$$</div>
+<p>但一般而言它们可以取任何形式。</p>
+<p>我们可以写出任意系统算符$\hat{A}$演化的运动方程。</p>
+<p id="coherent-field">第一项描述孤立系统的哈密顿量演化，其余各项描述系统与热浴的相互作用。例如，如果取$\hat{A} = \hat{\sigma}_{12}, \kShat = \hat{\sigma}_{12}$，我们会得到一个看起来与原子相干性的<span data-concept="optical-bloch-equations">密度矩阵方程</span>非常相似的方程，其中相干场$\kOmega$被算符量$\hat{R}$取代。这并不那么令人惊讶，因为$\hat{R}$起着量子场算符的作用。注意，系统算符和<span data-concept="open-system">热库</span>算符对易，所以<a href="#drv-system-operator-equation">式 (8.57)</a>中最后两项的次序是任意的。尽管如此，我们还是选择了这一次序，因为它突出了$\hat{R}$对真空态的作用，并且当我们把<span data-concept="open-system">热库</span>算符$\hat{R}$用影响它的系统算符表示时，这将被证明是有用的。</p>
+<figure class="dv" id="drv-system-operator-equation"></figure>
+<p>接下来我们考虑<span data-concept="open-system">热库</span>算符$\hat{R}$本身的演化方程。对于辐射场，$\hat{R} = \sum_j \hbar \kg_j\hat{a}_j$。</p>
+<p>第一项表示在适当选取的<span data-concept="rotating-frame">转动参考系</span>中的自由场演化，而系统与热库的耦合给出量子场的源项，它又反过来驱动系统。</p>
+<figure class="dv" id="drv-reservoir-operator"></figure>
+<p id="markov">这个表达式与<span data-concept="wigner-weisskopf">维格纳-韦斯科普夫理论</span>中<span data-concept="open-system">热库</span>算符所服从的方程非常相似，我们将再次利用<span data-concept="born-markov-approximation">马尔可夫近似</span>来简化方程。如果原子算符$\kShat(\kt)$随时间缓慢变化，并且<span data-concept="open-system">热库</span>带宽很宽，源项就可以近似为一个简单的衰变。</p>
+<figure class="dv" id="drv-markov-decay"></figure>
+<p id="quantum-langevin-force">然而，除了预期的衰变项，我们还需要考虑自由场演化项。这个所谓的“<span data-concept="quantum-langevin-force" id="quantum-langevin-force-name">量子朗之万力</span>”，</p>
+<div class="equation" id="eq-8-63">$$\kfhat(\kt) = -i\sum_j \kg_j\hat{a}_j(0)e^{-i(\knu_j-\komega)\kt}, \tag{8.63}$$</div>
+<p>在我们先前对<span data-concept="open-system">热库</span>效应的朴素猜测中是缺失的。与$\kfhat(\kt)$相关的涨落将使对易式$[\hat{\sigma}_{\beta,\alpha}, \hat{\sigma}_{\alpha,\beta}]$免于我们先前发现的不符合物理的指数式衰减。</p>
+<h3>量子朗之万算符：$\kfhat(\kt)$</h3>
+<p>自由场演化项的物理意义可以通过考察它的矩来理解。如果<span data-concept="open-system">热库</span>最初处于热态，那么$\langle\kfhat(\kt)\rangle = 0$，所以$\kfhat(\kt)$的平均效应为零。与经典<span data-concept="langevin-equation">朗之万力</span>的情形一样，我们发现二阶矩不为零。</p>
+<p>$\kfhat$是算符，所以次序是重要的，类似的计算给出相反次序的二阶矩。</p>
+<figure class="dv" id="drv-quantum-langevin-moments"></figure>
+<p>既然$\kfhat$是平均为零、二阶矩由 δ 函数给出的算符，我们就把$\kfhat$解释为<span data-concept="quantum-langevin-force">量子朗之万算符</span>。</p>
+<h3>海森伯-朗之万方程</h3>
+<p id="heisenberg-langevin-equation">代回系统算符$\hat{A}$的运动方程，我们得到一个一般的结果，称为<span data-concept="heisenberg-langevin-equation" id="heisenberg-langevin-equation-name">海森伯-朗之万方程</span>。</p>
+<figure class="dv" id="drv-heisenberg-langevin-equation"></figure>
+<p>从物理上说，<span data-concept="heisenberg-langevin-equation">海森伯-朗之万方程</span>表明，只要系统有某种耗散$(\kgamma/2)\kShat$，就总会伴随着由<span data-concept="quantum-langevin-force">朗之万噪声算符</span>$\kfhat$描述的涨落。</p>
+<h3>与主方程的比较</h3>
+<p id="master-comparison"><span data-concept="heisenberg-langevin-equation">海森伯-朗之万方程</span>是在海森伯绘景中导出的，而<span data-concept="density-matrix">密度矩阵</span>方法使用薛定谔绘景。<span data-concept="heisenberg-langevin-master-equation" id="master-equivalence">然而，这两种描述是完全等价的。</span></p>
+<p>为说明二者的联系，假设我们从真空态$n(\komega) = 0$出发，于是$\kfhat|vac\rangle = 0$。对$\hat{A}$取期望值得到</p>
+<div class="equation" id="eq-8-70">$$\frac{d}{d\kt}\langle\hat{A}\rangle = \frac{i}{\hbar}\langle[\kHS, \hat{A}]\rangle + \frac{\kgamma}{2}\left(2\langle\kShat^\dagger\hat{A}\kShat\rangle - \langle\hat{A}\kShat^\dagger\kShat\rangle - \langle\kShat^\dagger\kShat\hat{A}\rangle\right). \tag{8.70}$$</div>
+<p>由于$\langle\sigma_{ij}\rangle = \rho_{ji}$，我们可以把这个方程与真空中原子的<span data-concept="master-equation">主方程</span>逐项比较：它们完全吻合。</p>
+<h3>量子涨落耗散定理</h3>
+<p><span data-concept="heisenberg-langevin-equation">海森伯-朗之万方程</span>可以写成紧凑的形式</p>
+<div class="equation" id="eq-8-71">$$\frac{d}{d\kt}\hat{A}_\mu = \hat{d}_\mu + \kFnoise_\mu, \tag{8.71}$$</div>
+<p>其中$\mu$表示任意算符，$\hat{d}_\mu$表示该算符的相干演化和衰变（如从<span data-concept="optical-bloch-equations">密度矩阵运动方程</span>所预言的那样），$\kFnoise_\mu$是<span data-concept="quantum-langevin-force">量子朗之万算符</span>，满足$\langle\kFnoise_\mu\rangle = 0$以及</p>
+<div class="equation" id="eq-8-72">$$\langle\kFnoise_\mu(\kt)\kFnoise_\nu(\kt')\rangle = 2\kDdiff_{\mu\nu}\delta(\kt-\kt'). \tag{8.72}$$</div>
+<p id="generalized-einstein">正如我们在经典<span data-concept="langevin-equation">朗之万方程</span>中发现的，<span data-concept="quantum-langevin-force">噪声力</span>与$\hat{d}_\mu$中包含的耗散之间有一种关系。特别是，广义<span data-concept="diffusion-coefficient">扩散系数</span>$\kDdiff_{\mu\nu}$由$\hat{d}_\mu$的确定性演化唯一决定：</p>
+<div class="equation" id="eq-8-73">$$2\kDdiff_{\mu\nu} = \frac{d}{d\kt}\langle\hat{A}_\mu\hat{A}_\nu\rangle - \langle\hat{A}_\mu\hat{d}_\nu\rangle - \langle\hat{d}_\mu\hat{A}_\nu\rangle. \tag{8.73}$$</div>
+<p id="einstein-analogue">这个“<span data-concept="generalized-einstein-relation" id="generalized-einstein-relation">广义爱因斯坦关系</span>”是把<span data-concept="diffusion-coefficient">扩散系数</span>与温度和<span data-concept="friction-coefficient">摩擦系数</span>联系起来的方程的量子类比，对所有与<span data-concept="markovian-environment">马尔可夫</span><span data-concept="open-system">热库</span>耦合的系统都成立。</p>
+<p>为证明<a href="#eq-8-73">式 (8.73)</a>给出的<span data-concept="generalized-einstein-relation">量子涨落耗散定理</span>，考虑量$\langle\hat{A}_\mu(\kt)\kFnoise_\nu(\kt)\rangle$。</p>
+<figure class="dv" id="drv-fluctuation-dissipation-theorem"></figure>
+<p><span data-concept="generalized-einstein-relation">广义爱因斯坦关系</span>传达了一个简单的物理信息：只要给定了系统演化的确定性部分，并且<span data-concept="open-system">热库</span>没有<span data-concept="memoryless-continuum">记忆</span>（即量子“<span data-concept="generalized-einstein-relation">白噪声</span>”），就可以立即算出相关的噪声项。因此，<span data-concept="generalized-einstein-relation">涨落耗散定理</span>提供了一种便捷的方法，可以由已知的系统衰变和<span data-concept="dephasing-rate">退相干</span>参数导出<span data-concept="diffusion-coefficient">扩散系数</span>。</p>
+</section>

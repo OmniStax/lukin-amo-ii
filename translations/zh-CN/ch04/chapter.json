@@ -1,0 +1,413 @@
+{
+ "id": "4",
+ "dir": "ch04",
+ "title": "共振介质中光的传播",
+ "intro": {},
+ "sections": [
+  {
+   "id": "4.1",
+   "title": "缓变包络近似"
+  },
+  {
+   "id": "4.2",
+   "title": "线性光学传播"
+  },
+  {
+   "id": "4.3",
+   "title": "非线性原子响应"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "P_pol",
+   "concept": "macroscopic-polarization",
+   "meaning": "介质的宏观极化，即其原子的单位体积偶极矩",
+   "unit": "C/m²",
+   "section": "4.1",
+   "anchor": "4.1-drv-wave-equation"
+  },
+  {
+   "sym": "P_env",
+   "concept": "slowly-varying-polarization",
+   "meaning": "缓变极化振幅，即载波上极化强度的包络",
+   "unit": "C/m²",
+   "section": "4.1",
+   "anchor": "4.1-sv-polarization"
+  },
+  {
+   "sym": "E_field",
+   "type": "electric-field",
+   "meaning": "在介质中传播的光的电场",
+   "unit": "V/m",
+   "section": "4.1",
+   "anchor": "4.1-wave-equation"
+  },
+  {
+   "sym": "E_env",
+   "concept": "slowly-varying-envelope",
+   "meaning": "传播场在其载波上的缓变包络",
+   "unit": "V/m",
+   "section": "4.1",
+   "anchor": "4.1-envelope"
+  },
+  {
+   "sym": "nu_bar",
+   "type": "frequency",
+   "meaning": "近单色场的中心频率，即其载频",
+   "unit": "rad/s",
+   "section": "4.1",
+   "anchor": "4.1-envelope"
+  },
+  {
+   "sym": "k_bar",
+   "type": "wavevector",
+   "meaning": "载波的波矢量，k̄ = ν̄/c",
+   "unit": "m⁻¹",
+   "section": "4.1",
+   "anchor": "4.1-carrier"
+  },
+  {
+   "sym": "nu",
+   "concept": "optical-frequency",
+   "meaning": "光频梳第 n 次谐波的频率 ν_n",
+   "unit": "rad/s",
+   "section": "4.1",
+   "anchor": "4.1-comb"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "unit": "s",
+   "section": "4.1"
+  },
+  {
+   "sym": "mu",
+   "type": "dipole",
+   "meaning": "二能级跃迁的偶极矩阵元",
+   "unit": "C·m",
+   "section": "4.1",
+   "anchor": "4.1-two-level-polarization"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "容纳 N 个原子的体积",
+   "unit": "m³",
+   "section": "4.1",
+   "anchor": "4.1-two-level-polarization"
+  },
+  {
+   "section": "4.2",
+   "sym": "chi",
+   "concept": "susceptibility",
+   "meaning": "电极化率，即在每个频率分量 δν 上极化强度与 ε₀ 乘场之比",
+   "anchor": "4.2-susceptibility"
+  },
+  {
+   "section": "4.2",
+   "sym": "P_env",
+   "concept": "slowly-varying-polarization",
+   "unit": "C/m²",
+   "meaning": "缓变极化振幅，即载波上极化强度的包络"
+  },
+  {
+   "section": "4.2",
+   "sym": "E_env",
+   "concept": "slowly-varying-envelope",
+   "unit": "V/m",
+   "meaning": "传播场在其载波上的缓变包络"
+  },
+  {
+   "section": "4.2",
+   "sym": "delta_nu",
+   "type": "frequency",
+   "unit": "rad/s",
+   "meaning": "场的一个分量的频率，自中心频率 ν̄ 量起，ν̄ 位于原子共振处"
+  },
+  {
+   "section": "4.2",
+   "sym": "nu_bar",
+   "type": "frequency",
+   "unit": "rad/s",
+   "meaning": "近单色场的中心频率，即其载频"
+  },
+  {
+   "section": "4.2",
+   "sym": "k_bar",
+   "type": "wavevector",
+   "unit": "m⁻¹",
+   "meaning": "载波的波矢量，k̄ = ν̄/c"
+  },
+  {
+   "section": "4.2",
+   "sym": "alpha",
+   "concept": "absorption-coefficient",
+   "unit": "m⁻¹",
+   "meaning": "光束光强每距离衰减的速率，α = k̄ Im[χ(0)]",
+   "anchor": "4.2-eq-4-36"
+  },
+  {
+   "section": "4.2",
+   "sym": "n_ref",
+   "concept": "refractive-index",
+   "meaning": "折射率，n = 1 + Re[χ(0)]/2",
+   "anchor": "4.2-eq-4-37"
+  },
+  {
+   "section": "4.2",
+   "sym": "v_g",
+   "concept": "group-velocity",
+   "unit": "m/s",
+   "meaning": "群速度，包络以此速度传播",
+   "anchor": "4.2-drv-group-velocity"
+  },
+  {
+   "section": "4.2",
+   "sym": "nu",
+   "concept": "optical-frequency",
+   "unit": "rad/s",
+   "redefines": true,
+   "meaning": "外加场的频率"
+  },
+  {
+   "section": "4.2",
+   "sym": "omega",
+   "concept": "atomic-transition-frequency",
+   "unit": "rad/s",
+   "meaning": "原子跃迁频率：两个能级相距 ħω"
+  },
+  {
+   "section": "4.2",
+   "sym": "mu",
+   "type": "dipole",
+   "unit": "C·m",
+   "meaning": "二能级跃迁的偶极矩阵元"
+  },
+  {
+   "section": "4.2",
+   "sym": "V",
+   "type": "volume",
+   "unit": "m³",
+   "meaning": "容纳 N 个原子的体积"
+  },
+  {
+   "section": "4.2",
+   "sym": "t",
+   "type": "time",
+   "unit": "s",
+   "meaning": "时间"
+  },
+  {
+   "section": "4.2",
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "unit": "s⁻¹",
+   "meaning": "自发发射率：2.2 中的衰变，以场的真空模作为连续谱"
+  },
+  {
+   "section": "4.2",
+   "sym": "gamma_12",
+   "concept": "coherence-decay-rate",
+   "unit": "s⁻¹",
+   "meaning": "相干性 ρ₁₂ 的衰变率，即单个原子电极化率的谱线宽度"
+  },
+  {
+   "section": "4.2",
+   "sym": "rho_11",
+   "concept": "density-matrix-populations",
+   "meaning": "能级 |1⟩ 的布居；ρ₁₁⁰ 是其在弱场中的值"
+  },
+  {
+   "section": "4.2",
+   "sym": "rho_22",
+   "concept": "density-matrix-populations",
+   "meaning": "能级 |2⟩ 的布居；ρ₂₂⁰ 是其在弱场中的值"
+  },
+  {
+   "section": "4.2",
+   "sym": "rho_21",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |2⟩ 与 |1⟩ 之间的相干性，是 ρ₁₂ 的复共轭；此处为其在 δν 处的傅里叶分量"
+  },
+  {
+   "section": "4.2",
+   "sym": "lambda",
+   "type": "length",
+   "unit": "m",
+   "meaning": "跃迁的波长，λ = 2π/k₀"
+  },
+  {
+   "section": "4.2",
+   "sym": "I_int",
+   "type": "intensity",
+   "unit": "W/m²",
+   "meaning": "光束的光强"
+  },
+  {
+   "section": "4.2",
+   "sym": "sigma_tilde",
+   "concept": "absorption-cross-section",
+   "unit": "m²",
+   "meaning": "单个原子在共振时的吸收截面",
+   "anchor": "4.2-drv-resonant-cross-section"
+  },
+  {
+   "section": "4.2",
+   "sym": "v_z",
+   "type": "velocity",
+   "unit": "m/s",
+   "meaning": "原子沿光束方向即 z 方向的速度"
+  },
+  {
+   "section": "4.2",
+   "sym": "v_T",
+   "type": "velocity",
+   "unit": "m/s",
+   "meaning": "与原子温度对应的特征速度"
+  },
+  {
+   "section": "4.2",
+   "sym": "n_v",
+   "type": "density",
+   "unit": "s/m⁴",
+   "meaning": "热速度分布：每体积每单位 v_z 的原子数"
+  },
+  {
+   "section": "4.2",
+   "sym": "T",
+   "type": "temperature",
+   "unit": "K",
+   "meaning": "气体的温度"
+  },
+  {
+   "sym": "chi_n",
+   "concept": "nonlinear-susceptibility",
+   "meaning": "二能级介质在强连续波场中的非线性电极化率 χ_n(δ)",
+   "anchor": "4.3-nonlinear-susceptibility",
+   "section": "4.3"
+  },
+  {
+   "sym": "chi_3",
+   "concept": "third-order-susceptibility",
+   "meaning": "三阶电极化率 χ⁽³⁾，即对线性电极化率的下一阶修正",
+   "anchor": "4.3-chi-3",
+   "section": "4.3"
+  },
+  {
+   "sym": "s_sat",
+   "concept": "saturation-parameter",
+   "meaning": "饱和参量 s，共振时为 4|Ω|²/γ₁₂γ，任意失谐时为 2R_opt/γ",
+   "anchor": "4.3-saturation-parameter",
+   "section": "4.3"
+  },
+  {
+   "sym": "Omega_pm",
+   "concept": "rabi-frequency",
+   "meaning": "前向场和后向场的拉比频率 Ω± = μℰ±/ℏ",
+   "section": "4.3"
+  },
+  {
+   "sym": "Omega_p",
+   "concept": "rabi-frequency",
+   "ref": "pump",
+   "meaning": "强前向场的拉比频率 Ω₊ = μℰ₊/ℏ",
+   "section": "4.3"
+  },
+  {
+   "sym": "Omega_m",
+   "concept": "rabi-frequency",
+   "ref": "probe",
+   "meaning": "弱后向场的拉比频率 Ω₋ = μℰ₋/ℏ",
+   "section": "4.3"
+  },
+  {
+   "sym": "E_pm",
+   "concept": "slowly-varying-envelope",
+   "meaning": "前向场和后向场的包络 ℰ±",
+   "section": "4.3"
+  },
+  {
+   "sym": "E_p",
+   "concept": "slowly-varying-envelope",
+   "ref": "pump",
+   "meaning": "前向强场的包络 ℰ₊",
+   "anchor": "4.3-eq-4-66",
+   "section": "4.3"
+  },
+  {
+   "sym": "E_m",
+   "concept": "slowly-varying-envelope",
+   "ref": "probe",
+   "meaning": "后向弱场的包络 ℰ₋",
+   "anchor": "4.3-eq-4-66",
+   "section": "4.3"
+  },
+  {
+   "sym": "Delta",
+   "concept": "atomic-transition-frequency",
+   "meaning": "两束光所调谐到其附近的裸原子共振 Δ",
+   "anchor": "4.3-spectroscopy",
+   "section": "4.3"
+  },
+  {
+   "sym": "rho_11",
+   "concept": "density-matrix-populations",
+   "meaning": "能级 |1⟩ 的布居",
+   "section": "4.3"
+  },
+  {
+   "sym": "rho_22",
+   "concept": "density-matrix-populations",
+   "meaning": "能级 |2⟩ 的布居",
+   "section": "4.3"
+  },
+  {
+   "sym": "rho_21",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |2⟩ 与 |1⟩ 之间的相干性，是 ρ₁₂ 的复共轭",
+   "anchor": "4.3-eq-4-53",
+   "section": "4.3"
+  },
+  {
+   "sym": "gamma_12",
+   "concept": "coherence-decay-rate",
+   "meaning": "相干性 ρ₁₂ 的衰变率，即均匀谱线宽度",
+   "section": "4.3"
+  },
+  {
+   "sym": "R_opt",
+   "concept": "optical-pumping-rate",
+   "meaning": "外加场的光抽运率 R_opt",
+   "anchor": "4.3-eq-4-55",
+   "section": "4.3"
+  },
+  {
+   "section": "4.2",
+   "sym": "k_mag",
+   "type": "wavevector",
+   "unit": "m⁻¹",
+   "meaning": "光沿 z 方向的波矢量的大小，因而 kv_z 是原子的多普勒频移"
+  },
+  {
+   "section": "4.3",
+   "sym": "k_mag",
+   "type": "wavevector",
+   "unit": "m⁻¹",
+   "meaning": "光沿 z 方向的波矢量的大小，因而 kv_z 是原子的多普勒频移"
+  },
+  {
+   "section": "4.1",
+   "sym": "rho_21",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |2⟩ 与 |1⟩ 之间的相干性，是 ρ₁₂ 的复共轭",
+   "anchor": "4.1-two-level-polarization"
+  },
+  {
+   "section": "4.1",
+   "sym": "rho_12",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |1⟩ 与 |2⟩ 之间的相干性，是 ρ₂₁ 的复共轭"
+  }
+ ]
+}

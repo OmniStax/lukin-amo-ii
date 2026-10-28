@@ -1,0 +1,347 @@
+{
+ "id": "7.1",
+ "chapter": "7",
+ "title": "含时哈密顿量的绝热定理",
+ "short": "绝热定理",
+ "lead": "量子态在其<span data-concept=\"hamiltonian\">哈密顿量</span>随时间变化时的行为：<span data-concept=\"instantaneous-eigenstates\">瞬时本征态</span>及其变化所引入的耦合，制备在其中之一上的态保持在该态的条件，以及它在此过程中获得的<span data-concept=\"dynamical-phase\">动力学相位</span>和<span data-concept=\"geometric-phase\">几何相位</span>。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [],
+ "coverage": [
+  {
+   "span": "instantaneous",
+   "concept": "instantaneous-eigenstates",
+   "verb": "introduces"
+  },
+  {
+   "span": "instantaneous",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "instantaneous",
+   "concept": "schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "instantaneous",
+   "concept": "stationary-states",
+   "verb": "uses"
+  },
+  {
+   "span": "adiabatic-limit",
+   "concept": "adiabatic-theorem",
+   "verb": "introduces"
+  },
+  {
+   "span": "adiabatic-limit",
+   "concept": "instantaneous-eigenstates",
+   "verb": "uses"
+  },
+  {
+   "span": "adiabatic-limit",
+   "concept": "nonadiabatic-coupling",
+   "verb": "uses"
+  },
+  {
+   "span": "adiabatic-limit",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "perturbation",
+   "concept": "state-vector",
+   "verb": "uses"
+  },
+  {
+   "span": "phases",
+   "concept": "dynamical-phase",
+   "verb": "introduces"
+  },
+  {
+   "span": "phases",
+   "concept": "geometric-phase",
+   "verb": "introduces"
+  },
+  {
+   "span": "phases",
+   "concept": "schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-adiabatic-amplitudes",
+   "concept": "nonadiabatic-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-adiabatic-amplitudes",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-adiabatic-condition",
+   "concept": "adiabaticity-condition",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [],
+ "footnotes": [
+  {
+   "id": "footnote-1",
+   "kind": "book",
+   "number": "1",
+   "html": "一般而言，$\\langle\\epsilon_k|\\dot{\\epsilon}_k\\rangle$的实部为零，在这里的处理中我们将忽略<span data-concept=\"geometric-phase\">贝里相位</span>（虚部分量）。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "adiabatic-amplitudes",
+   "what": "瞬时本征基下的运动方程",
+   "source": "现代原子与光学物理 II，7.1 含时哈密顿量的绝热定理",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|\\kpsi(\\kt)\\rangle = \\sum_l \\kcinst_l(\\kt)|\\epsilon_l(\\kt)\\rangle",
+       "src": "(7.2)"
+      },
+      {
+       "tex": "\\kH(\\kt_0)|\\epsilon_k(\\kt_0)\\rangle = \\keps_k(\\kt_0)|\\epsilon_k(\\kt_0)\\rangle",
+       "src": "(7.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar|\\dot{\\kpsi}(\\kt)\\rangle} = \\mk{R}{\\kH(\\kt)|\\kpsi(\\kt)\\rangle}",
+      "src": "7.1",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}\\sum_l \\kcinst_l(\\kt)|\\epsilon_l(\\kt)\\rangle} = \\mk{R}{\\kH(\\kt)\\sum_l \\kcinst_l(\\kt)|\\epsilon_l(\\kt)\\rangle}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\sum_l\\left(\\dot{\\kcinst}_l(\\kt)|\\epsilon_l(\\kt)\\rangle + \\kcinst_l(\\kt)\\frac{d}{d\\kt}|\\epsilon_l(\\kt)\\rangle\\right)} = \\mk{R}{\\sum_l \\kcinst_l(\\kt)\\kH(\\kt)|\\epsilon_l(\\kt)\\rangle}",
+       "uses": [],
+       "cap": "乘积法则：概率幅和本征态都随时间变化。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\sum_l\\left(\\dot{\\kcinst}_l(\\kt)|\\epsilon_l(\\kt)\\rangle + \\kcinst_l(\\kt)\\frac{d}{d\\kt}|\\epsilon_l(\\kt)\\rangle\\right)} = \\mk{R}{\\sum_l \\kcinst_l(\\kt)\\keps_l(\\kt)|\\epsilon_l(\\kt)\\rangle}",
+       "uses": [
+        1
+       ],
+       "cap": "(7.1) 在每一时刻$t_0$都成立。"
+      }
+     ],
+     "num": "(7.3)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "瞬时本征态是规范正交的：$\\langle\\epsilon_k(\\kt)|\\epsilon_l(\\kt)\\rangle = \\delta_{kl}$。",
+       "src": "7.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\sum_l\\left(\\dot{\\kcinst}_l(\\kt)|\\epsilon_l(\\kt)\\rangle + \\kcinst_l(\\kt)\\frac{d}{d\\kt}|\\epsilon_l(\\kt)\\rangle\\right)} = \\mk{R}{\\sum_l \\kcinst_l(\\kt)\\keps_l(\\kt)|\\epsilon_l(\\kt)\\rangle}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\sum_l\\left(\\dot{\\kcinst}_l(\\kt)\\langle\\epsilon_k(\\kt)|\\epsilon_l(\\kt)\\rangle + \\kcinst_l(\\kt)\\langle\\epsilon_k(\\kt)|\\frac{d}{d\\kt}|\\epsilon_l(\\kt)\\rangle\\right)} = \\mk{R}{\\sum_l \\kcinst_l(\\kt)\\keps_l(\\kt)\\langle\\epsilon_k(\\kt)|\\epsilon_l(\\kt)\\rangle}",
+       "uses": [],
+       "cap": "从左边乘以$\\langle\\epsilon_k(t)|$。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcinst}_k(\\kt)} + \\mk{l}{i\\hbar\\sum_l \\kcinst_l(\\kt)\\langle\\epsilon_k(\\kt)|\\frac{d}{d\\kt}|\\epsilon_l(\\kt)\\rangle} = \\mk{R}{\\keps_k(\\kt)\\kcinst_k(\\kt)}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "L": [
+         "L",
+         "l"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcinst}_k(\\kt)} = \\mk{R}{\\keps_k(\\kt)\\kcinst_k(\\kt)} \\mk{l}{- i\\hbar\\sum_l \\kcinst_l(\\kt)\\langle\\epsilon_k(\\kt)|\\frac{d}{d\\kt}|\\epsilon_l(\\kt)\\rangle}",
+       "uses": []
+      }
+     ],
+     "num": "(7.4)"
+    }
+   ]
+  },
+  {
+   "id": "adiabatic-condition",
+   "what": "绝热条件",
+   "source": "现代原子与光学物理 II，7.1 含时哈密顿量的绝热定理，7.1.1 绝热条件",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "能量以$\\keps_k$为参考来度量，$\\komega_l = \\keps_l/\\hbar$。",
+       "src": "7.1"
+      },
+      {
+       "text": "态制备在$|\\epsilon_k\\rangle$上并保持在其附近：$|\\kcinst_k|^2 \\approx 1$，其余概率幅很小。",
+       "src": "7.1"
+      },
+      {
+       "text": "本征态是非简并的，且$l \\neq k$。",
+       "src": "7.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\dot{\\kcinst}_l} = \\mk{d}{\\keps_l\\kcinst_l} \\mk{c}{- i\\hbar\\sum_m \\kcinst_m\\langle\\epsilon_l|\\dot{\\epsilon}_m\\rangle}",
+      "src": "(7.4)",
+      "uses": [],
+      "why": "关于另一本征态的概率幅$c_l$的 (7.4)，其中以$\\langle\\epsilon_l|\\dot{\\epsilon}_m\\rangle$代表$\\langle\\epsilon_l|\\frac{d}{dt}|\\epsilon_m\\rangle$。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kcinst}_l} = \\mk{d}{-i\\frac{\\keps_l}{\\hbar}\\kcinst_l} \\mk{c}{- \\sum_m \\kcinst_m\\langle\\epsilon_l|\\dot{\\epsilon}_m\\rangle}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcinst}_l} = \\mk{d}{-i(\\komega_l - \\komega_k)\\kcinst_l} \\mk{c}{- \\sum_m \\kcinst_m\\langle\\epsilon_l|\\dot{\\epsilon}_m\\rangle}",
+       "uses": [
+        0
+       ],
+       "cap": "以$\\epsilon_k$为参考来度量能量，把$\\epsilon_l/\\hbar$移位为$\\omega_l - \\omega_k$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcinst}_l} \\approx \\mk{d}{-i(\\komega_l - \\komega_k)\\kcinst_l} \\mk{c}{- \\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle\\kcinst_k(\\kt)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "在微扰论中，只有与已布居态$|\\epsilon_k\\rangle$的耦合起作用；其余概率幅很小，对角项被略去。"
+      }
+     ],
+     "num": "(7.7)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "态制备在$|\\epsilon_k\\rangle$上并保持在其附近：$|\\kcinst_k|^2 \\approx 1$，其余概率幅很小。",
+       "src": "7.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcinst}_l} \\approx \\mk{d}{-i(\\komega_l - \\komega_k)\\kcinst_l} \\mk{c}{- \\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle\\kcinst_k(\\kt)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kcinst}_l} \\approx \\mk{d}{-i(\\komega_l - \\komega_k)\\kcinst_l} \\mk{c}{- \\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle\\cdot 1}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(7.8)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "能量以$\\keps_k$为参考来度量，$\\komega_l = \\keps_l/\\hbar$。",
+       "src": "7.1"
+      },
+      {
+       "tex": "|\\kpsi(\\kt)\\rangle = \\sum_l \\kcinst_l(\\kt)|\\epsilon_l(\\kt)\\rangle",
+       "src": "(7.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcinst}_l} \\approx \\mk{d}{-i(\\komega_l - \\komega_k)\\kcinst_l} \\mk{c}{- \\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle\\cdot 1}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{0} \\approx \\mk{d}{-i(\\komega_l - \\komega_k)\\kcinst_l} \\mk{c}{- \\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle\\cdot 1}",
+       "uses": [],
+       "cap": "对于弱而缓变的耦合，$c_l$跟随它：其自身的速率$\\omega_l - \\omega_k$相比之下很快，且$\\dot{c}_l \\approx 0$。"
+      },
+      {
+       "tex": "\\mk{d}{\\kcinst_l} \\approx \\mk{c}{\\frac{-\\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle}{i(\\komega_l - \\komega_k)}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{d}{\\kcinst_l} \\approx \\mk{c}{-i\\hbar\\frac{\\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle}{\\keps_k - \\keps_l}}",
+       "uses": [
+        1
+       ],
+       "cap": "$-1/i = i$，且$\\hbar(\\omega_l - \\omega_k) = \\epsilon_l - \\epsilon_k$。"
+      },
+      {
+       "tex": "\\mk{d}{|\\kpsi^{(1)}\\rangle} = \\mk{c}{-i\\hbar\\sum_{l \\neq k}\\frac{\\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle|\\epsilon_l\\rangle}{\\keps_k - \\keps_l}}",
+       "uses": [
+        2
+       ],
+       "cap": "$|\\psi\\rangle$的变化是它沿其他本征态的部分，由 (7.2) 为$\\sum_{l \\neq k} c_l|\\epsilon_l\\rangle$。"
+      }
+     ],
+     "num": "(7.9)",
+     "note": "书中印出的是对所有$l$求和。求和范围是$l \\neq k$：项$l = k$的分母为$\\keps_k - \\keps_k = 0$，并不属于变化$|\\kpsi^{(1)}\\rangle$的一部分。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "在绝热极限下，$|\\epsilon_k(\\kt)\\rangle$基本上是定态，因此泄漏到其他态的布居可以忽略。",
+       "src": "7.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{|\\kpsi^{(1)}\\rangle} = \\mk{c}{-i\\hbar\\sum_{l \\neq k}\\frac{\\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle|\\epsilon_l\\rangle}{\\keps_k - \\keps_l}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\hbar\\frac{|\\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle|}{|\\keps_k - \\keps_l|}} \\ll \\mk{d}{1}",
+       "uses": [
+        1
+       ],
+       "cap": "$|\\psi^{(1)}\\rangle$的每个分量都必须很小，$|\\epsilon_k(t)\\rangle$才能保持为定态。"
+      }
+     ],
+     "num": "(7.10)"
+    }
+   ]
+  }
+ ]
+}

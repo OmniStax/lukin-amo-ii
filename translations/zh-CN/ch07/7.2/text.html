@@ -1,0 +1,44 @@
+<section id="opening">
+<p id="opening-p"><span data-concept="adiabatic-theorem">绝热演化</span>可以通过考察具有含时<span data-concept="detuning">失谐</span>$\kDelta(\kt)$和<span data-concept="rabi-frequency">拉比频率</span>$\kOmega(\kt)$的<span data-concept="two-level-atom">二能级系统</span>来清楚地说明。在与时间无关的（<span data-concept="bare-states">裸态</span>）基<span data-ref="lvl-1 lvl-2">$\{|1\rangle, |2\rangle\}$</span>中表示，<span data-concept="hamiltonian">哈密顿量</span>可以写为</p>
+<div class="equation" id="eq-7-11">$$\kH(\kt) = -\hbar\kDelta(\kt)|2\rangle\langle 2| - \hbar\kOmega(\kt)\left(|1\rangle\langle 2| + |2\rangle\langle 1|\right) \tag{7.11}$$</div>
+<div class="equation" id="eq-7-12">$$= -\hbar\begin{pmatrix} 0 &amp; \kOmega(\kt) \\ \kOmega(\kt) &amp; \kDelta(\kt) \end{pmatrix}. \tag{7.12}$$</div>
+<p id="diagonalize">对角化<span data-concept="hamiltonian">哈密顿量</span>，我们得到<span data-concept="instantaneous-eigenstates">瞬时本征态</span><span data-ref="dressed-plus dressed-minus">$|\pm\rangle$</span>和本征能量$\kepspm$，</p>
+<div class="equation" id="eq-7-13">$$|+\rangle = \cos\ktheta(\kt)|1\rangle + \sin\ktheta(\kt)|2\rangle \tag{7.13}$$</div>
+<div class="equation" id="eq-7-14">$$|-\rangle = \sin\ktheta(\kt)|1\rangle - \cos\ktheta(\kt)|2\rangle \tag{7.14}$$</div>
+<div class="equation" id="eq-7-15">$$\kepspm(\kt) = \frac{\hbar}{2}\left(-\kDelta(\kt) \pm \sqrt{\kDelta(\kt)^2 + 4\kOmega(\kt)^2}\right) \tag{7.15}$$</div>
+<p>其中<span data-concept="mixing-angle" id="mixing-angle">混合角</span>为</p>
+<div class="equation" id="eq-7-16">$$\ktheta(\kt) = -\frac{1}{2}\mathrm{arctan}\,\frac{2\kOmega(\kt)}{\kDelta(\kt)}, \tag{7.16}$$</div>
+<p>限定在0和$\pi$之间。注意，<span data-ref="dressed-plus dressed-minus">$|\pm\rangle$</span>和$\kepspm(\kt)$恰好对应于<span data-concept="time-dependent-dressed-states" id="td-dressed">一组含时缀饰态和缀饰能量</span>。</p>
+<p id="adiabatic-limit">我们希望在<span data-concept="adiabatic-theorem">绝热极限</span>下考察这个系统，因此假定$\kDelta$和$\kOmega$变化得足够缓慢，使得<span data-concept="adiabaticity-condition">绝热条件</span>得到满足，即</p>
+<div class="equation" id="eq-7-17">$$\frac{|\dot{\kOmega}\kDelta - \kOmega\dot{\kDelta}|}{4\kOmega^2 + \kDelta^2} \ll \sqrt{4\kOmega^2 + \kDelta^2}. \tag{7.17}$$</div>
+</section>
+
+<section id="passage">
+<h2>7.2.1 快速绝热通道</h2>
+<p id="rap-motivation"><span data-concept="rapid-adiabatic-passage" id="rap">绝热通道</span>是<span data-concept="adiabatic-theorem">绝热定理</span>在<span data-concept="two-level-atom">二能级系统</span>中的一项重要应用，因为它提供了一种把<span data-concept="born-rule">布居</span>从一个<span data-concept="bare-states">裸态</span>转移到另一个的稳健方法。例如，假设<span data-concept="two-level-atom">二能级系统</span>初始处于<span data-ref="lvl-1">$|1\rangle$</span>，我们希望把全部<span data-concept="born-rule">布居</span>转移到<span data-ref="lvl-2">$|2\rangle$</span>，但无法精确控制$\kDelta$和$\kOmega$的取值或相互作用时间$\ktau$。由于存在这样的不精确，我们将无法实现给定的<span data-concept="rabi-oscillations">拉比旋转</span>，因此我们寻求一种更稳健的方法。</p>
+<h3>绝热返回</h3>
+<p id="return">假设我们尝试在送入脉冲$\kOmega(\kt)$的同时保持$\kDelta \neq 0$为常数。起初，<span data-concept="time-dependent-dressed-states">缀饰态</span>将与<span data-concept="bare-states">裸态</span>重合，如果系统<span data-concept="adiabatic-theorem">绝热跟随</span><span data-ref="dressed-minus">基态$|-\rangle$</span>，那么在$\kOmega(\kt)$有限时，它将演化为<span data-ref="lvl-1">$|1\rangle$</span>和<span data-ref="lvl-2">$|2\rangle$</span>的<span data-concept="superposition">叠加</span>。然而，在脉冲结束时$\kOmega(\kt) \to 0$，系统将回到<span data-ref="lvl-1">其初始态$|1\rangle$</span>（见<a href="#sim-adiabatic">图 (9.3)</a>。<sup class="fn" data-note="c-fig-9-3-cited"></sup></p>
+<h3>绝热通道</h3>
+<p id="passage-p">当$\kOmega/\kDelta$在实验过程中由接近$-\infty$变为接近$\infty$<sup class="fn" data-note="c-omega-over-delta"></sup>时，态转移是可能的。实现这一目标的一种方法是使$\kDelta(\kt)$随时间线性变化，在送入脉冲$\kOmega(\kt)$的同时以啁啾方式使频率扫过共振。能级间的<span data-concept="rabi-frequency">耦合</span>导致回避交叉，因此从<span data-ref="lvl-1">$|1\rangle$</span>出发并<span data-concept="adiabatic-theorem">绝热跟随</span><span data-ref="dressed-minus">基态$|-\rangle$</span>的原子，在经过很长时间后将以接近单位概率最终处于<span data-ref="lvl-2">$|2\rangle$</span>。</p>
+<figure class="sim" id="sim-adiabatic" data-figure="7.1" data-original="/media/ch07/fig-7-1.png" data-original-caption="绝热通道与绝热返回的比较。含时参数 Δ 和 Ω 给出瞬时本征能量 ϵ±。假设系统跟随瞬时基态，它将处于态 |1⟩ 和 |2⟩ 的混合中，占有概率分别为 P₁ 和 P₂。显然，绝热通道可以导致态转移，而绝热返回使系统留在其初始态。">
+  <div class="sim-head"><span class="eyebrow">Figure 7.1</span><span>长度为$\ktau$的脉冲$\kOmega(\kt)$从<span data-ref="lvl-1">$|1\rangle$</span>出发驱动二能级系统。在<span data-concept="adiabatic-return">绝热返回</span>中，<span data-concept="detuning">失谐</span>保持在$\kDelta = -2$ μs⁻¹，此时<span data-ref="lvl-1">$|1\rangle$</span>是下态；在<span data-concept="rapid-adiabatic-passage">绝热通道</span>中，它扫过共振，$\kDelta = \kalpha\kt$，从−6到6 μs⁻¹。中间的条带跟踪<span data-concept="instantaneous-eigenstates">瞬时本征态</span>的能量$\kepspm$，其上的圆盘载有态在<span data-ref="dressed-minus">$|-\rangle$</span>和<span data-ref="dressed-plus">$|+\rangle$</span>上的布居。底部的条带在严格跟随<span data-ref="dressed-minus">$|-\rangle$</span>的态的虚线曲线之上画出该态的$\kPone$和$\kPtwo$。把$\ktau$缩短到$1/\kOmega_0$以下，态就不再跟得上：它的一部分留在$\kepsp$上，最终落在何处取决于每一个数。时间以$\ktau$为单位计，频率以μs⁻¹为单位。</span></div>
+</figure>
+</section>
+
+<section id="adiabaticity">
+<h2>7.2.2 二能级系统的绝热条件</h2>
+<p>要使<span data-concept="rapid-adiabatic-passage">快速绝热通道</span>这类技术奏效，系统在<span data-concept="instantaneous-eigenstates">本征态</span><span data-ref="dressed-minus">$|-\rangle$</span>和<span data-ref="dressed-plus">$|+\rangle$</span>之间跃迁的概率必须很小。在<span data-concept="two-level-atom">二能级系统</span>中，<span data-concept="two-level-adiabaticity-condition" id="adiabaticity-2l">绝热条件</span>要求<span data-concept="nonadiabatic-coupling">耦合项</span>与能量分裂$\kepsp - \kepsm$相比很小。</p>
+<figure class="dv" id="drv-two-level-adiabaticity"></figure>
+<p id="area-condition">最小能量差出现在$\kDelta$扫过共振时，因此$\kepsp(\kt) - \kepsm(\kt) \geq 2\hbar\kOmega(\kt)$。于是，<span data-concept="two-level-adiabaticity-condition">绝热条件</span>在相位的总变化$\delta\ktheta$远小于<span data-concept="pulse-area">脉冲面积</span>时都将得到满足。</p>
+<figure class="dv" id="drv-pulse-area-condition"></figure>
+<p id="rapid">由于<span data-concept="rapid-adiabatic-passage">绝热通道</span>要求$\delta\ktheta = \mathcal{O}(1)$，<span data-concept="two-level-adiabaticity-condition">绝热条件</span>可以简单地表述为$\kAarea \gg 1$。系统将<span data-concept="adiabatic-theorem">绝热跟随</span><span data-ref="dressed-minus">$|-\rangle$</span>的最短时间因此为$\ktau \approx 1/\kOmega$。这个时间不受原子内禀时标的限制；特别是，它可以小于激发态寿命。因此，即使满足<span data-concept="two-level-adiabaticity-condition">绝热条件</span>，该技术也可以被认为是<span data-concept="rapid-adiabatic-passage">“快速”</span>的。</p>
+<h3>可精确求解的系统：朗道-齐纳模型</h3>
+<p>这一条件是衡量<span data-concept="adiabatic-theorem">绝热近似</span>有效性的一个有用的定性尺度，但我们希望对<span data-concept="adiabatic-theorem">绝热</span>结果中剩余的任何修正加以定量。我们对绝热性的讨论用到了微扰论，因此很容易想到扩展微扰分析，以估计从<span data-concept="instantaneous-eigenstates">瞬时本征态</span>的损失。例如，我们可以假设一个小参数，</p>
+<div class="equation" id="eq-7-21">$$\epsilon = \frac{\dot{\ktheta}}{|\kepsp - \kepsm|} \tag{7.21}$$<sup class="fn" data-note="c-eq-7-21"></sup></div>
+<p>并尝试把布居损失按$\epsilon$的幂展开。然而，我们并未验证这样的展开对这个问题是否确实成立。</p>
+<p id="landau-zener-p">考察<span data-concept="landau-zener" id="landau-zener">一个可精确求解的问题</span>会给出一个相当令人不安的答案。对于在$\kt = -\infty$时从<span data-ref="lvl-1">$|1\rangle$</span>出发、$\kOmega = \kOmega_0$为常数且$\kDelta = \kalpha\kt$的系统，朗道和齐纳证明了，在长时间之后完全转移到<span data-ref="lvl-2">$|2\rangle$</span>的概率为</p>
+<div class="equation" id="eq-7-22">$$\kPLZ = 1 - e^{-2\pi\frac{|\kOmega_0|^2}{|\kalpha|}}. \tag{7.22}$$</div>
+<p id="lz-correction">由于$\dot{\ktheta} \sim \kalpha/2\kOmega_0$，该系统的小参数为$\epsilon \approx \kalpha/4\kOmega_0^2$，<sup class="fn" data-note="c-theta-dot"></sup>由此得到<span data-concept="landau-zener">非绝热修正</span>：</p>
+<div class="equation" id="eq-7-23">$$\kPLZ - 1 \approx e^{-\frac{\pi}{2}\frac{1}{\epsilon}}. \tag{7.23}$$<sup class="fn" data-note="c-eq-7-23"></sup></div>
+<p>这个函数在$\epsilon$很小时不是解析的，因而无法用微扰论来近似。于是，要对这个无损耗系统尝试微扰方法，就需要更复杂的方法。令人惊讶的是，当计入来自激发态的损失时，$\epsilon \to 0$处的奇点消失，微扰级数成为可能。</p>
+</section>

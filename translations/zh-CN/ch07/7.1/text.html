@@ -1,0 +1,25 @@
+<section id="opening">
+<p class="cite-target" id="instantaneous">考虑一个由规范正交基$\{|e_1\rangle \ldots |e_N\rangle\}$张成的 N 维希尔伯特空间，其演化由含时<span data-concept="hamiltonian">哈密顿量</span>$\kH(\kt)$支配。在任一给定时刻$\kt = \kt_0$，我们总能求出<span data-concept="hamiltonian">哈密顿量</span>$\kH(\kt_0)$的<span data-concept="instantaneous-eigenstates">瞬时本征态</span>和本征值，</p>
+<div class="equation" id="eq-7-1">$$\kH(\kt_0)|\epsilon_k(\kt_0)\rangle = \keps_k(\kt_0)|\epsilon_k(\kt_0)\rangle. \tag{7.1}$$</div>
+<p>任意态都可以按<span data-concept="instantaneous-eigenstates">瞬时本征态</span>为基展开，</p>
+<div class="equation" id="eq-7-2">$$|\kpsi(\kt)\rangle = \sum_l \kcinst_l(\kt)|\epsilon_l(\kt)\rangle, \tag{7.2}$$</div>
+<p>并且它服从<span data-concept="schrodinger-equation">薛定谔方程</span>$i\hbar|\dot{\kpsi}(\kt)\rangle = \kH(\kt)|\kpsi(\kt)\rangle$。对于恒定的<span data-concept="hamiltonian">哈密顿量</span>，制备在<span data-concept="stationary-states">某一本征态</span>上的系统将停留在该态；对于含时<span data-concept="hamiltonian">哈密顿量</span>，这一点一般不再成立。</p>
+<p id="new-terms">展开<span data-concept="schrodinger-equation">薛定谔方程</span>，我们发现<span data-concept="instantaneous-eigenstates">本征态</span>的时间依赖性引入了新的项。</p>
+<figure class="dv" id="drv-adiabatic-amplitudes"></figure>
+<p>这一组 N 个耦合微分方程也可以用矩阵记法表示，其中</p>
+<div class="equation" id="eq-7-5">$$\kpsi(\kt) = \begin{pmatrix} \kcinst_1(\kt) \\ \kcinst_2(\kt) \\ \vdots \\ \kcinst_N(\kt) \end{pmatrix} \quad \text{and} \quad \kH(\kt) = \begin{pmatrix} \keps_1(\kt) & & & 0 \\ & \keps_2(\kt) & & \\ & & \ddots & \\ 0 & & & \keps_N(\kt) \end{pmatrix}, \tag{7.5}$$</div>
+<p>于是<a href="#drv-adiabatic-amplitudes">式 (7.4)</a>变为</p>
+<div class="equation" id="eq-7-6">$$i\hbar\frac{d}{d\kt}\begin{pmatrix} \kcinst_1 \\ \kcinst_2 \\ \vdots \\ \kcinst_N \end{pmatrix} = \begin{pmatrix} \keps_1 & -i\hbar\langle\epsilon_1|\dot{\epsilon}_2\rangle & \ldots & \\ -i\hbar\langle\epsilon_2|\dot{\epsilon}_1\rangle & \keps_2 & & \\ \vdots & & \ddots & \\ & & & \keps_N \end{pmatrix}\begin{pmatrix} \kcinst_1 \\ \kcinst_2 \\ \vdots \\ \kcinst_N \end{pmatrix}, \tag{7.6}$$</div>
+<p>其中为记法简洁，各项都隐含地依赖于时间。<sup class="fn" data-note="footnote-1"></sup></p>
+</section>
+
+<section id="adiabaticity">
+<h2>7.1.1 绝热条件</h2>
+<p class="cite-target" id="adiabatic-limit">假设量子态$|\kpsi\rangle$在时刻$\kt = 0$初始制备在其中一个<span data-concept="instantaneous-eigenstates">瞬时本征态</span>$|\epsilon_k(0)\rangle$上。式 (<a href="#drv-adiabatic-amplitudes">7.4</a>，<a href="#eq-7-6">7.6</a>) 中的<span data-concept="nonadiabatic-coupling">非对角耦合</span>表明$|\epsilon_k(\kt)\rangle$不是<span data-concept="stationary-states">严格的定态</span>，但直觉告诉我们，对于变化非常缓慢的<span data-concept="hamiltonian">哈密顿量</span>，它应当近似为定态。$|\epsilon_k(\kt)\rangle$基本上是定态的情形称为<span data-concept="adiabatic-theorem">“绝热”极限</span>，它对应于<span data-concept="nonadiabatic-coupling">非对角项</span>足够小，以致泄漏到其他态的布居可以忽略，即$|\kcinst_k|^2 \approx 1$。</p>
+<p id="perturbation">为估计<span data-concept="nonadiabatic-coupling">非对角耦合</span>必须小到什么程度，我们用微扰论计算<span data-concept="nonadiabatic-coupling">弱耦合</span>$\langle\epsilon_k|\dot{\epsilon}_l\rangle$如何影响<span data-concept="state-vector">态矢量</span>。</p>
+<figure class="dv" id="drv-adiabatic-condition"></figure>
+<p>这里我们以$\keps_k$为参考来度量所有能量。</p>
+<p>因此，要求$|\epsilon_k(\kt)\rangle$为定态（即$|\kpsi^{(1)}\rangle = 0$）就给出了我们的<span data-concept="adiabaticity-condition">绝热条件</span>。</p>
+<p>在时标$\ktau$上变化的<span data-concept="hamiltonian">哈密顿量</span>会导致<span data-concept="nonadiabatic-coupling">耦合</span>$|\langle\epsilon_l|\dot{\epsilon}_k\rangle| \propto 1/\ktau$，所以对于缓慢变化的<span data-concept="hamiltonian">哈密顿量</span>，系统确实会<span data-concept="adiabatic-theorem">绝热跟随</span><span data-concept="instantaneous-eigenstates">瞬时本征态</span>。</p>
+<p id="phases">请注意，<span data-concept="adiabatic-theorem">绝热定理</span>是针对系统的相干哈密顿量演化而表述的。对于出现衰变的系统，<span data-concept="adiabaticity-condition">绝热条件</span>可能不同于<a href="#drv-adiabatic-condition">式 (7.10)</a>所示的形式。即使<span data-concept="adiabaticity-condition">绝热条件</span>得到满足，被忽略的对角项仍可能引入<span data-concept="geometric-phase">一个称为“几何”相位或“贝里”相位的相位因子</span>。这一<span data-concept="geometric-phase">几何相位</span>叠加在所谓的<span data-concept="dynamical-phase">“动力学”相位</span>（由$e^{\{-i/\hbar\int_0^{\kt} d\tau\,\keps_k(\tau)\}}$给出）之上，后者来自<span data-concept="schrodinger-equation">薛定谔方程</span>的对角部分。关于这类相位的详细讨论可见于许多现代量子力学书籍（<em>例如</em>樱井纯）；这里我们只指出，在<span data-concept="dynamical-phase">动力学相位</span>为零的情形下，通常也没有<span data-concept="geometric-phase">几何相位</span>。</p>
+</section>

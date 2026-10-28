@@ -1,0 +1,30 @@
+{
+ "id": "intro",
+ "chapter": "4",
+ "title": "引言",
+ "short": "引言",
+ "lead": "",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "本书的三个条件保留为各自的段落，其中 (3) 按原文接着写到“在数学上，……”。式 (4.3) 同时印有 ∏ 和显式的 ⊗ 乘积，式 (4.4) 在对 N_i 个原子求和之前写有 N_i/V_i，使这些原子被计了两次；二者均照原文保留，留待本章统稿时以更正行处理。在第 3 章的概念合并之前，“密度矩阵”和“光学布洛赫方程”不带概念 span；出于同样的原因，ρ₂₁、ρ₁₂ 不使用宏书写。",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "figures": []
+}

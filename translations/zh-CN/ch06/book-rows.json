@@ -1,0 +1,352 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "H_eff",
+   "latex": "\\hat{H}_\\mathrm{eff}",
+   "macro": "\\kHeff"
+  },
+  {
+   "sym": "c_hat_k",
+   "latex": "\\hat{c}_k",
+   "macro": "\\kchatk"
+  },
+  {
+   "sym": "gamma_k",
+   "latex": "\\gamma_k",
+   "macro": "\\kgammak"
+  },
+  {
+   "sym": "delta_p",
+   "latex": "\\delta p_\\alpha",
+   "macro": "\\kdeltap"
+  },
+  {
+   "sym": "a_1",
+   "latex": "a_1",
+   "macro": "\\kaone"
+  },
+  {
+   "sym": "a_2",
+   "latex": "a_2",
+   "macro": "\\katwo"
+  },
+  {
+   "sym": "delta_p_k",
+   "latex": "\\delta p_{k,\\alpha}",
+   "macro": "\\kdeltapk"
+  },
+  {
+   "sym": "delta_p_atom",
+   "latex": "\\delta p",
+   "macro": "\\kdeltapatom"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "monte-carlo-wavefunction",
+   "kind": "idea",
+   "section": "6.1",
+   "name": "蒙特卡罗波函数",
+   "terms": [
+    "随机波函数或蒙特卡罗波函数",
+    "蒙特卡罗波函数",
+    "随机波函数",
+    "蒙特卡罗波函数法"
+   ],
+   "type": "state",
+   "statement": "主方程可以用随机波函数来模拟：它是一个在有效哈密顿量下演化并随机跳跃的态矢量，其在许多轨迹上的平均给出密度矩阵。"
+  },
+  {
+   "id": "lindblad-master-equation",
+   "kind": "result",
+   "section": "6.1",
+   "name": "主方程的一般形式",
+   "terms": [
+    "刘维尔算符",
+    "刘维尔算符"
+   ],
+   "statement": "物理所允许的最一般形式的主方程，在相干演化之上加了一个由任意算符 ĉ_k 和速率 γ_k 构成的刘维尔算符；热库的主方程是 ĉ_{2k} = √(n̄+1)Ŝ_k、ĉ_{2k+1} = √n̄ Ŝ_k† 的情形。",
+   "forms": [
+    {
+     "id": "eq-6-1",
+     "latex": "\\frac{d\\hat{\\rho}_S}{dt} = \\frac{1}{i\\hbar}[\\hat{H}_S, \\hat{\\rho}_S] + \\mathcal{L}(\\hat{\\rho}_S)",
+     "anchor": "6.1-eq-6-1"
+    },
+    {
+     "id": "eq-6-2",
+     "latex": "\\mathcal{L}(\\hat{\\rho}_S) = -\\sum_k \\frac{\\gamma_k}{2}\\left(\\hat{c}_k^\\dagger\\hat{c}_k\\hat{\\rho}_S + \\hat{\\rho}_S\\hat{c}_k^\\dagger\\hat{c}_k - 2\\hat{c}_k\\hat{\\rho}_S\\hat{c}_k^\\dagger\\right)",
+     "anchor": "6.1-eq-6-2"
+    },
+    {
+     "id": "eq-6-3",
+     "latex": "\\hat{c}_{2k} = \\sqrt{\\bar{n}+1}\\hat{S}_k",
+     "anchor": "6.1-eq-6-3"
+    },
+    {
+     "id": "eq-6-4",
+     "latex": "\\hat{c}_{2k+1} = \\sqrt{\\bar{n}}\\hat{S}_k^\\dagger",
+     "anchor": "6.1-eq-6-4"
+    }
+   ]
+  },
+  {
+   "id": "effective-hamiltonian",
+   "kind": "definition",
+   "section": "6.1",
+   "name": "有效非厄米哈密顿量",
+   "symbol": "H_eff",
+   "terms": [
+    "有效哈密顿量",
+    "非厄米哈密顿量"
+   ],
+   "type": "energy",
+   "statement": "主方程的前两项的作用类似于在有效哈密顿量下的演化，该哈密顿量是系统哈密顿量加上虚部 −iℏΣγ_k ĉ_k†ĉ_k/2；它不是厄米的，所以不保持范数。",
+   "forms": [
+    {
+     "id": "eq-6-7",
+     "latex": "\\hat{H}_\\mathrm{eff} = \\hat{H}_S - i\\hbar\\sum_k \\frac{\\gamma_k}{2}\\hat{c}_k^\\dagger\\hat{c}_k",
+     "anchor": "6.1-eq-6-7"
+    },
+    {
+     "id": "eq-6-8",
+     "latex": "\\frac{d\\hat{\\rho}_S}{dt} = \\sum_\\alpha p_\\alpha\\left(\\frac{1}{i\\hbar}\\left(\\hat{H}_\\mathrm{eff}|\\psi_\\alpha\\rangle\\langle\\psi_\\alpha| - |\\psi_\\alpha\\rangle\\langle\\psi_\\alpha|\\hat{H}_\\mathrm{eff}^\\dagger\\right) + \\sum_k \\gamma_k\\hat{c}_k|\\psi_\\alpha\\rangle\\langle\\psi_\\alpha|\\hat{c}_k^\\dagger\\right)",
+     "anchor": "6.1-drv-effective-hamiltonian-master-equation"
+    },
+    {
+     "id": "eq-6-9",
+     "latex": "i\\hbar\\frac{d}{dt}|\\psi_\\alpha\\rangle = \\hat{H}_\\mathrm{eff}|\\psi_\\alpha\\rangle",
+     "anchor": "6.1-eq-6-9"
+    }
+   ]
+  },
+  {
+   "id": "quantum-jump",
+   "kind": "definition",
+   "section": "6.1",
+   "name": "量子跳跃",
+   "symbol": "c_hat_k",
+   "terms": [
+    "量子跳跃",
+    "量子跳跃",
+    "跳跃"
+   ],
+   "statement": "主方程的最后一项是一个量子跳跃算符，它以某一概率把 |ψ_α⟩ 变为态 ĉ_k|ψ_α⟩。",
+   "forms": [
+    {
+     "id": "eq-6-jump",
+     "latex": "|\\phi_{k,\\alpha}\\rangle = \\hat{c}_k|\\psi_\\alpha\\rangle",
+     "anchor": "6.1-jump-state"
+    },
+    {
+     "id": "eq-6-19",
+     "latex": "|\\tilde{\\phi}_{k,\\alpha}\\rangle = \\sqrt{\\frac{\\gamma_k\\delta t}{\\delta p_{k,\\alpha}}}|\\phi_{k,\\alpha}\\rangle",
+     "anchor": "6.1-eq-6-19"
+    }
+   ]
+  },
+  {
+   "id": "jump-probability",
+   "kind": "definition",
+   "section": "6.1",
+   "name": "跳跃概率",
+   "symbol": "delta_p",
+   "type": "population",
+   "statement": "在一个小的时间 δt 内，态以概率 δp_{k,α} = δtγ_k⟨ψ_α|ĉ_k†ĉ_k|ψ_α⟩ 通过通道 k 跳跃，以无跳跃演化所损失的范数 δp_α 通过任一通道跳跃。",
+   "forms": [
+    {
+     "id": "eq-6-15",
+     "latex": "\\delta p_\\alpha = \\delta t\\sum_k \\gamma_k\\langle\\psi_\\alpha|\\hat{c}_k^\\dagger\\hat{c}_k|\\psi_\\alpha\\rangle",
+     "anchor": "6.1-eq-6-15"
+    },
+    {
+     "id": "eq-6-14",
+     "latex": "\\delta p_{k,\\alpha} = \\delta t\\gamma_k\\langle\\psi_\\alpha|\\hat{c}_k^\\dagger\\hat{c}_k|\\psi_\\alpha\\rangle",
+     "anchor": "6.1-eq-6-14"
+    },
+    {
+     "id": "eq-6-16",
+     "latex": "\\langle\\psi_\\alpha(t+\\delta t)|\\psi_\\alpha(t+\\delta t)\\rangle = 1 - \\sum_k \\delta p_{k,\\alpha} = 1 - \\delta p_\\alpha",
+     "anchor": "6.1-drv-no-jump-probability"
+    }
+   ]
+  },
+  {
+   "id": "no-jump-evolution",
+   "kind": "result",
+   "section": "6.1",
+   "name": "无跳跃演化",
+   "terms": [
+    "从未跳跃"
+   ],
+   "type": "state",
+   "statement": "没有跳跃过的系统在有效哈密顿量下做离散时间演化，并被 √(1 − δp_α) 重新归一化。",
+   "forms": [
+    {
+     "id": "eq-6-17",
+     "latex": "|\\tilde{\\psi}_\\alpha(t+\\delta t)\\rangle = \\frac{1 + \\hat{H}_\\mathrm{eff}\\delta t/i\\hbar}{\\sqrt{1-\\delta p_\\alpha}}|\\psi_\\alpha(t)\\rangle",
+     "anchor": "6.1-eq-6-17"
+    },
+    {
+     "id": "eq-6-10",
+     "latex": "|\\psi_\\alpha(t+\\delta t)\\rangle = \\left(1 + \\frac{\\hat{H}_\\mathrm{eff}\\delta t}{i\\hbar}\\right)|\\psi_\\alpha(t)\\rangle",
+     "anchor": "6.1-eq-6-10"
+    }
+   ]
+  },
+  {
+   "id": "stochastic-master-equation",
+   "kind": "result",
+   "section": "6.1",
+   "name": "作为跳跃统计的主方程",
+   "terms": [
+    "概率解释"
+   ],
+   "type": "state",
+   "statement": "用离散时间和归一化的态写出的主方程表明：经过 δt 之后，系统以概率 1 − δp_α 在 Ĥ_eff 下演化，或以概率 δp_{k,α} 跳跃到 |φ̃_{k,α}⟩。",
+   "forms": [
+    {
+     "id": "eq-6-21",
+     "latex": "\\hat{\\rho}_S(t+\\delta t) = \\sum_\\alpha p_\\alpha\\left((1-\\delta p_\\alpha)|\\tilde{\\psi}_\\alpha(t+\\delta t)\\rangle\\langle\\tilde{\\psi}_\\alpha(t+\\delta t)| + \\sum_k \\delta p_{k,\\alpha}|\\tilde{\\phi}_{k,\\alpha}\\rangle\\langle\\tilde{\\phi}_{k,\\alpha}|\\right)",
+     "anchor": "6.1-drv-jump-decomposition"
+    },
+    {
+     "id": "eq-6-20",
+     "latex": "\\hat{\\rho}_S(t+\\delta t) = \\sum_\\alpha p_\\alpha\\left(|\\psi_\\alpha(t+\\delta t)\\rangle\\langle\\psi_\\alpha(t+\\delta t)| + \\delta t\\sum_k \\gamma_k|\\phi_{k,\\alpha}\\rangle\\langle\\phi_{k,\\alpha}|\\right)",
+     "anchor": "6.1-drv-jump-decomposition"
+    }
+   ]
+  },
+  {
+   "id": "monte-carlo-procedure",
+   "kind": "skill",
+   "section": "6.1",
+   "name": "蒙特卡罗流程",
+   "terms": [
+    "蒙特卡罗流程",
+    "示例算法"
+   ],
+   "statement": "通过逐步演化一个态矢量来模拟主方程，每一步取一个随机数来决定是无跳跃演化还是跳跃，重复 N 条轨迹，并把它们平均成密度矩阵。"
+  },
+  {
+   "id": "mcwf-two-level-decay",
+   "kind": "result",
+   "section": "6.2",
+   "name": "二能级原子的蒙特卡罗衰变",
+   "type": "state",
+   "statement": "衰变的二能级原子每一步以概率 δtγ|a₂|² 跳跃；如果它不跳跃，其激发态布居衰变得比 e^{−γt} 慢，而对轨迹的平均则按 e^{−γt} 衰变。",
+   "forms": [
+    {
+     "id": "eq-6-26",
+     "latex": "|\\tilde{\\psi}(t)\\rangle = \\frac{1}{\\sqrt{|a_1|^2 + |a_2|^2e^{-\\gamma t}}}\\left(a_1|1\\rangle + a_2e^{-(\\gamma/2+i\\Delta)t}|2\\rangle\\right)",
+     "anchor": "6.2-drv-no-jump-two-level-state"
+    },
+    {
+     "id": "eq-6-23",
+     "latex": "\\delta p = \\delta t\\gamma|a_2|^2",
+     "anchor": "6.2-drv-two-level-jump-probability"
+    },
+    {
+     "id": "eq-6-24",
+     "latex": "\\hat{H}_\\mathrm{eff} = \\Delta|2\\rangle\\langle 2| - \\frac{i\\gamma}{2}\\hat{c}^\\dagger\\hat{c}",
+     "anchor": "6.2-eq-6-24"
+    }
+   ]
+  },
+  {
+   "id": "null-measurement",
+   "kind": "idea",
+   "section": "6.2",
+   "name": "未探测到光子也是一种测量",
+   "statement": "未探测到光子也是对系统的一种测量：它使态这样演化，以至在长时间下原子最终处于 |1⟩，即使它从不发射光子。"
+  },
+  {
+   "id": "monte-carlo-use-cases",
+   "kind": "idea",
+   "section": "6.2",
+   "name": "何时使用蒙特卡罗法",
+   "statement": "当希尔伯特空间对密度矩阵而言太大，或想要依赖测量的反馈时，蒙特卡罗法是有利的；否则它是万不得已才用的方法。"
+  },
+  {
+   "id": "non-hermitian-evolution",
+   "kind": "idea",
+   "section": "6.3",
+   "name": "非厄米演化",
+   "terms": [
+    "非厄米薛定谔方程",
+    "非厄米哈密顿量演化",
+    "有效薛定谔方程"
+   ],
+   "statement": "在所考虑的时间内量子跳跃不太可能发生时，系统可以只用非厄米薛定谔方程处理，能量的虚部计入有限的寿命；于是概率从系统中泄漏出去，却没有它去向何处的记录。",
+   "forms": [
+    {
+     "id": "eq-6-jump-weak",
+     "latex": "\\int dt\\,\\gamma\\rho_{22} \\propto |\\Omega|^2",
+     "anchor": "6.3-jump-weak"
+    }
+   ]
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "effective-hamiltonian",
+   "prereq": "lindblad-master-equation"
+  },
+  {
+   "concept": "quantum-jump",
+   "prereq": "lindblad-master-equation"
+  },
+  {
+   "concept": "no-jump-evolution",
+   "prereq": "effective-hamiltonian"
+  },
+  {
+   "concept": "jump-probability",
+   "prereq": "no-jump-evolution"
+  },
+  {
+   "concept": "jump-probability",
+   "prereq": "expectation-value"
+  },
+  {
+   "concept": "stochastic-master-equation",
+   "prereq": "jump-probability"
+  },
+  {
+   "concept": "stochastic-master-equation",
+   "prereq": "quantum-jump"
+  },
+  {
+   "concept": "monte-carlo-wavefunction",
+   "prereq": "stochastic-master-equation"
+  },
+  {
+   "concept": "monte-carlo-procedure",
+   "prereq": "monte-carlo-wavefunction"
+  },
+  {
+   "concept": "mcwf-two-level-decay",
+   "prereq": "monte-carlo-procedure"
+  },
+  {
+   "concept": "null-measurement",
+   "prereq": "mcwf-two-level-decay"
+  },
+  {
+   "concept": "monte-carlo-use-cases",
+   "prereq": "monte-carlo-procedure"
+  },
+  {
+   "concept": "non-hermitian-evolution",
+   "prereq": "effective-hamiltonian"
+  },
+  {
+   "concept": "lindblad-master-equation",
+   "prereq": "generalized-master-equation"
+  },
+  {
+   "concept": "non-hermitian-evolution",
+   "prereq": "density-matrix-populations"
+  }
+ ]
+}

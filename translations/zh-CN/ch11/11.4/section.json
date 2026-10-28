@@ -1,0 +1,1903 @@
+{
+ "id": "11.4",
+ "chapter": "11",
+ "title": "原子间相互作用",
+ "short": "原子间相互作用",
+ "lead": "两个冷原子如何相互作用：<span data-concept=\"van-der-waals-potential\">范德瓦耳斯</span>尾部，<span data-concept=\"s-wave-dominance\">超冷极限</span>下的散射理论，其中一个数，即<span data-concept=\"s-wave-scattering-length\">s 波散射长度</span>，就可以代表整个势，全同粒子的散射以及物质波穿过原子云的散射，用磁场调节相互作用的<span data-concept=\"feshbach-resonance\">费希巴赫共振</span>，以及相互作用玻色气体的二次量子化理论，直到<span data-concept=\"gross-pitaevskii-equation\">格罗斯-皮塔耶夫斯基方程</span>、<span data-concept=\"thomas-fermi-approximation\">托马斯-费米</span>凝聚体及其<span data-concept=\"healing-length\">恢复长度</span>。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "MIT 8.422 习题集 5 第 2 题，以及习题集 6 第 1 题，共分为六个小问，改用卢金的记号重述，并附有 AI 撰写的解答，因为该课程没有公布答案；没有任何一问是数值题，因此没有一问被暂扣。",
+ "figures": [
+  {
+   "id": "sim-regions",
+   "kind": "sim",
+   "number": "11.5",
+   "originals": [
+    "/media/ch11/fig-11-5.png"
+   ],
+   "original_caption": "薛定谔方程在 A 区中对小的 r、在 B 区中对大的 r 可以近似求解。在超冷极限 kr₀ ≪ 1 下，两个适用范围重叠，两个解可以在 r₀ < r < 1/k 内匹配。",
+   "draws": [
+    "energy",
+    "length",
+    "wavevector"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-square-well",
+   "kind": "sim",
+   "number": "11.6",
+   "folds": [
+    "11.7"
+   ],
+   "originals": [
+    "/media/ch11/fig-11-6.png",
+    "/media/ch11/fig-11-7.png"
+   ],
+   "original_caption": "（图 11.6）散射长度可以形象地看作波函数的渐近线在 r₀ ≪ r ≪ 1/k 区域内的截距。（图 11.7）硬球、排斥势和吸引势的波函数与散射长度",
+   "draws": [
+    "length",
+    "energy",
+    "state"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-feshbach",
+   "kind": "sim",
+   "number": "11.8",
+   "folds": [
+    "11.9"
+   ],
+   "originals": [
+    "/media/ch11/fig-11-8.png",
+    "/media/ch11/fig-11-9.png"
+   ],
+   "original_caption": "（图 11.8）上方的势对应于“闭”通道，其中有许多未被占据的束缚态。下方的势，即“开”通道，对应于原子的初始内态。当闭通道中的一个束缚态接近开通道中的阈值能量时，两个通道之间任何微小的耦合都可能产生很大的影响，使开通道中的散射长度发生剧烈变化。（图 11.9）费希巴赫共振附近散射长度的形式",
+   "draws": [
+    "energy",
+    "length",
+    "magnetic-field",
+    "magnetic-moment"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-thomas-fermi",
+   "kind": "sim",
+   "draws": [
+    "density",
+    "length",
+    "energy",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "dilute",
+   "concept": "dilute-quantum-gas",
+   "verb": "introduces"
+  },
+  {
+   "span": "vdw",
+   "concept": "van-der-waals-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "relative-motion",
+   "concept": "relative-motion-scattering",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-11-45",
+   "concept": "scattering-amplitude",
+   "verb": "introduces"
+  },
+  {
+   "span": "cross-section",
+   "concept": "scattering-cross-section",
+   "verb": "introduces"
+  },
+  {
+   "span": "born",
+   "concept": "born-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "partial-waves",
+   "concept": "partial-wave-expansion",
+   "verb": "introduces"
+  },
+  {
+   "span": "phase-shift",
+   "concept": "scattering-phase-shift",
+   "verb": "introduces"
+  },
+  {
+   "span": "s-wave-only",
+   "concept": "s-wave-dominance",
+   "verb": "introduces"
+  },
+  {
+   "span": "scattering-length",
+   "concept": "s-wave-scattering-length",
+   "verb": "introduces"
+  },
+  {
+   "span": "interpretation",
+   "concept": "scattering-length-signs",
+   "verb": "introduces"
+  },
+  {
+   "span": "pseudopotential",
+   "concept": "s-wave-pseudopotential",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-11-81",
+   "concept": "identical-particle-scattering",
+   "verb": "introduces"
+  },
+  {
+   "span": "slab-phase",
+   "concept": "matter-wave-index",
+   "verb": "introduces"
+  },
+  {
+   "span": "strong-dilute",
+   "concept": "strongly-interacting-dilute-gas",
+   "verb": "introduces"
+  },
+  {
+   "span": "weakly-bound",
+   "concept": "weakly-bound-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "feshbach",
+   "concept": "feshbach-resonance",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-11-110",
+   "concept": "interacting-bose-gas-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "second-quantization",
+   "concept": "second-quantization",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-11-119",
+   "concept": "matter-field-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-11-127",
+   "concept": "noninteracting-condensate-ground-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "gp",
+   "concept": "gross-pitaevskii-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "symmetry-breaking",
+   "concept": "matter-wave-symmetry-breaking",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-11-133",
+   "concept": "condensate-ground-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "trap-size",
+   "concept": "trap-length",
+   "verb": "introduces"
+  },
+  {
+   "span": "thomas-fermi",
+   "concept": "thomas-fermi-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "healing",
+   "concept": "healing-length",
+   "verb": "introduces"
+  },
+  {
+   "span": "condensate-density",
+   "concept": "condensate-density",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "bose-condensation",
+   "verb": "uses"
+  },
+  {
+   "span": "degenerate",
+   "concept": "critical-temperature",
+   "verb": "uses"
+  },
+  {
+   "span": "diagonal-elements",
+   "concept": "dipole-matrix-element",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-11-44",
+   "concept": "schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "indist",
+   "concept": "indistinguishability-statistics",
+   "verb": "uses"
+  },
+  {
+   "span": "refraction",
+   "concept": "refractive-index",
+   "verb": "uses"
+  },
+  {
+   "span": "fesh-tune",
+   "concept": "zeeman-effect",
+   "verb": "uses"
+  },
+  {
+   "span": "sq-operators",
+   "concept": "creation-annihilation-operators",
+   "verb": "uses"
+  },
+  {
+   "span": "coherent-assumption",
+   "concept": "coherent-state",
+   "verb": "uses"
+  },
+  {
+   "span": "kerr",
+   "concept": "kerr-effect",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-contact-hamiltonian",
+   "concept": "second-quantized-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-mean-field-energy",
+   "concept": "chemical-potential",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "hw5-2a",
+   "source_id": "hw5.2a",
+   "source_number": "Problem Set 5, Problem 2(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的原子$a$和$b$是原子 1 和 2，$\\mathbf{d}_a$、$\\mathbf{d}_b$是$\\mathbf{d_1}$、$\\mathbf{d_2}$，间距$\\mathbf{R}$是$\\mathbf{r}$，$H_{el}(R)$是式 (11.40) 的$\\hat{V}_d(r)$，书写时用$\\mathbf{r}/r$代替$\\hat{\\mathbf{R}}$；态$|g_ag_b\\rangle$、$|i_ag_b\\rangle$是$|0,0\\rangle$、$|n,0\\rangle$；“课上讨论过”这几个字被省去了。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "vdw-attractive",
+   "prompt": "基态原子之间的长程（范德瓦耳斯）相互作用。原子 1 和原子 2 之间的静电相互作用在一阶上由偶极-偶极项$$\\hat{V}_d(r) = \\frac{\\mathbf{d_1}\\cdot\\mathbf{d_2}}{r^3} - 3\\frac{(\\mathbf{d_1}\\cdot\\mathbf{r})(\\mathbf{d_2}\\cdot\\mathbf{r})}{r^5},$$描述，其中$\\mathbf{d_1} = e\\mathbf{r}_1$是原子 1 的电偶极算符，$\\mathbf{d_2} = e\\mathbf{r}_2$是原子 2 的电偶极算符，$\\mathbf{r}$（长度为$r$）是从原子 1 的核指向原子 2 的核的位置矢量。我们将用不含时微扰论来计算$\\hat{V}_d$的效应。这比含时微扰展开更简单，并且不会导出范德瓦耳斯相互作用的虚光子图像。记号：用$|0,0\\rangle$表示原子 1 和原子 2 都处于基态，用$|n,0\\rangle$表示原子 1 处于激发态$|n\\rangle$而原子 2 处于基态。该系统受微扰的基态能量级数中第一个不为零的项是什么？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "一阶项为零：$\\langle 0,0|\\hat{V}_d|0,0\\rangle$由$\\langle 0|\\mathbf{d_1}|0\\rangle$和$\\langle 0|\\mathbf{d_2}|0\\rangle$构成，而具有确定宇称的基态没有永久电偶极子。第一个不为零的项是二阶项，$$\\Delta E = \\sum_{(n,n')\\neq(0,0)}\\frac{|\\langle n,n'|\\hat{V}_d|0,0\\rangle|^2}{2E_0 - E_n - E_{n'}}.$$由于$\\hat{V}_d$包含每个原子的一个偶极，$\\langle n,0|\\hat{V}_d|0,0\\rangle$含有$\\langle 0|\\mathbf{d_2}|0\\rangle = 0$：只有两个原子都被激发的态才有贡献。取$z$沿$\\mathbf{r}$，$\\hat{V}_d = (d_{1x}d_{2x} + d_{1y}d_{2y} - 2d_{1z}d_{2z})/r^3$；对于球对称的基态，不同分量的乘积在对每个能级的子能级求和时相互抵消，而每个分量都带有相同的$|\\langle 0|d_z|n\\rangle|^2$，所以权重$1 + 1 + 4$给出$$\\Delta E = \\frac{6}{r^6}\\sum_{n,n'}\\frac{|\\langle 0|d_{1z}|n\\rangle|^2|\\langle 0|d_{2z}|n'\\rangle|^2}{2E_0 - E_n - E_{n'}} = -\\frac{C_6}{r^6},$$这就是两个同种原子的式 (11.41)。每个分母都是负的，所以$C_6 > 0$，相互作用是吸引的；按卢金的形式，$C_6 = \\hbar^2\\krzero^4/2\\kmured$，即式 (11.42)。"
+   }
+  },
+  {
+   "id": "hw5-2b",
+   "source_id": "hw5.2b",
+   "source_number": "Problem Set 5, Problem 2(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的原子$a$和$b$是原子 1 和 2，$\\mathbf{d}_a$、$\\mathbf{d}_b$是$\\mathbf{d_1}$、$\\mathbf{d_2}$，间距$\\mathbf{R}$是$\\mathbf{r}$，$H_{el}(R)$是式 (11.40) 的$\\hat{V}_d(r)$，书写时用$\\mathbf{r}/r$代替$\\hat{\\mathbf{R}}$；态$|g_ag_b\\rangle$、$|i_ag_b\\rangle$是$|0,0\\rangle$、$|n,0\\rangle$，$f_{ig}$和$\\omega_{ig}$是$f_{n0}$和$\\omega_{n0}$，电子质量写作$m_e$（卢金的$m$是原子的）；重复了题目的开头，使这一小问可以独立成题。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "vdw-attractive",
+   "prompt": "原子 1 和原子 2 之间的静电相互作用在一阶上由偶极-偶极项$$\\hat{V}_d(r) = \\frac{\\mathbf{d_1}\\cdot\\mathbf{d_2}}{r^3} - 3\\frac{(\\mathbf{d_1}\\cdot\\mathbf{r})(\\mathbf{d_2}\\cdot\\mathbf{r})}{r^5},$$描述，其中$\\mathbf{d_1} = e\\mathbf{r}_1$是原子 1 的电偶极算符，$\\mathbf{d_2} = e\\mathbf{r}_2$是原子 2 的电偶极算符，$\\mathbf{r}$（长度为$r$）是从原子 1 的核指向原子 2 的核的位置矢量。我们将用不含时微扰论来计算$\\hat{V}_d$的效应。这比含时微扰展开更简单，并且不会导出范德瓦耳斯相互作用的虚光子图像。记号：用$|0,0\\rangle$表示原子 1 和原子 2 都处于基态，用$|n,0\\rangle$表示原子 1 处于激发态$|n\\rangle$而原子 2 处于基态。在原子物理中，偶极矩阵元常常用“振子强度”来讨论，$f_{n0} = \\frac{2m_e\\omega_{n0}}{\\hbar}|\\langle n|x|0\\rangle|^2$。注意：$\\omega_{n0} = \\frac{E_n - E_0}{\\hbar}$，所以$f_{n0}$对吸收为正，对发射为负。另外，$\\sum_n f_{n0} = 1$，即托马斯-赖歇-库恩求和定则。请用振子强度表示受微扰的基态能量。你需要就光子发射的对称性给出一些论证（如果你愿意，可以不用数学），以消去讨厌的交叉项。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "交叉项是形如$\\langle n|d_x|0\\rangle\\langle n|d_y|0\\rangle^*$的乘积。对激发能级的简并子能级求和时，它们为零：基态没有择优方向，所以落回基态的原子对每种偏振的发射相同，偶极的各分量互不相关。出于同样的原因，每个分量的权重相同，$\\sum_{\\text{子能级}}|\\langle n|d_z|0\\rangle|^2 = e^2|\\langle n|x|0\\rangle|^2 = \\frac{e^2\\hbar f_{n0}}{2m_e\\omega_{n0}}$。把它代入二阶结果，且$2E_0 - E_n - E_{n'} = -\\hbar(\\omega_{n0} + \\omega_{n'0})$，$$\\Delta E = -\\frac{C_6}{r^6}, \\qquad C_6 = \\frac{3\\hbar e^4}{2m_e^2}\\sum_{n,n'}\\frac{f^{(1)}_{n0}f^{(2)}_{n'0}}{\\omega^{(1)}_{n0}\\,\\omega^{(2)}_{n'0}\\left(\\omega^{(1)}_{n0} + \\omega^{(2)}_{n'0}\\right)},$$其中上标标明所指的原子。这就是伦敦公式；在卢金的式 (11.42) 中是$C_6 = \\hbar^2\\krzero^4/2\\kmured$。"
+   }
+  },
+  {
+   "id": "hw5-2c",
+   "source_id": "hw5.2c",
+   "source_number": "Problem Set 5, Problem 2(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的原子$a$和$b$是原子 1 和 2，$\\mathbf{d}_a$、$\\mathbf{d}_b$是$\\mathbf{d_1}$、$\\mathbf{d_2}$，间距$\\mathbf{R}$是$\\mathbf{r}$，$H_{el}(R)$是式 (11.40) 的$\\hat{V}_d(r)$，书写时用$\\mathbf{r}/r$代替$\\hat{\\mathbf{R}}$；态$|g_ag_b\\rangle$、$|i_ag_b\\rangle$是$|0,0\\rangle$、$|n,0\\rangle$，$f_{ig}$是$f_{n0}$，极化率$\\alpha_g^{(a)}$、$\\alpha_g^{(b)}$是$\\alpha^{(1)}$、$\\alpha^{(2)}$，电子质量写作$m_e$；概述了题目的开头和 (b) 问的结果，使这一小问可以独立成题。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "vdw-attractive",
+   "prompt": "间距为$r$的两个基态原子 1 和 2 通过范德瓦耳斯相互作用$\\kUr = -C_6/r^6$相互吸引，其中，用每个原子的振子强度$f_{n0} = \\frac{2m_e\\omega_{n0}}{\\hbar}|\\langle n|x|0\\rangle|^2$表示（$\\sum_n f_{n0} = 1$，即托马斯-赖歇-库恩求和定则），$C_6 = \\frac{3\\hbar e^4}{2m_e^2}\\sum_{n,n'}\\frac{f^{(1)}_{n0}f^{(2)}_{n'0}}{\\omega^{(1)}_{n0}\\omega^{(2)}_{n'0}(\\omega^{(1)}_{n0} + \\omega^{(2)}_{n'0})}$。我们可以用如下近似来估计$C_6$：振子强度$f_{n0}$只对一个跃迁$|0\\rangle \\to |n\\rangle$才大。碱金属原子中的$|nS\\rangle \\to |(n+1)P\\rangle$跃迁是典型的例子，$f \\approx 0.98$。把这一点与上面的求和定则以及基态静态极化率的定义结合起来使用：$$\\alpha = 2e^2\\sum_n\\frac{|\\langle n|z|0\\rangle|^2}{E_n - E_0}$$并把你关于$C_6$的结果用极化率$\\alpha^{(1)}$和$\\alpha^{(2)}$表示出来。（你的最终答案中不应有任何求和符号。）",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "设原子$j$的那条强跃迁位于$\\omega_j$，承担整个求和定则，$f \\approx 1$。于是它的极化率为$$\\alpha^{(j)} = 2e^2\\sum_n\\frac{\\hbar f_{n0}/2m_e\\omega_{n0}}{\\hbar\\omega_{n0}} = \\frac{e^2}{m_e}\\sum_n\\frac{f_{n0}}{\\omega_{n0}^2} \\approx \\frac{e^2}{m_e\\omega_j^2},$$而双重求和只保留一项：$$C_6 \\approx \\frac{3\\hbar e^4}{2m_e^2}\\frac{1}{\\omega_1\\omega_2(\\omega_1 + \\omega_2)} = \\frac{3\\hbar}{2}\\,\\alpha^{(1)}\\alpha^{(2)}\\frac{\\omega_1\\omega_2}{\\omega_1 + \\omega_2}.$$利用$\\omega_j = e/\\sqrt{m_e\\alpha^{(j)}}$消去频率，$$C_6 \\approx \\frac{3\\hbar e}{2\\sqrt{m_e}}\\,\\frac{\\alpha^{(1)}\\alpha^{(2)}}{\\sqrt{\\alpha^{(1)}} + \\sqrt{\\alpha^{(2)}}}.$$对于两个同种原子，这就是伦敦的$C_6 = \\frac{3}{4}\\hbar\\omega\\alpha^2$：范德瓦耳斯系数随极化率的平方增长。"
+   }
+  },
+  {
+   "id": "hw6-1a",
+   "source_id": "hw6.1a",
+   "source_number": "Problem Set 6, Problem 1(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的原子$a$和$b$是原子 1 和 2，间距$R$是$r$，跃迁能量$E_i^{(a)} - E_g^{(a)}$和$E_i^{(b)} - E_g^{(b)}$是$\\hbar\\omega_1$和$\\hbar\\omega_2$，态$|i_ag_b\\rangle$、$|g_ai_b\\rangle$是$|e,g\\rangle$、$|g,e\\rangle$；指明了式 (11.40) 的偶极-偶极相互作用，MIT 的题目是从习题集 5 中取用的。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "eq-11-40",
+   "prompt": "激发态原子与基态原子之间的长程相互作用。考虑一个原子被激发、另一个原子处于基态的情形。为简单起见，把每个原子建模为二能级系统，有一个基态$|g\\rangle$和一个激发态$|e\\rangle$，两个原子通过式 (11.40) 的偶极-偶极项$\\hat{V}_d(r)$相互作用，间距为$r$。假设有两个原子 1 和 2，它们具有几乎（但不完全）简并的基态$\\leftrightarrow$激发态跃迁能量$\\hbar\\omega_1 \\approx \\hbar\\omega_2$。态$|e,g\\rangle$（原子 1 被激发而原子 2 处于基态）的能量在大距离上如何随间距$r$变化？态$|g,e\\rangle$又如何？间距为多大时微扰论失效？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "一阶移位$\\langle e,g|\\hat{V}_d|e,g\\rangle$含有$\\langle e|\\mathbf{d_1}|e\\rangle$和$\\langle g|\\mathbf{d_2}|g\\rangle$，二者皆为零。$\\hat{V}_d$同时改变两个原子的态，在二能级模型中，它把$|e,g\\rangle$耦合到的唯一的态是$|g,e\\rangle$（到达$|g,g\\rangle$或$|e,e\\rangle$需要对角偶极矩阵元），其中$$V = \\langle g,e|\\hat{V}_d|e,g\\rangle = \\frac{\\mathbf{d}_1\\cdot\\mathbf{d}_2 - 3(\\mathbf{d}_1\\cdot\\hat{\\mathbf{r}})(\\mathbf{d}_2\\cdot\\hat{\\mathbf{r}})}{r^3}, \\qquad \\mathbf{d}_1 = \\langle g|\\mathbf{d_1}|e\\rangle,\\ \\mathbf{d}_2 = \\langle e|\\mathbf{d_2}|g\\rangle.$$在二阶，$$\\Delta E_{e,g} = \\frac{|V|^2}{\\hbar(\\omega_1 - \\omega_2)}, \\qquad \\Delta E_{g,e} = -\\frac{|V|^2}{\\hbar(\\omega_1 - \\omega_2)},$$二者都按$1/r^6$下降：两个近简并态相互排斥，上面的被推高，下面的被压低，系数因分母很小而变大。当耦合与分裂一样大时，$|V| \\approx \\hbar|\\omega_1 - \\omega_2|$，即在$r \\approx \\left(|\\langle g|\\mathbf{d}|e\\rangle|^2/\\hbar|\\omega_1 - \\omega_2|\\right)^{1/3}$处，微扰论失效；更近时两个态强烈混合，能量移位变为$\\pm|V| \\propto 1/r^3$，如 (b) 问所示。"
+   }
+  },
+  {
+   "id": "hw6-1b",
+   "source_id": "hw6.1b",
+   "source_number": "Problem Set 6, Problem 1(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的原子$a$和$b$是原子 1 和 2，间距$R$是$r$，跃迁能量$E_i^{(a)} - E_g^{(a)}$和$E_i^{(b)} - E_g^{(b)}$是$\\hbar\\omega_1$和$\\hbar\\omega_2$，态$|i_ag_b\\rangle$、$|g_ai_b\\rangle$是$|e,g\\rangle$、$|g,e\\rangle$；重复了题目的开头，使这一小问可以独立成题，并指明了式 (11.40) 的相互作用。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "eq-11-40",
+   "prompt": "考虑一个原子被激发、另一个原子处于基态的情形。为简单起见，把每个原子建模为二能级系统，有一个基态$|g\\rangle$和一个激发态$|e\\rangle$，两个原子通过式 (11.40) 的偶极-偶极项$\\hat{V}_d(r)$相互作用，间距为$r$。现在假设有两个全同（即跃迁能量相同）的原子。对一个原子被激发、一个原子处于基态的情形，计算长程相互作用势曲线。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "当$\\omega_1 = \\omega_2 = \\omega$时，态$|e,g\\rangle$和$|g,e\\rangle$在$\\hbar\\omega$处简并，而$\\hbar\\omega$在简并微扰论的一阶就已经移位。$\\hat{V}_d$以$V = [\\,|\\mathbf{d}_{eg}|^2 - 3|\\mathbf{d}_{eg}\\cdot\\hat{\\mathbf{r}}|^2]/r^3$把二者耦合起来，对全同原子来说它是实的，其中$\\mathbf{d}_{eg} = \\langle e|\\mathbf{d}|g\\rangle$。本征态是对称和反对称的$|\\pm\\rangle = (|e,g\\rangle \\pm |g,e\\rangle)/\\sqrt{2}$，其中$$E_\\pm = \\hbar\\omega \\pm \\frac{C_3}{r^3}, \\qquad C_3 = |\\mathbf{d}_{eg}|^2(1 - 3\\cos^2\\theta)$$，这里偶极沿一条与$\\mathbf{r}$成角$\\theta$的固定轴（$C_3 = -2|\\mathbf{d}_{eg}|^2$沿$\\mathbf{r}$，$+|\\mathbf{d}_{eg}|^2$垂直于它）。一条曲线是吸引的，另一条是排斥的，二者都只按$1/r^3$下降：在长程上，全同原子之间的激发跳跃远胜于两个基态原子的$1/r^6$范德瓦耳斯相互作用。"
+   }
+  },
+  {
+   "id": "hw6-1c",
+   "source_id": "hw6.1c",
+   "source_number": "Problem Set 6, Problem 1(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的原子$a$和$b$是原子 1 和 2，间距$R$是$r$，跃迁能量$E_i^{(a)} - E_g^{(a)}$和$E_i^{(b)} - E_g^{(b)}$是$\\hbar\\omega_1$和$\\hbar\\omega_2$，态$|i_ag_b\\rangle$、$|g_ai_b\\rangle$是$|e,g\\rangle$、$|g,e\\rangle$，MIT 的衰变率$\\Gamma$是卢金的$\\gamma$；重复了 (b) 问的设定，使这一小问可以独立成题。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "eq-11-40",
+   "prompt": "考虑一个原子被激发、另一个原子处于基态的情形。为简单起见，把每个原子建模为二能级系统，有一个基态$|g\\rangle$和一个激发态$|e\\rangle$，两个原子通过式 (11.40) 的偶极-偶极项$\\hat{V}_d(r)$相互作用，间距为$r$。对于两个全同原子，一个被激发而一个处于基态，长程相互作用势曲线为$\\hbar\\omega \\pm C_3/r^3$。原子的自发衰变率$\\gamma$与其长程相互作用系数$C_3$之间是什么关系？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "二者由同一个偶极矩阵元决定。在式 (11.40) 的高斯单位制中，自发发射率为$\\gamma = \\frac{4\\omega^3|\\mathbf{d}_{eg}|^2}{3\\hbar c^3}$（卢金的$\\omega^3|\\mu|^2/3\\pi\\epsilon_0\\hbar c^3$，取$1/4\\pi\\epsilon_0 \\to 1$），所以$$|\\mathbf{d}_{eg}|^2 = \\frac{3}{4}\\hbar\\gamma\\left(\\frac{c}{\\omega}\\right)^3 = \\frac{3}{4}\\hbar\\gamma\\left(\\frac{\\lambda}{2\\pi}\\right)^3, \\qquad C_3 = \\frac{3}{4}\\hbar\\gamma\\left(\\frac{\\lambda}{2\\pi}\\right)^3(1 - 3\\cos^2\\theta).$$相互作用系数为$C_3 \\sim \\hbar\\gamma(\\lambda/2\\pi)^3$：强谱线产生强的共振相互作用，而在$r \\sim \\lambda/2\\pi$处，能量移位的量级就是固有线宽$\\hbar\\gamma$。"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "hw5-2a",
+   "concept": "van-der-waals-potential"
+  },
+  {
+   "exercise": "hw5-2a",
+   "concept": "dipole-matrix-element"
+  },
+  {
+   "exercise": "hw5-2b",
+   "concept": "van-der-waals-potential"
+  },
+  {
+   "exercise": "hw5-2b",
+   "concept": "dipole-matrix-element"
+  },
+  {
+   "exercise": "hw5-2c",
+   "concept": "van-der-waals-potential"
+  },
+  {
+   "exercise": "hw5-2c",
+   "concept": "dipole-matrix-element"
+  },
+  {
+   "exercise": "hw6-1a",
+   "concept": "van-der-waals-potential"
+  },
+  {
+   "exercise": "hw6-1a",
+   "concept": "dipole-matrix-element"
+  },
+  {
+   "exercise": "hw6-1b",
+   "concept": "van-der-waals-potential"
+  },
+  {
+   "exercise": "hw6-1b",
+   "concept": "dipole-matrix-element"
+  },
+  {
+   "exercise": "hw6-1c",
+   "concept": "van-der-waals-potential"
+  },
+  {
+   "exercise": "hw6-1c",
+   "concept": "spontaneous-emission-rate"
+  }
+ ],
+ "referents": [
+  {
+   "id": "open-channel",
+   "label": "开通道",
+   "figures": [
+    "sim-feshbach"
+   ]
+  },
+  {
+   "id": "closed-channel",
+   "label": "闭通道",
+   "figures": [
+    "sim-feshbach"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-spacing",
+   "kind": "correction",
+   "html": "书中把原子间距印为$\\kndens \\sim 1nm$。在液体密度$\\kndens \\sim 10^{21}\\ \\mathrm{cm}^{-3}$下，间距是$\\kndens^{-1/3} \\sim 1\\,\\mathrm{nm}$。"
+  },
+  {
+   "id": "c-identical-angle",
+   "kind": "correction",
+   "html": "书中印的是$\\pi + \\theta$。交换两个全同粒子会使相对位置$\\mathbf{r}$变为$-\\mathbf{r}$，所以散射角$\\theta$变为$\\pi - \\theta$。"
+  },
+  {
+   "id": "c-eq-11-81",
+   "kind": "correction",
+   "html": "书中印的是$f_k(\\pi + \\theta)$。交换后的振幅是$f_k(\\pi - \\theta)$，它是交换后的入射波$e^{-i\\kkmag z}$的配对项。"
+  },
+  {
+   "id": "c-eq-11-83",
+   "kind": "correction",
+   "html": "第一行把入射波印成了$e^{iK_zx_0}$。入射波沿$z$传播，其形式为$e^{iKz_0}$，如第二行所示。"
+  },
+  {
+   "id": "c-eq-11-86",
+   "kind": "correction",
+   "html": "书中印的是正指数。对于$\\kascat > 0$，波在平板中变慢，$\\delta K = -4\\pi\\kascat\\kndens/K$，正如<a href=\"#eq-11-87\">(11.87)</a>所说，平板留下的相位是$A \\approx e^{i\\,\\delta K\\,L} = e^{-i4\\pi\\kascat\\kndens L/K}$。"
+  },
+  {
+   "id": "c-eq-11-88",
+   "kind": "correction",
+   "html": "按书中的印法，动能在平板中升高。用<a href=\"#eq-11-87\">(11.87)</a>的$\\delta K$，它是下降的，$\\delta(\\hbar^2K^2/2\\km) = \\hbar^2K\\,\\delta K/\\km = -4\\pi\\hbar^2\\kascat\\kndens/\\km$；正的$4\\pi\\hbar^2\\kascat\\kndens/\\km$是粒子在平板中获得的平均场势能，即下一句所说的能量代价。"
+  },
+  {
+   "id": "c-eq-11-116",
+   "kind": "correction",
+   "html": "书中的态没有归一化。归一化后为$|n_1, n_2\\ldots\\rangle = \\prod_i\\frac{(\\hat{b}_i^\\dagger)^{n_i}}{\\sqrt{n_i!}}|\\mathrm{vac}\\rangle$，如<a href=\"#eq-11-117\">(11.117)</a>所要求。"
+  },
+  {
+   "id": "c-eq-11-127",
+   "kind": "correction",
+   "html": "书中的态没有归一化。归一化后为$|\\Psi\\rangle = \\frac{(\\hat{b}_0^\\dagger)^N}{\\sqrt{N!}}|\\mathrm{vac}\\rangle$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "born-amplitude",
+   "what": "玻恩近似下的散射振幅",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.2",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi_k(\\mathbf{r}) \\approx e^{i\\kkmag z}",
+       "src": "(11.52)"
+      },
+      {
+       "text": "入射波$\\kk$沿$\\hat{z}$方向，所以$\\kkmag z = \\kk\\cdot\\mathbf{r}$。",
+       "src": "11.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{\\kfk} = \\frac{-\\kmured}{2\\pi\\hbar^2}\\int d^3\\mathbf{r}'\\mk{e}{e^{-i\\kk'\\cdot\\mathbf{r}'}}\\mk{U}{U(\\mathbf{r}')}\\mk{p}{\\kpsi_k(\\mathbf{r}')}",
+      "src": "(11.51)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{f}{\\kfk} \\approx \\frac{-\\kmured}{2\\pi\\hbar^2}\\int d^3\\mathbf{r}'\\mk{e}{e^{-i\\kk'\\cdot\\mathbf{r}'}}\\mk{U}{U(\\mathbf{r}')}\\mk{p}{e^{i\\kkmag z'}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{f}{\\kfk} \\approx \\frac{-\\kmured}{2\\pi\\hbar^2}\\int d^3\\mathbf{r}'\\mk{e}{e^{-i\\kk'\\cdot\\mathbf{r}'}}\\mk{U}{U(\\mathbf{r}')}\\mk{p}{e^{i\\kk\\cdot\\mathbf{r}'}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{f}{\\kfk} \\approx \\frac{-\\kmured}{2\\pi\\hbar^2}\\int d^3\\mathbf{r}'\\mk{e}{e^{-i(\\kk'-\\kk)\\cdot\\mathbf{r}'}}\\mk{U}{U(\\mathbf{r}')}",
+       "uses": [],
+       "map": {
+        "p": "e"
+       }
+      }
+     ],
+     "num": "(11.53)"
+    }
+   ]
+  },
+  {
+   "id": "partial-wave-amplitude",
+   "what": "用相移表示的散射振幅",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.2",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "R_l^{(B)}(r) \\propto \\frac{(-1)^{l+1}e^{-i\\kkmag r} + e^{i\\kkmag r+2i\\kdeltal}}{r}",
+       "src": "(11.60)"
+      },
+      {
+       "tex": "e^{i\\kkmag z} \\approx \\sum_{l=0}^{\\infty}\\frac{2l+1}{2i\\kkmag}P_l(\\cos\\theta)\\frac{1}{r}\\left((-1)^{l+1}e^{-i\\kkmag r} + e^{i\\kkmag r}\\right)",
+       "src": "(11.47)"
+      },
+      {
+       "text": "只有入射平面波含有入射波$e^{-i\\kkmag r}$；散射波是出射的。",
+       "src": "(11.45)"
+      },
+      {
+       "tex": "\\lim_{r\\to\\infty}\\kpsi_k(\\mathbf{r}) = e^{i\\kkmag z} + \\kfk\\frac{e^{i\\kkmag r}}{r}",
+       "src": "(11.45)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kpsi} = \\mk{R}{\\sum_{l=0}^{\\infty}A_lP_l(\\cos\\theta)R_l(r)}",
+      "src": "(11.55)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kpsi} \\approx \\mk{R}{\\sum_{l=0}^{\\infty}B_lP_l(\\cos\\theta)\\frac{(-1)^{l+1}e^{-i\\kkmag r} + e^{i\\kkmag r+2i\\kdeltal}}{r}}",
+       "uses": [
+        0
+       ],
+       "cap": "远离散射体处，$kr \\gg 1$，每个径向函数取 (11.60) 的形式；比例常量归入新的系数$B_l$。"
+      },
+      {
+       "tex": "\\mk{L}{\\kpsi} \\approx \\mk{R}{\\sum_{l=0}^{\\infty}\\frac{2l+1}{2i\\kkmag}P_l(\\cos\\theta)\\frac{(-1)^{l+1}e^{-i\\kkmag r} + e^{i\\kkmag r+2i\\kdeltal}}{r}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "$\\psi$的入射波$e^{-ikr}$只来自平面波，所以它们的系数与 (11.47) 的系数逐项匹配：$B_l = (2l+1)/2ik$。"
+      },
+      {
+       "tex": "\\mk{L}{\\kpsi - e^{i\\kkmag z}} \\approx \\mk{R}{\\sum_{l=0}^{\\infty}\\frac{2l+1}{2i\\kkmag}P_l(\\cos\\theta)\\left(e^{2i\\kdeltal} - 1\\right)\\frac{e^{i\\kkmag r}}{r}}",
+       "uses": [
+        1
+       ],
+       "cap": "减去平面波 (11.47)：入射波相消，而$e^{ikr + 2i\\delta_l} - e^{ikr} = (e^{2i\\delta_l} - 1)e^{ikr}$。"
+      },
+      {
+       "tex": "\\mk{L}{\\kfk\\frac{e^{i\\kkmag r}}{r}} = \\mk{R}{\\sum_{l=0}^{\\infty}\\frac{2l+1}{2i\\kkmag}P_l(\\cos\\theta)\\left(e^{2i\\kdeltal} - 1\\right)\\frac{e^{i\\kkmag r}}{r}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\kfk} = \\mk{R}{\\sum_{l=0}^{\\infty}P_l(\\cos\\theta)\\frac{2l+1}{2i\\kkmag}\\left(e^{2i\\kdeltal} - 1\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(11.62)"
+    }
+   ]
+  },
+  {
+   "id": "partial-wave-ultracold",
+   "what": "超冷极限下的分波振幅",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.2",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "在超冷极限$\\kkmag\\krzero \\ll 1$下，相移$\\kdeltal$很小。",
+       "src": "11.4.2"
+      },
+      {
+       "tex": "\\kdeltal \\approx c(\\krzero\\kkmag)^{2l+1}",
+       "src": "11.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kfk} = \\mk{R}{\\sum_{l=0}^{\\infty}P_l(\\cos\\theta)\\frac{2l+1}{2i\\kkmag}\\left(e^{2i\\kdeltal} - 1\\right)}",
+      "src": "(11.62)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{f_l} = \\mk{R}{\\frac{e^{2i\\kdeltal} - 1}{2i\\kkmag}}",
+       "uses": [],
+       "cap": "分波$l$的振幅$f_l$，是求和式中去掉因子$(2l+1)P_l(\\cos\\theta)$后的那一项。"
+      },
+      {
+       "tex": "\\mk{L}{f_l} \\approx \\mk{R}{\\frac{\\kdeltal}{\\kkmag}}",
+       "uses": [
+        0
+       ],
+       "cap": "对于小的$\\delta_l$，$e^{2i\\delta_l} - 1 \\approx 2i\\delta_l$。"
+      },
+      {
+       "tex": "\\mk{L}{f_l} \\approx \\mk{R}{c\\krzero(\\krzero\\kkmag)^{2l}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(11.63)"
+    }
+   ]
+  },
+  {
+   "id": "s-wave-amplitude",
+   "what": "s 波相移与散射振幅",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.3",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "s 波散射就是分波$l = 0$。",
+       "src": "11.4.3"
+      },
+      {
+       "text": "双阶乘有$1!! = 1$和$(-1)!! = 1$。",
+       "src": "11.4.2"
+      },
+      {
+       "tex": "\\kascat = -\\frac{c_2}{c_1}",
+       "src": "(11.65)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\tan\\kdeltal} = \\mk{c}{\\frac{c_2}{c_1}}\\mk{k}{\\frac{\\kkmag^{2l+1}}{(2l-1)!!(2l+1)!!}}",
+      "src": "(11.61)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\tan\\delta_0} = \\mk{c}{\\frac{c_2}{c_1}}\\mk{k}{\\frac{\\kkmag}{(-1)!!\\,1!!}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{t}{\\tan\\delta_0} = \\mk{c}{\\frac{c_2}{c_1}}\\mk{k}{\\kkmag}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{t}{\\tan\\delta_0} = \\mk{c}{-}\\mk{k}{\\kkmag}\\mk{a}{\\kascat}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "c": [
+         "c",
+         "a"
+        ]
+       }
+      }
+     ],
+     "num": "(11.66)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "s 波散射就是分波$l = 0$。",
+       "src": "11.4.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kfk} = \\mk{R}{\\sum_{l=0}^{\\infty}P_l(\\cos\\theta)\\frac{2l+1}{2i\\kkmag}\\left(e^{2i\\kdeltal} - 1\\right)}",
+      "src": "(11.62)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{f_0} = \\mk{R}{\\frac{e^{2i\\delta_0} - 1}{2i\\kkmag}}",
+       "uses": [
+        1
+       ],
+       "cap": "对于$l = 0$，因子$(2l+1)P_0(\\cos\\theta)$为 1，所以求和式中的 s 波项是$f_0$。"
+      },
+      {
+       "tex": "\\mk{L}{f_0} = \\mk{R}{\\frac{1}{2i\\kkmag}\\,\\frac{2i\\tan\\delta_0}{1 - i\\tan\\delta_0}}",
+       "uses": [],
+       "cap": "$e^{2i\\delta} = \\frac{1 + i\\tan\\delta}{1 - i\\tan\\delta}$，因为$\\frac{\\cos\\delta + i\\sin\\delta}{\\cos\\delta - i\\sin\\delta} = \\frac{e^{i\\delta}}{e^{-i\\delta}}$；所以$e^{2i\\delta} - 1 = \\frac{2i\\tan\\delta}{1 - i\\tan\\delta}$。"
+      },
+      {
+       "tex": "\\mk{L}{f_0} = \\mk{R}{\\frac{\\tan\\delta_0}{\\kkmag(1 - i\\tan\\delta_0)}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{f_0} = \\mk{R}{\\frac{-\\kkmag\\kascat}{\\kkmag(1 + i\\kkmag\\kascat)}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{f_0} = \\mk{R}{-\\frac{\\kascat}{1+i\\kkmag\\kascat}}",
+       "uses": []
+      }
+     ],
+     "num": "(11.67)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{f_0} = \\mk{R}{-\\frac{\\kascat}{1+i\\kkmag\\kascat}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\lim_{\\kkmag\\to 0}f_0} = \\mk{R}{-\\kascat}",
+       "uses": [],
+       "cap": "当$k \\to 0$时，分母中的项$ika$消失。"
+      }
+     ],
+     "num": "(11.68)"
+    }
+   ]
+  },
+  {
+   "id": "mean-field-energy",
+   "what": "平均场能量与化学势",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.3",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kUr = \\frac{4\\pi\\hbar^2\\kascat}{2\\kmured}\\delta^3(\\mathbf{r})",
+       "src": "(11.78)"
+      },
+      {
+       "text": "在零温且无相互作用时，所有原子都堆积到单粒子基态中。",
+       "src": "11.4.7"
+      },
+      {
+       "text": "在体积为$\\kV$的均匀气体中，单粒子基态是$\\kk = 0$的波，$1/\\sqrt{\\kV}$。",
+       "src": "(11.119)"
+      },
+      {
+       "tex": "\\kmured = \\frac{m_1m_2}{m_1 + m_2}",
+       "src": "11.4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\Delta E_0} = \\mk{R}{\\langle\\phi_0|\\sum_{\\langle i,j\\rangle}U(r_{ij})|\\phi_0\\rangle}",
+      "src": "(11.79)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\Delta E_0} = \\mk{R}{\\sum_{\\langle i,j\\rangle}\\frac{4\\pi\\hbar^2\\kascat}{2\\kmured}\\langle\\phi_0|\\delta^3(\\mathbf{r}_{ij})|\\phi_0\\rangle}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\Delta E_0} = \\mk{R}{\\sum_{\\langle i,j\\rangle}\\frac{4\\pi\\hbar^2\\kascat}{2\\kmured}\\frac{1}{\\kV}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "每个原子以密度$|1/\\sqrt{V}|^2 = 1/V$分布，所以$\\int d^3\\mathbf{r}_i\\,d^3\\mathbf{r}_j\\,\\frac{1}{V^2}\\delta^3(\\mathbf{r}_i - \\mathbf{r}_j) = \\frac{1}{V}$。"
+      },
+      {
+       "tex": "\\mk{E}{\\Delta E_0} = \\mk{R}{\\frac{N(N-1)}{2}\\frac{1}{\\kV}\\frac{4\\pi\\hbar^2\\kascat}{2\\kmured}}",
+       "uses": [],
+       "cap": "原子的$N(N-1)/2$对中，每一对给出相同的项。"
+      },
+      {
+       "tex": "\\mk{E}{\\Delta E_0} = \\mk{R}{\\frac{N(N-1)}{2}\\frac{1}{\\kV}\\frac{4\\pi\\hbar^2\\kascat}{\\km}}",
+       "uses": [
+        3
+       ],
+       "cap": "对于质量同为$m$的两个原子，$\\mu = m/2$。"
+      }
+     ],
+     "num": "(11.79)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "$\\kk = 0$态不带动能，所以基态能量就是相互作用能，$E_0 = \\Delta E_0$。",
+       "src": "(11.44), (11.119)"
+      },
+      {
+       "text": "气体含有许多原子，$N \\gg 1$。",
+       "src": "11.4.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{\\kmuchem} = \\mk{R}{\\frac{\\partial E_0}{\\partial N}}",
+      "src": "(11.80)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\kmuchem} = \\mk{R}{\\frac{\\partial \\Delta E_0}{\\partial N}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{m}{\\kmuchem} = \\mk{R}{\\frac{\\partial}{\\partial N}\\left(\\frac{N(N-1)}{2}\\right)\\frac{4\\pi\\hbar^2\\kascat}{\\km\\kV}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{m}{\\kmuchem} = \\mk{R}{\\left(N - \\frac{1}{2}\\right)\\frac{4\\pi\\hbar^2\\kascat}{\\km\\kV}}",
+       "uses": [],
+       "cap": "$\\frac{d}{dN}\\frac{N^2 - N}{2} = N - \\frac{1}{2}$."
+      },
+      {
+       "tex": "\\mk{m}{\\kmuchem} \\approx \\mk{R}{\\frac{4\\pi\\hbar^2\\kascat}{\\km}\\frac{N}{\\kV}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(11.80)"
+    }
+   ]
+  },
+  {
+   "id": "identical-particle-cross-section",
+   "what": "全同粒子的截面",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.4",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi_k(r) = \\frac{e^{i\\kkmag z} + \\epsilon e^{-i\\kkmag z}}{\\sqrt{2}} + \\frac{\\kfk + \\epsilon f_k(\\pi - \\theta)}{\\sqrt{2}}\\frac{e^{i\\kkmag r}}{r}",
+       "src": "(11.81)"
+      },
+      {
+       "text": "碰撞是弹性的，$v_\\mathrm{final} = v_\\mathrm{initial}$。",
+       "src": "11.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\frac{d\\ksigmasc}{d\\Omega}} = \\mk{f}{|\\kfk|^2}\\mk{v}{\\frac{v_\\mathrm{final}}{v_\\mathrm{initial}}}",
+      "src": "(11.49)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\frac{d\\ksigmasc}{d\\Omega}} = \\mk{f}{\\left|\\frac{\\kfk + \\epsilon f_k(\\pi - \\theta)}{\\sqrt{2}}\\right|^2}\\mk{v}{\\frac{v_\\mathrm{final}}{v_\\mathrm{initial}}}",
+       "uses": [
+        0
+       ],
+       "cap": "(11.81) 中出射波$e^{ikr}/r$的振幅取代$f_k(\\theta)$。"
+      },
+      {
+       "tex": "\\mk{s}{\\frac{d\\ksigmasc}{d\\Omega}} = \\mk{f}{\\left|\\frac{\\kfk + \\epsilon f_k(\\pi - \\theta)}{\\sqrt{2}}\\right|^2}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(11.82)",
+     "note": "书中在 (11.81) 和 (11.82) 中印的是$f_k(\\pi + \\theta)$。交换两个粒子使相对位置$\\mathbf{r}$变为$-\\mathbf{r}$，使角$\\theta$变为$\\pi - \\theta$，所以交换后的振幅是$f_k(\\pi - \\theta)$。"
+    }
+   ]
+  },
+  {
+   "id": "weakly-bound-state",
+   "what": "大散射长度的弱束缚态",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.6",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "在势的力程之外，$r > \\krzero$，势的作用可以忽略。",
+       "src": "11.4.2"
+      },
+      {
+       "text": "s 波散射就是分波$l = 0$。",
+       "src": "11.4.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\frac{d^2}{dr^2}R_l(r) + \\frac{2}{r}\\frac{d}{dr}R_l(r)}\\mk{l}{ - \\frac{l(l+1)}{r^2}R_l(r)}\\mk{U}{ - \\frac{2\\kmured}{\\hbar^2}\\kUr R_l(r)} = \\mk{k}{-\\kkmag^2R_l(r)}",
+      "src": "(11.57)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\frac{d^2}{dr^2}R_0(r) + \\frac{2}{r}\\frac{d}{dr}R_0(r)} = \\mk{k}{-\\kkmag^2R_0(r)}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\frac{1}{r}\\frac{d^2}{dr^2}\\big(rR_0(r)\\big)} = \\mk{k}{-\\kkmag^2R_0(r)}",
+       "uses": [],
+       "cap": "$\\frac{d^2}{dr^2}(rR) = r\\frac{d^2R}{dr^2} + 2\\frac{dR}{dr}$."
+      },
+      {
+       "tex": "\\mk{d}{\\frac{d^2}{dr^2}\\big(rR_0(r)\\big)} = \\mk{k}{-\\kkmag^2\\,rR_0(r)}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "束缚态的能量为负，$\\kkmag^2 < 0$，且波函数在$r \\to \\infty$时趋于零。",
+       "src": "11.4.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\frac{d^2}{dr^2}\\big(rR_0(r)\\big)} = \\mk{k}{-\\kkmag^2\\,rR_0(r)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{rR_0(r)} \\propto \\mk{k}{e^{-\\sqrt{-\\kkmag^2}\\,r}}",
+       "uses": [
+        1
+       ],
+       "cap": "当$k^2 < 0$时，解为$e^{\\pm\\sqrt{-k^2}\\,r}$；只有衰减的那个在大的$r$处趋于零。"
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "R_0^{(B)}(r) \\propto 1 - \\frac{\\kascat}{r}",
+       "src": "(11.64)"
+      },
+      {
+       "text": "对于大的正$\\kascat \\gg \\krzero$，存在区域$\\krzero < r \\ll \\kascat$，在其中两种形式都成立。",
+       "src": "11.4.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{rR_0(r)} \\propto \\mk{k}{e^{-\\sqrt{-\\kkmag^2}\\,r}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{rR_0(r)} \\propto \\mk{k}{1 - \\sqrt{-\\kkmag^2}\\,r}",
+       "uses": [],
+       "cap": "对于$\\sqrt{-k^2}\\,r \\ll 1$，$e^{-x} \\approx 1 - x$。"
+      },
+      {
+       "tex": "\\mk{d}{rR_0(r)} \\propto \\mk{k}{r - \\frac{1}{\\sqrt{-\\kkmag^2}}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{k}{\\frac{1}{\\sqrt{-\\kkmag^2}}} = \\mk{a}{\\kascat}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "乘以$r$，(11.64) 变为$rR_0 \\propto r - a$；在两种形式都成立之处，两条直线在同一个$r$处过零。"
+      },
+      {
+       "tex": "\\mk{k}{\\kkmag^2} = \\mk{a}{-\\frac{1}{\\kascat^2}}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      },
+      {
+       "text": "束缚态是归一化的，$\\int |R_0^{(0)}|^2 d^3\\mathbf{r} = 1$。"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{rR_0(r)} \\propto \\mk{k}{e^{-\\sqrt{-\\kkmag^2}\\,r}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{R_0^{(0)}(r)} = \\mk{C}{C}\\mk{k}{\\frac{e^{-\\sqrt{-\\kkmag^2}\\,r}}{r}}",
+       "uses": [],
+       "cap": "把比例常量记为$C$。"
+      },
+      {
+       "tex": "\\mk{d}{R_0^{(0)}(r)} = \\mk{C}{C}\\mk{k}{\\frac{e^{-r/\\kascat}}{r}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{d}{R_0^{(0)}(r)} = \\mk{C}{\\frac{1}{\\sqrt{2\\pi\\kascat}}}\\mk{k}{\\frac{e^{-r/\\kascat}}{r}}",
+       "uses": [
+        2
+       ],
+       "cap": "$\\int|R|^2d^3\\mathbf{r} = 4\\pi C^2\\int_0^\\infty e^{-2r/a}dr = 2\\pi a\\,C^2$，当$C = 1/\\sqrt{2\\pi a}$时它为 1。"
+      }
+     ],
+     "num": "(11.91)",
+     "note": "书中印的是$R_0^{(0)}(r) = e^{-r/\\kascat}/\\sqrt{2\\pi\\kascat r}$，其中$r$在根号下；归一化的态中$r$在根号外。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{E_0} = \\mk{k}{\\frac{\\hbar^2\\kkmag^2}{2\\kmured}}",
+      "src": "(11.44)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{E_0} = \\mk{k}{-\\frac{\\hbar^2}{2\\kmured\\kascat^2}}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(11.92)"
+    }
+   ]
+  },
+  {
+   "id": "closed-channel-coupling",
+   "what": "闭通道对开通道的影响",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.6",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\psi_c = \\sum_{m=1}^{\\infty}\\alpha_m\\psi_c^m",
+       "src": "(11.96)"
+      },
+      {
+       "tex": "\\left(\\hat{\\xi} + U_c(r) - E_m\\right)\\psi_c^m = 0",
+       "src": "(11.95)"
+      },
+      {
+       "text": "$\\psi_c^m$是规范正交的，$\\langle\\psi_c^n|\\psi_c^m\\rangle = \\delta_{nm}$。",
+       "src": "11.4.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\left(\\hat{\\xi} + U_c(r) - E\\right)\\psi_c} + \\mk{g}{g\\psi_o} = 0",
+      "src": "(11.94)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\sum_m\\alpha_m\\left(\\hat{\\xi} + U_c(r) - E\\right)\\psi_c^m} + \\mk{g}{g\\psi_o} = 0",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\sum_m\\alpha_m\\left(E_m - E\\right)\\psi_c^m} + \\mk{g}{g\\psi_o} = 0",
+       "uses": [
+        1
+       ],
+       "cap": "由 (11.95)，$(\\hat{\\xi} + U_c)\\psi_c^m = E_m\\psi_c^m$。"
+      },
+      {
+       "tex": "\\mk{L}{\\alpha_n\\left(E_n - E\\right)} + \\mk{g}{\\langle\\psi_c^n|g|\\psi_o\\rangle} = 0",
+       "uses": [
+        2
+       ],
+       "cap": "与$\\psi_c^n$取内积。"
+      },
+      {
+       "tex": "\\mk{L}{\\alpha_n} = \\mk{g}{-\\frac{\\langle\\psi_c^n|g|\\psi_o\\rangle}{E_n - E}}",
+       "uses": []
+      }
+     ],
+     "num": "(11.97)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "在共振附近，只有一个系数$\\alpha_{res}$有可观的物理效应。",
+       "src": "11.4.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\psi_c} = \\mk{R}{\\sum_{m=1}^{\\infty}\\alpha_m\\psi_c^m}",
+      "src": "(11.96)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\psi_c(r)} \\approx \\mk{R}{\\alpha_{res}\\psi_c^{res}(r)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\psi_c(r)} \\approx \\mk{R}{-\\frac{\\langle\\psi_c^{res}|g|\\psi_o\\rangle}{E_{res} - E}\\psi_c^{res}(r)}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(11.98)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\left(\\hat{\\xi} + U_o(r) - E\\right)\\psi_o} + \\mk{g}{g\\psi_c} = 0",
+      "src": "(11.93)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\left(\\hat{\\xi} + U_o(r) - E\\right)\\psi_o} = \\mk{g}{-g\\psi_c}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\left(\\hat{\\xi} + U_o(r) - E\\right)\\psi_o(r)} = \\mk{g}{g(r)\\frac{\\langle\\psi_c^{res}|g|\\psi_o\\rangle}{E_{res} - E}\\psi_c^{res}(r)}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(11.99)",
+     "note": "书中说把这个表达式代入式 (11.94)；它应代入开通道方程，即式 (11.93)。"
+    }
+   ]
+  },
+  {
+   "id": "feshbach-scattering-length",
+   "what": "费希巴赫共振附近的散射长度",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.6",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\chi = 1 - \\frac{\\kabg}{r}",
+       "src": "(11.100)"
+      },
+      {
+       "tex": "\\eta = A\\left(1 - \\frac{b}{r}\\right)",
+       "src": "(11.102)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{o}{\\psi_o} = \\mk{a}{\\alpha\\chi} + \\mk{b}{\\beta\\eta}",
+      "src": "11.4.6",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{o}{\\psi_o} = \\mk{a}{\\alpha\\left(1 - \\frac{\\kabg}{r}\\right)} + \\mk{b}{\\beta A\\left(1 - \\frac{b}{r}\\right)}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{o}{\\psi_o} = \\mk{c}{(\\alpha + \\beta A)} - \\mk{r}{\\frac{\\alpha\\kabg + \\beta Ab}{r}}",
+       "uses": [],
+       "map": {
+        "a": [
+         "c",
+         "r"
+        ],
+        "b": [
+         "c",
+         "r"
+        ]
+       }
+      }
+     ],
+     "num": "(11.103)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "R_0^{(B)}(r) \\propto 1 - \\frac{\\kascat}{r}",
+       "src": "(11.64)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{o}{\\psi_o} = \\mk{c}{(\\alpha + \\beta A)} - \\mk{r}{\\frac{\\alpha\\kabg + \\beta Ab}{r}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{o}{\\psi_o} = \\mk{c}{(\\alpha + \\beta A)}\\mk{r}{\\left(1 - \\frac{\\alpha\\kabg + \\beta Ab}{\\alpha + \\beta A}\\,\\frac{1}{r}\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{s}{\\kascat} = \\mk{r}{\\frac{\\alpha\\kabg + \\beta Ab}{\\alpha + \\beta A}}",
+       "uses": [
+        1
+       ],
+       "cap": "散射长度是$1 - a/r$这一形式中的$a$，(11.64)。",
+       "map": {
+        "o": "s",
+        "c": "s"
+       }
+      },
+      {
+       "tex": "\\mk{s}{\\kascat} = \\mk{r}{\\kabg + A\\frac{b - \\kabg}{\\frac{\\alpha}{\\beta} + A}}",
+       "uses": []
+      }
+     ],
+     "num": "(11.104)"
+    },
+    {
+     "assumes": [
+      {
+       "text": "完整的解是叠加$\\psi_o = \\alpha\\chi + \\beta\\eta$。",
+       "src": "11.4.6"
+      },
+      {
+       "tex": "\\left(\\hat{\\xi} + U_o(r) - E\\right)\\chi = 0",
+       "src": "(11.100)"
+      },
+      {
+       "tex": "\\left(\\hat{\\xi} + U_o(r) - E\\right)\\eta = g(r)\\psi_c^{res}(r)",
+       "src": "(11.101)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\left(\\hat{\\xi} + U_o(r) - E\\right)\\psi_o(r)} = \\mk{g}{g(r)\\frac{\\langle\\psi_c^{res}|g|\\psi_o\\rangle}{E_{res} - E}\\psi_c^{res}(r)}",
+      "src": "(11.99)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\left(\\hat{\\xi} + U_o(r) - E\\right)(\\alpha\\chi + \\beta\\eta)} = \\mk{g}{g(r)\\frac{\\alpha\\langle\\psi_c^{res}|g|\\chi\\rangle + \\beta\\langle\\psi_c^{res}|g|\\eta\\rangle}{E_{res} - E}\\psi_c^{res}(r)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\beta g(r)\\psi_c^{res}(r)} = \\mk{g}{g(r)\\frac{\\alpha\\langle\\psi_c^{res}|g|\\chi\\rangle + \\beta\\langle\\psi_c^{res}|g|\\eta\\rangle}{E_{res} - E}\\psi_c^{res}(r)}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\beta(E_{res} - E)} = \\mk{g}{\\alpha\\langle\\psi_c^{res}|g|\\chi\\rangle + \\beta\\langle\\psi_c^{res}|g|\\eta\\rangle}",
+       "uses": [],
+       "cap": "两边都是$g\\psi_c^{res}$的倍数，所以这两个倍数相等。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\alpha}{\\beta}} = \\mk{g}{\\frac{E_{res} - E - \\langle\\psi_c^{res}|g|\\eta\\rangle}{\\langle\\psi_c^{res}|g|\\chi\\rangle}}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\kascat} = \\mk{r}{\\kabg + A\\frac{b - \\kabg}{\\frac{\\alpha}{\\beta} + A}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\kascat} = \\mk{r}{\\kabg + A\\frac{b - \\kabg}{\\frac{E_{res} - E - \\langle\\psi_c^{res}|g|\\eta\\rangle}{\\langle\\psi_c^{res}|g|\\chi\\rangle} + A}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kascat} = \\mk{r}{\\kabg + \\frac{A(b - \\kabg)\\langle\\psi_c^{res}|g|\\chi\\rangle}{E_{res} + \\langle\\psi_c^{res}|g|A\\chi - \\eta\\rangle - E}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{s}{\\kascat} = \\mk{r}{\\kabg\\left(1 + \\frac{\\overbrace{(A/\\kabg)(b - \\kabg)\\langle\\psi_c^{res}|g|\\chi\\rangle}^{\\kDeltaFesh}}{\\underbrace{E_{res} + \\langle\\psi_c^{res}|g|A\\chi - \\eta\\rangle}_{\\kEres} - E}\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(11.105)",
+     "note": "书中在分子中印的是$\\langle\\psi_c^{res}|g|\\eta\\rangle$。解出$\\alpha/\\beta$，那里应是齐次解的矩阵元，$\\langle\\psi_c^{res}|g|\\chi\\rangle$。"
+    }
+   ]
+  },
+  {
+   "id": "feshbach-binding-energy",
+   "what": "费希巴赫共振附近弱束缚能级的结合能",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.6",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kascat \\approx \\kabg\\left(1 + \\frac{\\kDeltaFesh}{\\kEres}\\right)",
+       "src": "(11.107)"
+      },
+      {
+       "text": "在共振附近散射长度发散，$|\\kDeltaFesh/\\kEres| \\gg 1$。",
+       "src": "11.4.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{E_0} = \\mk{k}{-\\frac{\\hbar^2}{2\\kmured\\kascat^2}}",
+      "src": "(11.92)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{|E_0|} = \\mk{k}{\\frac{\\hbar^2}{2\\kmured\\kascat^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{E}{|E_0|} \\approx \\mk{k}{\\frac{\\hbar^2}{2\\kmured(\\kabg\\kDeltaFesh/\\kEres)^2}}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{E}{|E_0|} \\approx \\mk{k}{\\frac{\\hbar^2}{2\\kmured}\\frac{(\\kEres)^2}{\\kabg^2\\kDeltaFesh^2}}",
+       "uses": []
+      }
+     ],
+     "num": "(11.109)"
+    }
+   ]
+  },
+  {
+   "id": "field-commutator",
+   "what": "物质场算符的对易式",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.7",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsihat = \\frac{1}{\\sqrt{\\kV}}\\sum_\\mathbf{k}e^{i\\kk\\cdot\\mathbf{r}}\\hat{b}_\\mathbf{k}",
+       "src": "(11.119)"
+      },
+      {
+       "tex": "[\\hat{b}_\\mathbf{k}, \\hat{b}_{\\mathbf{k}'}^\\dagger] = \\delta_{\\mathbf{k},\\mathbf{k}'}",
+       "src": "11.4.7"
+      },
+      {
+       "tex": "\\sum_\\mathbf{k} e^{i\\kk\\cdot(\\mathbf{r}-\\mathbf{r}')} = \\kV\\delta(\\mathbf{r} - \\mathbf{r}')",
+       "src": "11.4.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{[\\kpsihat, \\hat{\\psi}^\\dagger(\\mathbf{r}')]} = \\mk{R}{\\kpsihat\\hat{\\psi}^\\dagger(\\mathbf{r}') - \\hat{\\psi}^\\dagger(\\mathbf{r}')\\kpsihat}",
+      "src": "11.4.7",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{[\\kpsihat, \\hat{\\psi}^\\dagger(\\mathbf{r}')]} = \\mk{R}{\\frac{1}{\\kV}\\sum_{\\mathbf{k},\\mathbf{k}'}e^{i\\kk\\cdot\\mathbf{r}}e^{-i\\kk'\\cdot\\mathbf{r}'}[\\hat{b}_\\mathbf{k}, \\hat{b}_{\\mathbf{k}'}^\\dagger]}",
+       "uses": [
+        0
+       ],
+       "cap": "(11.119) 的伴随为$\\hat{\\psi}^\\dagger(\\mathbf{r}') = \\frac{1}{\\sqrt{V}}\\sum_{\\mathbf{k}'}e^{-i\\mathbf{k}'\\cdot\\mathbf{r}'}\\hat{b}_{\\mathbf{k}'}^\\dagger$。"
+      },
+      {
+       "tex": "\\mk{L}{[\\kpsihat, \\hat{\\psi}^\\dagger(\\mathbf{r}')]} = \\mk{R}{\\frac{1}{\\kV}\\sum_{\\mathbf{k}}e^{i\\kk\\cdot(\\mathbf{r}-\\mathbf{r}')}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{[\\kpsihat, \\hat{\\psi}^\\dagger(\\mathbf{r}')]} = \\mk{R}{\\delta(\\mathbf{r} - \\mathbf{r}')}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(11.120)"
+    }
+   ]
+  },
+  {
+   "id": "contact-hamiltonian",
+   "what": "含接触相互作用的哈密顿量",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.7",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "在冷的稀薄原子气体中，相互作用势可以用 s 波赝势代替。",
+       "src": "11.4.7"
+      },
+      {
+       "tex": "V_\\mathrm{int}(r) \\approx \\kUzero\\delta(r)",
+       "src": "(11.111)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH} = \\mk{o}{\\int d^3\\mathbf{r}\\ \\hat{\\psi}^\\dagger(\\mathbf{r})\\left(\\frac{\\kp^2}{2\\km} + \\kVtrap(\\mathbf{r})\\right)\\kpsihat} + \\mk{i}{\\frac{1}{2}\\int d^3\\mathbf{r}\\int d^3\\mathbf{r}'\\ \\hat{\\psi}^\\dagger(\\mathbf{r})\\hat{\\psi}^\\dagger(\\mathbf{r}')V_{int}(\\mathrm{r} - \\mathrm{r}')\\hat{\\psi}(\\mathbf{r}')\\kpsihat}",
+      "src": "(11.122), (11.123)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kH} = \\mk{o}{\\int d^3\\mathbf{r}\\ \\hat{\\psi}^\\dagger(\\mathbf{r})\\left(\\frac{\\kp^2}{2\\km} + \\kVtrap(\\mathbf{r})\\right)\\kpsihat} + \\mk{i}{\\frac{\\kUzero}{2}\\int d^3\\mathbf{r}\\int d^3\\mathbf{r}'\\ \\hat{\\psi}^\\dagger(\\mathbf{r})\\hat{\\psi}^\\dagger(\\mathbf{r}')\\delta(\\mathbf{r} - \\mathbf{r}')\\hat{\\psi}(\\mathbf{r}')\\kpsihat}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{H}{\\kH} = \\mk{o}{\\int d^3\\mathbf{r}\\ \\hat{\\psi}^\\dagger(\\mathbf{r})\\left(\\frac{\\kp^2}{2\\km} + \\kVtrap(\\mathbf{r})\\right)\\kpsihat} + \\mk{i}{\\frac{\\kUzero}{2}\\int d^3\\mathbf{r}\\ \\hat{\\psi}^\\dagger(\\mathbf{r})\\hat{\\psi}^\\dagger(\\mathbf{r})\\kpsihat\\kpsihat}",
+       "uses": [],
+       "cap": "在$\\mathbf{r}'$积分中，δ 函数取$\\mathbf{r}' = \\mathbf{r}$。"
+      },
+      {
+       "tex": "\\mk{H}{\\kH} = \\mk{o}{\\int d^3\\mathbf{r}\\ \\hat{\\psi}^\\dagger(\\mathbf{r})\\left(\\frac{\\kp^2}{2\\km} + \\kVtrap(\\mathbf{r}) + \\frac{\\kUzero}{2}\\hat{\\psi}^\\dagger(\\mathbf{r})\\kpsihat\\right)\\kpsihat}",
+       "uses": [],
+       "map": {
+        "i": "o"
+       }
+      }
+     ],
+     "num": "(11.124)"
+    }
+   ]
+  },
+  {
+   "id": "field-equation-of-motion",
+   "what": "物质场算符的运动方程",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.7",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = \\int d^3\\mathbf{r}\\ \\hat{\\psi}^\\dagger(\\mathbf{r})\\left(\\frac{\\kp^2}{2\\km} + \\kVtrap(\\mathbf{r}) + \\frac{\\kUzero}{2}\\hat{\\psi}^\\dagger(\\mathbf{r})\\kpsihat\\right)\\kpsihat",
+       "src": "(11.124)"
+      },
+      {
+       "tex": "[\\kpsihat, \\hat{\\psi}^\\dagger(\\mathbf{r}')] = \\delta(\\mathbf{r} - \\mathbf{r}')",
+       "src": "(11.120)"
+      },
+      {
+       "text": "动能在位置空间中的作用为$-\\hbar^2\\nabla^2/2m$。",
+       "src": "(11.44)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\frac{\\partial}{\\partial \\kt}\\hat{\\psi}} = \\mk{R}{[\\hat{\\psi}, \\kH]}",
+      "src": "(1.13)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\frac{\\partial}{\\partial \\kt}\\hat{\\psi}} = \\mk{K}{[\\hat{\\psi}, \\int d^3\\mathbf{r}'\\ \\hat{\\psi}^\\dagger(\\mathbf{r}')\\left(\\frac{\\kp^2}{2\\km} + \\kVtrap\\right)\\hat{\\psi}(\\mathbf{r}')]} + \\mk{I}{[\\hat{\\psi}, \\int d^3\\mathbf{r}'\\ \\frac{\\kUzero}{2}\\hat{\\psi}^\\dagger(\\mathbf{r}')\\hat{\\psi}^\\dagger(\\mathbf{r}')\\hat{\\psi}(\\mathbf{r}')\\hat{\\psi}(\\mathbf{r}')]}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "R": [
+         "K",
+         "I"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\frac{\\partial}{\\partial \\kt}\\hat{\\psi}} = \\mk{K}{\\left(\\frac{\\kp^2}{2\\km} + \\kVtrap\\right)\\hat{\\psi}} + \\mk{I}{[\\hat{\\psi}, \\int d^3\\mathbf{r}'\\ \\frac{\\kUzero}{2}\\hat{\\psi}^\\dagger(\\mathbf{r}')\\hat{\\psi}^\\dagger(\\mathbf{r}')\\hat{\\psi}(\\mathbf{r}')\\hat{\\psi}(\\mathbf{r}')]}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\hat{\\psi}(\\mathbf{r})$与湮没算符对易，所以$[\\hat{\\psi}(\\mathbf{r}), \\hat{\\psi}^\\dagger(\\mathbf{r}')\\hat{A}\\hat{\\psi}(\\mathbf{r}')] = \\delta(\\mathbf{r} - \\mathbf{r}')\\hat{A}\\hat{\\psi}(\\mathbf{r}')$；δ 函数完成$\\mathbf{r}'$积分。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\frac{\\partial}{\\partial \\kt}\\hat{\\psi}} = \\mk{K}{\\left(\\frac{\\kp^2}{2\\km} + \\kVtrap\\right)\\hat{\\psi}} + \\mk{I}{\\kUzero\\hat{\\psi}^\\dagger\\hat{\\psi}\\hat{\\psi}}",
+       "uses": [
+        1
+       ],
+       "cap": "由$[A, BC] = [A, B]C + B[A, C]$，$[\\hat{\\psi}(\\mathbf{r}), \\hat{\\psi}^\\dagger(\\mathbf{r}')^2] = 2\\delta(\\mathbf{r} - \\mathbf{r}')\\hat{\\psi}^\\dagger(\\mathbf{r}')$，且 2 与$\\frac{1}{2}$相消。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\frac{\\partial}{\\partial \\kt}\\hat{\\psi}} = \\mk{K}{\\left(-\\frac{\\hbar^2\\nabla^2}{2\\km} + \\kVtrap + \\kUzero\\hat{\\psi}^\\dagger\\hat{\\psi}\\right)\\hat{\\psi}}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "I": "K"
+       }
+      }
+     ],
+     "num": "(11.128)"
+    }
+   ]
+  },
+  {
+   "id": "gross-pitaevskii-equation",
+   "what": "格罗斯-皮塔耶夫斯基方程",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.7",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\hat{\\psi} = \\kpsiGP + \\delta\\hat{\\psi}",
+       "src": "(11.129)"
+      },
+      {
+       "tex": "\\langle\\delta\\hat{\\psi}^\\dagger\\delta\\hat{\\psi}\\rangle \\ll \\langle\\hat{\\psi}^\\dagger\\hat{\\psi}\\rangle",
+       "src": "(11.130)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\frac{\\partial}{\\partial \\kt}\\hat{\\psi}} = \\mk{K}{\\left(-\\frac{\\hbar^2\\nabla^2}{2\\km} + \\kVtrap + \\kUzero\\hat{\\psi}^\\dagger\\hat{\\psi}\\right)\\hat{\\psi}}",
+      "src": "(11.128)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\frac{\\partial\\kpsiGP}{\\partial \\kt}} = \\mk{K}{\\left(-\\frac{\\hbar^2\\nabla^2}{2\\km} + \\kVtrap + \\kUzero|\\kpsiGP|^2\\right)\\kpsiGP}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "涨落$\\delta\\hat{\\psi}$很小时，场算符用其平均值$\\psi$代替，$\\hat{\\psi}^\\dagger\\hat{\\psi}$用$|\\psi|^2$代替。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\frac{\\partial\\kpsiGP}{\\partial \\kt}} = \\mk{k}{-\\frac{\\hbar^2}{2\\km}\\nabla^2\\kpsiGP} + \\mk{v}{\\kVtrap\\kpsiGP} + \\mk{u}{\\kUzero|\\kpsiGP|^2\\kpsiGP}",
+       "uses": [],
+       "map": {
+        "K": [
+         "k",
+         "v",
+         "u"
+        ]
+       }
+      }
+     ],
+     "num": "(11.131)"
+    }
+   ]
+  },
+  {
+   "id": "thomas-fermi-condensate",
+   "what": "谐振阱中的托马斯-费米凝聚体",
+   "source": "现代原子与光学物理 II，11.4 原子间相互作用，11.4.7",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "当原子之间的相互作用很强且为排斥性的，$\\kUzero > 0$时，可以忽略动能项。",
+       "src": "11.4.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{\\kmuchem\\tilde{\\psi}} = \\mk{R}{\\left(-\\frac{\\hbar^2}{2\\km}\\nabla^2 + \\kVr + \\kUzero|\\tilde{\\psi}|^2\\right)\\tilde{\\psi}}",
+      "src": "(11.134)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\kmuchem\\tilde{\\psi}} = \\mk{R}{\\left(\\kVr + \\kUzero|\\tilde{\\psi}|^2\\right)\\tilde{\\psi}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{m}{\\kmuchem} = \\mk{R}{\\kVr + \\kUzero|\\tilde{\\psi}|^2}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{R}{|\\tilde{\\psi}|^2} = \\mk{m}{\\left\\{\\begin{array}{cc} \\frac{\\kmuchem - \\kVr}{\\kUzero} & \\text{当 r 满足 } \\kVr < \\kmuchem \\\\ 0 & \\text{当 r 更大时.} \\end{array}\\right.}",
+       "uses": [],
+       "cap": "密度不能为负，所以在$V(r) > \\mu$之处凝聚体不存在。"
+      }
+     ],
+     "num": "(11.136)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kpsiGP = \\tilde{\\psi}e^{-i\\kmuchem \\kt/\\hbar}",
+       "src": "(11.133)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{N}{N} = \\mk{I}{\\int d^3\\mathbf{r}|\\kpsiGP|^2}",
+      "src": "(11.132)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{N}{N} = \\mk{I}{\\int d^3\\mathbf{r}|\\tilde{\\psi}|^2}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{N}{N} = \\mk{I}{\\int\\frac{\\kmuchem - \\kVr}{\\kUzero}d^3\\mathbf{r}}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(11.137)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kVr = \\frac{\\km}{2}\\komegat^2r^2",
+       "src": "(10.31)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{V}{V(\\bar{a})} = \\mk{m}{\\kmuchem}",
+      "uses": [
+       0
+      ],
+      "why": "(11.136) 的密度在半径$\\bar{a}$处降为零，那里$V(\\bar{a}) = \\mu$。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{V}{\\frac{\\km}{2}\\komegat^2\\bar{a}^2} = \\mk{m}{\\kmuchem}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\bar{a}^2} = \\mk{m}{\\frac{2\\kmuchem}{\\km\\komegat^2}}",
+       "uses": [],
+       "map": {
+        "V": [
+         "a",
+         "m"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\kVr = \\frac{\\km}{2}\\komegat^2r^2",
+       "src": "(10.31)"
+      },
+      {
+       "tex": "\\kat^2 = \\frac{\\hbar}{\\km\\komegat}",
+       "src": "(11.126)"
+      },
+      {
+       "tex": "\\kUzero = \\frac{4\\pi\\hbar^2\\kascat}{\\km}",
+       "src": "(11.111)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{N}{N} = \\mk{I}{\\int\\frac{\\kmuchem - \\kVr}{\\kUzero}d^3\\mathbf{r}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{N}{N} = \\mk{I}{\\frac{4\\pi}{\\kUzero}\\int_0^{\\bar{a}}\\left(\\kmuchem - \\frac{\\km}{2}\\komegat^2r^2\\right)r^2dr}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "凝聚体充满直到$\\bar{a}$的球，且$d^3\\mathbf{r} = 4\\pi r^2dr$。"
+      },
+      {
+       "tex": "\\mk{N}{N} = \\mk{I}{\\frac{4\\pi}{\\kUzero}\\left(\\frac{\\kmuchem\\bar{a}^3}{3} - \\frac{\\km\\komegat^2\\bar{a}^5}{10}\\right)}",
+       "uses": [],
+       "cap": "$\\int_0^{\\bar a}r^2dr = \\bar{a}^3/3$和$\\int_0^{\\bar a}r^4dr = \\bar{a}^5/5$。"
+      },
+      {
+       "tex": "\\mk{N}{N} = \\mk{I}{\\frac{8\\pi}{15}\\frac{\\kmuchem\\bar{a}^3}{\\kUzero}}",
+       "uses": [
+        1
+       ],
+       "cap": "$m\\omega_t^2\\bar{a}^2 = 2\\mu$，所以第二项是$\\mu\\bar{a}^3/5$。"
+      },
+      {
+       "tex": "\\mk{N}{N} = \\mk{I}{\\frac{8\\pi}{15}\\frac{\\kmuchem\\kat^3}{\\kUzero}\\left(\\frac{2\\kmuchem}{\\hbar\\komegat}\\right)^{3/2}}",
+       "uses": [
+        1,
+        3
+       ],
+       "cap": "$\\bar{a}^2 = 2\\mu/m\\omega_t^2 = a_t^2\\,(2\\mu/\\hbar\\omega_t)$."
+      },
+      {
+       "tex": "\\mk{N}{N} = \\mk{I}{\\frac{1}{15}\\frac{\\kat}{\\kascat}\\left(\\frac{2\\kmuchem}{\\hbar\\komegat}\\right)^{5/2}}",
+       "uses": [
+        3,
+        4
+       ],
+       "cap": "取$U_0 = 4\\pi\\hbar^2a/m$，$\\frac{8\\pi}{15}\\frac{m a_t^3}{4\\pi\\hbar^2 a}\\mu = \\frac{2}{15}\\frac{a_t}{a}\\frac{\\mu}{\\hbar\\omega_t}$，因为$m a_t^2 = \\hbar/\\omega_t$。"
+      },
+      {
+       "tex": "\\mk{I}{\\kmuchem} = \\mk{N}{\\frac{\\hbar\\komegat}{2}\\left(\\frac{15N\\kascat}{\\kat}\\right)^{2/5}}",
+       "uses": []
+      }
+     ],
+     "num": "(11.138)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      },
+      {
+       "tex": "\\kat^2 = \\frac{\\hbar}{\\km\\komegat}",
+       "src": "(11.126)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\bar{a}^2} = \\mk{m}{\\frac{2\\kmuchem}{\\km\\komegat^2}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\bar{a}^2} = \\mk{m}{\\kat^2\\,\\frac{2\\kmuchem}{\\hbar\\komegat}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\bar{a}^2} = \\mk{m}{\\kat^2\\left(\\frac{15N\\kascat}{\\kat}\\right)^{2/5}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\bar{a}} = \\mk{m}{\\kat\\cdot\\left(\\frac{15N\\kascat}{\\kat}\\right)^{1/5}}",
+       "uses": []
+      }
+     ],
+     "num": "(11.139)",
+     "note": "书中在 (11.139) 中印的幂是$2/5$。这个幂属于$\\bar{a}^2$；半径按$1/5$次幂变化。"
+    }
+   ]
+  }
+ ]
+}

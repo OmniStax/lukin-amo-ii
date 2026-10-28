@@ -1,0 +1,661 @@
+{
+ "id": "1.3",
+ "chapter": "1",
+ "title": "基础原子物理学",
+ "short": "基础原子物理学",
+ "lead": "原子的结构决定了它们如何响应外加场：氢原子及其简并，逐一解除简并的各项修正（屏蔽、<span data-concept=\"fine-structure\">精细结构</span>和<span data-concept=\"hyperfine-interaction\">超精细相互作用</span>），静磁场的<span data-concept=\"zeeman-effect\">塞曼效应</span>，以及与光的偶极相互作用的<span data-concept=\"selection-rules\">选择定则</span>。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-fine-hyperfine",
+   "kind": "sim",
+   "draws": [
+    "energy"
+   ],
+   "facts": [
+    "#ffe200"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-zeeman-levels",
+   "kind": "sim",
+   "draws": [
+    "energy",
+    "magnetic-field"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "eq-1-14",
+   "concept": "hydrogen-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "hydrogen-levels",
+   "concept": "hydrogen-energy-levels",
+   "verb": "introduces"
+  },
+  {
+   "span": "rydberg-constant",
+   "concept": "rydberg-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "estimate",
+   "concept": "uncertainty-energy-estimate",
+   "verb": "introduces"
+  },
+  {
+   "span": "degeneracy-symmetry",
+   "concept": "degeneracy-and-symmetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "principal-n",
+   "concept": "principal-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "l-lifting",
+   "concept": "l-degeneracy-lifting",
+   "verb": "introduces"
+  },
+  {
+   "span": "rydberg-states",
+   "concept": "rydberg-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "fine-structure",
+   "concept": "fine-structure",
+   "verb": "introduces"
+  },
+  {
+   "span": "total-j",
+   "concept": "total-electronic-angular-momentum",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-orbit",
+   "concept": "spin-orbit-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "darwin",
+   "concept": "darwin-term",
+   "verb": "introduces"
+  },
+  {
+   "span": "d-lines",
+   "concept": "d1-d2-lines",
+   "verb": "introduces"
+  },
+  {
+   "span": "parity",
+   "concept": "wavefunction-parity",
+   "verb": "introduces"
+  },
+  {
+   "span": "hyperfine",
+   "concept": "hyperfine-interaction",
+   "verb": "introduces"
+  },
+  {
+   "span": "total-f",
+   "concept": "total-angular-momentum-f",
+   "verb": "introduces"
+  },
+  {
+   "span": "alkali-ground",
+   "concept": "alkali-ground-hyperfine",
+   "verb": "introduces"
+  },
+  {
+   "span": "zeeman",
+   "concept": "zeeman-effect",
+   "verb": "introduces"
+  },
+  {
+   "span": "bohr-magneton",
+   "concept": "bohr-magneton",
+   "verb": "introduces"
+  },
+  {
+   "span": "lande",
+   "concept": "lande-g-factor",
+   "verb": "introduces"
+  },
+  {
+   "span": "field-regimes",
+   "concept": "zeeman-field-regimes",
+   "verb": "introduces"
+  },
+  {
+   "span": "clebsch-gordan",
+   "concept": "clebsch-gordan-coefficients",
+   "verb": "introduces"
+  },
+  {
+   "span": "weak-zeeman",
+   "concept": "weak-field-zeeman-shift",
+   "verb": "introduces"
+  },
+  {
+   "span": "dipole-energy",
+   "concept": "dipole-interaction",
+   "verb": "introduces"
+  },
+  {
+   "span": "matrix-element",
+   "concept": "dipole-matrix-element",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "selection-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "circular-basis",
+   "concept": "spherical-polarization-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "m-selection",
+   "concept": "polarization-selection-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-1-14",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "hydrogen-levels",
+   "concept": "schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "hydrogen-levels",
+   "concept": "stationary-states",
+   "verb": "uses"
+  },
+  {
+   "span": "estimate",
+   "concept": "heisenberg-uncertainty-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "degeneracies",
+   "concept": "commutator",
+   "verb": "uses"
+  },
+  {
+   "span": "parity",
+   "concept": "state-vector",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "wavefunction-parity",
+   "verb": "uses"
+  },
+  {
+   "span": "weak-zeeman",
+   "concept": "total-angular-momentum-f",
+   "verb": "uses"
+  },
+  {
+   "span": "good-numbers",
+   "concept": "total-electronic-angular-momentum",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ex-rinf",
+   "source_id": "it is a good exercize to know how to derive an expression for it from basic principles",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "inline",
+    "after": "rinf-invitation"
+   },
+   "cite": "estimate",
+   "prompt": "从基本原理出发，推导里德伯常量$R_\\infty$的表达式。",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "$$E_0 = -R_\\infty \\sim -\\frac{me^4}{2\\hbar^2}$$ 在基态中把海森伯不等式取为等式，$\\Delta p \\cdot \\Delta r \\sim \\hbar$，平均能量为$E = \\frac{\\hbar^2}{2m\\Delta r^2} - \\frac{e^2}{\\Delta r}$；对$\\Delta r$求其极小值，得到$\\Delta r \\sim \\frac{\\hbar^2}{me^2}$以及上面的基态能量，对于无穷重的原子核，这个结果是精确的。"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ex-rinf",
+   "concept": "rydberg-constant"
+  },
+  {
+   "exercise": "ex-rinf",
+   "concept": "uncertainty-energy-estimate"
+  }
+ ],
+ "referents": [
+  {
+   "id": "na-3s",
+   "label": "Na的基态",
+   "figures": [
+    "sim-fine-hyperfine"
+   ]
+  },
+  {
+   "id": "na-3p",
+   "label": "Na的第一激发态",
+   "figures": [
+    "sim-fine-hyperfine"
+   ]
+  },
+  {
+   "id": "na-3p12",
+   "label": "Na的J = 1/2激发态",
+   "figures": [
+    "sim-fine-hyperfine"
+   ]
+  },
+  {
+   "id": "na-3p32",
+   "label": "Na的J = 3/2激发态",
+   "figures": [
+    "sim-fine-hyperfine"
+   ]
+  },
+  {
+   "id": "na-f1",
+   "label": "²³Na的F = 1基态能级",
+   "figures": [
+    "sim-fine-hyperfine",
+    "sim-zeeman-levels"
+   ]
+  },
+  {
+   "id": "na-f2",
+   "label": "²³Na的F = 2基态能级",
+   "figures": [
+    "sim-fine-hyperfine",
+    "sim-zeeman-levels"
+   ]
+  },
+  {
+   "id": "h-f0",
+   "label": "氢的F = 0基态能级",
+   "figures": [
+    "sim-zeeman-levels"
+   ]
+  },
+  {
+   "id": "h-f1",
+   "label": "氢的F = 1基态能级",
+   "figures": [
+    "sim-zeeman-levels"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-term-symbols",
+   "kind": "correction",
+   "html": "书中在这句话里把光谱项符号写成${}^3S_{1/2}$、${}^3P_{1/2}$和${}^3P_{3/2}$。钠只有一个价电子，所以$S = 1/2$，$2S + 1 = 2$：这些能级是双重态${}^2S_{1/2}$、${}^2P_{1/2}$和${}^2P_{3/2}$。"
+  },
+  {
+   "id": "c-h-shifts",
+   "kind": "correction",
+   "html": "书中把$F^2$、$I^2$和$S^2$算作量子数的平方。用本征值$F(F+1)$、$I(I+1)$和$S(S+1)$，则$\\kHHFS = (\\kAHFS/2)[F(F+1) - 3/2]$，移位为$(\\kAHFS/4, -3\\kAHFS/4)$；书中印的是$(\\kAHFS/4, -\\kAHFS/4)$。"
+  },
+  {
+   "id": "c-h-splitting",
+   "kind": "correction",
+   "html": "用$F^2$、$I^2$和$S^2$的本征值，两个能级相距$\\kAHFS/4 - (-3\\kAHFS/4) = \\kAHFS$；书中印的是$\\kAHFS/2$。"
+  },
+  {
+   "id": "c-na-splitting",
+   "kind": "correction",
+   "html": "取$I = 3/2$以及本征值$F(F+1)$、$I(I+1)$和$S(S+1)$，$F = 2$的移位为$3\\kAHFS/4$，$F = 1$的移位为$-5\\kAHFS/4$，所以两个能级相距$2\\kAHFS$；书中印的是$3\\kAHFS/2$，那是由量子数的平方算出的。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "rydberg-estimate",
+   "what": "里德伯常量的估计",
+   "source": "现代原子与光学物理 II，1.3.1 例：氢原子",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\langle\\hat{O}\\rangle = \\langle\\kpsi|\\hat{O}|\\kpsi\\rangle",
+       "src": "(1.6)"
+      },
+      {
+       "text": "束缚态的动量平均值为零，$\\langle p\\rangle = 0$。",
+       "src": "1.3.1"
+      },
+      {
+       "tex": "\\Delta A = \\sqrt{\\langle(\\hat{A} - \\langle\\hat{A}\\rangle)^2\\rangle}",
+       "src": "1.2.4"
+      },
+      {
+       "text": "在基态中，海森伯不等式近似地按等式成立，$\\kDeltap\\cdot\\kDeltar \\sim \\hbar$。",
+       "src": "(1.10)"
+      },
+      {
+       "text": "平均距离$\\langle r\\rangle$近似为$\\kDeltar$。",
+       "src": "1.3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH} = \\mk{K}{\\frac{\\kp^2}{2\\km}} - \\mk{V}{\\frac{e^2}{\\kr}}",
+      "src": "(1.14)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{E} = \\mk{K}{\\frac{\\langle p^2\\rangle}{2\\km}} - \\mk{V}{\\frac{e^2}{\\langle r\\rangle}}",
+       "uses": [
+        0
+       ],
+       "cap": "基态的能量是$\\hat{H}$在其中的平均值；每一项都用其平均值代替，势能通过平均距离代入。"
+      },
+      {
+       "tex": "\\mk{H}{E} = \\mk{K}{\\frac{\\kDeltap^2}{2\\km}} - \\mk{V}{\\frac{e^2}{\\langle r\\rangle}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "由$\\langle p\\rangle = 0$，$\\Delta p^2 = \\langle(p - \\langle p\\rangle)^2\\rangle = \\langle p^2\\rangle$。"
+      },
+      {
+       "tex": "\\mk{H}{E} = \\mk{K}{\\frac{\\hbar^2}{2\\km\\kDeltar^2}} - \\mk{V}{\\frac{e^2}{\\langle r\\rangle}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{H}{E} = \\mk{K}{\\frac{\\hbar^2}{2\\km\\kDeltar^2}} - \\mk{V}{\\frac{e^2}{\\kDeltar}}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(1.15)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "基态是能量最低的态，所以$E$对$\\kDeltar$取极小。",
+       "src": "1.3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{E} = \\mk{K}{\\frac{\\hbar^2}{2\\km\\kDeltar^2}} - \\mk{V}{\\frac{e^2}{\\kDeltar}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\frac{dE}{d\\kDeltar}} = -\\mk{K}{\\frac{\\hbar^2}{\\km\\kDeltar^3}} + \\mk{V}{\\frac{e^2}{\\kDeltar^2}}",
+       "uses": [],
+       "cap": "$\\Delta r^{-2}$的导数是$-2\\Delta r^{-3}$，$-\\Delta r^{-1}$的导数是$\\Delta r^{-2}$。"
+      },
+      {
+       "tex": "-\\mk{K}{\\frac{\\hbar^2}{\\km\\kDeltar^3}} + \\mk{V}{\\frac{e^2}{\\kDeltar^2}} = \\mk{E}{0}",
+       "uses": [
+        1
+       ],
+       "cap": "在极小处导数为零。"
+      },
+      {
+       "tex": "\\mk{K}{\\frac{\\hbar^2}{\\km\\kDeltar}} = \\mk{V}{e^2}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{r}{\\kDeltar} \\sim \\mk{s}{\\frac{\\hbar^2}{\\km e^2}}",
+       "uses": [],
+       "map": {
+        "K": [
+         "r",
+         "s"
+        ],
+        "V": "s"
+       }
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "束缚态的能量为$\\kEn = -\\kRinf/n^2$，基态是$n = 1$。",
+       "src": "1.3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{E} = \\mk{K}{\\frac{\\hbar^2}{2\\km\\kDeltar^2}} - \\mk{V}{\\frac{e^2}{\\kDeltar}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{E_0} \\sim \\mk{K}{\\frac{\\hbar^2}{2\\km}\\left(\\frac{\\km e^2}{\\hbar^2}\\right)^2} - \\mk{V}{e^2\\,\\frac{\\km e^2}{\\hbar^2}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{E}{E_0} \\sim \\mk{K}{\\frac{\\km e^4}{2\\hbar^2}} - \\mk{V}{\\frac{\\km e^4}{\\hbar^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{E}{E_0} \\sim \\mk{R}{-\\frac{\\km e^4}{2\\hbar^2}}",
+       "uses": [],
+       "map": {
+        "K": "R",
+        "V": "R"
+       }
+      },
+      {
+       "tex": "\\mk{E}{E_0} = \\mk{Ri}{-\\kRinf} \\sim \\mk{R}{-\\frac{\\km e^4}{2\\hbar^2}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(1.16)"
+    }
+   ]
+  },
+  {
+   "id": "fine-structure-splitting",
+   "what": "钠第一激发态的精细结构分裂",
+   "source": "现代原子与光学物理 II，1.3.4 精细结构：J简并的解除",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kJ = \\kS + \\kL",
+       "src": "1.3.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{J}{\\kJ\\cdot\\kJ} = \\mk{SL}{(\\kS + \\kL)\\cdot(\\kS + \\kL)}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{J}{\\kJ\\cdot\\kJ = J^2} = \\mk{L}{L^2} + \\mk{S}{S^2} + \\mk{X}{2\\kS\\cdot\\kL}",
+       "uses": [],
+       "cap": "展开乘积；$\\hat{S}$和$\\hat{L}$作用于不同的坐标，彼此对易，所以$\\hat{S}\\cdot\\hat{L} = \\hat{L}\\cdot\\hat{S}$。",
+       "map": {
+        "SL": [
+         "L",
+         "S",
+         "X"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{X}{\\kS\\cdot\\kL} = \\frac{1}{2}(\\mk{J}{J^2} - \\mk{L}{L^2} - \\mk{S}{S^2})",
+       "uses": []
+      }
+     ],
+     "num": "(1.21)",
+     "note": "书中印的是$\\hat{S}\\cdot L = J^2 - L^2 - S^2$，缺少式 (1.22) 中带有的因子$\\tfrac{1}{2}$。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{V}{\\kVSL} = \\mk{A}{\\kASO}\\mk{X}{\\kS\\cdot\\kL}",
+      "src": "(1.19)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{V}{\\kVSL} = \\mk{A}{(\\kASO/2)}(\\mk{J}{J^2} - \\mk{L}{L^2} - \\mk{S}{S^2})",
+       "uses": [
+        0
+       ],
+       "map": {
+        "X": [
+         "J",
+         "L",
+         "S"
+        ]
+       }
+      }
+     ],
+     "num": "(1.22)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "在$J$、$L$和$S$确定的态中，平方$J^2$、$L^2$和$S^2$取值$J(J+1)$、$L(L+1)$和$S(S+1)$，如式 (1.38) 和 (1.39) 中的因子。",
+       "src": "1.3.6"
+      },
+      {
+       "text": "Na的第一激发态有$L = 1$和$S = 1/2$，所以$J = 3/2$或$J = 1/2$。",
+       "src": "1.3.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{V}{\\kVSL} = \\mk{A}{(\\kASO/2)}(\\mk{J}{J^2} - \\mk{L}{L^2} - \\mk{S}{S^2})",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{V}{\\Delta E_J} = \\mk{A}{\\frac{\\kASO}{2}}[\\mk{J}{J(J+1)} - \\mk{L}{L(L+1)} - \\mk{S}{S(S+1)}]",
+       "uses": [
+        1
+       ],
+       "cap": "能级的移位是$V_{SL}$在其中取的值。"
+      },
+      {
+       "tex": "\\mk{V}{\\Delta E_J} = \\mk{A}{\\frac{\\kASO}{2}}[\\mk{J}{J(J+1)} - \\mk{L}{2} - \\mk{S}{3/4}]",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{V}{\\Delta E_{3/2} - \\Delta E_{1/2}} = \\mk{A}{\\frac{\\kASO}{2}}[\\mk{J}{(15/4 - 2 - 3/4) - (3/4 - 2 - 3/4)}]",
+       "uses": [
+        2
+       ],
+       "cap": "$J = 3/2$时$J(J+1)$为$15/4$，$J = 1/2$时为$3/4$；$L$和$S$的项在两者中相同，相互抵消。",
+       "map": {
+        "L": "J",
+        "S": "J"
+       }
+      },
+      {
+       "tex": "\\mk{V}{\\Delta E_{3/2} - \\Delta E_{1/2}} = \\mk{A}{\\frac{\\kASO}{2}} \\cdot \\mk{J}{3}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{V}{\\Delta E_{3/2} - \\Delta E_{1/2}} = \\mk{A}{\\frac{3\\kASO}{2}}",
+       "uses": [],
+       "map": {
+        "J": "A"
+       }
+      }
+     ],
+     "num": "(1.23)",
+     "note": "书中把$J^2$、$L^2$和$S^2$算作量子数的平方，$\\frac{\\kASO}{2}[(9/4 - 1/4 - 1) - (1/4 - 1/4 - 1)] = \\kASO$。它们的值是$J(J+1)$、$L(L+1)$和$S(S+1)$，由此得到$3\\kASO/2$。"
+    }
+   ]
+  }
+ ]
+}

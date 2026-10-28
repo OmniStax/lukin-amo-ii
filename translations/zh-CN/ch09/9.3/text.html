@@ -1,0 +1,179 @@
+<section id="opening">
+<p class="cite-target">我们已经看到，<span data-concept="coherent-state">相干态</span>的<span data-concept="linear-optical-transformations">线性变换</span>保持其经典性质，而非线性相互作用则导致辐射场的高度非平庸的量子态。然而，经验告诉我们，现实世界既是非线性的，又是经典的。要理解这是如何发生的以及为何发生，我们就必须考虑耗散对量子场的影响。</p>
+<figure class="sim" id="fig-cat" data-figure="9.4" data-original="/media/ch09/fig-9-4.png" data-original-caption="场态 ∼ |iα⟩ − |−iα⟩ 在 τ_Revival/2 附近的相空间描绘。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.4</span><span>辐射场的<span data-concept="schrodinger-cat-state">“薛定谔猫”态</span>，$\sim$ <span data-ref="cat-plus">$|i\kalphacoh\rangle$</span> $-$ <span data-ref="cat-minus">$|{-i\kalphacoh}\rangle$</span>，位于$\ktaurevival/2$附近：两个<span data-concept="coherent-state">相干态</span>位于<span data-concept="quadrature-operators">正交分量</span>平面原点的两侧，<span data-ref="cat-minus">虚线的那个</span>与<span data-ref="cat-plus">实线的那个</span>处于叠加。<a href="#9.2-sim-collapse-revival">图 9.3</a>中的场分裂成这一态，其相空间分图位于$\kg\kt = \pi\sqrt{\knbar}$处。</span></div>
+</figure>
+<p id="bs-loss"><span data-concept="beamsplitter-loss-model">分束器为损耗提供了一个直观而简单的模型</span>。<span data-ref="signal">信号</span>入射到<span data-concept="beamsplitter-transformation">分束器</span>上，按其振幅透射率$t$衰减；同时，<span data-ref="vacuum">入射到另一端口的真空场</span>引入涨落，使输出场为</p>
+<div class="equation" id="eq-9-80">$$\hat{a}_\mathrm{out} = t\hat{a}_\mathrm{in} + i\sqrt{1-|t|^2}\hat{b}_\mathrm{vac}. \tag{9.80}$$</div>
+<p>如果<span data-ref="signal">信号</span>最初处于<span data-concept="coherent-state">相干态</span>$|\kalphacoh\rangle$，则透射场也将是<span data-concept="coherent-state">相干态</span>$|t\kalphacoh\rangle$。但对任意量子态，这一点并不成立。例如，入射的<span data-concept="fock-states">福克态</span>在与<span data-concept="beamsplitter-transformation">分束器</span>相互作用之后将不再处于<span data-concept="fock-states">福克态</span>。</p>
+</section>
+
+<section id="lossy-cavity">
+<h2>9.3.1 有耗腔中单模场的动力学</h2>
+<p class="cite-target">我们现在希望更详细地考虑耗散对量子场的影响。为简单起见，我们在此着重讨论<span data-concept="single-mode-field">单模场</span>，例如光学腔中的场。不过，我们将处理一个腔并不完美、而是与外部世界耦合的更现实的情景。</p>
+<p><span data-concept="beamsplitter-loss-model">分束器模型</span>可用于理解由一面部分透射镜构成的腔中的耗散。起初，我们只考虑经典损耗，而忽略与之相伴的量子噪声。</p>
+<figure class="sim" id="fig-bs-loss" data-figure="9.5" data-original="/media/ch09/fig-9-5.png" data-original-caption="损耗的分束器模型。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.5</span><span><span data-concept="beamsplitter-loss-model">损耗的分束器模型</span>：<span data-ref="signal">信号$\hat{a}_\mathrm{in}$</span>作为有耗信号$\hat{a}_\mathrm{out}$通过<span data-concept="beamsplitter-transformation">分束器</span>，从中反射出去的部分即损耗，而<span data-ref="vacuum">涨落$\hat{b}_\mathrm{vac}$</span>从另一端口进入。</span></div>
+</figure>
+<figure class="sim" id="fig-lossy-cavity" data-figure="9.6" data-original="/media/ch09/fig-9-6.png" data-original-caption="分析有耗腔中耗散所用的模型。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.6</span><span>有耗腔的模型：一面部分透明镜，其透射系数和反射系数为$t$和$r$，与相距长度$\kLmed$的一面完全反射镜相对。场$\kEcav$在二者之间往返，$\kEcav_\mathrm{in}$通过部分透明镜进入，$\kEcav_\mathrm{out}$通过它离开。</span></div>
+</figure>
+<h3>经典演化</h3>
+<p id="round-trip"><span data-concept="classical-cavity-evolution">腔内场的经典演化方程</span>可以通过计算$\kEcav$在一次往返中的变化求得。这里$t$和$r$是左侧镜的透射系数和反射系数，$\kDeltat = 2\kLmed/c$是往返时间，$\kEcav_\mathrm{in}(\kt)$是入射到腔上的场。</p>
+<p id="loss-rate">对于完美的镜子<sup class="fn" data-note="c-lossless"></sup>，$r^2 + t^2 = 1$，因此我们可以在$t \ll 1$的极限下写出<span data-concept="cavity-loss-rate">腔损耗率</span>。</p>
+<p id="lineshape">将演化方程变换到傅里叶域，即可求得腔的响应函数。腔线型为洛伦兹线型，其宽度由<span data-concept="cavity-loss-rate">腔损耗率</span>给出。</p>
+<figure class="dv" id="drv-cavity-field-evolution"></figure>
+<p>若腔内存在任何介质，则所感生的原子<span data-concept="atomic-polarization">极化强度</span>将修改场的演化。将麦克斯韦方程组投影到腔模上（即对于缓变振幅，忽略$\sim d\kEcav/dz$的项），我们发现腔场的演化为</p>
+<div class="equation" id="eq-9-87">$$\frac{d}{d\kt}\kEcav(\kt) = -\frac{\kkappa}{2}\kEcav(\kt) + \sqrt{\frac{\kkappa c}{2\kLmed}}\kEcav_\mathrm{in}(\kt) + \frac{i\knubar\kPnl}{2\epsilon_0}, \tag{9.87}$$</div>
+<p id="centre-frequency">其中$\knubar$是腔共振的中心频率。</p>
+<p id="input-output">输出场由反射的<span data-concept="cavity-noise-correlations">输入场</span>与透射的腔场之和给出，</p>
+<div class="equation" id="eq-9-88">$$\kEcav_\mathrm{out} = -r\kEcav_\mathrm{in} + t\kEcav. \tag{9.88}$$</div>
+<p>这一方程称为“<span data-concept="input-output-relation">输入输出关系</span>”，关于腔中电磁场半经典分析的一份好的参考文献见萨金特、斯库利和兰姆的“Laser Physics”。</p>
+</section>
+
+<section id="quantum-cavity">
+<h2>9.3.2 腔模的量子力学处理</h2>
+<p class="cite-target" id="quantum-cavity-eq">把<span data-concept="classical-cavity-evolution">经典演化方程</span>改造为量子描述，我们只需将腔场$\kEcav$替换为腔光子<span data-concept="creation-annihilation-operators">湮没算符</span>$\hat{a}$，并计入与<span data-concept="cavity-loss-rate">腔衰变率</span>$\kkappa$相关的噪声。如果<span data-concept="cavity-noise-correlations">输入场</span>为零，则<span data-concept="cavity-langevin-equation">演化方程变为</span></p>
+<div class="equation" id="eq-9-89">$$\frac{d}{d\kt}\hat{a} = \frac{-\kkappa}{2}\hat{a} + \kFnoise. \tag{9.89}$$</div>
+<p>原则上，我们可以利用<span data-concept="generalized-einstein-relation">量子涨落耗散定理</span>来确定噪声算符$\kFnoise$的性质。但我们转而通过引入噪声的微观模型来突出涨落的物理起源。我们所添加的噪声实际上非常像我们在式 <a href="#eq-9-89">(9.89)</a>中忽略的<span data-concept="cavity-noise-correlations">输入场</span>项，这里我们现在计入外部真空场经部分透射镜泄漏进入腔中。</p>
+<h3>微观噪声模型</h3>
+<p id="microscopic"><span data-concept="cavity-reservoir-model">我们的微观噪声模型</span>将计入量子腔场与其连续区<span data-concept="cavity-modes">模</span>的<span data-concept="open-system">环境</span>之间的相互作用。不完美的镜子提供了腔与<span data-concept="open-system">热库</span>之间的耦合，因为腔光子可以漏出，而<span data-concept="open-system">热库</span>光子可以漏入。在相互作用绘景中，系统-热库相互作用的有效哈密顿量可以写成</p>
+<div class="equation" id="eq-9-90">$$\hat{V}_{SR} = i\hbar\sum_k t_k \hat{a}\hat{a}_k^\dagger e^{-i(\knu-\knuk)\kt} + h.c., \tag{9.90}$$</div>
+<p id="cavity-frequency">其中$\knu$是腔频率，$\hat{a}_k$是频率为$\knuk$的一个连续区模，腔模与$\hat{a}_k$之间的耦合系数$t_k$由构成腔的镜子的透射性质决定。当<span data-concept="open-system">环境</span>很大且带宽很宽时，这一相互作用哈密顿量在数学上等价于先前考虑的原子<span data-concept="spontaneous-emission">自发发射</span>模型。为了与我们的形式化方法建立联系，我们把系统算符和<span data-concept="open-system">热库</span>算符确定为</p>
+<div class="equation" id="eq-9-91">$$\hat{S} = \hat{a} \tag{9.91}$$</div>
+<div class="equation" id="eq-9-92">$$\hat{R}^\dagger = i\hbar\sum_k t_k \hat{a}_k^\dagger. \tag{9.92}$$</div>
+<p>利用我们先前建立的一般<span data-concept="open-system">热库</span>理论，我们可以立即用微观定义的量写出<span data-concept="continuum-decay-rate">衰变率</span>和噪声算符。<sup class="fn" data-note="footnote-2"></sup>简要回顾一下，<span data-concept="open-system">热库</span>场的演化方程可以形式上积分，在适当的<span data-concept="rotating-frame">转动参考系</span>中给出</p>
+<div class="equation" id="eq-9-93">$$a_k(\kt) = e^{i(\knu-\knuk)\kt}a_k(0) + t_k\int_0^{\kt} d\kt'\, e^{i(\knu-\knuk)(\kt-\kt')}a(\kt'), \tag{9.93}$$</div>
+<p>而将其代回$a(\kt)$的运动方程则给出</p>
+<div class="equation" id="eq-9-94">$$\dot{a}(\kt) = -\sum_k t_k e^{i(\knu-\knuk)\kt}a_k(0) - |t_k|^2\int_0^{\kt} d\kt'\, a(\kt')e^{i(\knu-\knuk)(\kt-\kt')}. \tag{9.94}$$</div>
+<p>作<span data-concept="wigner-weisskopf">维格纳-韦斯科普夫近似</span>，我们得到</p>
+<div class="equation" id="eq-9-95">$$\dot{a}(\kt) \approx -\frac{\kkappa}{2}a(\kt) + \kFnoise(\kt), \tag{9.95}$$</div>
+<p>其中</p>
+<div class="equation" id="eq-9-96">$$\kkappa = 2\pi\sum_k |t_k|^2\delta(\knu-\knuk) = 2\pi|t_k|^2 D(\knu) \tag{9.96}$$</div>
+<div class="equation" id="eq-9-97">$$\kFnoise = -\sum_k t_k\hat{a}_k(0)e^{i(\knu-\knuk)\kt}. \tag{9.97}$$</div>
+<p id="noise-correlations">有了这些表达式，我们就可以轻松地计算<span data-concept="cavity-noise-correlations">噪声算符的有关关联函数</span>。例如，如果<span data-concept="open-system">环境</span>处于频率为$\knu$、光子数为$n$的热态，</p>
+<div class="equation" id="eq-9-98">$$\langle\kFnoise(\kt)\kFnoise^\dagger(\kt')\rangle = (n+1)\kkappa\delta(\kt-\kt') \tag{9.98}$$</div>
+<div class="equation" id="eq-9-99">$$\langle\kFnoise^\dagger(\kt)\kFnoise(\kt')\rangle = n\kkappa\delta(\kt-\kt'). \tag{9.99}$$</div>
+<p>微观噪声模型为涨落和耗散的起源提供了物理图像。部分透射镜允许腔场漏出（导致衰变），但也允许连续区<span data-concept="cavity-modes">模</span>漏入（导致噪声）。利用关系式$t_k = (\kkappa/2\pi D(\knu))^{1/2}$，噪声算符为</p>
+<div class="equation" id="eq-9-100">$$\kFnoise(\kt) = -\sqrt{\frac{\kkappa}{D(\knu)}}\kEhat_\mathrm{in}(\kt), \tag{9.100}$$</div>
+<p id="input-field">其中我们定义了<span data-concept="cavity-noise-correlations">输入场</span></p>
+<div class="equation" id="eq-9-101">$$\kEhat_\mathrm{in}(\kt) = \sqrt{\frac{1}{2\pi}}\sum_k e^{i(\knu-\knuk)\kt}a_k(0). \tag{9.101}$$</div>
+<p id="cavity-master">我们曾用<span data-concept="heisenberg-langevin-equation">海森伯-朗之万方法</span>来描述腔的量子力学演化，但<span data-concept="master-equation">主方程</span>提供了一种等价的替代方法。如果我们再次把系统算符确定为$\hat{S} = \hat{a}$，则系统<span data-concept="density-operator">密度算符</span>服从<span data-concept="cavity-master-equation">主方程</span></p>
+<div class="equation" id="eq-9-102">$$\frac{d}{d\kt}\krhohat = -\frac{\kkappa}{2}(n+1)\left(\hat{a}^\dagger\hat{a}\rho - \hat{a}\rho\hat{a}^\dagger\right) - \frac{\kkappa}{2}n\left(\rho\hat{a}\hat{a}^\dagger - \hat{a}^\dagger\rho\hat{a}\right) + h.c. \tag{9.102}$$<sup class="fn" data-note="c-eq-9-102"></sup></div>
+<p>它可用于描述腔损耗及相伴的涨落。</p>
+<h3>例子：相干态</h3>
+<p id="coherent-example">设腔场最初处于<span data-concept="coherent-state">相干态</span>$|\kalphacoh\rangle$，而辐射热浴最初处于真空态。由于<span data-concept="coherent-state">腔的相干态</span>对应于经典场的量子描述，人们可能预期它在腔模衰变时仍保持为经典场。</p>
+<p>经典相干性随时间按指数式衰减，遵循<span data-concept="damped-coherent-state">电场振幅的衰减</span>。</p>
+<figure class="dv" id="drv-damped-coherent-amplitude"></figure>
+<p>为了验证我们确实处于<span data-concept="coherent-state">相干态</span>，我们应当考察<span data-concept="quadrature-operators">正交分量</span>。<sup class="fn" data-note="footnote-3"></sup></p>
+<figure class="dv" id="drv-damped-quadrature-variance"></figure>
+<p id="variance-stays">由于<span data-concept="coherent-state">相干态</span>最初有$\langle\delta\kxquad^2(0)\rangle = 1/2$，$\langle\delta\kxquad^2(\kt)\rangle$在所有时刻都保持为$1/2$。对动量<span data-concept="quadrature-operators">正交分量</span>作类似的计算得到同样的结果，表明随着系统演化，腔模仍保持在<span data-concept="coherent-state">相干态</span>，$\langle\delta\kxquad^2(\kt)\rangle = \langle\delta\kpquad^2(\kt)\rangle = 1/2$，尽管平均光子数（因而<span data-concept="coherent-amplitude">相干振幅</span>$\kalphacoh$）随时间衰减。</p>
+<h3>量子场的演化</h3>
+<p id="nonclassical-loss">我们发现<span data-concept="coherent-state">相干态</span>尽管有腔损耗仍保持其经典相干性，而<span data-concept="dissipation-destroys-nonclassicality">一般的量子态将随着腔场的耗散而改变其性质</span>。我们在式 <a href="#drv-damped-quadrature-variance">(9.107)</a>中对<span data-concept="quadrature-operators">正交分量算符</span>的推导并不依赖于初态，因此在长时间下，无论初始的<span data-concept="quadrature-operators">正交分量</span>如何，我们都得到$\langle\delta\kxquad^2(\kt)\rangle = \langle\delta\kpquad^2(\kt)\rangle = 1/2$。因此，最初<span data-concept="squeezed-state">压缩</span>的量子态会由于腔衰变而失去其<span data-concept="nonclassical-light">非经典相干性质</span>。</p>
+<figure class="sim" id="sim-damped-field">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>腔模的一个态衰变为真空。左图为其平均值及其在<span data-concept="quadrature-operators">正交分量</span>$\kxquad$和$\kpquad$平面中的不确定度椭圆；右图为两个方差随$\kkappa\kt$的变化，取自式 <a href="#drv-damped-quadrature-variance">(9.107)</a>。对于<span data-concept="coherent-state">相干态</span>，将初始方差$\langle\delta\kxquad^2(0)\rangle$设为$1/2$，其圆盘滑向原点而不改变大小；低于$1/2$时该态是<span data-concept="squeezed-state">压缩</span>的，腔衰变使其变圆，成为真空的圆，同时其平均值$\kalphacoh e^{-\kkappa\kt/2}$逐渐消逝。</span></div>
+</figure>
+<p>一般而言，产生<span data-concept="nonclassical-light">非经典态</span>的过程必须与耗散竞争。例如，我们已经看到，当忽略耗散时，<span data-concept="nonclassical-light">非经典态</span>可以由单模光与非线性介质（如<span data-concept="two-level-atom">二能级原子</span>）相互作用产生。当我们同时计入原子与不受约束的辐射<span data-concept="cavity-modes">模</span>的相互作用以及腔模与连续谱的相互作用时，我们将发现由此产生的耗散起着抹去任何<span data-concept="nonclassical-light">非经典关联</span>的作用。</p>
+<p id="atoms-drive">合适的理论方法取决于所考虑系统的一些细节。例如，在强场与许多原子相互作用的极限下，动力学应当近乎经典。因此使用<span data-concept="heisenberg-langevin-equation">海森伯-朗之万方法</span>是合理的，该方法明确地显示了与经典动力学的对应。<span data-concept="cavity-driven-by-atoms">与原子的相互作用给出了腔模演化中的一个驱动项</span>，</p>
+<div class="equation" id="eq-9-108">$$\frac{d}{d\kt}\hat{a} = -\frac{\kkappa}{2}\hat{a} + \kFnoise + i\sum_j \kg_j^*\hat{\sigma}_{\alpha,\beta}, \tag{9.108}$$<sup class="fn" data-note="c-eq-9-108"></sup></div>
+<p>它描述了介质<span data-concept="atomic-polarization">极化强度</span>的量子力学类比。这类演化方程通常是非线性的，一般无法求解，只有某些特殊情形除外。作为例子，我们将考虑<span data-concept="squeezed-state">压缩光</span>的产生。</p>
+<p>同时，在只有少数光子或少数原子存在的情形下，<span data-concept="monte-carlo-wavefunction">随机波函数</span>方法或<span data-concept="master-equation">主方程</span>往往更为方便。例如，这类光子和原子都很少的系统出现在<span data-concept="cavity-qed">腔量子电动力学</span>或陷俘离子的量子态工程中。</p>
+</section>
+
+<section id="cqed">
+<h2>9.3.3 腔量子电动力学</h2>
+<p class="cite-target"><span data-concept="cavity-qed">腔量子电动力学（CQED）</span>提供了另一个重要的例子，在这类系统中耗散和量子效应都起着重要作用。与描述宏观场同许多原子相互作用之性质的<span data-concept="squeezed-state">压缩光</span>产生不同，<span data-concept="cavity-qed">CQED</span> 通常代表一个光子很少、与单个原子相互作用的小系统。因此，我们对 <span data-concept="cavity-qed">CQED</span> 的讨论将提供一个处理小系统的精确方法的例子。</p>
+<p id="cqed-system">所考虑的物理系统由<span data-ref="atom">一个<span data-concept="two-level-atom">二能级原子</span></span>构成，其能级为$|1\rangle$和$|2\rangle$，以速率$\kg$耦合到<span data-ref="cavity">一个单模腔</span>。除了我们在前面几讲中考虑过的相干演化之外，我们还将计入两个耗散速率：<span data-ref="atom">原子</span>以速率$\kgamma$发射到<span data-ref="res-free">自由空间<span data-concept="cavity-modes">模</span>（腔模除外）</span>中，而光子以速率$\kkappa$从<span data-ref="cavity">腔</span>中漏出。</p>
+<figure class="sim" id="fig-cqed-reservoirs" data-figure="9.7" data-original="/media/ch09/fig-9-7.png" data-original-caption="腔量子电动力学的系统-热库划分。腔中的量子场被视为总系统的一部分，它衰变到与腔泄漏相对应的模的热库中。原子热库对应于另一组自由空间模，原子可以直接衰变到其中。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.7</span><span><span data-concept="cavity-qed">腔量子电动力学</span>的系统-热库划分。<span data-ref="atom">原子</span>和<span data-ref="cavity">腔模</span>由<span data-concept="jaynes-cummings-model">J-C 哈密顿量</span>以$\kg$耦合，构成总系统。二者各自衰变到自己的<span data-concept="open-system">热库</span>中：<span data-ref="atom">原子</span>以$\kgamma$衰变到<span data-ref="res-free">全部$4\pi$的自由空间模</span>中，<span data-ref="cavity">腔模</span>以$\kkappa$衰变到<span data-ref="res-leak">承载其泄漏的自由空间模</span>中。两者合起来构成总热库。</span></div>
+</figure>
+<h3>开腔与闭腔</h3>
+<p id="open-closed">在实践中，区分两种情形是有用的。<span data-concept="open-and-closed-cavities">开腔情形</span>描述在一个维度上受约束的腔模，腔长远大于波长，$\kLmed \gg \klambda$。这种情形通常出现在光学频率的 <span data-concept="cavity-qed">CQED</span> 中，其中采用法布里-珀罗型腔来约束光。处于<span data-concept="open-and-closed-cavities">开腔</span>中的原子的<span data-concept="spontaneous-emission-rate">自发发射率</span>$\kgamma$接近其自由空间<span data-concept="continuum-decay-rate">衰变率</span>，因为它可以很容易地与在垂直于腔模的两个方向上不受约束的自由空间<span data-concept="cavity-modes">模</span>相互作用。</p>
+<p><span data-concept="open-and-closed-cavities">闭腔</span>在全部三个空间维度上约束场，其长度尺度接近波长，$\kLmed \sim \klambda$。这样的腔可以为微波频率构建，其波长为毫米到厘米量级。处于<span data-concept="open-and-closed-cavities">闭腔</span>中的原子只能与少数腔<span data-concept="cavity-modes">模</span>相互作用，因此其<span data-concept="spontaneous-emission-rate">自发发射率</span>相对于自由空间发射率可以被强烈抑制。</p>
+<h3>理论表述</h3>
+<p id="cqed-master">为了计入两种耗散机制$\kkappa, \kgamma$，我们需要把两类衰变都纳入<span data-concept="cqed-master-equation">主方程</span></p>
+<div class="equation" id="eq-9-109">$$\begin{aligned} \dot{\krhohat} &amp;= -\tfrac{i}{\hbar}[\kH,\krhohat] - \tfrac{\kkappa}{2}\left(\hat{a}^\dagger\hat{a}\krhohat + \krhohat\hat{a}^\dagger\hat{a} - 2\hat{a}\krhohat\hat{a}^\dagger\right) \\ &amp;\quad - \tfrac{\kgamma}{2}\left(\hat{\sigma}_{21}\hat{\sigma}_{12}\krhohat + \krhohat\hat{\sigma}_{21}\hat{\sigma}_{12} - 2\hat{\sigma}_{12}\krhohat\hat{\sigma}_{21}\right). \end{aligned} \tag{9.109}$$</div>
+<p>注意，这里的<span data-concept="density-operator">密度算符</span>同时包含<span data-ref="atom">原子</span>和<span data-ref="cavity">腔模</span>的自由度，因为它代表总系统。</p>
+<p id="jc-hamiltonian">相干演化由把原子算符$\hat{\sigma}_{ij}$与<span data-ref="cavity">腔模</span>$\hat{a}$耦合起来的<span data-concept="jaynes-cummings-model">J-C 哈密顿量</span>描述</p>
+<div class="equation" id="eq-9-110">$$\kH = \hbar\kdelta\hat{a}^\dagger\hat{a} + \hbar \kg\hat{a}^\dagger\hat{\sigma}_{12} + \hbar \kg^*\hat{a}\hat{\sigma}_{21}, \tag{9.110}$$</div>
+<p id="cavity-detuning">其中我们在以<span data-concept="atomic-transition-frequency">原子跃迁频率</span>$\komega$转动的参考系中工作，$\kdelta$是<span data-ref="cavity">腔模</span>的<span data-concept="detuning">失谐</span>，$\kdelta = \knu - \komega$。由于我们想考虑<span data-ref="cavity">腔</span>中光子很少的量子态，这个问题的自然基矢态是<span data-ref="cavity">腔模</span>的<span data-concept="fock-states">福克态</span>和<span data-concept="bare-states">裸原子态</span>：</p>
+<div class="equation" id="eq-9-111">$$\{|1\rangle_a|n\rangle, |2\rangle_a|n\rangle\}. \tag{9.111}$$</div>
+<p>每一对态$\{|1\rangle_a|n\rangle, |2\rangle_a|n-1\rangle\}$以强度$\kg\sqrt{n}$耦合。但当我们加入耦合$\{|1\rangle_a|n\rangle \to \{|1\rangle_a|n-1\rangle$和$\{|2\rangle_a|n\rangle \to \{|1\rangle_a|n\rangle$的耗散机制时，在这组基中动力学将显得更为复杂。</p>
+<h3>缀饰态基中的 CQED</h3>
+<p id="dressed-basis">为了获得对耗散的原子-腔系统的直观理解，变换到<span data-concept="jaynes-cummings-ladder">J-C 哈密顿量的缀饰态基</span>是有启发的。如图 <a href="#sim-jc-ladder">9.8</a>所示，每一组耦合态都可以独立地对角化，而耗散则在各组之间引入耦合。</p>
+<p id="vrs">探测<span data-concept="jaynes-cummings-ladder">缀饰态流形</span>最简单的实验方法，是测量原子-腔系统的反射率随入射光<span data-concept="detuning">失谐</span>的变化。外加场将探测基态与低位<span data-concept="jaynes-cummings-ladder">缀饰态</span>之间的跃迁。即使原子跃迁与<span data-ref="cavity">腔模</span>精确共振，原子-场耦合$\kg$也会表现为反射率中峰与峰之间的分裂。因此，<span data-concept="jaynes-cummings-ladder">缀饰态</span>的分裂$\kg$<sup class="fn" data-note="c-vrs"></sup>常被称为“<span data-concept="vacuum-rabi-splitting">真空拉比分裂。</span>”<span id="collective">注意，如果腔的波腹处有$N$个原子，分裂将增大到$\kg\sqrt{N}$<sup class="fn" data-note="c-collective"></sup>，这一效应称为<span data-concept="collective-enhancement">集体增强</span>。</span>按经典的观点，这一效应可以理解为通过改变光在腔内循环时获得的相移而使<span data-ref="cavity">腔</span>的共振频率发生移动的原子<span data-concept="dispersion">色散</span>的表现。</p>
+<figure class="sim" id="sim-jc-ladder" data-figure="9.8" data-original="/media/ch09/fig-9-8.png" data-original-caption="缀饰态基和耗散耦合。(a) 自然基对应于一个基态和一个由无穷多个各自以 g√n 耦合的独立二能级系统构成的阶梯，其中 n 是该对态在腔中的最大光子数。每个流形都可以被精确对角化，从而得到缀饰态基。(b) 原子衰变和腔损耗导致不同流形之间的耦合，因为它们允许能量离开系统。因此，衰变不仅给缀饰态引入能量宽度，而且混合了相互独立的缀饰态流形。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.8</span><span>(a) 在基态$|1\rangle_a|0\rangle$之上，态对$|2\rangle_a|n-1\rangle$，量子在<span data-ref="atom">原子</span>中，与$|1\rangle_a|n\rangle$，量子在<span data-ref="cavity">腔模</span>中，由$\kg\sqrt{n}$耦合；每一对对角化为两个相距$\sqrt{4n\kg^2 + \kdelta^2}$的<span data-concept="jaynes-cummings-ladder">缀饰态</span>。拖动$\kg$，可见分裂沿阶梯向上按$\sqrt{n}$增大；拖动<span data-concept="detuning">失谐</span>$\kdelta$，各对分开，几乎成为裸态。在一对之内，能量按比例绘制，单位为 μs⁻¹；各对之间相距$\hbar\knu$，未按比例。(b) 腔损耗$\kkappa$将一个光子带出<span data-ref="cavity">腔</span>，原子衰变$\kgamma$将激发带出<span data-ref="atom">原子</span>，每次使态下降一个梯级。</span></div>
+</figure>
+<h3>随机波函数分析</h3>
+<p>设在时刻$\kt = 0$系统从<span data-ref="cavity">腔</span>的真空态和<span data-ref="atom">原子</span>的激发态$|2\rangle_a|0\rangle$出发。随着系统演化，它能够跃迁到的态只有少数几个。具体而言，可能的跃迁是：</p>
+<ol>
+<li>自由空间发射耦合$|2\rangle_a|0\rangle \to |1\rangle_a|0\rangle$</li>
+<li>相干演化耦合$|2\rangle_a|0\rangle \to |1\rangle_a|1\rangle$</li>
+<li>腔衰变耦合$|1\rangle_a|1\rangle \to |1\rangle_a|0\rangle$。</li>
+</ol>
+<p>因此我们只需计入三个态，<span data-concept="master-equation">主方程</span>原则上可以精确求解。我们将使用<span data-concept="monte-carlo-wavefunction">随机波函数方法</span>，它将提供我们理解<span data-concept="cqed-no-jump-evolution">无跳跃情形</span>中所涉及的物理过程所需的全部基本要素。</p>
+<p>在<span data-concept="quantum-jump">量子跳跃</span>不重要的情形下，我们将考虑一个只包含由哈密顿量演化所耦合的那些态的波函数</p>
+<div class="equation" id="eq-9-112">$$|\kpsi\rangle = \kconeone|1\rangle_a|1\rangle + \kctwozero|2\rangle_a|0\rangle. \tag{9.112}$$</div>
+<p><span data-concept="probability-amplitude">概率幅</span>的哈密顿量演化方程为</p>
+<div class="equation" id="eq-9-113">$$\dot{\kconeone} = i\kdelta \kconeone + i\kg\kctwozero \tag{9.113}$$<sup class="fn" data-note="c-eq-9-113"></sup></div>
+<div class="equation" id="eq-9-114">$$\dot{\kctwozero} = i\kg\kconeone. \tag{9.114}$$</div>
+<p id="heff">耗散通过<span data-concept="effective-hamiltonian">非厄米有效哈密顿量</span>进入</p>
+<div class="equation" id="eq-9-115">$$\kHeff = -i\frac{\kkappa}{2}\hat{a}^\dagger\hat{a} - i\frac{\kgamma}{2}\hat{\sigma}_{21}\hat{\sigma}_{12}, \tag{9.115}$$</div>
+<p id="no-jump">于是“<span data-concept="cqed-no-jump-evolution">无跳跃</span>”演化方程变为</p>
+<div class="equation" id="eq-9-116">$$\dot{\kconeone} = -(\frac{\kkappa}{2} - i\kdelta)\kconeone + i\kg\kctwozero \tag{9.116}$$<sup class="fn" data-note="c-eq-9-116"></sup></div>
+<div class="equation" id="eq-9-117">$$\dot{\kctwozero} = i\kg\kconeone - \frac{\kgamma}{2}\kctwozero. \tag{9.117}$$</div>
+<p id="weak-damping">事实上，由于丢失的光子不可能被重新吸收回系统——即态$|1\rangle_a|0\rangle$是不耦合的——非厄米演化是精确的。考察这些方程，我们可以看到，在<span data-concept="strong-coupling-regime">强原子-场耦合</span>极限$\kg \gg \kgamma, \kkappa$下，系统表现出弱阻尼的<span data-concept="vacuum-rabi-oscillations">与单光子腔态之间的拉比振荡</span>。然而，当$\kg$小于其中一个耗散速率时，仍可观察到许多有趣的效应。</p>
+<figure class="sim" id="sim-vacuum-rabi">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>系统从$|2\rangle_a|0\rangle$出发，遵循“<span data-concept="cqed-no-jump-evolution">无跳跃</span>”方程<a href="#eq-9-116">(9.116)</a>–<a href="#eq-9-117">(9.117)</a>。左图：激发仍在<span data-ref="atom">原子</span>中的概率$|\kctwozero|^2$和在<span data-ref="cavity">腔</span>中的概率$|\kconeone|^2$；右图：与原子失谐$\Delta$的弱探测光对<span data-ref="cavity">腔模</span>和<span data-ref="atom">原子</span>的激发有多强，二者各按其最大值缩放。当$\kg$远大于$\kkappa$和$\kgamma$时，激发来回摆动，探测光发现两个峰，即<span data-concept="vacuum-rabi-splitting">真空拉比分裂</span>；把$\kg$降到$\kkappa$以下，激发就以<span data-concept="purcell-effect">珀塞尔</span>增强的速率按单个指数衰减泄漏掉，谱线只有一条且增宽。令$\kgamma = 0$并以$\kdelta$失谐，可以看到<span data-concept="open-and-closed-cavities">闭腔</span>的衰变被抑制。速率单位为 μs⁻¹，时间单位为 μs。</span></div>
+</figure>
+<h3>开腔：珀塞尔效应</h3>
+<p id="purcell-elimination">当<span data-concept="cavity-loss-rate">腔衰变率</span>压倒原子-场耦合，$\kg &lt; \kkappa$时，由于场模是过阻尼的，我们可以采用<span data-concept="adiabatic-elimination">绝热消除</span>$\dot{\kconeone} \approx 0$。强阻尼的腔场影响原子态的演化。</p>
+<figure class="dv" id="drv-purcell-elimination"></figure>
+<p id="purcell-shift">第一项表明原子的<span data-concept="continuum-decay-rate">衰变率</span>因其与过阻尼腔模的耦合而被修改，而第二项描述一个能量移位，它表示<span data-concept="lamb-shift">兰姆移位</span>受到<span data-ref="cavity">腔模</span>的修改。根据所涉及的腔的类型，所得的原子<span data-concept="continuum-decay-rate">衰变率</span>可以大于或小于自由空间<span data-concept="spontaneous-emission-rate">自发发射率</span>。对于<span data-concept="open-and-closed-cavities">开腔</span>，$\kgamma \approx \kgamma_\text{自由空间}$，因此在零<span data-concept="detuning">失谐</span>时原子<span data-concept="continuum-decay-rate">衰变率</span>被增强。</p>
+<figure class="dv" id="drv-purcell-rate"></figure>
+<p id="purcell"><span data-concept="spontaneous-emission-rate">自发发射率</span>的这一增大称为“<span data-concept="purcell-effect">珀塞尔效应。</span>”</p>
+<p id="mode-volume">支配这一效应的物理参数涉及<span data-concept="cavity-mode-coupling">腔模体积</span>$\kV$和<span data-concept="quality-factor" id="q-factor">品质因数</span>$\kQfac$：</p>
+<div class="equation" id="eq-9-121">$$\kg = \kmu\sqrt{\frac{\knu}{\epsilon_0\hbar \kV}} \tag{9.121}$$</div>
+<div class="equation" id="eq-9-122">$$\kkappa = \frac{\knu}{\kQfac}, \tag{9.122}$$</div>
+<p id="finesse">其中$\knu$是腔模角频率。<span data-concept="cavity-loss-rate">腔衰变率</span>也可以用<span data-concept="cavity-finesse">腔精细度 F</span> 来表示，精细度是光子在漏出之前平均在腔中循环的次数。光子寿命是<span data-concept="cavity-finesse">精细度</span>乘以腔中的往返时间</p>
+<div class="equation" id="eq-9-123">$$\frac{1}{\kkappa} = \frac{\kLmed}{\pi c}\cdot \kFfin. \tag{9.123}$$</div>
+<h3>强耦合的物理</h3>
+<p>为了使<span data-concept="continuum-decay-rate">衰变率</span>$\kgammaeff^\mathrm{open}$相对于$\kgamma$发生显著改变，我们需要有足够的原子-场耦合</p>
+<div class="equation" id="eq-9-124">$$\kg^2 &gt; \kgamma\kkappa. \tag{9.124}$$</div>
+<p id="figure-of-merit">当这一条件满足时，称系统处于“<span data-concept="strong-coupling-regime">强耦合情形</span>”。事实上，<span data-concept="strong-coupling-figure-of-merit">强耦合的优值</span>与原子参数无关，因为偶极矩同时出现在$\kg$和$\kgamma$中。</p>
+<p>这里$d$是腔模的直径。长度为$\kLmed$的腔的衍射极限给出$d^2 \sim \klambda \kLmed$，因此对于具有高反射率$r^2 = 1 - t^2$的小腔，优值达到最大。</p>
+<figure class="dv" id="drv-strong-coupling-figure-of-merit"></figure>
+<p>从物理上说，当<span data-concept="open-and-closed-cavities">开腔</span>处于<span data-concept="strong-coupling-regime">强耦合情形</span>时，置于腔中的激发态原子把能量转移给腔模的速度，远快于它向$4\pi$发射的速度，因为$\kg &gt; \kgamma$。由于$\kg &lt; \kkappa$，腔模随后会在原子来得及重新吸收光子之前衰变。实际上，原子中的激发衰变到从腔中漏出的光子态中。</p>
+<p>我们可以看到<span data-concept="strong-coupling-regime">强耦合情形</span>的另一种物理图像，只要认识到原子的共振<span data-concept="absorption-cross-section">截面</span>为$\sim \klambda^2$。原子在光子从腔中衰变之前与光子相互作用的概率为</p>
+<div class="equation" id="eq-9-127">$$P_\mathrm{interaction} \sim \klambda^2\cdot \kLmed\cdot\frac{1}{\kLmed d^2}\cdot \kFfin, \tag{9.127}$$</div>
+<p>其中$1/\kLmed d^2$是原子<span data-concept="atom-number-density">密度</span>，$\kFfin$是光子遇到原子的次数。在<span data-concept="strong-coupling-regime">强耦合情形</span>中，这一概率大于一。</p>
+<h3>闭腔：被抑制的衰变</h3>
+<p id="closed-decay"><span data-concept="suppressed-decay">约束在闭腔中的原子不能自发发射到不受约束的模中</span>，因此$\kgamma = 0$。</p>
+<p>当腔相对于原子共振远失谐，$\kdelta \gg \kkappa$时，原子<span data-concept="continuum-decay-rate">衰变率</span>被强烈抑制，因为在原子跃迁能量处没有态密度。这一效应已在微波实验中观察到，其中腔的尺寸与波长同量级，$\kLmed \sim \klambda$，而且<span data-concept="detuning">失谐</span>最大，$\kdelta = \komega/2$。</p>
+<figure class="dv" id="drv-suppressed-decay"></figure>
+<p>对于<span data-concept="open-and-closed-cavities">闭腔</span>，$\kV \sim \klambda^3$，因此<span data-concept="continuum-decay-rate">衰变率</span>被腔的<span data-concept="quality-factor">品质因数</span>所抑制。</p>
+<h3>里德伯原子的微波 CQED</h3>
+<p id="microwave">与光学 <span data-concept="cavity-qed">CQED</span> 相比，<span data-concept="microwave-cqed">微波 CQED</span> 有若干优点。首先，可以构建<span data-concept="open-and-closed-cavities">闭腔</span>，而且原子发射率$\kgamma \propto \komega^3$比光学频率下小得多。由于耦合强度$\kg \propto \sqrt{\komega}$，转到较低的频率可以使$\kg/\kgamma$得到可观的改善。最后，可以利用<span data-concept="rydberg-states">里德伯原子</span>的大偶极矩来设计具有大<span data-concept="single-photon-rabi-frequency">耦合常数</span>$\kg$的系统。高激发<span data-concept="rydberg-states">里德伯原子</span>$N \sim 50$的跃迁频率处于微波范围$\sim$ 10-100 GHz，因此合适的腔的尺寸约为一厘米。此外，原子态可以通过测量使原子电离所需的电场来测量，这提供了分析最终原子态的一种方便机制。</p>
+<p>较低的频率也带来潜在的问题。典型的<span data-concept="rydberg-states">里德伯原子</span>可以在光学频率下衰变到低位激发态，这将妨碍微波操控。因此，使用<span data-concept="rydberg-states">里德伯原子</span>的实验必须把它们抽运到所谓的角动量最大的<span data-concept="microwave-cqed">圆态</span>中，其中<span data-concept="selection-rules">选择定则</span>只允许一条微波衰变通道。因此，圆<span data-concept="rydberg-states">里德伯原子</span>的寿命可以很长，量级为一秒。虽然把原子激发到 N=50 L=50<sup class="fn" data-note="c-circular"></sup>态需要 50 个微波光子，但巴黎和慕尼黑的研究组仍常规地制备圆<span data-concept="rydberg-states">里德伯原子</span>。</p>
+<p>第二个问题出现在微波频率，因为热光子不能忽略。因此，微波腔通常由超导铌构成，并冷却到液体氦温度。还可以采用额外的技巧，通过送入处于基态的原子来吸收多余的能量，从而把热光子从腔中清空。凭借巧妙的技巧和精心的工程设计，<span data-concept="microwave-cqed">微波 CQED</span> 实验在量子态工程领域展示了相干演化与退相干之间最高的比值。</p>
+<h3>应用：按需单光子</h3>
+<p id="single-photon"><span data-concept="cavity-qed">CQED</span> 的一个潜在应用是<span data-concept="cavity-single-photon-source">创造一种可被触发的光源，使其恰好发射一个光子到频率、时间、方向和形状都明确的波包中</span>。这样的器件之于<span data-concept="fock-states">福克态</span>，正如激光之于<span data-concept="coherent-state">相干态</span>，但<span data-concept="fock-states">福克态</span>的<span data-concept="nonclassical-light">非经典本性</span>使其构建困难得多。</p>
+<p>人们可以设想把<span data-ref="atom">一个单独的激发发射体</span>放入<span data-ref="cavity">一个腔</span>中，并监测从<span data-ref="cavity">腔</span>中的泄漏。单个发射体通常会向$4\pi$发射一个光子，但腔可以用来改善方向性。在<span data-concept="strong-coupling-regime">强耦合情形</span>中，<span data-ref="atom">被激发的发射体</span>主要与<span data-ref="cavity">腔模$\hat{a}$</span>相互作用，后者随后通过哈密顿量与自由场<span data-concept="cavity-modes">模</span>$\hat{a}_k$相互作用</p>
+<div class="equation" id="eq-9-130">$$\hat{H}_{c-f} = -\hbar\sum_k t_k\hat{a}_k^\dagger\hat{a}e^{i\kdeltak \kt} + h.c. \tag{9.130}$$</div>
+<p>包括连续区<span data-concept="cavity-modes">模</span>在内的系统态可以表示为</p>
+<div class="equation" id="eq-9-131">$$|\kpsi\rangle = \kctwozero|2\rangle_a|0\rangle|vac\rangle + \kconeone|1\rangle_a|1\rangle|vac\rangle + \sum_k \kck|1\rangle_a|0\rangle|1_k\rangle. \tag{9.131}$$</div>
+<p>这一过程的物理恰好就是<span data-concept="bound-continuum-transition">束缚态到自由态的跃迁</span>，所以我们可以利用<span data-concept="wigner-weisskopf">维格纳-韦斯科普夫理论</span>的结果，求出在长时极限和<span data-concept="strong-coupling-regime">强耦合情形</span>下自由空间<span data-concept="cavity-modes">模</span>的概率幅：</p>
+<div class="equation" id="eq-9-132">$$\kck \sim \frac{t_k \kg/\kkappa}{\kg^2/\kkappa + i\kdeltak}. \tag{9.132}$$<sup class="fn" data-note="c-eq-9-132"></sup></div>
+<p>一个单光子<span data-concept="emitted-photon-wavepacket">波包</span>将沿<span data-ref="cavity">腔模</span>所定义的方向发射，其电场包络为$\sim e^{-(\kg^2/\kkappa)\kt}$<sup class="fn" data-note="c-envelope"></sup>。这个系统还不是理想的单光子源，因为我们无法控制脉冲的时间和形状。通过使用三能级原子，可以控制所发射的<span data-concept="outgoing-wavepacket">波包</span>形状。</p>
+<p>原则上，这一单光子发射过程是相干的，因而是可逆的。例如，如果<span data-ref="atom">原子</span>最初处于基态与激发态的叠加，$(a|1\rangle + b|2\rangle)\otimes|\mathrm{vac}\rangle$，则这一相干叠加将被映射到沿远离<span data-ref="cavity">腔</span>方向传播的光子模上，于是态将变为$|1\rangle\otimes\left(a + b\hat{a}^\dagger\right)|\mathrm{vac}\rangle$。通过对脉冲传播作时间反演，人们可以设想随后把这一量子态（编码在正交光子态的叠加中）存回原子态。虽然这类想法已获得相当多的理论关注，但实验尚未用<span data-concept="cavity-qed">腔量子电动力学</span>实现相干的光子释放与存储。</p>
+<h3>单光子场的测量</h3>
+<p>按需单光子的实验演示需要区分少量光子。存在这样的光电探测器，它们通过产生宏观光电流脉冲的雪崩过程，以高效率测量单个光学光子。然而，由于死时间效应，无法区分含有多个光子$|1\rangle, |2\rangle, |3\rangle\ldots$的短（$&lt;$ 100 ns）波包。</p>
+<p id="hbt">为了研究短脉冲的<span data-concept="nonclassical-light">非经典性质</span>，可以采用<span data-concept="hanbury-brown-twiss">汉伯里·布朗-特维斯装置</span>，它在把信号送到两个探测器之前，先用<span data-concept="beamsplitter-transformation">分束器</span>将其分开。如果一个单光子入射到<span data-concept="beamsplitter-transformation">分束器</span>上，两个探测器永远不会同时记录。这种同时探测是<span data-concept="hanbury-brown-twiss">联合概率</span>测量的一个例子。<span id="g2-def">对两个被探测信号之间关联的完整测量，可用于得到<span data-concept="second-order-correlation">二阶关联函数</span></span></p>
+<div class="equation" id="eq-9-133">$$G^{(2)} = \langle\kEenv^\dagger(r_1,\kt_1)\kEenv^\dagger(r_2,\kt_2)\kEenv(r_2,\kt_2)\kEenv(r_1,\kt_1\rangle. \tag{9.133}$$<sup class="fn" data-note="c-eq-9-133"></sup></div>
+<p>$G^{(2)}$对于<span data-concept="coherent-state">相干态</span>可以因式分解，但对于<span data-concept="nonclassical-light">非经典态</span>不能因式分解。因此，定义一个归一化的关联函数是方便的</p>
+<div class="equation" id="eq-9-134">$$\kgtwo(\kt_1 - \kt_2) = \frac{G^{(2)}}{\langle\kEenv^\dagger(r_1,\kt_1)\kEenv(r_1,\kt_1\rangle\langle\kEenv^\dagger(r_2,\kt_2)\kEenv(r_2,\kt_2)\rangle}. \tag{9.134}$$</div>
+<p id="bunching">例如，$\kgtwo(0)$对于<span data-concept="coherent-state">相干态</span>为 1，对于热态为 2（光子“<span data-concept="photon-bunching">群聚</span>”），对于单光子态为 0（光子“<span data-concept="photon-bunching">反群聚</span>”）。对<span data-concept="second-order-correlation">二阶关联函数</span>的测量显然对比激光束的经典相干性更高阶的量子相干性敏感。这类测量之所以有用，是因为<span data-concept="nonclassical-light">非经典态</span>可以表现出高阶关联，而不仅仅是经典相干性$\langle\kEenv^\dagger(r_1,\kt_1)\kEenv(r_2,\kt_2)\rangle$。</p>
+<h3>阅读材料</h3>
+<p>关于 <span data-concept="cavity-qed">CQED</span> 的更多信息可见迈斯特和萨金特或山本和伊玛莫卢的著作，或马布奇、多尔蒂的近期综述 Science 298 1372(2002)。量子光学中关联函数的讨论可见斯库利和祖拜里的 Quantum Optics，第 4 章。关于单光子产生的近期工作已报道于 Nature 419 594 (2002)、PRL 89 067901 (2002)（见评论 PRL 90 249801）和 Science 290 2282 (2000)。</p>
+</section>

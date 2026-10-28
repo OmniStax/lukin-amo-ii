@@ -1,0 +1,96 @@
+<section id="opening">
+<p class="cite-target">我们将用<span data-concept="density-operator">密度算符</span>作为工具，帮助推导一种有效描述，用于与其<span data-concept="open-system">环境</span>相互作用的<span data-concept="open-system">开放系统</span>。为了理解<span data-concept="reduced-density-operator">约化密度算符</span>如何随时间演化，先考虑它在只作用于系统的<span data-concept="hamiltonian">哈密顿量</span>$\kHS$下的演化。</p>
+<figure class="dv" id="drv-density-operator-evolution"></figure>
+<p>现在假设系统与<span data-concept="open-system">环境</span>之间存在某种耦合，由相互作用<span data-concept="hamiltonian">哈密顿量</span>$\kHSR$描述。动力学将变得复杂得多，因为即使系统与<span data-concept="open-system">环境</span>一开始彼此独立，初始直积态$|\kpsi_S\rangle \otimes |\kpsi_R\rangle$也会在$\kHSR$的影响下演化成一个一般无法因子化为独立的系统态与<span data-concept="open-system">环境</span>态的态。<span id="entangled">此时称系统与<span data-concept="open-system">环境</span>是<span data-concept="system-environment-entanglement">纠缠</span>的。</span></p>
+<p id="decay">作为说明，我们回到原子向真空<span data-concept="spontaneous-emission">自发发射一个光子</span>的例子。如果原子一开始处于叠加态$|\kpsi_0\rangle = (\kcone|1\rangle + \kctwo|2\rangle) \otimes |0\rangle$，则在时刻${\kt}$它将处于态$|\kpsi({\kt})\rangle = \kcone|1\rangle \otimes |0\rangle + \kctwo({\kt})|2\rangle \otimes |0\rangle + \sum_k \kck({\kt})|1\rangle \otimes |1_k\rangle$，这个态不能再写成原子态与电磁场态的直乘。于是原子约化<span data-concept="density-matrix">密度矩阵</span>的各元素可以用<span data-concept="spontaneous-emission-rate">衰变率</span>$\kgamma$算出。</p>
+<figure class="dv" id="drv-decaying-atom-density-matrix"></figure>
+<p><span id="half-rate">注意，<span data-concept="density-matrix-coherences">非对角元</span>的衰变率是激发态<span data-concept="density-matrix-populations">布居</span>的一半。这是能量守恒的相互作用的特征。</span></p>
+</section>
+
+<section id="general-formalism">
+<h2>3.3.1 一般形式体系</h2>
+<p class="cite-target">总<span data-concept="hamiltonian">哈密顿量</span>可以表示为三项之和，</p>
+<div class="equation" id="eq-3-27">$$\kH = \kHS + \kHR + \kHSR. \tag{3.27}$$</div>
+<p>第一项只影响系统自由度，第二项只影响<span data-concept="open-system">热库</span>，而第三项含有系统算符与<span data-concept="open-system">热库</span>算符的乘积。</p>
+<figure class="dv" id="drv-reduced-density-equation"></figure>
+<p>三项各自的贡献不同。系统<span data-concept="hamiltonian">哈密顿量</span>的作用与没有<span data-concept="open-system">热库</span>时相同。<span data-concept="open-system">热库</span><span data-concept="hamiltonian">哈密顿量</span>对$\krhoS$没有净效应，因为阵迹在<span data-concept="open-system">热库</span>算符的轮换下不变，所以<span data-concept="commutator">对易式</span>必须为零。然而，相互作用<span data-concept="hamiltonian">哈密顿量</span>同时涉及系统算符和<span data-concept="open-system">热库</span>算符，需要特殊处理。虽然我们已经得到了作为一般结果的运动方程，但如果不至少给定相互作用<span data-concept="hamiltonian">哈密顿量</span>和<span data-concept="open-system">热库</span>本身的某些性质，就无法取得进一步的进展。</p>
+</section>
+
+<section id="environment">
+<h2>3.3.2 环境的性质</h2>
+<p class="cite-target">不同的<span data-concept="open-system">环境</span>可以对与之相互作用的系统产生性质上不同的影响。<span id="fluctuating-field">为了说明典型的<span data-concept="open-system">热库</span>性质，我们考虑<span data-concept="spin-in-fluctuating-field">涨落磁场中的自旋</span>的例子，其中相互作用<span data-concept="hamiltonian">哈密顿量</span>为</span></p>
+<div class="equation" id="eq-3-32">$$\kHSR = \hbar \kft({\kt})\hat{S}_z. \tag{3.32}$$</div>
+<p>这个<span data-concept="hamiltonian">哈密顿量</span>对应于自旋态$|1\rangle, |2\rangle$之间的能量分裂$\hbar \kft({\kt})$，其中$\hat{S}_z = (|2\rangle\langle 2| - |1\rangle\langle 1|)/2$。我们将考虑$\kft({\kt})$代表无规场的情形。这个模型适用于多种物理系统，例如核自旋（无规涨落的）热浴中的电子自旋。从<span data-concept="hamiltonian">哈密顿量</span>出发，我们可以形式上推出自旋的<span data-concept="time-evolution-operator">描述幺正演化的算符</span></p>
+<div class="equation" id="eq-3-33">$$\hat{U} = e^{i\int_0^{\kt} \kft({\kt}')d{\kt}'\hat{S}_z}, \tag{3.33}$$<sup class="fn" data-note="c-eq-3-33"></sup></div>
+<p id="s-plus">由此可以算出任何<span data-concept="expectation-value">期望值</span>的时间依赖。特别地，我们关心$\langle\hat{S}_+\rangle$，它对应于自旋<span data-concept="density-matrix">密度矩阵</span>的<span data-concept="density-matrix-coherences">非对角元</span>（$\hat{S}_+ = |2\rangle\langle 1|$）。这个算符从<span data-concept="hamiltonian">哈密顿量</span>中的能量分裂获得一个相位，所以它的时间依赖为</p>
+<div class="equation" id="eq-3-34">$$\langle\hat{S}_+\rangle = \langle e^{i\int_0^{\kt} \kft({\kt}')d{\kt}'}\hat{S}_+(0)\rangle, \tag{3.34}$$</div>
+<p>它依赖于随机变量$\kft({\kt})$的矩。</p>
+<h3>随机变量</h3>
+<p>涨落的能量分裂$\hbar \kft({\kt})$代表一个含时的无规过程，也称为随机变量。在每个时刻，$\kft({\kt})$由某个概率分布刻画，我们需要对这个概率分布有所了解，才能预测$\kft({\kt})$对我们所计算的算符的平均效应。特别地，我们会想知道这个概率分布的以下性质：</p>
+<p id="stationary">(1) 一阶矩是<span data-concept="expectation-value">期望值</span>$\langle \kft({\kt})\rangle$。通常，我们关心所谓的“<span data-concept="stationary-random-process">平稳过程</span>”，对于它，$\langle \kft({\kt})\rangle = \langle\kft\rangle$是常数。于是我们可以定义</p>
+<div class="equation" id="eq-3-35">$$\kft({\kt}) = \langle\kft\rangle + \delta \kft({\kt}), \tag{3.35}$$</div>
+<p>其中$\langle\delta \kft({\kt})\rangle = 0$。</p>
+<p>(2) 无规过程的方差$\langle\delta \kft({\kt})\delta \kft({\kt}')\rangle \neq 0$描述$\kft({\kt})$偏离其平均值的典型程度。</p>
+<p id="correlation-time">(3) <span data-concept="correlation-time">关联时间</span>$\ktauc$代表$\kft({\kt})$变化所在的时标。它与方差的时间依赖有关；特别地，当$|{\kt} - {\kt}'| &lt; \ktauc$时，方差$\langle\delta \kft({\kt})\delta \kft({\kt}')\rangle$近似为常数。</p>
+<p id="gaussian">对于任意的概率分布，原则上我们需要给定无穷多个高阶矩。然而，在下文中我们通常处理“<span data-concept="gaussian-random-process">高斯</span>”概率分布。对于<span data-concept="gaussian-random-process">高斯</span>概率分布，知道平均值和方差就足以确定所有高阶矩，因为它们两两因子化：</p>
+<div class="equation" id="eq-3-36">$$\langle\delta \kft({\kt}_1)\delta \kft({\kt}_2)\ldots\delta \kft({\kt}_n)\rangle = \sum\langle\delta \kft({\kt}_1)\delta \kft({\kt}_2)\rangle\langle\delta \kft({\kt}_3)\ldots\rangle, \tag{3.36}$$</div>
+<p>其中求和遍及分成成对的与单个的期望值的所有不同分组。特别地，我们应当注意，当$\langle\delta\kft\rangle = 0$时，所有奇数阶矩都为零。</p>
+<h3>关联时间</h3>
+<p>对于我们正在考虑的例子（<span data-concept="spin-in-fluctuating-field">涨落场$\kft({\kt})$中的自旋</span>），我们将区分两个重要的极限：</p>
+<p>(1) ${\kt} &lt; \ktauc$</p>
+<p id="reversible">在这种情形下，我们是在远短于<span data-concept="open-system">环境</span>变化时标的时标上考察系统。每次考察系统（例如对它做一次实验），我们都会发现自旋绕$\hat{z}$轴以速率$\kft({\kt} &lt; \ktauc)$进动，其数值是随机的，但在演化期间是固定的。每个实现的$\kft({\kt})$取值都不同，所以平均而言我们会发现$\langle\bar{\hat{S}}_+\rangle = 0$。然而，这种退相位在某种意义上是可逆的。如果你知道每次实验中$\kft({\kt})$是多少，就可以对它进行补偿。例如，你可以做一个<span data-concept="reversible-evolution">自旋回波</span>实验，在自旋演化到一半时把自旋的取向反转，使净进动消失。因此我们把这第一种情形称为“<span data-concept="reversible-evolution">可逆演化</span>”。</p>
+<p>(2) ${\kt} \gg \ktauc$。</p>
+<p id="markovian">对于远长于<span data-concept="correlation-time">关联时间</span>的时间，<span data-concept="reversible-evolution">自旋回波</span>技术失效。根本没有办法恢复演化的历史，并消除涨落的<span data-concept="open-system">环境</span>所造成的破坏。系综平均$\langle\bar{\hat{S}}_+\rangle = 0$再次为零，但这是以一种本质上不可逆的方式。这种情形对应于记忆时间很短的<span data-concept="open-system">热库</span>。这样的<span data-concept="open-system">热库</span>称为“<span data-concept="markovian-environment">马尔可夫环境</span>”，因为它可以用<span data-concept="markovian-environment">马尔可夫过程</span>（<span data-concept="correlation-time">关联时间</span>无限短的无规过程）来描述。在原子物理和量子光学中，大多数<span data-concept="open-system">环境</span>近似是<span data-concept="markovian-environment">马尔可夫</span>的，所以我们将着重于理解<span data-concept="markovian-environment">马尔可夫热库</span>效应的技术。</p>
+<figure class="sim" id="sim-spin-echo">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>六十个<span data-concept="spin-in-fluctuating-field">涨落场中的自旋</span>的实现，从极点上方观察，所在参考系以平均速率$\langle\kft\rangle$转动，因此只有$\delta\kft(\kt)$使它们移动。每个自旋绕$\hat{z}$转过相位$\kphi = \int_0^{\kt}\delta\kft(\kt')\,d\kt'$，这是它自己的场历史给它的。上图是每个实现的这一历史，其中一个以墨线描出；长箭头是六十个自旋的平均，$\langle\hat{S}_+\rangle$。下图是对一个<span data-concept="gaussian-random-process">高斯</span>场所有实现的平均，该场的涨落方均根大小为 6 μs⁻¹，在<span data-concept="correlation-time">关联时间</span>$\ktauc$内保持关联。把$\ktauc$从远大于演化的 1 μs 滑到远小于它，并打开<span data-concept="reversible-evolution">自旋回波</span>，它在演化到一半时把每个自旋反转。当$\ktauc \gg \kt$时，每个自旋以固定速率转动，回波使它们全部重新汇合；当$\ktauc \ll \kt$时，场已经变化了许多次，回波找不到可以消除的历史，相干性永久丢失，如同在<span data-concept="markovian-environment">马尔可夫环境</span>中。</span></div>
+</figure>
+</section>
+
+<section id="markovian-reservoir">
+<h2>3.3.3 马尔可夫热库的密度算符方法</h2>
+<p class="cite-target">通过把系统和<span data-concept="open-system">热库</span>限制在与原子物理和量子光学相关的某几类相互作用上，我们可以建立一个分析<span data-concept="open-system">开放系统</span>的框架。特别地，我们将考虑<span data-concept="correlation-time">关联时间</span>很短的<span data-concept="open-system">环境</span>，使得系统只受<span data-concept="open-system">热库</span>瞬时状态的影响。</p>
+<p id="interaction-picture">我们再次假设$\kH = \kHS + \kHR + \kHSR$。相互作用项$\kHS R$是最相关的部分。为了聚焦于它，我们在<span data-concept="open-system-interaction-picture">相互作用绘景</span>中工作，该绘景是按照幺正算符进行变换而得到的</p>
+<div class="equation" id="eq-3-37">$$\hat{U} = e^{i(\kHR + \kHS){\kt}/\hbar}. \tag{3.37}$$</div>
+<p>在<span data-concept="open-system-interaction-picture">相互作用绘景</span>（用波浪号表示）中，相关的算符为</p>
+<div class="equation" id="eq-3-38">$$\krhotilde = e^{i(\kHR + \kHS){\kt}/\hbar}\krhohat e^{-i(\kHR + \kHS){\kt}/\hbar} \tag{3.38}$$</div>
+<div class="equation" id="eq-3-39">$$\kHtilde_{SR} = e^{i(\kHR + \kHS){\kt}/\hbar}\kHSR e^{-i(\kHR + \kHS){\kt}/\hbar}. \tag{3.39}$$</div>
+<p>这个幺正变换自动计入了系统和<span data-concept="open-system">热库</span>的自由演化，因此剩下的动力学只来自相互作用，即</p>
+<div class="equation" id="eq-3-40">$$\frac{d}{d{\kt}}\krhotilde = \frac{1}{i\hbar}[\kHtilde_{SR}, \krhotilde]. \tag{3.40}$$</div>
+<p id="bilinear">我们的分析要求相互作用是<span data-concept="bilinear-system-reservoir-coupling">系统算符与热库算符的双线性乘积</span>，</p>
+<div class="equation" id="eq-3-41">$$\kHSR = \kShat\hat{R}^\dagger + \hat{R}\kShat^\dagger, \tag{3.41}$$</div>
+<p>其中$\kShat$（$\hat{R}$）是一般的系统（<span data-concept="open-system">热库</span>）算符。在实际中，相互作用<span data-concept="hamiltonian">哈密顿量</span>可能含有对这类项的求和：分析的进行方式完全相同，其效应可以通过分别考虑求和中的每一项、最后再求和来计入。在<span data-concept="open-system-interaction-picture">相互作用绘景</span>中，我们把<span data-concept="hamiltonian">哈密顿量</span>表示为</p>
+<div class="equation" id="eq-3-42">$$\kHtilde_{SR} = \kShat\kFR({\kt})^\dagger + \kFR({\kt})\kShat^\dagger, \tag{3.42}$$</div>
+<p>其中全部时间依赖都明确地包含在<span data-concept="open-system">热库</span>算符$\kFR({\kt})$中。</p>
+<p>例如，在薛定谔绘景中考虑<span data-concept="atom-field-interaction">单个原子与辐射场相互作用的哈密顿量</span>，</p>
+<div class="equation" id="eq-3-43">$$\kHSR = \underbrace{-\sum_j\hbar \kg_j\hat{a}_j}_{\hat{R}}\underbrace{|2\rangle\langle 1|}_{\kShat^\dagger} - \sum_j\hbar \kg_j^*\hat{a}_j^\dagger|1\rangle\langle 2|, \tag{3.43}$$</div>
+<p>其中我们可以辨认出适合于我们更一般的相互作用形式的系统算符和<span data-concept="open-system">热库</span>算符。同样，在<span data-concept="open-system-interaction-picture">相互作用绘景</span>中，<span data-concept="hamiltonian">哈密顿量</span>包含与系统和<span data-concept="open-system">热库</span>自由演化相关的相位因子：</p>
+<div class="equation" id="eq-3-44">$$\kHtilde_{SR} = \underbrace{-\sum_j\hbar \kg_j\hat{a}_j e^{-i(\knu_j - \komega){\kt}}}_{\kFR({\kt})}\underbrace{|2\rangle\langle 1|}_{\kShat^\dagger} - \sum_j\hbar \kg_j^*\hat{a}_j^\dagger e^{i(\knu_j - \komega){\kt}}|1\rangle\langle 2|, \tag{3.44}$$</div>
+<p>我们把这些相位因子并入新的<span data-concept="open-system">热库</span>算符$\kFR({\kt})$中。</p>
+<p>除了<a href="#eq-3-42">式 (3.42)</a>给出的相互作用的指定形式之外，我们的分析还需要关于<span data-concept="open-system">热库</span>本身性质的两个假设，即</p>
+<p>(1) <span data-concept="open-system">热库</span>很大（因此不受系统影响）</p>
+<p>(2) <span data-concept="open-system">热库</span>的带宽很宽（因此它的<span data-concept="correlation-time">关联时间</span>很短<sup class="fn" data-note="footnote-1"></sup>）。</p>
+<p id="born-markov">第一个假设表明，<span data-concept="open-system">热库</span>的状态不会因与系统的相互作用而受到显著影响。因此，在我们的分析中可以取<span data-concept="open-system">热库</span>处于定态（不含时），例如某一温度T下的<span data-concept="pure-and-mixed-states">统计混合</span>。第二个假设意味着<span data-concept="open-system">热库</span>的<span data-concept="correlation-time">关联时间</span>$\ktauc \sim (1/\text{带宽})$很短；特别地，我们要求$\ktauc$远小于系统演化的典型时标$\ktauS$。这两个假设合起来构成“<span data-concept="born-markov-approximation">玻恩-马尔可夫近似</span>”，满足它们的<span data-concept="open-system">热库</span>称为<span data-concept="markovian-environment">马尔可夫</span>的。</p>
+<p id="coarse"><span data-concept="open-system">热库</span>对系统的效应可以通过在介于<span data-concept="correlation-time">关联时间</span>与系统演化的特征时间之间的时标$\kDeltat$上取平均来简化，$\ktauc \ll \kDeltat \ll \ktauS$。这种方法类似于对$\ktauc/\ktauS$的微扰论，并将给出对大于$\kDeltat$的时间有效的系统<span data-concept="reduced-density-operator">约化密度算符</span>的运动方程。</p>
+<figure class="dv" id="drv-coarse-grained-change"></figure>
+<p>要继续推进，我们现在必须再做一个假设：初态是可因子化的，</p>
+<div class="equation" id="eq-3-49">$$\krhotilde({\kt}) = \krhotilde_S({\kt}) \otimes \krhotilde_R({\kt}). \tag{3.49}$$</div>
+<p>在此后不久的时间，${\kt} &lt; {\kt}' &lt; {\kt} + \kDeltat$，总<span data-concept="density-operator">密度算符</span>近似可因子化，带有某个小的修正，</p>
+<div class="equation" id="eq-3-50">$$\krhotilde({\kt}') \approx \krhotilde_S({\kt}) \otimes \krhotilde_R({\kt}) + \krhotilde_{corr}({\kt}, {\kt}'). \tag{3.50}$$</div>
+<p>只要$\kDeltat \ll \ktauS$，我们就可以在<a href="#drv-coarse-grained-change">式 (3.48)</a>的右端到领头阶忽略$\krhotilde_{corr}$，把总<span data-concept="density-operator">密度算符</span>换成系统与<span data-concept="open-system">热库</span><span data-concept="density-operator">密度算符</span>的乘积。<sup class="fn" data-note="footnote-2"></sup></p>
+<p>利用$\kHtilde_{SR}({\kt})$和$\krhotilde({\kt})$的显式形式，我们现在来考察<a href="#drv-coarse-grained-change">式 (3.48)</a>中的两项。第一项$\Delta\krhotilde_S^{(1)}$对系统有直接的效应。</p>
+<figure class="dv" id="drv-first-reservoir-term"></figure>
+<p id="energy-shift">由于<span data-concept="open-system">热库</span>很大，在系统的影响下变化不大，$\langle\kFR({\kt}')^\dagger\rangle$本质上是一个常数。因此，第一项的效应可以解释为对系统<span data-concept="hamiltonian">哈密顿量</span>的一个附加，$\kHS + \kHS'$。在包括<span data-concept="atom-field-interaction">原子-场相互作用</span>在内的许多情形下，$\langle\kFR({\kt}')^\dagger\rangle = 0$，第一项完全消失。</p>
+<p>第二项$\Delta\krhotilde_S^{(2)}$负责<span data-concept="open-system">热库</span>的非平庸效应。</p>
+<p id="correlation-functions">我们将用<span data-concept="open-system">热库</span>算符的<span data-concept="reservoir-correlation-functions">双时关联函数</span>来计算它，其定义为</p>
+<div class="equation" id="eq-3-58">$$g^{--}({\kt}', {\kt}'') = \mathrm{Tr}_R[\kFR({\kt}')\kFR({\kt}'')\krhotilde_R] = \mathrm{Tr}_R[\kFR({\kt}'')\krhotilde_R\kFR({\kt}')] \tag{3.58}$$</div>
+<div class="equation" id="eq-3-59">$$g^{+-}({\kt}', {\kt}'') = \mathrm{Tr}_R[\kFR({\kt}')^\dagger\kFR({\kt}'')\krhotilde_R] = \mathrm{Tr}_R[\kFR({\kt}'')\krhotilde_R\kFR({\kt}')^\dagger] \tag{3.59}$$</div>
+<div class="equation" id="eq-3-60">$$g^{-+}({\kt}', {\kt}'') = \mathrm{Tr}_R[\kFR({\kt}')\kFR({\kt}'')^\dagger\krhotilde_R] = \mathrm{Tr}_R[\kFR({\kt}'')^\dagger\krhotilde_R\kFR({\kt}')] \tag{3.60}$$</div>
+<div class="equation" id="eq-3-61">$$g^{++}({\kt}', {\kt}'') = \mathrm{Tr}_R[\kFR({\kt}')^\dagger\kFR({\kt}'')^\dagger\krhotilde_R] = \mathrm{Tr}_R[\kFR({\kt}'')^\dagger\krhotilde_R\kFR({\kt}')^\dagger], \tag{3.61}$$</div>
+<p>其中第二行当我们对<span data-concept="open-system">热库</span>算符进行轮换时。</p>
+<figure class="dv" id="drv-second-reservoir-term"></figure>
+<p>作为例子，我们可以对由辐射场构成的<span data-concept="open-system">环境</span>显式地算出这些<span data-concept="reservoir-correlation-functions">关联函数</span>之一。</p>
+<figure class="dv" id="drv-thermal-correlator"></figure>
+<p id="sharply-peaked"><span data-concept="reservoir-correlation-functions">双时关联函数</span>现在只依赖于时间之差${\kt}'' - {\kt}' = \tau$，它是$\tau$的一个尖峰函数，其宽度对应于<span data-concept="open-system">热库</span><span data-concept="correlation-time">关联时间</span>$\ktauc$。在辐射场体积$\kV \to \infty$，$\ktauc \to 0$的极限下，我们恢复出<span data-concept="wigner-weisskopf">维格纳-韦斯科普夫近似</span>，此时<span data-concept="reservoir-correlation-functions">关联函数</span>在时间上是一个 δ 函数。注意，对于辐射场，$g^{--} = g^{++} = 0$，而$g^{-+}$与$g^{+-}$相同，只是把$\langle\hat{a}_j^\dagger\hat{a}_j\rangle$换成$\langle\hat{a}_j\hat{a}_j^\dagger\rangle = \langle\hat{a}_j^\dagger\hat{a}_j\rangle + 1$。</p>
+<figure class="dv" id="drv-master-equation"></figure>
+<p id="master-equation">这个结果称为“<span data-concept="master-equation">主方程</span>”，它为研究耦合到<span data-concept="markovian-environment">马尔可夫热库</span>的<span data-concept="open-system">开放系统</span>的演化提供了一个必不可少的工具。这套形式体系提供了一种恰当处理所关心系统中非幺正行为的方法。例如可以看出，<a href="#drv-master-equation">式 (3.78)</a>保持<span data-concept="density-matrix">密度矩阵</span>的阵迹（$\mathrm{Tr}\ \dot{\rho} = 0$）。虽然<a href="#drv-master-equation">式 (3.78)</a>描述的是与<span data-concept="thermal-radiation-field">电磁场的热态</span>相互作用的<span data-concept="two-level-atom">二能级原子</span>，但我们指出，也可以为其他类型的相互作用导出<span data-concept="master-equation">主方程</span>，<em>例如</em>，与由其他谐振子构成的<span data-concept="open-system">环境</span>相互作用的谐振子。</p>
+</section>

@@ -1,0 +1,263 @@
+{
+ "id": "3.1",
+ "chapter": "3",
+ "title": "密度算符",
+ "short": "密度算符",
+ "lead": "<span data-concept=\"density-operator\">密度算符</span>，它描述仅通过各态的概率才为人所知的量子系统：<span data-concept=\"pure-and-mixed-states\">纯态与混合态</span>，每个密度算符都具有的性质，<span data-concept=\"expectation-value\">期望值</span>如何由它得出，带有<span data-concept=\"density-matrix-populations\">布居</span>和<span data-concept=\"density-matrix-coherences\">相干性</span>的<span data-concept=\"density-matrix\">密度矩阵</span>，以及热平衡中的两个系统，一个<span data-concept=\"two-level-atom\">二能级原子</span>和辐射场的一个模。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-thermal",
+   "kind": "sim",
+   "draws": [
+    "population",
+    "energy",
+    "frequency",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "density-operator-def",
+   "concept": "density-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "pure-mixed",
+   "concept": "pure-and-mixed-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "properties",
+   "concept": "density-operator-properties",
+   "verb": "introduces"
+  },
+  {
+   "span": "expectation",
+   "concept": "density-operator-expectation",
+   "verb": "introduces"
+  },
+  {
+   "span": "density-matrix",
+   "concept": "density-matrix",
+   "verb": "introduces"
+  },
+  {
+   "span": "populations",
+   "concept": "density-matrix-populations",
+   "verb": "introduces"
+  },
+  {
+   "span": "coherences",
+   "concept": "density-matrix-coherences",
+   "verb": "introduces"
+  },
+  {
+   "span": "maximal-coherence",
+   "concept": "coherence-bound",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermal-atom",
+   "concept": "thermal-two-level-atom",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermal-field",
+   "concept": "thermal-radiation-field",
+   "verb": "introduces"
+  },
+  {
+   "span": "bose-einstein",
+   "concept": "mean-thermal-photon-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "state-vector",
+   "verb": "uses"
+  },
+  {
+   "span": "density-operator-def",
+   "concept": "born-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "expectation",
+   "concept": "observable",
+   "verb": "uses"
+  },
+  {
+   "span": "expectation",
+   "concept": "expectation-value",
+   "verb": "uses"
+  },
+  {
+   "span": "coherences",
+   "concept": "two-level-dipole-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "pure-density-matrix",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "pure-density-matrix",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "thermal-atom",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "thermal-atom",
+   "concept": "atomic-transition-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "thermal-atom",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "thermal-field",
+   "concept": "cavity-modes",
+   "verb": "uses"
+  },
+  {
+   "span": "thermal-field",
+   "concept": "creation-annihilation-operators",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [
+  {
+   "id": "lvl-1",
+   "label": "基态|1⟩",
+   "figures": [
+    "sim-thermal"
+   ]
+  },
+  {
+   "id": "lvl-2",
+   "label": "激发态|2⟩",
+   "figures": [
+    "sim-thermal"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-property-3",
+   "kind": "correction",
+   "html": "书中给出的是对任意态$|m\\rangle$和$|n\\rangle$有$\\langle n|\\krhohat^2|m\\rangle \\leq \\langle n|\\krhohat|m\\rangle$。该不等式对对角元成立，即对任意态$|n\\rangle$有$\\langle n|\\krhohat^2|n\\rangle \\leq \\langle n|\\krhohat|n\\rangle$，这是因为$\\krhohat$的本征值位于0与1之间；非对角元是复数，不能比较大小。对每个$|n\\rangle$都取等号意味着$\\krhohat^2 = \\krhohat$，这只对纯态成立。"
+  },
+  {
+   "id": "c-eq-3-16",
+   "kind": "correction",
+   "html": "书中给出的是$\\sum_n\\krhonn$，由性质 (2)，它等于1。平均光子数是$\\knbar_j = \\sum_n n\\,\\krhonn$，它与式 (3.14) 一起给出$1/(e^{\\hbar\\knu_j/k_B \\kT} - 1)$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "expectation-as-trace",
+   "what": "期望值表示为阵迹",
+   "source": "现代原子与光学物理 II，3.1 密度算符",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\krhohat = \\sum_\\alpha p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|",
+       "src": "(3.1)"
+      },
+      {
+       "tex": "\\sum_n|n\\rangle\\langle n| = 1",
+       "src": "3.1"
+      },
+      {
+       "tex": "\\mathrm{Tr}[\\hat{A}] = \\sum_n\\langle n|\\hat{A}|n\\rangle",
+       "src": "3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\kShat\\rangle} = \\mk{R}{\\sum_\\alpha p_\\alpha\\langle\\kpsi_\\alpha|\\kShat|\\kpsi_\\alpha\\rangle}",
+      "src": "(3.2)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\kShat\\rangle} = \\mk{R}{\\sum_{\\alpha,n} p_\\alpha\\langle\\kpsi_\\alpha|\\kShat|n\\rangle\\langle n|\\kpsi_\\alpha\\rangle}",
+       "uses": [
+        1
+       ],
+       "cap": "在$\\hat{S}$与$|\\psi_\\alpha\\rangle$之间插入完备性关系。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kShat\\rangle} = \\mk{R}{\\sum_n\\langle n|\\left(\\sum_\\alpha p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\right)\\kShat|n\\rangle}",
+       "uses": [],
+       "cap": "每个$\\langle n|\\psi_\\alpha\\rangle$是一个数，被移到前面。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kShat\\rangle} = \\mk{R}{\\sum_n\\langle n|\\krhohat\\kShat|n\\rangle}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kShat\\rangle} = \\mk{R}{\\mathrm{Tr}[\\krhohat\\kShat]}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(3.5)"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+<section id="two-level-decay">
+<p>作为<span data-concept="monte-carlo-wavefunction" id="mcwf-method">蒙特卡罗波函数法</span>的一个例子，考虑一个<span data-concept="two-level-atom">二能级系统</span>，它从<span data-concept="pure-and-mixed-states">纯态</span><span id="initial-state">$|\kpsi(0)\rangle = \kaone|1\rangle + \katwo|2\rangle$</span>出发，以速率$\kgamma$衰变，使得$\hat{c} = |1\rangle\langle 2|$。在时间$\delta\kt$内，系统<span data-concept="quantum-jump">跳跃</span>出<span data-concept="superposition">叠加态</span>的概率为</p>
+<div class="equation" id="eq-6-22">$$\kdeltapatom = \delta\kt\kgamma\langle\kpsi|\hat{c}^\dagger\hat{c}|\kpsi\rangle \tag{6.22}$$</div>
+<figure class="dv" id="drv-two-level-jump-probability"></figure>
+<p>由于$\kdeltapatom$恰好是从$|2\rangle$衰变到$|1\rangle$的同时<span data-concept="jump-probability">发射一个光子的概率</span>，它理应等于<span data-concept="born-rule">处于激发态的概率</span>乘以该激发态衰变的概率。如果态不衰变，它就按照<span data-concept="effective-hamiltonian">有效哈密顿量</span>演化</p>
+<div class="equation" id="eq-6-24">$$\kHeff = \kDelta|2\rangle\langle 2| + \frac{i\kgamma}{2}\hat{c}^\dagger\hat{c}. \tag{6.24}$$<sup class="fn" data-note="c-eq-6-24"></sup></div>
+<figure class="dv" id="drv-no-jump-two-level-state"></figure>
+<p>由于分母中的归一化项，<span data-concept="born-rule">处于态$|2\rangle$的概率</span>的衰变比$e^{-\kgamma\kt}$更慢；然而，沿途的每一步都有有限的概率<span data-concept="spontaneous-emission">发射一个光子</span>，并确定地<span data-concept="quantum-jump">坍缩</span>到基态。<span id="mc-average">如果对所有这样的轨迹求平均，遵循<span data-concept="monte-carlo-procedure">蒙特卡罗算法</span>，就可以证明<span data-concept="density-matrix-populations">激发态的平均布居</span>确实按$e^{-\kgamma\kt}$衰变。</span></p>
+<p>然而，这一图像的物理意义超出了统计平均，因为它回答了卡迈克尔最初的问题：如果原子不<span data-concept="spontaneous-emission">发射光子</span>，会发生什么？上面的分析表明，<span data-concept="null-measurement" id="null-measurement"><em>不</em>探测到光子也是对系统的一种测量</span>，因为它使态以某种方式演化。由于归一化条件，在长时间下，即使系统从不<span data-concept="spontaneous-emission">发射光子</span>，它也总会最终处于$|1\rangle$。</p>
+<figure class="sim" id="sim-no-jump">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>式 (6.26) 的原子，以速率$\kgamma$从$|2\rangle$衰变到$|1\rangle$。粗曲线是到$\kt$时尚未发射光子的原子的$\kptwo = |\langle 2|\tilde{\kpsi}(\kt)\rangle|^2$；淡曲线是尚无光子到来的概率$|\kaone|^2 + |\katwo|^2e^{-\kgamma\kt}$；二者之积，即虚线，为$|\katwo|^2e^{-\kgamma\kt}$，即对各轨迹的平均。圆点标出粗曲线和虚线降至起始值一半之处。增大$|\katwo|^2$，什么也不发射的原子会在$|2\rangle$上停留得更久，尽管它最终仍落在$|1\rangle$；让它从$|2\rangle$出发，若没有光子，它就永远不会离开。时间以$1/\kgamma$为单位。</span></div>
+</figure>
+<p>尽管<span data-concept="monte-carlo-wavefunction">统计波函数方法</span>可以提供一些直觉和计算能力，但它只在一小部分计算中有用。特别是，<span data-concept="monte-carlo-use-cases" id="use-cases">使用蒙特卡罗法进行模拟有利的情形是</span></p>
+<p>(1) 希尔伯特空间如此之大，以致<span data-concept="density-matrix">密度矩阵</span>的计算不可能进行</p>
+<p>(2) 希望把依赖于测量的反馈纳入系统。反馈项很难纳入<span data-concept="master-equation">主方程</span>，但在<span data-concept="monte-carlo-procedure">蒙特卡罗波函数算法</span>中却很容易实现。不过总的来说，这是万不得已才用的方法，只有在其他解析和数值技术都失败时才应采用。</p>
+</section>

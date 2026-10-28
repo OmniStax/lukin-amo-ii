@@ -1,0 +1,924 @@
+{
+ "id": "7.4",
+ "chapter": "7",
+ "title": "STIRAP 分析：绝热跟随的条件",
+ "short": "STIRAP 分析",
+ "lead": "激发态衰变时，<span data-concept=\"stirap\">STIRAP</span> 的场必须变化得多慢：绝热展开及其给出的条件，<span data-concept=\"quantum-jump\">量子跳跃</span>引起的误差和转移的保真度，在暗态、亮态与激发态的<span data-concept=\"bright-dark-basis\">部分对角化基</span>中再次读出的同一条件，以及关于 <span data-concept=\"electromagnetically-induced-transparency\">EIT</span>、关于用<span data-concept=\"optical-pumping\">光抽运</span>制备<span data-concept=\"dark-state\">暗态</span>、关于不同基中的布居与相干性的评注。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "图 7.6，即托伊尔等人的氖分束器数据，没有显示；其脉冲序列和原子的最终动量在图 7.5 的模拟中重新算出。",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-four-level-pulses",
+   "kind": "sim",
+   "number": "7.5",
+   "folds": [
+    "7.6"
+   ],
+   "originals": [
+    "/media/ch07/fig-7-5.png"
+   ],
+   "original_caption": "四能级系统的脉冲序列。三个场 S = Ω₃，C = Ω₄ 和 P = Ω₁ 用来把原子可控地从初态 |1⟩ 转移到 |3⟩ 与 |4⟩ 的某种叠加。末态中的概率幅由控制脉冲 Ω₄ 的定时、相位和功率决定。",
+   "draws": [
+    "coupling",
+    "population",
+    "amplitude",
+    "time",
+    "momentum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ],
+   "withheld": "图 7.6 复现了已发表的实验数据，本书不得复制。"
+  },
+  {
+   "id": "sim-dark-loss",
+   "kind": "sim",
+   "draws": [
+    "coupling",
+    "population",
+    "rate",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-two-bases",
+   "kind": "sim",
+   "number": "7.7",
+   "originals": [
+    "/media/ch07/fig-7-7.png"
+   ],
+   "original_caption": "与 J = 1 到 J’ = 1 跃迁近共振的线偏振光，若选取量子化轴平行于偏振轴，则最容易理解。在这第一种情形中，这些场显然会把原子抽运到 m∥ = 0 态。如果我们选择在垂直基中分析这个问题，就必须找出以红色标出的 Λ 型系统。光将把布居抽运到相应的 m⊥ = ±1 的暗态叠加，它恰好等于态 m∥ = 0。",
+   "draws": [
+    "population",
+    "coherence",
+    "state"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "eq-7-53",
+   "concept": "dark-state-adiabaticity-condition",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-7-44",
+   "concept": "adiabatic-expansion",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-7-56",
+   "concept": "quantum-jump-error",
+   "verb": "introduces"
+  },
+  {
+   "span": "partial-basis",
+   "concept": "bright-dark-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "omega-na",
+   "concept": "nonadiabatic-rabi-frequency",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-7-64",
+   "concept": "bright-state-escape-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "eit",
+   "concept": "adiabatic-following-eit",
+   "verb": "introduces"
+  },
+  {
+   "span": "pumping-dark",
+   "concept": "dark-state-optical-pumping",
+   "verb": "introduces"
+  },
+  {
+   "span": "coherence-population",
+   "concept": "coherence-population-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "dark-state",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "dark-state-preparation",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "adiabatic-theorem",
+   "verb": "uses"
+  },
+  {
+   "span": "follow",
+   "concept": "stirap",
+   "verb": "uses"
+  },
+  {
+   "span": "stochastic",
+   "concept": "monte-carlo-wavefunction",
+   "verb": "uses"
+  },
+  {
+   "span": "stochastic",
+   "concept": "non-hermitian-evolution",
+   "verb": "uses"
+  },
+  {
+   "span": "stochastic",
+   "concept": "lambda-non-hermitian-evolution",
+   "verb": "uses"
+  },
+  {
+   "span": "stochastic",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "zeroth",
+   "concept": "dark-state",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-7-53",
+   "concept": "adiabaticity-condition",
+   "verb": "uses"
+  },
+  {
+   "span": "jumps-intro",
+   "concept": "quantum-jump",
+   "verb": "uses"
+  },
+  {
+   "span": "jumps-intro",
+   "concept": "jump-probability",
+   "verb": "uses"
+  },
+  {
+   "span": "landau",
+   "concept": "landau-zener",
+   "verb": "uses"
+  },
+  {
+   "span": "partial-basis",
+   "concept": "bare-states",
+   "verb": "uses"
+  },
+  {
+   "span": "partial-basis",
+   "concept": "dark-state",
+   "verb": "uses"
+  },
+  {
+   "span": "partial-basis",
+   "concept": "bright-state",
+   "verb": "uses"
+  },
+  {
+   "span": "partial-basis",
+   "concept": "three-level-dressed-states",
+   "verb": "uses"
+  },
+  {
+   "span": "omega-na",
+   "concept": "nonadiabatic-coupling",
+   "verb": "uses"
+  },
+  {
+   "span": "eit",
+   "concept": "electromagnetically-induced-transparency",
+   "verb": "uses"
+  },
+  {
+   "span": "eit",
+   "concept": "dark-resonance",
+   "verb": "uses"
+  },
+  {
+   "span": "mixture",
+   "concept": "pure-and-mixed-states",
+   "verb": "uses"
+  },
+  {
+   "span": "discovery",
+   "concept": "zeeman-effect",
+   "verb": "uses"
+  },
+  {
+   "span": "discovery",
+   "concept": "lambda-detunings",
+   "verb": "uses"
+  },
+  {
+   "span": "pumping-dark",
+   "concept": "optical-pumping",
+   "verb": "uses"
+  },
+  {
+   "span": "parallel",
+   "concept": "polarization-selection-rules",
+   "verb": "uses"
+  },
+  {
+   "span": "perpendicular",
+   "concept": "lambda-system",
+   "verb": "uses"
+  },
+  {
+   "span": "perpendicular",
+   "concept": "dark-state",
+   "verb": "uses"
+  },
+  {
+   "span": "applications",
+   "concept": "adiabatic-atomic-beamsplitter",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-7-65",
+   "concept": "dark-state-adiabaticity-condition",
+   "verb": "reinforces"
+  },
+  {
+   "span": "pumping-dark",
+   "concept": "bright-dark-basis",
+   "verb": "reinforces"
+  },
+  {
+   "span": "drv-stirap-fidelity",
+   "concept": "stirap-fidelity",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [
+  {
+   "id": "pump",
+   "label": "把 |1⟩ 耦合到激发态的场 Ω₁",
+   "figures": [
+    "sim-four-level-pulses",
+    "sim-dark-loss"
+   ]
+  },
+  {
+   "id": "stokes",
+   "label": "|2⟩ → |3⟩ 跃迁上的场 Ω₂",
+   "figures": [
+    "sim-dark-loss"
+   ]
+  },
+  {
+   "id": "lvl-1",
+   "label": "初态 |1⟩",
+   "figures": [
+    "sim-dark-loss"
+   ]
+  },
+  {
+   "id": "lvl-2",
+   "label": "末态 |2⟩",
+   "figures": [
+    "sim-dark-loss"
+   ]
+  },
+  {
+   "id": "lvl-3",
+   "label": "激发态 |3⟩ = |E⟩",
+   "figures": [
+    "sim-dark-loss"
+   ]
+  },
+  {
+   "id": "four-1",
+   "label": "四能级系统的初态 |1⟩",
+   "figures": [
+    "sim-four-level-pulses"
+   ]
+  },
+  {
+   "id": "four-3",
+   "label": "四能级系统的末态 |3⟩",
+   "figures": [
+    "sim-four-level-pulses"
+   ]
+  },
+  {
+   "id": "four-4",
+   "label": "四能级系统的末态 |4⟩",
+   "figures": [
+    "sim-four-level-pulses"
+   ]
+  },
+  {
+   "id": "four-s",
+   "label": "场 S = Ω₃",
+   "figures": [
+    "sim-four-level-pulses"
+   ]
+  },
+  {
+   "id": "four-c",
+   "label": "控制场 C = Ω₄",
+   "figures": [
+    "sim-four-level-pulses"
+   ]
+  },
+  {
+   "id": "dark",
+   "label": "暗态 |D⟩",
+   "figures": [
+    "sim-dark-loss"
+   ]
+  },
+  {
+   "id": "bright",
+   "label": "亮态 |B⟩",
+   "figures": [
+    "sim-dark-loss"
+   ]
+  },
+  {
+   "id": "pumped",
+   "label": "态 m∥ = 0，m⊥ = ±1 的暗叠加",
+   "figures": [
+    "sim-two-bases"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "footnote-2",
+   "kind": "book",
+   "number": "2",
+   "html": "这等于假设所有衰变都进入我们所考虑的系统之外的第四个态。"
+  },
+  {
+   "id": "footnote-3",
+   "kind": "book",
+   "number": "3",
+   "html": "<p>形式上，我们在寻求矢量微分方程</p><div class=\"equation\" id=\"eq-7-54\">$$\\dot{v} = M(\\kt/\\ktau)v(\\kt), \\tag{7.54}$$</div><p>的解，我们猜测它具有如下形式：$v(\\kt) = v^{(0)} + v^{(1)} + \\ldots$，其中$v^{(0)}$满足$M(\\kt/\\ktau)v^{(0)} = 0$。把这一结果代入上面的微分方程，我们发现</p><div class=\"equation\" id=\"eq-7-55\">$$\\dot{v}^{(0)} \\approx M(\\kt/\\ktau)\\left(v^{(0)} + v^{(1)}\\right), \\tag{7.55}$$</div><p>即$v^{(1)} = M^{-1}(\\kt/\\ktau)\\dot{v}^{(0)}$。然而，这样的展开对我们所考虑的系统失效，因为$M$是奇异的，不能求逆。尽管如此，我们看到这一展开确实告诉了我们关于高阶修正如何标度的一些有用信息。要用某种<span data-concept=\"adiabatic-expansion\">绝热展开</span>正确地求解这个系统，应当<span data-concept=\"adiabatic-elimination\">绝热消除</span>激发态，但对$\\kcinst_{1,2}$所得的运动方程则要精确求解。</p>"
+  },
+  {
+   "id": "footnote-4",
+   "kind": "book",
+   "number": "4",
+   "html": "注意，我们把$\\kOmegaone(\\kt), \\kOmegatwo(\\kt)$选为正弦和余弦，使我们得到一个恒定的非绝热耦合，这使数学处理更容易。其他函数同样会导致$\\kOmegaNA$，但一般说来它会是时间的函数。"
+  },
+  {
+   "id": "c-psi-paren",
+   "kind": "correction",
+   "html": "书中印的是$|\\kpsi(\\kt))\\rangle$，有一个重复的右括号；该态是$|\\kpsi(\\kt)\\rangle$。"
+  },
+  {
+   "id": "c-c2-2",
+   "kind": "correction",
+   "html": "书中印的是$\\kctwo^{(2)}$。该方程是关于两个一阶修正$\\kcone^{(1)}$和$\\kctwo^{(1)}$的一个关系式，正如句子接下去所说。"
+  },
+  {
+   "id": "c-eq-7-56",
+   "kind": "correction",
+   "html": "书中印的积分没有$d\\kt$，且带有因子$\\kgammaonethree$。由式 (7.43) 的$\\dot{\\kcthree} = -\\kgammaonethree\\kcthree$，态的范数以速率$2\\kgammaonethree|\\kcthree|^2$下降，所以$\\kPjump = 2\\kgammaonethree\\int_0^{\\ktau}|\\kcthree|^2 d\\kt = 2\\kgammaonethree/\\kOmega^2\\ktau$，其中$|\\kcthree| = 1/\\kOmega\\ktau$来自式 (7.51)。条件 (7.57) 不变。"
+  },
+  {
+   "id": "c-final-time",
+   "kind": "correction",
+   "html": "书中写的是$\\kOmega\\ktau = \\pi/2$。末态在$\\kt = (\\pi/2)\\ktau$时到达，此时$\\kOmegaone = \\kOmega$，$\\kOmegatwo = 0$，无论$\\kOmega\\ktau$为何值。"
+  },
+  {
+   "id": "c-alzetta",
+   "kind": "correction",
+   "html": "该论文是 G. 阿尔泽塔、A. 戈齐尼、L. 莫伊和 G. 奥里奥尔斯，Il Nuovo Cimento B 36, 5 (1976)；书中把第一作者的姓名和期刊名拼错了。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "stirap-zeroth-order",
+   "what": "STIRAP 的零阶概率幅",
+   "source": "现代原子与光学物理 II，7.4 STIRAP 分析：绝热跟随的条件，绝热条件的分析",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "最低阶解是定态的：忽略所有时间导数。",
+       "src": "7.4"
+      },
+      {
+       "tex": "\\dot{\\kctwo} = i\\kOmegatwo^*(\\kt)\\kcthree",
+       "src": "(7.42)"
+      },
+      {
+       "tex": "\\kOmegaone(\\kt) = \\kOmega\\sin\\frac{\\kt}{\\ktau},\\quad \\kOmegatwo(\\kt) = \\kOmega\\cos\\frac{\\kt}{\\ktau}",
+       "src": "(7.39), (7.40)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{i\\kOmegaone^*(\\kt)\\kcthree}",
+      "src": "(7.41)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{0} = \\mk{R}{i\\kOmegaone^*(\\kt)\\kcthree^{(0)}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{R}{\\kcthree^{(0)}} = \\mk{L}{0}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "$\\Omega_1$和$\\Omega_2$从不同时为零；在$\\Omega_1 = 0$处，(7.42) 给出同样的结果，其中$\\Omega_2 = \\Omega$。"
+      }
+     ],
+     "num": "(7.47)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "最低阶解是定态的：忽略所有时间导数。",
+       "src": "7.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcthree}} = \\mk{g}{-\\kgammaonethree\\kcthree} + \\mk{R}{i\\left(\\kOmegaone(\\kt)\\kcone + \\kOmegatwo(\\kt)\\kctwo\\right)}",
+      "src": "(7.43)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{0} = \\mk{g}{-\\kgammaonethree\\kcthree^{(0)}} + \\mk{R}{i\\left(\\kOmegaone\\kcone^{(0)} + \\kOmegatwo\\kctwo^{(0)}\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{0} = \\mk{R}{i\\left(\\kOmegaone\\kcone^{(0)} + \\kOmegatwo\\kctwo^{(0)}\\right)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{R}{\\kOmegaone\\kcone^{(0)} + \\kOmegatwo\\kctwo^{(0)}} = \\mk{z}{0}",
+       "uses": [],
+       "map": {
+        "L": "z"
+       }
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\langle\\kpsi|\\kpsi\\rangle = |\\kcone|^2 + |\\kctwo|^2 + |\\kcthree|^2 = 1",
+       "src": "7.4"
+      },
+      {
+       "text": "系统在$\\kt = 0$时从$|1\\rangle$出发。",
+       "src": "7.4"
+      },
+      {
+       "tex": "\\kOmegaone(\\kt) = \\kOmega\\sin\\frac{\\kt}{\\ktau},\\quad \\kOmegatwo(\\kt) = \\kOmega\\cos\\frac{\\kt}{\\ktau}",
+       "src": "(7.39), (7.40)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{R}{\\kOmegaone\\kcone^{(0)} + \\kOmegatwo\\kctwo^{(0)}} = \\mk{z}{0}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{R}{\\kcone^{(0)}} = \\mk{z}{\\frac{\\kOmegatwo}{\\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "由$c_2^{(0)} = -(\\Omega_1/\\Omega_2)c_1^{(0)}$和$c_3^{(0)} = 0$，归一化确定$|c_1^{(0)}|$；符号取$t = 0$时$c_1 = 1$的符号。"
+      },
+      {
+       "tex": "\\mk{R}{\\kcone^{(0)}} = \\mk{z}{\\frac{\\kOmegatwo}{\\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}}} = \\mk{c}{\\cos\\frac{\\kt}{\\ktau}}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(7.45)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\kOmegaone(\\kt) = \\kOmega\\sin\\frac{\\kt}{\\ktau},\\quad \\kOmegatwo(\\kt) = \\kOmega\\cos\\frac{\\kt}{\\ktau}",
+       "src": "(7.39), (7.40)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{R}{\\kOmegaone\\kcone^{(0)} + \\kOmegatwo\\kctwo^{(0)}} = \\mk{z}{0}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{R}{\\kctwo^{(0)}} = \\mk{z}{-\\frac{\\kOmegaone}{\\kOmegatwo}\\kcone^{(0)}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{R}{\\kctwo^{(0)}} = \\mk{z}{-\\frac{\\kOmegaone}{\\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{R}{\\kctwo^{(0)}} = \\mk{z}{-\\frac{\\kOmegaone}{\\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}}} = \\mk{c}{-\\sin\\frac{\\kt}{\\ktau}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(7.46)"
+    }
+   ]
+  },
+  {
+   "id": "stirap-first-order",
+   "what": "STIRAP 的一阶修正",
+   "source": "现代原子与光学物理 II，7.4 STIRAP 分析：绝热跟随的条件，绝热条件的分析",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kcinst_i = \\kcinst_i^{(0)} + \\kcinst_i^{(1)} + \\ldots",
+       "src": "(7.44)"
+      },
+      {
+       "text": "每一阶小一个$1/\\ktau$的幂，而一次时间导数再带来一个。",
+       "src": "7.4"
+      },
+      {
+       "tex": "\\kcthree^{(0)} = 0",
+       "src": "(7.47)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{i\\kOmegaone^*\\kcthree}",
+      "src": "(7.41)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}^{(0)} + \\dot{\\kcone}^{(1)}} = \\mk{R}{i\\kOmegaone^*(\\kcthree^{(0)} + \\kcthree^{(1)})}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}^{(0)}} = \\mk{R}{i\\kOmegaone^*\\kcthree^{(1)}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "到$1/\\tau$的一阶：$\\dot{c}^{(1)}$是二阶的，且$c_3^{(0)} = 0$。"
+      }
+     ],
+     "num": "(7.48)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kcinst_i = \\kcinst_i^{(0)} + \\kcinst_i^{(1)} + \\ldots",
+       "src": "(7.44)"
+      },
+      {
+       "text": "每一阶小一个$1/\\ktau$的幂，而一次时间导数再带来一个。",
+       "src": "7.4"
+      },
+      {
+       "tex": "\\kcthree^{(0)} = 0",
+       "src": "(7.47)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kctwo}} = \\mk{R}{i\\kOmegatwo^*\\kcthree}",
+      "src": "(7.42)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kctwo}^{(0)} + \\dot{\\kctwo}^{(1)}} = \\mk{R}{i\\kOmegatwo^*(\\kcthree^{(0)} + \\kcthree^{(1)})}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kctwo}^{(0)}} = \\mk{R}{i\\kOmegatwo^*\\kcthree^{(1)}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "到$1/\\tau$的一阶：$\\dot{c}^{(1)}$是二阶的，且$c_3^{(0)} = 0$。"
+      }
+     ],
+     "num": "(7.49)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kcinst_i = \\kcinst_i^{(0)} + \\kcinst_i^{(1)} + \\ldots",
+       "src": "(7.44)"
+      },
+      {
+       "text": "每一阶小一个$1/\\ktau$的幂，而一次时间导数再带来一个。",
+       "src": "7.4"
+      },
+      {
+       "tex": "\\kcthree^{(0)} = 0",
+       "src": "(7.47)"
+      },
+      {
+       "text": "零阶概率幅满足$\\kOmegaone\\kcone^{(0)} + \\kOmegatwo\\kctwo^{(0)} = 0$：定态解，(7.45) 和 (7.46)。",
+       "src": "(7.45), (7.46)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcthree}} = \\mk{g}{-\\kgammaonethree\\kcthree} + \\mk{R}{i\\left(\\kOmegaone\\kcone + \\kOmegatwo\\kctwo\\right)}",
+      "src": "(7.43)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kcthree}^{(0)} + \\dot{\\kcthree}^{(1)}} = \\mk{g}{-\\kgammaonethree(\\kcthree^{(0)} + \\kcthree^{(1)})} + \\mk{R}{i\\left(\\kOmegaone(\\kcone^{(0)} + \\kcone^{(1)}) + \\kOmegatwo(\\kctwo^{(0)} + \\kctwo^{(1)})\\right)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{0} = \\mk{g}{-\\kgammaonethree\\kcthree^{(1)}} + \\mk{R}{i\\left(\\kOmegaone\\kcone^{(1)} + \\kOmegatwo\\kctwo^{(1)}\\right)}",
+       "uses": [
+        1,
+        2,
+        3
+       ],
+       "cap": "到$1/\\tau$的一阶：$c_3^{(0)}$在所有时刻为零，所以$\\dot{c}_3^{(0)} = 0$；$\\dot{c}_3^{(1)}$是二阶的。"
+      }
+     ],
+     "num": "(7.50)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kcone^{(0)} = \\cos\\frac{\\kt}{\\ktau}",
+       "src": "(7.45)"
+      },
+      {
+       "tex": "\\kOmegaone(\\kt) = \\kOmega\\sin\\frac{\\kt}{\\ktau},\\quad \\kOmegatwo(\\kt) = \\kOmega\\cos\\frac{\\kt}{\\ktau}",
+       "src": "(7.39), (7.40)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcone}^{(0)}} = \\mk{R}{i\\kOmegaone^*\\kcthree^{(1)}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{R}{\\kcthree^{(1)}} = \\mk{L}{\\frac{\\dot{\\kcone}^{(0)}}{i\\kOmegaone^*}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{R}{\\kcthree^{(1)}} = \\mk{L}{\\frac{-\\frac{1}{\\ktau}\\sin\\frac{\\kt}{\\ktau}}{i\\kOmega\\sin\\frac{\\kt}{\\ktau}}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "对 (7.45) 求导；场是实的。"
+      },
+      {
+       "tex": "\\mk{R}{\\kcthree^{(1)}} = \\mk{L}{\\frac{\\dot{\\kcone}^{(0)}}{i\\kOmegaone^*}} = \\mk{v}{\\frac{i}{\\kOmega\\ktau}}",
+       "uses": [],
+       "cap": "$-1/i = i$."
+      }
+     ],
+     "num": "(7.51)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{0} = \\mk{g}{-\\kgammaonethree\\kcthree^{(1)}} + \\mk{R}{i\\left(\\kOmegaone\\kcone^{(1)} + \\kOmegatwo\\kctwo^{(1)}\\right)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{0} = \\mk{g}{-\\kgammaonethree\\frac{i}{\\kOmega\\ktau}} + \\mk{R}{i\\left(\\kOmegaone\\kcone^{(1)} + \\kOmegatwo\\kctwo^{(1)}\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{R}{i\\left(\\kOmegaone\\kcone^{(1)} + \\kOmegatwo\\kctwo^{(1)}\\right)} = \\mk{g}{\\frac{i\\kgammaonethree}{\\kOmega\\ktau}}",
+       "uses": [],
+       "map": {
+        "L": "g"
+       }
+      }
+     ],
+     "num": "(7.52)"
+    }
+   ]
+  },
+  {
+   "id": "stirap-fidelity",
+   "what": "STIRAP 的保真度",
+   "source": "现代原子与光学物理 II，7.4 STIRAP 分析：绝热跟随的条件，量子跳跃引起的误差",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dot{\\kcone} = i\\kOmegaone^*(\\kt)\\kcthree",
+       "src": "(7.41)"
+      },
+      {
+       "tex": "\\dot{\\kctwo} = i\\kOmegatwo^*(\\kt)\\kcthree",
+       "src": "(7.42)"
+      },
+      {
+       "tex": "\\dot{\\kcthree} = -\\kgammaonethree\\kcthree + i\\left(\\kOmegaone(\\kt)\\kcone + \\kOmegatwo(\\kt)\\kctwo\\right)",
+       "src": "(7.43)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{N}{\\frac{d}{d\\kt}\\langle\\kpsi|\\kpsi\\rangle} = \\mk{R}{\\frac{d}{d\\kt}\\left(|\\kcone|^2 + |\\kctwo|^2 + |\\kcthree|^2\\right)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{N}{\\frac{d}{d\\kt}\\langle\\kpsi|\\kpsi\\rangle} = \\mk{R}{2\\,\\mathrm{Re}\\left(\\kcone^*\\dot{\\kcone} + \\kctwo^*\\dot{\\kctwo} + \\kcthree^*\\dot{\\kcthree}\\right)}",
+       "uses": [],
+       "cap": "$\\frac{d}{dt}|c|^2 = 2\\,\\mathrm{Re}(c^*\\dot{c})$."
+      },
+      {
+       "tex": "\\mk{N}{\\frac{d}{d\\kt}\\langle\\kpsi|\\kpsi\\rangle} = \\mk{R}{2\\,\\mathrm{Re}\\left(i\\kOmegaone\\kcone^*\\kcthree + i\\kOmegatwo\\kctwo^*\\kcthree - \\kgammaonethree|\\kcthree|^2 + i\\kcthree^*(\\kOmegaone\\kcone + \\kOmegatwo\\kctwo)\\right)}",
+       "uses": [
+        0,
+        1,
+        2
+       ],
+       "cap": "场是实的。"
+      },
+      {
+       "tex": "\\mk{N}{\\frac{d}{d\\kt}\\langle\\kpsi|\\kpsi\\rangle} = \\mk{R}{-2\\kgammaonethree|\\kcthree|^2}",
+       "uses": [],
+       "cap": "含$\\Omega_1$和$\\Omega_2$的项成对出现，为$iz + iz^*$，它们是虚的。"
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kcthree^{(1)} = \\frac{i}{\\kOmega\\ktau}",
+       "src": "(7.51)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{N}{\\frac{d}{d\\kt}\\langle\\kpsi|\\kpsi\\rangle} = \\mk{R}{-2\\kgammaonethree|\\kcthree|^2}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{N}{\\frac{d}{d\\kt}|d|^2} \\approx \\mk{R}{-\\frac{2\\kgammaonethree}{\\kOmega^2\\ktau^2}|d|^2}",
+       "uses": [
+        1
+       ],
+       "cap": "布居留在暗态，其概率幅为$d$，$c_3$如 (7.51) 那样跟随它：$c_3 \\approx i\\,d/\\Omega\\tau$。"
+      },
+      {
+       "tex": "\\mk{N}{|d(\\kt)|^2} \\approx \\mk{R}{e^{-2\\kgammaonethree\\kt/\\kOmega^2\\ktau^2}}",
+       "uses": [],
+       "cap": "从$|d(0)|^2 = 1$积分。"
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "转移在$\\kt = (\\pi/2)\\ktau$时结束，此时$\\kOmegatwo = 0$，暗态是$-|2\\rangle$。",
+       "src": "7.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{N}{|d(\\kt)|^2} \\approx \\mk{R}{e^{-2\\kgammaonethree\\kt/\\kOmega^2\\ktau^2}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{N}{|d(\\tfrac{\\pi}{2}\\ktau)|^2} \\approx \\mk{R}{e^{-\\pi\\kgammaonethree/\\kOmega^2\\ktau}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{N}{\\krhotwotwo} = \\mk{R}{e^{-\\frac{\\pi\\kgammaonethree}{|\\kOmega|^2\\ktau}}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(7.58)",
+     "note": "书中印的指数是$-\\pi\\kgammaonethree/2|\\kOmega|^2\\ktau$，是这里所得损耗的一半。对 (7.41)–(7.43) 精确积分，与不带 2 的指数相符：当$\\kgammaonethree/\\kOmega^2\\ktau = 0.05$时，它给出 0.859，而这里为 0.855，书中的指数给出 0.924。"
+    }
+   ]
+  }
+ ]
+}

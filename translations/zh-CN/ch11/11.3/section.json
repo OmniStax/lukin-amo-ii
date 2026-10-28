@@ -1,0 +1,559 @@
+{
+ "id": "11.3",
+ "chapter": "11",
+ "title": "原子玻色凝聚实验中使用的技术",
+ "short": "实验技术",
+ "lead": "原子如何被带入玻色凝聚所需的冷而稠密的条件：表面为何会俘获原子，实验室阱有多深，装载这些阱的冷却，光阱和<span data-concept=\"magnetic-trap\">磁阱</span>，<span data-concept=\"evaporative-cooling\">蒸发冷却</span>及其得失的理论，以及如何对冷云成像。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "fig-buffer-gas",
+   "kind": "figure",
+   "number": "11.2",
+   "originals": [
+    "/media/ch11/fig-11-2.png"
+   ],
+   "original_caption": "缓冲气体冷却可用于把任何原子或分子制备到接近 1K，这足以陷俘几乎所有顺磁原子和分子。",
+   "draws": [],
+   "conventions": [
+    "He"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-evaporation",
+   "kind": "sim",
+   "number": "11.3",
+   "originals": [
+    "/media/ch11/fig-11-3.png"
+   ],
+   "original_caption": "蒸发冷却。只有最热的原子具有足够的能量逃出阱的约束势并黏附到壁上。剩下的原子重新热化后，达到较低的温度。通过降低阱势，可以达到相继更低的温度，而冷却率不会显著减慢。",
+   "draws": [
+    "energy",
+    "temperature",
+    "density",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-rf-knife",
+   "kind": "sim",
+   "number": "11.4",
+   "originals": [
+    "/media/ch11/fig-11-4.png"
+   ],
+   "original_caption": "可以把射频刀设想为一个朗道-齐纳过程，其中射频场的频率决定回避交叉的位置，射频场的大小决定其宽度。因此，射频刀实际上起到限制阱深的作用。",
+   "draws": [
+    "energy",
+    "frequency",
+    "coupling",
+    "length",
+    "magnetic-moment"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "trapping-cooling",
+   "concept": "trapping-and-cooling",
+   "verb": "introduces"
+  },
+  {
+   "span": "sticking",
+   "concept": "surface-sticking",
+   "verb": "introduces"
+  },
+  {
+   "span": "resonance-time",
+   "concept": "surface-resonance-time",
+   "verb": "introduces"
+  },
+  {
+   "span": "trap-depth",
+   "concept": "trap-depth",
+   "verb": "introduces"
+  },
+  {
+   "span": "buffer-gas",
+   "concept": "buffer-gas-cooling",
+   "verb": "introduces"
+  },
+  {
+   "span": "magnetic-trap",
+   "concept": "magnetic-trap",
+   "verb": "introduces"
+  },
+  {
+   "span": "adiabatic-following",
+   "concept": "adiabatic-spin-following",
+   "verb": "introduces"
+  },
+  {
+   "span": "quadrupole",
+   "concept": "quadrupole-trap",
+   "verb": "introduces"
+  },
+  {
+   "span": "ioffe-pritchard",
+   "concept": "ioffe-pritchard-trap",
+   "verb": "introduces"
+  },
+  {
+   "span": "evaporative-cooling-def",
+   "concept": "evaporative-cooling",
+   "verb": "introduces"
+  },
+  {
+   "span": "rf-knife",
+   "concept": "rf-knife",
+   "verb": "introduces"
+  },
+  {
+   "span": "competing",
+   "concept": "trap-loss-processes",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-trap",
+   "concept": "linear-trap-atom-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-body",
+   "concept": "two-body-loss",
+   "verb": "introduces"
+  },
+  {
+   "span": "evaporation-rate",
+   "concept": "evaporation-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "loss-ratio",
+   "concept": "evaporation-figure-of-merit",
+   "verb": "introduces"
+  },
+  {
+   "span": "absorption-imaging",
+   "concept": "absorption-imaging",
+   "verb": "introduces"
+  },
+  {
+   "span": "tof",
+   "concept": "time-of-flight-imaging",
+   "verb": "introduces"
+  },
+  {
+   "span": "phase-contrast",
+   "concept": "phase-contrast-imaging",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-11-11",
+   "concept": "de-broglie-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-11-11",
+   "concept": "chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "laser-cooling",
+   "concept": "laser-cooling",
+   "verb": "uses"
+  },
+  {
+   "span": "laser-cooling",
+   "concept": "doppler-cooling",
+   "verb": "uses"
+  },
+  {
+   "span": "laser-cooling",
+   "concept": "magneto-optical-trap",
+   "verb": "uses"
+  },
+  {
+   "span": "laser-cooling",
+   "concept": "polarization-gradient",
+   "verb": "uses"
+  },
+  {
+   "span": "laser-cooling",
+   "concept": "bec-criterion",
+   "verb": "uses"
+  },
+  {
+   "span": "dipole-trap",
+   "concept": "dipole-trap",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-11-13",
+   "concept": "weak-field-zeeman-shift",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-11-14",
+   "concept": "adiabaticity-condition",
+   "verb": "uses"
+  },
+  {
+   "span": "rf-landau-zener",
+   "concept": "landau-zener",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-11-17",
+   "concept": "atom-number-density",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-11-35",
+   "concept": "refractive-index",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-11-37",
+   "concept": "absorption-cross-section",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [],
+ "footnotes": [
+  {
+   "id": "c-majorana",
+   "kind": "correction",
+   "html": "书中印的是“Majorana flops”。这些自旋反转称为马约拉纳反转（Majorana flips）。"
+  },
+  {
+   "id": "c-quadrupole-sum",
+   "kind": "correction",
+   "html": "书中印的是$\\sum|\\tilde{B}_i| = 0$，带绝对值时它只在场为零时成立。麦克斯韦方程$\\nabla\\cdot\\mathbf{B} = 0$要求$\\sum_i\\tilde{B}_i = 0$：三个轴向的梯度相互抵消，反亥姆霍兹场的$B'$、$B'$和$-2B'$就是如此。"
+  },
+  {
+   "id": "c-fig-11-4-cited",
+   "kind": "correction",
+   "html": "书中引用的是图 11.4。降低后的阱深画在图 11.3 中；图 11.4 是下一段的射频刀。"
+  },
+  {
+   "id": "c-eq-11-29",
+   "kind": "correction",
+   "html": "原子的热化率与它自身的碰撞率成正比，$\\kGammath \\propto \\knzero\\kvbar\\ksigmael$；$\\knzero^2\\kvbar\\ksigmael$是单位体积单位时间内的碰撞数。此外，$\\ksigmael$是弹性碰撞的截面，不是它们的速率。"
+  },
+  {
+   "id": "c-table-11-3-electric",
+   "kind": "correction",
+   "html": "电场通过极化率陷俘基态原子，阱深量级为$\\frac{1}{2}\\alpha E^2$。对钠（$\\alpha \\approx 24$ Å³）而言，在 1 kV/cm 时约为 1 µK，在 100 kV/cm 时约为 10 mK，正是表中列出的阱深；1–100 MV/cm 的场会给出大一百万倍的阱深。实验室场强是 1–100 kV/cm。"
+  },
+  {
+   "id": "c-table-11-3-gravity",
+   "kind": "correction",
+   "html": "重力把质量为$m$的原子束缚在高度$h$以下，阱深为$mgh$，而$mg/k_B$对氢是每米 1.2 mK，对钠是 27 mK/m，对⁸⁷Rb是 0.10 K/m，对原子和分子都高于表中印出的范围。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "surface-resonance-time",
+   "what": "原子在表面上的共振时间",
+   "source": "现代原子与光学物理 II，11.3 原子玻色凝聚实验中使用的技术",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "平衡时，流向表面的原子通量与原子离开表面的速率$\\sigma/\\ktauR$相等，其中$\\sigma$是面密度。",
+       "src": "11.3.1"
+      },
+      {
+       "tex": "\\Phi = \\tfrac{1}{4}\\kndens\\kvbar s",
+       "src": "11.3.1"
+      },
+      {
+       "tex": "\\frac{\\sigma}{\\kndens} = \\klambdaDB e^{\\kEB/(k_B\\kT)}",
+       "src": "(11.11)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{\\Phi} = \\frac{\\mk{sig}{\\sigma}}{\\mk{t}{\\ktauR}}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{f}{\\tfrac{1}{4}\\kndens\\kvbar s} = \\frac{\\mk{sig}{\\sigma}}{\\mk{t}{\\ktauR}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{t}{\\ktauR} = \\frac{\\mk{sig}{4\\sigma}}{\\mk{f}{\\kndens\\kvbar s}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{\\ktauR} = \\frac{4\\mk{sig}{\\klambdaDB e^{\\kEB/(k_B\\kT)}}}{\\mk{f}{\\kvbar s}}",
+       "uses": [
+        2
+       ],
+       "cap": "分子分母同除以$n$，剩下$\\sigma/n$，它由 (11.11) 给出。"
+      },
+      {
+       "tex": "\\mk{t}{\\ktauR} = \\frac{4\\mk{lam}{\\klambdaDB}}{\\mk{f}{\\kvbar s}}\\mk{e}{e^{\\kEB/(k_B\\kT)}}",
+       "uses": [],
+       "map": {
+        "sig": [
+         "lam",
+         "e"
+        ]
+       }
+      }
+     ],
+     "num": "(11.12)"
+    }
+   ]
+  },
+  {
+   "id": "linear-trap-atom-number",
+   "what": "线性阱中的原子数",
+   "source": "现代原子与光学物理 II，11.3 原子玻色凝聚实验中使用的技术，11.3.6",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kndens(\\rho) = \\knzero e^{-\\kmumag|B(\\rho)|/k_B\\kT}",
+       "src": "(11.17)"
+      },
+      {
+       "tex": "B(\\rho) = \\frac{B_0}{\\rho_0}\\rho",
+       "src": "(11.16)"
+      },
+      {
+       "text": "当$\\ketaev > 5$时，阱边缘附近的原子密度小到可以忽略，所以积分的上限$\\rho_0$可以取为$\\infty$。",
+       "src": "11.3.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{N}{N} = \\mk{I}{\\int d^3\\mathbf{r}\\,\\kndens(\\rho)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{N}{N} = \\mk{I}{\\int d^3\\mathbf{r}\\,\\knzero e^{-\\kmumag|B(\\rho)|/k_B\\kT}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{N}{N} = \\mk{I}{\\int_0^{\\rho_0} d\\rho\\, 4\\pi\\rho^2\\knzero e^{-\\overbrace{(\\kmumag B_0/k_B\\kT)}^{\\ketaev}(\\rho/\\rho_0)}}",
+       "uses": [
+        1
+       ],
+       "cap": "密度只依赖于$\\rho$，所以$d^3\\mathbf{r} = 4\\pi\\rho^2 d\\rho$，一直到阱的大小$\\rho_0$。"
+      },
+      {
+       "tex": "\\mk{N}{N} \\approx \\mk{I}{\\frac{4\\pi\\rho_0^3}{\\ketaev^3}\\knzero\\int_0^\\infty du\\, u^2e^{-u}}",
+       "uses": [
+        2
+       ],
+       "cap": "代入$u = \\eta\\rho/\\rho_0$，于是$\\rho^2 d\\rho = (\\rho_0/\\eta)^3 u^2 du$。"
+      },
+      {
+       "tex": "\\mk{N}{N} \\approx \\mk{I}{6\\underbrace{\\frac{4\\pi\\rho_0^3}{3}}_{\\kVgeo}\\frac{\\knzero}{\\ketaev^3}}",
+       "uses": [],
+       "cap": "$\\int_0^\\infty u^2 e^{-u}du = 2$，并且$2 \\cdot 4\\pi\\rho_0^3 = 6 \\cdot \\frac{4\\pi\\rho_0^3}{3}$。"
+      }
+     ],
+     "num": "(11.21)",
+     "note": "书中印的 (11.21) 没有$\\knzero$：$6\\kVgeo/\\ketaev^3$。积分 (11.20) 带有$\\knzero$，所以$N = 6\\kVgeo\\knzero/\\ketaev^3$。"
+    }
+   ]
+  },
+  {
+   "id": "dipolar-loss-rate",
+   "what": "偶极弛豫导致的线性阱损失率",
+   "source": "现代原子与光学物理 II，11.3 原子玻色凝聚实验中使用的技术，11.3.6",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dot{\\kndens} = -\\kgin\\kndens^2",
+       "src": "(11.22)"
+      },
+      {
+       "tex": "\\kndens(\\rho) = \\knzero e^{-\\kmumag|B(\\rho)|/k_B\\kT}",
+       "src": "(11.17)"
+      },
+      {
+       "tex": "\\ketaev\\frac{\\rho}{\\rho_0} = \\frac{\\kmumag B_0}{k_B\\kT}\\frac{\\rho}{\\rho_0} = \\frac{\\kmumag|B(\\rho)|}{k_B\\kT}",
+       "src": "(11.16), (11.19)"
+      },
+      {
+       "text": "当$\\ketaev > 5$时，阱边缘附近的原子密度小到可以忽略，所以积分的上限$\\rho_0$可以取为$\\infty$。",
+       "src": "11.3.6"
+      },
+      {
+       "tex": "\\kVgeo = \\frac{4\\pi\\rho_0^3}{3}",
+       "src": "(11.21)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{N}{\\dot{N}_d} = \\mk{I}{\\int d^3\\mathbf{r}\\,\\dot{\\kndens}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{N}{\\dot{N}_d} = \\mk{I}{-\\int d^3\\mathbf{r}\\,\\kgin\\kndens^2}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{N}{\\dot{N}_d} = \\mk{I}{-\\int d^3\\mathbf{r}\\,\\kgin\\knzero^2e^{-2\\kmumag|B(\\rho)|/k_B\\kT}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{N}{\\dot{N}_d} = \\mk{I}{-\\int d^3\\mathbf{r}\\,\\kgin\\knzero^2e^{-2\\ketaev\\rho/\\rho_0}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{N}{\\dot{N}_d} = \\mk{I}{-\\kgin 4\\pi\\knzero^2\\int_0^{\\rho_0}\\rho^2d\\rho\\, e^{-2\\rho\\ketaev/\\rho_0}}",
+       "uses": [],
+       "cap": "与$N$的情形相同，$d^3\\mathbf{r} = 4\\pi\\rho^2 d\\rho$，一直到阱的大小$\\rho_0$。"
+      },
+      {
+       "tex": "\\mk{N}{\\dot{N}_d} \\approx \\mk{I}{-\\kgin 4\\pi\\knzero^2\\frac{\\rho_0^3}{4\\ketaev^3}}",
+       "uses": [
+        3
+       ],
+       "cap": "$\\int_0^\\infty \\rho^2 e^{-2\\eta\\rho/\\rho_0}d\\rho = 2\\left(\\frac{\\rho_0}{2\\eta}\\right)^3 = \\frac{\\rho_0^3}{4\\eta^3}$。"
+      },
+      {
+       "tex": "\\mk{N}{\\dot{N}_d} \\approx \\mk{I}{-6\\kgin\\knzero^2\\frac{\\kVgeo}{\\ketaev^3}\\cdot\\frac{1}{8}}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(11.26)"
+    }
+   ]
+  },
+  {
+   "id": "evaporation-flux",
+   "what": "蒸发原子流向腔室壁的通量",
+   "source": "现代原子与光学物理 II，11.3 原子玻色凝聚实验中使用的技术，11.3.6",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "蒸发的原子是阱边缘的那些原子，$\\rho = \\rho_0$。",
+       "src": "11.3.6"
+      },
+      {
+       "tex": "\\kndens(\\rho) = \\knzero e^{-\\kmumag|B(\\rho)|/k_B\\kT}",
+       "src": "(11.17)"
+      },
+      {
+       "tex": "B(\\rho) = \\frac{B_0}{\\rho_0}\\rho",
+       "src": "(11.16)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{\\Phi} = \\frac{1}{4}\\mk{n}{\\kndens}\\mk{v}{\\kvbar s}",
+      "src": "11.3.1",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{f}{\\Phi} = \\frac{1}{4}\\mk{n}{\\kndens(\\rho_0)}\\mk{v}{\\kvbar s}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{f}{\\Phi} = \\frac{1}{4}\\mk{n}{\\knzero e^{-\\kmumag|B(\\rho_0)|/k_B\\kT}}\\mk{v}{\\kvbar s}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{f}{\\Phi} = \\frac{1}{4}\\mk{n}{\\knzero e^{-\\kmumag B_0/(k_B\\kT)}}\\mk{v}{\\kvbar s}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(11.28)"
+    }
+   ]
+  }
+ ]
+}

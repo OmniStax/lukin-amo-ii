@@ -1,0 +1,1213 @@
+{
+ "id": "11",
+ "dir": "ch11",
+ "title": "原子物质波的量子动力学",
+ "intro": {},
+ "sections": [
+  {
+   "id": "11.1",
+   "title": "引言"
+  },
+  {
+   "id": "11.2",
+   "title": "实验历史"
+  },
+  {
+   "id": "11.3",
+   "title": "原子玻色凝聚实验中使用的技术"
+  },
+  {
+   "id": "11.4",
+   "title": "原子间相互作用"
+  },
+  {
+   "id": "11.5",
+   "title": "玻色凝聚体中的激发"
+  },
+  {
+   "id": "11.6",
+   "title": "玻色凝聚体的一级相干性"
+  },
+  {
+   "id": "11.7",
+   "title": "原子物质波的高阶相干性"
+  },
+  {
+   "id": "11.8",
+   "title": "光学格子中的冷原子"
+  }
+ ],
+ "variables": [
+  {
+   "section": "11.1",
+   "sym": "lambda_dB",
+   "concept": "de-broglie-wavelength",
+   "meaning": "热德布罗意波长，即原子的物质波包在温度 T 下的大小",
+   "unit": "m",
+   "anchor": "11.1-eq-11-1"
+  },
+  {
+   "section": "11.1",
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "气体的温度",
+   "unit": "K",
+   "anchor": "11.1-eq-11-1"
+  },
+  {
+   "section": "11.1",
+   "sym": "m",
+   "type": "mass",
+   "meaning": "原子的质量",
+   "unit": "kg",
+   "anchor": "11.1-eq-11-1"
+  },
+  {
+   "section": "11.1",
+   "sym": "n_dens",
+   "concept": "atom-number-density",
+   "meaning": "气体的密度，即其单位体积内的原子数",
+   "unit": "m⁻³",
+   "anchor": "11.1-density"
+  },
+  {
+   "section": "11.1",
+   "sym": "T_c",
+   "concept": "critical-temperature",
+   "meaning": "临界温度，在此温度以下宏观数量的玻色原子占据最低能态",
+   "unit": "K",
+   "anchor": "11.1-eq-11-2"
+  },
+  {
+   "section": "11.1",
+   "sym": "n_i",
+   "concept": "bose-einstein-distribution",
+   "meaning": "占据能级 ϵ_i 的粒子数",
+   "anchor": "11.1-eq-11-4"
+  },
+  {
+   "section": "11.1",
+   "sym": "epsilon_i",
+   "type": "energy",
+   "meaning": "单个原子的一个能级",
+   "unit": "J",
+   "anchor": "11.1-eq-11-4"
+  },
+  {
+   "section": "11.1",
+   "sym": "mu_chem",
+   "concept": "chemical-potential",
+   "meaning": "化学势，它确定巨正则系综中的粒子数",
+   "unit": "J",
+   "anchor": "11.1-eq-11-4"
+  },
+  {
+   "section": "11.1",
+   "sym": "E_tot",
+   "type": "energy",
+   "meaning": "N 个原子的总能量",
+   "unit": "J",
+   "anchor": "11.1-eq-11-6"
+  },
+  {
+   "section": "11.1",
+   "sym": "epsilon_0",
+   "type": "energy",
+   "meaning": "单原子基态的能量 ϵ₀",
+   "unit": "J",
+   "anchor": "11.1-eq-11-7"
+  },
+  {
+   "section": "11.1",
+   "sym": "epsilon",
+   "type": "energy",
+   "meaning": "单原子态的能量，是对态密度 g(ϵ) 积分的变量",
+   "unit": "J",
+   "anchor": "11.1-eq-11-7"
+  },
+  {
+   "section": "11.1",
+   "sym": "N_gs",
+   "concept": "ideal-gas-condensate-fraction",
+   "meaning": "处于基态的原子数，即凝聚体",
+   "anchor": "11.1-eq-11-9"
+  },
+  {
+   "section": "11.5",
+   "sym": "psi_GP",
+   "concept": "gross-pitaevskii-equation",
+   "meaning": "凝聚体波函数，归一化到原子数",
+   "anchor": "11.5-eq-11-142"
+  },
+  {
+   "section": "11.5",
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "unit": "s",
+   "anchor": "11.5-drv-linearized-field-equation"
+  },
+  {
+   "section": "11.5",
+   "sym": "m",
+   "type": "mass",
+   "meaning": "原子的质量",
+   "unit": "kg",
+   "anchor": "11.5-drv-linearized-field-equation"
+  },
+  {
+   "section": "11.5",
+   "sym": "V",
+   "type": "energy",
+   "meaning": "作用在原子质心上的外部势",
+   "unit": "J",
+   "anchor": "11.5-drv-linearized-field-equation",
+   "redefines": true
+  },
+  {
+   "section": "11.5",
+   "sym": "U_0",
+   "concept": "interacting-bose-gas-hamiltonian",
+   "meaning": "两个原子之间接触相互作用的强度 U₀ = 4πℏ²a/m",
+   "unit": "J·m³",
+   "anchor": "11.5-drv-linearized-field-equation"
+  },
+  {
+   "section": "11.5",
+   "sym": "omega",
+   "type": "frequency",
+   "meaning": "角频率：凝聚体简正模式 j 的 ω_j，其最低激发的 ω_min，以及两束布拉格激光的 ω₁、ω₂",
+   "unit": "rad/s",
+   "anchor": "11.5-eq-11-144",
+   "redefines": true
+  },
+  {
+   "section": "11.5",
+   "sym": "mu_chem",
+   "concept": "chemical-potential",
+   "meaning": "化学势，它确定巨正则系综中的粒子数",
+   "unit": "J",
+   "anchor": "11.5-eq-11-144"
+  },
+  {
+   "section": "11.3",
+   "sym": "E_B",
+   "concept": "surface-sticking",
+   "meaning": "原子与表面的结合能",
+   "unit": "J",
+   "anchor": "11.3-eq-11-11"
+  },
+  {
+   "section": "11.5",
+   "sym": "n_0",
+   "concept": "condensate-density",
+   "meaning": "凝聚体的密度",
+   "unit": "m⁻³",
+   "anchor": "11.5-eq-11-150"
+  },
+  {
+   "section": "11.3",
+   "sym": "tau_R",
+   "concept": "surface-resonance-time",
+   "meaning": "共振时间，即原子黏附在表面上的停留时间",
+   "unit": "s",
+   "anchor": "11.3-drv-surface-resonance-time"
+  },
+  {
+   "section": "11.6",
+   "sym": "psi_GP",
+   "concept": "gross-pitaevskii-equation",
+   "meaning": "凝聚体波函数，归一化到原子数",
+   "anchor": "11.6-two-clouds"
+  },
+  {
+   "section": "11.5",
+   "sym": "q",
+   "type": "wavevector",
+   "meaning": "凝聚体激发的波矢量；q_c 是类声激发与类粒子激发之间的过渡，q_min 是被陷俘的云所允许的最小值",
+   "unit": "m⁻¹",
+   "anchor": "11.5-eq-11-148"
+  },
+  {
+   "section": "11.3",
+   "sym": "lambda_DB",
+   "concept": "de-broglie-wavelength",
+   "meaning": "原子的热德布罗意波长",
+   "unit": "m",
+   "anchor": "11.3-eq-11-11"
+  },
+  {
+   "section": "11.6",
+   "sym": "Delta_R_s",
+   "type": "length",
+   "meaning": "两个凝聚体被释放之前的间距",
+   "unit": "m",
+   "anchor": "11.6-sim-two-condensates"
+  },
+  {
+   "section": "11.5",
+   "sym": "epsilon_q",
+   "concept": "free-particle-energy",
+   "meaning": "波矢量为 q 的自由粒子的能量 ℏ²q²/2m",
+   "unit": "J",
+   "anchor": "11.5-free-energy"
+  },
+  {
+   "section": "11.3",
+   "sym": "n_dens",
+   "concept": "atom-number-density",
+   "meaning": "气体的密度，即其单位体积内的原子数",
+   "unit": "m⁻³",
+   "anchor": "11.3-eq-11-11"
+  },
+  {
+   "section": "11.6",
+   "sym": "Delta_R",
+   "concept": "condensate-interference-fringes",
+   "type": "length",
+   "meaning": "两个膨胀凝聚体干涉条纹的间距",
+   "unit": "m",
+   "anchor": "11.6-sim-two-condensates"
+  },
+  {
+   "section": "11.5",
+   "sym": "omega_q",
+   "concept": "bogoliubov-spectrum",
+   "meaning": "波矢量为 q 的凝聚体激发的频率",
+   "unit": "rad/s",
+   "anchor": "11.5-drv-bogoliubov-spectrum"
+  },
+  {
+   "section": "11.3",
+   "sym": "v_bar",
+   "type": "velocity",
+   "meaning": "原子的平均速度",
+   "unit": "m/s",
+   "anchor": "11.3-drv-surface-resonance-time"
+  },
+  {
+   "section": "11.6",
+   "sym": "tau",
+   "type": "time",
+   "meaning": "被释放的云在成像之前膨胀的时间",
+   "unit": "s",
+   "redefines": true,
+   "anchor": "11.6-sim-two-condensates"
+  },
+  {
+   "section": "11.5",
+   "sym": "s_sound",
+   "concept": "sound-velocity",
+   "meaning": "凝聚体中的声速",
+   "unit": "m/s",
+   "anchor": "11.5-eq-11-153"
+  },
+  {
+   "section": "11.3",
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "温度",
+   "unit": "K",
+   "anchor": "11.3-eq-11-11"
+  },
+  {
+   "section": "11.6",
+   "sym": "m",
+   "type": "mass",
+   "meaning": "原子的质量",
+   "unit": "kg",
+   "anchor": "11.6-sim-two-condensates"
+  },
+  {
+   "section": "11.5",
+   "sym": "xi_heal",
+   "concept": "healing-length",
+   "meaning": "恢复长度，凝聚体波函数在此长度上从壁处恢复",
+   "unit": "m",
+   "anchor": "11.5-eq-11-154"
+  },
+  {
+   "section": "11.3",
+   "sym": "mu_B",
+   "meaning": "玻尔磁子，电子磁矩和原子核磁矩的单位",
+   "unit": "J/T",
+   "anchor": "11.3-eq-11-13",
+   "type": "magnetic-moment"
+  },
+  {
+   "section": "11.6",
+   "sym": "phi",
+   "type": "phase",
+   "meaning": "两个凝聚体的相对相位",
+   "unit": "rad",
+   "redefines": true,
+   "anchor": "11.6-sim-two-condensates"
+  },
+  {
+   "section": "11.5",
+   "sym": "k_mag",
+   "type": "wavevector",
+   "meaning": "两束布拉格激光的波矢量 k₁、k₂，写成非粗体",
+   "unit": "m⁻¹",
+   "anchor": "11.5-bragg",
+   "redefines": true
+  },
+  {
+   "section": "11.3",
+   "sym": "B_z",
+   "meaning": "静磁场沿 ẑ 的分量",
+   "unit": "T",
+   "anchor": "11.3-eq-11-13",
+   "type": "magnetic-field"
+  },
+  {
+   "section": "11.6",
+   "sym": "Delta_z",
+   "type": "length",
+   "meaning": "云中两个区域之间的距离，原子从这两个区域被耦合输出",
+   "unit": "m",
+   "anchor": "11.6-sim-spatial-coherence"
+  },
+  {
+   "section": "11.5",
+   "sym": "k",
+   "type": "wavevector",
+   "meaning": "两束布拉格激光的波矢量 k₁、k₂",
+   "unit": "m⁻¹",
+   "anchor": "11.5-eq-11-155",
+   "redefines": true
+  },
+  {
+   "section": "11.6",
+   "sym": "lambda_dB",
+   "concept": "de-broglie-wavelength",
+   "meaning": "热德布罗意波长，即原子的物质波包在温度 T 下的大小",
+   "unit": "m",
+   "anchor": "11.6-sim-spatial-coherence"
+  },
+  {
+   "section": "11.5",
+   "sym": "v_mag",
+   "type": "velocity",
+   "meaning": "运动穿过凝聚体的物体的速度",
+   "unit": "m/s",
+   "anchor": "11.5-drv-landau-critical-velocity",
+   "redefines": true
+  },
+  {
+   "section": "11.6",
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "气体的温度",
+   "unit": "K",
+   "anchor": "11.6-sim-spatial-coherence"
+  },
+  {
+   "section": "11.5",
+   "sym": "p_cm",
+   "type": "momentum",
+   "meaning": "动量：Δp_object 是运动物体给予激发的动量；p 是从阱中释放的原子的动量，p_BEC 和 p_T 是凝聚体和热云的动量标度",
+   "unit": "kg·m/s",
+   "anchor": "11.5-eq-11-157",
+   "redefines": true
+  },
+  {
+   "section": "11.6",
+   "sym": "T_c",
+   "concept": "critical-temperature",
+   "meaning": "临界温度，在此温度以下宏观数量的玻色原子占据最低能态",
+   "unit": "K",
+   "anchor": "11.6-sim-spatial-coherence"
+  },
+  {
+   "section": "11.5",
+   "sym": "epsilon",
+   "type": "energy",
+   "meaning": "物体的能量；Δϵ_object 是它给予激发的能量",
+   "unit": "J",
+   "anchor": "11.5-eq-11-158",
+   "redefines": true
+  },
+  {
+   "section": "11.3",
+   "sym": "B",
+   "meaning": "阱的磁场",
+   "unit": "T",
+   "anchor": "11.3-eq-11-15",
+   "type": "magnetic-field"
+  },
+  {
+   "section": "11.6",
+   "sym": "N_gs",
+   "concept": "ideal-gas-condensate-fraction",
+   "meaning": "处于基态的原子数，即凝聚体",
+   "anchor": "11.6-sim-spatial-coherence"
+  },
+  {
+   "section": "11.5",
+   "sym": "v_c",
+   "concept": "landau-criterion",
+   "meaning": "朗道临界速度，运动物体超过此速度就能产生激发",
+   "unit": "m/s",
+   "anchor": "11.5-drv-landau-critical-velocity",
+   "redefines": true
+  },
+  {
+   "section": "11.3",
+   "sym": "theta",
+   "type": "phase",
+   "meaning": "磁场方向在原子处的角度",
+   "unit": "rad",
+   "anchor": "11.3-eq-11-14",
+   "redefines": true
+  },
+  {
+   "section": "11.5",
+   "sym": "a_t",
+   "concept": "trap-length",
+   "meaning": "谐振阱的特征尺寸，即其振子长度",
+   "unit": "m",
+   "anchor": "11.5-eq-11-160"
+  },
+  {
+   "section": "11.3",
+   "sym": "omega_Larmor",
+   "concept": "adiabatic-spin-following",
+   "meaning": "拉莫尔频率 μ_B B_z/ℏ，自旋以此频率绕场进动",
+   "unit": "rad/s",
+   "anchor": "11.3-eq-11-14"
+  },
+  {
+   "section": "11.5",
+   "sym": "a_scat",
+   "concept": "s-wave-scattering-length",
+   "meaning": "s 波散射长度",
+   "unit": "m",
+   "anchor": "11.5-drv-attractive-stability"
+  },
+  {
+   "section": "11.3",
+   "sym": "mu_mag",
+   "type": "magnetic-moment",
+   "meaning": "被陷俘原子的磁矩",
+   "unit": "J/T",
+   "anchor": "11.3-eq-11-17"
+  },
+  {
+   "section": "11.5",
+   "sym": "tau",
+   "type": "time",
+   "meaning": "被释放的云在成像之前膨胀的时间",
+   "unit": "s",
+   "anchor": "11.5-observation",
+   "redefines": true
+  },
+  {
+   "section": "11.3",
+   "sym": "n_0",
+   "type": "density",
+   "meaning": "阱中心的原子密度",
+   "unit": "m⁻³",
+   "anchor": "11.3-eq-11-17"
+  },
+  {
+   "section": "11.5",
+   "sym": "r_dist",
+   "type": "length",
+   "meaning": "云膨胀之后原子的位置，r = pτ/m",
+   "unit": "m",
+   "anchor": "11.5-observation",
+   "redefines": true
+  },
+  {
+   "section": "11.3",
+   "sym": "eta_ev",
+   "concept": "linear-trap-atom-number",
+   "meaning": "阱深与热能之比 η = μB₀/k_BT",
+   "anchor": "11.3-drv-linear-trap-atom-number"
+  },
+  {
+   "section": "11.5",
+   "sym": "a_c",
+   "type": "length",
+   "meaning": "原子云在阱中的尺寸",
+   "unit": "m",
+   "anchor": "11.5-eq-11-164"
+  },
+  {
+   "section": "11.3",
+   "sym": "V_geo",
+   "type": "volume",
+   "meaning": "阱的几何体积 4πρ₀³/3",
+   "unit": "m³",
+   "anchor": "11.3-drv-linear-trap-atom-number"
+  },
+  {
+   "section": "11.5",
+   "sym": "R_exp",
+   "type": "length",
+   "meaning": "膨胀之后云的尺寸：凝聚体的 R_BEC，热云的 R_T",
+   "unit": "m",
+   "anchor": "11.5-eq-11-165"
+  },
+  {
+   "section": "11.3",
+   "sym": "g_in",
+   "concept": "two-body-loss",
+   "meaning": "二体非弹性过程的速率常数",
+   "unit": "m³/s",
+   "anchor": "11.3-eq-11-22"
+  },
+  {
+   "section": "11.5",
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "气体的温度",
+   "unit": "K",
+   "anchor": "11.5-eq-11-167"
+  },
+  {
+   "section": "11.3",
+   "sym": "Gamma_th",
+   "type": "rate",
+   "meaning": "被陷俘原子的热化率",
+   "unit": "s⁻¹",
+   "anchor": "11.3-eq-11-29"
+  },
+  {
+   "section": "11.3",
+   "sym": "sigma_el",
+   "concept": "evaporation-rate",
+   "meaning": "原子之间弹性碰撞的截面",
+   "unit": "m²",
+   "anchor": "11.3-eq-11-29"
+  },
+  {
+   "section": "11.3",
+   "sym": "n_ref",
+   "concept": "refractive-index",
+   "meaning": "原子云的复折射率",
+   "anchor": "11.3-eq-11-35"
+  },
+  {
+   "section": "11.3",
+   "sym": "d_OD",
+   "concept": "absorption-imaging",
+   "meaning": "原子云沿视线方向的光学深度",
+   "anchor": "11.3-eq-11-37"
+  },
+  {
+   "section": "11.3",
+   "sym": "phi",
+   "type": "phase",
+   "meaning": "原子云印在非共振探测光束上的相位",
+   "unit": "rad",
+   "anchor": "11.3-eq-11-38",
+   "redefines": true
+  },
+  {
+   "section": "11.4",
+   "sym": "r_0",
+   "concept": "dilute-quantum-gas",
+   "meaning": "范德瓦耳斯尾部的力程，即原子在碰撞中呈现的尺寸",
+   "unit": "m",
+   "anchor": "11.4-eq-11-42"
+  },
+  {
+   "section": "11.4",
+   "sym": "U_r",
+   "concept": "van-der-waals-potential",
+   "meaning": "两个原子在间距 r 处的相互作用势",
+   "unit": "J",
+   "anchor": "11.4-eq-11-39"
+  },
+  {
+   "section": "11.4",
+   "sym": "f_k",
+   "concept": "scattering-amplitude",
+   "meaning": "在相对波矢量 k 下散射到角度 θ 的散射振幅",
+   "unit": "m",
+   "anchor": "11.4-eq-11-45"
+  },
+  {
+   "section": "11.4",
+   "sym": "sigma_sc",
+   "concept": "scattering-cross-section",
+   "meaning": "散射截面，一个面积",
+   "unit": "m²",
+   "anchor": "11.4-eq-11-50"
+  },
+  {
+   "section": "11.4",
+   "sym": "delta_l",
+   "concept": "scattering-phase-shift",
+   "meaning": "角动量为 l 的分波的相移",
+   "unit": "rad",
+   "anchor": "11.4-eq-11-60"
+  },
+  {
+   "section": "11.4",
+   "sym": "a_scat",
+   "concept": "s-wave-scattering-length",
+   "meaning": "s 波散射长度",
+   "unit": "m",
+   "anchor": "11.4-eq-11-65"
+  },
+  {
+   "section": "11.4",
+   "sym": "a_bg",
+   "concept": "feshbach-resonance",
+   "meaning": "开通道的背景散射长度，远离共振处",
+   "unit": "m",
+   "anchor": "11.4-eq-11-100"
+  },
+  {
+   "section": "11.4",
+   "sym": "U_0",
+   "concept": "interacting-bose-gas-hamiltonian",
+   "meaning": "两个原子之间接触相互作用的强度 U₀ = 4πℏ²a/m",
+   "unit": "J·m³",
+   "anchor": "11.4-eq-11-111"
+  },
+  {
+   "section": "11.4",
+   "sym": "psi_hat",
+   "concept": "matter-field-operator",
+   "meaning": "物质场算符，它在位置 r 湮没一个原子",
+   "anchor": "11.4-eq-11-119"
+  },
+  {
+   "section": "11.4",
+   "sym": "psi_GP",
+   "concept": "gross-pitaevskii-equation",
+   "meaning": "凝聚体波函数，归一化到原子数",
+   "anchor": "11.4-drv-gross-pitaevskii-equation"
+  },
+  {
+   "section": "11.4",
+   "sym": "E_mf",
+   "concept": "condensate-ground-state",
+   "meaning": "每个原子的平均场相互作用能，U₀|ψ̃|² ∼ U₀N/V",
+   "unit": "J",
+   "anchor": "11.4-eq-11-134"
+  },
+  {
+   "section": "11.4",
+   "sym": "a_t",
+   "concept": "trap-length",
+   "meaning": "谐振阱的特征尺寸，即其振子长度",
+   "unit": "m",
+   "anchor": "11.4-trap-size"
+  },
+  {
+   "section": "11.4",
+   "sym": "xi_heal",
+   "concept": "healing-length",
+   "meaning": "恢复长度，凝聚体波函数在此长度上从壁处恢复",
+   "unit": "m",
+   "anchor": "11.4-eq-11-140"
+  },
+  {
+   "section": "11.4",
+   "sym": "n_0",
+   "concept": "condensate-density",
+   "meaning": "凝聚体的密度",
+   "unit": "m⁻³",
+   "anchor": "11.4-eq-11-140"
+  },
+  {
+   "section": "11.4",
+   "sym": "k_mag",
+   "type": "wavevector",
+   "meaning": "两个碰撞原子的相对波矢量的大小",
+   "unit": "m⁻¹",
+   "anchor": "11.4-eq-11-43",
+   "redefines": true
+  },
+  {
+   "section": "11.4",
+   "sym": "k",
+   "type": "wavevector",
+   "meaning": "碰撞原子的相对波矢量，入射的 k 和散射的 k′；在式 (11.119) 中是动量模式的波矢量",
+   "unit": "m⁻¹",
+   "anchor": "11.4-eq-11-51",
+   "redefines": true
+  },
+  {
+   "section": "11.4",
+   "sym": "mu_red",
+   "type": "mass",
+   "meaning": "碰撞原子对的约化质量 m₁m₂/(m₁ + m₂)",
+   "unit": "kg",
+   "anchor": "11.4-eq-11-42"
+  },
+  {
+   "section": "11.4",
+   "sym": "m",
+   "type": "mass",
+   "meaning": "原子的质量",
+   "unit": "kg",
+   "anchor": "11.4-drv-mean-field-energy"
+  },
+  {
+   "section": "11.4",
+   "sym": "n_dens",
+   "concept": "atom-number-density",
+   "meaning": "气体的密度，即其单位体积内的原子数",
+   "unit": "m⁻³",
+   "anchor": "11.4-degenerate"
+  },
+  {
+   "section": "11.4",
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "气体的温度",
+   "unit": "K",
+   "anchor": "11.4-degenerate"
+  },
+  {
+   "section": "11.4",
+   "sym": "T_c",
+   "concept": "critical-temperature",
+   "meaning": "临界温度，在此温度以下宏观数量的玻色原子占据最低能态",
+   "unit": "K",
+   "anchor": "11.4-degenerate"
+  },
+  {
+   "section": "11.4",
+   "sym": "E_res",
+   "type": "energy",
+   "meaning": "闭通道束缚态的共振能量，从开通道的阈值量起并被耦合移位",
+   "unit": "J",
+   "anchor": "11.4-drv-feshbach-scattering-length"
+  },
+  {
+   "section": "11.4",
+   "sym": "Delta_Fesh",
+   "type": "energy",
+   "meaning": "费希巴赫共振的强度",
+   "unit": "J",
+   "anchor": "11.4-drv-feshbach-scattering-length"
+  },
+  {
+   "section": "11.4",
+   "sym": "V_0",
+   "type": "energy",
+   "meaning": "半径为 r₀ 的方势垒的高度，或方势阱的深度",
+   "unit": "J",
+   "anchor": "11.4-eq-11-71"
+  },
+  {
+   "section": "11.4",
+   "sym": "V",
+   "type": "volume",
+   "meaning": "容纳 N 个原子的体积",
+   "unit": "m³",
+   "anchor": "11.4-drv-mean-field-energy",
+   "redefines": true
+  },
+  {
+   "section": "11.4",
+   "sym": "V_trap",
+   "type": "energy",
+   "meaning": "作用在每个原子上的陷俘势",
+   "unit": "J",
+   "anchor": "11.4-eq-11-110"
+  },
+  {
+   "section": "11.4",
+   "sym": "V_r",
+   "type": "energy",
+   "meaning": "作用在每个原子上的陷俘势",
+   "unit": "J",
+   "anchor": "11.4-eq-11-134"
+  },
+  {
+   "section": "11.4",
+   "sym": "H",
+   "type": "energy",
+   "meaning": "系统的哈密顿量",
+   "unit": "J",
+   "anchor": "11.4-eq-11-110"
+  },
+  {
+   "section": "11.4",
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "原子质心的动量算符",
+   "unit": "kg·m/s",
+   "anchor": "11.4-eq-11-122"
+  },
+  {
+   "section": "11.4",
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "unit": "s",
+   "anchor": "11.4-drv-field-equation-of-motion"
+  },
+  {
+   "section": "11.4",
+   "sym": "psi",
+   "type": "state",
+   "meaning": "两个碰撞原子相对运动的波函数",
+   "anchor": "11.4-eq-11-43",
+   "redefines": true
+  },
+  {
+   "section": "11.4",
+   "sym": "omega_t",
+   "type": "frequency",
+   "meaning": "谐振阱的频率",
+   "unit": "rad/s",
+   "anchor": "11.4-eq-11-134"
+  },
+  {
+   "section": "11.4",
+   "sym": "mu_chem",
+   "concept": "chemical-potential",
+   "meaning": "化学势，它确定巨正则系综中的粒子数",
+   "unit": "J",
+   "anchor": "11.4-drv-mean-field-energy"
+  },
+  {
+   "section": "11.4",
+   "sym": "mu_B",
+   "type": "magnetic-moment",
+   "meaning": "玻尔磁子，电子磁矩和原子核磁矩的单位",
+   "unit": "J/T",
+   "anchor": "11.4-fesh-tune"
+  },
+  {
+   "section": "11.7",
+   "sym": "t",
+   "meaning": "相邻的阱或格点之间的隧穿振幅，t_{i,j} 对应格点 i 和 j",
+   "unit": "J",
+   "anchor": "11.7-eq-11-168",
+   "redefines": true,
+   "concept": "lattice-hopping"
+  },
+  {
+   "section": "11.7",
+   "sym": "U_0",
+   "meaning": "一个格点上两个原子的相互作用能，格点是双阱的一个阱或格子的一个格点",
+   "unit": "J",
+   "anchor": "11.7-eq-11-172",
+   "redefines": true,
+   "concept": "on-site-interaction"
+  },
+  {
+   "section": "11.7",
+   "sym": "alpha_coh",
+   "concept": "coherent-amplitude",
+   "meaning": "相干振幅：湮没算符在相干态 |α⟩ 中的本征值，α = |α|e^{iφ}",
+   "anchor": "11.7-eq-11-170"
+  },
+  {
+   "section": "11.7",
+   "sym": "phi_L",
+   "type": "phase",
+   "ref": "well-L",
+   "meaning": "左阱中相干态的相位",
+   "unit": "rad",
+   "anchor": "11.7-josephson"
+  },
+  {
+   "section": "11.7",
+   "sym": "phi_R",
+   "type": "phase",
+   "ref": "well-R",
+   "meaning": "右阱中相干态的相位",
+   "unit": "rad",
+   "anchor": "11.7-josephson"
+  },
+  {
+   "section": "11.7",
+   "sym": "E_dw",
+   "type": "energy",
+   "meaning": "双阱中原子的能量：经典约瑟夫森器件的动能，以及基态能量 E₀",
+   "unit": "J",
+   "anchor": "11.7-josephson"
+  },
+  {
+   "section": "11.7",
+   "sym": "a_scat",
+   "concept": "s-wave-scattering-length",
+   "meaning": "s 波散射长度",
+   "unit": "m",
+   "anchor": "11.7-making-fock"
+  },
+  {
+   "section": "11.7",
+   "sym": "V",
+   "type": "energy",
+   "meaning": "作用在原子质心上的外部势",
+   "unit": "J",
+   "anchor": "11.7-eq-11-176",
+   "redefines": true
+  },
+  {
+   "section": "11.7",
+   "sym": "lambda",
+   "type": "length",
+   "meaning": "光波长，λ = 2π/k",
+   "unit": "m",
+   "anchor": "11.7-lattice-light"
+  },
+  {
+   "section": "11.8",
+   "sym": "H",
+   "type": "energy",
+   "meaning": "系统的哈密顿量",
+   "unit": "J",
+   "anchor": "11.8-eq-11-177"
+  },
+  {
+   "section": "11.8",
+   "sym": "p_cm",
+   "type": "momentum",
+   "meaning": "原子的动量，原子 i 的动量为 p_i",
+   "unit": "kg·m/s",
+   "redefines": true,
+   "anchor": "11.8-eq-11-177"
+  },
+  {
+   "section": "11.8",
+   "sym": "m",
+   "type": "mass",
+   "meaning": "原子的质量",
+   "unit": "kg",
+   "anchor": "11.8-eq-11-177"
+  },
+  {
+   "section": "11.8",
+   "sym": "V",
+   "type": "energy",
+   "meaning": "作用在原子质心上的外部势",
+   "unit": "J",
+   "redefines": true,
+   "anchor": "11.8-eq-11-177"
+  },
+  {
+   "section": "11.8",
+   "sym": "U_pair",
+   "type": "energy",
+   "meaning": "x_i 和 x_j 处两个原子之间的相互作用势",
+   "unit": "J",
+   "anchor": "11.8-eq-11-177"
+  },
+  {
+   "section": "11.8",
+   "sym": "a_s",
+   "concept": "s-wave-scattering-length",
+   "meaning": "s 波散射长度",
+   "unit": "m",
+   "anchor": "11.8-eq-11-178"
+  },
+  {
+   "section": "11.8",
+   "sym": "psi_hat",
+   "concept": "matter-field-operator",
+   "meaning": "物质场算符，它在位置 r 湮没一个原子",
+   "anchor": "11.8-opening"
+  },
+  {
+   "section": "11.8",
+   "sym": "V_0",
+   "type": "energy",
+   "meaning": "光学格子的深度",
+   "unit": "J",
+   "redefines": true,
+   "anchor": "11.8-eq-11-184"
+  },
+  {
+   "section": "11.8",
+   "sym": "K_L",
+   "type": "wavevector",
+   "meaning": "形成格子的光的波矢量",
+   "unit": "m⁻¹",
+   "anchor": "11.8-eq-11-184"
+  },
+  {
+   "section": "11.8",
+   "sym": "nu_T",
+   "concept": "lattice-site-oscillator",
+   "meaning": "原子在一个格点内振荡的角频率",
+   "unit": "rad/s",
+   "anchor": "11.8-drv-site-frequency"
+  },
+  {
+   "section": "11.8",
+   "sym": "E_R",
+   "concept": "lattice-recoil-energy",
+   "meaning": "格子的反冲能 ℏ²K_L²/2m",
+   "unit": "J",
+   "anchor": "11.8-recoil-energy"
+  },
+  {
+   "section": "11.8",
+   "sym": "a_HO",
+   "type": "length",
+   "meaning": "一个格点的振子基态的尺寸",
+   "unit": "m",
+   "anchor": "11.8-eq-11-191"
+  },
+  {
+   "section": "11.8",
+   "sym": "V_trap",
+   "type": "energy",
+   "meaning": "作用在每个原子上的陷俘势",
+   "unit": "J",
+   "anchor": "11.8-eq-11-192"
+  },
+  {
+   "section": "11.8",
+   "sym": "epsilon_i",
+   "type": "energy",
+   "meaning": "原子在格点 i 上的能量",
+   "unit": "J",
+   "redefines": true,
+   "anchor": "11.8-eq-11-193"
+  },
+  {
+   "section": "11.8",
+   "sym": "t",
+   "concept": "lattice-hopping",
+   "meaning": "相邻的阱或格点之间的隧穿振幅，t_{i,j} 对应格点 i 和 j",
+   "unit": "J",
+   "redefines": true,
+   "anchor": "11.8-hopping"
+  },
+  {
+   "section": "11.8",
+   "sym": "U_0",
+   "concept": "on-site-interaction",
+   "meaning": "一个格点上两个原子的相互作用能，格点是双阱的一个阱或格子的一个格点",
+   "unit": "J",
+   "redefines": true,
+   "anchor": "11.8-drv-on-site-interaction"
+  },
+  {
+   "section": "11.8",
+   "sym": "k",
+   "type": "wavevector",
+   "meaning": "格子的动量模式的波矢量",
+   "unit": "m⁻¹",
+   "redefines": true,
+   "anchor": "11.8-eq-11-196"
+  },
+  {
+   "section": "11.8",
+   "sym": "k_mag",
+   "type": "wavevector",
+   "meaning": "一维格子的动量模式的波矢量，写成非粗体",
+   "unit": "m⁻¹",
+   "redefines": true,
+   "anchor": "11.8-drv-weak-lattice-band"
+  },
+  {
+   "section": "11.8",
+   "sym": "a_lat",
+   "type": "length",
+   "meaning": "格点之间的间距",
+   "unit": "m",
+   "anchor": "11.8-drv-weak-lattice-band"
+  },
+  {
+   "section": "11.8",
+   "sym": "psi",
+   "type": "state",
+   "meaning": "原子在格子中的基态",
+   "redefines": true,
+   "anchor": "11.8-eq-11-200"
+  },
+  {
+   "section": "11.8",
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "气体的温度",
+   "unit": "K",
+   "anchor": "11.8-qpt"
+  },
+  {
+   "section": "11.8",
+   "sym": "nu_fill",
+   "concept": "filling-factor",
+   "meaning": "填充因子，每个格点上的原子数",
+   "anchor": "11.8-eq-11-204"
+  },
+  {
+   "section": "11.8",
+   "sym": "c_n",
+   "type": "amplitude",
+   "meaning": "态在基矢态 |n⟩ 上的展开系数",
+   "anchor": "11.8-eq-11-205"
+  },
+  {
+   "section": "11.8",
+   "sym": "alpha",
+   "type": "quadrature",
+   "meaning": "一个格点的相干态振幅，|α|² 是其平均占有数",
+   "redefines": true,
+   "anchor": "11.8-eq-11-207"
+  },
+  {
+   "section": "11.8",
+   "sym": "E_SF",
+   "type": "energy",
+   "meaning": "简单平均场模型中超流体态每个格点的能量",
+   "unit": "J",
+   "anchor": "11.8-drv-mott-transition-estimate"
+  },
+  {
+   "section": "11.8",
+   "sym": "E_MI",
+   "type": "energy",
+   "meaning": "简单平均场模型中莫特绝缘体态每个格点的能量",
+   "unit": "J",
+   "anchor": "11.8-eq-11-209"
+  },
+  {
+   "section": "11.8",
+   "sym": "Delta_E_ex",
+   "type": "energy",
+   "meaning": "交换能，跳跃使莫特绝缘体中每个原子的能量降低这么多",
+   "unit": "J",
+   "anchor": "11.8-bose-hubbard"
+  },
+  {
+   "section": "11.8",
+   "sym": "theta",
+   "type": "phase",
+   "meaning": "式 (11.211) 的变分格点态的混合角",
+   "unit": "rad",
+   "redefines": true,
+   "anchor": "11.8-eq-11-211"
+  },
+  {
+   "section": "11.8",
+   "sym": "Delta_eps",
+   "concept": "mott-gap",
+   "type": "energy",
+   "meaning": "使莫特绝缘体的一个原子离域所需的能量，即其激发能隙",
+   "unit": "J",
+   "anchor": "11.8-gap"
+  },
+  {
+   "section": "11.8",
+   "sym": "mu_chem",
+   "concept": "chemical-potential",
+   "meaning": "化学势，它确定巨正则系综中的粒子数",
+   "anchor": "11.8-sim-wedding-cake"
+  },
+  {
+   "section": "11.8",
+   "sym": "tau",
+   "type": "time",
+   "meaning": "自格子斜变开始以来的时间",
+   "unit": "s",
+   "redefines": true,
+   "anchor": "11.8-sim-mott-ramp"
+  }
+ ]
+}

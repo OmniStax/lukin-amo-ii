@@ -1,0 +1,49 @@
+<section id="opening">
+<p class="cite-target">虽然量子力学系统的态用$|\kpsi\rangle$即<span data-concept="state-vector">希尔伯特空间中的一个矢量</span>表示，但这种描述在许多实际情形下并不能给出有用的图像，当然也无法处理宏观物体。任何量子力学态也都可以表示为<span data-concept="density-operator">密度算符</span>；此外，<span data-concept="density-operator">密度算符</span>还可以描述经典系综。</p>
+<p>设我们的系统可以处于若干量子态$|\kpsi_\alpha\rangle$之一，并以某个概率$p_\alpha$占据每个态。该系统的<span data-concept="density-operator" id="density-operator-def">密度算符</span>为</p>
+<div class="equation" id="eq-3-1">$$\krhohat = \sum_\alpha p_\alpha|\kpsi_\alpha\rangle\langle\kpsi_\alpha|. \tag{3.1}$$</div>
+<p id="pure-mixed">如果存在一个基，使得对某个态$|\phi\rangle$有$\krhohat = |\phi\rangle\langle\phi|$，就称系统处于“<span data-concept="pure-and-mixed-states">纯态</span>”。如果找不到这样的基，系统就处于“<span data-concept="pure-and-mixed-states">混合态</span>”，并且失去了一部分纯粹的量子力学特性。最后，如果<span data-concept="density-operator">密度算符</span>的<span data-concept="density-matrix-coherences">非对角元</span>为零，系统就可以用基矢态的经典系综来描述，称为“<span data-concept="pure-and-mixed-states">统计混合</span>”。</p>
+<p id="properties">由这一定义，可以立即导出任何<span data-concept="density-operator">密度算符</span>都必须满足的<span data-concept="density-operator-properties">几条重要性质</span>：</p>
+<p id="prop-1">(1) $\krhohat = \krhohat^\dagger$</p>
+<p id="prop-2">(2) $\mathrm{Tr}[\krhohat] = \sum_n\langle n|\krhohat|n\rangle = 1$ 其中$\{|n\rangle\}$构成一组规范正交基</p>
+<p id="prop-3">(3) $\langle n|\krhohat^2|m\rangle \leq \langle n|\krhohat|m\rangle$<sup class="fn" data-note="c-property-3"></sup> 其中$|m\rangle$和$|n\rangle$是任意<span data-concept="pure-and-mixed-states">纯态</span></p>
+<p>第一条是不言自明的，第二条来自概率守恒，第三条只有在<span data-concept="density-operator">密度算符</span>描述<span data-concept="pure-and-mixed-states">纯态</span>时才取等号。</p>
+<p id="expectation">算符的<span data-concept="expectation-value">期望值</span>可以直接由<span data-concept="density-operator">密度算符</span>算出。如果$\kShat$是<span data-concept="observable">系统的一个可观测量</span>，它的<span data-concept="expectation-value">期望值</span>应当在所有可能的量子态中计算，并以各态的占有概率为权重：</p>
+<figure class="dv" id="drv-expectation-as-trace"></figure>
+<p>在这里，阵迹的数学含义可能不够清楚。不过，给定一个基$\{|n\rangle\}$，我们可以把算符$\kShat$和$\krhohat$写成矩阵，它们的阵迹就是对角元通常的求和。所谓<span data-concept="density-matrix" id="density-matrix">密度矩阵</span>的元为$\rho_{n,n'}$，使得</p>
+<div class="equation" id="eq-3-6">$$\krhohat = \sum_{n,n'}|n\rangle\underbrace{\langle n|\krhohat|n'\rangle}_{\rho_{n,n'}}\langle n'|. \tag{3.6}$$</div>
+<p>这些矩阵元有物理意义，有两种情形值得区分：</p>
+<p id="populations">(1) <span data-concept="density-matrix-populations">对角元</span>$\krhonn = \langle(|n\rangle\langle n|)\rangle$对应于处于态$|n\rangle$的概率。</p>
+<p id="coherences">(2) <span data-concept="density-matrix-coherences">非对角元</span>$\krhonm = \langle n|\rho|m\rangle = \langle(|m\rangle\langle n|)\rangle$对应于能级$|n\rangle$和$|m\rangle$之间相干性的<span data-concept="expectation-value">期望值</span>，例如<span data-concept="two-level-dipole-operator">原子偶极算符</span>。</p>
+<p>例如，<span data-concept="two-level-atom">二能级原子</span>的<span data-concept="density-operator">密度算符</span>可以写成2x2矩阵，</p>
+<div class="equation" id="eq-3-7">$$\krhohat = \krhooneone|1\rangle\langle 1| + \krhoonetwo|1\rangle\langle 2| + \krhotwoone|2\rangle\langle 1| + \krhotwotwo|2\rangle\langle 2|. \tag{3.7}$$</div>
+<p id="pure-density-matrix">于是<span data-concept="pure-and-mixed-states">纯态</span>$|\kpsi\rangle = \kcone|1\rangle + \kctwo|2\rangle$的<span data-concept="density-matrix">密度矩阵</span>有$\rho_{ij} = c_i c_j^*$。因此<span data-concept="pure-and-mixed-states">纯态</span>满足</p>
+<div class="equation" id="eq-3-8">$$|\rho_{ij}|^2 = \rho_{ii}\rho_{jj}. \tag{3.8}$$</div>
+<p>考虑到要求$\rho^2 \leq \rho$，可见<span data-concept="pure-and-mixed-states">任意混合态</span>只满足不等式</p>
+<div class="equation" id="eq-3-9">$$|\rho_{ij}|^2 \leq \rho_{ii}\rho_{jj}. \tag{3.9}$$</div>
+<p>因此，对于<span data-concept="pure-and-mixed-states">纯态</span>，<span data-concept="density-matrix-coherences">非对角分量</span>取到所允许的最大值，即“<span data-concept="coherence-bound" id="maximal-coherence">最大相干性</span>”。</p>
+</section>
+
+<section id="example-1">
+<h2>例1：热平衡中的二能级原子</h2>
+<p class="cite-target" id="thermal-atom"><span data-concept="pure-and-mixed-states">混合态</span>的一个例子是处于热平衡的<span data-concept="atomic-transition-frequency">跃迁频率为$\komega$</span>的<span data-concept="two-level-atom">二能级原子</span>。在基$\{$<span data-ref="lvl-1">$|1\rangle$</span>，<span data-ref="lvl-2">$|2\rangle$</span>$\}$中，它的<span data-concept="density-operator">密度算符</span>取如下形式</p>
+<div class="equation" id="eq-3-10">$$\krhohat = \frac{e^{-\kH/k_B \kT}}{\mathrm{Tr}[e^{-\kH/k_B \kT}]} \tag{3.10}$$</div>
+<div class="equation" id="eq-3-11">$$= \frac{1}{1 + e^{-\hbar\komega/k_B \kT}}\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; e^{-\hbar\komega/k_B \kT} \end{pmatrix} \tag{3.11}$$</div>
+<div class="equation" id="eq-3-12">$$= \frac{1}{2\cosh\hbar\komega/2k_B \kT}\begin{pmatrix} e^{\hbar\komega/2k_B \kT} &amp; 0 \\ 0 &amp; e^{-\hbar\komega/2k_B \kT} \end{pmatrix}. \tag{3.12}$$</div>
+<p>显然，<span data-concept="density-matrix-populations">平衡布居</span>取决于<span data-concept="atomic-transition-frequency">原子跃迁频率</span>与温度的相对大小。例如，在室温$\kT = 300K$时，$k_B \kT/(2\pi\hbar) \approx 6 \cdot 10^{12}$ Hz，对应于介于微波和近红外之间的频率。如果<span data-concept="atomic-transition-frequency">原子跃迁频率</span>远高于这一尺度，原子在平衡时将处于<span data-ref="lvl-1">基态</span>；否则，它将处于<span data-ref="lvl-1 lvl-2">基态和激发态</span>的<span data-concept="pure-and-mixed-states">统计混合</span>。</p>
+<figure class="sim" id="sim-thermal">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>热平衡中系统的布居，由一个比值$k_B\kT/\hbar\komega$决定。左侧画出间距为$\hbar\komega$的各能级，每个能级旁有一条与其布居等长的条，并有一个与$k_B\kT$等高的括号；右侧的图在该比值的整个范围内跟踪布居。对于<a href="#eq-3-12">式 (3.12)</a>的<span data-concept="two-level-atom">二能级原子</span>，当$k_B\kT \ll \hbar\komega$时<span data-ref="lvl-1">$|1\rangle$</span>占据全部，随着温度升高，<span data-ref="lvl-2">$|2\rangle$</span>向二分之一增加，但不会超过它。切换到辐射场的一个模，<a href="#eq-3-14">式 (3.14)</a>：它的光子数态构成间距同为$\hbar\knu_j$的阶梯，原子的两个能级是它的前两级，而<span data-concept="mean-thermal-photon-number">平均光子数</span>$\knbar_j$无限增大。在各能级上方，每个比值都读作它在室温$\kT = 300$ K时所对应的频率。</span></div>
+</figure>
+</section>
+
+<section id="example-2">
+<h2>例2：热平衡中的辐射场</h2>
+<p class="cite-target" id="thermal-field">热辐射场的<span data-concept="density-matrix">密度矩阵</span>说明了<span data-concept="density-operator">密度算符</span>形式体系如何与统计力学联系起来。频率为$\knu_j$的<span data-concept="cavity-modes">单个模</span>有<span data-concept="density-operator">密度算符</span></p>
+<div class="equation" id="eq-3-13">$$\krhohat^{(j)} = \frac{e^{-\hbar\knu_j\hat{a}_j^\dagger\hat{a}_j/k_B \kT}}{\mathrm{Tr}[e^{-\hbar\knu_j\hat{a}_j^\dagger\hat{a}_j/k_B \kT}]} \tag{3.13}$$</div>
+<p>其在福克态$|n\rangle, |m\rangle$之间的矩阵元为</p>
+<div class="equation" id="eq-3-14">$$\hat{\rho}^{(j)}_{nm} = \delta_{nm}e^{-\hbar\knu_j n/k_B \kT}\left(1 - e^{-\hbar\knu_j/k_B \kT}\right). \tag{3.14}$$</div>
+<p>注意，只有<span data-concept="density-matrix-populations">对角元</span>不为零，因为该场是光子数态的<span data-concept="pure-and-mixed-states">统计混合</span>。因此，<span data-concept="creation-annihilation-operators">湮没算符</span>的<span data-concept="expectation-value">期望值</span>为零，</p>
+<div class="equation" id="eq-3-15">$$\langle\hat{a}_j\rangle = \sum_n\langle n|\hat{a}_j\krhohat|n\rangle = \sum_n\rho_{n+1,n}\sqrt{n+1} = 0, \tag{3.15}$$</div>
+<p id="bose-einstein">但<span data-concept="mean-thermal-photon-number">平均光子数</span>服从玻色-爱因斯坦分布，</p>
+<div class="equation" id="eq-3-16">$$\knbar_j = \langle\hat{a}_j^\dagger\hat{a}_j\rangle = \sum_n\krhonn = \frac{1}{e^{(\hbar\knu_j/k_B \kT)} - 1}. \tag{3.16}$$<sup class="fn" data-note="c-eq-3-16"></sup></div>
+</section>

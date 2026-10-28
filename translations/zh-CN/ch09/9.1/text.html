@@ -1,0 +1,118 @@
+<section id="opening">
+<p>我们之前看到，电场可以用<span data-concept="field-mode-expansion">一组量子化谐振子模</span>来表示，</p>
+<div class="equation" id="eq-9-1">$$\hat{\mathbf{E}} = \sum_{k,\alpha}\sqrt{\frac{\hbar\komegak}{2\epsilon_0 \kV}}\hat{\epsilon}_\alpha\left(\hat{a}_{k,\alpha}e^{i(\kk\cdot\mathbf{r} - \komegak \kt)} + h.c.\right), \tag{9.1}$$</div>
+<p>其中$\komegak$和$\hat{\epsilon}_\alpha$是模$\{k, \alpha\}$的频率和<span data-concept="light-polarization">偏振</span>。请注意，这个表达式处于<span data-concept="heisenberg-picture">海森伯绘景</span>，并且把<span data-concept="creation-annihilation-operators">湮没算符</span>的时间依赖性明确写了出来，所以上式中的$\hat{a}_{k,\alpha}$是在$\kt = 0$处取值的含时<span data-concept="creation-annihilation-operators">湮没算符</span>。这样一个场的<span data-concept="hamiltonian">哈密顿量</span>也可以用<span data-concept="creation-annihilation-operators">产生算符和湮没算符</span>来表示，</p>
+<div class="equation" id="eq-9-2">$$\kH = \frac{1}{2}\int dV\left(\epsilon_0 E^2 + \frac{B^2}{\mu_0}\right) \tag{9.2}$$</div>
+<div class="equation" id="eq-9-3">$$= \sum_{k,\alpha}\hbar\komegak\left(\hat{a}^\dagger_{k,\alpha}\hat{a}_{k,\alpha} + \frac{1}{2}\right), \tag{9.3}$$</div>
+<p>它的本征基由<span data-concept="fock-states" id="fock">光子数态或“福克”态</span>$\{|n_{k,\alpha}\rangle\}$构成，满足</p>
+<div class="equation" id="eq-9-4">$$\hat{n}_{k,\alpha}|n_{k,\alpha}\rangle = \hat{a}^\dagger_{k,\alpha}\hat{a}_{k,\alpha}|n_{k,\alpha}\rangle = n_{k,\alpha}|n_{k,\alpha}\rangle \tag{9.4}$$</div>
+<p>其中$n_{k,\alpha}$是模$\{k, \alpha\}$中的光子数。</p>
+<p>量子场的许多性质可以通过<span data-concept="single-mode-field" id="single-mode">考察单模的演化</span>来理解。对于与高<span data-concept="cavity-finesse">精细度</span>腔的量子场相互作用的原子，这样的描述在定量上也是合适的，所以我们常常只考虑<span data-concept="single-mode-field">单模</span>来简化讨论。</p>
+</section>
+
+<section id="thermal">
+<h2>9.1.1 热态</h2>
+<p>与其<span data-concept="open-system">环境</span>处于热平衡、温度为$\kT$的<span data-concept="single-mode-field">单模</span>场可以用<span data-concept="density-operator">密度算符</span>描述</p>
+<div class="equation" id="eq-9-5">$$\krhohat = \frac{e^{-\kH/k_B \kT}}{\mathrm{Tr}[e^{-\kH/k_B \kT}]}. \tag{9.5}$$</div>
+<p>在福克基中表示，<span data-concept="density-matrix">密度矩阵</span>是纯对角的，其元素为</p>
+<div class="equation" id="eq-9-6">$$\krhonn = e^{-n\hbar\komega/k_B \kT}\cdot(1 - e^{-\hbar\komega/k_B \kT}) \tag{9.6}$$</div>
+<p>对应于在腔中发现$n$个光子的概率。</p>
+<p>由此得到的光子数概率分布称为<span data-concept="photon-statistics" id="photon-statistics">“光子分布”或“光子统计学”</span>。<span data-concept="thermal-photon-distribution">热态</span>最有可能含有零个光子，而<span data-concept="mean-photon-number" id="mean-photon-number">平均数</span></p>
+<div class="equation" id="eq-9-7">$$\knbar = \sum_n n\krhonn = \frac{1}{e^{\hbar\komega/k_B \kT} - 1} \tag{9.7}$$</div>
+<p>反映了光子服从<span data-concept="bose-einstein-distribution">玻色-爱因斯坦统计法</span>且$\mu = 0$这一事实。电场的期望值为零</p>
+<div class="equation" id="eq-9-8">$$\langle\kEhat\rangle \propto \langle\hat{a}\rangle = 0 \tag{9.8}$$</div>
+<p>因为<span data-concept="thermal-photon-distribution">热场</span>是非相干的，因而相位未定义。</p>
+<p>请注意，<span data-concept="photon-statistics">光子统计学</span>在<span data-concept="multimode-thermal-statistics" id="multimode-thermal">多模热场</span>中与这个<span data-concept="single-mode-field">单模</span>例子看起来非常不同。多模场中的每个模最有可能不含光子，而当对所有这样的<span data-concept="cavity-modes">模</span>求和时，最有可能的总光子数是有限的，分布看起来更像泊松分布。例如，太阳光对应于<span data-concept="multimode-thermal-statistics">多模热场</span>。为了探测与太阳光的热性质相关联的<span data-concept="photon-statistics">光子统计学</span>，有必要设计一个实验，使太阳光的表现如同<span data-concept="single-mode-field">单模场</span>。做到这一点的一种方法是，同时把太阳光滤波到带宽$\Delta\omega$，并用门控时间远短于$1/\Delta\omega$的探测器观测光子到达时间。</p>
+</section>
+
+<section id="coherent">
+<h2>9.1.2 相干态</h2>
+<p>为了理解我们的半经典描述与量子力学方法之间的对应关系，最好能找到一个与激光的经典相干场相对应的量子态。激光场的定义性特征是电场具有确定的、有限的<span data-concept="expectation-value">期望值</span>，所以我们寻找一个态$|\kpsi\rangle$，满足</p>
+<div class="equation" id="eq-9-9">$$\langle\kpsi|\kEhat|\kpsi\rangle = E. \tag{9.9}$$</div>
+<p>我们已经看到，<span data-concept="thermal-photon-distribution">热态</span>没有有限的电场期望值，<span data-concept="fock-states">福克态</span>的电场同样为零。受<a href="#eq-9-9">式 (9.9)</a>的启发，我们将考虑光子<span data-concept="creation-annihilation-operators">湮没算符</span>的一个本征态$|\kalphacoh\rangle$，</p>
+<div class="equation" id="eq-9-10">$$\hat{a}|\kalphacoh\rangle = \kalphacoh|\kalphacoh\rangle. \tag{9.10}$$</div>
+<p>这种所谓的<span data-concept="coherent-state" id="coherent-state">“相干态”</span>实际上对应于经典激光。</p>
+<p>正如我们所希望的，<span data-concept="coherent-state">相干态</span>的电场具有确定的期望值</p>
+<div class="equation" id="eq-9-11">$$\langle\kalphacoh|\kEhat|\kalphacoh\rangle = \sqrt{\frac{\hbar\komega}{2\epsilon_0 \kV}}\left(\kalphacoh e^{i(\kk\cdot\mathbf{r} - i\komega \kt)} + c.c.\right), \tag{9.11}$$<sup class="fn" data-note="c-eq-9-11"></sup></div>
+<p>并且在<span data-concept="coherent-state">相干态</span>中光子的<span data-concept="mean-photon-number">平均数</span>为</p>
+<div class="equation" id="eq-9-12">$$\langle\kalphacoh|\hat{a}^\dagger\hat{a}|\kalphacoh\rangle = |\kalphacoh|^2. \tag{9.12}$$</div>
+
+<h3>正交分量</h3>
+<p>类比简谐振子的<span data-concept="field-quadratures">位置和动量算符</span>，我们可以引入<span data-concept="quadrature-operators" id="quadrature-operators">正交分量算符</span></p>
+<div class="equation" id="eq-9-13">$$\kxquad = \frac{1}{\sqrt{2}}\left(\hat{a} + \hat{a}^\dagger\right) \tag{9.13}$$</div>
+<div class="equation" id="eq-9-14">$$\kpquad = \frac{1}{i\sqrt{2}}\left(\hat{a} - \hat{a}^\dagger\right). \tag{9.14}$$</div>
+<p>这些算符的不确定度，</p>
+<div class="equation" id="eq-9-15">$$\langle\delta x^2\rangle = \frac{1}{2} \tag{9.15}$$</div>
+<div class="equation" id="eq-9-16">$$\langle\delta p^2\rangle = \frac{1}{2}, \tag{9.16}$$</div>
+<p>是我们所能期望的<span data-concept="coherent-state-uncertainty" id="most-classical">“最经典”</span>，因为海森伯<span data-concept="heisenberg-uncertainty-principle">不确定性原理</span>限定$\delta x\delta p \geq 1/2$<span data-concept="quadrature-operators">正交分量算符</span>对电磁场具有确定的物理意义。由<a href="#eq-9-1">式 (9.1)</a>给出的电场算符可以用这两个分量改写为</p>
+<div class="equation" id="eq-9-17">$$\kEhat \propto \kxquad\cos\komega \kt + \kpquad\sin\komega \kt. \tag{9.17}$$</div>
+<p>例如，如果这个电场与另一个场（称为<span data-concept="local-oscillator" id="local-oscillator">“本地振荡器”</span>）混合</p>
+<div class="equation" id="eq-9-18">$$E_{LO} \sim \cos\komega \kt, \tag{9.18}$$</div>
+<p>那么$\kxquad$将给出<span data-concept="quadrature-operators">“同相”</span>分量，而$\kpquad$给出<span data-concept="quadrature-operators">“异相”</span>分量。</p>
+
+<h3>平移算符</h3>
+<p><span data-concept="coherent-state">相干态</span>可以由真空态通过<span data-concept="shift-operator" id="shift-operator">“平移算符”</span>产生</p>
+<div class="equation" id="eq-9-19">$$\kDshift = e^{\kalphacoh\hat{a}^\dagger - \kalphacoh^*\hat{a}}, \tag{9.19}$$</div>
+<p>它在$\kxquad$和$\kpquad$的平面内平移态，使得$\kDshift|0\rangle = |\kalphacoh\rangle$。类似地，</p>
+<div class="equation" id="eq-9-20">$$\hat{D}^{-1}(\kalphacoh)\hat{a}\kDshift = \hat{a} + \kalphacoh. \tag{9.20}$$</div>
+<p>为了证明<a href="#eq-9-19">式 9.19</a>，我们将使用这样的事实：如果两个算符满足$[\hat{A}, [\hat{A}, \hat{B}]] = [\hat{B}, [\hat{A}, \hat{B}]] = 0$，则</p>
+<div class="equation" id="eq-9-21">$$e^{\hat{A}+\hat{B}} = e^{\hat{A}}e^{\hat{B}}e^{-[\hat{A},\hat{B}]/2}. \tag{9.21}$$</div>
+<p>因此，当<span data-concept="shift-operator">平移算符</span>作用于真空时，它产生一个<span data-concept="coherent-state">相干态</span>。</p>
+<figure class="dv" id="drv-shift-operator-on-vacuum"></figure>
+
+<h3>相干态中的光子统计学</h3>
+<p>在<span data-concept="coherent-state">相干态</span>中发现$n$个光子的概率<span data-concept="poisson-photon-statistics" id="poisson">服从泊松分布</span>，其方差等于其平均值。</p>
+<figure class="dv" id="drv-coherent-photon-statistics"></figure>
+<p>对于强场，$n \gg 1$，<sup class="fn" data-note="c-n-strong"></sup>标准偏差$\sqrt{\langle\Delta n^2\rangle}$远小于平均值，所以随着相干场变大，光强变得更加确定。</p>
+<figure class="sim" id="sim-coherent" data-figure="9.1 + 9.2" data-original="/media/ch09/fig-9-1.png,/media/ch09/fig-9-2.png" data-original-caption="（图 9.1）任何相干态都可以用{x̂, p̂}相空间中的一块面积来表示。到原点的距离与相干态的绝对值|α|成正比，而角度是α的辐角。正交分量算符的不确定度用直径为√2的圆表示。请注意，其他教科书选择把x̂ = ½(â + â†)、p̂ = (1/2i)(â − â†)作为定义，这去掉了√2因子。（图 9.2）|α|² = 10 的相干态的光子数分布。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.1 + 9.2</span><span>左侧为<span data-concept="coherent-state">相干态</span>$|\kalphacoh\rangle$，位于$\kxquad$和$\kpquad$的平面内：一个直径为$\sqrt{2}$的圆，每个正交分量的<span data-concept="coherent-state-uncertainty">不确定度</span>$\langle\delta x^2\rangle = \langle\delta p^2\rangle = 1/2$，距原点$\sqrt{2}|\kalphacoh|$，角度为$\kalphacoh$的辐角$\kphi$。虚线以$\komega$转动，并挑出正交分量$\kxquad\cos\komega\kt + \kpquad\sin\komega\kt$，由<a href="#eq-9-17">式 (9.17)</a>，场与之成正比；圆在虚线上的投影在右下方描绘成围绕平均场的一条带。其上方是同一个态的<span data-concept="poisson-photon-statistics">光子数分布</span>$\krhonn$。拖动$|\kalphacoh|$，可以看到平均光子数按$|\kalphacoh|^2$增长，而其展宽只按$|\kalphacoh|$增长，同时圆和带保持大小不变；拖动$\kphi$，可以使场相对于<span data-concept="local-oscillator">本地振荡器</span>$\cos\komega\kt$从<span data-concept="quadrature-operators">同相</span>滑动到<span data-concept="quadrature-operators">异相</span>。场以$\sqrt{\hbar\komega/\epsilon_0\kV}$为单位。</span></div>
+</figure>
+
+<h3>经典偶极辐射</h3>
+<p id="dipole-radiation"><span data-concept="coherent-state">相干态</span>也对应于<span data-concept="classical-dipole-radiation" id="dipole-field">经典振荡偶极子产生的场</span>。为了看出这一点，考虑这样一个偶极子的<span data-concept="hamiltonian">哈密顿量</span>，</p>
+<div class="equation" id="eq-9-29">$$\kH = -d\kEhat = -d_0\cos\komega \kt\kEhat. \tag{9.29}$$</div>
+<p>回到薛定谔绘景，并在<span data-concept="rotating-wave-approximation">旋转波近似</span>和<span data-concept="rotating-frame">转动参考系</span>中工作，<span data-concept="hamiltonian">哈密顿量</span>变为$-(d_0E_0/2)\hat{a}^\dagger + h.c.$，所以经过时间$\kt$后，<span data-concept="time-evolution-operator">时间演化算符</span>起着<span data-concept="shift-operator">平移算符</span>的作用：</p>
+<div class="equation" id="eq-9-30">$$|\kpsi\rangle = e^{-i\kH\kt/\hbar}|0\rangle = e^{\kalphacoh\hat{a} - \kalphacoh^*\hat{a}^\dagger}|0\rangle \tag{9.30}$$<sup class="fn" data-note="c-eq-9-30"></sup></div>
+<p>其中$\kalphacoh = id_0E_0\kt/2\hbar$。</p>
+
+<h3>推广到多模场</h3>
+<p><span data-concept="coherent-state">相干态</span>的这些性质表明，它们确实提供了经典激光的量子描述。然而，<span data-concept="coherent-state">相干态</span>也可以通过<span data-concept="multimode-coherent-state" id="multimode-coherent">对每个模中的相干态取直乘</span>推广到多模情形。</p>
+<div class="equation" id="eq-9-31">$$|\kpsi\rangle = \prod_k|\kalphacoh_k\rangle. \tag{9.31}$$</div>
+<p><span data-concept="multimode-coherent-state">这个多模态</span>中电场的期望值为</p>
+<div class="equation" id="eq-9-32">$$E(r, \kt) = \langle\kpsi|\kEhat|\kpsi\rangle \tag{9.32}$$</div>
+<div class="equation" id="eq-9-33">$$= \sum_k\underbrace{\sqrt{\frac{\hbar\komegak}{2\epsilon_0 \kV}}\kalphacoh_k}_{E_k}e^{i(\kk\cdot\mathbf{r} - i\komegak \kt)} + c.c. \tag{9.33}$$<sup class="fn" data-note="c-eq-9-33"></sup></div>
+<p>其中$E_k$是经典场第$k$个模的傅里叶分量。</p>
+
+<h3>准概率分布</h3>
+<p><span data-concept="fock-states">光子数态</span>构成了电磁场的一个基，而<span data-concept="coherent-state-overcompleteness" id="overcomplete">相干态构成一个超完备集</span>。我们可以通过证明恒等算符正比于所有<span data-concept="coherent-state">相干态</span>之和来证明完备性。</p>
+<figure class="dv" id="drv-coherent-state-completeness"></figure>
+<p>然而，利用<a href="#drv-shift-operator-on-vacuum">式 (9.24)</a>，我们可以直接验证不同的<span data-concept="coherent-state">相干态</span>并不正交，所以它们为描述任意场提供了一个不必要地庞大的态集。</p>
+<figure class="dv" id="drv-coherent-state-overlap"></figure>
+<p>尽管如此，<span data-concept="density-operator">密度算符</span>$\krhohat$的<span data-concept="coherent-state">相干态</span>表示仍然有用，我们将<span data-concept="p-representation" id="p-representation">准概率分布$\kPalpha$</span>定义为</p>
+<div class="equation" id="eq-9-40">$$\krhohat = \int\kPalpha|\kalphacoh\rangle\langle\kalphacoh|d^2\kalphacoh. \tag{9.40}$$</div>
+<p>这个<span data-concept="p-representation">准概率分布</span>有一些有趣的性质。首先，在考虑任意正规编序算符$\hat{O}$的<span data-concept="expectation-value">期望值</span>时，它的行为像一个概率分布：</p>
+<div class="equation" id="eq-9-41">$$\langle\hat{O}\rangle = \int\kPalpha\langle\kalphacoh|\hat{O}|\kalphacoh\rangle d^2\kalphacoh \tag{9.41}$$</div>
+<div class="equation" id="eq-9-42">$$= \int\kPalpha O(\kalphacoh)d^2\kalphacoh \tag{9.42}$$</div>
+<p>其次，值得注意的是，这个分布总是存在，并且可以利用公式求得</p>
+<div class="equation" id="eq-9-43">$$\kPalpha = \frac{e^{|\kalphacoh|^2}}{\pi^2}\int\langle-\beta|\rho|\beta\rangle e^{|\beta|^2}e^{-\beta\kalphacoh^* + \beta^*\kalphacoh}d^2\beta. \tag{9.43}$$</div>
+<p>这个关系可以通过计算$\langle-\beta|\rho|\beta\rangle$，经过一点代数运算后推导出来（参见<em>例如</em>斯库利和祖拜里，第 76 页）。</p>
+<p><span data-concept="p-representation">准概率分布</span>$\kPalpha$不是真正的概率分布，因为它可以取负值。特别地，负值与<span data-concept="nonclassical-light" id="nonclassical">电磁场的非经典性质</span>相关联，并标志着量子态与经典态之间的一条边界。</p>
+
+<h3>相干态的线性光学变换</h3>
+<p><span data-concept="linear-optical-transformations" id="linear-transformations">线性变换被定义为与入射光功率无关的效应</span>，而<span data-concept="coherent-state">相干态</span>在<span data-concept="linear-optical-transformations">线性变换</span>下仍保持为<span data-concept="coherent-state">相干态</span>。<span data-concept="linear-optical-transformations">线性变换</span>最简单的例子是相移和<span data-concept="beamsplitter-transformation">分束器</span>。正如其名称所暗示的，相移只改变<span data-concept="coherent-state">相干态</span>的相位</p>
+<div class="equation" id="eq-9-44">$$E \rightarrow Ee^{i\kphi} \Rightarrow \hat{a} \rightarrow \hat{a}e^{i\kphi}. \tag{9.44}$$</div>
+<p><span data-concept="beamsplitter-transformation" id="beamsplitter">以振幅透射率$t$和振幅反射率$r$表征的分束器</span>把两个输入电场$E_1^\mathrm{in}, E_1^\mathrm{in}$<sup class="fn" data-note="c-e-in"></sup>变换为两个输出电场<sup class="fn" data-note="footnote-1"></sup></p>
+<div class="equation" id="eq-9-45">$$E_1^\mathrm{out} = tE_1^\mathrm{in} + irE_2^\mathrm{in} \tag{9.45}$$</div>
+<div class="equation" id="eq-9-46">$$E_2^\mathrm{out} = tE_2^\mathrm{in} + irE_1^\mathrm{in}. \tag{9.46}$$</div>
+<p>由于这些是线性关系，对于光子<span data-concept="creation-annihilation-operators">湮没算符</span>同样必定成立：</p>
+<div class="equation" id="eq-9-48">$$\hat{a}_1^\mathrm{out} = t\hat{a}_1^\mathrm{in} + ir\hat{a}_2^\mathrm{in} \tag{9.48}$$</div>
+<div class="equation" id="eq-9-49">$$\hat{a}_2^\mathrm{out} = t\hat{a}_2^\mathrm{in} + ir\hat{a}_1^\mathrm{in}. \tag{9.49}$$</div>
+<p>假设输入为$|\kalphacoh_1\rangle|\kalphacoh_2\rangle$。所得的输出场满足</p>
+<div class="equation" id="eq-9-50">$$\hat{a}_1^\mathrm{out}|\kalphacoh_1\rangle|\kalphacoh_2\rangle = (t\kalphacoh_1^\mathrm{in} + ir\kalphacoh_2^\mathrm{in})|\kalphacoh_1\rangle|\kalphacoh_2\rangle, \tag{9.50}$$</div>
+<p>它因此也是一个<span data-concept="coherent-state">相干态</span>。关键在于，<span data-concept="linear-optical-transformations">线性光学操作</span>不改变<span data-concept="coherent-state">相干态</span>的量子统计性质。</p>
+<p>请注意，<span data-concept="beamsplitter-unitary" id="beamsplitter-unitary">分束器变换可以看作是两个简谐振子耦合的结果</span>，因为</p>
+<div class="equation" id="eq-9-51">$$\begin{pmatrix} \hat{a}_1 \\ \hat{a}_2 \end{pmatrix}^\mathrm{out} = \hat{U}\begin{pmatrix} \hat{a}_1 \\ \hat{a}_2 \end{pmatrix}^\mathrm{in} \tag{9.51}$$</div>
+<p>其中幺正算符</p>
+<div class="equation" id="eq-9-52">$$\hat{U} = e^{i\ktheta\hat{a}_1\hat{a}_2^\dagger + i\ktheta\hat{a}_2\hat{a}_1^\dagger} \tag{9.52}$$</div>
+<p>可以用与透射系数和反射系数相关的参数$\ktheta$写出。</p>
+</section>

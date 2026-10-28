@@ -1,0 +1,980 @@
+{
+ "id": "3.3",
+ "chapter": "3",
+ "title": "开放系统的动力学",
+ "short": "开放系统的动力学",
+ "lead": "<span data-concept=\"open-system\">开放系统</span>的<span data-concept=\"reduced-density-operator\">约化密度算符</span>如何演化：对<span data-concept=\"open-system\">热库</span>取运动方程的阵迹，作为<span data-concept=\"open-system\">环境</span>模型的<span data-concept=\"spin-in-fluctuating-field\">涨落场中的自旋</span>，其<span data-concept=\"correlation-time\">关联时间</span>以及可逆与<span data-concept=\"markovian-environment\">马尔可夫</span>退相位的分界，还有把热库的<span data-concept=\"reservoir-correlation-functions\">关联函数</span>化为<span data-concept=\"thermal-radiation-field\">热辐射场</span>中原子的<span data-concept=\"master-equation\">主方程</span>的<span data-concept=\"born-markov-approximation\">玻恩-马尔可夫</span>推导。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-spin-echo",
+   "kind": "sim",
+   "draws": [
+    "coherence",
+    "frequency",
+    "time",
+    "phase"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "entangled",
+   "concept": "system-environment-entanglement",
+   "verb": "introduces"
+  },
+  {
+   "span": "half-rate",
+   "concept": "decaying-atom-reduced-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-3-27",
+   "concept": "system-reservoir-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "fluctuating-field",
+   "concept": "spin-in-fluctuating-field",
+   "verb": "introduces"
+  },
+  {
+   "span": "stationary",
+   "concept": "stationary-random-process",
+   "verb": "introduces"
+  },
+  {
+   "span": "correlation-time",
+   "concept": "correlation-time",
+   "verb": "introduces"
+  },
+  {
+   "span": "gaussian",
+   "concept": "gaussian-random-process",
+   "verb": "introduces"
+  },
+  {
+   "span": "reversible",
+   "concept": "reversible-evolution",
+   "verb": "introduces"
+  },
+  {
+   "span": "markovian",
+   "concept": "markovian-environment",
+   "verb": "introduces"
+  },
+  {
+   "span": "interaction-picture",
+   "concept": "open-system-interaction-picture",
+   "verb": "introduces"
+  },
+  {
+   "span": "bilinear",
+   "concept": "bilinear-system-reservoir-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "born-markov",
+   "concept": "born-markov-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "energy-shift",
+   "concept": "reservoir-energy-shift",
+   "verb": "introduces"
+  },
+  {
+   "span": "correlation-functions",
+   "concept": "reservoir-correlation-functions",
+   "verb": "introduces"
+  },
+  {
+   "span": "sharply-peaked",
+   "concept": "thermal-field-correlator",
+   "verb": "introduces"
+  },
+  {
+   "span": "master-equation",
+   "concept": "master-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "entangled",
+   "concept": "open-system",
+   "verb": "uses"
+  },
+  {
+   "span": "decay",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "decay",
+   "concept": "spontaneous-emission-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "decay",
+   "concept": "density-matrix",
+   "verb": "uses"
+  },
+  {
+   "span": "half-rate",
+   "concept": "density-matrix-coherences",
+   "verb": "uses"
+  },
+  {
+   "span": "half-rate",
+   "concept": "density-matrix-populations",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-3-33",
+   "concept": "time-evolution-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "s-plus",
+   "concept": "density-matrix-coherences",
+   "verb": "uses"
+  },
+  {
+   "span": "s-plus",
+   "concept": "expectation-value",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-3-43",
+   "concept": "atom-field-interaction",
+   "verb": "uses"
+  },
+  {
+   "span": "sharply-peaked",
+   "concept": "wigner-weisskopf",
+   "verb": "uses"
+  },
+  {
+   "span": "master-equation",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "markovian",
+   "concept": "open-system",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-density-operator-evolution",
+   "concept": "density-operator-equation-of-motion",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-density-operator-evolution",
+   "concept": "density-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-density-operator-evolution",
+   "concept": "reduced-density-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-density-operator-evolution",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-reduced-density-equation",
+   "concept": "reduced-density-operator-dynamics",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-thermal-correlator",
+   "concept": "thermal-radiation-field",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-thermal-correlator",
+   "concept": "mean-thermal-photon-number",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-master-equation",
+   "concept": "principal-value-identity",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [],
+ "footnotes": [
+  {
+   "id": "footnote-1",
+   "kind": "book",
+   "number": "1",
+   "html": "<span data-concept=\"open-system\">热库</span>的带宽与<span data-concept=\"correlation-time\">关联时间</span>之间的这种关系常常成立，但并非总是成立。例如，如果系统由空间范围$L$大于光学波长$\\lambda_0$的原子系综构成，而<span data-concept=\"open-system\">环境</span>由电磁场构成，则<span data-concept=\"correlation-time\">关联时间</span>$\\ktauc \\sim L/c$对应于光子离开介质所需的时间，因为一个原子释放的光子可以在时间$\\ktauc$之后被另一个原子吸收。"
+  },
+  {
+   "id": "footnote-2",
+   "kind": "book",
+   "number": "2",
+   "html": "<span data-concept=\"born-markov-approximation\">玻恩近似</span>实际上比这个略强。它指出，就计算系统动力学而言，<span data-concept=\"open-system\">热库</span>大到使可因子化的假设在所有时刻都成立。"
+  },
+  {
+   "id": "c-eq-3-33",
+   "kind": "correction",
+   "html": "书中在指数里印的是$+i$。$\\kHSR = \\hbar\\kft(\\kt)\\hat{S}_z$的演化算符是$\\hat{U} = e^{-i\\int_0^{\\kt}\\kft(\\kt')d\\kt'\\hat{S}_z}$，因为不同时刻的$\\kHSR$与自身对易；用它得到$\\hat{U}^\\dagger\\hat{S}_+\\hat{U} = e^{i\\int_0^{\\kt}\\kft(\\kt')d\\kt'}\\hat{S}_+$，即式 (3.34) 的相位。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "density-operator-evolution",
+   "what": "密度算符的运动方程",
+   "source": "现代原子与光学物理 II，3.3 系统-热库相互作用",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "混合的概率$p_\\alpha$不随时间变化。",
+       "src": "(3.1)"
+      },
+      {
+       "tex": "i\\hbar|\\dot{\\kpsi}_\\alpha^S\\rangle = \\kHS|\\kpsi_\\alpha^S\\rangle",
+       "src": "(1.11)"
+      },
+      {
+       "text": "薛定谔方程的共轭，$-i\\hbar\\langle\\dot{\\kpsi}_\\alpha^S| = \\langle\\kpsi_\\alpha^S|\\kHS$，因为$\\kHS$是厄米的。",
+       "src": "(1.11), (1.5)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\krhoS} = \\mk{R}{\\sum_\\alpha p_\\alpha|\\kpsi_\\alpha^S\\rangle\\langle\\kpsi_\\alpha^S|}",
+      "src": "(3.1)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\krhoS}} = \\mk{R}{\\sum_\\alpha p_\\alpha(i\\hbar|\\dot{\\kpsi}_\\alpha^S\\rangle\\langle\\kpsi_\\alpha^S| + |\\kpsi_\\alpha^S\\rangle\\,i\\hbar\\langle\\dot{\\kpsi}_\\alpha^S|)}",
+       "uses": [
+        0
+       ],
+       "cap": "按乘积法则求导，再乘以$i\\hbar$。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\krhoS}} = \\mk{R}{\\sum_\\alpha p_\\alpha(\\kHS|\\kpsi_\\alpha^S\\rangle\\langle\\kpsi_\\alpha^S| - |\\kpsi_\\alpha^S\\rangle\\langle\\kpsi_\\alpha^S|\\kHS)}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\krhoS}} = \\mk{R}{\\kHS\\krhoS - \\krhoS\\kHS}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhoS}} = \\mk{R}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]}",
+       "uses": []
+      }
+     ],
+     "num": "(3.23)",
+     "note": "书中把$\\frac{1}{i\\hbar}[\\kHS, \\krhoS]$印成等于式 (3.22) 的$i\\hbar\\dot{\\krhoS}$；因子$\\frac{1}{i\\hbar}$属于$\\dot{\\krhoS}$，即式 (3.28) 的形式。"
+    }
+   ]
+  },
+  {
+   "id": "decaying-atom-density-matrix",
+   "what": "衰变原子的约化密度矩阵",
+   "source": "现代原子与光学物理 II，3.3 系统-热库相互作用",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|\\kpsi(\\kt)\\rangle = \\kcone|1\\rangle \\otimes |0\\rangle + \\kctwo(\\kt)|2\\rangle \\otimes |0\\rangle + \\sum_k \\kck(\\kt)|1\\rangle \\otimes |1_k\\rangle",
+       "src": "3.3"
+      },
+      {
+       "text": "在以原子频率$\\komega$转动的参考系中，激发态的概率幅按$\\kctwo(\\kt) = \\kctwo e^{-\\kgamma\\kt/2}$衰变。",
+       "src": "(2.90)"
+      },
+      {
+       "text": "概率守恒：$|\\kcone|^2 + |\\kctwo(\\kt)|^2 + \\sum_k|\\kck(\\kt)|^2 = 1$。",
+       "src": "2.3.4"
+      },
+      {
+       "text": "对初始的纯态，密度矩阵有$\\rho_{ij}(0) = c_i c_j^*$。",
+       "src": "3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\krhoS} = \\mk{R}{\\mathrm{Tr}_R[|\\kpsi(\\kt)\\rangle\\langle\\kpsi(\\kt)|]}",
+      "src": "(3.21)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\krhoS} = \\mk{R}{\\sum_{n=0}^\\infty\\sum_k\\langle n_k|\\kpsi(\\kt)\\rangle\\langle\\kpsi(\\kt)|n_k\\rangle}",
+       "uses": [],
+       "cap": "对场取阵迹，遍及每个模$k$的$n$光子福克态$|n_k\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{\\krhoS} = \\mk{R}{\\Big(|\\kcone|^2 + \\sum_k|\\kck(\\kt)|^2\\Big)|1\\rangle\\langle 1| + |\\kctwo(\\kt)|^2|2\\rangle\\langle 2| + \\kcone\\kctwo(\\kt)^*|1\\rangle\\langle 2| + \\kctwo(\\kt)\\kcone^*|2\\rangle\\langle 1|}",
+       "uses": [
+        0
+       ],
+       "cap": "只有$\\langle 0|$遇到不含光子的部分，只有$\\langle 1_k|$遇到$c_k(t)|1\\rangle \\otimes |1_k\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{\\krhoS} = \\mk{R}{\\begin{pmatrix} |\\kcone|^2 + \\sum_k|\\kck(\\kt)|^2 & \\kcone\\kctwo^* e^{-\\kgamma {\\kt}/2} \\\\ \\kctwo\\kcone^* e^{-\\kgamma {\\kt}/2} & |\\kctwo|^2 e^{-\\kgamma {\\kt}} \\end{pmatrix}}",
+       "uses": [
+        1
+       ],
+       "cap": "写成基$\\{|1\\rangle, |2\\rangle\\}$中的矩阵。"
+      },
+      {
+       "tex": "\\mk{L}{\\krhoS} = \\mk{R}{\\begin{pmatrix} 1 - \\krhotwotwo(0)e^{-\\kgamma {\\kt}} & \\krhoonetwo(0)e^{-\\kgamma {\\kt}/2} \\\\ \\krhotwoone(0)e^{-\\kgamma {\\kt}/2} & \\krhotwotwo(0)e^{-\\kgamma {\\kt}} \\end{pmatrix}}",
+       "uses": [
+        2,
+        3
+       ]
+      }
+     ],
+     "num": "(3.26)"
+    }
+   ]
+  },
+  {
+   "id": "reduced-density-equation",
+   "what": "约化密度算符的运动方程",
+   "source": "现代原子与光学物理 II，3.3.1 一般形式体系",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = \\kHS + \\kHR + \\kHSR",
+       "src": "(3.27)"
+      },
+      {
+       "tex": "\\krhoS = \\mathrm{Tr}_R[\\krhohat]",
+       "src": "(3.21)"
+      },
+      {
+       "text": "$\\kHS$只作用于系统自由度，所以它可以移出对热库的阵迹。",
+       "src": "3.3.1"
+      },
+      {
+       "text": "阵迹在热库算符的轮换下不变，所以$\\mathrm{Tr}_R[[\\kHR, \\krhohat]] = 0$。",
+       "src": "3.3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhohat}} = \\mk{R}{\\frac{1}{i\\hbar}[\\kH, \\krhohat]}",
+      "src": "(3.28)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\krhohat}} = \\mk{R}{\\frac{1}{i\\hbar}[\\kHS + \\kHR + \\kHSR, \\krhohat]}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhoS}} = \\mk{R}{\\frac{1}{i\\hbar}\\mathrm{Tr}_R[[\\kHS + \\kHR + \\kHSR, \\krhohat]]}",
+       "uses": [
+        1
+       ],
+       "cap": "两边对热库自由度取阵迹。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhoS}} = \\mk{s}{\\frac{1}{i\\hbar}\\mathrm{Tr}_R[[\\kHS, \\krhohat]]} + \\mk{r}{\\frac{1}{i\\hbar}\\mathrm{Tr}_R[[\\kHR, \\krhohat]]} + \\mk{i}{\\frac{1}{i\\hbar}\\mathrm{Tr}_R[[\\kHSR, \\krhohat]]}",
+       "uses": [],
+       "map": {
+        "R": [
+         "s",
+         "r",
+         "i"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhoS}} = \\mk{s}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]} + \\mk{r}{\\frac{1}{i\\hbar}\\mathrm{Tr}_R[[\\kHR, \\krhohat]]} + \\mk{i}{\\frac{1}{i\\hbar}\\mathrm{Tr}_R[[\\kHSR, \\krhohat]]}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\krhoS}} = \\mk{s}{\\frac{1}{i\\hbar}[\\kHS, \\krhoS]} + \\mk{r}{\\frac{1}{i\\hbar}\\underbrace{\\mathrm{Tr}_R[[\\kHR, \\krhohat]]}_{=0}} + \\mk{i}{\\frac{1}{i\\hbar}\\mathrm{Tr}_R[[\\kHSR, \\krhohat]]}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(3.31)"
+    }
+   ]
+  },
+  {
+   "id": "coarse-grained-change",
+   "what": "密度算符在短时间间隔内的变化",
+   "source": "现代原子与光学物理 II，3.3.3 马尔可夫热库的密度算符方法",
+   "nodes": [
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d{\\kt}}\\krhotilde} = \\mk{R}{\\frac{1}{i\\hbar}[\\kHtilde_{SR}, \\krhotilde]}",
+      "src": "(3.40)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\underbrace{\\krhotilde({\\kt} + \\kDeltat) - \\krhotilde({\\kt})}_{\\Delta\\krhotilde}} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'[\\kHtilde_{SR}({\\kt}'), \\krhotilde({\\kt}')]}",
+       "uses": [],
+       "cap": "两边从$t$到$t + \\Delta t$积分。"
+      }
+     ],
+     "num": "(3.45)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "$\\kt' - \\kt < \\kDeltat$。",
+       "src": "3.3.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\krhotilde({\\kt} + \\kDeltat) - \\krhotilde({\\kt})} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'[\\kHtilde_{SR}({\\kt}'), \\krhotilde({\\kt}')]}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\krhotilde({\\kt}') - \\krhotilde({\\kt})} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{{\\kt}'}d{\\kt}''[\\kHtilde_{SR}({\\kt}''), \\krhotilde({\\kt}'')]}",
+       "uses": [
+        1
+       ],
+       "cap": "同样的积分，从$t$到$t'$，它位于该间隔之内。"
+      },
+      {
+       "tex": "\\mk{L}{\\krhotilde({\\kt}')} \\approx \\mk{t}{\\krhotilde({\\kt})} + \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{{\\kt}'}d{\\kt}''[\\kHtilde_{SR}({\\kt}''), \\krhotilde({\\kt}'')]}",
+       "uses": [],
+       "map": {
+        "L": [
+         "L",
+         "t"
+        ]
+       }
+      }
+     ],
+     "num": "(3.46)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\krhoS = \\mathrm{Tr}_R[\\krhohat]",
+       "src": "(3.21)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\Delta\\krhotilde} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'[\\kHtilde_{SR}({\\kt}'), \\krhotilde({\\kt}')]}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde} = {} &\\mk{a}{\\tfrac{1}{i\\hbar}\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'[\\kHtilde_{SR}({\\kt}'), \\krhotilde({\\kt})]} \\\\ &+ \\mk{b}{\\tfrac{1}{(i\\hbar)^2}\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''[\\kHtilde_{SR}({\\kt}'), [\\kHtilde_{SR}({\\kt}''), \\krhotilde({\\kt}'')]]}\\end{aligned}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\tilde{\\rho}(t')$的展开进入对易式之内。",
+       "map": {
+        "R": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde_S} = {} &\\mk{a}{\\tfrac{1}{i\\hbar}\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\ \\mathrm{Tr}_R[\\kHtilde_{SR}({\\kt}'), \\krhotilde({\\kt})]} \\\\ &+ \\mk{b}{\\tfrac{1}{(i\\hbar)^2}\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\ \\mathrm{Tr}_R[\\kHtilde_{SR}({\\kt}'), [\\kHtilde_{SR}({\\kt}''), \\krhotilde({\\kt}'')]]}\\end{aligned}",
+       "uses": [
+        2
+       ],
+       "cap": "对热库自由度取阵迹。"
+      }
+     ],
+     "num": "(3.48)"
+    }
+   ]
+  },
+  {
+   "id": "first-reservoir-term",
+   "what": "热库的一阶效应",
+   "source": "现代原子与光学物理 II，3.3.3 马尔可夫热库的密度算符方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kHtilde_{SR} = \\kShat\\kFR({\\kt})^\\dagger + \\kFR({\\kt})\\kShat^\\dagger",
+       "src": "(3.42)"
+      },
+      {
+       "text": "状态可因子化，$\\krhotilde({\\kt}) = \\krhotilde_S({\\kt}) \\otimes \\krhotilde_R({\\kt})$，且由于$\\kDeltat \\ll \\ktauS$，修正$\\krhotilde_{corr}$到领头阶被忽略。",
+       "src": "(3.49), (3.50)"
+      },
+      {
+       "tex": "\\langle\\kFR({\\kt}')^\\dagger\\rangle = \\mathrm{Tr}_R\\{\\kFR({\\kt}')^\\dagger\\krhotilde_R({\\kt})\\}",
+       "src": "(3.53)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\Delta\\krhotilde_S^{(1)}} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\ \\mathrm{Tr}_R[\\kHtilde_{SR}({\\kt}'), \\krhotilde({\\kt})]}",
+      "src": "(3.48)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\Delta\\krhotilde_S^{(1)}} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\ \\mathrm{Tr}_R[\\kShat\\kFR({\\kt}')^\\dagger + \\kFR({\\kt}')\\kShat^\\dagger, \\krhotilde_S({\\kt}) \\otimes \\krhotilde_R({\\kt})]}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\Delta\\krhotilde_S^{(1)}} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\ [\\kShat, \\krhotilde_S({\\kt})] \\otimes \\mathrm{Tr}_R\\{\\kFR({\\kt}')^\\dagger\\krhotilde_R({\\kt})\\} - h.c.}",
+       "uses": [],
+       "cap": "系统算符从对热库的阵迹中提出，该阵迹对热库算符是轮换不变的，所以含$\\hat{S}$的项给出$[\\hat{S}, \\tilde{\\rho}_S]\\,\\mathrm{Tr}_R\\{\\hat{F}_R^\\dagger\\tilde{\\rho}_R\\}$；含$\\hat{S}^\\dagger$的项是这些项的厄米共轭的负值，因为$\\tilde{\\rho}_S$和$\\tilde{\\rho}_R$是厄米的。"
+      },
+      {
+       "tex": "\\mk{L}{\\Delta\\krhotilde_S^{(1)}} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\ [\\kShat, \\krhotilde_S({\\kt})] \\otimes \\langle\\kFR({\\kt}')^\\dagger\\rangle - h.c.}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\Delta\\krhotilde_S^{(1)}} = \\mk{R}{\\frac{1}{i\\hbar}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\ [\\underbrace{\\kShat\\langle\\kFR({\\kt}')^\\dagger\\rangle + \\kShat^\\dagger\\langle\\kFR({\\kt}')\\rangle}_{\\kHS'}, \\krhotilde_S({\\kt})]}",
+       "uses": [],
+       "cap": "$[\\hat{S}, \\tilde{\\rho}_S]\\langle\\hat{F}_R^\\dagger\\rangle$的厄米共轭的负值是$[\\hat{S}^\\dagger, \\tilde{\\rho}_S]\\langle\\hat{F}_R\\rangle$，它与前者合并在一个对易式中。"
+      }
+     ],
+     "num": "(3.54)",
+     "note": "书中在式 (3.52) 中印的是$\\mathrm{Tr}\\{\\kFR({\\kt}')^\\dagger, \\krhotilde_R({\\kt})\\}$，带一个逗号且没有下标$R$；其含义是乘积对热库的阵迹，如式 (3.53) 所写。"
+    }
+   ]
+  },
+  {
+   "id": "second-reservoir-term",
+   "what": "关联函数中热库的二阶效应",
+   "source": "现代原子与光学物理 II，3.3.3 马尔可夫热库的密度算符方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "g^{++}({\\kt}', {\\kt}'') = \\mathrm{Tr}_R[\\kFR({\\kt}')^\\dagger\\kFR({\\kt}'')^\\dagger\\krhotilde_R]",
+       "src": "(3.61)"
+      },
+      {
+       "text": "热库密度算符$\\krhotilde_R$是厄米的。",
+       "src": "3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{g^{--}({\\kt}', {\\kt}'')} = \\mk{R}{\\mathrm{Tr}_R[\\kFR({\\kt}')\\kFR({\\kt}'')\\krhotilde_R]}",
+      "src": "(3.58)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{g^{--}({\\kt}', {\\kt}'')^*} = \\mk{R}{\\mathrm{Tr}_R[\\kFR({\\kt}')\\kFR({\\kt}'')\\krhotilde_R]^\\dagger}",
+       "uses": [],
+       "cap": "阵迹的共轭是伴随的阵迹。"
+      },
+      {
+       "tex": "\\mk{L}{g^{--}({\\kt}', {\\kt}'')^*} = \\mk{R}{\\mathrm{Tr}_R[\\krhotilde_R\\kFR({\\kt}'')^\\dagger\\kFR({\\kt}')^\\dagger]}",
+       "uses": [
+        1
+       ],
+       "cap": "$(\\hat{X}\\hat{Y}\\hat{Z})^\\dagger = \\hat{Z}^\\dagger\\hat{Y}^\\dagger\\hat{X}^\\dagger$。"
+      },
+      {
+       "tex": "\\mk{L}{g^{--}({\\kt}', {\\kt}'')^*} = \\mk{R}{g^{++}({\\kt}'', {\\kt}')}",
+       "uses": [
+        0
+       ],
+       "cap": "作轮换，$\\mathrm{Tr}_R[\\tilde{\\rho}_R\\hat{F}_R(t'')^\\dagger\\hat{F}_R(t')^\\dagger] = \\mathrm{Tr}_R[\\hat{F}_R(t'')^\\dagger\\hat{F}_R(t')^\\dagger\\tilde{\\rho}_R]$。"
+      }
+     ],
+     "num": "(3.65)"
+    },
+    {
+     "assumes": [
+      {
+       "text": "热库密度算符$\\krhotilde_R$是厄米的。",
+       "src": "3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{g^{+-}({\\kt}', {\\kt}'')} = \\mk{R}{\\mathrm{Tr}_R[\\kFR({\\kt}')^\\dagger\\kFR({\\kt}'')\\krhotilde_R]}",
+      "src": "(3.59)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{g^{+-}({\\kt}', {\\kt}'')^*} = \\mk{R}{\\mathrm{Tr}_R[\\kFR({\\kt}')^\\dagger\\kFR({\\kt}'')\\krhotilde_R]^\\dagger}",
+       "uses": [],
+       "cap": "阵迹的共轭是伴随的阵迹。"
+      },
+      {
+       "tex": "\\mk{L}{g^{+-}({\\kt}', {\\kt}'')^*} = \\mk{R}{\\mathrm{Tr}_R[\\krhotilde_R\\kFR({\\kt}'')^\\dagger\\kFR({\\kt}')]}",
+       "uses": [
+        0
+       ],
+       "cap": "$(\\hat{X}\\hat{Y}\\hat{Z})^\\dagger = \\hat{Z}^\\dagger\\hat{Y}^\\dagger\\hat{X}^\\dagger$。"
+      },
+      {
+       "tex": "\\mk{L}{g^{+-}({\\kt}', {\\kt}'')^*} = \\mk{R}{g^{+-}({\\kt}'', {\\kt}')}",
+       "uses": [],
+       "cap": "作轮换，如式 (3.59)。"
+      }
+     ],
+     "num": "(3.68)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kHtilde_{SR}({\\kt}) = \\kFR({\\kt})\\kShat^\\dagger + \\kFR({\\kt})^\\dagger\\kShat",
+       "src": "(3.42)"
+      },
+      {
+       "text": "状态在$\\kt$时可因子化，且由于$\\kDeltat \\ll \\ktauS$，修正$\\krhotilde_{corr}$到领头阶被忽略。",
+       "src": "(3.49), (3.50)"
+      },
+      {
+       "text": "热库算符的双时关联函数$g^{--}$、$g^{+-}$、$g^{-+}$和$g^{++}$是式 (3.58)–(3.61) 的阵迹，其中每一个都可以对热库算符作轮换。",
+       "src": "(3.58)–(3.61)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\Delta\\krhotilde_S^{(2)}} = \\mk{R}{\\frac{1}{(i\\hbar)^2}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\ \\mathrm{Tr}_R[\\kHtilde_{SR}({\\kt}'), [\\kHtilde_{SR}({\\kt}''), \\krhotilde({\\kt}'')]]}",
+      "src": "(3.48)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde_S^{(2)}} = {} &\\mk{A}{\\frac{1}{(i\\hbar)^2}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\ \\mathrm{Tr}_R[\\kFR({\\kt}')\\kShat^\\dagger + \\kFR({\\kt}')^\\dagger\\kShat,} \\\\ &\\mk{B}{[\\kFR({\\kt}'')\\kShat^\\dagger + \\kFR({\\kt}'')^\\dagger\\kShat, \\krhotilde({\\kt}'')]]}\\end{aligned}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "R": [
+         "A",
+         "B"
+        ]
+       }
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde_S^{(2)}} \\approx {} &\\mk{A}{\\frac{1}{(i\\hbar)^2}\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\ \\mathrm{Tr}_R[\\kFR({\\kt}')\\kShat^\\dagger + \\kFR({\\kt}')^\\dagger\\kShat,} \\\\ &\\mk{B}{[\\kFR({\\kt}'')\\kShat^\\dagger + \\kFR({\\kt}'')^\\dagger\\kShat, \\krhotilde_S({\\kt})\\krhotilde_R({\\kt})]]}\\end{aligned}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde_S^{(2)}} = {} &\\tfrac{1}{(i\\hbar)^2}\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\Big(\\mk{r1}{\\mathrm{Tr}_R\\left\\{\\left(\\kFR({\\kt}')\\kShat^\\dagger + \\kFR({\\kt}')^\\dagger\\kShat\\right)\\left(\\kFR({\\kt}'')\\kShat^\\dagger + \\kFR({\\kt}'')^\\dagger\\kShat\\right)\\krhotilde_S({\\kt})\\krhotilde_R({\\kt})\\right\\}} \\\\ &\\mk{r2}{-\\mathrm{Tr}_R\\left\\{\\left(\\kFR({\\kt}')\\kShat^\\dagger + \\kFR({\\kt}')^\\dagger\\kShat\\right)\\krhotilde_S({\\kt})\\krhotilde_R({\\kt})\\left(\\kFR({\\kt}'')\\kShat^\\dagger + \\kFR({\\kt}'')^\\dagger\\kShat\\right)\\right\\}} \\\\ &\\mk{r3}{-\\mathrm{Tr}_R\\left\\{\\left(\\kFR({\\kt}'')\\kShat^\\dagger + \\kFR({\\kt}'')^\\dagger\\kShat\\right)\\krhotilde_S({\\kt})\\krhotilde_R({\\kt})\\left(\\kFR({\\kt}')\\kShat^\\dagger + \\kFR({\\kt}')^\\dagger\\kShat\\right)\\right\\}} \\\\ &\\mk{r4}{+\\mathrm{Tr}_R\\left\\{\\krhotilde_S({\\kt})\\krhotilde_R({\\kt})\\left(\\kFR({\\kt}'')\\kShat^\\dagger + \\kFR({\\kt}'')^\\dagger\\kShat\\right)\\left(\\kFR({\\kt}')\\kShat^\\dagger + \\kFR({\\kt}')^\\dagger\\kShat\\right)\\right\\}}\\Big)\\end{aligned}",
+       "uses": [],
+       "cap": "展开双重对易式，$[\\hat{A}, [\\hat{B}, \\hat{\\rho}]] = \\hat{A}\\hat{B}\\hat{\\rho} - \\hat{A}\\hat{\\rho}\\hat{B} - \\hat{B}\\hat{\\rho}\\hat{A} + \\hat{\\rho}\\hat{B}\\hat{A}$，其中$\\hat{A}$在$t'$，$\\hat{B}$在$t''$。",
+       "map": {
+        "A": [
+         "r1",
+         "r2",
+         "r3",
+         "r4"
+        ],
+        "B": [
+         "r1",
+         "r2",
+         "r3",
+         "r4"
+        ]
+       }
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde_S^{(2)}} = {} &\\tfrac{1}{(i\\hbar)^2}\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\Big(\\mk{r1}{g^{--}({\\kt}', {\\kt}'')\\kShat^\\dagger\\kShat^\\dagger\\krhotilde_S({\\kt}) + g^{-+}({\\kt}', {\\kt}'')\\kShat^\\dagger\\kShat\\krhotilde_S({\\kt}) + g^{+-}({\\kt}', {\\kt}'')\\kShat\\kShat^\\dagger\\krhotilde_S({\\kt}) + g^{++}({\\kt}', {\\kt}'')\\kShat\\kShat\\krhotilde_S({\\kt})} \\\\ &\\mk{r2}{-g^{--}({\\kt}'', {\\kt}')\\kShat^\\dagger\\krhotilde_S({\\kt})\\kShat^\\dagger - g^{-+}({\\kt}'', {\\kt}')\\kShat\\krhotilde_S({\\kt})\\kShat^\\dagger - g^{+-}({\\kt}'', {\\kt}')\\kShat^\\dagger\\krhotilde_S({\\kt})\\kShat - g^{++}({\\kt}'', {\\kt}')\\kShat\\krhotilde_S({\\kt})\\kShat} \\\\ &\\mk{r3}{-g^{--}({\\kt}', {\\kt}'')\\kShat^\\dagger\\krhotilde_S({\\kt})\\kShat^\\dagger - g^{-+}({\\kt}', {\\kt}'')\\kShat\\krhotilde_S({\\kt})\\kShat^\\dagger - g^{+-}({\\kt}', {\\kt}'')\\kShat^\\dagger\\krhotilde_S({\\kt})\\kShat - g^{++}({\\kt}', {\\kt}'')\\kShat\\krhotilde_S({\\kt})\\kShat} \\\\ &\\mk{r4}{+g^{--}({\\kt}'', {\\kt}')\\krhotilde_S({\\kt})\\kShat^\\dagger\\kShat^\\dagger + g^{-+}({\\kt}'', {\\kt}')\\krhotilde_S({\\kt})\\kShat^\\dagger\\kShat + g^{+-}({\\kt}'', {\\kt}')\\krhotilde_S({\\kt})\\kShat\\kShat^\\dagger + g^{++}({\\kt}'', {\\kt}')\\krhotilde_S({\\kt})\\kShat\\kShat}\\Big)\\end{aligned}",
+       "uses": [
+        4
+       ],
+       "cap": "系统算符从每个阵迹中提出，而热库算符的每个阵迹经轮换后都是关联函数之一。"
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde_S^{(2)}} = {} &\\tfrac{1}{(i\\hbar)^2}\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\Big(\\mk{m1}{g^{--}({\\kt}', {\\kt}'')\\left(\\kShat^\\dagger\\kShat^\\dagger\\krhotilde_S({\\kt}) - \\kShat^\\dagger\\krhotilde_S({\\kt})\\kShat^\\dagger\\right) + g^{-+}({\\kt}', {\\kt}'')\\left(\\kShat^\\dagger\\kShat\\krhotilde_S({\\kt}) - \\kShat\\krhotilde_S({\\kt})\\kShat^\\dagger\\right)} \\\\ &+\\mk{m2}{g^{+-}({\\kt}', {\\kt}'')\\left(\\kShat\\kShat^\\dagger\\krhotilde_S({\\kt}) - \\kShat^\\dagger\\krhotilde_S({\\kt})\\kShat\\right) + g^{++}({\\kt}', {\\kt}'')\\left(\\kShat\\kShat\\krhotilde_S({\\kt}) - \\kShat\\krhotilde_S({\\kt})\\kShat\\right)} \\\\ &+\\mk{hc}{h.c.}\\Big)\\end{aligned}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "第二行和第四行是第三行和第一行的厄米共轭：$g^{--}(t', t'')^* = g^{++}(t'', t')$，$g^{+-}(t', t'')^* = g^{+-}(t'', t')$，同样地$g^{-+}(t', t'')^* = g^{-+}(t'', t')$。",
+       "map": {
+        "r1": [
+         "m1",
+         "m2"
+        ],
+        "r3": [
+         "m1",
+         "m2"
+        ],
+        "r2": "hc",
+        "r4": "hc"
+       }
+      }
+     ],
+     "num": "(3.70)",
+     "note": "书中把$g^{--}({\\kt}'', {\\kt})$印成式 (3.62) 第二行的第一个关联函数；它应是$g^{--}({\\kt}'', {\\kt}')$，与该行其他的一样。该页还在边缘处截断了式 (3.70) 的第二行；它是根据式 (3.69) 补全的。"
+    }
+   ]
+  },
+  {
+   "id": "thermal-correlator",
+   "what": "热辐射场的关联函数",
+   "source": "现代原子与光学物理 II，3.3.3 马尔可夫热库的密度算符方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kFR({\\kt}) = -\\sum_j\\hbar \\kg_j\\hat{a}_j e^{-i(\\knu_j - \\komega){\\kt}}",
+       "src": "(3.44)"
+      },
+      {
+       "text": "在热态中$\\langle\\hat{a}_j^\\dagger\\hat{a}_k\\rangle = \\delta_{jk}\\knbar_j$。",
+       "src": "3.3.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{g^{+-}({\\kt}', {\\kt}'')} = \\mk{R}{\\mathrm{Tr}_R[\\kFR({\\kt}')^\\dagger\\kFR({\\kt}'')\\krhotilde_R]}",
+      "src": "(3.59)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{g^{+-}({\\kt}', {\\kt}'')} = \\mk{R}{\\mathrm{Tr}_R\\Big[\\Big(-\\sum_j\\hbar\\kg_j^*\\hat{a}_j^\\dagger e^{i(\\knu_j - \\komega){\\kt}'}\\Big)\\Big(-\\sum_k\\hbar\\kg_k\\hat{a}_k e^{-i(\\knu_k - \\komega){\\kt}''}\\Big)\\krhotilde_R\\Big]}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{g^{+-}({\\kt}', {\\kt}'')} = \\mk{R}{\\hbar^2\\sum_{j,k}\\kg_j^* \\kg_k\\langle\\hat{a}_j^\\dagger\\hat{a}_k\\rangle e^{i(\\knu_j - \\komega){\\kt}' - i(\\knu_k - \\komega){\\kt}''}}",
+       "uses": [],
+       "cap": "与$\\tilde{\\rho}_R$的阵迹就是期望值，$\\mathrm{Tr}_R[\\hat{X}\\tilde{\\rho}_R] = \\langle\\hat{X}\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{g^{+-}({\\kt}', {\\kt}'')} = \\mk{R}{\\hbar^2\\sum_j|\\kg_j|^2\\knbar_j e^{i(\\knu_j - \\komega)({\\kt}' - {\\kt}'')}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(3.72)"
+    }
+   ]
+  },
+  {
+   "id": "master-equation",
+   "what": "主方程",
+   "source": "现代原子与光学物理 II，3.3.3 马尔可夫热库的密度算符方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "对辐射场$g^{--} = g^{++} = 0$。",
+       "src": "3.3.3"
+      }
+     ],
+     "then": {
+      "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde_S^{(2)}} = {} &\\tfrac{1}{(i\\hbar)^2}\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\Big(\\mk{a}{g^{--}({\\kt}', {\\kt}'')\\left(\\kShat^\\dagger\\kShat^\\dagger\\krhotilde_S({\\kt}) - \\kShat^\\dagger\\krhotilde_S({\\kt})\\kShat^\\dagger\\right)} \\\\ &+\\mk{b}{g^{-+}({\\kt}', {\\kt}'')\\left(\\kShat^\\dagger\\kShat\\krhotilde_S({\\kt}) - \\kShat\\krhotilde_S({\\kt})\\kShat^\\dagger\\right)} + \\mk{c}{g^{+-}({\\kt}', {\\kt}'')\\left(\\kShat\\kShat^\\dagger\\krhotilde_S({\\kt}) - \\kShat^\\dagger\\krhotilde_S({\\kt})\\kShat\\right)} \\\\ &+\\mk{d}{g^{++}({\\kt}', {\\kt}'')\\left(\\kShat\\kShat\\krhotilde_S({\\kt}) - \\kShat\\krhotilde_S({\\kt})\\kShat\\right)} + \\mk{h}{h.c.}\\Big)\\end{aligned}",
+      "src": "(3.70)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde_S^{(2)}} = {} &\\tfrac{1}{(i\\hbar)^2}\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\Big\\{\\mk{c}{g^{+-}({\\kt}', {\\kt}'')\\left(\\kShat\\kShat^\\dagger\\krhotilde_S - \\kShat^\\dagger\\krhotilde_S\\kShat\\right)} \\\\ &+\\mk{b}{g^{-+}({\\kt}', {\\kt}'')\\left(\\kShat^\\dagger\\kShat\\krhotilde_S - \\kShat\\krhotilde_S\\kShat^\\dagger\\right)}\\Big\\} + \\mk{h}{h.c.}\\end{aligned}",
+       "uses": [
+        0
+       ],
+       "cap": "把$\\tilde{\\rho}_S(t)$写作$\\tilde{\\rho}_S$。"
+      }
+     ],
+     "num": "(3.73)"
+    },
+    {
+     "assumes": [
+      {
+       "text": "积分按维格纳-韦斯科普夫近似计算：在长时间下$\\int_{-\\infty}^0 e^{i(\\komega - \\knu_j)s}ds = \\pi\\delta(\\knu_j - \\komega) - i\\mathcal{P}\\frac{1}{\\komega - \\knu_j}$，由式 (2.49) 得出，主值部分即一个能量移位，并入裸系统哈密顿量。",
+       "src": "(2.49), 3.3.3"
+      },
+      {
+       "tex": "\\kgamma = 2\\pi\\sum_j|\\kg_j|^2\\delta(\\knu_j - \\komega)",
+       "src": "(2.80)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{g^{+-}({\\kt}', {\\kt}'')} = \\mk{R}{\\hbar^2\\sum_j|\\kg_j|^2\\knbar_j e^{i(\\knu_j - \\komega)({\\kt}' - {\\kt}'')}}",
+      "src": "(3.72)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{-\\frac{1}{\\hbar^2}\\int_{\\kt}^{{\\kt}'}d{\\kt}''g^{+-}({\\kt}', {\\kt}'')} = \\mk{R}{-\\sum_j\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\ |\\kg_j|^2\\knbar_j e^{i(\\komega - \\knu_j)({\\kt}'' - {\\kt}')}}",
+       "uses": [],
+       "cap": "对$t''$从$t$到$t'$积分两边，并乘以$-1/\\hbar^2$。"
+      },
+      {
+       "tex": "\\mk{L}{-\\frac{1}{\\hbar^2}\\int_{\\kt}^{{\\kt}'}d{\\kt}''g^{+-}({\\kt}', {\\kt}'')} = \\mk{R}{-\\pi\\sum_j|\\kg_j|^2\\knbar_j\\delta(\\knu_j - \\komega)}",
+       "uses": [
+        0
+       ],
+       "cap": "取$s = t'' - t'$，积分遍及$s \\leq 0$，并且关联时间很短。"
+      },
+      {
+       "tex": "\\mk{L}{-\\frac{1}{\\hbar^2}\\int_{\\kt}^{{\\kt}'}d{\\kt}''g^{+-}({\\kt}', {\\kt}'')} = \\mk{R}{-\\frac{\\kgamma}{2}\\knbar(\\komega)}",
+       "uses": [
+        1
+       ],
+       "cap": "δ 函数令$\\nu_j = \\omega$，所以$\\bar{n}_j$在原子频率处取值。"
+      }
+     ],
+     "num": "(3.76)",
+     "note": "书中在式 (3.74) 的右边印的是$d\\kt'$；积分遍及$\\kt''$，与左边一样。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "$g^{-+}$与$g^{+-}$相同，只是把$\\langle\\hat{a}_j^\\dagger\\hat{a}_j\\rangle$换成$\\langle\\hat{a}_j\\hat{a}_j^\\dagger\\rangle = \\langle\\hat{a}_j^\\dagger\\hat{a}_j\\rangle + 1$。",
+       "src": "3.3.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{-\\frac{1}{\\hbar^2}\\int_{\\kt}^{{\\kt}'}d{\\kt}''g^{+-}({\\kt}', {\\kt}'')} = \\mk{R}{-\\frac{\\kgamma}{2}\\knbar(\\komega)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{-\\frac{1}{\\hbar^2}\\int_{\\kt}^{{\\kt}'}d{\\kt}''g^{-+}({\\kt}', {\\kt}'')} = \\mk{R}{-\\frac{\\kgamma}{2}(\\knbar(\\komega) + 1)}",
+       "uses": [
+        1
+       ],
+       "cap": "计算以同样的方式进行，只是把$\\bar{n}_j$换成$\\bar{n}_j + 1$。"
+      }
+     ],
+     "num": "(3.77)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      },
+      {
+       "text": "其余对$\\kt'$的积分可以近似为$\\kDeltat$乘以被积函数，因为$\\kDeltat$比被积函数的时间变化小。",
+       "src": "3.3.3"
+      },
+      {
+       "text": "对原子-场相互作用，$\\langle\\kFR\\rangle = 0$，第一项$\\Delta\\krhotilde_S^{(1)}$为零。",
+       "src": "(3.54)"
+      }
+     ],
+     "then": {
+      "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde_S^{(2)}} = {} &\\tfrac{1}{(i\\hbar)^2}\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\int_{\\kt}^{{\\kt}'}d{\\kt}''\\Big\\{\\mk{c}{g^{+-}({\\kt}', {\\kt}'')\\left(\\kShat\\kShat^\\dagger\\krhotilde_S - \\kShat^\\dagger\\krhotilde_S\\kShat\\right)} \\\\ &+\\mk{b}{g^{-+}({\\kt}', {\\kt}'')\\left(\\kShat^\\dagger\\kShat\\krhotilde_S - \\kShat\\krhotilde_S\\kShat^\\dagger\\right)}\\Big\\} + \\mk{h}{h.c.}\\end{aligned}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\Delta\\krhotilde_S^{(2)}} = {} &\\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\Big\\{\\mk{c}{\\Big(-\\frac{1}{\\hbar^2}\\int_{\\kt}^{{\\kt}'}d{\\kt}''g^{+-}({\\kt}', {\\kt}'')\\Big)\\left(\\kShat\\kShat^\\dagger\\krhotilde_S - \\kShat^\\dagger\\krhotilde_S\\kShat\\right)} \\\\ &+\\mk{b}{\\Big(-\\frac{1}{\\hbar^2}\\int_{\\kt}^{{\\kt}'}d{\\kt}''g^{-+}({\\kt}', {\\kt}'')\\Big)\\left(\\kShat^\\dagger\\kShat\\krhotilde_S - \\kShat\\krhotilde_S\\kShat^\\dagger\\right)}\\Big\\} + \\mk{h}{h.c.}\\end{aligned}",
+       "uses": [],
+       "cap": "$1/(i\\hbar)^2 = -1/\\hbar^2$，且内层积分只作用于关联函数。"
+      },
+      {
+       "tex": "\\mk{L}{\\Delta\\krhotilde_S^{(2)}} = \\textstyle\\int_{\\kt}^{{\\kt}+\\kDeltat}d{\\kt}'\\Big\\{\\mk{c}{-\\frac{\\kgamma}{2}\\knbar(\\komega)\\left(\\kShat\\kShat^\\dagger\\krhotilde_S - \\kShat^\\dagger\\krhotilde_S\\kShat\\right)}\\mk{b}{- \\frac{\\kgamma}{2}(\\knbar(\\komega) + 1)\\left(\\kShat^\\dagger\\kShat\\krhotilde_S - \\kShat\\krhotilde_S\\kShat^\\dagger\\right)}\\Big\\} + \\mk{h}{h.c.}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\Delta\\krhotilde_S} = \\kDeltat\\Big\\{\\mk{c}{-\\frac{\\kgamma}{2}\\knbar(\\komega)\\left(\\kShat\\kShat^\\dagger\\krhotilde_S - \\kShat^\\dagger\\krhotilde_S\\kShat\\right)}\\mk{b}{- \\frac{\\kgamma}{2}(\\knbar(\\komega) + 1)\\left(\\kShat^\\dagger\\kShat\\krhotilde_S - \\kShat\\krhotilde_S\\kShat^\\dagger\\right)}\\Big\\} + \\mk{h}{h.c.}",
+       "uses": [
+        3,
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\Delta\\krhotilde_S}{\\kDeltat}} = \\mk{c}{-\\frac{\\kgamma}{2}\\knbar(\\komega)\\left(\\kShat\\kShat^\\dagger\\krhotilde_S - \\kShat^\\dagger\\krhotilde_S\\kShat\\right)} \\mk{b}{- \\frac{\\kgamma}{2}(\\knbar(\\komega) + 1)\\left(\\kShat^\\dagger\\kShat\\krhotilde_S - \\kShat\\krhotilde_S\\kShat^\\dagger\\right)} + \\mk{h}{h.c.}",
+       "uses": [],
+       "cap": "两边除以$\\Delta t$，得到$\\tilde{\\rho}_S$的时间平均微分方程。"
+      }
+     ],
+     "num": "(3.78)"
+    }
+   ]
+  }
+ ]
+}

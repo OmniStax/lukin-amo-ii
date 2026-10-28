@@ -1,0 +1,1300 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "Delta_1",
+   "latex": "\\Delta_1",
+   "macro": "\\kDeltaone"
+  },
+  {
+   "sym": "Delta_2",
+   "latex": "\\Delta_2",
+   "macro": "\\kDeltatwo"
+  },
+  {
+   "sym": "Omega_1",
+   "latex": "\\Omega_1",
+   "macro": "\\kOmegaone"
+  },
+  {
+   "sym": "Omega_2",
+   "latex": "\\Omega_2",
+   "macro": "\\kOmegatwo"
+  },
+  {
+   "sym": "Omega_eff",
+   "latex": "\\Omega_\\mathrm{eff}",
+   "macro": "\\kOmegaeff"
+  },
+  {
+   "sym": "c_3",
+   "latex": "c_3",
+   "macro": "\\kcthree"
+  },
+  {
+   "sym": "Gamma_12",
+   "latex": "\\Gamma_{12}",
+   "macro": "\\kGammaonetwo"
+  },
+  {
+   "sym": "Gamma_13",
+   "latex": "\\Gamma_{13}",
+   "macro": "\\kGammaonethree"
+  },
+  {
+   "sym": "gamma_3",
+   "latex": "\\gamma_3",
+   "macro": "\\kgammathree"
+  },
+  {
+   "sym": "gamma_eff",
+   "latex": "\\gamma_\\mathrm{eff}",
+   "macro": "\\kgammaeff"
+  },
+  {
+   "sym": "delta_prime",
+   "latex": "\\delta'",
+   "macro": "\\kdeltaprime"
+  },
+  {
+   "sym": "chi_1",
+   "latex": "\\chi_1",
+   "macro": "\\kchione"
+  },
+  {
+   "sym": "chi_2nd",
+   "latex": "\\chi^{(2)}",
+   "macro": "\\kchiII"
+  },
+  {
+   "sym": "delta_eff",
+   "latex": "\\delta_\\mathrm{eff}",
+   "macro": "\\kdeltaeff"
+  },
+  {
+   "sym": "Delta_k",
+   "latex": "\\Delta k",
+   "macro": "\\kDeltakmis"
+  },
+  {
+   "sym": "E_env_1",
+   "latex": "\\mathcal{E}_1",
+   "macro": "\\kEone"
+  },
+  {
+   "sym": "E_env_2",
+   "latex": "\\mathcal{E}_2",
+   "macro": "\\kEtwo"
+  },
+  {
+   "sym": "E_env_3",
+   "latex": "\\mathcal{E}_3",
+   "macro": "\\kEthree"
+  },
+  {
+   "sym": "z_prop",
+   "latex": "z",
+   "macro": "\\kzprop"
+  },
+  {
+   "sym": "L_med",
+   "latex": "L",
+   "macro": "\\kLmed"
+  },
+  {
+   "sym": "P_nl",
+   "latex": "P",
+   "macro": "\\kPnl"
+  },
+  {
+   "sym": "rho_31",
+   "latex": "\\rho_{31}",
+   "macro": "\\krhothreeone"
+  },
+  {
+   "sym": "gamma_13",
+   "latex": "\\gamma_{13}",
+   "macro": "\\kgammaonethree"
+  },
+  {
+   "sym": "v",
+   "latex": "\\mathbf{v}",
+   "macro": "\\kv"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "multiphoton-process-classes",
+   "kind": "idea",
+   "section": "5.1",
+   "name": "多光子过程的分类",
+   "terms": [
+    "非相干相互作用",
+    "相干相互作用",
+    "参量相互作用"
+   ],
+   "statement": "多光子过程大致分为三类：非相干相互作用，其中原子相干性不重要；相干相互作用，其中原子相干性起作用，且需要两个或更多光子来产生它们；以及参量相互作用，其中光与原子之间没有能量交换，但原子介导光束之间的相互作用。"
+  },
+  {
+   "id": "raman-transition",
+   "kind": "idea",
+   "section": "5.1",
+   "name": "拉曼跃迁",
+   "terms": [
+    "拉曼跃迁",
+    "双光子拉曼跃迁",
+    "双光子拉曼跃迁"
+   ],
+   "statement": "在拉曼跃迁中，两个光子经由一个激发态激励一个偶极禁戒跃迁：通过在跃迁 ν₁ 上吸收一个光子并发射一个频率为 ν₂ 的光子，布居在两个基态之间被相干地转移。"
+  },
+  {
+   "id": "three-level-configurations",
+   "kind": "definition",
+   "section": "5.1",
+   "name": "三能级构型",
+   "terms": [
+    "级联系统",
+    "V 型系统",
+    "级联",
+    "V 型"
+   ],
+   "statement": "双光子跃迁发生在三能级的三种构型中：Λ 型系统，其中单个激发态介导两个下态之间的跃迁；级联系统，经由一个居间态向上攀升；以及 V 型系统，两个激发态共用一个基态。"
+  },
+  {
+   "id": "lambda-system",
+   "kind": "definition",
+   "section": "5.1",
+   "name": "Λ 型系统",
+   "terms": [
+    "Λ 型系统",
+    "Λ 型系统",
+    "三能级 Λ 型系统"
+   ],
+   "type": "state",
+   "statement": "在 Λ 型系统中，单个激发态 |3⟩ 介导两个下态之间的跃迁；到 |3⟩ 的跃迁是偶极容许的，衰变很快，而 |2⟩ → |1⟩ 是偶极禁戒的，因此亚稳态 |2⟩ 可以有非常长的寿命。"
+  },
+  {
+   "id": "lambda-detunings",
+   "kind": "definition",
+   "section": "5.1",
+   "name": "单光子失谐与双光子失谐",
+   "symbol": "Delta_1",
+   "terms": [
+    "单光子失谐",
+    "双光子失谐",
+    "单光子失谐"
+   ],
+   "type": "frequency",
+   "statement": "单光子失谐 Δ₁ 和 Δ₂ 是每个场相对于其到 |3⟩ 的跃迁来度量的，双光子失谐是它们的差。",
+   "forms": [
+    {
+     "id": "eq-5-detunings",
+     "latex": "\\delta = \\Delta_1 - \\Delta_2",
+     "anchor": "5.1-detunings"
+    }
+   ]
+  },
+  {
+   "id": "lambda-hamiltonian",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Λ 型系统哈密顿量",
+   "type": "energy",
+   "statement": "在适当的转动参考系中，将 |1⟩ 的能量取为零，Λ 型系统的哈密顿量的对角线上含有失谐，对角线外含有两个拉比频率。",
+   "forms": [
+    {
+     "id": "eq-5-1",
+     "latex": "\\hat{H} = -\\Delta_1|3\\rangle\\langle 3| - \\delta|2\\rangle\\langle 2| - \\left(\\Omega_1|3\\rangle\\langle 1| + \\Omega_2|3\\rangle\\langle 2| + \\Omega_1^*|1\\rangle\\langle 3| + \\Omega_2^*|2\\rangle\\langle 3|\\right)",
+     "anchor": "5.1-eq-5-1"
+    }
+   ]
+  },
+  {
+   "id": "lambda-equations-of-motion",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Λ 型系统运动方程",
+   "symbol": "c_3",
+   "type": "amplitude",
+   "statement": "忽略衰变时，态 c₁|1⟩ + c₂|2⟩ + c₃|3⟩ 服从 Λ 型系统哈密顿量的薛定谔方程，由此得到三个概率幅的运动方程。",
+   "forms": [
+    {
+     "id": "eq-5-2",
+     "latex": "|\\psi\\rangle = c_1(t)|1\\rangle + c_2(t)|2\\rangle + c_3(t)|3\\rangle",
+     "anchor": "5.1-eq-5-2"
+    },
+    {
+     "id": "eq-5-3",
+     "latex": "\\dot{c}_1 = i\\Omega_1^* c_3",
+     "anchor": "5.1-eq-5-3"
+    },
+    {
+     "id": "eq-5-4",
+     "latex": "\\dot{c}_2 = i\\delta c_2 + i\\Omega_2^* c_3",
+     "anchor": "5.1-eq-5-4"
+    },
+    {
+     "id": "eq-5-5",
+     "latex": "\\dot{c}_3 = i\\Delta_1 c_3 + i\\Omega_1 c_1 + i\\Omega_2 c_2",
+     "anchor": "5.1-eq-5-5"
+    }
+   ]
+  },
+  {
+   "id": "effective-raman-coupling",
+   "kind": "result",
+   "section": "5.1",
+   "name": "有效双光子拉比频率",
+   "symbol": "Omega_eff",
+   "terms": [
+    "有效拉比频率"
+   ],
+   "type": "coupling",
+   "statement": "对于大而相近的单光子失谐 Δ ≫ Ω₁, Ω₂, γ₃, δ，激发态概率幅被消去，两个下能级表现得像一个由有效拉比频率耦合的二能级系统，每个能级的斯塔克偏移为 |Ω_i|²/Δ。",
+   "forms": [
+    {
+     "id": "eq-5-9",
+     "latex": "\\Omega_\\mathrm{eff} = -\\frac{\\Omega_2^*\\Omega_1}{\\Delta}",
+     "anchor": "5.1-drv-raman-coupling"
+    },
+    {
+     "id": "eq-5-6",
+     "latex": "c_3 = -\\frac{\\Omega_1 c_1 + \\Omega_2 c_2}{\\Delta}",
+     "anchor": "5.1-drv-raman-coupling"
+    },
+    {
+     "id": "eq-5-7",
+     "latex": "\\dot{c}_1 = -i\\frac{|\\Omega_1|^2}{\\Delta}c_1 - i\\frac{\\Omega_2\\Omega_1^*}{\\Delta}c_2",
+     "anchor": "5.1-drv-raman-coupling"
+    },
+    {
+     "id": "eq-5-8",
+     "latex": "\\dot{c}_2 = i(\\delta - \\frac{|\\Omega_2|^2}{\\Delta})c_2 - i\\frac{\\Omega_1\\Omega_2^*}{\\Delta}c_1",
+     "anchor": "5.1-drv-raman-coupling"
+    }
+   ]
+  },
+  {
+   "id": "lambda-density-matrix-equations",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Λ 型系统密度矩阵方程",
+   "statement": "为了计入衰变和退相位，用密度矩阵处理 Λ 型系统：刘维尔算符包含从 |3⟩ 到 |1⟩ 和 |2⟩ 以及从 |2⟩ 到 |1⟩ 的衰变，每个相干性 ρ_ij 以其自身的速率 γ_ij 衰变。",
+   "forms": [
+    {
+     "id": "eq-5-10",
+     "latex": "\\dot{\\rho} = \\mathcal{L}_{31}(\\rho) + \\mathcal{L}_{32}(\\rho) + i[\\hat{H}, \\rho]",
+     "anchor": "5.1-eq-5-10"
+    },
+    {
+     "id": "eq-5-11",
+     "latex": "\\mathcal{L}_{31} = -\\frac{\\gamma_{3\\rightarrow 1}}{2}\\left(\\sigma_{31}\\sigma_{13}\\rho - \\sigma_{13}\\rho\\sigma_{31} + h.c.\\right)",
+     "anchor": "5.1-eq-5-11"
+    },
+    {
+     "id": "eq-5-12",
+     "latex": "\\dot{\\rho}_{11} = -i\\Omega_1\\rho_{13} + i\\Omega_1^*\\rho_{31} + \\gamma\\rho_{33} + \\gamma'\\rho_{22}",
+     "anchor": "5.1-drv-lambda-density-matrix"
+    },
+    {
+     "id": "eq-5-13",
+     "latex": "\\dot{\\rho}_{22} = -i\\Omega_2\\rho_{23} + i\\Omega_2^*\\rho_{32} - \\gamma'\\rho_{22} + \\tilde{\\gamma}\\rho_{33}",
+     "anchor": "5.1-drv-lambda-density-matrix"
+    },
+    {
+     "id": "eq-5-14",
+     "latex": "\\dot{\\rho}_{21} = -\\left(\\gamma_{12} - i\\delta\\right)\\rho_{21} + i\\Omega_2^*\\rho_{31} - i\\Omega_1\\rho_{23}",
+     "anchor": "5.1-drv-lambda-density-matrix"
+    },
+    {
+     "id": "eq-5-15",
+     "latex": "\\dot{\\rho}_{31} = -\\left(\\gamma_{13} - i\\Delta\\right)\\rho_{31} + i\\Omega_2\\rho_{21} + i\\Omega_1\\left(\\rho_{11} - \\rho_{33}\\right)",
+     "anchor": "5.1-drv-lambda-density-matrix"
+    },
+    {
+     "id": "eq-5-16",
+     "latex": "\\dot{\\rho}_{32} = -\\left(\\gamma_{23} - i(\\Delta - \\delta)\\right)\\rho_{32} + i\\Omega_2\\left(\\rho_{22} - \\rho_{33}\\right) + i\\Omega_1\\rho_{12}",
+     "anchor": "5.1-drv-lambda-density-matrix"
+    }
+   ]
+  },
+  {
+   "id": "complex-decay-rate",
+   "kind": "definition",
+   "section": "5.1",
+   "name": "复衰变参量",
+   "symbol": "Gamma_12",
+   "terms": [
+    "复衰变参量",
+    "复衰变率"
+   ],
+   "type": "rate",
+   "statement": "每个相干性的相位演化和衰变一并用一个复衰变参量表示，其实部是衰变率，虚部是失谐。",
+   "forms": [
+    {
+     "id": "eq-5-17",
+     "latex": "\\Gamma_{12} = \\gamma_{12} - i\\delta",
+     "anchor": "5.1-eq-5-17"
+    },
+    {
+     "id": "eq-5-18",
+     "latex": "\\Gamma_{13} = \\gamma_{13} - i\\Delta",
+     "anchor": "5.1-eq-5-18"
+    },
+    {
+     "id": "eq-5-19",
+     "latex": "\\Gamma_{23} = \\gamma_{23} - i(\\Delta - \\delta)",
+     "anchor": "5.1-eq-5-19"
+    }
+   ]
+  },
+  {
+   "id": "lambda-non-hermitian-evolution",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Λ 型系统的随机波函数处理",
+   "symbol": "gamma_3",
+   "type": "rate",
+   "statement": "来自 |3⟩ 和 |2⟩ 的衰变进入一个非厄米哈密顿量，只要量子跳跃的概率保持很小，就可以使用它的薛定谔方程：对于从 |1⟩ 开始的弱探测光，或者 |2⟩ 的衰变缓慢且激发态布居很少的情形。",
+   "forms": [
+    {
+     "id": "eq-5-21",
+     "latex": "\\hat{H}_\\mathrm{eff} = \\hat{H} - \\frac{i\\hbar\\gamma_3}{2}|3\\rangle\\langle 3| - \\frac{i\\hbar\\gamma_2}{2}|2\\rangle\\langle 2|",
+     "anchor": "5.1-eq-5-21"
+    },
+    {
+     "id": "eq-5-22",
+     "latex": "P_\\mathrm{jump} = \\int dt\\left(\\gamma_2|c_2(t)|^2 + \\gamma_3|c_3(t)|^2\\right) \\ll 1",
+     "anchor": "5.1-eq-5-22"
+    },
+    {
+     "id": "eq-5-23",
+     "latex": "\\dot{c}_1 = i\\Omega_1^* c_3",
+     "anchor": "5.1-eq-5-23"
+    },
+    {
+     "id": "eq-5-24",
+     "latex": "\\dot{c}_2 = -(\\frac{\\gamma_2}{2} - i\\delta)c_2 + i\\Omega_2^* c_3",
+     "anchor": "5.1-eq-5-24"
+    },
+    {
+     "id": "eq-5-25",
+     "latex": "\\dot{c}_3 = -(\\frac{\\gamma_3}{2} - i\\Delta_1)c_3 + i\\Omega_1 c_1 + i\\Omega_2 c_2",
+     "anchor": "5.1-eq-5-25"
+    }
+   ]
+  },
+  {
+   "id": "weak-probe-solution",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Λ 型系统的弱探测定常态",
+   "statement": "对于弱探测光 Ω₁ 和强度任意的恒定 Ω₂，系统在 Ω₁ 的零阶下保持在 |1⟩，对运动方程作傅里叶变换，就得到双光子相干和光学相干。",
+   "forms": [
+    {
+     "id": "eq-5-29",
+     "latex": "\\rho_{21} = c_1^* c_2 = -\\frac{\\Omega_1\\Omega_2^*}{\\Gamma_{12}\\Gamma_{13} + |\\Omega_2|^2}",
+     "anchor": "5.1-drv-weak-probe-coherences"
+    },
+    {
+     "id": "eq-5-30",
+     "latex": "\\rho_{31} = c_1^* c_3 = i\\Omega_1\\frac{\\Gamma_{12}}{\\Gamma_{12}\\Gamma_{13} + |\\Omega_2|^2}",
+     "anchor": "5.1-drv-weak-probe-coherences"
+    },
+    {
+     "id": "eq-5-26",
+     "latex": "(\\frac{\\gamma_2}{2} - i(\\delta - \\omega))c_2 = i\\Omega_2^* c_3",
+     "anchor": "5.1-eq-5-26"
+    },
+    {
+     "id": "eq-5-27",
+     "latex": "(\\frac{\\gamma_3}{2} - i(\\Delta_1 - \\omega))c_3 = i\\Omega_1 + i\\Omega_2 c_2",
+     "anchor": "5.1-eq-5-27"
+    },
+    {
+     "id": "eq-5-28",
+     "latex": "\\rho_{11} = |c_1|^2 = 1",
+     "anchor": "5.1-drv-weak-probe-coherences"
+    }
+   ]
+  },
+  {
+   "id": "probe-susceptibility",
+   "kind": "definition",
+   "section": "5.1",
+   "name": "探测跃迁上的线性电极化率",
+   "symbol": "chi_1",
+   "terms": [
+    "线性电极化率"
+   ],
+   "type": "susceptibility",
+   "statement": "当探测光很弱时，系统的响应由探测跃迁上的线性电极化率表征，它正比于 ρ₃₁/Ω₁。",
+   "forms": [
+    {
+     "id": "eq-5-31",
+     "latex": "\\chi_1 = \\frac{|\\mu|^2}{\\hbar\\epsilon_0}\\frac{\\rho_{31}}{\\Omega_1}",
+     "anchor": "5.1-eq-5-31"
+    },
+    {
+     "id": "eq-5-32",
+     "latex": "\\frac{\\rho_{31}}{\\Omega_1} = \\frac{i}{\\Gamma_{13}}\\left(\\frac{\\Gamma_{12}}{\\Gamma_{12} + |\\Omega_2|^2/\\Gamma_{13}}\\right)",
+     "anchor": "5.1-drv-probe-response"
+    },
+    {
+     "id": "eq-5-33",
+     "latex": "\\frac{\\rho_{31}}{\\Omega_1} = \\frac{i}{\\Gamma_{13}}\\left(1 - \\frac{|\\Omega_2|^2/\\Gamma_{13}}{\\Gamma_{12} + |\\Omega_2|^2/\\Gamma_{13}}\\right)",
+     "anchor": "5.1-drv-probe-response"
+    }
+   ]
+  },
+  {
+   "id": "two-photon-resonance",
+   "kind": "result",
+   "section": "5.1",
+   "name": "双光子共振",
+   "symbol": "gamma_eff",
+   "terms": [
+    "双光子共振"
+   ],
+   "type": "rate",
+   "statement": "在大 Δ 时，探测电极化率除了宽度为 γ₁₃ 的宽单光子共振之外，还显示出一个移至 δ = |Ω₂|²/Δ 的窄双光子共振；它的宽度由亚稳态退相干 γ₁₂ 和一个被失谐强烈抑制的激发态项决定。",
+   "forms": [
+    {
+     "id": "eq-5-35",
+     "latex": "\\frac{\\rho_{31}}{\\Omega_1} - \\frac{i}{\\Gamma_{13}} \\approx \\frac{i|\\Omega_2|^2/\\Delta^2}{\\gamma_\\mathrm{eff} - i\\delta'}",
+     "anchor": "5.1-drv-raman-resonance"
+    },
+    {
+     "id": "eq-5-34",
+     "latex": "\\frac{\\rho_{31}}{\\Omega_1} - \\frac{i}{\\Gamma_{13}} \\approx \\frac{i|\\Omega_2|^2/\\Delta^2}{\\Gamma_{12} + (|\\Omega_2|^2/\\Delta^2)(\\gamma_{13} + i\\Delta)}",
+     "anchor": "5.1-drv-raman-resonance"
+    }
+   ]
+  },
+  {
+   "id": "two-photon-detuning-shifted",
+   "kind": "definition",
+   "section": "5.1",
+   "name": "有效双光子失谐",
+   "symbol": "delta_prime",
+   "type": "frequency",
+   "statement": "双光子共振的有效失谐是双光子失谐减去 |2⟩ 的光致频移。",
+   "forms": [
+    {
+     "id": "eq-5-delta-prime",
+     "latex": "\\delta' = \\delta - |\\Omega_2|^2/\\Delta",
+     "anchor": "5.1-drv-raman-resonance"
+    }
+   ]
+  },
+  {
+   "id": "raman-unitarity-limit",
+   "kind": "result",
+   "section": "5.1",
+   "name": "幺正极限处的双光子共振",
+   "terms": [
+    "幺正极限"
+   ],
+   "statement": "恰好处于双光子共振且没有退相位时，电极化率就是辐射增宽的系统的电极化率，趋近幺正极限，双光子峰与单光子共振具有相同的振幅。",
+   "forms": [
+    {
+     "id": "eq-5-36",
+     "latex": "\\frac{\\rho_{31}}{\\Omega_1} \\sim \\frac{2i}{\\gamma_3}",
+     "anchor": "5.1-eq-5-36"
+    }
+   ]
+  },
+  {
+   "id": "raman-dressed-states",
+   "kind": "result",
+   "section": "5.1",
+   "name": "拉曼共振的缀饰态图像",
+   "statement": "强场 Ω₂ 缀饰 |2⟩ 和 |3⟩；单光子共振是向 |+⟩ 的跃迁，|+⟩ 几乎是 |3⟩，宽度几乎是它的辐射宽度，而双光子拉曼共振是向 |−⟩ 的跃迁，其宽度是它的退相位率。",
+   "forms": [
+    {
+     "id": "eq-5-37",
+     "latex": "|+\\rangle \\approx |3\\rangle - \\frac{\\Omega_2^*}{\\Delta}|2\\rangle",
+     "anchor": "5.1-eq-5-37"
+    },
+    {
+     "id": "eq-5-38",
+     "latex": "|-\\rangle \\approx |2\\rangle + \\frac{\\Omega_2}{\\Delta}|3\\rangle",
+     "anchor": "5.1-eq-5-38"
+    },
+    {
+     "id": "eq-5-39",
+     "latex": "\\gamma_- \\approx \\gamma_{12} + \\frac{|\\Omega_2|^2}{\\Delta^2}\\gamma_{13}",
+     "anchor": "5.1-eq-5-39"
+    }
+   ]
+  },
+  {
+   "id": "two-photon-rabi-oscillations",
+   "kind": "result",
+   "section": "5.1",
+   "name": "双光子拉比振荡",
+   "terms": [
+    "双光子拉比振荡"
+   ],
+   "statement": "对于大失谐，即使在强场 Ω₁ ∼ Ω₂ 下，三能级系统也表现为有效二能级系统；由于有效拉比频率按 1/Δ 变化，有效退相干按 1/Δ² 变化，总可以找到一个失谐，在该失谐下，一次量子跳跃之前会发生许多次拉比振荡。",
+   "forms": [
+    {
+     "id": "eq-5-41",
+     "latex": "\\left|\\frac{\\Omega_1\\Omega_2^*}{\\Delta}\\right|t \\gg 1",
+     "anchor": "5.1-eq-5-41"
+    },
+    {
+     "id": "eq-5-40",
+     "latex": "\\frac{|\\Omega_1|^2}{\\Delta^2}\\gamma_3 t, \\frac{|\\Omega_2|^2}{\\Delta^2}\\gamma_3 t \\ll 1",
+     "anchor": "5.1-eq-5-40"
+    }
+   ]
+  },
+  {
+   "id": "many-excited-states-raman",
+   "kind": "result",
+   "section": "5.1",
+   "name": "通过多个激发态的拉曼耦合",
+   "statement": "有许多激发态且都是远失谐时，消去后的系统再次表现为二能级系统，其有效拉比频率是对每个激发态的贡献求和。",
+   "forms": [
+    {
+     "id": "eq-5-42",
+     "latex": "\\Omega_\\mathrm{eff} = \\sum_i \\frac{\\Omega_{1i}\\Omega_{2i}^*}{\\Delta_i}",
+     "anchor": "5.1-eq-5-42"
+    }
+   ]
+  },
+  {
+   "id": "doppler-free-raman",
+   "kind": "result",
+   "section": "5.1",
+   "name": "消多普勒双光子共振",
+   "terms": [
+    "消多普勒"
+   ],
+   "statement": "运动的原子所见的失谐发生多普勒频移；双光子失谐移动 (k₁ − k₂)·v，对于频率几乎相同的同向传播光束几乎为零，因为拉曼过程传递的动量为 ℏ(k₁ − k₂)。",
+   "forms": [
+    {
+     "id": "eq-5-45",
+     "latex": "\\delta \\rightarrow \\delta - (\\mathbf{k}_1 - \\mathbf{k}_2)\\cdot\\mathbf{v}",
+     "anchor": "5.1-eq-5-45"
+    },
+    {
+     "id": "eq-5-43",
+     "latex": "\\Delta_1 \\rightarrow \\Delta_1 - \\mathbf{k}_1\\cdot\\mathbf{v}",
+     "anchor": "5.1-eq-5-43"
+    },
+    {
+     "id": "eq-5-44",
+     "latex": "\\Delta_2 \\rightarrow \\Delta_2 - \\mathbf{k}_2\\cdot\\mathbf{v}",
+     "anchor": "5.1-eq-5-44"
+    }
+   ]
+  },
+  {
+   "id": "raman-phase-insensitivity",
+   "kind": "idea",
+   "section": "5.1",
+   "name": "Λ 型系统的相位不敏感性",
+   "statement": "探测响应只依赖于 |Ω₂|²，而与两个场的相对相位无关，因为双光子相干 ρ₂₁ 可以自由地跟随光学相干的相位；若 |1⟩ → |2⟩ 是偶极容许的，相对相位就会很重要。"
+  },
+  {
+   "id": "cascade-two-photon-differences",
+   "kind": "idea",
+   "section": "5.1",
+   "name": "级联双光子共振",
+   "statement": "远失谐的级联系统同样显示双光子共振，但它们通常更宽，因为其末态通常经容许的发射而衰变；而且对于反向传播的光束，它们的多普勒频移相互抵消，因为两个光子都被吸收。"
+  },
+  {
+   "id": "dark-resonance",
+   "kind": "result",
+   "section": "5.2",
+   "name": "暗共振",
+   "terms": [
+    "暗共振"
+   ],
+   "statement": "当 Ω₂ 处于共振并扫描探测光时，随着 γ₁₂ → 0，探测光的吸收在双光子共振处恰好消失，在宽的吸收峰中留下一个窄的凹陷，而禁戒跃迁上的相干性保持有限。",
+   "forms": [
+    {
+     "id": "eq-5-47",
+     "latex": "\\mathrm{Im}[\\frac{\\rho_{31}}{\\Omega_1}] = \\frac{\\gamma_{12}}{\\gamma_{13}\\gamma_{12} + |\\Omega_2|^2} \\rightarrow 0 \\text{ as } \\gamma_{12} \\rightarrow 0",
+     "anchor": "5.2-drv-dark-resonance-absorption"
+    }
+   ]
+  },
+  {
+   "id": "bright-state",
+   "kind": "definition",
+   "section": "5.2",
+   "name": "亮态",
+   "type": "state",
+   "statement": "在共振时，激发态 |3⟩ 只与下态的一个叠加态 |B⟩ 耦合。",
+   "forms": [
+    {
+     "id": "eq-5-49",
+     "latex": "\\hat{H}_\\mathrm{eff} = -\\frac{i\\hbar\\gamma_3}{2}|3\\rangle\\langle 3| - (\\Omega_1^*|1\\rangle + \\Omega_2^*|2\\rangle)\\langle 3| - |3\\rangle(\\Omega_1\\langle 1| + \\Omega_2\\langle 2|)",
+     "anchor": "5.2-eq-5-49"
+    },
+    {
+     "id": "eq-5-48",
+     "latex": "\\hat{H}_\\mathrm{eff} = -\\frac{i\\hbar\\gamma_3}{2}|3\\rangle\\langle 3| - (\\Omega_1^*|1\\rangle\\langle 3| + \\Omega_2^*|2\\rangle\\langle 3| + h.c.)",
+     "anchor": "5.2-eq-5-48"
+    }
+   ],
+   "terms": [
+    "亮态"
+   ]
+  },
+  {
+   "id": "dark-state",
+   "kind": "definition",
+   "section": "5.2",
+   "name": "暗态",
+   "terms": [
+    "暗态"
+   ],
+   "type": "state",
+   "statement": "下态中与 |B⟩ 正交的叠加态与激发态解耦，因此对激发态的衰变不敏感：它是有效哈密顿量的一个零能量本征态，在 |1⟩ 到 |3⟩ 的跃迁上没有极化强度，但在禁戒跃迁上有有限的相干性。",
+   "forms": [
+    {
+     "id": "eq-5-50",
+     "latex": "|D\\rangle = \\frac{\\Omega_2|1\\rangle - \\Omega_1|2\\rangle}{\\sqrt{|\\Omega_1|^2 + |\\Omega_2|^2}}",
+     "anchor": "5.2-drv-dark-state"
+    },
+    {
+     "id": "eq-5-51",
+     "latex": "\\hat{H}_\\mathrm{eff}|D\\rangle = 0",
+     "anchor": "5.2-drv-dark-state"
+    },
+    {
+     "id": "eq-5-53",
+     "latex": "\\rho_{21} = -\\frac{\\Omega_2^*\\Omega_1}{|\\Omega_1|^2 + |\\Omega_2|^2}",
+     "anchor": "5.2-drv-dark-state"
+    }
+   ]
+  },
+  {
+   "id": "dark-state-interference",
+   "kind": "idea",
+   "section": "5.2",
+   "name": "作为量子干涉的暗共振",
+   "statement": "吸收消失是一种量子干涉：Ω₁ 和 Ω₂ 对 |3⟩ 的激发发生相消干涉，使激发态上没有布居。"
+  },
+  {
+   "id": "eit-dressed-picture",
+   "kind": "idea",
+   "section": "5.2",
+   "name": "暗共振的缀饰态图像",
+   "statement": "强共振的 Ω₂ 使缀饰态 |±⟩ ∝ |2⟩ ± |3⟩ 能量相隔 2Ω₂，探测光看到两个峰；这一图像不能解释为什么吸收恰好在两峰正中间消失。"
+  },
+  {
+   "id": "electromagnetically-induced-transparency",
+   "kind": "definition",
+   "section": "5.2",
+   "name": "电磁感生透明",
+   "terms": [
+    "电磁感生透明",
+    "电磁感生透明",
+    "慢光",
+    "EIT"
+   ],
+   "statement": "共振的探测光进入介质，被压缩一个因子 v_g/c 并缓慢传播，拖带着暗态的一个自旋相干，几乎没有吸收：这就是电磁感生透明，或称慢光。"
+  },
+  {
+   "id": "slow-light",
+   "kind": "result",
+   "section": "5.2",
+   "name": "透明窗口中的群速度",
+   "terms": [
+    "群速度"
+   ],
+   "statement": "在暗共振附近，折射率的斜率由 Ω₂ 的强度控制，并决定群速度；当 Ω₂ → 0 时，群速度与透明窗口的宽度一起趋于零。",
+   "forms": [
+    {
+     "id": "eq-5-56",
+     "latex": "v_g \\approx \\frac{c}{1 + \\frac{\\gamma_{13}\\bar{\\nu}3\\pi(N/V)(\\lambda/2\\pi)^3}{|\\Omega_2|^2 + \\gamma_{13}\\gamma_{12}}}",
+     "anchor": "5.2-drv-slow-light"
+    },
+    {
+     "id": "eq-5-54",
+     "latex": "\\mathrm{Re}[\\chi] \\propto \\mathrm{Re}[\\frac{\\rho_{31}}{\\Omega_1}] \\approx \\frac{\\delta}{|\\Omega_2|^2 + \\gamma_{12}\\gamma_{13}}",
+     "anchor": "5.2-drv-dark-resonance-dispersion"
+    },
+    {
+     "id": "eq-5-55",
+     "latex": "v_g = \\frac{d\\omega}{dk} = \\frac{c}{n(\\omega) + \\omega\\frac{dn}{d\\omega}}",
+     "anchor": "5.2-eq-5-55"
+    },
+    {
+     "id": "eq-5-57",
+     "latex": "\\Delta w \\approx \\frac{|\\Omega_2|^2}{\\gamma_{13}} \\rightarrow 0",
+     "anchor": "5.2-eq-5-57"
+    }
+   ]
+  },
+  {
+   "id": "dark-state-preparation",
+   "kind": "result",
+   "section": "5.2",
+   "name": "暗态的绝热制备",
+   "terms": [
+    "反直觉脉冲序列",
+    "反直觉"
+   ],
+   "statement": "只有 Ω₂ 照射时暗态是 |1⟩，只有 Ω₁ 照射时暗态是 −|2⟩，因此在 Ω₂ 作用下从 |1⟩ 开始的系统已经处于暗态；通过缓慢减小 Ω₂ 同时增大 Ω₁，原子绝热跟随暗态进入 |2⟩，免于激发态的耗散，这是一个反直觉脉冲序列。",
+   "forms": [
+    {
+     "id": "eq-5-58",
+     "latex": "\\Omega_2 \\rightarrow 0, \\Omega_1 \\text{ fixed} \\quad \\Rightarrow \\quad |D\\rangle = -|2\\rangle",
+     "anchor": "5.2-eq-5-58"
+    },
+    {
+     "id": "eq-5-59",
+     "latex": "\\Omega_1 \\rightarrow 0, \\Omega_2 \\text{ fixed} \\quad \\Rightarrow \\quad |D\\rangle = |1\\rangle",
+     "anchor": "5.2-eq-5-59"
+    }
+   ]
+  },
+  {
+   "id": "parametric-processes",
+   "kind": "definition",
+   "section": "5.3",
+   "name": "参量过程",
+   "terms": [
+    "参量过程",
+    "非线性黑箱"
+   ],
+   "statement": "在参量过程中，光子与原子之间没有能量交换；介质的非线性响应，即一个非线性黑箱，介导光场之间的相互作用，使它们混合，或产生谐波以及和频与差频。"
+  },
+  {
+   "id": "sum-frequency-generation",
+   "kind": "idea",
+   "section": "5.3",
+   "name": "和频产生",
+   "terms": [
+    "和频产生",
+    "和频产生",
+    "参量上转换",
+    "参量上转换"
+   ],
+   "statement": "用频率为 ν₁ 和 ν₂ 的场驱动双光子跃迁，会产生以和频振荡的原子相干性和极化强度，后者在 ν₁ + ν₂ 处辐射；这要求单光子跃迁和双光子跃迁都是容许的，而反演对称性破缺可以做到这一点，例如氢的斯塔克混合的 2s–2p 能级。",
+   "forms": [
+    {
+     "id": "eq-5-60",
+     "latex": "P_{\\nu_1+\\nu_2} \\propto \\mu_{12}\\mathcal{E}_1\\mathcal{E}_2",
+     "anchor": "5.3-eq-5-60"
+    }
+   ]
+  },
+  {
+   "id": "second-order-susceptibility",
+   "kind": "definition",
+   "section": "5.3",
+   "name": "二阶非线性电极化率",
+   "symbol": "chi_2nd",
+   "terms": [
+    "二阶非线性电极化率"
+   ],
+   "type": "susceptibility",
+   "statement": "非线性电极化率是和频极化强度与两个外加场之积之间的比例常数；只要它不为零，两个场就能产生和频。",
+   "forms": [
+    {
+     "id": "eq-5-61",
+     "latex": "\\chi^{(2)} = \\frac{P_{\\nu_1+\\nu_2}}{\\epsilon_0\\mathcal{E}_1\\mathcal{E}_2}",
+     "anchor": "5.3-eq-5-61"
+    }
+   ]
+  },
+  {
+   "id": "cascade-nonlinear-susceptibility",
+   "kind": "result",
+   "section": "5.3",
+   "name": "级联系统的非线性电极化率",
+   "symbol": "delta_eff",
+   "terms": [
+    "有效双光子失谐"
+   ],
+   "type": "frequency",
+   "statement": "对居间态远失谐时，级联系统是一个由有效双光子拉比频率耦合的二能级系统，斯塔克偏移包含在有效双光子失谐 δ_eff 中，由此用偶极矩给出它的极化强度和非线性电极化率。",
+   "forms": [
+    {
+     "id": "eq-5-65",
+     "latex": "\\chi^{(2)} = \\frac{N}{V}\\mu^*\\frac{1}{\\epsilon_0\\hbar^2}\\sum_i \\frac{\\mu_{1i}\\mu_{2i}}{\\delta_\\mathrm{eff}\\Delta_i}",
+     "anchor": "5.3-drv-cascade-susceptibility"
+    },
+    {
+     "id": "eq-5-62",
+     "latex": "\\Omega_\\mathrm{eff} = \\sum_i \\frac{\\Omega_{1i}\\Omega_{2i}}{\\Delta_i} = \\sum_i \\frac{\\mu_{1i}\\mu_{2i}}{\\Delta_i\\hbar^2}\\mathcal{E}_1\\mathcal{E}_2",
+     "anchor": "5.3-eq-5-62"
+    },
+    {
+     "id": "eq-5-63",
+     "latex": "\\rho_{21} = -\\frac{\\Omega_\\mathrm{eff}}{\\delta_\\mathrm{eff}}",
+     "anchor": "5.3-eq-5-63"
+    },
+    {
+     "id": "eq-5-64",
+     "latex": "P_3 = \\frac{N}{V}\\mu^*\\rho_{21} = \\frac{N}{V}\\mu^*\\frac{1}{\\hbar^2}\\sum_i \\frac{\\mu_{1i}\\mu_{2i}}{\\delta_\\mathrm{eff}\\Delta_i}\\mathcal{E}_1\\mathcal{E}_2",
+     "anchor": "5.3-drv-cascade-susceptibility"
+    }
+   ]
+  },
+  {
+   "id": "undepleted-pump-approximation",
+   "kind": "definition",
+   "section": "5.3",
+   "name": "未耗尽抽运近似",
+   "terms": [
+    "未耗尽抽运近似"
+   ],
+   "statement": "如果产生场很弱，两个外加场就起着没有被大量耗尽的抽运的作用，它们的传播就是线性介质中的传播。",
+   "forms": [
+    {
+     "id": "eq-5-67",
+     "latex": "\\frac{\\partial}{\\partial z}\\mathcal{E}_{1,2} = \\frac{i\\nu_{1,2}}{2c}\\chi_{1,2}\\mathcal{E}_{1,2}",
+     "anchor": "5.3-eq-5-67"
+    }
+   ]
+  },
+  {
+   "id": "sum-frequency-propagation",
+   "kind": "result",
+   "section": "5.3",
+   "name": "和频产生的传播方程",
+   "symbol": "E_env_3",
+   "type": "electric-field",
+   "statement": "对于沿 z 的连续波场，总场是三个缓变振幅之和；产生场由非线性极化增长，并与介质线性地相互作用，吸收掉线性项后，抽运保持恒定，产生场则在相位失配下被驱动。",
+   "forms": [
+    {
+     "id": "eq-5-66",
+     "latex": "\\mathcal{E} = \\mathcal{E}_1 e^{i(\\nu_1 z/c - \\nu_1 t)} + \\mathcal{E}_2 e^{i(\\nu_2 z/c - \\nu_2 t)} + \\mathcal{E}_3 e^{i(\\nu_3 z/c - \\nu_3 t)} + c.c.",
+     "anchor": "5.3-eq-5-66"
+    },
+    {
+     "id": "eq-5-68",
+     "latex": "\\frac{\\partial}{\\partial z}\\mathcal{E}_3 = \\frac{i\\nu_3}{2c}\\chi^{(2)}\\mathcal{E}_1\\mathcal{E}_2 + \\frac{i\\nu_3}{2c}\\chi_3\\mathcal{E}_3",
+     "anchor": "5.3-eq-5-68"
+    },
+    {
+     "id": "eq-5-69",
+     "latex": "\\chi_{1,2} \\approx \\frac{N}{V}\\frac{1}{\\epsilon_0\\hbar}\\sum_i \\frac{|\\mu_{1i,2i}|^2}{\\Delta_i}",
+     "anchor": "5.3-eq-5-69"
+    },
+    {
+     "id": "eq-5-70",
+     "latex": "\\chi_3 \\approx \\frac{N}{V}\\frac{1}{\\epsilon_0\\hbar}\\frac{|\\mu_{12}|^2}{\\delta_\\mathrm{eff}}",
+     "anchor": "5.3-eq-5-70"
+    },
+    {
+     "id": "eq-5-72",
+     "latex": "\\mathcal{E}_i = \\tilde{\\mathcal{E}}_i e^{i\\nu_i\\chi_i z/2c}",
+     "anchor": "5.3-eq-5-72"
+    },
+    {
+     "id": "eq-5-73",
+     "latex": "\\frac{\\partial}{\\partial z}\\tilde{\\mathcal{E}}_{1,2} = 0",
+     "anchor": "5.3-drv-sfg-propagation"
+    },
+    {
+     "id": "eq-5-74",
+     "latex": "\\frac{\\partial}{\\partial z}\\tilde{\\mathcal{E}}_3 = \\frac{i\\nu_3}{2c}\\chi^{(2)}\\tilde{\\mathcal{E}}_1\\tilde{\\mathcal{E}}_2 e^{i\\Delta kz}",
+     "anchor": "5.3-drv-sfg-propagation"
+    }
+   ]
+  },
+  {
+   "id": "wavevector-mismatch",
+   "kind": "definition",
+   "section": "5.3",
+   "name": "波矢量失配",
+   "symbol": "Delta_k",
+   "type": "wavevector",
+   "statement": "Δk 是三个场的总波矢量之差，是决定产生场增长的最重要的量。",
+   "forms": [
+    {
+     "id": "eq-5-75",
+     "latex": "\\Delta k = \\frac{\\nu_1\\chi_1}{2c} + \\frac{\\nu_2\\chi_2}{2c} - \\frac{\\nu_3\\chi_3}{2c}",
+     "anchor": "5.3-drv-sfg-propagation"
+    }
+   ]
+  },
+  {
+   "id": "phase-matching",
+   "kind": "definition",
+   "section": "5.3",
+   "name": "相位匹配条件",
+   "terms": [
+    "相位匹配条件",
+    "相位匹配",
+    "相位匹配的",
+    "相位匹配"
+   ],
+   "statement": "当 Δk = 0 时，产生场的相速度与极化强度的相速度匹配，极化强度总是相长地叠加，场随距离线性增长；否则极化强度在大约 π/Δk 之后错位，场发生相消干涉。等价地，该过程不仅能量守恒，而且动量守恒，k₃ = k₁ + k₂。",
+   "forms": [
+    {
+     "id": "eq-5-77",
+     "latex": "\\tilde{\\mathcal{E}}_3(L) = \\frac{i\\nu_3}{2c}\\chi^{(2)}\\tilde{\\mathcal{E}}_1\\tilde{\\mathcal{E}}_2 L",
+     "anchor": "5.3-drv-sum-frequency-output"
+    },
+    {
+     "id": "eq-5-76",
+     "latex": "\\tilde{\\mathcal{E}}_3(L) = \\int_0^L \\frac{i\\nu_3}{2c}\\chi^{(2)}\\tilde{\\mathcal{E}}_1\\tilde{\\mathcal{E}}_2 e^{i\\Delta kz} = \\left(\\frac{e^{i\\Delta kL} - 1}{i\\Delta k}\\right)\\frac{i\\nu_3}{2c}\\chi^{(2)}\\tilde{\\mathcal{E}}_1\\tilde{\\mathcal{E}}_2",
+     "anchor": "5.3-drv-sum-frequency-output"
+    }
+   ]
+  },
+  {
+   "id": "coherence-length",
+   "kind": "definition",
+   "section": "5.3",
+   "name": "相干长度",
+   "terms": [
+    "相干长度"
+   ],
+   "statement": "在短于相干长度的距离上，ΔkL ≪ 1，系统是相位匹配的，场线性增长；超过相干长度后动量守恒失效，开始出现相消干涉。"
+  },
+  {
+   "id": "competing-processes",
+   "kind": "idea",
+   "section": "5.3",
+   "name": "竞争过程",
+   "terms": [
+    "竞争过程"
+   ],
+   "statement": "线性电极化率、吸收和光束破碎与非线性产生相竞争，而且常常压倒它，这在很大程度上解释了为什么实际系统中的非线性往往如此之小。"
+  },
+  {
+   "id": "cascade-sfg-output",
+   "kind": "result",
+   "section": "5.3",
+   "name": "无相位匹配时的和频输出",
+   "statement": "没有相位匹配时，产生场在 z = π/Δk 处达到峰值，由非线性电极化率与线性电极化率之比决定；双光子失谐消去了，相对振幅为 Ω/Δ 量级，非常小。",
+   "forms": [
+    {
+     "id": "eq-5-78",
+     "latex": "\\tilde{\\mathcal{E}}_3(\\frac{\\pi}{\\Delta k}) = -\\frac{\\nu_3}{c\\Delta k}\\chi^{(2)}\\tilde{\\mathcal{E}}_1\\tilde{\\mathcal{E}}_2",
+     "anchor": "5.3-drv-maximal-sum-frequency-field"
+    },
+    {
+     "id": "eq-5-79",
+     "latex": "\\tilde{\\mathcal{E}}_3(\\frac{\\pi}{\\Delta k}) = \\frac{-1}{2}\\mu_{12}^*\\sum_i \\frac{\\mu_{1i}\\mu_{2i}}{\\delta_\\mathrm{eff}\\Delta_i} \\cdot \\frac{\\delta_\\mathrm{eff}}{\\hbar|\\mu_{12}|^2}\\tilde{\\mathcal{E}}_1\\tilde{\\mathcal{E}}_2",
+     "anchor": "5.3-drv-maximal-sum-frequency-field"
+    },
+    {
+     "id": "eq-5-80",
+     "latex": "\\frac{\\mathcal{E}_3(\\pi/\\Delta k)}{\\mathcal{E}} \\sim \\sum_i \\frac{\\Omega_i}{\\Delta_i} \\ll 1",
+     "anchor": "5.3-eq-5-80"
+    }
+   ]
+  },
+  {
+   "id": "phase-matching-methods",
+   "kind": "idea",
+   "section": "5.3",
+   "name": "实际相位匹配",
+   "terms": [
+    "角度调谐",
+    "双折射"
+   ],
+   "statement": "相位匹配是通过线性色散来设计的：混合两种气体，一种用于非线性，一种用于色散；利用强场，如在抵消线性电极化率的类 EIT 构型中；以及在晶体中利用双折射、温度和角度调谐。"
+  },
+  {
+   "id": "parametric-saturation",
+   "kind": "result",
+   "section": "5.3",
+   "name": "产生场的饱和",
+   "statement": "相位匹配的增长不能无限继续下去：与原子之间没有能量交换，所以三个场的总光强守恒，产生场在接近外加场时发生饱和。",
+   "forms": [
+    {
+     "id": "eq-5-81",
+     "latex": "\\frac{\\partial}{\\partial z}\\left(|\\mathcal{E}_1|^2 + |\\mathcal{E}_2|^2 + |\\mathcal{E}_3|^2\\right) = 0",
+     "anchor": "5.3-eq-5-81"
+    }
+   ]
+  },
+  {
+   "id": "difference-frequency-generation",
+   "kind": "idea",
+   "section": "5.3",
+   "name": "差频产生",
+   "terms": [
+    "差频"
+   ],
+   "statement": "同样的方程和相位匹配的考虑，适用于由一个蓝光场和一个红光场产生较低的差频。"
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "three-level-configurations",
+   "prereq": "raman-transition"
+  },
+  {
+   "concept": "raman-transition",
+   "prereq": "multiphoton-process-classes"
+  },
+  {
+   "concept": "lambda-system",
+   "prereq": "three-level-configurations"
+  },
+  {
+   "concept": "lambda-system",
+   "prereq": "selection-rules"
+  },
+  {
+   "concept": "lambda-detunings",
+   "prereq": "lambda-system"
+  },
+  {
+   "concept": "lambda-detunings",
+   "prereq": "detuning"
+  },
+  {
+   "concept": "lambda-hamiltonian",
+   "prereq": "lambda-detunings"
+  },
+  {
+   "concept": "lambda-hamiltonian",
+   "prereq": "rotating-frame-hamiltonian"
+  },
+  {
+   "concept": "lambda-equations-of-motion",
+   "prereq": "lambda-hamiltonian"
+  },
+  {
+   "concept": "effective-raman-coupling",
+   "prereq": "lambda-equations-of-motion"
+  },
+  {
+   "concept": "effective-raman-coupling",
+   "prereq": "ac-stark-shift"
+  },
+  {
+   "concept": "lambda-density-matrix-equations",
+   "prereq": "lambda-hamiltonian"
+  },
+  {
+   "concept": "complex-decay-rate",
+   "prereq": "lambda-density-matrix-equations"
+  },
+  {
+   "concept": "lambda-non-hermitian-evolution",
+   "prereq": "lambda-equations-of-motion"
+  },
+  {
+   "concept": "lambda-non-hermitian-evolution",
+   "prereq": "jump-probability"
+  },
+  {
+   "concept": "weak-probe-solution",
+   "prereq": "lambda-non-hermitian-evolution"
+  },
+  {
+   "concept": "weak-probe-solution",
+   "prereq": "complex-decay-rate"
+  },
+  {
+   "concept": "probe-susceptibility",
+   "prereq": "weak-probe-solution"
+  },
+  {
+   "concept": "probe-susceptibility",
+   "prereq": "susceptibility"
+  },
+  {
+   "concept": "two-photon-resonance",
+   "prereq": "probe-susceptibility"
+  },
+  {
+   "concept": "two-photon-detuning-shifted",
+   "prereq": "two-photon-resonance"
+  },
+  {
+   "concept": "raman-unitarity-limit",
+   "prereq": "two-photon-resonance"
+  },
+  {
+   "concept": "raman-unitarity-limit",
+   "prereq": "unitary-limit"
+  },
+  {
+   "concept": "raman-dressed-states",
+   "prereq": "two-photon-resonance"
+  },
+  {
+   "concept": "raman-dressed-states",
+   "prereq": "dressed-states"
+  },
+  {
+   "concept": "two-photon-rabi-oscillations",
+   "prereq": "effective-raman-coupling"
+  },
+  {
+   "concept": "two-photon-rabi-oscillations",
+   "prereq": "lambda-non-hermitian-evolution"
+  },
+  {
+   "concept": "two-photon-rabi-oscillations",
+   "prereq": "rabi-oscillations"
+  },
+  {
+   "concept": "many-excited-states-raman",
+   "prereq": "effective-raman-coupling"
+  },
+  {
+   "concept": "doppler-free-raman",
+   "prereq": "lambda-detunings"
+  },
+  {
+   "concept": "doppler-free-raman",
+   "prereq": "doppler-broadening"
+  },
+  {
+   "concept": "raman-phase-insensitivity",
+   "prereq": "probe-susceptibility"
+  },
+  {
+   "concept": "cascade-two-photon-differences",
+   "prereq": "doppler-free-raman"
+  },
+  {
+   "concept": "dark-resonance",
+   "prereq": "probe-susceptibility"
+  },
+  {
+   "concept": "bright-state",
+   "prereq": "lambda-non-hermitian-evolution"
+  },
+  {
+   "concept": "dark-state",
+   "prereq": "bright-state"
+  },
+  {
+   "concept": "dark-state-interference",
+   "prereq": "dark-state"
+  },
+  {
+   "concept": "dark-state-interference",
+   "prereq": "dark-resonance"
+  },
+  {
+   "concept": "eit-dressed-picture",
+   "prereq": "dark-resonance"
+  },
+  {
+   "concept": "eit-dressed-picture",
+   "prereq": "dressed-states"
+  },
+  {
+   "concept": "electromagnetically-induced-transparency",
+   "prereq": "dark-resonance"
+  },
+  {
+   "concept": "electromagnetically-induced-transparency",
+   "prereq": "dark-state"
+  },
+  {
+   "concept": "slow-light",
+   "prereq": "electromagnetically-induced-transparency"
+  },
+  {
+   "concept": "slow-light",
+   "prereq": "group-velocity"
+  },
+  {
+   "concept": "dark-state-preparation",
+   "prereq": "dark-state"
+  },
+  {
+   "concept": "parametric-processes",
+   "prereq": "multiphoton-process-classes"
+  },
+  {
+   "concept": "sum-frequency-generation",
+   "prereq": "parametric-processes"
+  },
+  {
+   "concept": "sum-frequency-generation",
+   "prereq": "three-level-configurations"
+  },
+  {
+   "concept": "sum-frequency-generation",
+   "prereq": "macroscopic-polarization"
+  },
+  {
+   "concept": "second-order-susceptibility",
+   "prereq": "sum-frequency-generation"
+  },
+  {
+   "concept": "second-order-susceptibility",
+   "prereq": "nonlinear-susceptibility"
+  },
+  {
+   "concept": "cascade-nonlinear-susceptibility",
+   "prereq": "second-order-susceptibility"
+  },
+  {
+   "concept": "cascade-nonlinear-susceptibility",
+   "prereq": "many-excited-states-raman"
+  },
+  {
+   "concept": "undepleted-pump-approximation",
+   "prereq": "parametric-processes"
+  },
+  {
+   "concept": "sum-frequency-propagation",
+   "prereq": "second-order-susceptibility"
+  },
+  {
+   "concept": "sum-frequency-propagation",
+   "prereq": "undepleted-pump-approximation"
+  },
+  {
+   "concept": "wavevector-mismatch",
+   "prereq": "sum-frequency-propagation"
+  },
+  {
+   "concept": "phase-matching",
+   "prereq": "wavevector-mismatch"
+  },
+  {
+   "concept": "coherence-length",
+   "prereq": "phase-matching"
+  },
+  {
+   "concept": "competing-processes",
+   "prereq": "phase-matching"
+  },
+  {
+   "concept": "cascade-sfg-output",
+   "prereq": "phase-matching"
+  },
+  {
+   "concept": "cascade-sfg-output",
+   "prereq": "cascade-nonlinear-susceptibility"
+  },
+  {
+   "concept": "phase-matching-methods",
+   "prereq": "phase-matching"
+  },
+  {
+   "concept": "phase-matching-methods",
+   "prereq": "electromagnetically-induced-transparency"
+  },
+  {
+   "concept": "parametric-saturation",
+   "prereq": "phase-matching"
+  },
+  {
+   "concept": "difference-frequency-generation",
+   "prereq": "sum-frequency-generation"
+  },
+  {
+   "concept": "lambda-density-matrix-equations",
+   "prereq": "master-equation"
+  },
+  {
+   "concept": "complex-decay-rate",
+   "prereq": "coherence-decay-rate"
+  }
+ ]
+}

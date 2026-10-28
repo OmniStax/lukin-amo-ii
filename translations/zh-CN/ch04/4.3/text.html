@@ -1,0 +1,83 @@
+<section id="opening">
+<p>在线性情形下使用的微扰方法不能用来处理强外加场。非线性情形下的一般方法要求得到<span data-concept="density-matrix">密度矩阵</span>各分量作为含时外加场$\kOmega(\kt)$的函数的含时解。随着系统复杂性的增加，这样的解即使用数值方法也越来越难以得到。</p>
+<p>作为一种特殊情形，我们将只考虑固定频率的连续波场，并寻找系统的定常态行为。首先，考虑一个受到频率相对于原子共振<span data-concept="detuning">失谐</span>$\kdelta = \knubar - \komega$的光子照射的<span data-concept="homogeneous-broadening">均匀</span><span data-concept="two-level-atom">二能级原子</span>系综。回忆一下，<span data-concept="steady-state-coherence">密度矩阵非对角分量的定常态解</span>为</p>
+<div class="equation" id="eq-4-53">$$\krhotwoone = -i\frac{\kOmega}{\kgammaonetwo - i\kdelta}(\krhooneone - \krhotwotwo). \tag{4.53}$$<sup class="fn" data-note="c-eq-4-53"></sup></div>
+<p>对于强场，我们不能再忽略原子布居的变化，因此应当（在定常态下）代入</p>
+<div class="equation" id="eq-4-54">$$\krhooneone - \krhotwotwo = \frac{\kgamma}{\kgamma + 2\kRopt} \tag{4.54}$$</div>
+<p>其中</p>
+<div class="equation" id="eq-4-55">$$\kRopt = \frac{2|\kOmega|^2\kgammaonetwo}{\kgammaonetwo^2 + \kdelta^2}. \tag{4.55}$$</div>
+<p id="nonlinear-susceptibility">我们可以利用<span data-concept="steady-state-coherence">定常态相干性</span>求出<span data-concept="nonlinear-susceptibility">傅里叶域中的非线性电极化率</span>。</p>
+<figure class="dv" id="drv-nonlinear-susceptibility"></figure>
+<p id="nonlinear-propagation">注意，<span data-concept="two-level-susceptibility">线性电极化率</span>给出了所有含时线性传播场的完整解，而我们刚刚导出的<span data-concept="nonlinear-susceptibility">非线性电极化率</span>$\kchin(\kdelta)$只适用于连续波的定常态解。对于我们所考虑的这一特殊情形，<span data-concept="nonlinear-susceptibility">电极化率</span>决定了外加场的<span data-concept="nonlinear-propagation">非线性传播方程</span>。由于我们处理的是连续波场，因此可以忽略波动方程中的时间导数。</p>
+<figure class="dv" id="drv-nonlinear-propagation"></figure>
+<p><span data-concept="nonlinear-susceptibility">非线性电极化率</span>本身是通过$\kRopt$进入的外加场强度$\kOmega = \kmu\kEenv/\hbar$的函数。随着外加场增强，$\kchi$减小，这一效应称为<span data-concept="nonlinear-propagation">饱和吸收</span>。在弱场极限$\kRopt \ll \kgamma$下，这一表达式化为先前得到的<span data-concept="two-level-susceptibility">线性电极化率</span>。现在我们将在几种特殊情形下考察<span data-concept="nonlinear-susceptibility">非线性电极化率</span>。</p>
+</section>
+
+<section id="resonant">
+<h2>共振场</h2>
+<p>对于完全共振的场，$\kdelta = 0$，<span data-concept="nonlinear-susceptibility">电极化率</span>的实部为零，虚部变为</p>
+<div class="equation" id="eq-4-61">$$\mathrm{Im}[\kchin(0)] = \frac{3}{8\pi^2}\frac{N}{\kV}\klambda^3\frac{\kgamma}{\kgammaonetwo}\frac{1}{1 + \kssat} \tag{4.61}$$</div>
+<p>其中</p>
+<div class="equation" id="eq-4-62">$$\kssat = \frac{4|\kOmega|^2}{\kgammaonetwo\kgamma}. \tag{4.62}$$</div>
+<p id="bleaches">当<span data-concept="saturation-parameter" id="saturation-parameter">这一饱和参量$\kssat$</span>很大，$\kssat \gg 1$时，<span data-concept="resonant-saturation">外加场漂白介质</span>，透射功率随入射光强的增大而非线性增长。在这一<span data-concept="saturation">饱和</span>情形下，<span data-concept="absorption-coefficient">吸收</span>的空间分布发生定性变化，从强场中的线性衰减变为弱场所特有的指数式衰减。</p>
+<figure class="sim" id="sim-saturated-decay" data-figure="4.3" data-original="/media/ch04/fig-4-3.png" data-original-caption="光强等于饱和光强的入射场起初随距离线性衰减。一旦场弱到非线性效应可以忽略，光强便呈指数式衰减。">
+  <div class="sim-head"><span class="eyebrow">Figure 4.3</span><span>共振光束以光强$\kIint(0)$进入介质，并以速率$\kalpha = \kalpha_0/(1 + \kssat)$损失光强，其中$\kssat = \kIint/\kIint_\mathrm{sat}$，$\kalpha_0$为弱场吸收系数。光束高于<span data-concept="saturation-intensity">饱和光强</span>时，介质被漂白，光强几乎随距离线性下降；一旦降到其下，衰减就转为指数式，即弱光束的虚线曲线。增大$\kIint(0)$，线性段变长；减小它，分布就变成弱光束的分布。距离以$1/\kalpha_0$为单位。</span></div>
+</figure>
+</section>
+
+<section id="far-detuned">
+<h2>远失谐场</h2>
+<p>可以把<span data-concept="saturation-parameter">饱和参量</span>定义为<span data-concept="detuning">失谐</span>的函数，</p>
+<div class="equation" id="eq-4-63">$$\kssat = \frac{2\kRopt}{\kgamma}. \tag{4.63}$$</div>
+<p>由于$\kRopt$随<span data-concept="detuning">失谐</span>增大而减小，要使非共振跃迁<span data-concept="saturation">饱和</span>就需要更大的功率。对于非常大的<span data-concept="detuning">失谐</span>，$\kdelta \gg \kOmega, \kgamma$，<span data-concept="nonlinear-susceptibility">电极化率</span>的虚部可以忽略。</p>
+<figure class="dv" id="drv-far-detuned-susceptibility"></figure>
+<p id="kerr-effect">介质的<span data-concept="refractive-index">折射率</span>由$\mathrm{Re}[\kchi]$决定，因而依赖于光强。依赖光强的<span data-concept="refractive-index">折射率</span>（称为<span data-concept="kerr-effect">克尔效应</span>）的物理可以通过定义一个对光强呈线性的折射率来描述，$\knref = \knref_0 + \knref_2 \kIint$。这类效应有重要的物理后果，包括依赖光强的相移，它们常被称为“<span data-concept="kerr-effect">自调相</span>”。此外，对于横向范围有限的光束，介质将起透镜的作用，因为<span data-concept="refractive-index">折射率</span>是功率的函数，从而是横向位置的函数，由此产生所谓的<span data-concept="kerr-effect">自聚焦或自散焦</span>。</p>
+</section>
+
+<section id="weak-saturation">
+<h2>弱饱和情形</h2>
+<p>在某些情形下，我们将处理相对较弱的场，只希望计算对线性传播的领头阶修正。在这类情形下，将<span data-concept="nonlinear-susceptibility">电极化率</span>展开是有用的</p>
+<div class="equation" id="eq-4-65">$$\kchin = \kchi + \kchithree|E|^2 + \ldots, \tag{4.65}$$</div>
+<p id="chi-3">其中$\kchi$是<span data-concept="susceptibility">线性电极化率</span>，<span data-concept="third-order-susceptibility">$\kchithree$是下一阶修正</span>（至少对于具有反演对称性的系统是如此）。</p>
+<figure class="dv" id="drv-weak-saturation-expansion"></figure>
+<p>我们把第一项看作<span data-concept="two-level-susceptibility">线性电极化率</span>，把第二项看作领头阶非线性修正。</p>
+</section>
+
+<section id="experimental">
+<h2>实验上的考虑</h2>
+<p id="saturation-intensity">出于实际目的，估算<span data-concept="saturation-intensity">使跃迁在共振时饱和所需的光强</span>是有用的。在辐射增宽的系统中，$\kgammaonetwo = \kgamma/2$，$\kRopt = 4|\kOmega|^2/\kgamma$，因此饱和阈值$\kssat = 1$对应于$8|\kOmega|^2 \approx \kgamma^2$，也就是说，对于碱金属原子，光强为几<span data-type="intensity">$\text{mW}/\text{cm}^2$</span>。在<span data-concept="doppler-broadening">多普勒谱线增宽的</span>系统中，$\kkmag\kvT \gg \kgammaonetwo$，需要大得多的功率，因为满足$8|\kOmega|^2 \approx \kgamma^2$的外加场只会使一个速度类的原子<span data-concept="saturation">饱和</span>。然而，在一小部分速度组被<span data-concept="saturation">饱和</span>的这一中间情形下，可以用亚多普勒分辨率进行抽运-探测或烧孔等非线性光谱学实验。</p>
+<p id="optical-pumping">实际上，真实系统可以比这些计算所预测的<span data-concept="saturation">饱和</span>得快得多，因为其他原子能级的存在意味着系统不一定衰变回其原来的状态。例如，考虑一个具有两个长寿命<span data-concept="alkali-ground-hyperfine">超精细能级</span>和第三个激发能级的原子。当施加一个与从其中一个<span data-concept="alkali-ground-hyperfine">超精细能级</span>到激发态的跃迁共振的场时，大部分原子布居将最终处于另一个<span data-concept="alkali-ground-hyperfine">超精细能级</span>上，<span data-concept="optical-pumping">这一效应称为光抽运</span>。此时共振跃迁的饱和只要求$\kRopt$超过<span data-concept="alkali-ground-hyperfine">超精细能级</span>之间的（缓慢）衰变，这使它容易<span data-concept="saturation">饱和</span>得多。这个例子说明了二能级模型往往不是很好的近似，尤其是在与原子和光的非线性相互作用有关的情形中。</p>
+</section>
+
+<section id="spectroscopy">
+<h2>4.3.1 饱和光谱学</h2>
+<p><span data-concept="saturation-spectroscopy" id="saturation-spectroscopy">饱和光谱学</span>是非相干非线性多光子相互作用的一个重要例子。它提供了一种探测<span data-concept="inhomogeneous-broadening">非均匀谱线增宽</span>介质的固有线宽的简单方法（不同于线性相互作用，后者无法区分<span data-concept="homogeneous-broadening">均匀谱线增宽</span>与<span data-concept="inhomogeneous-broadening">非均匀谱线增宽</span>的共振）。<span data-concept="saturation-spectroscopy">饱和光谱学</span>通常用频率同为$\knu$、接近与原子跃迁能量$\kDelta$共振的<span data-ref="pump probe">两束对传光束</span>来进行。这两束光在热原子云中产生如下电场分布，</p>
+<div class="equation" id="eq-4-66">$$\kEfield = \kEp e^{-i\knu \kt + ikz} + \kEm e^{-i\knu \kt - ikz} + c.c, \tag{4.66}$$</div>
+<p>其中<span data-ref="pump">$\kEp$</span>表示<span data-ref="pump">前向的强场</span>，<span data-ref="probe">$\kEm$</span>表示<span data-ref="probe">后向的弱场</span>。</p>
+<figure class="sim" id="sim-saturation-spectroscopy" data-figure="4.4 + 4.5" data-original="/media/ch04/fig-4-4.png,/media/ch04/fig-4-5.png" data-original-caption="（图 4.4）前向和后向传播的光束与使它们共振的那一速度类的原子相互作用。当光频ν接近裸原子共振时，这些速度类开始重叠（图 4.5）存在频率相同的反向传播强场时弱探测光的吸收谱。">
+  <div class="sim-head"><span class="eyebrow">Figure 4.4 + 4.5</span><span>上图为热原子的布居差$\knv(\krhooneone - \krhotwotwo)^{(\kvz)}$对其多普勒频移$\kkmag\kvz$的曲线，无抽运光时用虚线表示。<span data-ref="pump">抽运光$\kEp$</span>使$\kkmag\kvz = \kdelta$的原子<span data-concept="saturation">饱和</span>，并在那里烧出一个孔；<span data-ref="probe">探测光$\kEm$</span>被$\kkmag\kvz = -\kdelta$的原子吸收，阴影所示的速度类，其面积就是它的吸收。下图为探测光的吸收$\kalpha_-$对$\kdelta = \knu - \kDelta$的曲线，相对于无抽运光时的峰值。把$\kdelta$拖向零：两个速度类在最慢的原子之间相遇，探测光落入孔中，其吸收显示出<span data-concept="saturated-absorption-dip">凹陷</span>，窄至$\kgammaonetwo$，而多普勒轮廓的宽度为$\kkmag\kvT = 12$ μs⁻¹。这些原子是辐射增宽的，$\kgamma = 2\kgammaonetwo$，频率以μs⁻¹为单位。</span></div>
+</figure>
+<p id="doppler-classes">由于热原子中的<span data-concept="doppler-broadening">多普勒频移</span>，<span data-ref="pump probe">这两束光</span>各自与某一速度类相互作用。<span data-ref="pump">强场</span>与满足$\knu = \kDelta + \kkmag\kvz$的原子相互作用，使它们的跃迁<span data-concept="saturation">饱和</span>，而<span data-ref="probe">弱场</span>与多普勒频移后满足$\knu = \kDelta - \kkmag\kvz$的原子相互作用。对于一般的<span data-concept="detuning">失谐</span>，$\knu \neq \kDelta$，<span data-ref="pump probe">这两个场</span>不与同一组原子相互作用。然而，当频率接近裸原子共振时，$\kvz \to 0$，两个速度类开始重叠。在共振时，<span data-ref="pump probe">两个场</span>都与静止的原子相互作用。因此，我们预期<span data-ref="probe">弱场$\kEm$</span>的<span data-concept="absorption-coefficient">吸收</span>谱将由于被<span data-ref="pump">强场</span><span data-concept="saturation">饱和</span>的静止原子而在$\knu = \kDelta$附近显示出尖锐的特征。</p>
+<h3>饱和吸收谱</h3>
+<p id="sat-spectrum"><span data-concept="saturation-spectroscopy">饱和光谱学</span>的定性图像可以通过计算<span data-ref="probe">探测光束</span>的<span data-concept="absorption-coefficient">吸收系数</span>$\kalpha_- = \kkmag\mathrm{Im}[\kchi_-] = \kkmag\mathrm{Im}[P_-/\epsilon_0\kEm]$来作定量验证。为了分离出前向和后向传播的场，我们把原子<span data-concept="atomic-polarization">极化</span>分解为沿$\pm\hat{z}$方向的两个行波，</p>
+<div class="equation" id="eq-4-67">$$P = P_+e^{-i\knu \kt + ikz} + P_-e^{-i\knu \kt - ikz} + c.c. \tag{4.67}$$</div>
+<p>为了考虑<span data-concept="inhomogeneous-broadening">非均匀</span>的<span data-concept="doppler-broadening">多普勒谱线增宽</span>，这一总<span data-concept="atomic-polarization">极化</span>可以进一步分解为来自不同速度的原子的贡献。某个特定的速度组$\kvz$贡献一个与<span data-ref="pump probe">两束对传光束</span>所感生的原子相干性成正比的<span data-concept="atomic-polarization">极化</span>$P^{(\kvz)}$，</p>
+<div class="equation" id="eq-4-68">$$\krhotwoone^{(\kvz)} = \underbrace{\krhotwoone^{(\kvz)+}}_{\sim\kEp} + \underbrace{\krhotwoone^{(\kvz)-}}_{\sim\kEm}. \tag{4.68}$$</div>
+<p>一旦我们对适当的原子密度$\knv$算出了<span data-concept="atomic-polarization">极化</span>，$P_\pm^{(\kvz)} = \knv\kmu^*\krhotwoone^{(\kvz)\pm}$，就可以对速度类求和并除以$\epsilon_0\kEpm$，得到<span data-ref="probe">探测光束</span>的<span data-concept="susceptibility">电极化率</span>。</p>
+<p>我们可以利用先前对线性相互作用进行分析的结果求出这一相干性$\krhotwoone^{(\kvz)-}$，因为<span data-ref="probe">探测光束$\kEm$</span>很弱。具体地说，我们得到</p>
+<div class="equation" id="eq-4-69">$$\krhotwoone^{(\kvz)-} \approx \frac{i\kOmegam(\krhooneone - \krhotwotwo)^{(\kvz)}}{\kgammaonetwo - i(\kdelta + \kkmag\kvz)}, \tag{4.69}$$</div>
+<p>其中$\kOmegapm = \kmu\kEpm/\hbar$。注意，由于原子沿光传播轴线的速度，<span data-concept="detuning">失谐</span>$\kdelta = \knu - \komega$发生了多普勒频移。对于<span data-ref="probe">探测光</span>，向右运动的原子看到频率更高的场（蓝移），因此净<span data-concept="detuning">失谐</span>为$\kdelta + \kkmag\kvz$。</p>
+<p>我们先前的线性分析不需要进一步的计算，因为对于足够弱的场，布居分布$\krhooneone - \krhotwotwo$与$\kOmegam$无关。然而，为了准确地模拟<span data-concept="saturation-spectroscopy">饱和吸收光谱学</span>的非线性方面，我们必须纳入<span data-ref="pump">强场</span>$|\kOmegap|^2$对$\krhooneone - \krhotwotwo$的影响。我们先前已经看到，强的非线性相互作用可以通过重新分布原子布居使跃迁<span data-concept="saturation">饱和</span>：</p>
+<div class="equation" id="eq-4-70">$$(\krhooneone - \krhotwotwo)^{(\kvz)} = \frac{1}{1 + S(\kdelta - \kkmag\kvz)}, \tag{4.70}$$</div>
+<p>其中<span data-concept="saturation-parameter">饱和参量</span>为</p>
+<div class="equation" id="eq-4-71">$$S(\kdelta - \kkmag\kvz) = \frac{4|\kOmegap|^2(\kgammaonetwo/\kgamma)}{\kgammaonetwo^2 + (\kdelta - \kkmag\kvz)^2}. \tag{4.71}$$</div>
+<p>注意，$\kOmegap$的多普勒频移符号是相反的，因为它的传播方向与$\kOmegam$相反。代入式 <a href="#eq-4-69">(4.69)</a>，我们得到由$\kOmegap$和$\kOmegam$在速度为$\kvz$的原子中感生的后向传播的相干性。</p>
+<figure class="dv" id="drv-probe-coherence"></figure>
+<p>现在我们已经可以通过对所有原子速度类对<span data-concept="atomic-polarization">极化</span>的贡献求和，来计算<span data-ref="probe">探测光束</span>的<span data-concept="absorption-coefficient">吸收系数</span>$\kalpha_- = \kkmag\ \mathrm{Im}[\kchi_-] = \kkmag\ \mathrm{Im}[P_-/\epsilon_0\kEm]$，</p>
+<div class="equation" id="eq-4-73">$$P_- = \int d\kvz\kmu^*\krhotwoone^{(\kvz)-}\knv, \tag{4.73}$$</div>
+<p>其中每个速度类由热分布$\knv$加权。</p>
+<figure class="dv" id="drv-probe-susceptibility"></figure>
+<p id="sat-dip-def">第一项描述弱探测光通常的<span data-concept="doppler-broadening">多普勒谱线增宽的</span><span data-concept="absorption-coefficient">吸收</span>；第二项描述我们希望计算的<span data-concept="saturation">饱和</span>效应。通过把热速度分布近似为在对<span data-concept="saturated-absorption-dip" id="sat-dip">饱和吸收凹陷</span>有贡献的那些速度上为常数，$\knv = n$，我们可以用闭式算出第二项的积分。所得的表达式相当繁复，为了阐明<span data-ref="pump">强场</span>的效应，我们将把它展开到$\kOmegap$的最低阶。</p>
+<figure class="dv" id="drv-saturated-absorption-dip"></figure>
+<p id="dip"><span data-concept="saturated-absorption-dip">饱和吸收特征</span>的表达式，在$\kOmegap$较弱且$\knv$缓变的极限下，表明我们应当看到<span data-concept="absorption-coefficient">吸收</span>中有一个尖锐的凹陷，其特征宽度由消多普勒线宽$\kgammaonetwo$给出。</p>
+</section>

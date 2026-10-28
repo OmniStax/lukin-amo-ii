@@ -1,0 +1,898 @@
+{
+ "id": "8.5",
+ "chapter": "8",
+ "title": "应用于多普勒冷却的海森伯-朗之万形式体系",
+ "short": "多普勒冷却的朗之万理论",
+ "lead": "<span data-concept=\"heisenberg-langevin-equation\">海森伯-朗之万方程</span>应用于处在对传光束中的<span data-concept=\"two-level-atom\">二能级原子</span>：真空场加在原子上的<span data-concept=\"laser-cooling-noise-force\">噪声力</span>，它引起的<span data-concept=\"laser-cooling-diffusion\">动量扩散</span>，这种加热与<span data-concept=\"doppler-cooling\">多普勒冷却</span>相平衡时的温度，以及原子稠密到互相遮挡、互相推斥时发生的变化。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "MIT 8.422 习题集 9 第 3 题每个小问各用一张卡片，改用卢金的记号重述，并附有 AI 撰写的解答，因为该课程没有公布答案；它不要求给出数值，因此没有一问被暂扣。习题集 9 第 1 题(c)，即三种发射图样的动量扩散常量，与 8.5.1 有关，它与该题的其余部分一起布置在 8.2 中。",
+ "figures": [
+  {
+   "id": "sim-doppler-limit",
+   "kind": "sim",
+   "draws": [
+    "frequency",
+    "coupling",
+    "rate",
+    "diffusion",
+    "friction",
+    "temperature",
+    "mass",
+    "wavevector"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "noise-force",
+   "concept": "laser-cooling-noise-force",
+   "verb": "introduces"
+  },
+  {
+   "span": "diffusion-constant",
+   "concept": "laser-cooling-diffusion",
+   "verb": "introduces"
+  },
+  {
+   "span": "final-temperature",
+   "concept": "doppler-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "optically-thick",
+   "concept": "laser-attenuation",
+   "verb": "introduces"
+  },
+  {
+   "span": "reabsorption-force",
+   "concept": "photon-reabsorption",
+   "verb": "introduces"
+  },
+  {
+   "span": "hl-doppler",
+   "concept": "heisenberg-langevin-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "hl-doppler",
+   "concept": "doppler-cooling",
+   "verb": "uses"
+  },
+  {
+   "span": "hl-doppler",
+   "concept": "light-force-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "hl-doppler",
+   "concept": "rabi-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "average-fluctuation",
+   "concept": "semiclassical-light-force",
+   "verb": "uses"
+  },
+  {
+   "span": "average-fluctuation",
+   "concept": "open-system",
+   "verb": "uses"
+  },
+  {
+   "span": "average-fluctuation",
+   "concept": "heisenberg-langevin-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "noise-intro",
+   "concept": "quantum-langevin-force",
+   "verb": "uses"
+  },
+  {
+   "span": "noise-moment",
+   "concept": "mean-thermal-photon-number",
+   "verb": "uses"
+  },
+  {
+   "span": "slow-processes",
+   "concept": "adiabatic-elimination",
+   "verb": "uses"
+  },
+  {
+   "span": "two-factors",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "diffusion-analogy",
+   "concept": "langevin-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "diffusion-analogy",
+   "concept": "diffusion-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "diffusion-physics",
+   "concept": "random-walk",
+   "verb": "uses"
+  },
+  {
+   "span": "diffusion-physics",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "diffusion-physics",
+   "concept": "zero-velocity-excitation-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "diffusion-physics",
+   "concept": "atomic-recoil",
+   "verb": "uses"
+  },
+  {
+   "span": "final-temperature-intro",
+   "concept": "einstein-relation",
+   "verb": "uses"
+  },
+  {
+   "span": "final-temperature-intro",
+   "concept": "friction-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "final-temperature-intro",
+   "concept": "dissipative-force",
+   "verb": "uses"
+  },
+  {
+   "span": "final-temperature-intro",
+   "concept": "doppler-cooling",
+   "verb": "uses"
+  },
+  {
+   "span": "optimum",
+   "concept": "detuning",
+   "verb": "uses"
+  },
+  {
+   "span": "optimum",
+   "concept": "coherence-decay-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "radiative",
+   "concept": "spontaneous-emission-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "equilibrium",
+   "concept": "thermal-radiation-field",
+   "verb": "uses"
+  },
+  {
+   "span": "attenuation",
+   "concept": "dipole-force",
+   "verb": "uses"
+  },
+  {
+   "span": "attenuation",
+   "concept": "doppler-cooling",
+   "verb": "uses"
+  },
+  {
+   "span": "reabsorption",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "reabsorption",
+   "concept": "atomic-recoil",
+   "verb": "uses"
+  },
+  {
+   "span": "reabsorption",
+   "concept": "heisenberg-langevin-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "reabsorption",
+   "concept": "reservoir-operator-solution",
+   "verb": "uses"
+  },
+  {
+   "span": "reabsorption",
+   "concept": "quantum-langevin-force",
+   "verb": "uses"
+  },
+  {
+   "span": "reabsorption",
+   "concept": "master-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-fluctuating-force",
+   "concept": "force-fluctuations",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-noise-moment",
+   "concept": "detuning",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-doppler-limit",
+   "concept": "optical-pumping-rate",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "hw9-3a",
+   "source_id": "hw9.3a",
+   "source_number": "Problem Set 9, Problem 3(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的弹性常数$\\kappa$记为$K$（卢金的$\\kappa$是腔的衰变率），两个原子的间距$d$记为$r$（卢金的$d$是偶极矩，8.5.3 节写作$r$），吸收的原子所占的比例$f$记为$f_b$（卢金的$f$是朗之万力）；习题集中的钠数据本题不用，已略去，并重复了本题的开头，使本小问可以独立成题。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "reabsorption",
+   "prompt": "磁光阱中的密度极限。在三维磁光阱中，被陷俘原子的密度受到净向外的辐射压的限制，这一辐射压与陷俘力相对抗。我们可以把与密度有关的光子压力分成两部分。第一部分是排斥性的“辐射陷俘力”，它来自原子吸收阱中其他原子散射的光子。此外还有吸引性的“衰减力”，它由原子云侧面的原子使激光束衰减所引起，从而造成光强不平衡，导致一个向内的力。证明辐射陷俘力满足方程$$\\nabla\\cdot\\mathbf{F}_R = \\frac{6\\sigma_L\\sigma_RIn}{c},$$其中$I$是一束陷俘激光束的光强，$n$是原子云中原子的数密度，$\\sigma_L$是激光束的吸收截面，$\\sigma_R$是散射光的吸收截面。（提示：求相距$r$的两个原子之间的力的大小，其中一个原子重新辐射一个激光光子，第二个原子吸收它。现在，由于这是平方反比力，可以用高斯定律求$\\nabla\\cdot\\mathbf{F}_R$。假设光子只被散射两次。）",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "原子处在六束陷俘光束之中，每束的光强为$I$，它以截面$\\sigma_L$吸收其中每一束的光，因此散射的功率为$6\\sigma_LI$。把散射光看作各向同性地离开原子，它在距离$r$处的光强为$6\\sigma_LI/4\\pi r^2$。那里的第二个原子以截面$\\sigma_R$吸收它；每个被吸收的光子给它一个背离第一个原子的冲击$\\hbar k = \\hbar\\omega/c$（8.5.3 节的再吸收冲击），所以力等于被吸收的功率除以$c$：$$\\mathbf{F}(\\mathbf{r}) = \\frac{6\\sigma_L\\sigma_RI}{4\\pi c}\\frac{\\hat{\\mathbf{r}}}{r^2}.$$这是一个排斥性的平方反比力，即同号电荷之间的库仑定律，只是把$q_1q_2/4\\pi\\epsilon_0$换成了$6\\sigma_L\\sigma_RI/4\\pi c$。由于每个光子只被散射两次，成对的力直接相加：作用在一个原子上的力，是这个力对密度为$n$的源求和，正如$\\mathbf{E}$是对电荷密度$\\rho$求和。于是高斯定律$\\nabla\\cdot\\mathbf{E} = 4\\pi\\rho\\,(1/4\\pi\\epsilon_0)$给出$$\\nabla\\cdot\\mathbf{F}_R = 4\\pi n\\,\\frac{6\\sigma_L\\sigma_RI}{4\\pi c} = \\frac{6\\sigma_L\\sigma_RIn}{c}.$$"
+   }
+  },
+  {
+   "id": "hw9-3b",
+   "source_id": "hw9.3b",
+   "source_number": "Problem Set 9, Problem 3(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的弹性常数$\\kappa$记为$K$（卢金的$\\kappa$是腔的衰变率），两个原子的间距$d$记为$r$（卢金的$d$是偶极矩，8.5.3 节写作$r$），吸收的原子所占的比例$f$记为$f_b$（卢金的$f$是朗之万力）；习题集中的钠数据本题不用，已略去，并重复了本题的开头，使本小问可以独立成题；重复了(a) 小问的定义。",
+   "kind": "problem",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "reabsorption",
+   "prompt": "磁光阱中的密度极限。在三维磁光阱中，被陷俘原子的密度受到净向外的辐射压的限制，这一辐射压与陷俘力相对抗。我们可以把与密度有关的光子压力分成两部分。第一部分是排斥性的“辐射陷俘力”，它来自原子吸收阱中其他原子散射的光子。此外还有吸引性的“衰减力”，它由原子云侧面的原子使激光束衰减所引起，从而造成光强不平衡，导致一个向内的力。衰减力可以简单地通过把$\\sigma_R$换成$-\\sigma_L$得到，从而$$\\nabla\\cdot\\mathbf{F}_A = -\\frac{6\\sigma_L^2In}{c}.$$这里$I$是一束陷俘激光束的光强，$n$是原子云中原子的数密度，$\\sigma_L$是激光束的吸收截面，$\\sigma_R$是散射光的吸收截面。解释为什么会这样。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "每个吸收激光的原子都把这部分光从光束中取出，并在它身后留下一个阴影。处在阴影中的第二个原子，被该光束推得比被相反的光束推得少，所以它受到一个指向第一个原子的力。阴影是流离第一个原子的激光的亏缺，即(a)中散射通量反号，而第二个原子是以它对激光的截面$\\sigma_L$而不是$\\sigma_R$来感受它的，因为缺少的是激光。因此$\\sigma_R \\to -\\sigma_L$。直接计算：在沿$x$的一对光束中，向$+x$传播的一束满足$dI_+/dx = -n\\sigma_LI_+$，向$-x$传播的一束满足$dI_-/dx = +n\\sigma_LI_-$。原子感受到$F_x = \\sigma_L(I_+ - I_-)/c$，所以$$\\frac{\\partial F_x}{\\partial x} = -\\frac{n\\sigma_L^2(I_+ + I_-)}{c} \\approx -\\frac{2\\sigma_L^2In}{c}$$在足够薄、使得$I_+ \\approx I_- \\approx I$的云中。沿$y$和$z$的各对光束同样相加，且$\\nabla\\cdot\\mathbf{F}_A = -6\\sigma_L^2In/c$：这个力指向内部，因为每个原子被遮蔽的一侧都朝向云的中心。"
+   }
+  },
+  {
+   "id": "hw9-3c",
+   "source_id": "hw9.3c",
+   "source_number": "Problem Set 9, Problem 3(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的弹性常数$\\kappa$记为$K$（卢金的$\\kappa$是腔的衰变率），两个原子的间距$d$记为$r$（卢金的$d$是偶极矩，8.5.3 节写作$r$），吸收的原子所占的比例$f$记为$f_b$（卢金的$f$是朗之万力）；习题集中的钠数据本题不用，已略去，并重复了本题的开头，使本小问可以独立成题；列出了(a) 小问和(b) 小问的结果。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "reabsorption",
+   "prompt": "磁光阱中的密度极限。在三维磁光阱中，被陷俘原子的密度受到净向外的辐射压的限制，这一辐射压与陷俘力相对抗。我们可以把与密度有关的光子压力分成两部分。第一部分是排斥性的“辐射陷俘力”，它来自原子吸收阱中其他原子散射的光子。此外还有吸引性的“衰减力”，它由原子云侧面的原子使激光束衰减所引起，从而造成光强不平衡，导致一个向内的力。辐射陷俘力满足$\\nabla\\cdot\\mathbf{F}_R = 6\\sigma_L\\sigma_RIn/c$，衰减力满足$\\nabla\\cdot\\mathbf{F}_A = -6\\sigma_L^2In/c$。这里$I$是一束陷俘激光束的光强，$n$是原子云中原子的数密度，$\\sigma_L$是激光束的吸收截面，$\\sigma_R$是散射光的吸收截面。总力是$\\mathbf{F}_R$、$\\mathbf{F}_A$和陷俘力$\\mathbf{F}_T = -K\\mathbf{r}$之和，其中$K$是阱的弹性常数。为了稳定，要求总力是吸引性的，$\\nabla\\cdot\\mathbf{F}_{total} < 0$。由条件$\\nabla\\cdot\\mathbf{F}_{total} = 0$求在给定$K$时被陷俘原子云的最大密度。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "陷俘力有$\\nabla\\cdot\\mathbf{F}_T = -K\\nabla\\cdot\\mathbf{r} = -3K$。条件$\\nabla\\cdot(\\mathbf{F}_R + \\mathbf{F}_A + \\mathbf{F}_T) = 0$写成$$\\frac{6\\sigma_L(\\sigma_R - \\sigma_L)In}{c} - 3K = 0,$$所以$$n_{max} = \\frac{Kc}{2\\sigma_L(\\sigma_R - \\sigma_L)I}.$$光压力只在$\\sigma_R > \\sigma_L$时限制密度，这样再吸收胜过衰减。这个极限与原子数无关：一旦达到它，装入更多原子只会使原子云变大，而不会使它变密。更硬的阱使它升高，在固定$K$时更强的光使它降低。"
+   }
+  },
+  {
+   "id": "hw9-3d",
+   "source_id": "hw9.3d",
+   "source_number": "Problem Set 9, Problem 3(d)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的弹性常数$\\kappa$记为$K$（卢金的$\\kappa$是腔的衰变率），两个原子的间距$d$记为$r$（卢金的$d$是偶极矩，8.5.3 节写作$r$），吸收的原子所占的比例$f$记为$f_b$（卢金的$f$是朗之万力）；习题集中的钠数据本题不用，已略去，并重复了本题的开头，使本小问可以独立成题；重复了(a) 小问的定义。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "reabsorption",
+   "prompt": "磁光阱中的密度极限。在三维磁光阱中，被陷俘原子的密度受到净向外的辐射压的限制，这一辐射压与陷俘力相对抗。我们可以把与密度有关的光子压力分成两部分。第一部分是排斥性的“辐射陷俘力”，它来自原子吸收阱中其他原子散射的光子。此外还有吸引性的“衰减力”，它由原子云侧面的原子使激光束衰减所引起，从而造成光强不平衡，导致一个向内的力。这里$I$是一束陷俘激光束的光强，$n$是原子云中原子的数密度，$\\sigma_L$是激光束的吸收截面，$\\sigma_R$是散射光的吸收截面。给出一个定性论证，说明我们预期$\\sigma_R = \\sigma_L$、$\\sigma_R > \\sigma_L$还是$\\sigma_R < \\sigma_L$。（提示：画出强激光场中处于红失谐的原子的吸收谱和发射谱的草图。）",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "我们预期$\\sigma_R > \\sigma_L$。在强场中，原子用它的缀饰态（2.1 节）描述，缀饰态分裂的大小为$\\hbar\\sqrt{\\delta^2 + 4|\\Omega|^2}$。它散射的光有一个位于激光频率$\\nu$的弹性部分，以及两个位于$\\nu \\pm \\sqrt{\\delta^2 + 4|\\Omega|^2}$的非弹性边带。同一场中的第二个原子在其光致频移后的共振处吸收最强，对于红失谐，$\\delta < 0$，该处位于$\\nu + \\sqrt{\\delta^2 + 4|\\Omega|^2}$：接近裸共振$\\omega$，被交流斯塔克偏移推得稍稍越过它、远离激光。这恰好是散射光上边带所在的位置，而下边带所在之处，缀饰原子几乎不吸收（甚至表现出增益）。弹性部分像激光一样被吸收，截面为$\\sigma_L$，由于激光失谐，这个截面很小。所以散射光含有一个比激光更接近吸收极大值的分量，平均而言$\\sigma_R > \\sigma_L$。在弱场中，散射几乎全是弹性的，$\\sigma_R \\to \\sigma_L$，这就是为什么(c)的密度极限在强驱动的阱中最为重要。"
+   }
+  },
+  {
+   "id": "hw9-3e",
+   "source_id": "hw9.3e",
+   "source_number": "Problem Set 9, Problem 3(e)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的弹性常数$\\kappa$记为$K$（卢金的$\\kappa$是腔的衰变率），两个原子的间距$d$记为$r$（卢金的$d$是偶极矩，8.5.3 节写作$r$），吸收的原子所占的比例$f$记为$f_b$（卢金的$f$是朗之万力）；习题集中的钠数据本题不用，已略去，并重复了本题的开头，使本小问可以独立成题；重复了(a) 小问的定义和(c) 小问的陷俘力。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "reabsorption",
+   "prompt": "磁光阱中的密度极限。在三维磁光阱中，被陷俘原子的密度受到净向外的辐射压的限制，这一辐射压与陷俘力相对抗。我们可以把与密度有关的光子压力分成两部分。第一部分是排斥性的“辐射陷俘力”，它来自原子吸收阱中其他原子散射的光子。此外还有吸引性的“衰减力”，它由原子云侧面的原子使激光束衰减所引起，从而造成光强不平衡，导致一个向内的力。这里$I$是一束陷俘激光束的光强，$n$是原子云中原子的数密度，$\\sigma_L$是激光束的吸收截面，$\\sigma_R$是散射光的吸收截面。陷俘力为$\\mathbf{F}_T = -K\\mathbf{r}$，其中$K$是阱的弹性常数，$n_{max}$是使$\\nabla\\cdot(\\mathbf{F}_R + \\mathbf{F}_A + \\mathbf{F}_T) = 0$成立的密度。假设一部分原子可以被放入“暗态”，使得只有比例为$f_b$的原子吸收陷俘光。$F_R$、$F_A$和$F_T$如何随$f_b$变化？极限密度$n_{max}$会怎样？这就是Dark SPOT阱的概念（PRL 70, 2253 (1993)）。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "只有亮原子，在任一时刻占比$f_b$，才散射和吸收。辐射陷俘力的源的密度为$f_bn$，并且只在原子为亮时作用于它，即占时间的比例$f_b$，因此平均而言$F_R \\propto f_b^2$：$\\nabla\\cdot\\mathbf{F}_R = 6f_b^2\\sigma_L\\sigma_RIn/c$。衰减力同样来自$f_bn$个原子的阴影，并作用于亮原子，$F_A \\propto f_b^2$：$\\nabla\\cdot\\mathbf{F}_A = -6f_b^2\\sigma_L^2In/c$。陷俘力本身就是光力，只在原子吸收时才感受到，所以$F_T \\propto f_b$：$\\mathbf{F}_T = -f_bK\\mathbf{r}$。令总和的散度为零，得$$n_{max} = \\frac{Kc}{2f_b\\sigma_L(\\sigma_R - \\sigma_L)I},$$大了一个因子$1/f_b$：排斥力随亮的比例的平方增长，而约束力只随它的一次方增长。在Dark SPOT阱中，再抽运光被挡在阱的中心之外，因此那里的大多数原子停留在暗的超精细态中，原子云达到的密度是普通磁光阱的许多倍，由较弱的平均阱束缚。"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "hw9-3a",
+   "concept": "photon-reabsorption"
+  },
+  {
+   "exercise": "hw9-3a",
+   "concept": "absorption-cross-section"
+  },
+  {
+   "exercise": "hw9-3a",
+   "concept": "magneto-optical-trap"
+  },
+  {
+   "exercise": "hw9-3b",
+   "concept": "laser-attenuation"
+  },
+  {
+   "exercise": "hw9-3b",
+   "concept": "absorption-cross-section"
+  },
+  {
+   "exercise": "hw9-3c",
+   "concept": "photon-reabsorption"
+  },
+  {
+   "exercise": "hw9-3c",
+   "concept": "laser-attenuation"
+  },
+  {
+   "exercise": "hw9-3c",
+   "concept": "magneto-optical-trap"
+  },
+  {
+   "exercise": "hw9-3d",
+   "concept": "photon-reabsorption"
+  },
+  {
+   "exercise": "hw9-3d",
+   "concept": "dressed-states"
+  },
+  {
+   "exercise": "hw9-3d",
+   "concept": "absorption-cross-section"
+  },
+  {
+   "exercise": "hw9-3e",
+   "concept": "photon-reabsorption"
+  },
+  {
+   "exercise": "hw9-3e",
+   "concept": "laser-attenuation"
+  },
+  {
+   "exercise": "hw9-3e",
+   "concept": "magneto-optical-trap"
+  }
+ ],
+ "referents": [],
+ "footnotes": [
+  {
+   "id": "footnote-2",
+   "kind": "book",
+   "number": "2",
+   "html": "<p>这一近似的有效性，最容易通过在傅里叶域中精确求解看出，其中相关的项给出对相干性的一项贡献</p><div class=\"equation\" id=\"eq-8-86\">$$\\hat{\\sigma}_{12}(\\omega) = \\frac{\\kFnoise_{12}(\\omega)}{\\kgamma/2 + i(\\omega - \\kdelta)}. \\tag{8.86}$$</div><p>于是，原子算符的关联函数（它出现在力的表达式中）为</p><div class=\"equation\" id=\"eq-8-87\">$$\\langle\\hat{\\sigma}_{12}(\\omega)\\hat{\\sigma}_{12}^\\dagger(\\omega')\\rangle = \\frac{2D\\delta(\\omega + \\omega')}{(\\kgamma/2 + i(\\omega - \\kdelta))(\\kgamma/2 - i(\\omega' - \\kdelta))}. \\tag{8.87}$$</div><p>我们忽略时间导数的近似，相当于忽略分母中的频率，在远低于$\\kgamma$的频率处，这应当只有可以忽略的贡献。</p>"
+  },
+  {
+   "id": "footnote-3",
+   "kind": "book",
+   "number": "3",
+   "html": "这里包含了两个因子 2：一个来自把两束对传光束的<span data-concept=\"force-fluctuations\">力涨落</span>相加，忽略任何干涉效应（例如交替改变光束的方向，只考虑每束光的平均光强。）第二个因子 2 来自这样一个事实：我们在这里只推导了与<span data-concept=\"spontaneous-emission\">自发发射</span>相联系的<span data-concept=\"laser-cooling-diffusion\">扩散</span>，而与吸收相联系的还有一个等价的分量。更多细节见比尔·菲利普斯的讲义 http://cua.mit.edu/8.422_S13/Reading%20Material/phil92_varenna.pdf。"
+  },
+  {
+   "id": "c-rms-momentum",
+   "kind": "correction",
+   "html": "书中写作$\\sqrt{\\langle \\kpcm^2\\rangle} = \\sqrt{\\kDdiff\\kt}$，沿用了它的式 (8.49)，而该式漏掉了一个因子 2。扩散常量由$2\\kDdiff\\delta(\\kt-\\kt') = \\langle\\delta\\kF(\\kt)\\delta\\kF(\\kt')\\rangle$定义时，没有摩擦的冲击对从静止出发的原子给出$\\langle \\kpcm^2\\rangle = 2\\kDdiff\\kt$，所以方均根动量按$\\sqrt{2\\kDdiff\\kt}$增长。"
+  },
+  {
+   "id": "c-eq-8-95",
+   "kind": "correction",
+   "html": "冷却需要红失谐：<a href=\"#drv-doppler-limit\">式 (8.93)</a>使$\\keta$与$\\kdelta$同号，所以光束在$\\kdelta < 0$时冷却，而最佳失谐为$\\kdelta \\approx -\\kgammaonetwo$，此时<a href=\"#drv-doppler-limit\">式 (8.96)</a>成立。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "coherence-noise",
+   "what": "原子相干性的海森伯-朗之万方程",
+   "source": "现代原子与光学物理 II，8.5.1 二能级原子激光冷却中的动量扩散",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "对于处在辐射场热库中的原子，$\\hat A = \\hat\\sigma_{12}$，且$\\hat S = \\hat\\sigma_{12}$。",
+       "src": "(8.56)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{A}]} + \\mk{r1}{\\left(\\frac{\\kgamma}{2}\\kShat^\\dagger + \\kfhat^\\dagger\\right)[\\hat{A}, \\kShat]} - \\mk{r2}{[\\hat{A}, \\kShat^\\dagger]\\left(\\frac{\\kgamma}{2}\\kShat + \\kfhat\\right)}",
+      "src": "(8.69)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{\\sigma}_{12}]} + \\mk{r1}{\\left(\\frac{\\kgamma}{2}\\hat{\\sigma}_{21} + \\kfhat^\\dagger\\right)[\\hat{\\sigma}_{12}, \\hat{\\sigma}_{12}]} - \\mk{r2}{[\\hat{\\sigma}_{12}, \\hat{\\sigma}_{21}]\\left(\\frac{\\kgamma}{2}\\hat{\\sigma}_{12} + \\kfhat\\right)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{\\sigma}_{12}]} - \\mk{r2}{\\left(\\hat{\\sigma}_{11} - \\hat{\\sigma}_{22}\\right)\\left(\\frac{\\kgamma}{2}\\hat{\\sigma}_{12} + \\kfhat(\\kt)\\right)}",
+       "uses": [],
+       "cap": "$[\\hat\\sigma_{12}, \\hat\\sigma_{12}] = 0$且$[\\hat\\sigma_{12}, \\hat\\sigma_{21}] = \\hat\\sigma_{11} - \\hat\\sigma_{22}$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{\\sigma}_{12}]} - \\mk{g}{\\frac{\\kgamma}{2}\\hat{\\sigma}_{12}} + \\mk{f}{\\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)\\kfhat(\\kt)}",
+       "uses": [],
+       "cap": "$(\\hat\\sigma_{11} - \\hat\\sigma_{22})\\hat\\sigma_{12} = \\hat\\sigma_{12}$.",
+       "map": {
+        "r2": [
+         "g",
+         "f"
+        ]
+       }
+      }
+     ],
+     "num": "(8.82)"
+    }
+   ]
+  },
+  {
+   "id": "diffusion-constant",
+   "what": "多普勒冷却的动量扩散常量",
+   "source": "现代原子与光学物理 II，8.5.1 二能级原子激光冷却中的动量扩散",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\langle\\delta\\kF(\\kt)\\delta\\kF(\\kt')\\rangle = (\\hbar\\kkmag)^2\\frac{|\\kOmegatilde|^2\\kgamma}{(\\kgamma/2)^2 + \\kdelta^2}\\delta(\\kt-\\kt')",
+       "src": "(8.90)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{D}{2\\kDdiff\\delta(\\kt-\\kt')} = \\mk{R}{\\langle\\delta\\kF(\\kt)\\delta\\kF(\\kt')\\rangle}",
+      "uses": [],
+      "why": "类比布朗运动的扩散模型，式 (8.36) 和 (8.38)。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{D}{2\\kDdiff\\delta(\\kt-\\kt')} = \\mk{R}{(\\hbar\\kkmag)^2\\frac{|\\kOmegatilde|^2\\kgamma}{(\\kgamma/2)^2 + \\kdelta^2}\\delta(\\kt-\\kt')}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{D}{\\kDdiff} = \\mk{R}{(\\hbar\\kkmag)^2\\frac{|\\kOmegatilde|^2\\kgamma/2}{(\\kgamma/2)^2 + \\kdelta^2}}",
+       "uses": []
+      }
+     ],
+     "num": "(8.91)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kOmegatilde = 2\\kOmega",
+       "src": "8.5.1"
+      },
+      {
+       "tex": "\\kRoptzero = \\frac{|\\kOmega|^2\\kgamma}{\\kdelta^2 + (\\kgamma/2)^2}",
+       "src": "8.5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{D}{\\kDdiff} = \\mk{R}{(\\hbar\\kkmag)^2\\frac{|\\kOmegatilde|^2\\kgamma/2}{(\\kgamma/2)^2 + \\kdelta^2}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{D}{\\kDdiff} = \\mk{R}{(\\hbar\\kkmag)^2\\frac{|\\kOmegatilde|^2\\kgamma/2}{(\\kgamma/2)^2 + \\kdelta^2}} = \\mk{a}{(\\hbar\\kkmag)^2\\frac{4|\\kOmega|^2\\kgamma/2}{(\\kgamma/2)^2 + \\kdelta^2}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{D}{\\kDdiff} = \\mk{R}{(\\hbar\\kkmag)^2\\frac{|\\kOmegatilde|^2\\kgamma/2}{(\\kgamma/2)^2 + \\kdelta^2}} = \\mk{a}{2(\\hbar\\kkmag)^2\\frac{|\\kOmega|^2\\kgamma}{(\\kgamma/2)^2 + \\kdelta^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{D}{\\kDdiff} = \\mk{R}{(\\hbar\\kkmag)^2\\frac{|\\kOmegatilde|^2\\kgamma/2}{(\\kgamma/2)^2 + \\kdelta^2}} = \\mk{a}{2(\\hbar\\kkmag)^2\\kRoptzero}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(8.92)"
+    }
+   ]
+  },
+  {
+   "id": "doppler-limit",
+   "what": "多普勒冷却极限",
+   "source": "现代原子与光学物理 II，8.5.2 多普勒冷却极限",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "零速度光抽运率，$R_{opt} = 2\\gamma_{12}|\\Omega|^2/(\\gamma_{12}^2 + \\delta^2)$。",
+       "src": "(8.28)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\keta} = \\mk{R}{\\frac{8\\hbar \\kkmag^2}{\\km}\\frac{\\kdelta\\kgammaonetwo|\\kOmega|^2}{(\\kgammaonetwo^2 + \\kdelta^2)^2}}",
+      "src": "(8.30)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\keta} = \\mk{R}{\\frac{4}{\\km}\\frac{\\hbar\\kkmag^2\\kdelta}{\\kdelta^2 + \\kgammaonetwo^2}\\cdot\\frac{2\\kgammaonetwo|\\kOmega|^2}{\\kgammaonetwo^2 + \\kdelta^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{e}{\\keta} = \\mk{R}{\\frac{4\\kRopt}{\\km}\\frac{\\hbar\\kkmag^2\\kdelta}{\\kdelta^2 + \\kgammaonetwo^2}}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(8.93)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kDdiff = \\km\\keta k_B\\kT",
+       "src": "(8.48)"
+      },
+      {
+       "text": "爱因斯坦关系中的摩擦率是式 (8.34) 的阻尼率，即大小$|\\eta|$；由式 (8.93)，$\\eta$与$\\delta$同号，对于起冷却作用的红失谐为负。",
+       "src": "8.3"
+      },
+      {
+       "tex": "\\kDdiff = 2(\\hbar\\kkmag)^2\\kRopt",
+       "src": "(8.92)"
+      },
+      {
+       "text": "对于辐射增宽的跃迁，$\\gamma_{12} = \\gamma/2$，式 (8.92) 和 (8.93) 的抽运率相同。",
+       "src": "(3.92)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{T}{k_B\\kTD} = \\mk{R}{\\frac{\\kDdiff}{\\km|\\keta|}}",
+      "uses": [
+       1,
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{T}{k_B\\kTD} = \\mk{R}{\\frac{2(\\hbar\\kkmag)^2\\kRopt}{\\km|\\keta|}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{T}{k_B\\kTD} = \\mk{R}{\\frac{2(\\hbar\\kkmag)^2\\kRopt}{4\\kRopt\\hbar\\kkmag^2|\\kdelta|/(\\kdelta^2 + \\kgammaonetwo^2)}}",
+       "uses": [
+        0,
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{T}{k_B\\kTD} = \\mk{R}{\\frac{\\hbar\\left(\\kdelta^2 + \\kgammaonetwo^2\\right)}{2|\\kdelta|}}",
+       "uses": [],
+       "cap": "光抽运率消去了。"
+      }
+     ],
+     "num": "(8.95)",
+     "note": "书中印出$k_BT_D = D/m\\eta = \\hbar(\\delta^2 + \\gamma_{12}^2)/2\\delta$。由于$\\eta$与$\\delta$同号，而光束只在$\\delta < 0$时冷却，印出的温度为负；爱因斯坦关系取的是大小$|\\eta|$。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "在最佳失谐处，$\\delta \\approx -\\gamma_{12}$。",
+       "src": "8.5.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{T}{k_B\\kTD} = \\mk{R}{\\frac{\\hbar\\left(\\kdelta^2 + \\kgammaonetwo^2\\right)}{2|\\kdelta|}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{T}{k_B\\kTD} = \\mk{R}{\\frac{\\hbar\\cdot 2\\kgammaonetwo^2}{2\\kgammaonetwo}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{T}{k_B\\kTD} = \\mk{R}{\\hbar\\kgammaonetwo}",
+       "uses": []
+      }
+     ],
+     "num": "(8.96)"
+    }
+   ]
+  },
+  {
+   "id": "fluctuating-force",
+   "what": "涨落的光力",
+   "source": "现代原子与光学物理 II，8.5.1 二能级原子激光冷却中的动量扩散",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "感兴趣的过程相对于$\\gamma$是缓慢的，因此忽略时间导数。",
+       "src": "8.5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{a}{\\frac{i}{\\hbar}[\\kH_{AL}, \\hat{\\sigma}_{12}]} - \\mk{g}{(\\frac{\\kgamma}{2} - i\\kdelta)\\hat{\\sigma}_{12}} + \\mk{f}{\\kFnoise_{12}(\\kt)}",
+      "src": "(8.85)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{0} \\approx \\mk{a}{\\frac{i}{\\hbar}[\\kH_{AL}, \\hat{\\sigma}_{12}]} - \\mk{g}{(\\frac{\\kgamma}{2} - i\\kdelta)\\hat{\\sigma}_{12}} + \\mk{f}{\\kFnoise_{12}(\\kt)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{g}{(\\frac{\\kgamma}{2} - i\\kdelta)\\hat{\\sigma}_{12}} \\approx \\mk{f}{\\kFnoise_{12}(\\kt)} + \\mk{a}{\\frac{i}{\\hbar}[\\kH_{AL}, \\hat{\\sigma}_{12}]}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{g}{\\hat{\\sigma}_{12}} = \\mk{f}{\\frac{\\kFnoise_{12}(\\kt)}{\\kgamma/2 - i\\kdelta}} + \\mk{a}{\\frac{i}{\\hbar(\\kgamma/2 - i\\kdelta)}[\\kH_{AL}, \\hat{\\sigma}_{12}]}",
+       "uses": []
+      }
+     ],
+     "num": "(8.88)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kF = \\langle\\kF\\rangle + \\delta\\kF",
+       "src": "(8.80)"
+      },
+      {
+       "text": "哈密顿量的项已计入平均力$\\langle F\\rangle$中。",
+       "src": "8.5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kF} = \\mk{s}{-i\\hbar\\kkmag\\kOmega^*\\hat{\\sigma}_{12}} + h.c.",
+      "src": "(8.79)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kF} = \\mk{s}{-i\\hbar\\kkmag\\kOmega^*\\left(\\frac{\\kFnoise_{12}(\\kt)}{\\kgamma/2 - i\\kdelta} + \\frac{i}{\\hbar(\\kgamma/2 - i\\kdelta)}[\\kH_{AL}, \\hat{\\sigma}_{12}]\\right)} + h.c.",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\delta\\kF} = \\mk{s}{-i\\hbar\\kkmag\\kOmega^*\\frac{\\kFnoise_{12}(\\kt)}{\\kgamma/2 - i\\kdelta}} + h.c",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "由于哈密顿量的项已计入平均力，涨落力就是噪声项及其共轭。"
+      }
+     ],
+     "num": "(8.89)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\langle\\kFnoise_{12}(\\kt)\\kFnoise_{12}(\\kt')^\\dagger\\rangle = \\kgamma\\delta(\\kt-\\kt')",
+       "src": "(8.84)"
+      },
+      {
+       "text": "在真空中，$\\langle\\hat{\\mathcal F}_{12}\\hat{\\mathcal F}_{12}^\\dagger\\rangle$是噪声唯一不为零的二阶矩。",
+       "src": "8.5.1"
+      },
+      {
+       "text": "$\\tilde\\Omega = 2\\Omega$计入了两束对传光束，以及吸收和自发发射带来的扩散。",
+       "src": "8.5.1，脚注 3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\delta\\kF(\\kt)\\delta\\kF(\\kt')\\rangle} = \\mk{R}{\\left\\langle\\left(-i\\hbar\\kkmag\\kOmega^*\\frac{\\kFnoise_{12}(\\kt)}{\\kgamma/2 - i\\kdelta} + h.c.\\right)\\left(-i\\hbar\\kkmag\\kOmega^*\\frac{\\kFnoise_{12}(\\kt')}{\\kgamma/2 - i\\kdelta} + h.c.\\right)\\right\\rangle}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\delta\\kF(\\kt)\\delta\\kF(\\kt')\\rangle} = \\mk{R}{(\\hbar\\kkmag)^2|\\kOmega|^2\\frac{\\langle\\kFnoise_{12}(\\kt)\\kFnoise_{12}(\\kt')^\\dagger\\rangle}{|\\kgamma/2 - i\\kdelta|^2}}",
+       "uses": [
+        2
+       ],
+       "cap": "只有$t$处的噪声项与$t^{\\prime}$处的共轭项的乘积保留下来。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\delta\\kF(\\kt)\\delta\\kF(\\kt')\\rangle} = \\mk{R}{(\\hbar\\kkmag)^2\\frac{|\\kOmega|^2\\kgamma}{(\\kgamma/2)^2 + \\kdelta^2}\\delta(\\kt-\\kt')}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\delta\\kF(\\kt)\\delta\\kF(\\kt')\\rangle} = \\mk{R}{(\\hbar\\kkmag)^2\\frac{|\\kOmegatilde|^2\\kgamma}{(\\kgamma/2)^2 + \\kdelta^2}\\delta(\\kt-\\kt')}",
+       "uses": [
+        3
+       ],
+       "cap": "两束光，以及除自发发射之外的吸收，各使涨落加倍：$|\\Omega|^2 \\to |\\tilde\\Omega|^2 = 4|\\Omega|^2$。"
+      }
+     ],
+     "num": "(8.90)"
+    }
+   ]
+  },
+  {
+   "id": "noise-moment",
+   "what": "相干性上的噪声力",
+   "source": "现代原子与光学物理 II，8.5.1 二能级原子激光冷却中的动量扩散",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kFnoise_{12}(\\kt) = \\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)\\kfhat(\\kt)",
+       "src": "(8.83)"
+      },
+      {
+       "tex": "\\langle\\kfhat(\\kt)\\kfhat(\\kt')^\\dagger\\rangle = \\left(n(\\komega) + 1\\right)\\kgamma\\delta(\\kt-\\kt')",
+       "src": "(8.67)"
+      },
+      {
+       "text": "对于光学跃迁，辐射场处于真空态，$n(\\omega) = 0$。",
+       "src": "8.5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\kFnoise_{12}(\\kt)\\kFnoise_{12}(\\kt')^\\dagger\\rangle} = \\mk{m}{\\langle\\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)\\kfhat(\\kt)\\kfhat(\\kt')^\\dagger\\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)\\rangle}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\kFnoise_{12}(\\kt)\\kFnoise_{12}(\\kt')^\\dagger\\rangle} = \\mk{m}{\\langle\\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)^2\\kfhat(\\kt)\\kfhat(\\kt')^\\dagger\\rangle}",
+       "uses": [],
+       "cap": "噪声只在$t = t^{\\prime}$处关联，在那里原子算符与$\\hat f$对易。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kFnoise_{12}(\\kt)\\kFnoise_{12}(\\kt')^\\dagger\\rangle} = \\mk{m}{\\langle\\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)^2\\kfhat(\\kt)\\kfhat(\\kt')^\\dagger\\rangle} = \\mk{R}{\\langle\\kfhat(\\kt)\\kfhat(\\kt')^\\dagger\\rangle}",
+       "uses": [],
+       "cap": "对于二能级原子，$(\\hat\\sigma_{22} - \\hat\\sigma_{11})^2 = \\hat\\sigma_{22} + \\hat\\sigma_{11} = 1$。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kFnoise_{12}(\\kt)\\kFnoise_{12}(\\kt')^\\dagger\\rangle} = \\mk{m}{\\langle\\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)^2\\kfhat(\\kt)\\kfhat(\\kt')^\\dagger\\rangle} = \\mk{R}{\\kgamma\\delta(\\kt-\\kt')}",
+       "uses": [
+        1,
+        2
+       ]
+      }
+     ],
+     "num": "(8.84)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kFnoise_{12}(\\kt) = \\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)\\kfhat(\\kt)",
+       "src": "(8.83)"
+      },
+      {
+       "text": "在转动参考系中，系统哈密顿量为$\\hat H_S = -\\hbar\\delta|2\\rangle\\langle 2| + \\hat H_{AL}$。",
+       "src": "(3.84)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{\\sigma}_{12}]} - \\mk{g}{\\frac{\\kgamma}{2}\\hat{\\sigma}_{12}} + \\mk{f}{\\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)\\kfhat(\\kt)}",
+      "uses": [],
+      "src": "(8.82)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{\\sigma}_{12}]} - \\mk{g}{\\frac{\\kgamma}{2}\\hat{\\sigma}_{12}} + \\mk{f}{\\kFnoise_{12}(\\kt)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{a}{\\frac{i}{\\hbar}[\\kH_{AL}, \\hat{\\sigma}_{12}]} + \\mk{d}{i\\kdelta\\hat{\\sigma}_{12}} - \\mk{g}{\\frac{\\kgamma}{2}\\hat{\\sigma}_{12}} + \\mk{f}{\\kFnoise_{12}(\\kt)}",
+       "uses": [
+        1
+       ],
+       "cap": "分出失谐：$\\frac{i}{\\hbar}[-\\hbar\\delta\\hat\\sigma_{22}, \\hat\\sigma_{12}] = -i\\delta[\\hat\\sigma_{22}, \\hat\\sigma_{12}] = i\\delta\\hat\\sigma_{12}$。",
+       "map": {
+        "h": [
+         "a",
+         "d"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{a}{\\frac{i}{\\hbar}[\\kH_{AL}, \\hat{\\sigma}_{12}]} - \\mk{g}{(\\frac{\\kgamma}{2} - i\\kdelta)\\hat{\\sigma}_{12}} + \\mk{f}{\\kFnoise_{12}(\\kt)}",
+       "uses": [],
+       "map": {
+        "d": "g"
+       }
+      }
+     ],
+     "num": "(8.85)"
+    }
+   ]
+  }
+ ]
+}

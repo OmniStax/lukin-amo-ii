@@ -1,0 +1,1701 @@
+{
+ "id": "9.3",
+ "chapter": "9",
+ "title": "耗散对量子场的影响",
+ "short": "耗散与量子场",
+ "lead": "耗散对量子场做了什么：作为<span data-concept=\"beamsplitter-loss-model\">分束器</span>的损耗，先按经典、再按量子力学处理的有耗腔及其噪声，损耗为何使每个场都回到经典光，以及<span data-concept=\"cavity-qed\">腔量子电动力学</span>，其中一个原子、一个腔模和两条衰变通道在<span data-concept=\"jaynes-cummings-ladder\">缀饰态阶梯</span>、<span data-concept=\"strong-coupling-regime\">强耦合</span>、<span data-concept=\"purcell-effect\">珀塞尔效应</span>、按需单光子和探测它们的<span data-concept=\"second-order-correlation\">关联函数</span>中相遇。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "MIT 8.422 的习题集 1 第 2 题、习题集 2 第 2 题、习题集 3 第 1 题、习题集 8 第 2 题和习题集 10 第 1(f) 题，改用卢金的记号逐问布置，并附有 AI 撰写的解答，因为该课程没有公布答案；没有一问是数值题，因此没有一问被暂扣。习题集 10 第 1(a)–(e) 题处理 2.1 节的半经典缀饰原子，已布置在那里。",
+ "figures": [
+  {
+   "id": "fig-cat",
+   "kind": "figure",
+   "number": "9.4",
+   "originals": [
+    "/media/ch09/fig-9-4.png"
+   ],
+   "original_caption": "场态$\\sim |i\\alpha\\rangle - |-i\\alpha\\rangle$在$\\tau_{Revival}/2$附近的相空间描绘。",
+   "draws": [
+    "quadrature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "fig-bs-loss",
+   "kind": "figure",
+   "number": "9.5",
+   "originals": [
+    "/media/ch09/fig-9-5.png"
+   ],
+   "original_caption": "损耗的分束器模型。",
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "fig-lossy-cavity",
+   "kind": "figure",
+   "number": "9.6",
+   "originals": [
+    "/media/ch09/fig-9-6.png"
+   ],
+   "original_caption": "分析有耗腔中耗散所用的模型。",
+   "draws": [
+    "electric-field",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-damped-field",
+   "kind": "sim",
+   "draws": [
+    "quadrature",
+    "state",
+    "rate",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "fig-cqed-reservoirs",
+   "kind": "figure",
+   "number": "9.7",
+   "originals": [
+    "/media/ch09/fig-9-7.png"
+   ],
+   "original_caption": "腔量子电动力学的系统-热库划分。腔中的量子场被视为总系统的一部分，它衰变到与腔泄漏相对应的模的热库中。原子热库对应于另一组自由空间模，原子可以直接衰变到其中。",
+   "draws": [
+    "coupling",
+    "rate"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-jc-ladder",
+   "kind": "sim",
+   "number": "9.8",
+   "originals": [
+    "/media/ch09/fig-9-8.png"
+   ],
+   "original_caption": "缀饰态基和耗散耦合。(a) 自然基对应于一个基态和一个由无穷多个各自以$g\\sqrt{n}$耦合的独立二能级系统构成的阶梯，其中$n$是该对态在腔中的最大光子数。每个流形都可以被精确对角化，从而得到缀饰态基。(b) 原子衰变和腔损耗导致不同流形之间的耦合，因为它们允许能量离开系统。因此，衰变不仅给缀饰态引入能量宽度，而且混合了相互独立的缀饰态流形。",
+   "draws": [
+    "coupling",
+    "frequency",
+    "rate"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-vacuum-rabi",
+   "kind": "sim",
+   "draws": [
+    "coupling",
+    "rate",
+    "frequency",
+    "amplitude",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "bs-loss",
+   "concept": "beamsplitter-loss-model",
+   "verb": "introduces"
+  },
+  {
+   "span": "loss-rate",
+   "concept": "cavity-loss-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "round-trip",
+   "concept": "classical-cavity-evolution",
+   "verb": "introduces"
+  },
+  {
+   "span": "input-output",
+   "concept": "input-output-relation",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-cavity-eq",
+   "concept": "cavity-langevin-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "microscopic",
+   "concept": "cavity-reservoir-model",
+   "verb": "introduces"
+  },
+  {
+   "span": "noise-correlations",
+   "concept": "cavity-noise-correlations",
+   "verb": "introduces"
+  },
+  {
+   "span": "cavity-master",
+   "concept": "cavity-master-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "coherent-example",
+   "concept": "damped-coherent-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "nonclassical-loss",
+   "concept": "dissipation-destroys-nonclassicality",
+   "verb": "introduces"
+  },
+  {
+   "span": "atoms-drive",
+   "concept": "cavity-driven-by-atoms",
+   "verb": "introduces"
+  },
+  {
+   "span": "open-closed",
+   "concept": "open-and-closed-cavities",
+   "verb": "introduces"
+  },
+  {
+   "span": "cqed-master",
+   "concept": "cqed-master-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "dressed-basis",
+   "concept": "jaynes-cummings-ladder",
+   "verb": "introduces"
+  },
+  {
+   "span": "vrs",
+   "concept": "vacuum-rabi-splitting",
+   "verb": "introduces"
+  },
+  {
+   "span": "collective",
+   "concept": "collective-enhancement",
+   "verb": "introduces"
+  },
+  {
+   "span": "no-jump",
+   "concept": "cqed-no-jump-evolution",
+   "verb": "introduces"
+  },
+  {
+   "span": "purcell",
+   "concept": "purcell-effect",
+   "verb": "introduces"
+  },
+  {
+   "span": "q-factor",
+   "concept": "quality-factor",
+   "verb": "introduces"
+  },
+  {
+   "span": "finesse",
+   "concept": "cavity-finesse",
+   "verb": "introduces"
+  },
+  {
+   "span": "mode-volume",
+   "concept": "cavity-mode-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "figure-of-merit",
+   "concept": "strong-coupling-figure-of-merit",
+   "verb": "introduces"
+  },
+  {
+   "span": "closed-decay",
+   "concept": "suppressed-decay",
+   "verb": "introduces"
+  },
+  {
+   "span": "microwave",
+   "concept": "microwave-cqed",
+   "verb": "introduces"
+  },
+  {
+   "span": "single-photon",
+   "concept": "cavity-single-photon-source",
+   "verb": "introduces"
+  },
+  {
+   "span": "hbt",
+   "concept": "hanbury-brown-twiss",
+   "verb": "introduces"
+  },
+  {
+   "span": "g2-def",
+   "concept": "second-order-correlation",
+   "verb": "introduces"
+  },
+  {
+   "span": "bunching",
+   "concept": "photon-bunching",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "linear-optical-transformations",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "coherent-state",
+   "verb": "uses"
+  },
+  {
+   "span": "bs-loss",
+   "concept": "beamsplitter-transformation",
+   "verb": "uses"
+  },
+  {
+   "span": "bs-loss",
+   "concept": "fock-states",
+   "verb": "uses"
+  },
+  {
+   "span": "quantum-cavity-eq",
+   "concept": "creation-annihilation-operators",
+   "verb": "uses"
+  },
+  {
+   "span": "microscopic",
+   "concept": "open-system",
+   "verb": "uses"
+  },
+  {
+   "span": "microscopic",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "cavity-master",
+   "concept": "heisenberg-langevin-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "cavity-master",
+   "concept": "master-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "cavity-master",
+   "concept": "density-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "coherent-example",
+   "concept": "coherent-state",
+   "verb": "uses"
+  },
+  {
+   "span": "variance-stays",
+   "concept": "quadrature-operators",
+   "verb": "uses"
+  },
+  {
+   "span": "variance-stays",
+   "concept": "coherent-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "nonclassical-loss",
+   "concept": "squeezed-state",
+   "verb": "uses"
+  },
+  {
+   "span": "nonclassical-loss",
+   "concept": "quadrature-operators",
+   "verb": "uses"
+  },
+  {
+   "span": "atoms-drive",
+   "concept": "heisenberg-langevin-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "cqed-system",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "cqed-system",
+   "concept": "cavity-qed",
+   "verb": "uses"
+  },
+  {
+   "span": "open-closed",
+   "concept": "spontaneous-emission-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "jc-hamiltonian",
+   "concept": "jaynes-cummings-model",
+   "verb": "uses"
+  },
+  {
+   "span": "cavity-detuning",
+   "concept": "detuning",
+   "verb": "uses"
+  },
+  {
+   "span": "cavity-detuning",
+   "concept": "fock-states",
+   "verb": "uses"
+  },
+  {
+   "span": "dressed-basis",
+   "concept": "dressed-states",
+   "verb": "uses"
+  },
+  {
+   "span": "collective",
+   "concept": "dispersion",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-9-112",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "heff",
+   "concept": "effective-hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "weak-damping",
+   "concept": "vacuum-rabi-oscillations",
+   "verb": "uses"
+  },
+  {
+   "span": "weak-damping",
+   "concept": "strong-coupling-regime",
+   "verb": "uses"
+  },
+  {
+   "span": "purcell-elimination",
+   "concept": "adiabatic-elimination",
+   "verb": "uses"
+  },
+  {
+   "span": "purcell-shift",
+   "concept": "lamb-shift",
+   "verb": "uses"
+  },
+  {
+   "span": "purcell-shift",
+   "concept": "spontaneous-emission-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "microwave",
+   "concept": "rydberg-states",
+   "verb": "uses"
+  },
+  {
+   "span": "single-photon",
+   "concept": "fock-states",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-9-132",
+   "concept": "wigner-weisskopf",
+   "verb": "uses"
+  },
+  {
+   "span": "hbt",
+   "concept": "beamsplitter-transformation",
+   "verb": "uses"
+  },
+  {
+   "span": "bunching",
+   "concept": "coherent-state",
+   "verb": "uses"
+  },
+  {
+   "span": "bunching",
+   "concept": "thermal-photon-distribution",
+   "verb": "uses"
+  },
+  {
+   "span": "input-field",
+   "concept": "cavity-noise-correlations",
+   "verb": "reinforces"
+  },
+  {
+   "span": "figure-of-merit",
+   "concept": "strong-coupling-regime",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "hw2-2a",
+   "source_id": "hw2.2a",
+   "source_number": "Problem Set 2, Problem 2(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：模算符带有帽子，写作$\\hat{a}$，MIT 的反射振幅$r$（$|r|^2 + |t|^2 = 1$）就是式 (9.80) 的$i\\sqrt{1-|t|^2}$。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "bs-loss",
+   "prompt": "在本题中，我们用分束器模型研究相干态的衰减。在海森伯绘景中，量子光学里光学衰减器的一个直观模型，是把湮没算符乘以一个复透射系数$t$，其中$|t| < 1$，即定义衰减算符$\\mathcal{T}$，我们有$\\mathcal{T}\\hat{a}\\mathcal{T}^\\dagger = t\\hat{a}$。证明对于上面定义的衰减算符，相干态的光子数涨落将低于散粒噪声。即对于未衰减的态$|\\alpha\\rangle$，有$\\bar{n} = \\Delta n^2 = |\\alpha|^2$，衰减后的态将有$\\bar{n}' = |t|^2|\\alpha|^2$和$\\Delta n'^2 = |t|^4|\\alpha|^2$，这违反了最小不确定度。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由$\\mathcal{T}\\hat{a}\\mathcal{T}^\\dagger = t\\hat{a}$，每个矩都可以通过把$\\hat{a}$替换为$t\\hat{a}$得到：$\\bar{n}' = |t|^2\\langle\\hat{a}^\\dagger\\hat{a}\\rangle = |t|^2|\\alpha|^2$，且$\\langle n'^2\\rangle = |t|^4\\langle(\\hat{a}^\\dagger\\hat{a})^2\\rangle = |t|^4(|\\alpha|^4 + |\\alpha|^2)$，所以$$\\Delta n'^2 = |t|^4|\\alpha|^2 = |t|^2\\,\\bar{n}' < \\bar{n}'.$$衰减后的光将比同样平均值的相干态的散粒噪声$\\Delta n^2 = \\bar{n}$更安静，这是对经典光的任何衰减都无法产生的。正交分量也说明同一点：对实数$t$，$\\hat{x} = (\\hat{a} + \\hat{a}^\\dagger)/\\sqrt{2}$变为$t\\hat{x}$，所以$\\langle\\delta\\hat{x}^2\\rangle$和$\\langle\\delta\\hat{p}^2\\rangle$都从$1/2$降到$|t|^2/2$，它们的乘积降到$|t|^4/4$，低于相干态已经达到的最小不确定度$1/4$。根源在于：$[t\\hat{a}, t^*\\hat{a}^\\dagger] = |t|^2 \\neq 1$，所以这个映射不保持对易式，不可能来自幺正演化。"
+   }
+  },
+  {
+   "id": "hw2-2b",
+   "source_id": "hw2.2b",
+   "source_number": "Problem Set 2, Problem 2(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：模算符带有帽子，写作$\\hat{a}$，MIT 的反射振幅$r$（$|r|^2 + |t|^2 = 1$）就是式 (9.80) 的$i\\sqrt{1-|t|^2}$；(b) 问所依赖的第 1(a) 题，即习题集 2 第 1(a) 题，布置在 9.1 节，而 (a) 问的衰减器在该问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "bs-loss",
+   "prompt": "对于 (a) 问的衰减器，$\\mathcal{T}\\hat{a}\\mathcal{T}^\\dagger = t\\hat{a}$：我们现在看到，这个最直观的定义并不能给出衰减相干态的物理结果。事实上，它不是幺正变换，也不对应量子时间演化。一个正确的模型则是把衰减表述为光子通过分束器，其中衰减部分仍由透射缩放因子$t$给出，但从分束器的另一个端口混入一个真空态，并伴随反射，其反射缩放因子为$r$，$|r|^2 + |t|^2 = 1$。证明利用这一分束器模型，相干态在衰减之后的光子数涨落仍遵循散粒噪声。利用习题集 2 第 1(a) 题的结果论证，相干态总是以衰减相干态的形式被透射。这个问题表明，任何一种衰减（例如耗散）都把量子系统耦合到一个允许真空涨落进入的开放端口。任何一种耗散都会给衰减后的量子态增加涨落。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在分束器模型中，$\\hat{a}_\\mathrm{out} = t\\hat{a} + r\\hat{b}$，其中$\\hat{b}$处于真空（式 (9.80)，其中$r = i\\sqrt{1-|t|^2}$）。此时$[\\hat{a}_\\mathrm{out}, \\hat{a}_\\mathrm{out}^\\dagger] = |t|^2 + |r|^2 = 1$，而由于$\\hat{b}|0\\rangle = 0$，$$\\hat{a}_\\mathrm{out}|\\alpha\\rangle|0\\rangle = t\\alpha\\,|\\alpha\\rangle|0\\rangle:$$输入态是输出湮没算符的本征态。因此$\\bar{n}' = \\langle\\hat{a}_\\mathrm{out}^\\dagger\\hat{a}_\\mathrm{out}\\rangle = |t|^2|\\alpha|^2$且$\\langle\\hat{a}_\\mathrm{out}^{\\dagger 2}\\hat{a}_\\mathrm{out}^2\\rangle = |t\\alpha|^4$，所以$\\langle n'^2\\rangle = |t\\alpha|^4 + |t\\alpha|^2$且$$\\Delta n'^2 = |t|^2|\\alpha|^2 = \\bar{n}',$$又是散粒噪声。写出来，$\\Delta n'^2 = |t|^4|\\alpha|^2 + |t|^2|r|^2|\\alpha|^2$：第二项是 (a) 问所缺少的，它是信号与进入开放端口的真空涨落的拍。由第 1(a) 题，分束器是幺正的，并保持$n_a + n_b$，所以它不改变真空$|0\\rangle|0\\rangle$，而把由它造出$|\\alpha\\rangle|0\\rangle$的位移变成两个输出的位移：$|\\alpha\\rangle|0\\rangle \\to |t\\alpha\\rangle|r\\alpha\\rangle$。透射的光是相干态$|t\\alpha\\rangle$，损失的光是相干态$|r\\alpha\\rangle$，二者不纠缠。"
+   }
+  },
+  {
+   "id": "hw3-1a",
+   "source_id": "hw3.1a",
+   "source_number": "Problem Set 3, Problem 1(a)",
+   "origin": "mit-8422",
+   "changes": "MIT 的干涉仪图用文字描述，其干涉条纹可见度$V$写作$\\mathcal{V}$（在卢金的记号中$V$是模体积），分束器由其对模的作用定义。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "bs-loss",
+   "prompt": "有耗干涉仪。真实的干涉仪通常会遭受光子在其臂中的损耗，或由不完美的分束器造成的损耗。这种损耗的效应可以用分束器来建模，我们在本题中加以探讨。我们的出发点是标准的马赫-曾德尔干涉仪，它使用两个 50/50 分束器，并有一个可变延迟为$\\phi$的移相器：模$b$和$a$进入第一个分束器，移相器位于一条臂中，第二个分束器把两条臂重新合到输出$b$和$a$上。在没有损耗且输入为$|10\\rangle$（记号$|ba\\rangle$）时，测得一个光子从模$b$输出的概率为$P_b = \\cos^2(\\phi/2)$。输出信号的干涉条纹可见度为$$\\mathcal{V} = \\frac{\\max(P_b) - \\min(P_b)}{\\max(P_b) + \\min(P_b)},$$其中最小值和最大值是对$\\phi$取的。证明在这一理想情形下$\\mathcal{V} = 1$。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "对$\\phi$而言，$P_b = \\cos^2(\\phi/2)$在$\\phi = 0$处达到$\\max(P_b) = 1$，在$\\phi = \\pi$处达到$\\min(P_b) = 0$，所以$\\mathcal{V} = (1 - 0)/(1 + 0) = 1$：没有损耗时，光子可以被完全导向任一输出，条纹具有完全的对比度。"
+   }
+  },
+  {
+   "id": "hw3-1b",
+   "source_id": "hw3.1b",
+   "source_number": "Problem Set 3, Problem 1(b)",
+   "origin": "mit-8422",
+   "changes": "MIT 的干涉仪图用文字描述，其干涉条纹可见度$V$写作$\\mathcal{V}$（在卢金的记号中$V$是模体积），分束器由其对模的作用定义。可见度的定义在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "bs-loss",
+   "prompt": "在带有移相器$\\phi$的马赫-曾德尔干涉仪中：输出信号的干涉条纹可见度为$$\\mathcal{V} = \\frac{\\max(P_b) - \\min(P_b)}{\\max(P_b) + \\min(P_b)},$$其中最小值和最大值是对$\\phi$取的。现在设干涉仪的一条臂有损耗，我们用分束器为这一损耗建模。三个模$a$、$b$、$c$自上而下排列：50/50 分束器$B$混合$a$和$b$，移相器$\\phi$位于臂$a$中，角度为$\\theta$的分束器把臂$b$耦合到模$c$，$B^\\dagger$在输出$a'$和$b'$处的探测器之前把$a$和$b$重新合起来。50/50 分束器$B$对其混合的上模和下模的作用为$B\\hat{a}B^\\dagger = (\\hat{a} + \\hat{b})/\\sqrt{2}$和$B\\hat{b}B^\\dagger = (-\\hat{a} + \\hat{b})/\\sqrt{2}$，如习题集 2 第 1(d) 题，而角度为$\\theta$的分束器以概率幅$\\cos\\theta$使光子留在它所作用的模中，并以概率幅$\\sin\\theta$把它移入另一个模。设输入态为$|\\phi_0\\rangle = |010\\rangle$（对这三个模使用记号$|cba\\rangle$）。两个外侧的分束器是马赫-曾德尔干涉仪通常的 50/50 分束器，而新的中间分束器的角度为$\\theta$。当$\\theta = 0$时，没有光子从$b$损失到$c$，当$\\theta = \\pi/2$时，$b$中的任何光子都被移入模$c$，这为完全损耗建模。给出中间态$|\\phi_1\\rangle$（在$B$之后）、$|\\phi_2\\rangle$（在移相器和有耗分束器之后）和$|\\phi_3\\rangle$（在$B^\\dagger$之后），并计算在输出的模$b$中找到光子的概率，作为$\\phi$和$\\theta$的函数。干涉条纹可见度作为$\\theta$的函数是什么？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "把各态写成$|cba\\rangle$。由$B\\hat{b}^\\dagger B^\\dagger = (-\\hat{a}^\\dagger + \\hat{b}^\\dagger)/\\sqrt{2}$，$$|\\phi_1\\rangle = \\frac{|010\\rangle - |001\\rangle}{\\sqrt{2}}.$$移相器把$a$中的光子乘以$e^{i\\phi}$，而有耗分束器把$b$中的光子送到$\\cos\\theta\\,|010\\rangle + \\sin\\theta\\,|100\\rangle$：$$|\\phi_2\\rangle = \\frac{\\cos\\theta\\,|010\\rangle + \\sin\\theta\\,|100\\rangle - e^{i\\phi}|001\\rangle}{\\sqrt{2}}.$$ $B^\\dagger$使$\\hat{a}^\\dagger \\to (\\hat{a}^\\dagger - \\hat{b}^\\dagger)/\\sqrt{2}$和$\\hat{b}^\\dagger \\to (\\hat{a}^\\dagger + \\hat{b}^\\dagger)/\\sqrt{2}$，所以$$|\\phi_3\\rangle = \\frac{\\cos\\theta + e^{i\\phi}}{2}|010\\rangle + \\frac{\\cos\\theta - e^{i\\phi}}{2}|001\\rangle + \\frac{\\sin\\theta}{\\sqrt{2}}|100\\rangle.$$光子在$b$中被找到，概率为$$P_b = \\frac{|\\cos\\theta + e^{i\\phi}|^2}{4} = \\frac{1 + \\cos^2\\theta + 2\\cos\\theta\\cos\\phi}{4},$$该式在$\\theta = 0$时是$\\cos^2(\\phi/2)$。对$\\phi$而言，它在$(1 \\pm \\cos\\theta)^2/4$之间摆动，所以$$\\mathcal{V} = \\frac{2\\cos\\theta}{1 + \\cos^2\\theta},$$无损耗时为 1，完全损耗时为 0，在那里只有臂$a$到达输出，而没有任何东西干涉。损耗使两条臂的概率幅不相等，为 1 和$\\cos\\theta$，对比度随它们的失配而下降。"
+   }
+  },
+  {
+   "id": "hw3-1c",
+   "source_id": "hw3.1c",
+   "source_number": "Problem Set 3, Problem 1(c)",
+   "origin": "mit-8422",
+   "changes": "MIT 的干涉仪图用文字描述，其干涉条纹可见度$V$写作$\\mathcal{V}$（在卢金的记号中$V$是模体积），分束器由其对模的作用定义。可见度的定义在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "bs-loss",
+   "prompt": "在带有移相器$\\phi$的马赫-曾德尔干涉仪中：输出信号的干涉条纹可见度为$$\\mathcal{V} = \\frac{\\max(P_b) - \\min(P_b)}{\\max(P_b) + \\min(P_b)},$$其中最小值和最大值是对$\\phi$取的。现在设干涉仪的两条臂都有损耗，用两个分束器建模。四个模$a$、$b$、$c$、$d$自上而下排列，一个光子从$b$进入，其余的处于真空：50/50 分束器$B$混合$b$和$c$，移相器$\\phi$位于臂$b$中，角度为$\\theta'$的分束器把臂$b$耦合到模$a$，角度为$\\theta$的分束器把臂$c$耦合到模$d$，$B^\\dagger$在输出$b'$和$c'$处的探测器之前把$b$和$c$重新合起来。50/50 分束器$B$对其混合的上模和下模的作用为$B\\hat{a}B^\\dagger = (\\hat{a} + \\hat{b})/\\sqrt{2}$和$B\\hat{b}B^\\dagger = (-\\hat{a} + \\hat{b})/\\sqrt{2}$，如习题集 2 第 1(d) 题，而角度为$\\theta$的分束器以概率幅$\\cos\\theta$使光子留在它所作用的模中，并以概率幅$\\sin\\theta$把它移入另一个模。上面的分束器角度为$\\theta'$，下面的为$\\theta$。给出中间态$|\\phi_1\\rangle$到$|\\phi_4\\rangle$（在$B$之后、在移相器之后、在两个有耗分束器之后、在$B^\\dagger$之后），并计算在输出的模$b$中找到光子的概率，作为$\\phi$和$\\Delta\\theta = \\theta - \\theta'$的函数。干涉条纹可见度作为$\\Delta\\theta$的函数是什么？假设你只计入在$b$或$c$中至少测得一个光子输出的情形（换言之，丢弃输出处没有测得光子的情形）。使用这一条件概率时，可见度如何变化？$\\Delta\\theta = 0$的情形称为平衡损耗马赫-曾德尔干涉仪，你的结果应当说明为什么平衡两条臂中的损耗是有益的。把情形限制在至少探测到一个光子，就实现了一种简单的量子检错码！",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "用光子所在的模标记每个态，$|1_x\\rangle$。这里$b$是$B$所混合的那一对模中的上模，所以$B\\hat{b}^\\dagger B^\\dagger = (\\hat{b}^\\dagger + \\hat{c}^\\dagger)/\\sqrt{2}$，且$$|\\phi_1\\rangle = \\frac{|1_b\\rangle + |1_c\\rangle}{\\sqrt{2}}, \\qquad |\\phi_2\\rangle = \\frac{e^{i\\phi}|1_b\\rangle + |1_c\\rangle}{\\sqrt{2}},$$ $$|\\phi_3\\rangle = \\frac{e^{i\\phi}\\left(\\cos\\theta'|1_b\\rangle + \\sin\\theta'|1_a\\rangle\\right) + \\cos\\theta|1_c\\rangle + \\sin\\theta|1_d\\rangle}{\\sqrt{2}}.$$ $B^\\dagger$使$\\hat{b}^\\dagger \\to (\\hat{b}^\\dagger - \\hat{c}^\\dagger)/\\sqrt{2}$和$\\hat{c}^\\dagger \\to (\\hat{b}^\\dagger + \\hat{c}^\\dagger)/\\sqrt{2}$：$$|\\phi_4\\rangle = \\frac{e^{i\\phi}\\cos\\theta' + \\cos\\theta}{2}|1_b\\rangle + \\frac{\\cos\\theta - e^{i\\phi}\\cos\\theta'}{2}|1_c\\rangle + \\frac{e^{i\\phi}\\sin\\theta'|1_a\\rangle + \\sin\\theta|1_d\\rangle}{\\sqrt{2}}.$$于是$$P_b = \\frac{\\cos^2\\theta + \\cos^2\\theta' + 2\\cos\\theta\\cos\\theta'\\cos\\phi}{4}, \\qquad \\mathcal{V} = \\frac{2\\cos\\theta\\cos\\theta'}{\\cos^2\\theta + \\cos^2\\theta'} = 1 - \\frac{(\\cos\\theta - \\cos\\theta')^2}{\\cos^2\\theta + \\cos^2\\theta'}.$$只要$\\Delta\\theta = 0$，可见度就为 1，无论共同的损耗多大，而且在接近平衡时它只按平方下降，$\\mathcal{V} \\approx 1 - \\frac{1}{2}\\tan^2\\theta\\,\\Delta\\theta^2$。光子以概率$P_b + P_c = (\\cos^2\\theta + \\cos^2\\theta')/2$到达$b$或$c$，所以在探测到的条件下$$P_{b|\\mathrm{det}} = \\frac{1}{2}\\left(1 + \\mathcal{V}\\cos\\phi\\right).$$可见度不变，因为把$P_b$除以一个常量不改变比值，但条纹现在围绕$1/2$摆动，在平衡损耗下它是$\\cos^2(\\phi/2)$，恰好是无损耗干涉仪的。光子丢失的那些运行就是完全没有响应的运行；舍弃它们就消除了损耗，这就是检错。"
+   }
+  },
+  {
+   "id": "hw3-1d",
+   "source_id": "hw3.1d",
+   "source_number": "Problem Set 3, Problem 1(d)",
+   "origin": "mit-8422",
+   "changes": "MIT 的干涉仪图用文字描述，其干涉条纹可见度$V$写作$\\mathcal{V}$（在卢金的记号中$V$是模体积），分束器由其对模的作用定义。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "bs-loss",
+   "prompt": "对于 (b) 和 (c) 问的有耗马赫-曾德尔干涉仪：在上述情形中，输入的是单光子。如果改为输入相干态，可见度有变化吗？如果没有，那么请描述一种情形，其中损耗的效应能区分使用单光子输入与使用相干态输入的干涉仪。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "没有。每个元件对模算符都是线性的，所以进入$b$的相干态$|\\beta\\rangle$离开时是相干态的乘积，其振幅是$\\beta$乘以 (b) 和 (c) 问的单光子概率幅：例如，(c) 问的输出$b$中是$|\\beta(e^{i\\phi}\\cos\\theta' + \\cos\\theta)/2\\rangle$。每个输出处的平均计数是$|\\beta|^2 P_b$，条纹相同，每个可见度也相同。损耗通过探测对一次运行所揭示的信息来区分这两种输入。对于一个光子，$b$或$c$处的一次响应证明光子没有丢失，所以以探测到为条件就完全消除了平衡损耗，如 (c) 问所示。对于相干态，丢失的光和透射的光是独立的相干态，在一条臂上为$|\\beta\\sin\\theta\\rangle$和$|\\beta\\cos\\theta\\rangle$（式 (9.80) 的衰减相干态），所以一次响应不带有损耗的任何消息，任何条件限制都无法消除它；损耗只是缩放平均计数。差异出现在必须有多个光子一起到达的场合：输入$N$个光子，其干涉由$N$重符合读出，则这些符合通过一条臂后只保留$\\cos^{2N}\\theta$的比例，而相干光束的计数只按$\\cos^2\\theta$下降。"
+   }
+  },
+  {
+   "id": "hw8-2a",
+   "source_id": "hw8.2a",
+   "source_number": "Problem Set 8, Problem 2(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的腔泄漏率$\\Gamma$记为$\\kappa$，即 9.3 节的腔损耗率（不是原子的$\\gamma$），腔频率$\\omega$记为$\\nu$，模算符带有帽子。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "cavity-master",
+   "prompt": "阻尼光学腔的主方程。法布里-珀罗腔可以建模为由一面高反射率镜和一面固定间距的完美镜构成。显然，存储在这个腔内的光子将逐渐从部分反射镜漏出，使腔内的态发生变化。这个过程由主方程描述，正如耦合到场的原子由光学布洛赫方程描述。在本题中，我们探讨对单模腔推导这样一个主方程的简单方法。设$\\hat{a}$和$\\hat{a}^\\dagger$描述腔内所关心的光学模，特征能量为$\\hbar\\nu$，由哈密顿量$H_0 = \\hbar\\nu\\hat{a}^\\dagger\\hat{a}$描述。设$|\\psi\\rangle$为腔的初态。假设光子从腔中漏出的速率正比于腔中的光子数和$\\kappa$，后者参数化漏镜的漏损程度。于是光子在$t$和$t + dt$之间的无穷小时间步内漏出的概率为$dp = \\kappa\\,dt\\langle\\psi|\\hat{a}^\\dagger\\hat{a}|\\psi\\rangle$。而它不漏出的概率为$1 - dp$。对这两种情形，我们对时间演化建模如下：若有光子漏出，腔态变为$|\\tilde{\\psi}_1\\rangle = \\hat{a}\\sqrt{\\kappa\\,dt}|\\psi\\rangle$；若没有光子漏出，态变为$|\\tilde{\\psi}_0\\rangle = e^{-iHt/\\hbar}|\\psi\\rangle$<sup class=\"fn\" data-note=\"c-hw8-dt\"></sup>，它是在“哈密顿量”$H = H_0 - i(\\hbar\\kappa/2)\\hat{a}^\\dagger\\hat{a}$下演化后的结果。注意$H$不是厄米的。它有一个虚项，所以是“有耗的”。用$H$使态在时间上向前演化，得到一个未归一化的态。两个未归一化的态$|\\tilde{\\psi}_0\\rangle$和$|\\tilde{\\psi}_1\\rangle$后面将成为密度矩阵的两个“分量”。计算归一化的态$|\\psi_0\\rangle$和$|\\psi_1\\rangle$。为$H$中的有耗项提供一些理由的说明（例如，为什么它正比于$\\hat{a}^\\dagger\\hat{a}$？）。在遇到$H$或$H^\\dagger$（它不等于$H$）的指数时，把它们展开到$dt$的一阶。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在步长$dt$内，$e^{-iH\\,dt/\\hbar} \\approx 1 - i\\nu\\,dt\\,\\hat{a}^\\dagger\\hat{a} - \\frac{\\kappa}{2}dt\\,\\hat{a}^\\dagger\\hat{a}$，所以$$\\langle\\tilde{\\psi}_0|\\tilde{\\psi}_0\\rangle = \\langle\\psi|e^{iH^\\dagger dt/\\hbar}e^{-iH\\,dt/\\hbar}|\\psi\\rangle \\approx 1 - \\kappa\\,dt\\langle\\hat{a}^\\dagger\\hat{a}\\rangle = 1 - dp:$$厄米部分抵消，只有反厄米部分带走范数。同样，$\\langle\\tilde{\\psi}_1|\\tilde{\\psi}_1\\rangle = \\kappa\\,dt\\langle\\hat{a}^\\dagger\\hat{a}\\rangle = dp$。归一化的态为$$|\\psi_0\\rangle = \\frac{e^{-iH\\,dt/\\hbar}|\\psi\\rangle}{\\sqrt{1 - dp}} \\approx \\left[1 - i\\nu\\,dt\\,\\hat{a}^\\dagger\\hat{a} - \\frac{\\kappa}{2}dt\\left(\\hat{a}^\\dagger\\hat{a} - \\langle\\hat{a}^\\dagger\\hat{a}\\rangle\\right)\\right]|\\psi\\rangle, \\qquad |\\psi_1\\rangle = \\frac{\\hat{a}|\\psi\\rangle}{\\sqrt{\\langle\\psi|\\hat{a}^\\dagger\\hat{a}|\\psi\\rangle}}.$$有耗项由自洽性确定：无跳跃分支必须恰好失去跳跃分支所得到的范数$dp$，而$dp = \\kappa\\,dt\\langle\\hat{a}^\\dagger\\hat{a}\\rangle$要求反厄米部分$-i(\\hbar\\kappa/2)\\hat{a}^\\dagger\\hat{a}$。它正比于$\\hat{a}^\\dagger\\hat{a}$，因为每个光子都以速率$\\kappa$独立地漏出，所以漏出的机会随光子数增长。没有看到光子离开本身就是信息：在无跳跃分支中，$|n\\rangle$的概率幅按$e^{-\\kappa n t/2}$下降，所以态向较少的光子移动，这就是项$-\\frac{\\kappa}{2}(\\hat{a}^\\dagger\\hat{a} - \\langle\\hat{a}^\\dagger\\hat{a}\\rangle)$。这是式 (9.115) 的有效哈密顿量$\\hat{H}_\\mathrm{eff}$的腔部分。"
+   }
+  },
+  {
+   "id": "hw8-2b",
+   "source_id": "hw8.2b",
+   "source_number": "Problem Set 8, Problem 2(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的腔泄漏率$\\Gamma$记为$\\kappa$，即 9.3 节的腔损耗率（不是原子的$\\gamma$），腔频率$\\omega$记为$\\nu$，模算符带有帽子；(a) 问的定义在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "cavity-master",
+   "prompt": "对于 (a) 问的漏腔，$H_0 = \\hbar\\nu\\hat{a}^\\dagger\\hat{a}$、$H = H_0 - i(\\hbar\\kappa/2)\\hat{a}^\\dagger\\hat{a}$、$dp = \\kappa\\,dt\\langle\\psi|\\hat{a}^\\dagger\\hat{a}|\\psi\\rangle$、$|\\tilde{\\psi}_0\\rangle = e^{-iHdt/\\hbar}|\\psi\\rangle$和$|\\tilde{\\psi}_1\\rangle = \\hat{a}\\sqrt{\\kappa\\,dt}|\\psi\\rangle$：在时刻$t$，设腔从纯量子态$\\rho(t) = |\\psi\\rangle\\langle\\psi|$开始。在时刻$t + dt$，漏腔系统的态为$$\\rho(t+dt) = (1 - dp)|\\psi_0\\rangle\\langle\\psi_0| + dp|\\psi_1\\rangle\\langle\\psi_1|.$$把这个密度矩阵重新写出，用 (a) 问中描述的未归一化的态来构造它。你最终的表达式中出现的左矢或右矢应当只有$|\\psi\\rangle$和$\\langle\\psi|$。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由于$(1 - dp)|\\psi_0\\rangle\\langle\\psi_0| = |\\tilde{\\psi}_0\\rangle\\langle\\tilde{\\psi}_0|$和$dp\\,|\\psi_1\\rangle\\langle\\psi_1| = |\\tilde{\\psi}_1\\rangle\\langle\\tilde{\\psi}_1|$，$$\\rho(t+dt) = |\\tilde{\\psi}_0\\rangle\\langle\\tilde{\\psi}_0| + |\\tilde{\\psi}_1\\rangle\\langle\\tilde{\\psi}_1| = e^{-iH\\,dt/\\hbar}|\\psi\\rangle\\langle\\psi|e^{iH^\\dagger dt/\\hbar} + \\kappa\\,dt\\,\\hat{a}|\\psi\\rangle\\langle\\psi|\\hat{a}^\\dagger.$$归一化抵消，所以$\\rho(t+dt)$对$\\rho(t) = |\\psi\\rangle\\langle\\psi|$是线性的，同样的表达式对这类态的任何混合都成立。"
+   }
+  },
+  {
+   "id": "hw8-2c",
+   "source_id": "hw8.2c",
+   "source_number": "Problem Set 8, Problem 2(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的腔泄漏率$\\Gamma$记为$\\kappa$，即 9.3 节的腔损耗率（不是原子的$\\gamma$），腔频率$\\omega$记为$\\nu$，模算符带有帽子；(a) 问的定义在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "cavity-master",
+   "prompt": "对于 (a) 和 (b) 问的漏腔，其中$H_0 = \\hbar\\nu\\hat{a}^\\dagger\\hat{a}$且有非厄米的$H = H_0 - i(\\hbar\\kappa/2)\\hat{a}^\\dagger\\hat{a}$：对小的$dt$计算$\\rho(t+dt) - \\rho(t)$，并写出粗粒化的微分方程$$\\frac{d}{dt}\\rho(t) \\approx \\frac{\\rho(t+dt) - \\rho(t)}{dt}.$$证明它具有适当的林德布拉德形式$$\\frac{d\\rho}{dt} = -\\frac{i}{\\hbar}[H_0, \\rho] - \\frac{1}{2}\\left(C^\\dagger C\\rho - 2C\\rho C^\\dagger + \\rho C^\\dagger C\\right),$$并指出在这种情形下$C$和$C^\\dagger$各是什么。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "到一阶，$e^{-iH\\,dt/\\hbar}\\rho\\,e^{iH^\\dagger dt/\\hbar} = \\rho - \\frac{i}{\\hbar}dt\\,(H\\rho - \\rho H^\\dagger)$，而对$H = H_0 - i(\\hbar\\kappa/2)\\hat{a}^\\dagger\\hat{a}$，$$H\\rho - \\rho H^\\dagger = [H_0, \\rho] - i\\frac{\\hbar\\kappa}{2}\\left(\\hat{a}^\\dagger\\hat{a}\\rho + \\rho\\hat{a}^\\dagger\\hat{a}\\right).$$加上 (b) 问的跳跃项，$$\\frac{d\\rho}{dt} = -\\frac{i}{\\hbar}[H_0, \\rho] - \\frac{\\kappa}{2}\\left(\\hat{a}^\\dagger\\hat{a}\\rho - 2\\hat{a}\\rho\\hat{a}^\\dagger + \\rho\\hat{a}^\\dagger\\hat{a}\\right),$$这就是林德布拉德形式，其中$C = \\sqrt{\\kappa}\\,\\hat{a}$和$C^\\dagger = \\sqrt{\\kappa}\\,\\hat{a}^\\dagger$，即 6.1 节的跳跃算符$\\hat{c}_k$，对应于一个光子离开腔。耗散项是零温度下的式 (9.102)，$n = 0$，以及式 (9.109) 的腔项。"
+   }
+  },
+  {
+   "id": "hw10-1f",
+   "source_id": "hw10.1f",
+   "source_number": "Problem Set 10, Problem 1(f)",
+   "origin": "mit-8422",
+   "changes": "这里只布置 (f) 问：(a)–(e) 问处理 2.1 节的半经典缀饰原子及其光力。经典场中的缀饰原子是习题集 7 第 3 题，已以卢金的记号布置在 2.1 节。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-basis",
+   "prompt": "缀饰原子。在习题集 7 第 3 题中，你已经利用经典外场考察过缀饰原子图像。你能解释这两种图像是如何联系的吗：(a) 用经典场导出的含时解 (b) 在课堂上用量子化电磁场导出的不含时解。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "对于量子化场，J-C 哈密顿量$\\hat{H} = \\hbar\\nu\\hat{a}^\\dagger\\hat{a} + \\hbar\\omega|2\\rangle\\langle 2| + \\hbar g(\\hat{a}^\\dagger\\hat{\\sigma}_{12} + \\hat{a}\\hat{\\sigma}_{21})$只耦合态对$|1\\rangle_a|n\\rangle$和$|2\\rangle_a|n-1\\rangle$，它们的能量$n\\hbar\\nu$和$\\hbar\\omega + (n-1)\\hbar\\nu$相差$\\hbar\\delta$，$\\delta = \\nu - \\omega$，矩阵元为$\\hbar g\\sqrt{n}$。每一对都是不含时的二能级问题；其本征态是第$n$梯级的缀饰态，分裂为$\\hbar\\sqrt{4g^2 n + \\delta^2}$（图 9.8a），而各梯级每隔$\\hbar\\nu$重复。经典场是$\\bar{n} = |\\alpha|^2 \\gg 1$的相干态：在它占据的光子数$\\bar{n} \\pm \\sqrt{\\bar{n}}$之上，$g\\sqrt{n}$只改变$1/2\\sqrt{\\bar{n}}$的一小部分，所以它触及的每一梯级都有相同的分裂，$g\\sqrt{\\bar{n}}$就是场振幅$\\mathcal{E} = \\bar{\\mathcal{E}}\\sqrt{\\bar{n}}$的经典拉比频率$\\Omega = \\mu\\mathcal{E}/\\hbar$。从其中心量起，一个梯级的$2\\times 2$哈密顿量是式 (2.23) 的转动参考系哈密顿量$\\tilde{H}$，其中$\\Omega \\to g\\sqrt{n}$：本征值$\\pm\\hbar\\sqrt{\\Omega^2 + \\delta^2/4}$相同，缀饰态相同，远离共振时的光致频移$\\hbar\\Omega^2/\\delta$也相同。经典图像的转动参考系$c_2 = \\tilde{c}_2 e^{-i\\nu t}$去掉了量子化图像记作多一个或少一个光子的能量$\\hbar\\nu$，所以经典缀饰态就是去掉光子标记的量子化缀饰态；实验室参考系中的含时解是相邻各梯级上的叠加，其相位$e^{-in\\nu t}$以$\\nu$拍频，给出振荡的场。量子化图像包含经典图像所不能的东西：在小$n$时起作用的$\\sqrt{n}$依赖关系（$n = 1$时的真空拉比分裂$2g$，9.2 节的坍缩与恢复），以及作为沿阶梯下降一步的自发发射，经典图像必须手工加上它。"
+   }
+  },
+  {
+   "id": "hw1-2a",
+   "source_id": "hw1.2a",
+   "source_number": "Problem Set 1, Problem 2(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：模算符带有帽子，MIT 的装置图用文字描述。MIT 的分束器$(\\hat{a} \\pm \\hat{b})/\\sqrt{2}$是实的，而 9.1 节中卢金的分束器在反射上带有因子$i$。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hbt",
+   "prompt": "汉伯里·布朗-特维斯实验与$g^{(2)}(\\tau)$。二阶相干函数$g^{(2)}(\\tau)$常在实验室中用汉伯里·布朗和特维斯在 1950 年代首先发展的实验来测量，用于研究来自遥远恒星的光。这个实验是把来自输入源的光与真空$|0\\rangle$在一个 50/50 分束器上混合，并用两个探测器和一个符合电路测量输出处的强度-强度关联函数：分束器的两个输出落在探测器$D_1$和$D_2$上，其信号汇入一个符合探测器。本题考察这个实验如何测量$g^{(2)}(\\tau)$，以及对不同的输入光态得到什么结果。设$\\hat{a}$、$\\hat{a}^\\dagger$以及$\\hat{b}$、$\\hat{b}^\\dagger$是输入分束器的两个光模的升降算符，分束器所作的幺正变换定义为$$\\hat{a}_1 = U\\hat{a}U^\\dagger = \\frac{\\hat{a} + \\hat{b}}{\\sqrt{2}}, \\qquad \\hat{b}_1 = U\\hat{b}U^\\dagger = \\frac{\\hat{a} - \\hat{b}}{\\sqrt{2}}.$$对于处于态$|\\psi\\rangle$的输入光，已知符合电路的输出是电压$$V_\\psi = V_0\\langle\\psi, 0|\\hat{a}_1^\\dagger\\hat{a}_1\\hat{b}_1^\\dagger\\hat{b}_1|\\psi, 0\\rangle,$$其中$V_0$是某个比例常量，$|\\psi, 0\\rangle$表示模“$a$”中为$|\\psi\\rangle$、模“$b$”中为$|0\\rangle$的态。换言之，电压是两个被探测光子信号之乘积的平均值。证明$V_\\psi$给出$g^{(2)}(\\tau)$的一种度量，$$g^{(2)}(\\tau) = \\frac{\\langle\\hat{a}^\\dagger\\hat{a}^\\dagger\\hat{a}\\hat{a}\\rangle}{\\langle\\hat{a}^\\dagger\\hat{a}\\rangle^2}$$至多相差一个加性偏移和归一化。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "模$b$处于真空，所以$\\hat{b}|\\psi, 0\\rangle = 0$且$\\langle\\psi, 0|\\hat{b}^\\dagger = 0$。在$\\hat{a}_1^\\dagger\\hat{a}_1\\hat{b}_1^\\dagger\\hat{b}_1 = \\frac{1}{4}(\\hat{a}^\\dagger + \\hat{b}^\\dagger)(\\hat{a} + \\hat{b})(\\hat{a}^\\dagger - \\hat{b}^\\dagger)(\\hat{a} - \\hat{b})$中，最后一个因子因此作用为$\\hat{a}$，第一个作用为$\\hat{a}^\\dagger$，留下$$V_\\psi = \\frac{V_0}{4}\\langle\\hat{a}^\\dagger\\left(\\hat{a}\\hat{a}^\\dagger - \\hat{a}\\hat{b}^\\dagger + \\hat{b}\\hat{a}^\\dagger - \\hat{b}\\hat{b}^\\dagger\\right)\\hat{a}\\rangle = \\frac{V_0}{4}\\left(\\langle\\hat{a}^\\dagger\\hat{a}\\hat{a}^\\dagger\\hat{a}\\rangle - \\langle\\hat{a}^\\dagger\\hat{a}\\rangle\\right) = \\frac{V_0}{4}\\langle\\hat{a}^\\dagger\\hat{a}^\\dagger\\hat{a}\\hat{a}\\rangle,$$因为带有孤立的$\\hat{b}^\\dagger$或$\\hat{b}$的项消失，$\\langle 0|\\hat{b}\\hat{b}^\\dagger|0\\rangle = 1$，且$\\hat{a}\\hat{a}^\\dagger - 1 = \\hat{a}^\\dagger\\hat{a}$。每个探测器单独看到$\\langle\\hat{a}_1^\\dagger\\hat{a}_1\\rangle = \\langle\\hat{b}_1^\\dagger\\hat{b}_1\\rangle = \\frac{1}{2}\\langle\\hat{a}^\\dagger\\hat{a}\\rangle$，所以除以两个平均信号的乘积，得到$$\\frac{V_\\psi}{\\langle\\hat{a}_1^\\dagger\\hat{a}_1\\rangle\\langle\\hat{b}_1^\\dagger\\hat{b}_1\\rangle} = V_0\\,g^{(2)}:$$符合电压测量的是$g^{(2)}$，至多相差一个归一化。进入开放端口的真空消除了项$\\langle\\hat{a}^\\dagger\\hat{a}\\rangle$，这是一个探测器的信号与其自身的乘积$\\langle(\\hat{a}^\\dagger\\hat{a})^2\\rangle$所会带有的偏移。在$t$和$t + \\tau$读取两个探测器，给出$g^{(2)}(\\tau)$的分子$\\langle\\hat{a}^\\dagger(t)\\hat{a}^\\dagger(t+\\tau)\\hat{a}(t+\\tau)\\hat{a}(t)\\rangle$；对于单模，这就是式 (9.134)。"
+   }
+  },
+  {
+   "id": "hw1-2b",
+   "source_id": "hw1.2b",
+   "source_number": "Problem Set 1, Problem 2(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：模算符带有帽子，MIT 的装置图用文字描述。MIT 的分束器$(\\hat{a} \\pm \\hat{b})/\\sqrt{2}$是实的，而 9.1 节中卢金的分束器在反射上带有因子$i$。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hbt",
+   "prompt": "在汉伯里·布朗-特维斯实验中：$g^{(2)}$的经典表达式为$$g^{(2)}_{cl}(\\tau) = \\frac{\\langle\\bar{I}(t)\\bar{I}(t+\\tau)\\rangle}{\\langle\\bar{I}\\rangle^2}.$$证明$g^{(2)}_{cl}(0) \\geq 1$。利用事实$\\langle(\\bar{I}(t) - \\langle\\bar{I}(t)\\rangle)^2\\rangle \\geq 0$会有帮助。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "对于平稳光，在每个时刻$\\langle\\bar{I}(t)\\rangle = \\langle\\bar{I}\\rangle$，所以$$0 \\leq \\langle(\\bar{I}(t) - \\langle\\bar{I}\\rangle)^2\\rangle = \\langle\\bar{I}(t)^2\\rangle - \\langle\\bar{I}\\rangle^2,$$且$g^{(2)}_{cl}(0) = \\langle\\bar{I}^2\\rangle/\\langle\\bar{I}\\rangle^2 \\geq 1$，仅当强度不涨落时取等号。任何经典场，无论多么嘈杂，都有$g^{(2)}(0) \\geq 1$：热值 2（群聚）是允许的，而测得低于 1 的值（反群聚，例如单光子的 0）则没有经典解释。"
+   }
+  },
+  {
+   "id": "hw1-2c",
+   "source_id": "hw1.2c",
+   "source_number": "Problem Set 1, Problem 2(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：模算符带有帽子，MIT 的装置图用文字描述。MIT 的分束器$(\\hat{a} \\pm \\hat{b})/\\sqrt{2}$是实的，而 9.1 节中卢金的分束器在反射上带有因子$i$。$g^{(2)}$的定义在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hbt",
+   "prompt": "取$g^{(2)}(\\tau) = \\langle\\hat{a}^\\dagger\\hat{a}^\\dagger\\hat{a}\\hat{a}\\rangle/\\langle\\hat{a}^\\dagger\\hat{a}\\rangle^2$，如在汉伯里·布朗-特维斯实验中所测量的：对下列输入光态计算$g^{(2)}(\\tau)$：$$|\\psi_1\\rangle = |\\alpha\\rangle = e^{-|\\alpha|^2/2}\\sum_k \\frac{\\alpha^k}{\\sqrt{k!}}|k\\rangle \\quad \\text{(相干态)}, \\qquad |\\psi_2\\rangle = |2\\rangle \\quad \\text{(光子数态 } n = 2\\text{)}.$$",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "对于$|\\alpha\\rangle$，$\\hat{a}|\\alpha\\rangle = \\alpha|\\alpha\\rangle$，所以$\\langle\\hat{a}^\\dagger\\hat{a}^\\dagger\\hat{a}\\hat{a}\\rangle = |\\alpha|^4$和$\\langle\\hat{a}^\\dagger\\hat{a}\\rangle = |\\alpha|^2$：$g^{(2)} = 1$，且对每个$\\tau$都成立，因为自由演化的单模有$\\hat{a}(t) = \\hat{a}e^{-i\\nu t}$，延迟不改变任何东西。对于$|2\\rangle$，$\\hat{a}\\hat{a}|2\\rangle = \\sqrt{2}|0\\rangle$，所以$\\langle\\hat{a}^\\dagger\\hat{a}^\\dagger\\hat{a}\\hat{a}\\rangle = 2$和$\\langle\\hat{a}^\\dagger\\hat{a}\\rangle = 2$：$g^{(2)} = 2/4 = 1/2$。这低于 (b) 问的经典界限，即光子反群聚。对于任何光子数态$|n\\rangle$，$g^{(2)} = n(n-1)/n^2 = 1 - 1/n$，对单光子态它为 0。"
+   }
+  },
+  {
+   "id": "hw1-2d",
+   "source_id": "hw1.2d",
+   "source_number": "Problem Set 1, Problem 2(d)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：模算符带有帽子，MIT 的装置图用文字描述。MIT 的分束器$(\\hat{a} \\pm \\hat{b})/\\sqrt{2}$是实的，而 9.1 节中卢金的分束器在反射上带有因子$i$。$g^{(2)}$的定义在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hbt",
+   "prompt": "取$g^{(2)}(\\tau) = \\langle\\hat{a}^\\dagger\\hat{a}^\\dagger\\hat{a}\\hat{a}\\rangle/\\langle\\hat{a}^\\dagger\\hat{a}\\rangle^2$，如在汉伯里·布朗-特维斯实验中所测量的：对下列输入光态计算$g^{(2)}(\\tau)$，作为$\\alpha$的函数：$$|\\psi_3\\rangle = \\frac{|\\alpha\\rangle + |-\\alpha\\rangle}{\\sqrt{2}}, \\qquad |\\psi_4\\rangle = \\frac{|\\alpha\\rangle - |-\\alpha\\rangle}{\\sqrt{2}}.$$这两个态中是否有哪个表现出非经典的二阶相干性？为什么（或为什么不）？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由于$\\langle\\alpha|-\\alpha\\rangle = e^{-2|\\alpha|^2}$，因子$1/\\sqrt{2}$只对大的$|\\alpha|$才使它们归一化；取$N_\\pm = 2(1 \\pm e^{-2|\\alpha|^2})$，这些态为$(|\\alpha\\rangle \\pm |-\\alpha\\rangle)/\\sqrt{N_\\pm}$。湮没算符使宇称翻转，$\\hat{a}(|\\alpha\\rangle \\pm |-\\alpha\\rangle) = \\alpha(|\\alpha\\rangle \\mp |-\\alpha\\rangle)$，而$\\hat{a}^2(|\\alpha\\rangle \\pm |-\\alpha\\rangle) = \\alpha^2(|\\alpha\\rangle \\pm |-\\alpha\\rangle)$。所以两者都有$\\langle\\hat{a}^\\dagger\\hat{a}^\\dagger\\hat{a}\\hat{a}\\rangle = |\\alpha|^4$，$\\langle\\hat{a}^\\dagger\\hat{a}\\rangle = |\\alpha|^2 N_\\mp/N_\\pm$，且$$g^{(2)}_3 = \\left(\\frac{N_+}{N_-}\\right)^2 = \\coth^2|\\alpha|^2, \\qquad g^{(2)}_4 = \\left(\\frac{N_-}{N_+}\\right)^2 = \\tanh^2|\\alpha|^2,$$对每个$\\tau$都成立。偶态$|\\psi_3\\rangle$有$g^{(2)} > 1$，即群聚，经典场也可以给出；奇态$|\\psi_4\\rangle$有$g^{(2)} < 1$，即反群聚，(b) 问禁止任何经典场如此：它表现出非经典的二阶相干性。当$|\\alpha|$增大时，两者都趋于相干值 1。当$\\alpha \\to 0$时，奇态变为单光子$|1\\rangle$，有$g^{(2)} \\to 0$，而偶态变为真空加上一小部分双光子成分，有$g^{(2)} \\to \\infty$。9.2 节的薛定谔猫$\\sim|i\\alpha\\rangle - |-i\\alpha\\rangle$是相位旋转后的奇态，具有相同的$g^{(2)} = \\tanh^2|\\alpha|^2$。"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "hw2-2a",
+   "concept": "beamsplitter-loss-model"
+  },
+  {
+   "exercise": "hw2-2a",
+   "concept": "poisson-photon-statistics"
+  },
+  {
+   "exercise": "hw2-2b",
+   "concept": "beamsplitter-loss-model"
+  },
+  {
+   "exercise": "hw2-2b",
+   "concept": "beamsplitter-transformation"
+  },
+  {
+   "exercise": "hw3-1a",
+   "concept": "beamsplitter-transformation"
+  },
+  {
+   "exercise": "hw3-1b",
+   "concept": "beamsplitter-loss-model"
+  },
+  {
+   "exercise": "hw3-1b",
+   "concept": "beamsplitter-transformation"
+  },
+  {
+   "exercise": "hw3-1c",
+   "concept": "beamsplitter-loss-model"
+  },
+  {
+   "exercise": "hw3-1c",
+   "concept": "beamsplitter-transformation"
+  },
+  {
+   "exercise": "hw3-1d",
+   "concept": "beamsplitter-loss-model"
+  },
+  {
+   "exercise": "hw3-1d",
+   "concept": "coherent-state"
+  },
+  {
+   "exercise": "hw8-2a",
+   "concept": "cavity-master-equation"
+  },
+  {
+   "exercise": "hw8-2a",
+   "concept": "no-jump-evolution"
+  },
+  {
+   "exercise": "hw8-2a",
+   "concept": "cavity-loss-rate"
+  },
+  {
+   "exercise": "hw8-2b",
+   "concept": "cavity-master-equation"
+  },
+  {
+   "exercise": "hw8-2b",
+   "concept": "quantum-jump"
+  },
+  {
+   "exercise": "hw8-2c",
+   "concept": "cavity-master-equation"
+  },
+  {
+   "exercise": "hw8-2c",
+   "concept": "lindblad-master-equation"
+  },
+  {
+   "exercise": "hw10-1f",
+   "concept": "jaynes-cummings-ladder"
+  },
+  {
+   "exercise": "hw10-1f",
+   "concept": "dressed-states"
+  },
+  {
+   "exercise": "hw1-2a",
+   "concept": "hanbury-brown-twiss"
+  },
+  {
+   "exercise": "hw1-2a",
+   "concept": "second-order-correlation"
+  },
+  {
+   "exercise": "hw1-2b",
+   "concept": "second-order-correlation"
+  },
+  {
+   "exercise": "hw1-2c",
+   "concept": "photon-bunching"
+  },
+  {
+   "exercise": "hw1-2c",
+   "concept": "second-order-correlation"
+  },
+  {
+   "exercise": "hw1-2d",
+   "concept": "photon-bunching"
+  },
+  {
+   "exercise": "hw1-2d",
+   "concept": "schrodinger-cat-state"
+  }
+ ],
+ "referents": [
+  {
+   "id": "cat-plus",
+   "label": "分量 |iα⟩",
+   "figures": [
+    "fig-cat"
+   ]
+  },
+  {
+   "id": "cat-minus",
+   "label": "分量 |−iα⟩",
+   "figures": [
+    "fig-cat"
+   ]
+  },
+  {
+   "id": "signal",
+   "label": "信号 â_in",
+   "figures": [
+    "fig-bs-loss"
+   ]
+  },
+  {
+   "id": "vacuum",
+   "label": "真空场 b̂_vac",
+   "figures": [
+    "fig-bs-loss"
+   ]
+  },
+  {
+   "id": "atom",
+   "label": "原子",
+   "figures": [
+    "fig-cqed-reservoirs",
+    "sim-jc-ladder",
+    "sim-vacuum-rabi"
+   ]
+  },
+  {
+   "id": "cavity",
+   "label": "腔模",
+   "figures": [
+    "fig-cqed-reservoirs",
+    "sim-jc-ladder",
+    "sim-vacuum-rabi"
+   ]
+  },
+  {
+   "id": "res-free",
+   "label": "原子衰变到其中的自由空间模",
+   "figures": [
+    "fig-cqed-reservoirs"
+   ]
+  },
+  {
+   "id": "res-leak",
+   "label": "腔泄漏到其中的模",
+   "figures": [
+    "fig-cqed-reservoirs"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "footnote-2",
+   "kind": "book",
+   "number": "2",
+   "html": "关于更多细节，腔输入/输出关系的推导最早由加德纳和科莱特给出，见 Phys. Rev. A <strong>31</strong>, 3761 (1985)。"
+  },
+  {
+   "id": "footnote-3",
+   "kind": "book",
+   "number": "3",
+   "html": "<p>更直接地，可以考察初态$|\\kalphacoh\\rangle|0\\rangle_r$，其中$|0\\rangle_r$表示处于真空态的热库。不难看出</p><div class=\"equation\" id=\"eq-9-105\">$$\\hat{a}(\\kt)|\\kalphacoh\\rangle|0\\rangle_r = e^{-\\kkappa \\kt/2}\\kalphacoh|\\kalphacoh\\rangle|0\\rangle_r, \\tag{9.105}$$</div><p>因而后来时刻的态对应于<span data-concept=\"coherent-state\">相干态</span>$|\\kalphacoh e^{-\\kkappa \\kt/2}\\rangle$。</p>"
+  },
+  {
+   "id": "c-lossless",
+   "kind": "correction",
+   "html": "书中写的是“完美镜子”。关系$r^2 + t^2 = 1$对无损耗的镜子成立，即不吸收任何光的镜子；图 9.6 中完全反射的镜子则有$r = 1$。"
+  },
+  {
+   "id": "c-eq-9-102",
+   "kind": "correction",
+   "html": "书中在式 (9.102) 的左边写的是密度算符$\\krhohat$，右边写的是$\\rho$；二者都是腔的密度算符$\\krhohat$。"
+  },
+  {
+   "id": "c-eq-9-108",
+   "kind": "correction",
+   "html": "书中写的原子算符$\\hat{\\sigma}_{\\alpha,\\beta}$没有指标$j$。求和遍及各原子，该算符是原子$j$的降算符$\\hat{\\sigma}^{(j)}_{12}$。"
+  },
+  {
+   "id": "c-vrs",
+   "kind": "correction",
+   "html": "书中把分裂称为$\\kg$。在共振时，最低一对的两个缀饰态位于$\\pm\\hbar\\kg$，所以真空拉比分裂为$2\\kg$，正如图 9.8a 的$\\sqrt{4\\kg^2 + \\kdelta^2}$在$\\kdelta = 0$时所给出的。"
+  },
+  {
+   "id": "c-collective",
+   "kind": "correction",
+   "html": "有$N$个原子时，耦合增大到$\\kg\\sqrt{N}$，分裂是耦合的两倍，即$2\\kg\\sqrt{N}$；书中写的是$\\kg\\sqrt{N}$。"
+  },
+  {
+   "id": "c-eq-9-113",
+   "kind": "correction",
+   "html": "取式 (9.110) 的$\\kH$，薛定谔方程给出$\\dot{\\kconeone} = -i\\kdelta\\kconeone - i\\kg\\kctwozero$和$\\dot{\\kctwozero} = -i\\kg\\kconeone$（$\\kg$为实数）。印出的式 (9.113) 和 (9.114) 是它们的复共轭：它们给出相同的布居，只是每个相位都反了过来。"
+  },
+  {
+   "id": "c-eq-9-116",
+   "kind": "correction",
+   "html": "在式 (9.110) 的符号约定下，无跳跃方程为$\\dot{\\kconeone} = -(\\frac{\\kkappa}{2} + i\\kdelta)\\kconeone - i\\kg\\kctwozero$和$\\dot{\\kctwozero} = -i\\kg\\kconeone - \\frac{\\kgamma}{2}\\kctwozero$；印出的式 (9.116) 和 (9.117) 是它们的复共轭，布居相同。"
+  },
+  {
+   "id": "c-circular",
+   "kind": "correction",
+   "html": "主量子数$n = 50$的圆态具有所允许的最大轨道角动量，$l = n - 1 = 49$：该态是 N=50, L=49。"
+  },
+  {
+   "id": "c-eq-9-132",
+   "kind": "correction",
+   "html": "在$\\kgamma = \\kdelta = 0$时，式 (9.118) 和 (9.119) 给出$\\kconeone = (2i\\kg/\\kkappa)\\kctwozero$和$\\kctwozero \\propto e^{-(2\\kg^2/\\kkappa)\\kt}$，所以自由空间的概率幅构成半宽度为$2\\kg^2/\\kkappa$的洛伦兹线型，$\\kck \\sim (2t_k\\kg/\\kkappa)/(2\\kg^2/\\kkappa + i\\kdeltak)$（至多相差$\\kdeltak$的符号约定），而书中的是$\\kg^2/\\kkappa$。"
+  },
+  {
+   "id": "c-envelope",
+   "kind": "correction",
+   "html": "场包络与概率幅$\\kctwozero$一样衰减，由$\\kgamma = \\kdelta = 0$时的式 (9.119)，为$\\sim e^{-(2\\kg^2/\\kkappa)\\kt}$，而书中写的是$e^{-(\\kg^2/\\kkappa)\\kt}$；发射强度随后以$4\\kg^2/\\kkappa$衰减，即式 (9.120) 的珀塞尔速率。"
+  },
+  {
+   "id": "c-hw8-dt",
+   "kind": "correction",
+   "html": "MIT 印出的是$e^{-iHt/\\hbar}$；在从$t$到$t + dt$的步长内，无跳跃演化为$e^{-iH\\,dt/\\hbar}$，与该题其余部分所用的一致。"
+  },
+  {
+   "id": "c-eq-9-133",
+   "kind": "correction",
+   "html": "式 (9.133) 和 (9.134) 印出的$\\kEenv(r_1, \\kt_1\\rangle$缺少右括号：应为$\\kEenv(r_1, \\kt_1)\\rangle$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "cavity-field-evolution",
+   "what": "腔场的经典演化",
+   "source": "现代原子与光学物理 II，9.3.1 有耗腔中单模场的动力学",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kDeltat = 2\\kLmed/c",
+       "src": "9.3.1"
+      },
+      {
+       "tex": "\\frac{\\kEcav(\\kt+\\kDeltat) - \\kEcav(\\kt)}{\\kDeltat} \\to \\frac{d}{d\\kt}\\kEcav(\\kt)",
+       "src": "(9.82)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kEcav(\\kt+\\kDeltat)} = \\mk{in}{t\\kEcav_\\mathrm{in}(\\kt)} + \\mk{r}{r\\kEcav(\\kt)}",
+      "src": "(9.81)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kEcav(\\kt+\\kDeltat) - \\kEcav(\\kt)} = \\mk{in}{t\\kEcav_\\mathrm{in}(\\kt)} - \\mk{r}{(1-r)\\kEcav(\\kt)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\kEcav(\\kt+\\kDeltat) - \\kEcav(\\kt)}{\\kDeltat}} = \\mk{in}{\\frac{t}{\\kDeltat}\\kEcav_\\mathrm{in}(\\kt)} - \\mk{r}{\\frac{1-r}{\\kDeltat}\\kEcav(\\kt)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kEcav(\\kt)} = \\mk{in}{\\frac{t}{\\kDeltat}\\kEcav_\\mathrm{in}(\\kt)} - \\mk{r}{\\frac{1-r}{\\kDeltat}\\kEcav(\\kt)}",
+       "uses": [
+        1
+       ],
+       "cap": "把这个差分方程转化为微分方程。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kEcav(\\kt)} = -\\mk{r}{\\frac{(1-r)c}{2\\kLmed}\\kEcav(\\kt)} + \\mk{in}{\\frac{tc}{2\\kLmed}\\kEcav_\\mathrm{in}(\\kt)}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(9.83)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "对于无损耗的镜子，$r^2 + t^2 = 1$。",
+       "src": "9.3.1"
+      },
+      {
+       "text": "镜子的透射很小，$t \\ll 1$，所以$r$接近$1$。",
+       "src": "9.3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{k}{\\kkappa} = \\mk{d}{\\frac{2c(1-r)}{2\\kLmed}}",
+      "uses": [
+       0
+      ],
+      "why": "损耗率的定义使得式 (9.83) 的腔场按$-\\frac{\\kappa}{2}E$衰减。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{k}{\\kkappa} = \\mk{d}{\\frac{2c(1-r)}{2\\kLmed}} \\approx \\mk{a}{\\frac{(1+r)(1-r)c}{2\\kLmed}}",
+       "uses": [
+        2
+       ],
+       "cap": "$r$接近$1$时，$2 \\approx 1 + r$。"
+      },
+      {
+       "tex": "\\mk{k}{\\kkappa} = \\mk{d}{\\frac{2c(1-r)}{2\\kLmed}} \\approx \\mk{a}{\\frac{(1-r^2)c}{2\\kLmed}}",
+       "uses": [],
+       "cap": "平方差，$(1+r)(1-r) = 1 - r^2$。"
+      },
+      {
+       "tex": "\\mk{k}{\\kkappa} = \\mk{d}{\\frac{2c(1-r)}{2\\kLmed}} \\approx \\mk{a}{\\frac{t^2 c}{2\\kLmed}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(9.84)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kEcav(\\kt)} = -\\mk{r}{\\frac{(1-r)c}{2\\kLmed}\\kEcav(\\kt)} + \\mk{in}{\\frac{tc}{2\\kLmed}\\kEcav_\\mathrm{in}(\\kt)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kEcav(\\kt)} = -\\mk{r}{\\frac{\\kkappa}{2}\\kEcav(\\kt)} + \\mk{in}{\\frac{tc}{2\\kLmed}\\kEcav_\\mathrm{in}(\\kt)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kEcav(\\kt)} = -\\mk{r}{\\frac{\\kkappa}{2}\\kEcav(\\kt)} + \\mk{in}{\\sqrt{\\frac{\\kkappa c}{2\\kLmed}}\\kEcav_\\mathrm{in}(\\kt)}",
+       "uses": [
+        1
+       ],
+       "cap": "由$\\kappa \\approx t^2c/2L$，$(tc/2L)^2 = \\kappa c/2L$。"
+      }
+     ],
+     "num": "(9.85)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "在傅里叶域中，$E(t) = \\int E(\\omega)e^{-i\\omega t}d\\omega$，所以$d/dt$变为$-i\\omega$。",
+       "src": "9.3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kEcav(\\kt)} = -\\mk{r}{\\frac{\\kkappa}{2}\\kEcav(\\kt)} + \\mk{in}{\\sqrt{\\frac{\\kkappa c}{2\\kLmed}}\\kEcav_\\mathrm{in}(\\kt)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{-i\\komega\\kEcav(\\komega)} = -\\mk{r}{\\frac{\\kkappa}{2}\\kEcav(\\komega)} + \\mk{in}{\\sqrt{\\frac{\\kkappa c}{2\\kLmed}}\\kEcav_\\mathrm{in}(\\komega)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{(\\kkappa/2 - i\\komega)\\kEcav(\\komega)} = \\mk{in}{\\sqrt{\\frac{\\kkappa c}{2\\kLmed}}\\kEcav_\\mathrm{in}(\\komega)}",
+       "uses": [],
+       "map": {
+        "r": "L"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\kEcav(\\komega)} = \\mk{in}{\\frac{\\sqrt{\\kkappa c/2\\kLmed}}{\\kkappa/2 - i\\komega}\\kEcav_\\mathrm{in}(\\komega)}",
+       "uses": []
+      }
+     ],
+     "num": "(9.86)"
+    }
+   ]
+  },
+  {
+   "id": "damped-coherent-amplitude",
+   "what": "腔场振幅的衰减",
+   "source": "现代原子与光学物理 II，9.3.2 腔模的量子力学处理",
+   "nodes": [
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{a}} = \\mk{R}{\\frac{-\\kkappa}{2}\\hat{a}} + \\mk{F}{\\kFnoise}",
+      "src": "(9.89)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\left(e^{\\kkappa\\kt/2}\\hat{a}\\right)} = \\mk{F}{e^{\\kkappa\\kt/2}\\kFnoise(\\kt)}",
+       "uses": [],
+       "cap": "乘以$e^{\\kappa t/2}$使衰减项并入导数：$\\frac{d}{dt}(e^{\\kappa t/2}\\hat a) = e^{\\kappa t/2}(\\dot{\\hat a} + \\frac{\\kappa}{2}\\hat a)$。",
+       "map": {
+        "R": "L"
+       }
+      },
+      {
+       "tex": "\\mk{L}{e^{\\kkappa\\kt/2}\\hat{a}(\\kt) - \\hat{a}(0)} = \\mk{F}{\\int_0^{\\kt}\\kFnoise(\\kt')e^{\\kkappa\\kt'/2}d\\kt'}",
+       "uses": [],
+       "cap": "从$0$到$t$积分。"
+      },
+      {
+       "tex": "\\mk{L}{\\hat{a}(\\kt)} = \\mk{a0}{e^{-\\kkappa \\kt/2}\\hat{a}(0)} + \\mk{F}{\\int_0^{\\kt} \\kFnoise(\\kt')e^{-\\kkappa(\\kt-\\kt')/2}d\\kt'}",
+       "uses": []
+      }
+     ],
+     "num": "(9.103)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "辐射热浴最初处于真空态。"
+      },
+      {
+       "tex": "\\kFnoise = -\\sum_k t_k\\hat{a}_k(0)e^{i(\\knu-\\knuk)\\kt}",
+       "src": "(9.97)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\hat{a}(\\kt)} = \\mk{a0}{e^{-\\kkappa \\kt/2}\\hat{a}(0)} + \\mk{F}{\\int_0^{\\kt} \\kFnoise(\\kt')e^{-\\kkappa(\\kt-\\kt')/2}d\\kt'}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\hat{a}(\\kt)\\rangle} = \\mk{a0}{e^{-\\kkappa \\kt/2}\\langle\\hat{a}(0)\\rangle} + \\mk{F}{\\int_0^{\\kt} \\langle\\kFnoise(\\kt')\\rangle e^{-\\kkappa(\\kt-\\kt')/2}d\\kt'}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\hat{a}(\\kt)\\rangle} = \\mk{a0}{e^{-\\kkappa \\kt/2}\\langle\\hat{a}(0)\\rangle}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "$\\hat{\\mathcal F}$中的每个$\\hat a_k(0)$都湮没真空，所以$\\langle\\hat{\\mathcal F}\\rangle = 0$。"
+      }
+     ],
+     "num": "(9.104)"
+    }
+   ]
+  },
+  {
+   "id": "damped-quadrature-variance",
+   "what": "衰变腔场的正交分量方差",
+   "source": "现代原子与光学物理 II，9.3.2 腔模的量子力学处理",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\hat{a}(\\kt) = e^{-\\kkappa \\kt/2}\\hat{a}(0) + \\int_0^{\\kt} \\kFnoise(\\kt')e^{-\\kkappa(\\kt-\\kt')/2}d\\kt'",
+       "src": "(9.103)"
+      },
+      {
+       "tex": "\\kxquad = \\frac{1}{\\sqrt{2}}\\left(\\hat{a} + \\hat{a}^\\dagger\\right)",
+       "src": "(9.13)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{\\kxquad(\\kt)} = \\mk{R}{\\frac{1}{\\sqrt{2}}\\left(\\hat{a}(\\kt) + \\hat{a}^\\dagger(\\kt)\\right)}",
+      "uses": [1]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{\\kxquad(\\kt)} = \\mk{R}{\\frac{1}{\\sqrt{2}}\\left(\\hat{a}(0) + \\hat{a}^\\dagger(0)\\right)e^{-\\kkappa \\kt/2} + \\int_0^{\\kt}\\left(\\frac{\\kFnoise(\\kt') + \\kFnoise^\\dagger(\\kt')}{\\sqrt{2}}\\right)e^{-\\kkappa(\\kt-\\kt')/2}d\\kt'}",
+       "uses": [0],
+       "cap": "式 (9.103) 及其伴随。"
+      },
+      {
+       "tex": "\\mk{x}{\\kxquad(\\kt)} = \\mk{x0}{\\kxquad(0)e^{-\\kkappa \\kt/2}} + \\mk{n}{\\int_0^{\\kt}\\left(\\frac{\\kFnoise(\\kt') + \\kFnoise^\\dagger(\\kt')}{\\sqrt{2}}\\right)e^{-\\kkappa(\\kt-\\kt')/2}d\\kt'}",
+       "uses": [1],
+       "map": {
+        "R": [
+         "x0",
+         "n"
+        ]
+       }
+      }
+     ],
+     "num": "(9.106)",
+     "note": "书中印出的式 (9.106) 的积分没有写积分变量；它是$\\int_0^t(\\ldots)\\,e^{-\\kappa(t-t')/2}\\,dt'$，与式 (9.103) 中一样。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\langle\\kFnoise(\\kt)\\kFnoise^\\dagger(\\kt')\\rangle = (n+1)\\kkappa\\delta(\\kt-\\kt')",
+       "src": "(9.98)"
+      },
+      {
+       "tex": "\\langle\\kFnoise^\\dagger(\\kt)\\kFnoise(\\kt')\\rangle = n\\kkappa\\delta(\\kt-\\kt')",
+       "src": "(9.99)"
+      },
+      {
+       "text": "辐射热浴最初处于真空态，$n = 0$。"
+      },
+      {
+       "text": "式 (9.97) 的噪声由$t = 0$时的热库算符构成，所以它与腔模不关联，且$\\langle\\hat{\\mathcal F}\\rangle = 0$。",
+       "src": "(9.97)"
+      },
+      {
+       "text": "在真空中$\\langle\\hat{\\mathcal F}\\hat{\\mathcal F}\\rangle = \\langle\\hat{\\mathcal F}^\\dagger\\hat{\\mathcal F}^\\dagger\\rangle = 0$：因为$\\hat a_k(0)$在右边湮没真空，$\\hat a_k^\\dagger(0)$在左边。",
+       "src": "(9.97)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{v}{\\langle\\delta\\kxquad^2(\\kt)\\rangle} = \\mk{R}{\\langle\\kxquad(\\kt)^2\\rangle - \\langle\\kxquad(\\kt)\\rangle^2}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{v}{\\langle\\delta\\kxquad^2(\\kt)\\rangle} = \\mk{a}{\\langle\\delta\\kxquad^2(0)\\rangle e^{-\\kkappa \\kt}} + \\mk{n}{\\frac{1}{2}\\int_0^{\\kt}\\int_0^{\\kt}\\langle(\\kFnoise(\\kt') + \\kFnoise^\\dagger(\\kt'))(\\kFnoise(\\kt'') + \\kFnoise^\\dagger(\\kt''))\\rangle e^{-\\kkappa(\\kt-\\kt')/2}e^{-\\kkappa(\\kt-\\kt'')/2}d\\kt'd\\kt''}",
+       "uses": [0, 4],
+       "cap": "对式 (9.106) 取平方：$\\hat x(0)$与噪声之间的交叉项平均为零。",
+       "map": {
+        "R": [
+         "a",
+         "n"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{v}{\\langle\\delta\\kxquad^2(\\kt)\\rangle} = \\mk{a}{\\langle\\delta\\kxquad^2(0)\\rangle e^{-\\kkappa \\kt}} + \\mk{n}{\\frac{1}{2}\\int_0^{\\kt}\\int_0^{\\kt}\\langle\\kFnoise(\\kt')\\kFnoise^\\dagger(\\kt'')\\rangle e^{-\\kkappa(\\kt-\\kt')/2}e^{-\\kkappa(\\kt-\\kt'')/2}d\\kt'd\\kt''}",
+       "uses": [2, 3, 5],
+       "cap": "在真空中只有$\\hat{\\mathcal F}\\hat{\\mathcal F}^\\dagger$这一排序保留下来。"
+      },
+      {
+       "tex": "\\mk{v}{\\langle\\delta\\kxquad^2(\\kt)\\rangle} = \\mk{a}{\\langle\\delta\\kxquad^2(0)\\rangle e^{-\\kkappa \\kt}} + \\mk{n}{\\frac{\\kkappa}{2}\\int_0^{\\kt}\\int_0^{\\kt}\\delta(\\kt'-\\kt'')e^{-\\kkappa(\\kt-\\kt')/2}e^{-\\kkappa(\\kt-\\kt'')/2}d\\kt'd\\kt''}",
+       "uses": [1, 3]
+      },
+      {
+       "tex": "\\mk{v}{\\langle\\delta\\kxquad^2(\\kt)\\rangle} = \\mk{a}{\\langle\\delta\\kxquad^2(0)\\rangle e^{-\\kkappa \\kt}} + \\mk{n}{\\frac{\\kkappa}{2}\\int_0^{\\kt}e^{-\\kkappa(\\kt-\\kt')}d\\kt'}",
+       "uses": []
+      },
+      {
+       "tex": "\\Rightarrow \\mk{v}{\\langle\\delta\\kxquad^2(\\kt)\\rangle} = \\mk{a}{\\langle\\delta\\kxquad^2(0)\\rangle e^{-\\kkappa \\kt}} + \\mk{n}{\\frac{1}{2}\\left(1 - e^{-\\kkappa \\kt}\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(9.107)"
+    }
+   ]
+  },
+  {
+   "id": "purcell-elimination",
+   "what": "与过阻尼腔耦合的原子",
+   "source": "现代原子与光学物理 II，9.3.3 腔量子电动力学",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "腔衰变压倒耦合，$g < \\kappa$：场模是过阻尼的，绝热消除令$\\dot c_{1,1} \\approx 0$。",
+       "src": "9.3.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kconeone}} = -\\mk{a}{(\\frac{\\kkappa}{2} - i\\kdelta)\\kconeone} + \\mk{b}{i\\kg\\kctwozero}",
+      "src": "(9.116)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{0} \\approx -\\mk{a}{(\\frac{\\kkappa}{2} - i\\kdelta)\\kconeone} + \\mk{b}{i\\kg\\kctwozero}",
+       "uses": [0]
+      },
+      {
+       "tex": "\\mk{a}{(\\frac{\\kkappa}{2} - i\\kdelta)\\kconeone} \\approx \\mk{b}{i\\kg\\kctwozero}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{a}{\\kconeone} = \\mk{b}{\\frac{i\\kg}{\\kkappa/2 - i\\kdelta}\\kctwozero}",
+       "uses": []
+      }
+     ],
+     "num": "(9.118)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kctwozero}} = \\mk{g}{i\\kg\\kconeone} - \\mk{y}{\\frac{\\kgamma}{2}\\kctwozero}",
+      "src": "(9.117)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kctwozero}} = \\mk{g}{i\\kg\\frac{i\\kg}{\\kkappa/2 - i\\kdelta}\\kctwozero} - \\mk{y}{\\frac{\\kgamma}{2}\\kctwozero}",
+       "uses": [0]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kctwozero}} = -\\mk{g}{\\frac{\\kg^2}{\\kkappa/2 - i\\kdelta}\\kctwozero} - \\mk{y}{\\frac{\\kgamma}{2}\\kctwozero}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kctwozero}} = -\\mk{g}{\\frac{\\kg^2(\\kkappa/2 + i\\kdelta)}{\\kkappa^2/4 + \\kdelta^2}\\kctwozero} - \\mk{y}{\\frac{\\kgamma}{2}\\kctwozero}",
+       "uses": [],
+       "cap": "上下同乘$\\kappa/2 + i\\delta$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kctwozero}} = -\\mk{d}{\\left(\\frac{\\kgamma}{2} + \\frac{\\kkappa}{2}\\frac{\\kg^2}{\\kkappa^2/4 + \\kdelta^2}\\right)\\kctwozero} - \\mk{s}{i\\frac{\\kg^2\\kdelta}{\\kkappa^2/4 + \\kdelta^2}\\kctwozero}",
+       "uses": [],
+       "map": {
+        "g": [
+         "d",
+         "s"
+        ],
+        "y": "d"
+       }
+      }
+     ],
+     "num": "(9.119)",
+     "note": "由印出的式 (9.116)–(9.118)，移位项为$-ig^2\\delta/(\\kappa^2/4 + \\delta^2)$，而书中印出的是$+i$。这个$+i$是式 (9.110) 的符号约定下的符号，在该约定下，式 (9.116) 和 (9.117) 是印出式子的复共轭，绝热消除给出$c_{1,1} = -igc_{2,0}/(\\kappa/2 + i\\delta)$；衰变项在两种情形下相同。"
+    }
+   ]
+  },
+  {
+   "id": "purcell-rate",
+   "what": "珀塞尔增强的衰变率",
+   "source": "现代原子与光学物理 II，9.3.3 腔量子电动力学",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dot{\\kctwozero} = -\\left(\\frac{\\kgamma}{2} + \\frac{\\kkappa}{2}\\frac{\\kg^2}{\\kkappa^2/4 + \\kdelta^2}\\right)\\kctwozero - i\\frac{\\kg^2\\kdelta}{\\kkappa^2/4 + \\kdelta^2}\\kctwozero",
+       "src": "(9.119)"
+      },
+      {
+       "text": "$|2\\rangle_a|0\\rangle$的布居是$|c_{2,0}|^2$，所以它的衰变率是概率幅$c_{2,0}$的两倍。",
+       "src": "2.1"
+      },
+      {
+       "text": "在零失谐时，$\\delta = 0$。"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kgammaeff^\\mathrm{open}} = \\mk{R}{2\\left(\\frac{\\kgamma}{2} + \\frac{\\kkappa}{2}\\frac{\\kg^2}{\\kkappa^2/4 + \\kdelta^2}\\right)}",
+      "uses": [0, 1],
+      "why": "布居的衰变率是式 (9.119) 第一项中$c_{2,0}$的系数的两倍。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kgammaeff^\\mathrm{open}} = \\mk{R}{2\\left(\\frac{\\kgamma}{2} + \\frac{\\kkappa}{2}\\frac{\\kg^2}{\\kkappa^2/4}\\right)}",
+       "uses": [2]
+      },
+      {
+       "tex": "\\mk{L}{\\kgammaeff^\\mathrm{open}} = \\mk{R}{\\kgamma + 4\\frac{\\kg^2}{\\kkappa}}",
+       "uses": []
+      }
+     ],
+     "num": "(9.120)"
+    }
+   ]
+  },
+  {
+   "id": "strong-coupling-figure-of-merit",
+   "what": "强耦合的优值",
+   "source": "现代原子与光学物理 II，9.3.3 腔量子电动力学",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kg = \\kmu\\sqrt{\\frac{\\knu}{\\epsilon_0\\hbar \\kV}}",
+       "src": "(9.121)"
+      },
+      {
+       "tex": "\\frac{1}{\\kkappa} = \\frac{\\kLmed}{\\pi c}\\cdot \\kFfin",
+       "src": "(9.123)"
+      },
+      {
+       "tex": "\\kgamma = \\frac{\\komega^3|\\kmu|^2}{3\\pi\\epsilon_0\\hbar c^3}",
+       "src": "(2.89)"
+      },
+      {
+       "text": "腔模与原子近共振，$\\nu \\approx \\omega = 2\\pi c/\\lambda$。",
+       "src": "9.3.3"
+      },
+      {
+       "text": "直径为$d$的模在长度为$L$的腔中的体积为$V \\sim Ld^2$。",
+       "src": "9.3.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} = \\mk{g}{\\kg^2}\\cdot\\mk{k}{\\frac{1}{\\kkappa}}\\cdot\\mk{y}{\\frac{1}{\\kgamma}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} = \\mk{g}{\\frac{\\kmu^2\\knu}{\\epsilon_0\\hbar\\kV}}\\cdot\\mk{k}{\\frac{1}{\\kkappa}}\\cdot\\mk{y}{\\frac{1}{\\kgamma}}",
+       "uses": [0]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} = \\mk{g}{\\frac{\\kmu^2\\knu}{\\epsilon_0\\hbar\\kV}}\\cdot\\mk{k}{\\frac{\\kLmed}{\\pi c}\\kFfin}\\cdot\\mk{y}{\\frac{1}{\\kgamma}}",
+       "uses": [1]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} = \\mk{g}{\\frac{\\kmu^2\\knu}{\\epsilon_0\\hbar\\kV}}\\cdot\\mk{k}{\\frac{\\kLmed}{\\pi c}\\kFfin}\\cdot\\mk{y}{\\frac{3\\pi\\epsilon_0\\hbar c^3}{\\komega^3\\kmu^2}}",
+       "uses": [2]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} \\approx \\mk{R}{\\frac{3c^2\\kLmed}{\\komega^2\\kV}\\kFfin}",
+       "uses": [3],
+       "cap": "偶极矩消去，$\\epsilon_0\\hbar$和$\\pi$也消去；由$\\nu \\approx \\omega$，$\\nu/\\omega^3 \\approx 1/\\omega^2$。",
+       "map": {
+        "g": "R",
+        "k": "R",
+        "y": "R"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} \\sim \\mk{R}{\\frac{\\kLmed\\klambda^2}{\\kV}\\cdot \\kFfin}",
+       "uses": [3],
+       "cap": "由$c/\\omega = \\lambda/2\\pi$，$3c^2/\\omega^2 = 3\\lambda^2/4\\pi^2$，量级为$\\lambda^2$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} \\sim \\mk{R}{\\frac{\\kLmed\\klambda^2}{\\kV}\\cdot \\kFfin} = \\mk{d}{\\frac{\\klambda^2}{d^2}\\cdot \\kFfin}",
+       "uses": [4]
+      }
+     ],
+     "num": "(9.125)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "长度为$L$的腔的衍射极限给出$d^2 \\sim \\lambda L$。",
+       "src": "9.3.3"
+      },
+      {
+       "tex": "\\kkappa \\approx \\frac{t^2 c}{2\\kLmed}",
+       "src": "(9.84)"
+      },
+      {
+       "tex": "\\frac{1}{\\kkappa} = \\frac{\\kLmed}{\\pi c}\\cdot \\kFfin",
+       "src": "(9.123)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} \\sim \\mk{R}{\\frac{\\kLmed\\klambda^2}{\\kV}\\cdot \\kFfin} = \\mk{d}{\\frac{\\klambda^2}{d^2}\\cdot \\kFfin}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} \\sim \\mk{d}{\\frac{\\klambda^2}{\\klambda\\kLmed}\\cdot \\kFfin}",
+       "uses": [1]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} \\sim \\mk{d}{\\frac{\\klambda}{\\kLmed}\\cdot \\kFfin}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} \\sim \\mk{d}{\\frac{\\klambda}{\\kLmed}\\cdot\\frac{2\\pi}{t^2}}",
+       "uses": [2, 3],
+       "cap": "式 (9.84) 和 (9.123) 给出$F = \\pi c/\\kappa L \\approx 2\\pi/t^2$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\kg^2}{\\kkappa\\kgamma}} \\sim \\mk{d}{\\frac{\\klambda}{\\kLmed}\\frac{1}{t^2}}",
+       "uses": []
+      }
+     ],
+     "num": "(9.126)"
+    }
+   ]
+  },
+  {
+   "id": "suppressed-decay",
+   "what": "闭腔中被抑制的衰变",
+   "source": "现代原子与光学物理 II，9.3.3 腔量子电动力学",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dot{\\kctwozero} = -\\left(\\frac{\\kgamma}{2} + \\frac{\\kkappa}{2}\\frac{\\kg^2}{\\kkappa^2/4 + \\kdelta^2}\\right)\\kctwozero - i\\frac{\\kg^2\\kdelta}{\\kkappa^2/4 + \\kdelta^2}\\kctwozero",
+       "src": "(9.119)"
+      },
+      {
+       "text": "$|2\\rangle_a|0\\rangle$的布居是$|c_{2,0}|^2$，所以它的衰变率是概率幅$c_{2,0}$的两倍。",
+       "src": "2.1"
+      },
+      {
+       "text": "约束在闭腔中的原子不能自发发射到不受约束的模中，所以$\\gamma = 0$。",
+       "src": "9.3.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kgammaeff^\\mathrm{closed}} = \\mk{R}{2\\left(\\frac{\\kgamma}{2} + \\frac{\\kkappa}{2}\\frac{\\kg^2}{\\kkappa^2/4 + \\kdelta^2}\\right)}",
+      "uses": [0, 1],
+      "why": "布居的衰变率是式 (9.119) 第一项中$c_{2,0}$的系数的两倍。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kgammaeff^\\mathrm{closed}} = \\mk{R}{2\\cdot\\frac{\\kkappa}{2}\\frac{\\kg^2}{\\kkappa^2/4 + \\kdelta^2}}",
+       "uses": [2]
+      },
+      {
+       "tex": "\\mk{L}{\\kgammaeff^\\mathrm{closed}} = \\mk{R}{\\kkappa\\frac{\\kg^2}{\\kkappa^2/4 + \\kdelta^2}}",
+       "uses": []
+      }
+     ],
+     "num": "(9.128)",
+     "note": "书中印出$\\gamma_\\mathrm{eff}^\\mathrm{closed} = \\frac{\\kappa}{2}\\frac{g^2}{\\kappa^2/4 + \\delta^2}$，这是概率幅$c_{2,0}$的衰变率。布居以两倍的速率衰变；在$\\delta = 0$时其速率是式 (9.120) 在$\\gamma = 0$时的$4g^2/\\kappa$。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "腔远失谐，处于最大失谐$\\delta = \\omega/2$，且$\\delta \\gg \\kappa$。",
+       "src": "9.3.3"
+      },
+      {
+       "tex": "\\kg = \\kmu\\sqrt{\\frac{\\knu}{\\epsilon_0\\hbar \\kV}}",
+       "src": "(9.121)"
+      },
+      {
+       "tex": "\\kkappa = \\frac{\\knu}{\\kQfac}",
+       "src": "(9.122)"
+      },
+      {
+       "tex": "\\kgamma = \\frac{\\komega^3|\\kmu|^2}{3\\pi\\epsilon_0\\hbar c^3}",
+       "src": "(2.89)"
+      },
+      {
+       "text": "腔模与原子近共振，$\\nu \\approx \\omega = 2\\pi c/\\lambda$。",
+       "src": "9.3.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kgammaeff^\\mathrm{closed}} = \\mk{R}{\\kkappa\\frac{\\kg^2}{\\kkappa^2/4 + \\kdelta^2}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kgammaeff^\\mathrm{closed}} \\sim \\mk{R}{\\kkappa\\frac{\\kg^2}{\\kdelta^2}}",
+       "uses": [1]
+      },
+      {
+       "tex": "\\mk{L}{\\kgammaeff^\\mathrm{closed}} \\sim \\mk{R}{\\frac{\\kg^2}{\\kkappa}\\frac{\\kkappa^2}{\\komega^2}}",
+       "uses": [1],
+       "cap": "取$\\delta = \\omega/2$，$\\kappa g^2/\\delta^2 = 4\\kappa g^2/\\omega^2$，量级为$(g^2/\\kappa)(\\kappa^2/\\omega^2)$。"
+      },
+      {
+       "tex": "\\mk{L}{\\kgammaeff^\\mathrm{closed}} \\sim \\mk{R}{\\frac{\\kg^2}{\\kkappa}\\frac{\\kkappa^2}{\\komega^2}} \\sim \\mk{b}{\\frac{\\kmu^2}{\\epsilon_0\\hbar\\kV\\kQfac}}",
+       "uses": [2, 3, 5],
+       "cap": "由式 (9.121) 和 (9.122)，$g^2\\kappa/\\omega^2 = \\mu^2\\nu^2/\\epsilon_0\\hbar VQ\\omega^2$，且$\\nu \\approx \\omega$。"
+      },
+      {
+       "tex": "\\mk{L}{\\kgammaeff^\\mathrm{closed}} \\sim \\mk{R}{\\frac{\\kg^2}{\\kkappa}\\frac{\\kkappa^2}{\\komega^2}} \\sim \\mk{b}{\\frac{\\klambda^3}{\\kV}\\frac{\\kgamma}{\\kQfac}}",
+       "uses": [4, 5],
+       "cap": "由式 (2.89)，$\\mu^2/\\epsilon_0\\hbar = 3\\pi\\gamma c^3/\\omega^3 = 3\\gamma\\lambda^3/8\\pi^2$，量级为$\\gamma\\lambda^3$。"
+      }
+     ],
+     "num": "(9.129)"
+    }
+   ]
+  }
+ ]
+}

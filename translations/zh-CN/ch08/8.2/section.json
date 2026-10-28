@@ -1,0 +1,963 @@
+{
+ "id": "8.2",
+ "chapter": "8",
+ "title": "半经典描述",
+ "short": "半经典描述",
+ "lead": "把原子当作经典粒子时所受的光力及其两个部分：<span data-concept=\"dipole-trap\">偶极阱</span>和<span data-concept=\"optical-lattice\">光学格子</span>背后的、远失谐光的<span data-concept=\"dipole-force\">偶极力</span>，以及平面波的<span data-concept=\"dissipative-force\">耗散力</span>，它能增大到多大，以及<span data-concept=\"atomic-beam-slowing\">使原子束减速</span>需要什么。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "MIT 8.422 习题集 8 第 1 题、习题集 10 第 3 题以及习题集 9 第 1、2 题，每个小问各用一张卡片，改用卢金的记号重述，并附有 AI 撰写的解答，因为该课程没有公布答案；习题集 9 要求在每个表达式之后给出钠的数值，这些数值被暂扣。",
+ "figures": [
+  {
+   "id": "sim-dipole-potential",
+   "kind": "sim",
+   "draws": [
+    "coupling",
+    "energy",
+    "force",
+    "frequency",
+    "rate",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "force-operator",
+   "concept": "light-force-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "semiclassical",
+   "concept": "semiclassical-light-force",
+   "verb": "introduces"
+  },
+  {
+   "span": "validity",
+   "concept": "semiclassical-force-validity",
+   "verb": "introduces"
+  },
+  {
+   "span": "dipole-force-name",
+   "concept": "dipole-force",
+   "verb": "introduces"
+  },
+  {
+   "span": "dipole-trap",
+   "concept": "dipole-trap",
+   "verb": "introduces"
+  },
+  {
+   "span": "optical-lattice",
+   "concept": "optical-lattice",
+   "verb": "introduces"
+  },
+  {
+   "span": "dissipative-force",
+   "concept": "dissipative-force",
+   "verb": "introduces"
+  },
+  {
+   "span": "max-force",
+   "concept": "maximum-dissipative-force",
+   "verb": "introduces"
+  },
+  {
+   "span": "beam-slowing",
+   "concept": "atomic-beam-slowing",
+   "verb": "introduces"
+  },
+  {
+   "span": "force-operator",
+   "concept": "heisenberg-picture",
+   "verb": "uses"
+  },
+  {
+   "span": "force-operator",
+   "concept": "commutator",
+   "verb": "uses"
+  },
+  {
+   "span": "force-operator",
+   "concept": "moving-atom-hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "validity-estimate",
+   "concept": "steady-state-coherence",
+   "verb": "uses"
+  },
+  {
+   "span": "validity-estimate",
+   "concept": "dephasing-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "validity-estimate",
+   "concept": "detuning",
+   "verb": "uses"
+  },
+  {
+   "span": "recoil-energy",
+   "concept": "recoil-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "validity-estimate",
+   "concept": "heisenberg-uncertainty-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "ratio",
+   "concept": "susceptibility",
+   "verb": "uses"
+  },
+  {
+   "span": "v-eff",
+   "concept": "ac-stark-shift",
+   "verb": "uses"
+  },
+  {
+   "span": "v-eff",
+   "concept": "dressed-states",
+   "verb": "uses"
+  },
+  {
+   "span": "multilevel",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "doppler-term",
+   "concept": "recoil-shifted-resonance",
+   "verb": "uses"
+  },
+  {
+   "span": "kicks",
+   "concept": "atomic-recoil",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-8-25",
+   "concept": "saturation",
+   "verb": "uses"
+  },
+  {
+   "span": "max-force-text",
+   "concept": "spontaneous-emission-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "slowing",
+   "concept": "zeeman-effect",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-dissipative-force",
+   "concept": "optical-pumping-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-scattering-force",
+   "concept": "steady-state-population",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "hw8-1a",
+   "source_id": "hw8.1a",
+   "source_number": "Problem Set 8, Problem 1(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的激光频率$\\omega$记为$\\nu$，共振频率$\\omega_0$记为$\\omega$，所以$\\delta = \\nu - \\omega$；沿$\\hat{p}$的偶极矩$\\mathbf{p}$记为沿单位矢量$\\hat{\\mathbf{n}}$的$\\mathbf{d}$，其正交分量$v$记为$w$（卢金的$p$是动量，$v$是速度）；阻尼系数$\\gamma$记为$\\beta$，所以MIT的$\\Gamma = \\gamma/m$记为$\\beta/m$，即卢金的衰变率$\\gamma$；MIT的相位$\\theta$保留（场$\\cos(\\theta + \\nu t)$使$\\theta = -\\phi$，对照卢金的$\\Omega \\propto e^{i\\phi}$）；式 (2) 中缺少的右括号已补上。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "semiclassical",
+   "prompt": "在课堂上，我们将用光学布洛赫方程讨论光力。作为准备，这里要求你考虑一个（半）经典的推导。假设类氢原子可以经典地建模为一个谐和地束缚在原子核上的电子，其共振频率为$\\omega$，阻尼系数为$\\beta$。原子核固定在位置$\\mathbf{x}_0$，而电子的位置记为$\\mathbf{x}$。现在假设原子被如下形式的电磁波照射：$$\\mathbf{E}(\\mathbf{x}, t) = \\hat{e}E_0(\\mathbf{x})\\cos(\\theta(\\mathbf{x}) + \\nu t) \\qquad (1)$$其中$\\theta(\\mathbf{x})$是波的相位，作为时刻$t = 0$时位置$\\mathbf{x}$的函数。电子的偶极矩可以写成$$\\mathbf{d}(\\mathbf{x}, t) = \\hat{\\mathbf{n}}\\left(u\\cos(\\theta(\\mathbf{x}) + \\nu t) - w\\sin(\\theta(\\mathbf{x}) + \\nu t)\\right) \\qquad (2)$$于是光对原子的力为$$\\mathbf{F} = (\\mathbf{d}\\cdot\\hat{e})\\nabla E(\\mathbf{x}, t) \\qquad (3)$$时间平均力。作偶极近似，即$\\mathbf{E}(\\mathbf{x}) \\approx \\mathbf{E}(\\mathbf{x}_0)$。证明时间平均力为$$\\langle\\mathbf{F}\\rangle = \\frac{1}{2}(\\hat{\\mathbf{n}}\\cdot\\hat{e})\\left(u\\nabla E_0(\\mathbf{x}_0) + wE_0(\\mathbf{x}_0)\\nabla\\theta(\\mathbf{x}_0)\\right) \\qquad (4)$$这个表达式与由量子力学导出的力完全类比。第一项是偶极（受激）力，第二项是散射（自发）力。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "记$\\Phi = \\theta(\\mathbf{x}) + \\nu t$。则$\\mathbf{d}\\cdot\\hat{e} = (\\hat{\\mathbf{n}}\\cdot\\hat{e})(u\\cos\\Phi - w\\sin\\Phi)$和$\\nabla E = \\nabla E_0\\cos\\Phi - E_0\\sin\\Phi\\,\\nabla\\theta$，所以$$\\mathbf{F} = (\\hat{\\mathbf{n}}\\cdot\\hat{e})\\left(u\\cos^2\\Phi\\,\\nabla E_0 + w\\sin^2\\Phi\\,E_0\\nabla\\theta - \\sin\\Phi\\cos\\Phi\\,(w\\nabla E_0 + uE_0\\nabla\\theta)\\right).$$在一个光学周期内，$\\langle\\cos^2\\Phi\\rangle = \\langle\\sin^2\\Phi\\rangle = \\tfrac{1}{2}$且$\\langle\\sin\\Phi\\cos\\Phi\\rangle = 0$。在偶极近似下，$E_0$、$\\theta$及其梯度都取在$\\mathbf{x}_0$处，由此得到式 (4)。同相正交分量$u$乘以振幅梯度，异相正交分量$w$乘以相位梯度，这就是式 (8.18) 的两项：反应力与$\\mathrm{Re}(\\rho_{21}/\\Omega)$和$\\nabla|\\Omega|^2$相联系，耗散力与$\\mathrm{Im}(\\rho_{21}/\\Omega)$和$\\nabla\\phi$相联系。"
+   }
+  },
+  {
+   "id": "hw8-1b",
+   "source_id": "hw8.1b",
+   "source_number": "Problem Set 8, Problem 1(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的激光频率$\\omega$记为$\\nu$，共振频率$\\omega_0$记为$\\omega$，所以$\\delta = \\nu - \\omega$；沿$\\hat{p}$的偶极矩$\\mathbf{p}$记为沿单位矢量$\\hat{\\mathbf{n}}$的$\\mathbf{d}$，其正交分量$v$记为$w$（卢金的$p$是动量，$v$是速度）；阻尼系数$\\gamma$记为$\\beta$，所以MIT的$\\Gamma = \\gamma/m$记为$\\beta/m$，即卢金的衰变率$\\gamma$；MIT的相位$\\theta$保留（场$\\cos(\\theta + \\nu t)$使$\\theta = -\\phi$，对照卢金的$\\Omega \\propto e^{i\\phi}$）；式 (2) 中缺少的右括号已补上；本小问开头重复了经典模型。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dipole-force-name",
+   "prompt": "针对本题的经典原子，即一个谐和地束缚在$\\mathbf{x}_0$处、共振频率为$\\omega$、阻尼系数为$\\beta$的电子，处于波$\\mathbf{E}(\\mathbf{x}, t) = \\hat{e}E_0(\\mathbf{x})\\cos(\\theta(\\mathbf{x}) + \\nu t)$中，偶极矩为$\\mathbf{d} = \\hat{\\mathbf{n}}(u\\cos(\\theta + \\nu t) - w\\sin(\\theta + \\nu t))$，力为$\\mathbf{F} = (\\mathbf{d}\\cdot\\hat{e})\\nabla E(\\mathbf{x}, t)$：势的图像。由电场中偶极子的瞬时势能重新计算原子所受的时间平均力。这个答案与1a的有何不同？推测其原因。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "瞬时能量为$U = -\\mathbf{d}\\cdot\\mathbf{E} = -(\\hat{\\mathbf{n}}\\cdot\\hat{e})E_0(u\\cos\\Phi - w\\sin\\Phi)\\cos\\Phi$，其时间平均为$\\langle U\\rangle = -\\tfrac{1}{2}(\\hat{\\mathbf{n}}\\cdot\\hat{e})uE_0$。把偶极子取为给定，$-\\nabla\\langle U\\rangle = \\tfrac{1}{2}(\\hat{\\mathbf{n}}\\cdot\\hat{e})u\\nabla E_0$：就是式 (4) 的偶极力，别无其他。散射项$\\tfrac{1}{2}(\\hat{\\mathbf{n}}\\cdot\\hat{e})wE_0\\nabla\\theta$缺失，因为异相正交分量$w$在$\\langle U\\rangle$中平均掉了。它的缺失是有原因的：偶极子的$w$部分是从场中吸收能量的部分，而来自吸收的力不是任何势的梯度。这就是本书在式 (8.20) 之后作出的区分：反应力是保守的，可以写成$V_\\mathrm{eff} = \\hbar|\\Omega|^2/\\delta$的梯度，而耗散力沿平面波的相位梯度$\\nabla\\phi = \\mathbf{k}$推动，没有势。第二个差别涉及偶极项本身：偶极子是感生的，$u \\propto E_0$，如果$u$与$E_0$一起被求导，梯度就会加倍。感生偶极子的能量是$-\\mathbf{d}\\cdot\\mathbf{E}$的一半，即在$u/E_0$保持不变时的$\\langle U\\rangle = -\\tfrac{1}{4}(\\hat{\\mathbf{n}}\\cdot\\hat{e})uE_0$，其梯度还原出式 (4) 的偶极项。"
+   }
+  },
+  {
+   "id": "hw8-1c",
+   "source_id": "hw8.1c",
+   "source_number": "Problem Set 8, Problem 1(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的激光频率$\\omega$记为$\\nu$，共振频率$\\omega_0$记为$\\omega$，所以$\\delta = \\nu - \\omega$；沿$\\hat{p}$的偶极矩$\\mathbf{p}$记为沿单位矢量$\\hat{\\mathbf{n}}$的$\\mathbf{d}$，其正交分量$v$记为$w$（卢金的$p$是动量，$v$是速度）；阻尼系数$\\gamma$记为$\\beta$，所以MIT的$\\Gamma = \\gamma/m$记为$\\beta/m$，即卢金的衰变率$\\gamma$；MIT的相位$\\theta$保留（场$\\cos(\\theta + \\nu t)$使$\\theta = -\\phi$，对照卢金的$\\Omega \\propto e^{i\\phi}$）；式 (2) 中缺少的右括号已补上；本小问开头重复了经典模型。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "semiclassical",
+   "prompt": "针对本题的经典原子，即一个谐和地束缚在$\\mathbf{x}_0$处、共振频率为$\\omega$、阻尼系数为$\\beta$的电子，处于波$\\mathbf{E}(\\mathbf{x}, t) = \\hat{e}E_0(\\mathbf{x})\\cos(\\theta(\\mathbf{x}) + \\nu t)$中，偶极矩为$\\mathbf{d} = \\hat{\\mathbf{n}}(u\\cos(\\theta + \\nu t) - w\\sin(\\theta + \\nu t))$，力为$\\mathbf{F} = (\\mathbf{d}\\cdot\\hat{e})\\nabla E(\\mathbf{x}, t)$：电子的偶极矩。现在我们将显式地求解电子的偶极矩。用复数记法，运动方程为$$m\\frac{\\partial^2\\mathbf{r}}{\\partial t^2} + \\beta\\frac{\\partial\\mathbf{r}}{\\partial t} + m\\omega^2\\mathbf{r} = -e\\hat{e}E_0(\\mathbf{x}_0)e^{i(\\theta(\\mathbf{x}_0) + \\nu t)} \\qquad (5)$$其中$\\mathbf{r} = \\mathbf{x} - \\mathbf{x}_0$。解此方程求出$\\mathbf{d} = -e\\mathbf{r}$。把$\\mathbf{d}$的正交分量代入 (a) 小问的力方程，求得$$\\mathbf{F} = -\\frac{e^2}{2m\\omega}\\frac{\\delta\\nabla E_0^2 + \\gamma E_0^2\\nabla\\theta}{4\\delta^2 + \\gamma^2} \\qquad (6)$$其中$\\delta = \\nu - \\omega$和$\\gamma = \\beta/m$。作近似$\\nu \\approx \\omega$。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "试取$\\mathbf{r} = \\mathbf{r}_0e^{i(\\theta + \\nu t)}$：$(m\\omega^2 - m\\nu^2 + i\\beta\\nu)\\mathbf{r}_0 = -e\\hat{e}E_0$。当$\\nu \\approx \\omega$时，$\\omega^2 - \\nu^2 \\approx -2\\omega\\delta$且$\\beta\\nu \\approx m\\omega\\gamma$，所以$$\\mathbf{r}_0 = \\frac{e\\hat{e}E_0}{m\\omega(2\\delta - i\\gamma)} = \\frac{e\\hat{e}E_0(2\\delta + i\\gamma)}{m\\omega(4\\delta^2 + \\gamma^2)}.$$物理的偶极矩是$\\mathbf{d} = \\mathrm{Re}(-e\\mathbf{r}) = -\\frac{e^2E_0}{m\\omega(4\\delta^2 + \\gamma^2)}\\hat{e}\\left(2\\delta\\cos\\Phi - \\gamma\\sin\\Phi\\right)$，其中$\\Phi = \\theta + \\nu t$，所以$\\hat{\\mathbf{n}} = \\hat{e}$、$u = -\\frac{2e^2E_0\\delta}{m\\omega(4\\delta^2 + \\gamma^2)}$和$w = -\\frac{e^2E_0\\gamma}{m\\omega(4\\delta^2 + \\gamma^2)}$。代入式 (4)：$$\\langle\\mathbf{F}\\rangle = -\\frac{e^2}{2m\\omega}\\frac{2\\delta E_0\\nabla E_0 + \\gamma E_0^2\\nabla\\theta}{4\\delta^2 + \\gamma^2} = -\\frac{e^2}{2m\\omega}\\frac{\\delta\\nabla E_0^2 + \\gamma E_0^2\\nabla\\theta}{4\\delta^2 + \\gamma^2}.$$低于共振（$\\delta < 0$）时，同相部分把原子沿光强梯度向上拉，这是本书偶极力符号规则的经典形式；$\\gamma$项沿$-\\nabla\\theta$推动，即波传播的方向，与耗散力的作用一样。"
+   }
+  },
+  {
+   "id": "hw8-1d",
+   "source_id": "hw8.1d",
+   "source_number": "Problem Set 8, Problem 1(d)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的激光频率$\\omega$记为$\\nu$，共振频率$\\omega_0$记为$\\omega$，所以$\\delta = \\nu - \\omega$；沿$\\hat{p}$的偶极矩$\\mathbf{p}$记为沿单位矢量$\\hat{\\mathbf{n}}$的$\\mathbf{d}$，其正交分量$v$记为$w$（卢金的$p$是动量，$v$是速度）；阻尼系数$\\gamma$记为$\\beta$，所以MIT的$\\Gamma = \\gamma/m$记为$\\beta/m$，即卢金的衰变率$\\gamma$；MIT的相位$\\theta$保留（场$\\cos(\\theta + \\nu t)$使$\\theta = -\\phi$，对照卢金的$\\Omega \\propto e^{i\\phi}$）；式 (2) 中缺少的右括号已补上；式 (7) 中MIT的拉比频率$\\omega_R$记为$2\\Omega$（卢金的$\\omega_R$是反冲频率），振子强度$f_{fi}$记为$f_{21}$。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "semiclassical",
+   "prompt": "针对本题的经典原子，即一个谐和地束缚在$\\mathbf{x}_0$处、共振频率为$\\omega$、阻尼系数为$\\beta$的电子，处于波$\\mathbf{E}(\\mathbf{x}, t) = \\hat{e}E_0(\\mathbf{x})\\cos(\\theta(\\mathbf{x}) + \\nu t)$中，偶极矩为$\\mathbf{d} = \\hat{\\mathbf{n}}(u\\cos(\\theta + \\nu t) - w\\sin(\\theta + \\nu t))$，力为$\\mathbf{F} = (\\mathbf{d}\\cdot\\hat{e})\\nabla E(\\mathbf{x}, t)$：(c) 小问给出$\\mathbf{F} = -\\frac{e^2}{2m\\omega}\\frac{\\delta\\nabla E_0^2 + \\gamma E_0^2\\nabla\\theta}{4\\delta^2 + \\gamma^2}$，其中$\\gamma = \\beta/m$。二能级原子所受的力。低光强极限下二能级原子所受光力的量子力学表达式为$$\\mathbf{F} \\approx -\\frac{4\\hbar\\delta\\nabla|\\Omega|^2 + 4\\hbar\\gamma|\\Omega|^2\\nabla\\theta}{4\\delta^2 + \\gamma^2} \\qquad (7)$$其中$\\Omega$是拉比频率。证明：如果引入两个能级之间的振子强度$f_{21}$，我们可以写出$$\\mathbf{F}_\\mathrm{quantum} = f_{21}\\mathbf{F}_\\mathrm{classical} \\qquad (8)$$",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "对于场$\\hat{e}E_0\\cos(\\theta + \\nu t)$，式 (2.1) 的包络为$|\\mathcal{E}| = E_0/2$，所以拉比频率为$|\\Omega| = |\\mu|E_0/2\\hbar$，其中$\\mu = e\\langle 2|\\hat{e}\\cdot\\mathbf{r}|1\\rangle$，且$$4|\\Omega|^2 = \\frac{e^2|\\langle 2|\\hat{e}\\cdot\\mathbf{r}|1\\rangle|^2E_0^2}{\\hbar^2}.$$振子强度为$f_{21} = \\frac{2m\\omega}{\\hbar}|\\langle 2|\\hat{e}\\cdot\\mathbf{r}|1\\rangle|^2$，所以$4\\hbar|\\Omega|^2 = \\frac{e^2f_{21}}{2m\\omega}E_0^2$，而同一量的梯度为$4\\hbar\\nabla|\\Omega|^2 = \\frac{e^2f_{21}}{2m\\omega}\\nabla E_0^2$。代入式 (7)，$$\\mathbf{F}_\\mathrm{quantum} = -\\frac{e^2f_{21}}{2m\\omega}\\frac{\\delta\\nabla E_0^2 + \\gamma E_0^2\\nabla\\theta}{4\\delta^2 + \\gamma^2} = f_{21}\\mathbf{F}_\\mathrm{classical}.$$式 (7) 就是本书低光强下的式 (8.18)：用$\\rho_{21}/\\Omega = i/(\\gamma_{12} - i\\delta)$和$\\gamma_{12} = \\gamma/2$，$\\mathrm{Re}(\\rho_{21}/\\Omega) = -4\\delta/(4\\delta^2 + \\gamma^2)$和$\\mathrm{Im}(\\rho_{21}/\\Omega) = 2\\gamma/(4\\delta^2 + \\gamma^2)$，以及$\\nabla\\phi = -\\nabla\\theta$。"
+   }
+  },
+  {
+   "id": "hw10-3a",
+   "source_id": "hw10.3a",
+   "source_number": "Problem Set 10, Problem 3(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的频率$w$记为$\\nu$，极化率$\\alpha(w)$记为$\\alpha_\\mathrm{pol}(\\nu)$（卢金的$\\alpha$是吸收系数），储存室B的厚度$d$记为$\\ell$；MIT的脚注改为括号，其图1和图2用文字描述。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dipole-trap",
+   "prompt": "当原子被装入远离共振的偶极阱时，它们会被受激光力加速。在没有自发发射的情况下，动能从何而来？在本题中，我们将在一个理想化的几何构型中讨论这种情形。有限数目的原子最初储存在储存室A中，它们可以通过一根细毛细管进入储存室B。储存室B沿光束的厚度为$\\ell$，截面为$A$，横跨场区；紧挨其后有一个位于D处的探测器。为简单起见，我们假设在一个孤立区域（总体积$V$）中有一个不发散的均匀电磁（EM）场。（电磁场在该区域边界附近的波矢量展宽对于解释加速及其横向方向很重要，但为简单起见，我们假设为平面波。）此外，EM场具有大失谐$\\delta < 0$（没有自发力），因此原子将在$t = t_0$时进入储存室B。假设原子密度线性增加至$\\dot{n}\\Delta t$，历时$\\Delta t$。由于原子使透射EM场的相位发生移动，在位置D测得的EM场频率在实验室参考系中移动了$\\Delta\\nu$：它在$t_0$之前为$\\nu$，从$t_0$到$t_0 + \\Delta t$为$\\nu - \\Delta\\nu$，此后又为$\\nu$。在本题中，我们将证明储存室B中原子的总能量变化等于EM场在$t = t_0$与$t = t_0 + \\Delta t$之间累积的能量减少。首先，令入射EM场为$\\vec{E}_i \\propto \\hat{x}e^{i(\\nu t - kz)}$。当一些原子被引入储存室B时，折射率发生变化：$n_r \\simeq 1 + \\frac{1}{2}n(t)\\alpha_\\mathrm{pol}(\\nu)$其中$\\alpha_\\mathrm{pol}(\\nu)$是极化率。通过考虑储存室B中原子引起的相移，计算EM场在位置D处的频率偏移$\\Delta\\nu$。当$t_0 < t < t_0 + \\Delta t$时，你将得到$\\vec{E}_D \\propto \\hat{x}e^{i([\\nu - \\Delta\\nu]t - kz)}$。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "穿过B时，波获得额外的相位延迟$k(n_r - 1)\\ell = \\frac{1}{2}k\\ell\\,n(t)\\alpha_\\mathrm{pol}$，所以在D处$\\vec{E}_D \\propto \\hat{x}\\exp\\left[i\\left(\\nu t - kz - \\tfrac{1}{2}k\\ell\\,n(t)\\alpha_\\mathrm{pol}\\right)\\right]$。频率是相位的时间导数：对于$t_0 < t < t_0 + \\Delta t$，$$\\Delta\\nu = \\frac{1}{2}k\\ell\\,\\dot{n}\\,\\alpha_\\mathrm{pol}(\\nu) = \\frac{\\nu\\ell\\,\\dot{n}\\,\\alpha_\\mathrm{pol}(\\nu)}{2c}$$，其间$\\dot{n}$为常数，此前和此后均为零。低于共振时极化率为正（远失谐介质具有折射性，对于$\\delta < 0$有$n_r > 1$），所以D处的光发生红移，如题中的图所示。"
+   }
+  },
+  {
+   "id": "hw10-3b",
+   "source_id": "hw10.3b",
+   "source_number": "Problem Set 10, Problem 3(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的频率$w$记为$\\nu$，极化率$\\alpha(w)$记为$\\alpha_\\mathrm{pol}(\\nu)$（卢金的$\\alpha$是吸收系数），储存室B的厚度$d$记为$\\ell$；MIT的脚注改为括号，其图1和图2用文字描述；本小问开头重复了题设。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dipole-trap",
+   "prompt": "原子流入储存室B（厚度$\\ell$，截面$A$），B位于频率为$\\nu$的均匀平面波场中，该场远失谐，$\\delta < 0$，原子密度按$n(t)$线性上升，速率为$\\dot{n}$，从$t_0$到$t_0 + \\Delta t$；B中的折射率为$n_r \\simeq 1 + \\frac{1}{2}n(t)\\alpha_\\mathrm{pol}(\\nu)$，在密度上升期间，B之外探测器D处的场下移到$\\nu - \\Delta\\nu$。利用 (a) 小问的结果$\\Delta\\nu$，计算在$t = t_0$与$t = t_0 + \\Delta t$之间累积的EM场总能量减少$\\Delta E_{EM}$。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "没有自发发射，就没有光子丢失；每个穿过B的光子离开时能量降低了$\\hbar\\Delta\\nu$。强度为$I$的光束在截面$A$上每单位时间携带$IA/\\hbar\\nu$个光子，所以$$\\Delta E_{EM} = \\hbar\\Delta\\nu\\,\\frac{IA}{\\hbar\\nu}\\,\\Delta t = \\frac{IA\\,\\Delta t}{\\nu}\\cdot\\frac{\\nu\\ell\\,\\dot{n}\\,\\alpha_\\mathrm{pol}}{2c} = \\frac{1}{2}\\frac{\\alpha_\\mathrm{pol}I}{c}\\,(\\dot{n}\\Delta t\\,A\\ell) = \\frac{1}{2}\\frac{\\alpha_\\mathrm{pol}I}{c}N,$$其中$N = \\dot{n}\\Delta t\\,A\\ell$是$t_0 + \\Delta t$时B中的原子数。每进入一个原子，场就损失$\\alpha_\\mathrm{pol}I/2c$。"
+   }
+  },
+  {
+   "id": "hw10-3c",
+   "source_id": "hw10.3c",
+   "source_number": "Problem Set 10, Problem 3(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的频率$w$记为$\\nu$，极化率$\\alpha(w)$记为$\\alpha_\\mathrm{pol}(\\nu)$（卢金的$\\alpha$是吸收系数），储存室B的厚度$d$记为$\\ell$；MIT的脚注改为括号，其图1和图2用文字描述；本小问开头重复了题设。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "v-eff",
+   "prompt": "原子流入储存室B（厚度$\\ell$，截面$A$），B位于频率为$\\nu$的均匀平面波场中，该场远失谐，$\\delta < 0$，原子密度按$n(t)$线性上升，速率为$\\dot{n}$，从$t_0$到$t_0 + \\Delta t$；B中的折射率为$n_r \\simeq 1 + \\frac{1}{2}n(t)\\alpha_\\mathrm{pol}(\\nu)$，在密度上升期间，B之外探测器D处的场下移到$\\nu - \\Delta\\nu$。考虑斯塔克效应，我们可以计算极化率$\\alpha_\\mathrm{pol}(\\nu)$。给定$\\alpha_\\mathrm{pol}(\\nu)$，计算由斯塔克效应引起的能量移位$\\Delta E_{Stark}|_{t = t_0 + \\Delta t}$。$\\Delta E_{Stark}$是否等于$\\Delta E_{EM}$？为什么？（或者为什么不？）",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "远离共振时，每个原子留在基态，被交流斯塔克偏移$V_\\mathrm{eff} = \\hbar|\\Omega|^2/\\delta$（式 8.20）移动。对于场$E_0\\cos\\nu t$，$|\\Omega| = |\\mu|E_0/2\\hbar$，所以$V_\\mathrm{eff} = |\\mu|^2E_0^2/4\\hbar\\delta$。感生偶极子$\\epsilon_0\\alpha_\\mathrm{pol}\\mathbf{E}$（使$n_r \\simeq 1 + \\frac{1}{2}n\\alpha_\\mathrm{pol}$成立的归一化）的能量为$-\\frac{1}{2}\\epsilon_0\\alpha_\\mathrm{pol}\\langle E^2\\rangle = -\\frac{1}{4}\\epsilon_0\\alpha_\\mathrm{pol}E_0^2$；使两者相等，$$\\alpha_\\mathrm{pol}(\\nu) = -\\frac{|\\mu|^2}{\\epsilon_0\\hbar\\delta},$$对于$\\delta < 0$为正。取$I = \\frac{1}{2}c\\epsilon_0E_0^2$，每个原子的移位为$-\\alpha_\\mathrm{pol}I/2c$，而对于B中的$N$个原子，$$\\Delta E_{Stark}|_{t_0 + \\Delta t} = -\\frac{1}{2}\\frac{\\alpha_\\mathrm{pol}I}{c}N.$$它与 (b) 小问的$\\Delta E_{EM}$大小相等、符号相反。原子落入光致频移势阱，它们在那里获得的动能由场支付：每个透射的光子都红移射出，光损失的能量恰好等于势的深度乘以进入的原子数。完全没有自发发射，总能量也守恒，这就是偶极力是保守力的原因。"
+   }
+  },
+  {
+   "id": "hw9-1a",
+   "source_id": "hw9.1a",
+   "source_number": "Problem Set 9, Problem 1(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的跃迁频率$\\omega_0$记为$\\omega$，激光频率$\\omega$记为$\\nu$，所以$\\delta \\equiv \\nu - \\omega$；光子散射率$\\Gamma_s$记为$R_{sc}$，扩散常量$\\mathcal{D}$记为$D$。MIT的钠数据留在题目中。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "max-force",
+   "prompt": "考虑以下关于Na的问题。在得到解析表达式之后，试着代入数值。Na炉温$T = 600$ K；固有线宽$\\gamma = 2\\pi \\times 10$ MHz；塞曼分裂1.4 MHz/高斯；波长$\\lambda = 2\\pi/k = 589$ nm。塞曼减速器。如果你想有效地使原子束减速，就必须补偿减速过程中变化的多普勒频移（$\\vec{k}\\cdot\\vec{v}$）。这可以通过扫描减速光束的频率来做到，即啁啾（如课堂上所讨论的）。产生连续冷原子束的一种方法是塞曼减速。一束准直良好的原子束来自温度为$T$的炉。原子束沿距离$L$传播，其间有纵向磁场$B(x)$（$0 < x < L$）。强度为$I$的激光束对传。其频率相对于$B = 0$时的跃迁频率失谐了$\\delta$（$\\delta \\equiv \\nu - \\omega$）。计算你能达到的最大减速度$a_{max}$。假设你可以选取任意大的激光强度。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在任意大的强度下，跃迁饱和，耗散力达到其最大值，即式 (8.27)，$F_\\mathrm{max} = \\hbar k\\gamma/2$：每次散射事件一个动量冲击$\\hbar k$，由于原子处于激发态的时间至多一半，单位时间至多$\\gamma/2$次事件。所以$$a_{max} = \\frac{\\hbar k\\gamma}{2m},$$其中$m$是钠原子的质量。它是反冲速度$\\hbar k/m$，每单位时间获得$\\gamma/2$次。"
+   }
+  },
+  {
+   "id": "hw9-1b",
+   "source_id": "hw9.1b",
+   "source_number": "Problem Set 9, Problem 1(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的跃迁频率$\\omega_0$记为$\\omega$，激光频率$\\omega$记为$\\nu$，所以$\\delta \\equiv \\nu - \\omega$；光子散射率$\\Gamma_s$记为$R_{sc}$，扩散常量$\\mathcal{D}$记为$D$。MIT的钠数据留在题目中。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "beam-slowing",
+   "prompt": "考虑以下关于Na的问题。在得到解析表达式之后，试着代入数值。Na炉温$T = 600$ K；固有线宽$\\gamma = 2\\pi \\times 10$ MHz；塞曼分裂1.4 MHz/高斯；波长$\\lambda = 2\\pi/k = 589$ nm。塞曼减速器。如果你想有效地使原子束减速，就必须补偿减速过程中变化的多普勒频移（$\\vec{k}\\cdot\\vec{v}$）。这可以通过扫描减速光束的频率来做到，即啁啾（如课堂上所讨论的）。产生连续冷原子束的一种方法是塞曼减速。一束准直良好的原子束来自温度为$T$的炉。原子束沿距离$L$传播，其间有纵向磁场$B(x)$（$0 < x < L$）。强度为$I$的激光束对传。其频率相对于$B = 0$时的跃迁频率失谐了$\\delta$（$\\delta \\equiv \\nu - \\omega$）。假设你想把速度低于热分布峰值（最概然）速度$v_{peak}$的原子，用恒定的减速度$fa_{max}$（$0 < f < 1$）减速到静止。塞曼效应使共振移动$\\omega \\to \\omega + g\\mu_BB(x)$（此处$g\\mu_B = (2\\pi)1.4$ MHz/高斯）。计算磁场$B(x)$的空间依赖关系，以及减速器的长度$L$，作为$f$的函数。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在恒定减速度$a = fa_{max} = f\\hbar k\\gamma/2m$下，以$v_{peak}$进入的原子在$$L = \\frac{v_{peak}^2}{2fa_{max}} = \\frac{mv_{peak}^2}{f\\hbar k\\gamma},$$之后停下，而在$x$处它以$v(x) = \\sqrt{v_{peak}^2 - 2fa_{max}x} = v_{peak}\\sqrt{1 - x/L}$运动。原子朝向激光运动，所以它看到的光被多普勒频移到$\\nu + kv$，即式 (8.22) 的$\\delta - kv$，其中$v$与$\\mathbf{k}$相反。它在满足$\\nu + kv(x) = \\omega + g\\mu_BB(x)$处保持共振，即$\\delta + kv(x) = g\\mu_BB(x)$：$$B(x) = \\frac{\\delta + kv_{peak}\\sqrt{1 - x/L}}{g\\mu_B}, \\qquad 0 < x < L.$$场按剩余距离的平方根下降，从入口处的$(\\delta + kv_{peak})/g\\mu_B$降到末端的$\\delta/g\\mu_B$。较小的$f$使减速器更长，但给原子留出了跟上场分布的余地。"
+   }
+  },
+  {
+   "id": "hw9-1c",
+   "source_id": "hw9.1c",
+   "source_number": "Problem Set 9, Problem 1(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的跃迁频率$\\omega_0$记为$\\omega$，激光频率$\\omega$记为$\\nu$，所以$\\delta \\equiv \\nu - \\omega$；光子散射率$\\Gamma_s$记为$R_{sc}$，扩散常量$\\mathcal{D}$记为$D$。MIT的钠数据留在题目中。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "kicks",
+   "prompt": "考虑以下关于Na的问题。在得到解析表达式之后，试着代入数值。Na炉温$T = 600$ K；固有线宽$\\gamma = 2\\pi \\times 10$ MHz；塞曼分裂1.4 MHz/高斯；波长$\\lambda = 2\\pi/k = 589$ nm。塞曼减速器。如果你想有效地使原子束减速，就必须补偿减速过程中变化的多普勒频移（$\\vec{k}\\cdot\\vec{v}$）。这可以通过扫描减速光束的频率来做到，即啁啾（如课堂上所讨论的）。产生连续冷原子束的一种方法是塞曼减速。一束准直良好的原子束来自温度为$T$的炉。原子束沿距离$L$传播，其间有纵向磁场$B(x)$（$0 < x < L$）。强度为$I$的激光束对传。其频率相对于$B = 0$时的跃迁频率失谐了$\\delta$（$\\delta \\equiv \\nu - \\omega$）。假设自发发射有三种不同的模型：(i) 光子沿$\\pm\\hat{x}$方向发射，(ii) 各向同性发射，或 (iii) 按偶极图样发射。在给定的光子散射率$R_{sc}$下，三种情形中动量的（纵向）$x$分量的动量扩散常量$D$是多少？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "按$d\\langle\\Delta p_x^2\\rangle/dt = 2D$取$D$。每次散射事件都是一次来自光束的吸收，即沿$x$恰好为$\\hbar k$的动量冲击，以及一次发射，即一个动量冲击$\\hbar k\\cos\\vartheta$，沿$x$，朝随机方向。吸收以速率$R_{sc}$在随机时刻发生，所以它们的数目像泊松过程那样涨落，并给$d\\langle\\Delta p_x^2\\rangle/dt$加上$\\hbar^2k^2R_{sc}$；发射加上$\\hbar^2k^2R_{sc}\\langle\\cos^2\\vartheta\\rangle$。因此$$D = \\frac{1}{2}\\hbar^2k^2R_{sc}\\left(1 + \\langle\\cos^2\\vartheta\\rangle\\right).$$(i) 沿$\\pm\\hat{x}$发射：$\\langle\\cos^2\\vartheta\\rangle = 1$，$D = \\hbar^2k^2R_{sc}$。(ii) 各向同性：$\\langle\\cos^2\\vartheta\\rangle = \\frac{1}{3}$，$D = \\frac{2}{3}\\hbar^2k^2R_{sc}$。(iii) 偶极图样：对于垂直于$x$的偶极子，绕偶极轴的$\\sin^2$图样给出$\\langle\\cos^2\\vartheta\\rangle = \\frac{2}{5}$（$\\sigma$图样$1 + \\cos^2$绕$x$轴，结果相同），$D = \\frac{7}{10}\\hbar^2k^2R_{sc}$。这里$R_{sc} = \\gamma\\rho_{22}$，即式 (8.24) 的散射率，在饱和时达到$\\gamma/2$。"
+   }
+  },
+  {
+   "id": "hw9-2a",
+   "source_id": "hw9.2a",
+   "source_number": "Problem Set 9, Problem 2(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的跃迁频率$\\omega_0$记为$\\omega$，激光频率$\\omega$记为$\\nu$；题目开头以及第1题的钠数据和题设都重复给出，使本小问可以独立成题，并且对于静止的原子，$I = 5I_{sat}$也以饱和参量$s = 2R_{opt}/\\gamma = 5$给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "max-force",
+   "prompt": "考虑以下关于Na的问题。在得到解析表达式之后，试着代入数值。Na炉温$T = 600$ K；固有线宽$\\gamma = 2\\pi \\times 10$ MHz；塞曼分裂1.4 MHz/高斯；波长$\\lambda = 2\\pi/k = 589$ nm。一束准直良好的钠原子束离开温度为$T$的炉；$v_{peak}$是其热分布的峰值（最概然）速度。用非共振光使原子减速。假设你想用一束与静止原子共振的对传激光束，使速度为$v_{peak}$的原子减速。（取$I = 5I_{sat}$，即零速度时的饱和参量$s = 2R_{opt}/\\gamma = 5$。）这需要多长时间？（提示：考虑对运动方程积分）",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "对于静止原子的共振，$\\delta = 0$，而朝向光束以$v$运动的原子看到的失谐为$kv$。取式 (8.23) 的$R_{opt}$和$\\gamma_{12} = \\gamma/2$，式 (8.26) 给出减速力$$F(v) = \\hbar k\\frac{\\gamma}{2}\\frac{s}{1 + s + 4k^2v^2/\\gamma^2},$$其中$s = 8|\\Omega|^2/\\gamma^2 = 5$。运动方程为$m\\,dv/dt = -F(v)$，所以$dt = -\\frac{2m}{\\hbar k\\gamma s}\\left(1 + s + \\frac{4k^2v^2}{\\gamma^2}\\right)dv$。从$v_{peak}$积分到零，$$t = \\frac{2m}{\\hbar k\\gamma s}\\left[(1 + s)v_{peak} + \\frac{4k^2v_{peak}^3}{3\\gamma^2}\\right].$$对于热原子$kv_{peak} \\gg \\gamma$，所以三次方项占主导：在减速的大部分时间里光都远离共振，力只是$\\hbar k\\gamma/2$的一小部分，所需时间远长于共振的饱和力所需的$mv_{peak}/(\\hbar k\\gamma/2)$，这就是为什么必须用啁啾或塞曼场来补偿多普勒频移。"
+   }
+  },
+  {
+   "id": "hw9-2b",
+   "source_id": "hw9.2b",
+   "source_number": "Problem Set 9, Problem 2(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT的跃迁频率$\\omega_0$记为$\\omega$，激光频率$\\omega$记为$\\nu$；题目开头以及第1题的钠数据和题设都重复给出，使本小问可以独立成题，并且对于静止的原子，$I = 5I_{sat}$也以饱和参量$s = 2R_{opt}/\\gamma = 5$给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "max-force",
+   "prompt": "考虑以下关于Na的问题。在得到解析表达式之后，试着代入数值。Na炉温$T = 600$ K；固有线宽$\\gamma = 2\\pi \\times 10$ MHz；塞曼分裂1.4 MHz/高斯；波长$\\lambda = 2\\pi/k = 589$ nm。一束准直良好的钠原子束离开温度为$T$的炉；$v_{peak}$是其热分布的峰值（最概然）速度。用非共振光使原子减速。假设你想用一束与静止原子共振的对传激光束，使速度为$v_{peak}$的原子减速。（取$I = 5I_{sat}$，即零速度时的饱和参量$s = 2R_{opt}/\\gamma = 5$。）原子会走多远？（提示：考虑对运动方程积分）",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "对于静止原子的共振，$\\delta = 0$，而朝向光束以$v$运动的原子看到的失谐为$kv$。取式 (8.23) 的$R_{opt}$和$\\gamma_{12} = \\gamma/2$，式 (8.26) 给出减速力$$F(v) = \\hbar k\\frac{\\gamma}{2}\\frac{s}{1 + s + 4k^2v^2/\\gamma^2},$$其中$s = 8|\\Omega|^2/\\gamma^2 = 5$。运动方程为$m\\,dv/dt = -F(v)$，所以$dt = -\\frac{2m}{\\hbar k\\gamma s}\\left(1 + s + \\frac{4k^2v^2}{\\gamma^2}\\right)dv$。距离为$dx = v\\,dt$；从$v_{peak}$积分到零，$$x = \\frac{2m}{\\hbar k\\gamma s}\\left[\\frac{(1 + s)v_{peak}^2}{2} + \\frac{k^2v_{peak}^4}{\\gamma^2}\\right].$$第二项在$kv_{peak} \\gg \\gamma$时仍占主导；单独的第一项$(1 + s)mv_{peak}^2/\\hbar k\\gamma s$是恒定饱和力$\\hbar k\\frac{\\gamma}{2}\\frac{s}{1 + s}$所对应的距离。"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "hw8-1a",
+   "concept": "semiclassical-light-force"
+  },
+  {
+   "exercise": "hw8-1b",
+   "concept": "dipole-force"
+  },
+  {
+   "exercise": "hw8-1b",
+   "concept": "dissipative-force"
+  },
+  {
+   "exercise": "hw8-1c",
+   "concept": "semiclassical-light-force"
+  },
+  {
+   "exercise": "hw8-1c",
+   "concept": "atomic-polarization"
+  },
+  {
+   "exercise": "hw8-1d",
+   "concept": "semiclassical-light-force"
+  },
+  {
+   "exercise": "hw8-1d",
+   "concept": "rabi-frequency"
+  },
+  {
+   "exercise": "hw10-3a",
+   "concept": "dipole-trap"
+  },
+  {
+   "exercise": "hw10-3a",
+   "concept": "far-detuned-refraction"
+  },
+  {
+   "exercise": "hw10-3b",
+   "concept": "dipole-trap"
+  },
+  {
+   "exercise": "hw10-3b",
+   "concept": "far-detuned-refraction"
+  },
+  {
+   "exercise": "hw10-3c",
+   "concept": "dipole-force"
+  },
+  {
+   "exercise": "hw10-3c",
+   "concept": "ac-stark-shift"
+  },
+  {
+   "exercise": "hw9-1a",
+   "concept": "maximum-dissipative-force"
+  },
+  {
+   "exercise": "hw9-1b",
+   "concept": "atomic-beam-slowing"
+  },
+  {
+   "exercise": "hw9-1b",
+   "concept": "recoil-shifted-resonance"
+  },
+  {
+   "exercise": "hw9-1b",
+   "concept": "zeeman-effect"
+  },
+  {
+   "exercise": "hw9-1c",
+   "concept": "dissipative-force"
+  },
+  {
+   "exercise": "hw9-1c",
+   "concept": "atomic-recoil"
+  },
+  {
+   "exercise": "hw9-1c",
+   "concept": "spontaneous-emission"
+  },
+  {
+   "exercise": "hw9-2a",
+   "concept": "maximum-dissipative-force"
+  },
+  {
+   "exercise": "hw9-2a",
+   "concept": "recoil-shifted-resonance"
+  },
+  {
+   "exercise": "hw9-2a",
+   "concept": "saturation-parameter"
+  },
+  {
+   "exercise": "hw9-2b",
+   "concept": "maximum-dissipative-force"
+  },
+  {
+   "exercise": "hw9-2b",
+   "concept": "recoil-shifted-resonance"
+  },
+  {
+   "exercise": "hw9-2b",
+   "concept": "saturation-parameter"
+  }
+ ],
+ "referents": [],
+ "footnotes": [
+  {
+   "id": "c-gamma-alkali",
+   "kind": "correction",
+   "html": "碱金属D线的自发衰变率为$\\kgamma \\approx 3$–$6 \\times 10^7\\ \\mathrm{s}^{-1}$（$\\kgamma/2\\pi \\approx 5$–$10$ MHz），而不是$10^6$ Hz。以此值计，在式 (8.27) 的最大速率$\\kgamma/2$下，$10^4$次散射事件约需半毫秒；若取$\\kgamma \\sim 10^6\\ \\mathrm{s}^{-1}$，则需20 ms。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "dissipative-force",
+   "what": "平面波的耗散力",
+   "source": "现代原子与光学物理 II，8.2 半经典描述，平面波：耗散力",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "对于低光强，$|\\Omega| \\ll \\gamma$，$\\rho_{21}/\\Omega = i/(\\gamma_{12} - i(\\delta - kv))$。",
+       "src": "8.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)} \\approx \\mk{R}{\\mathrm{Im}\\left(\\frac{i}{\\kgammaonetwo - i(\\kdelta - \\kkmag\\kvmag)}\\right)}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)} \\approx \\mk{R}{\\mathrm{Im}\\left(\\frac{i(\\kgammaonetwo + i(\\kdelta - \\kkmag\\kvmag))}{\\kgammaonetwo^2 + (\\kdelta - \\kkmag\\kvmag)^2}\\right)}",
+       "uses": [],
+       "cap": "分子分母同乘以$\\gamma_{12} + i(\\delta - kv)$。"
+      },
+      {
+       "tex": "\\mk{L}{\\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)} \\approx \\mk{R}{\\frac{\\kgammaonetwo}{\\kgammaonetwo^2 + (\\kdelta - \\kkmag\\kvmag)^2}}",
+       "uses": []
+      }
+     ],
+     "num": "(8.22)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "平面波具有恒定的振幅，$\\nabla|\\Omega|^2 = 0$，其相位梯度为$\\nabla\\phi = \\mathbf{k}$。",
+       "src": "8.1"
+      },
+      {
+       "text": "式 (3.101) 的光抽运率，$R_{opt} = 2\\gamma_{12}|\\Omega|^2/(\\gamma_{12}^2 + \\delta^2)$，取运动原子所看到的失谐$\\delta - kv$。",
+       "src": "(3.101)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kFforce} = \\mk{p}{2\\hbar|\\kOmega|^2\\nabla\\kphi\\ \\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)} + \\mk{g}{\\hbar\\nabla|\\kOmega|^2\\mathrm{Re}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}",
+      "src": "(8.18)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kFforce} = \\mk{p}{2\\hbar\\kk|\\kOmega|^2\\,\\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\kFforce} \\approx \\mk{p}{\\hbar\\kk\\frac{2\\kgammaonetwo|\\kOmega|^2}{\\kgammaonetwo^2 + (\\kdelta - \\kkmag\\kvmag)^2}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\kFforce} \\approx \\mk{p}{\\hbar\\kk\\frac{2\\kgammaonetwo|\\kOmega|^2}{\\kgammaonetwo^2 + (\\kdelta - \\kkmag\\kvmag)^2}} = \\mk{R}{\\hbar\\kk\\kRopt}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(8.23)"
+    }
+   ]
+  },
+  {
+   "id": "light-force-operator",
+   "what": "光力算符",
+   "source": "现代原子与光学物理 II，8.2 半经典描述",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "在位置基中，动量的作用相当于$\\hat p = -i\\hbar\\nabla$。",
+       "src": "8.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{[\\kp, \\hat{O}(r)]\\psi(r)} = \\mk{R}{[-i\\hbar\\nabla, \\hat{O}(r)]\\psi(r)}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{[\\kp, \\hat{O}(r)]\\psi(r)} = \\mk{R}{-i\\hbar\\nabla(\\hat{O}(r)\\psi(r)) + i\\hbar\\hat{O}(r)\\nabla\\psi(r)}",
+       "uses": [],
+       "cap": "写出对易式。"
+      },
+      {
+       "tex": "\\mk{L}{[\\kp, \\hat{O}(r)]\\psi(r)} = \\mk{R}{-i\\hbar(\\nabla\\hat{O}(r))\\psi(r)}",
+       "uses": [],
+       "cap": "乘积法则，$\\nabla(\\hat O\\psi) = (\\nabla\\hat O)\\psi + \\hat O\\nabla\\psi$。"
+      }
+     ],
+     "num": "(8.13)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "在$\\hat H$中，只有原子-激光相互作用依赖于位置；外部势被忽略。",
+       "src": "8.1"
+      },
+      {
+       "tex": "\\kH_{AL} = -\\hbar\\kOmega(\\kr)|2\\rangle\\langle 1| - \\hbar\\kOmega(\\kr)^*|1\\rangle\\langle 2|",
+       "src": "(8.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kF} = \\mk{R}{\\frac{1}{i\\hbar}[\\kp, \\kH]}",
+      "src": "(8.9)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kF} = \\mk{R}{-[\\nabla, \\kH(\\kr)]}",
+       "uses": [
+        0
+       ],
+       "cap": "由式 (8.13)，对任何位置的算符，它与$\\hat p$的对易式等于$-i\\hbar$乘以梯度。"
+      },
+      {
+       "tex": "\\mk{F}{\\kF} = \\mk{R}{-[\\nabla, \\kH(\\kr)]} = \\mk{g}{-\\nabla\\kH_{AL}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\kF} = \\mk{R}{-[\\nabla, \\kH(\\kr)]} = \\mk{g}{\\hbar\\nabla\\kOmega|2\\rangle\\langle 1| + \\hbar\\nabla\\kOmega^*|1\\rangle\\langle 2|}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(8.10)"
+    }
+   ]
+  },
+  {
+   "id": "maximum-dissipative-force",
+   "what": "最大耗散力",
+   "source": "现代原子与光学物理 II，8.2 半经典描述，平面波：耗散力",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "平面波具有恒定的振幅，$\\nabla|\\Omega|^2 = 0$，其相位梯度为$\\nabla\\phi = \\mathbf{k}$。",
+       "src": "8.1"
+      },
+      {
+       "tex": "\\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right) = \\frac{\\kgammaonetwo}{\\kgammaonetwo^2 + (\\kdelta - \\kkmag\\kvmag)^2}\\frac{\\kgamma}{\\kgamma + 2\\kRopt}",
+       "src": "(8.25)"
+      },
+      {
+       "text": "式 (3.101) 的光抽运率，$R_{opt} = 2\\gamma_{12}|\\Omega|^2/(\\gamma_{12}^2 + \\delta^2)$，取运动原子所看到的失谐$\\delta - kv$。",
+       "src": "(3.101)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kFforce} = \\mk{p}{2\\hbar|\\kOmega|^2\\nabla\\kphi\\ \\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)} + \\mk{g}{\\hbar\\nabla|\\kOmega|^2\\mathrm{Re}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}",
+      "src": "(8.18)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kFforce} = \\mk{p}{2\\hbar\\kk|\\kOmega|^2\\,\\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\kFforce} = \\mk{p}{\\hbar\\kk\\frac{2\\kgammaonetwo|\\kOmega|^2}{\\kgammaonetwo^2 + (\\kdelta - \\kkmag\\kvmag)^2}\\frac{\\kgamma}{\\kgamma + 2\\kRopt}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\kFforce} = \\mk{p}{\\hbar\\kk\\frac{\\kgamma \\kRopt}{\\kgamma + 2\\kRopt}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(8.26)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "在大功率极限下，$\\Omega \\gg \\gamma$，$R_{opt} \\to \\infty$。",
+       "src": "8.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kFforce} = \\mk{p}{\\hbar\\kk\\frac{\\kgamma \\kRopt}{\\kgamma + 2\\kRopt}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kFforce_\\mathrm{max}} = \\mk{p}{\\hbar\\kk\\frac{\\kgamma}{2}}",
+       "uses": [
+        1
+       ],
+       "cap": "当$R_{opt} \\to \\infty$时，$R_{opt}/(\\gamma + 2R_{opt}) \\to 1/2$。"
+      }
+     ],
+     "num": "(8.27)"
+    }
+   ]
+  },
+  {
+   "id": "scattering-force",
+   "what": "作为每次散射事件动量的耗散力",
+   "source": "现代原子与光学物理 II，8.2 半经典描述，平面波：耗散力",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "对于光学跃迁，辐射场处于真空中，$\\bar n = 0$。",
+       "src": "8.5"
+      },
+      {
+       "text": "力由密度矩阵方程的定常态解求得，$\\dot\\rho_{22} = 0$。",
+       "src": "8.2"
+      },
+      {
+       "text": "密度矩阵是厄米的，$\\rho_{12} = \\rho_{21}^*$。",
+       "src": "3.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\kgamma(\\knbar + 1)\\krhotwotwo + \\kgamma\\knbar\\krhooneone} + \\mk{c}{i\\kOmega^*\\krhotwoone - i\\kOmega\\krhoonetwo}",
+      "src": "(3.86)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\krhotwotwo}} = \\mk{a}{-\\kgamma\\krhotwotwo} + \\mk{c}{(-i\\kOmega^*\\krhotwoone + i\\kOmega\\krhoonetwo)}",
+       "uses": [
+        0
+       ],
+       "cap": "取$\\bar n = 0$；并且式 (8.2) 的耦合与式 (3.84) 的耦合符号相反，所以那里的$\\Omega$在这里是$-\\Omega$。"
+      },
+      {
+       "tex": "\\mk{L}{0} = \\mk{a}{-\\kgamma\\krhotwotwo} + \\mk{c}{(-i\\kOmega^*\\krhotwoone + i\\kOmega\\krhoonetwo)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\kgamma\\krhotwotwo} = \\mk{c}{-i(\\kOmega^*\\krhotwoone - \\kOmega\\krhoonetwo)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{a}{\\kgamma\\krhotwotwo} = \\mk{c}{-i|\\kOmega|^2\\left(\\frac{\\krhotwoone}{\\kOmega} - \\left(\\frac{\\krhotwoone}{\\kOmega}\\right)^*\\right)}",
+       "uses": [
+        2
+       ],
+       "cap": "$\\Omega^*\\rho_{21} = |\\Omega|^2\\rho_{21}/\\Omega$，且$\\Omega\\rho_{12} = |\\Omega|^2(\\rho_{21}/\\Omega)^*$。"
+      },
+      {
+       "tex": "\\mk{a}{\\kgamma\\krhotwotwo} = \\mk{c}{2|\\kOmega|^2\\,\\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}",
+       "uses": [],
+       "cap": "$z - z^* = 2i\\,\\mathrm{Im}\\,z$."
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "平面波具有恒定的振幅，$\\nabla|\\Omega|^2 = 0$，其相位梯度为$\\nabla\\phi = \\mathbf{k}$。",
+       "src": "8.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kFforce} = \\mk{p}{2\\hbar|\\kOmega|^2\\nabla\\kphi\\ \\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)} + \\mk{g}{\\hbar\\nabla|\\kOmega|^2\\mathrm{Re}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}",
+      "src": "(8.18)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kFforce} = \\mk{p}{\\hbar\\kk\\cdot 2|\\kOmega|^2\\,\\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\kFforce} = \\mk{p}{\\hbar\\kk\\kgamma\\krhotwotwo}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(8.24)"
+    }
+   ]
+  },
+  {
+   "id": "semiclassical-light-force",
+   "what": "半经典光力",
+   "source": "现代原子与光学物理 II，8.2 半经典描述",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "原子非常接近于一个经典运动的球，所受的是平均力。",
+       "src": "8.2"
+      },
+      {
+       "tex": "\\kF = \\hbar\\nabla\\kOmega|2\\rangle\\langle 1| + \\hbar\\nabla\\kOmega^*|1\\rangle\\langle 2|",
+       "src": "(8.10)"
+      },
+      {
+       "tex": "\\langle|1\\rangle\\langle 2|\\rangle = \\mathrm{Tr}[\\rho|1\\rangle\\langle 2|] = \\krhotwoone",
+       "src": "(8.15)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kFmag} = \\mk{a}{\\langle\\kF\\rangle}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kFmag} = \\mk{a}{\\langle\\kF\\rangle} = \\mk{R}{\\hbar\\nabla\\kOmega\\langle|2\\rangle\\langle 1|\\rangle + \\hbar\\nabla\\kOmega^*\\langle|1\\rangle\\langle 2|\\rangle}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\kFmag} = \\mk{a}{\\langle\\kF\\rangle} = \\mk{R}{\\hbar\\nabla\\kOmega\\krhoonetwo + \\hbar\\nabla\\kOmega^*\\krhotwoone}",
+       "uses": [
+        2
+       ],
+       "cap": "下标是反直觉的，但是正确的：$\\langle|1\\rangle\\langle 2|\\rangle = \\rho_{21}$，同样$\\langle|2\\rangle\\langle 1|\\rangle = \\rho_{12}$。"
+      }
+     ],
+     "num": "(8.14)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kOmega(\\kr) = |\\kOmega(\\kr)|e^{i\\kphi(\\kr)}",
+       "src": "(8.3)"
+      },
+      {
+       "text": "密度矩阵是厄米的，$\\rho_{12} = \\rho_{21}^*$。",
+       "src": "3.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kFmag} = \\mk{a}{\\langle\\kF\\rangle} = \\mk{R}{\\hbar\\nabla\\kOmega\\krhoonetwo + \\hbar\\nabla\\kOmega^*\\krhotwoone}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kFmag} = \\mk{R}{\\hbar\\kOmega^*\\nabla\\kOmega\\left(\\frac{\\krhoonetwo}{\\kOmega^*}\\right) + \\hbar\\kOmega\\nabla\\kOmega^*\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{F}{\\kFmag} = \\mk{R}{\\hbar\\left(\\frac{1}{2}\\nabla|\\kOmega|^2 + i|\\kOmega|^2\\nabla\\kphi\\right)\\left(\\frac{\\krhoonetwo}{\\kOmega^*}\\right) + \\hbar\\left(\\frac{1}{2}\\nabla|\\kOmega|^2 - i|\\kOmega|^2\\nabla\\kphi\\right)\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "取$\\Omega = |\\Omega|e^{i\\phi}$，则$\\Omega^*\\nabla\\Omega = \\frac{1}{2}\\nabla|\\Omega|^2 + i|\\Omega|^2\\nabla\\phi$，而$\\Omega\\nabla\\Omega^*$是它的共轭。"
+      },
+      {
+       "tex": "\\mk{F}{\\kFmag} = \\mk{g}{\\hbar\\frac{1}{2}\\nabla|\\kOmega|^2\\left(\\frac{\\krhoonetwo}{\\kOmega^*} + \\frac{\\krhotwoone}{\\kOmega}\\right)} + \\mk{p}{i\\hbar|\\kOmega|^2\\nabla\\kphi\\left(\\frac{\\krhoonetwo}{\\kOmega^*} - \\frac{\\krhotwoone}{\\kOmega}\\right)}",
+       "uses": [],
+       "map": {
+        "R": [
+         "g",
+         "p"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{F}{\\kFmag} = \\mk{p}{\\underbrace{2\\hbar|\\kOmega|^2\\nabla\\kphi\\ \\mathrm{Im}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}_{\\text{耗散}}} + \\mk{g}{\\underbrace{\\hbar\\nabla|\\kOmega|^2\\mathrm{Re}\\left(\\frac{\\krhotwoone}{\\kOmega}\\right)}_{\\text{反应}}}",
+       "uses": [
+        2
+       ],
+       "cap": "由于$\\rho_{12}/\\Omega^* = (\\rho_{21}/\\Omega)^*$，和为$2\\,\\mathrm{Re}(\\rho_{21}/\\Omega)$，差为$-2i\\,\\mathrm{Im}(\\rho_{21}/\\Omega)$。"
+      }
+     ],
+     "num": "(8.18)"
+    }
+   ]
+  }
+ ]
+}

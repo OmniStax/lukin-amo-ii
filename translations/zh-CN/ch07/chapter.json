@@ -1,0 +1,455 @@
+{
+ "id": "7",
+ "dir": "ch07",
+ "title": "绝热过程",
+ "intro": {},
+ "sections": [
+  {
+   "id": "7.1",
+   "title": "含时哈密顿量的绝热定理"
+  },
+  {
+   "id": "7.2",
+   "title": "二能级系统的绝热性"
+  },
+  {
+   "id": "7.3",
+   "title": "多能级系统中的绝热过程"
+  },
+  {
+   "id": "7.4",
+   "title": "STIRAP 分析：绝热跟随的条件"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "epsilon",
+   "section": "7.1",
+   "type": "energy",
+   "meaning": "哈密顿量 Ĥ(t) 的瞬时本征值 ϵ_k(t)，其指标与它的本征态一样",
+   "anchor": "7.1-eq-7-1"
+  },
+  {
+   "sym": "c_inst",
+   "section": "7.1",
+   "concept": "probability-amplitude",
+   "meaning": "态在瞬时本征态 |ϵ_l(t)⟩ 上的概率幅 c_l(t)",
+   "anchor": "7.1-eq-7-2"
+  },
+  {
+   "sym": "omega",
+   "section": "7.1",
+   "type": "frequency",
+   "unit": "rad/s",
+   "meaning": "瞬时本征态 |ϵ_l⟩ 的频率 ω_l = ϵ_l/ℏ，从 ϵ_k 起量",
+   "anchor": "7.1-drv-adiabatic-condition",
+   "redefines": true
+  },
+  {
+   "sym": "tau",
+   "section": "7.1",
+   "type": "time",
+   "unit": "s",
+   "meaning": "哈密顿量变化的时标",
+   "anchor": "7.1-adiabaticity",
+   "redefines": true
+  },
+  {
+   "sym": "H",
+   "section": "7.1",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量"
+  },
+  {
+   "sym": "psi",
+   "section": "7.1",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，其希尔伯特空间的一个元素"
+  },
+  {
+   "sym": "t",
+   "section": "7.1",
+   "type": "time",
+   "meaning": "时间"
+  },
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "section": "7.3"
+  },
+  {
+   "sym": "Delta",
+   "concept": "lambda-detunings",
+   "meaning": "三能级系统中两个场相对激发态 |3⟩ 的单光子失谐 Δ",
+   "section": "7.3",
+   "redefines": true
+  },
+  {
+   "sym": "delta",
+   "concept": "lambda-detunings",
+   "meaning": "Λ 型系统的双光子失谐 δ = Δ₁ − Δ₂",
+   "section": "7.3"
+  },
+  {
+   "sym": "Delta_1",
+   "concept": "lambda-detunings",
+   "ref": "pump",
+   "meaning": "抽运场相对跃迁 |1⟩ → |3⟩ 的单光子失谐 Δ₁",
+   "section": "7.3"
+  },
+  {
+   "sym": "Delta_2",
+   "concept": "lambda-detunings",
+   "ref": "stokes",
+   "meaning": "斯托克斯场相对跃迁 |2⟩ → |3⟩ 的单光子失谐 Δ₂",
+   "section": "7.3"
+  },
+  {
+   "sym": "Omega_1",
+   "concept": "rabi-frequency",
+   "ref": "pump",
+   "meaning": "抽运场的拉比频率，它把 |1⟩ 耦合到激发态",
+   "section": "7.3"
+  },
+  {
+   "sym": "Omega_2",
+   "concept": "rabi-frequency",
+   "ref": "stokes",
+   "meaning": "斯托克斯场在跃迁 |2⟩ → |3⟩ 上的拉比频率",
+   "section": "7.3"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "三能级系统两个场的总拉比频率 Ω = √(|Ω₁|² + |Ω₂|²)",
+   "section": "7.3",
+   "redefines": true
+  },
+  {
+   "sym": "Omega_3",
+   "concept": "rabi-frequency",
+   "meaning": "四能级系统中把亚稳态 |3⟩ 耦合到激发态 |2⟩ 的场的拉比频率",
+   "section": "7.3"
+  },
+  {
+   "sym": "Omega_4",
+   "concept": "rabi-frequency",
+   "meaning": "四能级系统中把亚稳态 |4⟩ 耦合到激发态 |2⟩ 的场的拉比频率",
+   "section": "7.3"
+  },
+  {
+   "sym": "theta",
+   "concept": "mixing-angle",
+   "meaning": "暗态的混合角，tan θ = Ω₁/Ω₂；在四能级系统中 tan θ = Ω₁/√(|Ω₃|² + |Ω₄|²)",
+   "section": "7.3",
+   "redefines": true
+  },
+  {
+   "sym": "phi",
+   "type": "phase",
+   "meaning": "第二个混合角：对缀饰态 |Φ±⟩ 由 tan 2φ 确定，在四能级系统中则是确定第二个暗态的角",
+   "section": "7.3"
+  },
+  {
+   "sym": "epsilon_p",
+   "concept": "dressed-state-energies",
+   "meaning": "三能级系统缀饰态 |Φ₊⟩ 的能量",
+   "section": "7.3"
+  },
+  {
+   "sym": "epsilon_m",
+   "concept": "dressed-state-energies",
+   "meaning": "三能级系统缀饰态 |Φ₋⟩ 的能量",
+   "section": "7.3"
+  },
+  {
+   "sym": "epsilon_0",
+   "concept": "dressed-state-energies",
+   "meaning": "三能级系统缀饰态 |Φ₀⟩（暗态）的能量",
+   "section": "7.3"
+  },
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "section": "7.2",
+   "anchor": "7.2-eq-7-11"
+  },
+  {
+   "sym": "t",
+   "meaning": "时间",
+   "section": "7.3",
+   "type": "time"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "section": "7.2"
+  },
+  {
+   "sym": "tau",
+   "meaning": "哈密顿量变化的时标",
+   "section": "7.3",
+   "type": "time"
+  },
+  {
+   "sym": "Delta",
+   "concept": "detuning",
+   "meaning": "二能级系统的含时失谐 Δ(t)；裸态 |2⟩ 位于 −ℏΔ",
+   "unit": "rad/s",
+   "section": "7.2",
+   "anchor": "7.2-eq-7-11"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，其希尔伯特空间的一个元素",
+   "section": "7.3"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "拉比频率 Ω = ℰμ/ℏ",
+   "unit": "rad/s",
+   "section": "7.2",
+   "anchor": "7.2-opening-p"
+  },
+  {
+   "sym": "A_area",
+   "concept": "pulse-area",
+   "meaning": "脉冲面积 A = ∫2Ω dt",
+   "section": "7.3"
+  },
+  {
+   "sym": "theta",
+   "concept": "mixing-angle",
+   "meaning": "瞬时本征态 |±⟩ 的混合角 θ(t)",
+   "unit": "rad",
+   "section": "7.2",
+   "anchor": "7.2-eq-7-16"
+  },
+  {
+   "sym": "epsilon_pm",
+   "concept": "dressed-state-energies",
+   "meaning": "缀饰态 |±⟩ 的能量",
+   "section": "7.2",
+   "anchor": "7.2-eq-7-15"
+  },
+  {
+   "sym": "epsilon_p",
+   "concept": "dressed-state-energies",
+   "ref": "dressed-plus",
+   "meaning": "缀饰态 |+⟩ 的能量",
+   "section": "7.2",
+   "anchor": "7.2-drv-two-level-adiabaticity"
+  },
+  {
+   "sym": "epsilon_m",
+   "concept": "dressed-state-energies",
+   "ref": "dressed-minus",
+   "meaning": "缀饰态 |−⟩ 的能量",
+   "section": "7.2",
+   "anchor": "7.2-drv-two-level-adiabaticity"
+  },
+  {
+   "sym": "A_area",
+   "concept": "pulse-area",
+   "meaning": "脉冲面积 A = ∫2Ω dt",
+   "unit": "rad",
+   "section": "7.2",
+   "anchor": "7.2-drv-pulse-area-condition"
+  },
+  {
+   "sym": "P_LZ",
+   "concept": "landau-zener",
+   "meaning": "朗道-齐纳模型中完全转移到 |2⟩ 的概率",
+   "section": "7.2",
+   "anchor": "7.2-eq-7-22"
+  },
+  {
+   "sym": "alpha",
+   "meaning": "失谐被扫描的速率 α，Δ = αt",
+   "unit": "rad/s²",
+   "section": "7.2",
+   "anchor": "7.2-landau-zener-p"
+  },
+  {
+   "sym": "tau",
+   "type": "time",
+   "meaning": "哈密顿量变化的时标",
+   "unit": "s",
+   "section": "7.2",
+   "anchor": "7.2-rap-motivation"
+  },
+  {
+   "sym": "P_1",
+   "concept": "born-rule",
+   "ref": "lvl-1",
+   "meaning": "|1⟩ 的占有概率",
+   "section": "7.2"
+  },
+  {
+   "sym": "P_2",
+   "concept": "born-rule",
+   "ref": "lvl-2",
+   "meaning": "|2⟩ 的占有概率",
+   "section": "7.2"
+  },
+  {
+   "sym": "Omega_1",
+   "concept": "rabi-frequency",
+   "ref": "pump",
+   "meaning": "抽运场的拉比频率，它把 |1⟩ 耦合到激发态",
+   "anchor": "7.4-eq-7-39",
+   "section": "7.4"
+  },
+  {
+   "sym": "Omega_2",
+   "concept": "rabi-frequency",
+   "ref": "stokes",
+   "meaning": "斯托克斯场在跃迁 |2⟩ → |3⟩ 上的拉比频率",
+   "anchor": "7.4-eq-7-40",
+   "section": "7.4"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "三能级系统两个场的总拉比频率 Ω = √(|Ω₁|² + |Ω₂|²)",
+   "anchor": "7.4-eq-7-39",
+   "redefines": true,
+   "section": "7.4"
+  },
+  {
+   "sym": "Omega_3",
+   "concept": "rabi-frequency",
+   "ref": "four-s",
+   "meaning": "四能级系统中把亚稳态 |3⟩ 耦合到激发态 |2⟩ 的场的拉比频率",
+   "section": "7.4"
+  },
+  {
+   "sym": "Omega_4",
+   "concept": "rabi-frequency",
+   "ref": "four-c",
+   "meaning": "四能级系统中把亚稳态 |4⟩ 耦合到激发态 |2⟩ 的场的拉比频率",
+   "section": "7.4"
+  },
+  {
+   "sym": "gamma_13",
+   "concept": "coherence-decay-rate",
+   "meaning": "基态与激发态之间相干性 ρ₁₃ 的衰变率",
+   "unit": "s⁻¹",
+   "anchor": "7.4-eq-7-43",
+   "section": "7.4"
+  },
+  {
+   "sym": "c_1",
+   "concept": "probability-amplitude",
+   "ref": "lvl-1",
+   "meaning": "基态 |1⟩ 的概率幅",
+   "anchor": "7.4-stochastic",
+   "section": "7.4"
+  },
+  {
+   "sym": "c_2",
+   "concept": "probability-amplitude",
+   "ref": "lvl-2",
+   "meaning": "Λ 型系统亚稳下态 |2⟩ 的概率幅",
+   "anchor": "7.4-stochastic",
+   "redefines": true,
+   "section": "7.4"
+  },
+  {
+   "sym": "c_3",
+   "concept": "lambda-equations-of-motion",
+   "ref": "lvl-3",
+   "meaning": "Λ 型系统激发态 |3⟩ 的概率幅",
+   "anchor": "7.4-stochastic",
+   "section": "7.4"
+  },
+  {
+   "sym": "c_inst",
+   "concept": "probability-amplitude",
+   "meaning": "裸态 |i⟩ 的概率幅 c_i，i = 1, 2, 3（在图 7.5 中，为四能级系统的 |1⟩、|3⟩、|4⟩）",
+   "anchor": "7.4-eq-7-44",
+   "redefines": true,
+   "section": "7.4"
+  },
+  {
+   "sym": "rho_11",
+   "concept": "density-matrix-populations",
+   "ref": "lvl-1",
+   "meaning": "能级 |1⟩ 的布居",
+   "anchor": "7.4-mixture",
+   "section": "7.4"
+  },
+  {
+   "sym": "rho_22",
+   "concept": "density-matrix-populations",
+   "ref": "lvl-2",
+   "meaning": "能级 |2⟩ 的布居",
+   "anchor": "7.4-drv-stirap-fidelity",
+   "section": "7.4"
+  },
+  {
+   "sym": "rho_hat",
+   "concept": "density-operator",
+   "meaning": "系统的密度算符",
+   "section": "7.4"
+  },
+  {
+   "sym": "P_jump",
+   "concept": "jump-probability",
+   "meaning": "演化期间发生量子跳跃的概率",
+   "anchor": "7.4-eq-7-56",
+   "section": "7.4"
+  },
+  {
+   "sym": "Omega_NA",
+   "concept": "nonadiabatic-rabi-frequency",
+   "meaning": "有限脉冲时间把暗态 |D⟩ 耦合到亮态 |B⟩ 所用的拉比频率 Ω_NA = 1/τ",
+   "anchor": "7.4-omega-na",
+   "section": "7.4"
+  },
+  {
+   "sym": "gamma_B",
+   "concept": "bright-state-escape-rate",
+   "meaning": "离开亮态 |B⟩ 的逃逸率",
+   "anchor": "7.4-eq-7-64",
+   "section": "7.4"
+  },
+  {
+   "sym": "Delta_omega",
+   "type": "frequency",
+   "unit": "rad/s",
+   "meaning": "暗共振的谱线宽度 Δω = Ω²/γ₁₃",
+   "anchor": "7.4-eit",
+   "section": "7.4"
+  },
+  {
+   "sym": "tau",
+   "type": "time",
+   "meaning": "哈密顿量变化的时标",
+   "section": "7.4"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "section": "7.4"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，其希尔伯特空间的一个元素",
+   "section": "7.4"
+  },
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "section": "7.4"
+  }
+ ]
+}

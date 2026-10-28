@@ -1,0 +1,29 @@
+<section id="opening">
+<p class="cite-target">我们已经看到，<span data-concept="ion-hilbert-space">陷俘离子的内态与运动态</span>如何能够被外加激光以极高的控制水平操控。作为该系统的一种潜在应用，人们或许会问，这些技术是否允许<span data-concept="motional-state-engineering" id="arbitrary">设计出任意的运动态</span></p>
+<div class="equation" id="eq-10-27">$$|\kpsi\rangle = |g\rangle \otimes \sum_{n=0}^{\infty} \kcn|n\rangle. \tag{10.27}$$</div>
+<p>虽然<span data-concept="probability-amplitude">系数</span>$\kcn$原则上是任意的，但它们可以对应于多种有趣或有用的量子态，例如<span data-concept="fock-states">福克态</span>、<span data-concept="coherent-state">相干态</span>、<span data-concept="squeezed-state">压缩态</span>或<span data-concept="schrodinger-cat-state">薛定谔猫态</span>。设计这类量子态的能力，对于发展基于离子阱架构的量子门至关重要。</p>
+</section>
+
+<section id="arbitrary-state">
+<h2>10.3.1 任意运动量子态的制备</h2>
+<p class="cite-target">设我们从处于初态$|i\rangle$的系统出发，并希望最终处于态$|f\rangle$。利用调谐到<span data-concept="sideband-couplings">裸跃迁和边带跃迁</span>的激光脉冲，我们希望找到<span data-concept="pulse-sequence-unitary" id="unitary-series">将这两个态联系起来的一系列幺正变换</span></p>
+<div class="equation" id="eq-10-28">$$|f\rangle = U_N U_{N-1}\ldots U_2 U_1|i\rangle. \tag{10.28}$$</div>
+
+<h3>两个简单的例子</h3>
+<p>例如，若离子从<span data-ref="lvl-g">基态$|i\rangle = |g\rangle \otimes |0\rangle$</span>出发，而我们希望离子最终处于态$|f\rangle = (\alpha|g\rangle + \beta|e\rangle) \otimes |0\rangle$，则只需在<span data-concept="atomic-transition-frequency">裸共振频率</span>上施加一个适当时间的激光脉冲。</p>
+<p>一个稍复杂的变换涉及<span data-concept="internal-motional-swap" id="swap">在内部自由度与外部自由度之间交换信息</span></p>
+<div class="equation" id="eq-10-29">$$|i\rangle = (\alpha|g\rangle + \beta|e\rangle) \otimes |0\rangle \tag{10.29}$$</div>
+<div class="equation" id="eq-10-30">$$|f\rangle = |g\rangle \otimes (\alpha|0\rangle + \beta|1\rangle). \tag{10.30}$$</div>
+<p>这一变换可以通过将激光调谐到<span data-concept="sideband-couplings">红边带</span>并施加<span data-concept="pulse-area">一个$\pi$脉冲</span>来实现。</p>
+
+<h3>步骤</h3>
+<p>最终，我们希望能够例如从<span data-ref="lvl-g">基态$|i\rangle = |g\rangle \otimes |0\rangle$</span>出发，制备<span data-concept="motional-state-engineering">任意的运动量子态</span>。如果我们所期望的末态为$|f\rangle = |\kpsi\rangle$（其中<span data-concept="probability-amplitude">系数</span>$\kcn$是给定的），我们断言可以找到联系$|i\rangle$与$|f\rangle$的<span data-concept="pulse-sequence-unitary">一系列幺正变换</span>。要证明这一论断，逆向进行是方便的。由于幺正变换是可逆的，如果我们能说明如何从$|f\rangle$出发并最终到达$|i\rangle$，那么逆变换就能完成所需的任务。</p>
+<p>设我们的初态的<span data-concept="probability-amplitude">系数</span>对所有$n &gt; N$满足$\kcn = 0$，其中$N$是任意的但有限。<span data-concept="motional-state-preparation" id="procedure">我们的步骤是通过系统地把布居从谐振子的第$N$个梯级中清空，然后迭代，直到全部离子布居都处于基态来实现的</span>。所需的各步为：</p>
+<p>(1) 在<span data-concept="sideband-couplings">红边带</span>上施加激光，耦合<span data-ref="lvl-g">$|g\rangle|N\rangle$</span> $\rightarrow$ <span data-ref="lvl-e">$|e\rangle|N-1\rangle$</span>。利用我们对$\kcn$的了解，我们可以施加激光适当的时间来实现<span data-concept="pulse-area">一个$\pi$脉冲</span>，把<span data-ref="lvl-g">$|g\rangle|N\rangle$</span>的布居概率幅清空到最初为空的态<span data-ref="lvl-e">$|e\rangle|N-1\rangle$</span><sup class="fn" data-note="c-step-1"></sup>。</p>
+<p>(2) 在<span data-concept="atomic-transition-frequency">裸原子频率</span>上施加激光。根据给定的$\kcn$，我们可以再次确定将把<span data-ref="lvl-e">$|e\rangle|N-1\rangle$</span>清空到<span data-ref="lvl-g">$|g\rangle|N-1\rangle$</span>的脉冲长度<sup class="fn" data-note="c-step-2"></sup>。</p>
+<p>(3) 重复步骤 (1) 和 (2)，直到全部布居都处于基态。</p>
+<p>这一步骤的逆随后即可用来构造<span data-concept="motional-state-engineering">任意的运动量子态</span>。</p>
+<figure class="sim" id="sim-state-prep">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>梯级<span data-ref="lvl-g">$|g\rangle|n\rangle$</span>和<span data-ref="lvl-e">$|e\rangle|n\rangle$</span>的布居，$n = 0$到$4$，随着八个脉冲把选定的$|\kpsi\rangle$带回<span data-ref="lvl-g">$|g\rangle|0\rangle$</span>，如同该步骤那样逆向进行。红边带上的脉冲以各自的$\eta\kOmega\sqrt{n}$耦合每一对<span data-ref="lvl-g">$|g\rangle|n\rangle$</span> ↔ <span data-ref="lvl-e">$|e\rangle|n-1\rangle$</span>，裸共振上的脉冲以$\kOmega$耦合每一对<span data-ref="lvl-g">$|g\rangle|n\rangle$</span> ↔ <span data-ref="lvl-e">$|e\rangle|n\rangle$</span>，因此较低的梯级也会转动，从第二轮起<span data-ref="lvl-e">$|e\rangle|N-1\rangle$</span>不再为空。每个脉冲的面积和相位都依据整个态选定时，布居最终落在<span data-ref="lvl-g">$|g\rangle|0\rangle$</span>；若在红边带上用<span data-concept="pulse-area">π 脉冲</span>，则只有福克态能一路到底，而猫态或压缩态的大部分被留在阶梯较高处。旁边的条形是各脉冲的面积$\int|\kOmega|d\kt$，π 脉冲在虚线处。从末端往回拖动，同样的脉冲倒序运行，由<span data-ref="lvl-g">$|g\rangle|0\rangle$</span>构建$|\kpsi\rangle$。每个目标态都在$n = 4$以上被截断：α = 1的相干态、α = 1.2的偶猫态和r = 0.6的压缩真空态。</span></div>
+</figure>
+</section>

@@ -1,0 +1,2416 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "lambda_dB",
+   "latex": "\\lambda_\\mathrm{dB}",
+   "macro": "\\klambdadB"
+  },
+  {
+   "sym": "T_c",
+   "latex": "T_c",
+   "macro": "\\kTc"
+  },
+  {
+   "sym": "n_dens",
+   "latex": "n",
+   "macro": "\\kndens"
+  },
+  {
+   "sym": "n_i",
+   "latex": "n_i",
+   "macro": "\\kni"
+  },
+  {
+   "sym": "epsilon_i",
+   "latex": "\\epsilon_i",
+   "macro": "\\kepsi"
+  },
+  {
+   "sym": "mu_chem",
+   "latex": "\\mu",
+   "macro": "\\kmuchem"
+  },
+  {
+   "sym": "N_gs",
+   "latex": "N_{g.s.}",
+   "macro": "\\kNgs"
+  },
+  {
+   "sym": "tau_R",
+   "latex": "\\tau_R",
+   "macro": "\\ktauR"
+  },
+  {
+   "sym": "E_B",
+   "latex": "E_B",
+   "macro": "\\kEB"
+  },
+  {
+   "sym": "omega_Larmor",
+   "latex": "\\omega_\\mathrm{Larmor}",
+   "macro": "\\komegaLarmor"
+  },
+  {
+   "sym": "g_in",
+   "latex": "g_{in}",
+   "macro": "\\kgin"
+  },
+  {
+   "sym": "sigma_el",
+   "latex": "\\sigma_{el}",
+   "macro": "\\ksigmael"
+  },
+  {
+   "sym": "eta_ev",
+   "latex": "\\eta",
+   "macro": "\\ketaev"
+  },
+  {
+   "sym": "d_OD",
+   "latex": "d",
+   "macro": "\\kdOD"
+  },
+  {
+   "sym": "r_0",
+   "latex": "r_0",
+   "macro": "\\krzero"
+  },
+  {
+   "sym": "U_r",
+   "latex": "U(r)",
+   "macro": "\\kUr"
+  },
+  {
+   "sym": "f_k",
+   "latex": "f_k(\\theta)",
+   "macro": "\\kfk"
+  },
+  {
+   "sym": "sigma_sc",
+   "latex": "\\sigma",
+   "macro": "\\ksigmasc"
+  },
+  {
+   "sym": "delta_l",
+   "latex": "\\delta_l",
+   "macro": "\\kdeltal"
+  },
+  {
+   "sym": "a_scat",
+   "latex": "a",
+   "macro": "\\kascat"
+  },
+  {
+   "sym": "a_s",
+   "latex": "a_s",
+   "macro": "\\kas"
+  },
+  {
+   "sym": "a_bg",
+   "latex": "a_{bg}",
+   "macro": "\\kabg"
+  },
+  {
+   "sym": "E_res",
+   "latex": "E_{res}^*",
+   "macro": "\\kEres"
+  },
+  {
+   "sym": "Delta_Fesh",
+   "latex": "\\Delta",
+   "macro": "\\kDeltaFesh"
+  },
+  {
+   "sym": "psi_hat",
+   "latex": "\\hat{\\psi}(\\mathbf{r})",
+   "macro": "\\kpsihat"
+  },
+  {
+   "sym": "psi_GP",
+   "latex": "\\psi",
+   "macro": "\\kpsiGP"
+  },
+  {
+   "sym": "U_0",
+   "latex": "U_0",
+   "macro": "\\kUzero"
+  },
+  {
+   "sym": "xi_heal",
+   "latex": "\\xi",
+   "macro": "\\kxiheal"
+  },
+  {
+   "sym": "a_t",
+   "latex": "a_t",
+   "macro": "\\kat"
+  },
+  {
+   "sym": "omega_t",
+   "latex": "\\omega_t",
+   "macro": "\\komegat"
+  },
+  {
+   "sym": "E_mf",
+   "latex": "E_{mf}",
+   "macro": "\\kEmf"
+  },
+  {
+   "sym": "n_0",
+   "latex": "n_0",
+   "macro": "\\knzero"
+  },
+  {
+   "sym": "s_sound",
+   "latex": "s",
+   "macro": "\\kssound"
+  },
+  {
+   "sym": "omega_q",
+   "latex": "\\omega_q",
+   "macro": "\\komegaq"
+  },
+  {
+   "sym": "epsilon_q",
+   "latex": "\\epsilon_q",
+   "macro": "\\kepsq"
+  },
+  {
+   "sym": "nu_T",
+   "latex": "\\nu_T",
+   "macro": "\\knuT"
+  },
+  {
+   "sym": "E_R",
+   "latex": "E_R",
+   "macro": "\\kER"
+  },
+  {
+   "sym": "V_0",
+   "latex": "V_0",
+   "macro": "\\kVzero"
+  },
+  {
+   "sym": "K_L",
+   "latex": "K_L",
+   "macro": "\\kKL"
+  },
+  {
+   "sym": "nu_fill",
+   "latex": "\\nu",
+   "macro": "\\knufill"
+  },
+  {
+   "sym": "E_tot",
+   "latex": "E",
+   "macro": "\\kEtot"
+  },
+  {
+   "sym": "lambda_DB",
+   "latex": "\\lambda_{DB}",
+   "macro": "\\klambdaDB"
+  },
+  {
+   "sym": "v_bar",
+   "latex": "\\bar{v}",
+   "macro": "\\kvbar"
+  },
+  {
+   "sym": "mu_mag",
+   "latex": "\\mu",
+   "macro": "\\kmumag"
+  },
+  {
+   "sym": "V_geo",
+   "latex": "V_0",
+   "macro": "\\kVgeo"
+  },
+  {
+   "sym": "Gamma_th",
+   "latex": "\\Gamma",
+   "macro": "\\kGammath"
+  },
+  {
+   "sym": "q",
+   "latex": "q",
+   "macro": "\\kq"
+  },
+  {
+   "sym": "a_c",
+   "latex": "a_c",
+   "macro": "\\kac"
+  },
+  {
+   "sym": "R_exp",
+   "latex": "R",
+   "macro": "\\kRexp"
+  },
+  {
+   "sym": "Delta_R_s",
+   "latex": "\\Delta R_s",
+   "macro": "\\kDeltaRs"
+  },
+  {
+   "sym": "Delta_R",
+   "latex": "\\Delta R",
+   "macro": "\\kDeltaR"
+  },
+  {
+   "sym": "Delta_z",
+   "latex": "\\Delta z",
+   "macro": "\\kDeltaz"
+  },
+  {
+   "sym": "mu_red",
+   "latex": "\\mu",
+   "macro": "\\kmured"
+  },
+  {
+   "sym": "V_trap",
+   "latex": "V_\\mathrm{trap}",
+   "macro": "\\kVtrap"
+  },
+  {
+   "sym": "V_r",
+   "latex": "V(r)",
+   "macro": "\\kVr"
+  },
+  {
+   "sym": "phi_L",
+   "latex": "\\phi_L",
+   "macro": "\\kphiL"
+  },
+  {
+   "sym": "phi_R",
+   "latex": "\\phi_R",
+   "macro": "\\kphiR"
+  },
+  {
+   "sym": "E_dw",
+   "latex": "E",
+   "macro": "\\kEdw"
+  },
+  {
+   "sym": "U_pair",
+   "latex": "U",
+   "macro": "\\kUpair"
+  },
+  {
+   "sym": "a_HO",
+   "latex": "a_{HO}",
+   "macro": "\\kaHO"
+  },
+  {
+   "sym": "a_lat",
+   "latex": "a",
+   "macro": "\\kalat"
+  },
+  {
+   "sym": "E_SF",
+   "latex": "E_\\mathrm{SF}",
+   "macro": "\\kESF"
+  },
+  {
+   "sym": "E_MI",
+   "latex": "E_\\mathrm{MI}",
+   "macro": "\\kEMI"
+  },
+  {
+   "sym": "Delta_E_ex",
+   "latex": "\\Delta E",
+   "macro": "\\kDeltaEex"
+  },
+  {
+   "sym": "Delta_eps",
+   "latex": "\\Delta\\epsilon",
+   "macro": "\\kDeltaeps"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "de-broglie-wavelength",
+   "kind": "definition",
+   "section": "11.1",
+   "name": "德布罗意波长",
+   "terms": [
+    "德布罗意波长",
+    "物质波包"
+   ],
+   "symbol": "lambda_dB",
+   "type": "length",
+   "statement": "低温下，原子最好描述为物质波包，其大小由德布罗意波长决定。",
+   "forms": [
+    {
+     "id": "eq-11-1",
+     "latex": "\\lambda_\\mathrm{dB} = \\sqrt{\\frac{2\\pi\\hbar^2}{mk_BT}}",
+     "anchor": "11.1-eq-11-1"
+    }
+   ]
+  },
+  {
+   "id": "bec-criterion",
+   "kind": "result",
+   "section": "11.1",
+   "name": "凝聚判据",
+   "terms": [
+    "相空间密度"
+   ],
+   "statement": "主要为经典行为与主要为量子力学行为之间的转变，发生在原子波包重叠时，在相空间密度达到 ζ(3/2) ≈ 2.612 的密度和温度下。",
+   "forms": [
+    {
+     "id": "eq-11-2",
+     "latex": "n\\,\\lambda_\\mathrm{dB}(T_c)^3 = \\zeta(3/2) \\approx 2.612",
+     "anchor": "11.1-eq-11-2"
+    }
+   ]
+  },
+  {
+   "id": "atom-number-density",
+   "kind": "definition",
+   "section": "11.1",
+   "name": "原子密度",
+   "terms": [
+    "密度"
+   ],
+   "symbol": "n_dens",
+   "type": "density",
+   "statement": "气体的密度 n 给出其单位体积内的原子数。"
+  },
+  {
+   "id": "critical-temperature",
+   "kind": "definition",
+   "section": "11.1",
+   "name": "临界温度",
+   "terms": [
+    "临界温度",
+    "凝聚温度"
+   ],
+   "symbol": "T_c",
+   "type": "temperature",
+   "statement": "在由气体密度决定的临界温度 T_c 以下，宏观数量的玻色原子占据最低能态，即使在有限温度下也是如此。",
+   "forms": [
+    {
+     "id": "eq-11-3",
+     "latex": "k_BT_c = \\frac{2\\pi\\hbar^2}{m}\\left(\\frac{n}{2.612}\\right)^{2/3}",
+     "anchor": "11.1-eq-11-3"
+    }
+   ]
+  },
+  {
+   "id": "bose-condensation",
+   "kind": "definition",
+   "section": "11.1",
+   "name": "玻色凝聚",
+   "terms": [
+    "玻色凝聚",
+    "玻色-爱因斯坦凝聚体",
+    "BEC"
+   ],
+   "statement": "玻色凝聚，即最低能态的宏观占据，只有在原子云既稠密又低温、从而相空间密度很大时才会发生。"
+  },
+  {
+   "id": "indistinguishability-statistics",
+   "kind": "idea",
+   "section": "11.1",
+   "name": "不可分辨性与统计权重",
+   "terms": [
+    "不可分辨粒子"
+   ],
+   "statement": "一种排布的权重是它能够形成的方式数；对于两个态中的十个粒子，当它们可分辨时，{5, 5} 排布的权重是 {10, 0} 排布的 252 倍，而对于不可分辨粒子，二者权重相等。"
+  },
+  {
+   "id": "bose-einstein-distribution",
+   "kind": "result",
+   "section": "11.1",
+   "name": "玻色-爱因斯坦分布",
+   "terms": [
+    "玻色-爱因斯坦统计法",
+    "玻色-爱因斯坦分布"
+   ],
+   "symbol": "n_i",
+   "statement": "在巨正则系综中，总能量为 E 的 N 个玻色粒子以最随机的方式分布在各能级 ϵ_i 上，即玻色-爱因斯坦分布。",
+   "forms": [
+    {
+     "id": "eq-11-4",
+     "latex": "n_i = \\frac{1}{e^{(\\epsilon_i - \\mu)/k_BT} - 1}",
+     "anchor": "11.1-eq-11-4"
+    },
+    {
+     "id": "eq-11-5",
+     "latex": "N = \\sum_i n_i",
+     "anchor": "11.1-eq-11-5"
+    },
+    {
+     "id": "eq-11-6",
+     "latex": "E = \\sum_i \\epsilon_i n_i",
+     "anchor": "11.1-eq-11-6"
+    }
+   ]
+  },
+  {
+   "id": "chemical-potential",
+   "kind": "definition",
+   "section": "11.1",
+   "name": "化学势",
+   "terms": [
+    "化学势"
+   ],
+   "symbol": "mu_chem",
+   "type": "energy",
+   "statement": "化学势 μ 确定巨正则系综中的粒子数；处于平衡的气体与表面具有相等的化学势。"
+  },
+  {
+   "id": "ground-state-occupation-bookkeeping",
+   "kind": "skill",
+   "section": "11.1",
+   "name": "把基态排除在积分之外",
+   "terms": [
+    "态密度"
+   ],
+   "statement": "当把求和转化为对态密度 g(ϵ) 的积分时，处于基态 ϵ₀ 的原子必须作为单独一项保留。",
+   "forms": [
+    {
+     "id": "eq-11-7",
+     "latex": "N = \\frac{1}{e^{(\\epsilon_0 - \\mu)/k_BT} - 1} + \\int\\frac{g(\\epsilon)}{e^{(\\epsilon - \\mu)/k_BT} - 1}d\\epsilon",
+     "anchor": "11.1-eq-11-7"
+    }
+   ]
+  },
+  {
+   "id": "ideal-gas-condensate-fraction",
+   "kind": "result",
+   "section": "11.1",
+   "name": "理想气体的凝聚体分数",
+   "terms": [
+    "基态占有数"
+   ],
+   "symbol": "N_gs",
+   "statement": "对于无相互作用、不受约束的玻色子，在 T_c 以下基态容纳 N(1 − (T/T_c)^{3/2}) 个原子；在三维谐振阱中，幂指数为 3。",
+   "forms": [
+    {
+     "id": "eq-11-9",
+     "latex": "N_{g.s.} = N\\left(1 - \\left(\\frac{T}{T_c}\\right)^{3/2}\\right)",
+     "anchor": "11.1-eq-11-9"
+    },
+    {
+     "id": "eq-11-10",
+     "latex": "N_{g.s.} = N\\left(1 - \\left(\\frac{T}{T_c}\\right)^3\\right)",
+     "anchor": "11.1-eq-11-10"
+    }
+   ]
+  },
+  {
+   "id": "superfluid-helium-depletion",
+   "kind": "idea",
+   "section": "11.2",
+   "name": "作为耗尽凝聚体的超流氦",
+   "terms": [
+    "超流氦",
+    "量子耗尽"
+   ],
+   "statement": "超流氦是一种强关联流体，其中只有约 10% 的原子处于基态：它是一种玻色凝聚体，具有由相互作用造成的强量子耗尽。"
+  },
+  {
+   "id": "gas-bec-metastability",
+   "kind": "idea",
+   "section": "11.2",
+   "name": "作为亚稳态的凝聚",
+   "terms": [
+    "亚稳态"
+   ],
+   "statement": "在热力学平衡中，每种物质在冷到足够低、稠密到足够高而发生玻色凝聚之前，都会变成固体或液体，因此气态凝聚体必须是一种持续时间长到足以测量的亚稳态。"
+  },
+  {
+   "id": "spin-polarized-hydrogen",
+   "kind": "idea",
+   "section": "11.2",
+   "name": "自旋极化氢",
+   "terms": [
+    "自旋极化氢"
+   ],
+   "statement": "自旋极化氢不能复合成 H₂，并且能保持极化数日；它在超流氦壁上被低温冷却并被磁陷俘，直到壁上的自旋反转碰撞使它在低温下停止。"
+  },
+  {
+   "id": "alkali-stability-window",
+   "kind": "result",
+   "section": "11.2",
+   "name": "碱金属的稳定窗口",
+   "terms": [
+    "稳定窗口"
+   ],
+   "statement": "在极低的密度和纳开尔文的温度下，复合需要三粒子碰撞，其速率与二体弹性散射速率相比很小，因此碱金属气体可以被蒸发冷却至凝聚。"
+  },
+  {
+   "id": "trapping-and-cooling",
+   "kind": "idea",
+   "section": "11.3",
+   "name": "陷俘与冷却",
+   "statement": "原子必须是冷的才能被陷俘，而一旦被陷俘，它们还可以被进一步冷却，因为阱切断了它们与外界的热接触。"
+  },
+  {
+   "id": "surface-sticking",
+   "kind": "result",
+   "section": "11.3",
+   "name": "原子黏附于表面",
+   "terms": [
+    "结合能"
+   ],
+   "symbol": "E_B",
+   "type": "energy",
+   "statement": "表面上方的势支持许多束缚态，原子很快弛豫到这些束缚态中，因此在约 1 mK 以上，接触固体的原子黏附的概率基本为一。"
+  },
+  {
+   "id": "surface-resonance-time",
+   "kind": "result",
+   "section": "11.3",
+   "name": "表面共振时间",
+   "terms": [
+    "共振时间"
+   ],
+   "symbol": "tau_R",
+   "type": "time",
+   "statement": "令流向表面的通量等于离开的速率，就得到原子黏附停留的时间，它对原子的结合能呈指数敏感。",
+   "forms": [
+    {
+     "id": "eq-11-12",
+     "latex": "\\tau_R = \\frac{4\\lambda_{DB}}{\\bar{v}s}e^{E_B/(k_BT)}",
+     "anchor": "11.3-drv-surface-resonance-time"
+    },
+    {
+     "id": "eq-11-11",
+     "latex": "\\frac{\\sigma}{n} = \\lambda_{DB}e^{E_B/(k_BT)}",
+     "anchor": "11.3-eq-11-11"
+    }
+   ]
+  },
+  {
+   "id": "trap-depth",
+   "kind": "definition",
+   "section": "11.3",
+   "name": "阱深",
+   "terms": [
+    "阱深"
+   ],
+   "statement": "阱的深度用它能够约束的原子的最高温度来表示。"
+  },
+  {
+   "id": "buffer-gas-cooling",
+   "kind": "idea",
+   "section": "11.3",
+   "name": "缓冲气体冷却",
+   "terms": [
+    "缓冲气体冷却"
+   ],
+   "statement": "冷的缓冲气体在任何原子或分子到达腔室壁之前，就把它冷却到与自身相同的温度，接近 1 K；然后将气体抽走，原子被磁陷俘。"
+  },
+  {
+   "id": "magnetic-trap",
+   "kind": "result",
+   "section": "11.3",
+   "name": "磁陷俘",
+   "terms": [
+    "弱场趋近态",
+    "磁阱"
+   ],
+   "statement": "磁阱通过能量 g_Fμ_Bm_FB_z 约束角动量不为零的原子；由于麦克斯韦方程组禁止静磁场出现极大值，只有弱场趋近态才能被陷俘。",
+   "forms": [
+    {
+     "id": "eq-11-13",
+     "latex": "H = g_F\\mu_Bm_FB_z",
+     "anchor": "11.3-eq-11-13"
+    }
+   ]
+  },
+  {
+   "id": "adiabatic-spin-following",
+   "kind": "result",
+   "section": "11.3",
+   "name": "绝热跟随与马约拉纳反转",
+   "terms": [
+    "马约拉纳反转",
+    "拉莫尔"
+   ],
+   "symbol": "omega_Larmor",
+   "type": "frequency",
+   "statement": "如果场的方向相对于拉莫尔频率缓慢转动，原子就保持被陷俘；转得太快会造成自旋反转，把原子逐出。",
+   "forms": [
+    {
+     "id": "eq-11-14",
+     "latex": "\\frac{d\\theta}{dt} \\ll \\frac{\\mu_BB_z}{\\hbar} = \\omega_\\mathrm{Larmor}",
+     "anchor": "11.3-eq-11-14"
+    }
+   ]
+  },
+  {
+   "id": "quadrupole-trap",
+   "kind": "definition",
+   "section": "11.3",
+   "name": "四极阱及其孔洞",
+   "terms": [
+    "四极阱",
+    "时间轨道势"
+   ],
+   "statement": "反亥姆霍兹线圈产生在每个方向上都是线性的场，在中心处为零，那里绝热跟随失效，因此阱的作用就像有一个孔洞；时间轨道势 (TOP) 阱通过移动零点把这个孔洞堵住。"
+  },
+  {
+   "id": "ioffe-pritchard-trap",
+   "kind": "definition",
+   "section": "11.3",
+   "name": "约费-普里查德阱",
+   "terms": [
+    "约费-普里查德"
+   ],
+   "statement": "二维四极场与亥姆霍兹线圈结合，给出场最小值不为零的近似谐振阱。",
+   "forms": [
+    {
+     "id": "eq-11-15",
+     "latex": "\\mathbf{B} = B_0\\hat{z} + B_1(x, -y, 0) + \\frac{B_2}{2}\\left(-xz, -yz, z^2 - \\tfrac{1}{2}(x^2 + y^2)\\right)",
+     "anchor": "11.3-eq-11-15"
+    }
+   ]
+  },
+  {
+   "id": "evaporative-cooling",
+   "kind": "definition",
+   "section": "11.3",
+   "name": "蒸发冷却",
+   "terms": [
+    "蒸发冷却",
+    "蒸发逸出"
+   ],
+   "statement": "从阱顶蒸发逸出的原子携带高于平均值的能量，因此剩余原子重新热化到更低的温度；降低势垒可使冷却率保持较高。"
+  },
+  {
+   "id": "rf-knife",
+   "kind": "definition",
+   "section": "11.3",
+   "name": "射频刀",
+   "terms": [
+    "射频刀"
+   ],
+   "statement": "射频耦合到未陷俘的超精细态，在阱的塞曼移位与之相符处共振，从阱的边缘切除最热的原子；扫描频率使刀向中心移动，这是一个限制阱深的朗道-齐纳交叉。"
+  },
+  {
+   "id": "trap-loss-processes",
+   "kind": "idea",
+   "section": "11.3",
+   "name": "竞争损失过程",
+   "terms": [
+    "三体复合",
+    "偶极的",
+    "非弹性"
+   ],
+   "statement": "三体复合、使自旋反转的非弹性（偶极）碰撞以及背景气体碰撞限制了被陷俘原子的寿命，因此蒸发必须快到足以完成，又慢到足以让原子重新热化。"
+  },
+  {
+   "id": "linear-trap-atom-number",
+   "kind": "result",
+   "section": "11.3",
+   "name": "线性阱中的原子",
+   "terms": [
+    "压缩因子"
+   ],
+   "symbol": "eta_ev",
+   "statement": "在球形线性阱中，热密度按 e^{−ηρ/ρ₀} 下降，其中 η = μB₀/k_BT，于是阱容纳 6V₀n₀/η³ 个原子：η³ 是相对于几何体积的压缩因子。",
+   "forms": [
+    {
+     "id": "eq-11-17",
+     "latex": "n(\\rho) = n_0e^{-\\mu|B(\\rho)|/k_BT}",
+     "anchor": "11.3-eq-11-17"
+    },
+    {
+     "id": "eq-11-21",
+     "latex": "N = 6\\frac{4\\pi\\rho_0^3}{3}\\frac{n_0}{\\eta^3}",
+     "anchor": "11.3-drv-linear-trap-atom-number"
+    }
+   ]
+  },
+  {
+   "id": "two-body-loss",
+   "kind": "result",
+   "section": "11.3",
+   "name": "二体非弹性损失",
+   "terms": [
+    "速率常数"
+   ],
+   "symbol": "g_in",
+   "statement": "二体损失与密度的平方成正比，因此阱中的偶极损失相对于原子数带有一个 1/8 的因子。",
+   "forms": [
+    {
+     "id": "eq-11-22",
+     "latex": "\\dot{n} = -g_{in}n^2",
+     "anchor": "11.3-eq-11-22"
+    },
+    {
+     "id": "eq-11-26",
+     "latex": "\\dot{N}_d = -6g_{in}n_0^2\\frac{V_0}{\\eta^3}\\cdot\\frac{1}{8}",
+     "anchor": "11.3-drv-dipolar-loss-rate"
+    }
+   ]
+  },
+  {
+   "id": "evaporation-rate",
+   "kind": "result",
+   "section": "11.3",
+   "name": "蒸发率",
+   "terms": [
+    "热化率"
+   ],
+   "symbol": "sigma_el",
+   "statement": "原子蒸发的速度与截面为 σ_el 的弹性碰撞补充热原子储备的速度一样快。",
+   "forms": [
+    {
+     "id": "eq-11-30",
+     "latex": "\\dot{N}_v = -n_0^2\\bar{v}\\sigma_{el}e^{-\\eta}V_0\\eta^{\\sim 1.5}",
+     "anchor": "11.3-eq-11-30"
+    }
+   ]
+  },
+  {
+   "id": "evaporation-figure-of-merit",
+   "kind": "result",
+   "section": "11.3",
+   "name": "好碰撞与坏碰撞",
+   "statement": "因偶极弛豫而损失的原子会加热样品，因此只有蒸发损失胜过非弹性损失时蒸发才会成功，这需要弹性速率与非弹性速率之比有利，即 g_in ≪ g_el，碱金属就是如此。",
+   "forms": [
+    {
+     "id": "eq-11-31",
+     "latex": "\\frac{\\dot{N}_v}{\\dot{N}_d} \\approx e^{-\\eta}\\eta^{4.5}\\frac{g_{el}}{g_{in}}",
+     "anchor": "11.3-eq-11-31"
+    }
+   ]
+  },
+  {
+   "id": "absorption-imaging",
+   "kind": "definition",
+   "section": "11.3",
+   "name": "吸收成像",
+   "terms": [
+    "光学深度",
+    "吸收成像"
+   ],
+   "symbol": "d_OD",
+   "statement": "对云在共振光束中的阴影成像，可测得其透射系数 e^{−d/2}，它由光学深度决定。",
+   "forms": [
+    {
+     "id": "eq-11-37",
+     "latex": "d = \\frac{n_c\\sigma_0}{1 + \\delta^2}",
+     "anchor": "11.3-eq-11-37"
+    },
+    {
+     "id": "eq-11-36",
+     "latex": "t = e^{-d/2}",
+     "anchor": "11.3-eq-11-36"
+    }
+   ]
+  },
+  {
+   "id": "time-of-flight-imaging",
+   "kind": "definition",
+   "section": "11.3",
+   "name": "飞行时间成像",
+   "terms": [
+    "飞行时间成像"
+   ],
+   "statement": "云从阱中释放后膨胀，并把其初始动量分布映射到位置上，然后对其成像；其形状可以区分抛物线形的凝聚体与高斯形的热云。"
+  },
+  {
+   "id": "phase-contrast-imaging",
+   "kind": "definition",
+   "section": "11.3",
+   "name": "相衬成像",
+   "terms": [
+    "相衬成像"
+   ],
+   "statement": "在非共振时，云给光束印上相位 φ = −δd/2，通过与参考光干涉读出，激发的原子极少，因此同一个凝聚体可以被成像许多次。",
+   "forms": [
+    {
+     "id": "eq-11-38",
+     "latex": "\\phi = -\\delta\\frac{d}{2}",
+     "anchor": "11.3-eq-11-38"
+    }
+   ]
+  },
+  {
+   "id": "dilute-quantum-gas",
+   "kind": "definition",
+   "section": "11.4",
+   "name": "稀薄量子气体",
+   "terms": [
+    "稀薄量子气体"
+   ],
+   "symbol": "r_0",
+   "type": "length",
+   "statement": "在稀薄气体中，原子间距比范德瓦耳斯尾部的力程 r₀ 大得多，而在简并温度以下，n^{−1/3}r₀ ≪ 1 意味着 kr₀ ≪ 1，这是散射理论的小参数。"
+  },
+  {
+   "id": "van-der-waals-potential",
+   "kind": "result",
+   "section": "11.4",
+   "name": "范德瓦耳斯势",
+   "terms": [
+    "范德瓦耳斯势"
+   ],
+   "symbol": "U_r",
+   "type": "energy",
+   "statement": "在相距较远的中性基态原子之间，二阶的偶极-偶极相互作用给出按 1/r⁶ 下降的吸引势。",
+   "forms": [
+    {
+     "id": "eq-11-42",
+     "latex": "U(r) = -\\frac{\\hbar^2}{2\\mu}\\frac{r_0^4}{r^6}",
+     "anchor": "11.4-eq-11-42"
+    },
+    {
+     "id": "eq-11-40",
+     "latex": "\\hat{V}_d(r) = \\frac{\\mathbf{d_1}\\cdot\\mathbf{d_2}}{r^3} - 3\\frac{(\\mathbf{d_1}\\cdot\\mathbf{r})(\\mathbf{d_2}\\cdot\\mathbf{r})}{r^5}",
+     "anchor": "11.4-eq-11-40"
+    }
+   ]
+  },
+  {
+   "id": "relative-motion-scattering",
+   "kind": "idea",
+   "section": "11.4",
+   "name": "作为固定势散射的碰撞",
+   "terms": [
+    "约化质量"
+   ],
+   "statement": "当质心解耦时，两个原子的碰撞就是一个约化质量为 μ = m₁m₂/(m₁ + m₂) 的单体在固定势 U(r) 上的散射。"
+  },
+  {
+   "id": "scattering-amplitude",
+   "kind": "definition",
+   "section": "11.4",
+   "name": "散射振幅",
+   "terms": [
+    "散射振幅"
+   ],
+   "symbol": "f_k",
+   "type": "length",
+   "statement": "在远离散射体处，波函数是入射平面波加上以散射振幅 f_k(θ) 为权重的出射球面波。",
+   "forms": [
+    {
+     "id": "eq-11-45",
+     "latex": "\\lim_{r\\to\\infty}\\psi_k(\\mathbf{r}) = e^{ikz} + f_k(\\theta)\\frac{e^{ikr}}{r}",
+     "anchor": "11.4-eq-11-45"
+    }
+   ]
+  },
+  {
+   "id": "scattering-cross-section",
+   "kind": "definition",
+   "section": "11.4",
+   "name": "散射截面",
+   "terms": [
+    "分散射截面",
+    "总截面",
+    "截面"
+   ],
+   "symbol": "sigma_sc",
+   "statement": "分散射截面是进入某立体角的散射率与入射强度之比，对弹性碰撞为 |f_k(θ)|²，它对所有角度的积分是总截面，是一个面积。",
+   "forms": [
+    {
+     "id": "eq-11-50",
+     "latex": "\\sigma = \\int d\\Omega\\frac{d\\sigma}{d\\Omega} = 2\\pi\\int_0^{\\pi}|f_k(\\theta)|^2\\sin\\theta d\\theta",
+     "anchor": "11.4-eq-11-50"
+    },
+    {
+     "id": "eq-11-49",
+     "latex": "\\frac{d\\sigma}{d\\Omega} = |f_k(\\theta)|^2\\frac{v_\\mathrm{final}}{v_\\mathrm{initial}}",
+     "anchor": "11.4-eq-11-49"
+    }
+   ]
+  },
+  {
+   "id": "born-approximation",
+   "kind": "result",
+   "section": "11.4",
+   "name": "玻恩近似",
+   "terms": [
+    "玻恩近似"
+   ],
+   "statement": "按势展开，散射振幅是势的傅里叶变换；在低能下只有第一项保留，因此散射波是各向同性的。",
+   "forms": [
+    {
+     "id": "eq-11-53",
+     "latex": "f_k(\\theta) = \\frac{-\\mu}{2\\pi\\hbar^2}\\int d^3\\mathbf{r}'e^{-i(\\mathbf{k}'-\\mathbf{k})\\cdot\\mathbf{r}'}U(\\mathbf{r}')",
+     "anchor": "11.4-drv-born-amplitude"
+    }
+   ]
+  },
+  {
+   "id": "partial-wave-expansion",
+   "kind": "skill",
+   "section": "11.4",
+   "name": "分波展开",
+   "terms": [
+    "分波分析"
+   ],
+   "statement": "对于球对称势，波函数按勒让德多项式展开成互不耦合的径向方程，在 r₀ 内外分别求解，并在 r₀ < r < 1/k 处匹配。",
+   "forms": [
+    {
+     "id": "eq-11-57",
+     "latex": "\\frac{d^2R_l}{dr^2} + \\frac{2}{r}\\frac{dR_l}{dr} - \\frac{l(l+1)}{r^2}R_l - \\frac{2\\mu}{\\hbar^2}U(r)R_l = -k^2R_l",
+     "anchor": "11.4-eq-11-57"
+    }
+   ]
+  },
+  {
+   "id": "scattering-phase-shift",
+   "kind": "result",
+   "section": "11.4",
+   "name": "散射相移",
+   "terms": [
+    "相移"
+   ],
+   "symbol": "delta_l",
+   "type": "phase",
+   "statement": "每个分波离开势时都带有一个由匹配系数确定的相移 δ_l，它在 k → 0 时趋于零，散射振幅是对它们的求和。",
+   "forms": [
+    {
+     "id": "eq-11-62",
+     "latex": "f_k(\\theta) = \\sum_{l=0}^{\\infty}P_l(\\cos\\theta)\\frac{2l+1}{2ik}\\left(e^{2i\\delta_l} - 1\\right)",
+     "anchor": "11.4-drv-partial-wave-amplitude"
+    },
+    {
+     "id": "eq-11-61",
+     "latex": "\\tan\\delta_l = \\frac{c_2}{c_1}\\frac{k^{2l+1}}{(2l-1)!!(2l+1)!!}",
+     "anchor": "11.4-eq-11-61"
+    }
+   ]
+  },
+  {
+   "id": "s-wave-dominance",
+   "kind": "result",
+   "section": "11.4",
+   "name": "s 波主导",
+   "terms": [
+    "超冷极限",
+    "s 波"
+   ],
+   "statement": "在超冷极限 kr₀ ≪ 1 下，分波振幅 f_l ≈ cr₀(r₀k)^{2l}，因此除 s 波振幅 f₀ 外都可以忽略，除非出现共振。",
+   "forms": [
+    {
+     "id": "eq-11-63",
+     "latex": "f_l \\approx \\frac{\\delta_l}{k} \\approx cr_0(r_0k)^{2l}",
+     "anchor": "11.4-drv-partial-wave-ultracold"
+    }
+   ]
+  },
+  {
+   "id": "s-wave-scattering-length",
+   "kind": "definition",
+   "section": "11.4",
+   "name": "s 波散射长度",
+   "terms": [
+    "s 波散射长度",
+    "散射长度"
+   ],
+   "symbol": "a_scat",
+   "type": "length",
+   "statement": "势外的 s 波径向波函数按 1 − a/r 变化；散射长度 a 是其渐近线的截距，它单独刻画 s 波散射。",
+   "forms": [
+    {
+     "id": "eq-11-64",
+     "latex": "R_0^{(B)}(r) \\propto 1 - \\frac{a}{r}",
+     "anchor": "11.4-eq-11-64"
+    },
+    {
+     "id": "eq-11-67",
+     "latex": "f_0 = -\\frac{a}{1+ika}",
+     "anchor": "11.4-drv-s-wave-amplitude"
+    },
+    {
+     "id": "eq-11-68",
+     "latex": "\\lim_{k\\to 0}f_0 = -a",
+     "anchor": "11.4-drv-s-wave-amplitude"
+    }
+   ]
+  },
+  {
+   "id": "scattering-length-signs",
+   "kind": "result",
+   "section": "11.4",
+   "name": "散射长度的符号",
+   "statement": "硬球的 a = r₀，有限的排斥势的 0 < a < r₀，没有束缚态的浅吸引阱的 a 为负；每出现一个新的束缚态，它的符号就改变一次。",
+   "forms": [
+    {
+     "id": "eq-11-70",
+     "latex": "a_H = r_0",
+     "anchor": "11.4-eq-11-70"
+    },
+    {
+     "id": "eq-11-72",
+     "latex": "0 < a_R < r_0",
+     "anchor": "11.4-eq-11-72"
+    },
+    {
+     "id": "eq-11-74",
+     "latex": "a_A^{(0)} < 0",
+     "anchor": "11.4-eq-11-74"
+    }
+   ]
+  },
+  {
+   "id": "s-wave-pseudopotential",
+   "kind": "result",
+   "section": "11.4",
+   "name": "s 波赝势",
+   "terms": [
+    "赝势",
+    "s 波赝势"
+   ],
+   "statement": "在超冷极限下，每个散射长度为 a 的势的作用都像 δ 函数赝势，其一阶移位就是平均场能量，并给出化学势。",
+   "forms": [
+    {
+     "id": "eq-11-78",
+     "latex": "U(r) = \\frac{4\\pi\\hbar^2a}{2\\mu}\\delta^3(\\mathbf{r})",
+     "anchor": "11.4-eq-11-78"
+    },
+    {
+     "id": "eq-11-80",
+     "latex": "\\mu = \\frac{\\partial E_0}{\\partial N} \\approx \\frac{4\\pi\\hbar^2a}{m}\\frac{N}{V}",
+     "anchor": "11.4-drv-mean-field-energy"
+    }
+   ]
+  },
+  {
+   "id": "identical-particle-scattering",
+   "kind": "result",
+   "section": "11.4",
+   "name": "全同粒子的散射",
+   "statement": "对于全同粒子，两个散射角以 ε = ±1 相加，因此全同玻色子的 s 波截面加倍，而全同费米子在 s 波通道中不发生相互作用。",
+   "forms": [
+    {
+     "id": "eq-11-82",
+     "latex": "\\frac{d\\sigma}{d\\Omega} = \\left|\\frac{f_k(\\theta) + \\epsilon f_k(\\pi - \\theta)}{\\sqrt{2}}\\right|^2",
+     "anchor": "11.4-drv-identical-particle-cross-section"
+    }
+   ]
+  },
+  {
+   "id": "matter-wave-index",
+   "kind": "result",
+   "section": "11.4",
+   "name": "穿过原子云的物质波",
+   "terms": [
+    "平均场势能"
+   ],
+   "statement": "穿过稀薄散射体平板的物质波获得一个相位，就像光在介质中那样，对应于平均场能量 4πℏ²an/m。",
+   "forms": [
+    {
+     "id": "eq-11-88",
+     "latex": "-\\delta\\left(\\frac{\\hbar^2K^2}{2m}\\right) = \\frac{4\\pi\\hbar^2an}{m}",
+     "anchor": "11.4-eq-11-88"
+    }
+   ]
+  },
+  {
+   "id": "strongly-interacting-dilute-gas",
+   "kind": "idea",
+   "section": "11.4",
+   "name": "冷、稀薄且强相互作用",
+   "terms": [
+    "s 波共振"
+   ],
+   "statement": "在散射长度远大于 r₀ 处，ka ∼ 1 而 kr₀ ≪ 1：一种冷而稀薄却强相互作用的气体，纯粹通过 s 波通道。"
+  },
+  {
+   "id": "weakly-bound-state",
+   "kind": "result",
+   "section": "11.4",
+   "name": "弱束缚态",
+   "terms": [
+    "弱束缚态"
+   ],
+   "statement": "对于大的正 a，共振与范德瓦耳斯尾部的一个弱束缚态相联系，其能量为 −ℏ²/2μa²，可以由此形成分子。",
+   "forms": [
+    {
+     "id": "eq-11-92",
+     "latex": "E_0 = -\\frac{\\hbar^2}{2\\mu a^2}",
+     "anchor": "11.4-drv-weakly-bound-state"
+    }
+   ]
+  },
+  {
+   "id": "feshbach-resonance",
+   "kind": "result",
+   "section": "11.4",
+   "name": "费希巴赫共振",
+   "terms": [
+    "费希巴赫共振",
+    "闭通道",
+    "开通道",
+    "背景散射长度"
+   ],
+   "symbol": "a_bg",
+   "type": "length",
+   "statement": "当闭通道的一个束缚态接近开通道的阈值时，二者之间的微小耦合使散射长度发散；调节磁场可使共振移动，从而控制相互作用。",
+   "forms": [
+    {
+     "id": "eq-11-106",
+     "latex": "a = a_{bg}\\left(1 + \\frac{\\Delta}{E_{res}^* - E}\\right)",
+     "anchor": "11.4-eq-11-106"
+    }
+   ]
+  },
+  {
+   "id": "interacting-bose-gas-hamiltonian",
+   "kind": "definition",
+   "section": "11.4",
+   "name": "稀薄玻色气体的哈密顿量",
+   "symbol": "U_0",
+   "type": "energy",
+   "statement": "弱相互作用的稀薄气体由单粒子项和二体相互作用描述，后者被强度为 U₀ = 4πℏ²a/m 的 s 波赝势代替。",
+   "forms": [
+    {
+     "id": "eq-11-111",
+     "latex": "V_\\mathrm{int}(r) \\approx \\frac{4\\pi\\hbar^2a}{m}\\delta(r)",
+     "anchor": "11.4-eq-11-111"
+    },
+    {
+     "id": "eq-11-110",
+     "latex": "\\hat{H} = \\sum_i\\left(\\frac{p_i^2}{2m} + V_\\mathrm{trap}(r_i)\\right) + \\sum_{i<j}V_\\mathrm{int}(r_i - r_j)",
+     "anchor": "11.4-eq-11-110"
+    }
+   ]
+  },
+  {
+   "id": "second-quantization",
+   "kind": "definition",
+   "section": "11.4",
+   "name": "物质的二次量子化",
+   "terms": [
+    "二次量子化"
+   ],
+   "statement": "产生算符与湮没算符在单原子态上增加或移去一个原子；它们的对易（玻色子）或反对易（费米子）把多体波函数的对称性内建于其中。",
+   "forms": [
+    {
+     "id": "eq-11-114",
+     "latex": "[\\hat{b}_\\zeta, \\hat{b}_{\\zeta'}^\\dagger] = \\delta_{\\zeta,\\zeta'}",
+     "anchor": "11.4-eq-11-114"
+    },
+    {
+     "id": "eq-11-115",
+     "latex": "\\{\\hat{b}_\\zeta, \\hat{b}_{\\zeta'}^\\dagger\\} = \\delta_{\\zeta,\\zeta'}",
+     "anchor": "11.4-eq-11-115"
+    }
+   ]
+  },
+  {
+   "id": "matter-field-operator",
+   "kind": "definition",
+   "section": "11.4",
+   "name": "物质场算符",
+   "symbol": "psi_hat",
+   "statement": "动量模式算符的傅里叶变换是场算符 ψ̂(r)，它在位置 r 湮没一个粒子。",
+   "forms": [
+    {
+     "id": "eq-11-119",
+     "latex": "\\hat{\\psi}(\\mathbf{r}) = \\frac{1}{\\sqrt{V}}\\sum_\\mathbf{k}e^{i\\mathbf{k}\\cdot\\mathbf{r}}\\hat{b}_\\mathbf{k}",
+     "anchor": "11.4-eq-11-119"
+    },
+    {
+     "id": "eq-11-120",
+     "latex": "[\\hat{\\psi}(\\mathbf{r}), \\hat{\\psi}^\\dagger(\\mathbf{r}')] = \\delta(\\mathbf{r} - \\mathbf{r}')",
+     "anchor": "11.4-drv-field-commutator"
+    }
+   ]
+  },
+  {
+   "id": "second-quantized-hamiltonian",
+   "kind": "result",
+   "section": "11.4",
+   "name": "二次量子化哈密顿量",
+   "statement": "有了 s 波赝势，气体的哈密顿量就是对场算符的一个单积分。",
+   "forms": [
+    {
+     "id": "eq-11-124",
+     "latex": "\\hat{H} = \\int d^3\\mathbf{r}\\,\\hat{\\psi}^\\dagger\\left(\\frac{\\hat{p}^2}{2m} + V_\\mathrm{trap}(\\mathbf{r}) + \\frac{U_0}{2}\\hat{\\psi}^\\dagger\\hat{\\psi}\\right)\\hat{\\psi}",
+     "anchor": "11.4-drv-contact-hamiltonian"
+    },
+    {
+     "id": "eq-11-121",
+     "latex": "\\hat{N} = \\int d^3\\mathbf{r}\\,\\hat{\\psi}^\\dagger(\\mathbf{r})\\hat{\\psi}(\\mathbf{r})",
+     "anchor": "11.4-eq-11-121"
+    }
+   ]
+  },
+  {
+   "id": "noninteracting-condensate-ground-state",
+   "kind": "result",
+   "section": "11.4",
+   "name": "T = 0 时的无相互作用凝聚体",
+   "statement": "没有相互作用时，每个原子都堆积在单粒子基态上，即谐振阱的高斯函数，其振子长度为 a_j² = ℏ/mω_j。",
+   "forms": [
+    {
+     "id": "eq-11-127",
+     "latex": "|\\Psi\\rangle = (\\hat{b}_0^\\dagger)^N|\\mathrm{vac}\\rangle",
+     "anchor": "11.4-eq-11-127"
+    }
+   ]
+  },
+  {
+   "id": "gross-pitaevskii-equation",
+   "kind": "result",
+   "section": "11.4",
+   "name": "格罗斯-皮塔耶夫斯基方程",
+   "terms": [
+    "格罗斯-皮塔耶夫斯基方程"
+   ],
+   "symbol": "psi_GP",
+   "type": "state",
+   "statement": "当场算符接近经典相干场且其涨落很小时，凝聚体服从带有非线性项的薛定谔方程，其波函数 ψ 归一化到原子数。",
+   "forms": [
+    {
+     "id": "eq-11-131",
+     "latex": "i\\hbar\\frac{\\partial\\psi}{\\partial t} = -\\frac{\\hbar^2}{2m}\\nabla^2\\psi + V_\\mathrm{trap}\\psi + U_0|\\psi|^2\\psi",
+     "anchor": "11.4-drv-gross-pitaevskii-equation"
+    },
+    {
+     "id": "eq-11-132",
+     "latex": "N = \\int d^3\\mathbf{r}|\\psi|^2",
+     "anchor": "11.4-eq-11-132"
+    }
+   ]
+  },
+  {
+   "id": "matter-wave-symmetry-breaking",
+   "kind": "idea",
+   "section": "11.4",
+   "name": "对称性破缺描述",
+   "terms": [
+    "对称性破缺"
+   ],
+   "statement": "用 经典数 ψ 代替 ψ̂，假定原子场是相位任意、原子数不确定的相干态，在原子数很大时成立。"
+  },
+  {
+   "id": "condensate-ground-state",
+   "kind": "result",
+   "section": "11.4",
+   "name": "凝聚体的基态",
+   "symbol": "E_mf",
+   "type": "energy",
+   "statement": "原子数守恒，因此基态是格罗斯-皮塔耶夫斯基方程的定态解，以化学势演化；平均场能量与阱能量之比 ∼ Na/a_t 决定其性质。",
+   "forms": [
+    {
+     "id": "eq-11-134",
+     "latex": "\\mu\\tilde{\\psi} = \\left(-\\frac{\\hbar^2}{2m}\\nabla^2 + V(r) + U_0|\\tilde{\\psi}|^2\\right)\\tilde{\\psi}",
+     "anchor": "11.4-eq-11-134"
+    },
+    {
+     "id": "eq-11-135",
+     "latex": "\\frac{E_{mf}}{\\hbar\\omega_t} \\approx \\frac{4\\pi Naa_t^2}{V} \\sim \\frac{Na}{a_t}",
+     "anchor": "11.4-eq-11-135"
+    }
+   ]
+  },
+  {
+   "id": "trap-length",
+   "kind": "definition",
+   "section": "11.4",
+   "name": "阱长度与频率",
+   "terms": [
+    "特征尺寸"
+   ],
+   "symbol": "a_t",
+   "type": "length",
+   "statement": "频率为 ω_t 的谐振阱有一个特征尺寸 a_t，即其基态的振子长度。"
+  },
+  {
+   "id": "thomas-fermi-approximation",
+   "kind": "result",
+   "section": "11.4",
+   "name": "托马斯-费米近似",
+   "terms": [
+    "托马斯-费米情形",
+    "托马斯-费米近似"
+   ],
+   "statement": "对于强排斥相互作用，动能被忽略，密度为 V < μ 处的 (μ − V)/U₀；在谐振阱中，化学势和尺寸随 Na/a_t 增大。",
+   "forms": [
+    {
+     "id": "eq-11-136",
+     "latex": "|\\tilde{\\psi}|^2 = \\frac{\\mu - V(r)}{U_0}\\ \\text{where}\\ V(r) < \\mu",
+     "anchor": "11.4-drv-thomas-fermi-condensate"
+    },
+    {
+     "id": "eq-11-138",
+     "latex": "\\mu = \\frac{\\hbar\\omega_t}{2}\\left(\\frac{15Na}{a_t}\\right)^{2/5}",
+     "anchor": "11.4-drv-thomas-fermi-condensate"
+    },
+    {
+     "id": "eq-11-139",
+     "latex": "\\bar{a} = a_t\\left(\\frac{15Na}{a_t}\\right)^{1/5}",
+     "anchor": "11.4-drv-thomas-fermi-condensate"
+    }
+   ]
+  },
+  {
+   "id": "healing-length",
+   "kind": "definition",
+   "section": "11.4",
+   "name": "恢复长度",
+   "terms": [
+    "恢复长度"
+   ],
+   "symbol": "xi_heal",
+   "type": "length",
+   "statement": "在壁附近，凝聚体在恢复长度 ξ 内平滑下降，在该长度上变化的动能与相互作用能相当；在稀薄气体中，它跨越许多原子。",
+   "forms": [
+    {
+     "id": "eq-11-140",
+     "latex": "\\xi^2 = \\frac{1}{8\\pi n_0a}",
+     "anchor": "11.4-eq-11-140"
+    }
+   ]
+  },
+  {
+   "id": "condensate-density",
+   "kind": "definition",
+   "section": "11.4",
+   "name": "凝聚体密度",
+   "terms": [
+    "凝聚体空间密度"
+   ],
+   "symbol": "n_0",
+   "type": "density",
+   "statement": "|ψ(r)|² 是凝聚体的空间密度，在均匀凝聚体中为 n₀。"
+  },
+  {
+   "id": "bogoliubov-approximation",
+   "kind": "result",
+   "section": "11.5",
+   "name": "博戈留波夫近似",
+   "terms": [
+    "博戈留波夫方程"
+   ],
+   "statement": "把海森伯方程按围绕平均场的小涨落 δψ̂ 线性化，并把它们按玻色简正模式展开，就得到凝聚体激发的博戈留波夫方程。",
+   "forms": [
+    {
+     "id": "eq-11-144",
+     "latex": "\\delta\\hat{\\psi} = e^{-i\\mu t/\\hbar}\\sum_j\\left(u_j\\hat{\\alpha}_j e^{-i\\omega_j t} - v_j^*\\hat{\\alpha}_j^\\dagger e^{i\\omega_j t}\\right)",
+     "anchor": "11.5-eq-11-144"
+    },
+    {
+     "id": "eq-11-145",
+     "latex": "|u_j|^2 - |v_j|^2 = 1",
+     "anchor": "11.5-eq-11-145"
+    }
+   ]
+  },
+  {
+   "id": "bogoliubov-spectrum",
+   "kind": "result",
+   "section": "11.5",
+   "name": "博戈留波夫谱",
+   "terms": [
+    "色散关系",
+    "类粒子",
+    "类声"
+   ],
+   "symbol": "omega_q",
+   "type": "frequency",
+   "statement": "在均匀凝聚体中，激发服从 ℏω_q = √(ϵ_q² + 2n₀U₀ϵ_q)：在小 q 时类声，在大 q 时类粒子，在恢复长度的倒数附近过渡。",
+   "forms": [
+    {
+     "id": "eq-11-151",
+     "latex": "\\hbar\\omega_q = \\sqrt{\\epsilon_q^2 + 2n_0U_0\\epsilon_q}",
+     "anchor": "11.5-drv-bogoliubov-spectrum"
+    },
+    {
+     "id": "eq-11-152",
+     "latex": "\\hbar\\omega_q \\approx \\epsilon_q + n_0U_0\\ (\\text{large }q),\\quad \\hbar qs\\ (\\text{small }q)",
+     "anchor": "11.5-eq-11-152"
+    }
+   ]
+  },
+  {
+   "id": "free-particle-energy",
+   "kind": "definition",
+   "section": "11.5",
+   "name": "自由粒子能量",
+   "symbol": "epsilon_q",
+   "type": "energy",
+   "statement": "ϵ_q = ℏ²q²/2m，波矢量为 q 的自由粒子的能量。"
+  },
+  {
+   "id": "sound-velocity",
+   "kind": "result",
+   "section": "11.5",
+   "name": "凝聚体中的声速",
+   "terms": [
+    "声速"
+   ],
+   "symbol": "s_sound",
+   "type": "velocity",
+   "statement": "谱的类声部分以 s = √(n₀U₀/m) 传播。",
+   "forms": [
+    {
+     "id": "eq-11-153",
+     "latex": "s = \\sqrt{\\frac{n_0U_0}{m}}",
+     "anchor": "11.5-eq-11-153"
+    }
+   ]
+  },
+  {
+   "id": "bragg-spectroscopy",
+   "kind": "idea",
+   "section": "11.5",
+   "name": "谱的布拉格探测",
+   "terms": [
+    "布拉格散射"
+   ],
+   "statement": "当两束激光的动量差和能量差与谱相符时，即 q = k₁ − k₂ 且 ω_q = ω₁ − ω₂，即使在零温下也会产生一个准粒子。"
+  },
+  {
+   "id": "landau-criterion",
+   "kind": "result",
+   "section": "11.5",
+   "name": "超流的朗道判据",
+   "symbol": "v_c",
+   "type": "velocity",
+   "terms": [
+    "朗道超流判据",
+    "超流动性",
+    "临界速度"
+   ],
+   "statement": "物体只有在超过临界速度时才能产生激发，因此运动得比声速慢的物体感受不到阻力：排斥型凝聚体是一种超流体。",
+   "forms": [
+    {
+     "id": "eq-11-159",
+     "latex": "v > v_c = \\min_q \\frac{\\omega_q}{q} = s",
+     "anchor": "11.5-drv-landau-critical-velocity"
+    }
+   ]
+  },
+  {
+   "id": "attractive-condensate-stability",
+   "kind": "result",
+   "section": "11.5",
+   "name": "吸引型凝聚体的稳定性",
+   "statement": "当 U₀ < 0 时，长波长频率是虚数，但尺寸为 a_t 的阱不允许小于 1/a_t 的波矢量，因此凝聚体在原子数达到 N_max ∼ a_t/|a| 之前是稳定的，超过则坍缩。",
+   "forms": [
+    {
+     "id": "eq-11-163",
+     "latex": "N_\\mathrm{max} \\sim \\frac{a_t}{|a|}",
+     "anchor": "11.5-drv-attractive-stability"
+    },
+    {
+     "id": "eq-11-162",
+     "latex": "\\frac{\\hbar^2}{a_t^2m} \\geq 4n_0|U_0|",
+     "anchor": "11.5-drv-attractive-stability"
+    }
+   ]
+  },
+  {
+   "id": "expansion-signature",
+   "kind": "result",
+   "section": "11.5",
+   "name": "膨胀后的凝聚体与热云",
+   "terms": [
+    "双峰分布"
+   ],
+   "statement": "膨胀后，凝聚体的尺寸由不确定性原理给出，∼ ℏτ/a_cm，而热云是高斯形的；拟合双峰分布可测得凝聚的比例。",
+   "forms": [
+    {
+     "id": "eq-11-165",
+     "latex": "R_\\mathrm{BEC} \\sim \\frac{\\hbar\\tau}{a_cm}",
+     "anchor": "11.5-eq-11-165"
+    }
+   ]
+  },
+  {
+   "id": "condensate-first-order-coherence",
+   "kind": "result",
+   "section": "11.6",
+   "name": "凝聚体的一级相干性",
+   "terms": [
+    "一级相干性",
+    "长程相干性"
+   ],
+   "statement": "具有确定相位的两个凝聚体像分束的激光那样干涉；热原子只在约一个德布罗意波长的范围内相干，而凝聚体的长程相干性跨越整个云。"
+  },
+  {
+   "id": "atom-laser",
+   "kind": "definition",
+   "section": "11.6",
+   "name": "原子激光器",
+   "terms": [
+    "原子激光器"
+   ],
+   "statement": "通过射频把原子耦合输出到未陷俘态，得到激光束的原子对应物；两个射频频率从两个位置耦合输出，其条纹的可见度测量二者之间的相干性。"
+  },
+  {
+   "id": "condensate-interference-fringes",
+   "kind": "result",
+   "section": "11.6",
+   "name": "两个膨胀凝聚体的条纹",
+   "statement": "相隔 ∆R_s 的两个凝聚体膨胀并干涉，条纹间距为 ∆R ∼ ℏτ/∆R_s m。",
+   "symbol": "Delta_R"
+  },
+  {
+   "id": "relative-phase-symmetry-breaking",
+   "kind": "idea",
+   "section": "11.6",
+   "name": "测量产生的相对相位",
+   "terms": [
+    "对称性自发破缺"
+   ],
+   "statement": "原子数已知的两个凝聚体通过测量中的对称性自发破缺获得相对相位：在不知道来源的情况下探测原子，会投影相位并使原子数变得不确定。"
+  },
+  {
+   "id": "double-well-model",
+   "kind": "definition",
+   "section": "11.7",
+   "name": "双阱玩具模型",
+   "terms": [
+    "双阱势"
+   ],
+   "type": "coupling",
+   "statement": "N 个冷原子处于由速率 t 的隧穿相连的两个阱中，基态是对称的 |+⟩，激发态 |−⟩ 高出 2t。",
+   "forms": [
+    {
+     "id": "eq-11-168",
+     "latex": "\\hat{H}_\\mathrm{kin} = -t\\hat{a}_R^\\dagger\\hat{a}_L - t^*\\hat{a}_L^\\dagger\\hat{a}_R",
+     "anchor": "11.7-eq-11-168"
+    }
+   ]
+  },
+  {
+   "id": "double-well-coherent-ground-state",
+   "kind": "result",
+   "section": "11.7",
+   "name": "无相互作用基态",
+   "terms": [
+    "约瑟夫森器件"
+   ],
+   "statement": "没有相互作用时，全部 N 个原子共处 |+⟩，这是一个两阱之间相位确定的态，在 N 很大时接近相干态：一个经典的约瑟夫森器件。",
+   "forms": [
+    {
+     "id": "eq-11-169",
+     "latex": "|\\phi_N\\rangle = \\frac{(\\hat{a}_L^\\dagger + \\hat{a}_R^\\dagger)^N}{\\sqrt{N!}\\,2^{N/2}}|\\mathrm{vac}\\rangle",
+     "anchor": "11.7-eq-11-169"
+    }
+   ]
+  },
+  {
+   "id": "double-well-fock-ground-state",
+   "kind": "result",
+   "section": "11.7",
+   "name": "强相互作用基态",
+   "terms": [
+    "福克态"
+   ],
+   "statement": "当 U₀ ≫ t 时，原子均匀地堆积在两个阱中，处于高度非经典的福克态，没有一级干涉，也没有格罗斯-皮塔耶夫斯基描述。",
+   "forms": [
+    {
+     "id": "eq-11-173",
+     "latex": "\\hat{H}_\\mathrm{int} = U_0\\left(\\hat{n}_L(\\hat{n}_L - 1) + \\hat{n}_R(\\hat{n}_R - 1)\\right)",
+     "anchor": "11.7-eq-11-173"
+    }
+   ]
+  },
+  {
+   "id": "nonclassical-matter-requirements",
+   "kind": "idea",
+   "section": "11.7",
+   "name": "制造非经典物质",
+   "statement": "物质的非经典态需要强于动能的相互作用和低损失：更紧的约束，如在光学格子中那样，降低隧穿，费希巴赫共振提高散射长度。"
+  },
+  {
+   "id": "optical-lattice-potential",
+   "kind": "result",
+   "section": "11.7",
+   "name": "光学格子势",
+   "statement": "反向传播的红失谐光束形成周期为 λ/2 的驻波，其偶极力把原子保持在光强极大处；三个这样的驻波构成简单立方格子，与双阱一样由隧穿和格点上相互作用来参数化。",
+   "forms": [
+    {
+     "id": "eq-11-176",
+     "latex": "V(\\mathbf{r}) \\propto \\sin^2\\frac{2\\pi x}{\\lambda} + \\sin^2\\frac{2\\pi y}{\\lambda} + \\sin^2\\frac{2\\pi z}{\\lambda}",
+     "anchor": "11.7-eq-11-176"
+    }
+   ]
+  },
+  {
+   "id": "lattice-site-oscillator",
+   "kind": "result",
+   "section": "11.8",
+   "name": "作为振子的格点",
+   "symbol": "nu_T",
+   "type": "frequency",
+   "statement": "在每个极小值附近，格子是谐振的，频率为 ν_T；当深度 V₀ ≫ E_R 时——兰姆-迪克极限的类比——原子被局域化，不同格点上的波函数几乎不重叠。",
+   "forms": [
+    {
+     "id": "eq-11-185",
+     "latex": "\\nu_T = \\sqrt{\\frac{2V_0K_L^2}{m}} = \\sqrt{\\frac{4V_0E_R}{\\hbar^2}}",
+     "anchor": "11.8-drv-site-frequency"
+    }
+   ]
+  },
+  {
+   "id": "lattice-recoil-energy",
+   "kind": "definition",
+   "section": "11.8",
+   "name": "格子的反冲能",
+   "terms": [
+    "反冲能"
+   ],
+   "symbol": "E_R",
+   "type": "energy",
+   "statement": "E_R = ℏ²K_L²/2m，是衡量格子深度 V₀ 的能量标度。",
+   "forms": [
+    {
+     "id": "eq-11-er",
+     "latex": "E_R = \\frac{\\hbar^2K_L^2}{2m}",
+     "anchor": "11.8-recoil-energy"
+    }
+   ]
+  },
+  {
+   "id": "wannier-expansion",
+   "kind": "skill",
+   "section": "11.8",
+   "name": "局域态展开",
+   "terms": [
+    "万尼尔函数",
+    "布洛赫能带"
+   ],
+   "statement": "场算符按格点展开，ψ̂ = Σ b̂_i W(r − r_i)，万尼尔函数近似为每个格点的振子基态；隧穿使各能级混杂成布洛赫能带。",
+   "forms": [
+    {
+     "id": "eq-11-189",
+     "latex": "\\hat{\\psi} \\approx \\sum_i\\hat{b}_i\\phi(\\mathbf{r} - \\mathbf{r}_i)",
+     "anchor": "11.8-eq-11-189"
+    }
+   ]
+  },
+  {
+   "id": "on-site-interaction",
+   "kind": "result",
+   "section": "11.8",
+   "name": "格点上相互作用",
+   "terms": [
+    "格点上"
+   ],
+   "statement": "在领头阶，原子只与同一格点上的原子相互作用，强度 U₀ 约为同一振子基态中两个原子的相互作用。",
+   "forms": [
+    {
+     "id": "eq-11-190",
+     "latex": "\\hat{H}_\\mathrm{int} = \\frac{U_0}{2}\\sum_i\\hat{n}_i(\\hat{n}_i - 1)",
+     "anchor": "11.8-drv-on-site-interaction"
+    },
+    {
+     "id": "eq-11-191",
+     "latex": "U_0 \\sim \\frac{4\\pi a_s\\hbar^2}{ma_{HO}^3}",
+     "anchor": "11.8-eq-11-191"
+    }
+   ]
+  },
+  {
+   "id": "lattice-hopping",
+   "kind": "result",
+   "section": "11.8",
+   "name": "格点间跳跃",
+   "terms": [
+    "跳跃"
+   ],
+   "type": "coupling",
+   "statement": "最近邻的重叠使原子以速率 t 在格点间跳跃，它在哈密顿量中带负号。",
+   "forms": [
+    {
+     "id": "eq-11-193",
+     "latex": "\\hat{H}_\\mathrm{kin} = \\sum_i\\epsilon_i\\hat{b}_i^\\dagger\\hat{b}_i - \\sum_{\\langle i,j\\rangle}t_{i,j}\\hat{b}_i^\\dagger\\hat{b}_j",
+     "anchor": "11.8-eq-11-193"
+    }
+   ]
+  },
+  {
+   "id": "bose-hubbard-model",
+   "kind": "result",
+   "section": "11.8",
+   "name": "玻色-哈伯德模型",
+   "terms": [
+    "哈伯德模型",
+    "玻色-哈伯德模型"
+   ],
+   "statement": "格点能量、跳跃和格点上相互作用合在一起构成哈伯德模型，由光学格子中的玻色凝聚体实现，其 U 和 t 由散射长度和格子深度调节。",
+   "forms": [
+    {
+     "id": "eq-11-194",
+     "latex": "\\hat{H} = \\sum_i\\epsilon_i\\hat{b}_i^\\dagger\\hat{b}_i - \\sum_{\\langle i,j\\rangle}t_{i,j}\\hat{b}_i^\\dagger\\hat{b}_j + \\frac{U_0}{2}\\sum_i\\hat{n}_i(\\hat{n}_i - 1)",
+     "anchor": "11.8-eq-11-194"
+    }
+   ]
+  },
+  {
+   "id": "lattice-superfluid",
+   "kind": "result",
+   "section": "11.8",
+   "name": "弱格子中的超流体",
+   "terms": [
+    "超流体"
+   ],
+   "statement": "对于 t ≫ U₀，跳跃在动量上是对角的，−2t Σ b̂_k†b̂_k cos ka，每个原子都处于 k = 0：相邻格点是相干的，相位是确定的，每个格点上的数目涨落。",
+   "forms": [
+    {
+     "id": "eq-11-200",
+     "latex": "|\\psi_0\\rangle = \\frac{1}{\\sqrt{N!}}\\left(\\hat{b}_{k=0}^\\dagger\\right)^N|\\mathrm{vac}\\rangle",
+     "anchor": "11.8-eq-11-200"
+    }
+   ]
+  },
+  {
+   "id": "mott-insulator",
+   "kind": "result",
+   "section": "11.8",
+   "name": "莫特绝缘体",
+   "terms": [
+    "莫特绝缘体",
+    "交换能"
+   ],
+   "statement": "对于单位填充下的 U₀ ≫ t，基态在每个格点上有一个原子，被冻结在原位，其能量被交换能 −2t²/U₀ 降低；每个格点上的数目是固定的，因此格点之间的相位不固定。",
+   "forms": [
+    {
+     "id": "eq-11-203",
+     "latex": "|\\psi_0\\rangle = \\prod_i\\hat{b}_i^\\dagger|\\mathrm{vac}\\rangle",
+     "anchor": "11.8-eq-11-203"
+    }
+   ]
+  },
+  {
+   "id": "filling-factor",
+   "kind": "definition",
+   "section": "11.8",
+   "name": "填充因子",
+   "terms": [
+    "公度",
+    "填充因子"
+   ],
+   "symbol": "nu_fill",
+   "statement": "填充因子 ν 是每个格点上的原子数；在公度的整数填充下可以形成莫特相。",
+   "forms": [
+    {
+     "id": "eq-11-204",
+     "latex": "\\nu = \\frac{N_\\mathrm{atoms}}{N_\\mathrm{sites}}",
+     "anchor": "11.8-eq-11-204"
+    }
+   ]
+  },
+  {
+   "id": "quantum-phase-transition",
+   "kind": "definition",
+   "section": "11.8",
+   "name": "量子相变",
+   "terms": [
+    "量子相变"
+   ],
+   "statement": "改变 t/U₀ 使系统在超流体与莫特绝缘体之间移动，即使在 T = 0 时也是如此，这是由量子涨落而非热涨落驱动的相变。"
+  },
+  {
+   "id": "mean-field-mott-transition",
+   "kind": "result",
+   "section": "11.8",
+   "name": "相变的平均场估计",
+   "statement": "把相干态的乘积与莫特态比较，预言相变发生在 4zt ∼ U₀ 附近；混合 0、1 和 2 个原子的变分态给出 5zt ∼ U₀，即平均场值 U₀/zt ≈ 5.8。",
+   "forms": [
+    {
+     "id": "eq-11-210",
+     "latex": "t\\cdot z\\cdot 2 \\sim U_0",
+     "anchor": "11.8-drv-mott-transition-estimate"
+    },
+    {
+     "id": "eq-11-212",
+     "latex": "t\\cdot z\\cdot 5 \\sim U_0",
+     "anchor": "11.8-eq-11-212"
+    }
+   ]
+  },
+  {
+   "id": "mott-gap",
+   "kind": "result",
+   "section": "11.8",
+   "name": "激发能隙",
+   "statement": "超流体具有博戈留波夫谱，而莫特绝缘体的谱有 ∆ϵ ∼ U₀ − t 的能隙；能隙在相变处消失。"
+  },
+  {
+   "id": "wedding-cake-structure",
+   "kind": "result",
+   "section": "11.8",
+   "name": "婚礼蛋糕结构",
+   "terms": [
+    "婚礼蛋糕"
+   ],
+   "statement": "在真实格子的谐振阱中，莫特相形成填充为 ν 的壳层，向中心逐级上升，其间是薄的超流体区域。"
+  },
+  {
+   "id": "mott-interference-signature",
+   "kind": "result",
+   "section": "11.8",
+   "name": "观测相变",
+   "statement": "超流体释放出的原子干涉成倒易格子，而没有一级相干性的莫特绝缘体则不显示图样；把 U₀/t 升高再降回，可恢复超流体。"
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "bec-criterion",
+   "prereq": "de-broglie-wavelength"
+  },
+  {
+   "concept": "bec-criterion",
+   "prereq": "atom-number-density"
+  },
+  {
+   "concept": "critical-temperature",
+   "prereq": "bec-criterion"
+  },
+  {
+   "concept": "bose-condensation",
+   "prereq": "critical-temperature"
+  },
+  {
+   "concept": "bose-einstein-distribution",
+   "prereq": "indistinguishability-statistics"
+  },
+  {
+   "concept": "bose-einstein-distribution",
+   "prereq": "chemical-potential"
+  },
+  {
+   "concept": "bose-einstein-distribution",
+   "prereq": "thermal-two-level-atom"
+  },
+  {
+   "concept": "ground-state-occupation-bookkeeping",
+   "prereq": "bose-einstein-distribution"
+  },
+  {
+   "concept": "ideal-gas-condensate-fraction",
+   "prereq": "ground-state-occupation-bookkeeping"
+  },
+  {
+   "concept": "ideal-gas-condensate-fraction",
+   "prereq": "critical-temperature"
+  },
+  {
+   "concept": "superfluid-helium-depletion",
+   "prereq": "bose-condensation"
+  },
+  {
+   "concept": "gas-bec-metastability",
+   "prereq": "bose-condensation"
+  },
+  {
+   "concept": "spin-polarized-hydrogen",
+   "prereq": "gas-bec-metastability"
+  },
+  {
+   "concept": "alkali-stability-window",
+   "prereq": "gas-bec-metastability"
+  },
+  {
+   "concept": "alkali-stability-window",
+   "prereq": "laser-cooling"
+  },
+  {
+   "concept": "surface-sticking",
+   "prereq": "trapping-and-cooling"
+  },
+  {
+   "concept": "surface-resonance-time",
+   "prereq": "surface-sticking"
+  },
+  {
+   "concept": "surface-resonance-time",
+   "prereq": "de-broglie-wavelength"
+  },
+  {
+   "concept": "surface-resonance-time",
+   "prereq": "chemical-potential"
+  },
+  {
+   "concept": "trap-depth",
+   "prereq": "trapping-and-cooling"
+  },
+  {
+   "concept": "buffer-gas-cooling",
+   "prereq": "surface-sticking"
+  },
+  {
+   "concept": "buffer-gas-cooling",
+   "prereq": "trap-depth"
+  },
+  {
+   "concept": "magnetic-trap",
+   "prereq": "weak-field-zeeman-shift"
+  },
+  {
+   "concept": "magnetic-trap",
+   "prereq": "trap-depth"
+  },
+  {
+   "concept": "adiabatic-spin-following",
+   "prereq": "magnetic-trap"
+  },
+  {
+   "concept": "adiabatic-spin-following",
+   "prereq": "adiabaticity-condition"
+  },
+  {
+   "concept": "quadrupole-trap",
+   "prereq": "adiabatic-spin-following"
+  },
+  {
+   "concept": "ioffe-pritchard-trap",
+   "prereq": "quadrupole-trap"
+  },
+  {
+   "concept": "evaporative-cooling",
+   "prereq": "magnetic-trap"
+  },
+  {
+   "concept": "evaporative-cooling",
+   "prereq": "dipole-trap"
+  },
+  {
+   "concept": "rf-knife",
+   "prereq": "evaporative-cooling"
+  },
+  {
+   "concept": "rf-knife",
+   "prereq": "landau-zener"
+  },
+  {
+   "concept": "trap-loss-processes",
+   "prereq": "evaporative-cooling"
+  },
+  {
+   "concept": "linear-trap-atom-number",
+   "prereq": "magnetic-trap"
+  },
+  {
+   "concept": "linear-trap-atom-number",
+   "prereq": "atom-number-density"
+  },
+  {
+   "concept": "two-body-loss",
+   "prereq": "linear-trap-atom-number"
+  },
+  {
+   "concept": "two-body-loss",
+   "prereq": "trap-loss-processes"
+  },
+  {
+   "concept": "evaporation-rate",
+   "prereq": "linear-trap-atom-number"
+  },
+  {
+   "concept": "evaporation-figure-of-merit",
+   "prereq": "evaporation-rate"
+  },
+  {
+   "concept": "evaporation-figure-of-merit",
+   "prereq": "two-body-loss"
+  },
+  {
+   "concept": "absorption-imaging",
+   "prereq": "absorption-cross-section"
+  },
+  {
+   "concept": "absorption-imaging",
+   "prereq": "atom-number-density"
+  },
+  {
+   "concept": "time-of-flight-imaging",
+   "prereq": "absorption-imaging"
+  },
+  {
+   "concept": "phase-contrast-imaging",
+   "prereq": "absorption-imaging"
+  },
+  {
+   "concept": "phase-contrast-imaging",
+   "prereq": "refractive-index"
+  },
+  {
+   "concept": "dilute-quantum-gas",
+   "prereq": "critical-temperature"
+  },
+  {
+   "concept": "van-der-waals-potential",
+   "prereq": "dilute-quantum-gas"
+  },
+  {
+   "concept": "van-der-waals-potential",
+   "prereq": "dipole-matrix-element"
+  },
+  {
+   "concept": "relative-motion-scattering",
+   "prereq": "van-der-waals-potential"
+  },
+  {
+   "concept": "scattering-amplitude",
+   "prereq": "relative-motion-scattering"
+  },
+  {
+   "concept": "scattering-amplitude",
+   "prereq": "schrodinger-equation"
+  },
+  {
+   "concept": "scattering-cross-section",
+   "prereq": "scattering-amplitude"
+  },
+  {
+   "concept": "born-approximation",
+   "prereq": "scattering-amplitude"
+  },
+  {
+   "concept": "partial-wave-expansion",
+   "prereq": "scattering-amplitude"
+  },
+  {
+   "concept": "scattering-phase-shift",
+   "prereq": "partial-wave-expansion"
+  },
+  {
+   "concept": "s-wave-dominance",
+   "prereq": "scattering-phase-shift"
+  },
+  {
+   "concept": "s-wave-scattering-length",
+   "prereq": "s-wave-dominance"
+  },
+  {
+   "concept": "scattering-length-signs",
+   "prereq": "s-wave-scattering-length"
+  },
+  {
+   "concept": "s-wave-pseudopotential",
+   "prereq": "s-wave-scattering-length"
+  },
+  {
+   "concept": "s-wave-pseudopotential",
+   "prereq": "chemical-potential"
+  },
+  {
+   "concept": "identical-particle-scattering",
+   "prereq": "scattering-cross-section"
+  },
+  {
+   "concept": "identical-particle-scattering",
+   "prereq": "indistinguishability-statistics"
+  },
+  {
+   "concept": "matter-wave-index",
+   "prereq": "s-wave-scattering-length"
+  },
+  {
+   "concept": "matter-wave-index",
+   "prereq": "refractive-index"
+  },
+  {
+   "concept": "strongly-interacting-dilute-gas",
+   "prereq": "s-wave-scattering-length"
+  },
+  {
+   "concept": "weakly-bound-state",
+   "prereq": "strongly-interacting-dilute-gas"
+  },
+  {
+   "concept": "feshbach-resonance",
+   "prereq": "weakly-bound-state"
+  },
+  {
+   "concept": "feshbach-resonance",
+   "prereq": "zeeman-effect"
+  },
+  {
+   "concept": "interacting-bose-gas-hamiltonian",
+   "prereq": "s-wave-pseudopotential"
+  },
+  {
+   "concept": "second-quantization",
+   "prereq": "creation-annihilation-operators"
+  },
+  {
+   "concept": "second-quantization",
+   "prereq": "indistinguishability-statistics"
+  },
+  {
+   "concept": "matter-field-operator",
+   "prereq": "second-quantization"
+  },
+  {
+   "concept": "second-quantized-hamiltonian",
+   "prereq": "matter-field-operator"
+  },
+  {
+   "concept": "second-quantized-hamiltonian",
+   "prereq": "interacting-bose-gas-hamiltonian"
+  },
+  {
+   "concept": "noninteracting-condensate-ground-state",
+   "prereq": "second-quantization"
+  },
+  {
+   "concept": "noninteracting-condensate-ground-state",
+   "prereq": "bose-condensation"
+  },
+  {
+   "concept": "gross-pitaevskii-equation",
+   "prereq": "second-quantized-hamiltonian"
+  },
+  {
+   "concept": "gross-pitaevskii-equation",
+   "prereq": "coherent-state"
+  },
+  {
+   "concept": "gross-pitaevskii-equation",
+   "prereq": "kerr-effect"
+  },
+  {
+   "concept": "matter-wave-symmetry-breaking",
+   "prereq": "gross-pitaevskii-equation"
+  },
+  {
+   "concept": "condensate-ground-state",
+   "prereq": "gross-pitaevskii-equation"
+  },
+  {
+   "concept": "trap-length",
+   "prereq": "noninteracting-condensate-ground-state"
+  },
+  {
+   "concept": "thomas-fermi-approximation",
+   "prereq": "condensate-ground-state"
+  },
+  {
+   "concept": "thomas-fermi-approximation",
+   "prereq": "trap-length"
+  },
+  {
+   "concept": "healing-length",
+   "prereq": "thomas-fermi-approximation"
+  },
+  {
+   "concept": "healing-length",
+   "prereq": "condensate-density"
+  },
+  {
+   "concept": "condensate-density",
+   "prereq": "gross-pitaevskii-equation"
+  },
+  {
+   "concept": "bogoliubov-approximation",
+   "prereq": "condensate-ground-state"
+  },
+  {
+   "concept": "bogoliubov-spectrum",
+   "prereq": "bogoliubov-approximation"
+  },
+  {
+   "concept": "bogoliubov-spectrum",
+   "prereq": "healing-length"
+  },
+  {
+   "concept": "bogoliubov-spectrum",
+   "prereq": "free-particle-energy"
+  },
+  {
+   "concept": "sound-velocity",
+   "prereq": "bogoliubov-spectrum"
+  },
+  {
+   "concept": "bragg-spectroscopy",
+   "prereq": "bogoliubov-spectrum"
+  },
+  {
+   "concept": "bragg-spectroscopy",
+   "prereq": "raman-transition"
+  },
+  {
+   "concept": "landau-criterion",
+   "prereq": "sound-velocity"
+  },
+  {
+   "concept": "attractive-condensate-stability",
+   "prereq": "bogoliubov-spectrum"
+  },
+  {
+   "concept": "expansion-signature",
+   "prereq": "time-of-flight-imaging"
+  },
+  {
+   "concept": "expansion-signature",
+   "prereq": "heisenberg-uncertainty-principle"
+  },
+  {
+   "concept": "condensate-first-order-coherence",
+   "prereq": "gross-pitaevskii-equation"
+  },
+  {
+   "concept": "atom-laser",
+   "prereq": "condensate-first-order-coherence"
+  },
+  {
+   "concept": "atom-laser",
+   "prereq": "rf-knife"
+  },
+  {
+   "concept": "condensate-interference-fringes",
+   "prereq": "condensate-first-order-coherence"
+  },
+  {
+   "concept": "condensate-interference-fringes",
+   "prereq": "expansion-signature"
+  },
+  {
+   "concept": "relative-phase-symmetry-breaking",
+   "prereq": "condensate-first-order-coherence"
+  },
+  {
+   "concept": "relative-phase-symmetry-breaking",
+   "prereq": "matter-wave-symmetry-breaking"
+  },
+  {
+   "concept": "double-well-model",
+   "prereq": "second-quantization"
+  },
+  {
+   "concept": "double-well-coherent-ground-state",
+   "prereq": "double-well-model"
+  },
+  {
+   "concept": "double-well-coherent-ground-state",
+   "prereq": "coherent-state"
+  },
+  {
+   "concept": "double-well-fock-ground-state",
+   "prereq": "double-well-model"
+  },
+  {
+   "concept": "double-well-fock-ground-state",
+   "prereq": "gross-pitaevskii-equation"
+  },
+  {
+   "concept": "nonclassical-matter-requirements",
+   "prereq": "double-well-fock-ground-state"
+  },
+  {
+   "concept": "nonclassical-matter-requirements",
+   "prereq": "feshbach-resonance"
+  },
+  {
+   "concept": "optical-lattice-potential",
+   "prereq": "optical-lattice"
+  },
+  {
+   "concept": "optical-lattice-potential",
+   "prereq": "double-well-model"
+  },
+  {
+   "concept": "lattice-site-oscillator",
+   "prereq": "optical-lattice-potential"
+  },
+  {
+   "concept": "lattice-site-oscillator",
+   "prereq": "lattice-recoil-energy"
+  },
+  {
+   "concept": "lattice-site-oscillator",
+   "prereq": "lamb-dicke-regime"
+  },
+  {
+   "concept": "lattice-recoil-energy",
+   "prereq": "recoil-frequency"
+  },
+  {
+   "concept": "wannier-expansion",
+   "prereq": "matter-field-operator"
+  },
+  {
+   "concept": "wannier-expansion",
+   "prereq": "lattice-site-oscillator"
+  },
+  {
+   "concept": "on-site-interaction",
+   "prereq": "wannier-expansion"
+  },
+  {
+   "concept": "on-site-interaction",
+   "prereq": "s-wave-pseudopotential"
+  },
+  {
+   "concept": "lattice-hopping",
+   "prereq": "wannier-expansion"
+  },
+  {
+   "concept": "bose-hubbard-model",
+   "prereq": "on-site-interaction"
+  },
+  {
+   "concept": "bose-hubbard-model",
+   "prereq": "lattice-hopping"
+  },
+  {
+   "concept": "lattice-superfluid",
+   "prereq": "bose-hubbard-model"
+  },
+  {
+   "concept": "lattice-superfluid",
+   "prereq": "double-well-coherent-ground-state"
+  },
+  {
+   "concept": "mott-insulator",
+   "prereq": "bose-hubbard-model"
+  },
+  {
+   "concept": "mott-insulator",
+   "prereq": "double-well-fock-ground-state"
+  },
+  {
+   "concept": "filling-factor",
+   "prereq": "bose-hubbard-model"
+  },
+  {
+   "concept": "quantum-phase-transition",
+   "prereq": "lattice-superfluid"
+  },
+  {
+   "concept": "quantum-phase-transition",
+   "prereq": "mott-insulator"
+  },
+  {
+   "concept": "mean-field-mott-transition",
+   "prereq": "quantum-phase-transition"
+  },
+  {
+   "concept": "mean-field-mott-transition",
+   "prereq": "filling-factor"
+  },
+  {
+   "concept": "mott-gap",
+   "prereq": "quantum-phase-transition"
+  },
+  {
+   "concept": "mott-gap",
+   "prereq": "bogoliubov-spectrum"
+  },
+  {
+   "concept": "wedding-cake-structure",
+   "prereq": "mean-field-mott-transition"
+  },
+  {
+   "concept": "mott-interference-signature",
+   "prereq": "quantum-phase-transition"
+  },
+  {
+   "concept": "mott-interference-signature",
+   "prereq": "time-of-flight-imaging"
+  },
+  {
+   "concept": "mott-interference-signature",
+   "prereq": "condensate-first-order-coherence"
+  }
+ ]
+}
