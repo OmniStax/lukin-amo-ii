@@ -1,0 +1,25 @@
+<section id="opening">
+<p>我们可以把<span data-concept="maxwell-equations-with-polarization" id="maxwell">麦克斯韦方程组</span>（在不存在非束缚电荷和电流时）改写成<span data-concept="wave-equation-with-polarization" id="wave-equation">关于$\kEfield$的波动方程</span>。</p>
+<figure class="dv" id="drv-wave-equation"></figure>
+<p id="envelope"><span data-concept="wave-equation-with-polarization">波动方程</span>对时间和空间都是二阶的，但应用<span data-concept="slowly-varying-envelope-approximation" id="svea">缓变包络近似</span>可以把它化为一阶。近单色的电场可以用<span data-concept="slowly-varying-envelope">包络函数</span>及其中心频率$\knubar$参数化，</p>
+<div class="equation" id="eq-4-11">$$\kEfield(r, \kt) = \kEenv(r, \kt)e^{i\kkbar z - i\knubar \kt} + c.c., \tag{4.11}$$</div>
+<p>其中，与<span id="carrier"><span data-concept="optical-frequency">光频$\knubar$</span>和波矢量$\kkbar = \knubar/c$</span>相比，$\kEenv$随$z$和$\kt$缓慢变化。我们还引入<span data-concept="slowly-varying-polarization" id="sv-polarization">缓变极化振幅</span>，</p>
+<div class="equation" id="eq-4-12">$$\kPpol(r, \kt) = \kPenv(r, \kt)e^{i\kkbar z - i\knubar \kt} + c.c. \tag{4.12}$$</div>
+<p>将这些表达式代入<a href="#drv-wave-equation">式 (4.10)</a>，并且只保留包络的最低阶导数，我们得到<span data-concept="svea-propagation-equation" id="evolution-equation">缓变振幅的演化方程</span>。</p>
+<figure class="dv" id="drv-svea-propagation"></figure>
+<p>这个方程有两个性质值得注意：</p>
+<p>(1) 在第一项中，$\nabla_\perp^2 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}$导致聚焦或衍射等横向效应，一般而言不能忽略。然而，对于平面波，不存在横向空间变化，所以第一项为零，我们得到</p>
+<div class="equation" id="eq-4-25">$$\frac{\partial}{\partial z}\kEenv + \frac{1}{c}\frac{\partial}{\partial \kt}\kEenv = \frac{i\kkbar}{2\epsilon_0}\kPenv. \tag{4.25}$$</div>
+<p id="two-level-polarization">(2) <span data-concept="slowly-varying-polarization">缓变极化$\kPenv$</span>正比于<span data-concept="rotating-frame">转动参考系</span>中偶极算符的正频分量。例如，<span data-concept="two-level-atom">二能级原子</span>给出<span data-concept="slowly-varying-polarization">极化强度</span>$\kPenv = (N/\kV)\kmu\krhotwoone(z)e^{-i\kkbar z}$。（注意，$\krhotwoone(z)$本身由局域电场驱动，该电场含有快速相位项$e^{i\kkbar z}$，所以$\kPenv$实际上在空间中缓变。）</p>
+</section>
+
+<section id="generalizations">
+<h2>SVEA 的推广</h2>
+<p id="comb">我们对<span data-concept="slowly-varying-envelope-approximation">缓变包络近似</span>的推导可以推广到包含多个光频。为说明这一想法，我们将考虑原子与<span data-concept="optical-frequency-comb">光频梳</span>相互作用的例子。这一短光脉冲的周期序列在傅里叶域中可以用<span data-concept="optical-frequency-comb">谐波梳</span>表示，于是电场可以写成</p>
+<div class="equation" id="eq-4-26">$$E = \sum_n\kEenv_n(z, \kt)e^{inkz - i\knu_n \kt}. \tag{4.26}$$</div>
+<p>谐波之间的间隔$\knu_{n+1} - \knu_n$决定脉冲的重复频率，而这组谐波所占据的带宽决定每个脉冲的持续时间。只要每个谐波都有在空间和时间上缓变的<span data-concept="slowly-varying-envelope">包络$\kEenv_n(z, \kt)$</span>，我们就可以使用<span data-concept="multimode-svea" id="multimode">SVEA 的扩展</span>。将<span data-concept="atomic-polarization">极化强度</span>谐波定义为</p>
+<div class="equation" id="eq-4-27">$$P = \sum_n\kPenv_n(z, \kt)e^{inkz - i\knu_n \kt}, \tag{4.27}$$</div>
+<p><span data-concept="svea-propagation-equation">传播方程</span>变为针对每个谐波分量的一组方程</p>
+<div class="equation" id="eq-4-28">$$\frac{1}{2i\kkbar}\nabla_\perp^2\kEenv_n + \frac{\partial}{\partial z}\kEenv_n + \frac{1}{c}\frac{\partial}{\partial \kt}\kEenv_n = \frac{i\kkbar}{2\epsilon_0}\kPenv_n. \tag{4.28}$$<sup class="fn" data-note="c-eq-4-28"></sup></div>
+<p>这一处理适用于任意短的脉冲，因为对所含谐波的数目没有限制。不过要注意，一般而言原子响应会使不同的谐波耦合起来，即$\kPenv_n$将依赖于所有分量$\kEenv_{n'}$，因此<span data-concept="multimode-svea">耦合麦克斯韦-布洛赫方程</span>求解起来可能相当复杂。</p>
+</section>

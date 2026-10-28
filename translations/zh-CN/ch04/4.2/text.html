@@ -1,0 +1,71 @@
+<section id="opening">
+<p class="cite-target" id="opening-weak">在共振场中光传播的最简单情形<sup class="fn" data-note="c-resonant-field"></sup>是外加场足够弱，以致原子只对它作线性响应。我们先前发现，当外加场较弱时，可以用微扰论在傅里叶域中精确求解原子<span data-concept="density-matrix">密度矩阵</span>的各分量。我们将在这里采用类似的方法，此时<span data-concept="slowly-varying-polarization">极化强度</span>的傅里叶分量可以用<span data-concept="density-matrix-coherences">（二能级）原子密度矩阵的非对角元</span>的傅里叶分量表示，</p>
+<div class="equation" id="eq-4-29">$$\kPenv(\kdeltanu) = \frac{N}{\kV}\kmu\krhotwoone(\kdeltanu)e^{-i\kkbar z}. \tag{4.29}$$</div>
+<p id="susceptibility">如果原子作线性响应，<span data-concept="slowly-varying-polarization">极化强度</span>必定与外加场成正比。该比例常数定义了<span data-concept="susceptibility">电极化率</span>，</p>
+<div class="equation" id="eq-4-30">$$\kchi(\kdeltanu) = \frac{\kPenv(\kdeltanu)}{\epsilon_0\kEenv(\kdeltanu)}. \tag{4.30}$$</div>
+<p>这个量$\kchi$完整地刻画了线性情形下的原子-光子相互作用，求精确解不需要更多的信息。</p>
+<p>对于平面波传播（可以忽略横向效应），<span data-concept="slowly-varying-envelope-approximation">SVEA</span>方程化为</p>
+<div class="equation" id="eq-4-31">$$\frac{\partial\kEenv}{\partial z} + \frac{1}{c}\frac{\partial\kEenv}{\partial \kt} = \frac{i\kkbar}{2\epsilon_0}\kPenv. \tag{4.31}$$</div>
+<p>这个一阶方程转到傅里叶域后可以平凡地求解。</p>
+<p id="linear-solution">变换回时域，我们得到<span data-concept="linear-propagation-solution">线性传播的一般解</span>。</p>
+<figure class="dv" id="drv-linear-propagation"></figure>
+<p>这个解告诉我们，给定场在空间某一位置的谱，就可以把场分解为各频率分量，让每个频率分量分别传播，再变换回时域，得到完整的解。注意，要精确求解线性传播问题，我们只需要$\kchi(\kdeltanu)$。这个表达式包含三种主要效应：</p>
+<p id="effect-absorption">(1) <span data-concept="absorption-coefficient">吸收</span>来自<span data-concept="susceptibility">电极化率</span>的虚部。</p>
+<p id="effect-refraction">(2) <span data-concept="refractive-index">折射</span>由<span data-concept="susceptibility">电极化率</span>的实部引起。</p>
+<p id="effect-dispersion">(3) <span data-concept="dispersion">色散</span>源于<span data-concept="susceptibility">电极化率</span>对频率的依赖。</p>
+</section>
+
+<section id="absorption-refraction">
+<h2>4.2.1 吸收与折射</h2>
+<p class="cite-target"><span data-concept="absorption-coefficient">吸收</span>和<span data-concept="refractive-index">折射</span>的效应可以通过考虑一个具有 δ 函数频率分布的共振连续波场来说明，$\kEenv(\kdeltanu) \propto \delta(\kdeltanu)$，于是</p>
+<div class="equation" id="eq-4-35">$$\kEenv(\kt, z) = \kEenv e^{i\kkbar\kchi(0)z/2}. \tag{4.35}$$</div>
+<p>一般而言，$\kchi$可以是复量，它的实部和虚部对传播的场有性质上不同的效应。具体地说，$\mathrm{Im}[\kchi]$导致光束光强随距离发生指数式衰减或放大，速率为</p>
+<div class="equation" id="eq-4-36">$$\kalpha = \kkbar\ \mathrm{Im}[\kchi(0)]. \tag{4.36}$$</div>
+<p>实部$\mathrm{Re}[\kchi]$使场的相位随距离线性移动，这可以理解为波矢量的改变$\kkbar \to \kkbar + \kkbar\mathrm{Re}[\kchi]/2$，或<span data-concept="refractive-index">折射率</span>的改变</p>
+<div class="equation" id="eq-4-37">$$\knref = 1 + \frac{\mathrm{Re}[\kchi(0)]}{2}. \tag{4.37}$$</div>
+<p id="svea-valid">注意，这些公式只在<span data-concept="slowly-varying-envelope-approximation">缓变包络近似</span>成立时才有效，即$|\mathrm{Im}[\kchi(0)]|, |\mathrm{Re}[\kchi(0)]| \ll 1$。</p>
+</section>
+
+<section id="dispersion">
+<h2>4.2.2 色散</h2>
+<p class="cite-target">如果外加场具有有限的带宽，<span data-concept="susceptibility">电极化率</span>对频率的依赖就开始变得重要。对于近单色场，<span data-concept="susceptibility">电极化率</span>可以在其共振值附近展开，</p>
+<div class="equation" id="eq-4-38">$$\kchi(\kdeltanu) \approx \kchi(0) + \frac{d\kchi}{d\knu}\kdeltanu + \ldots \tag{4.38}$$</div>
+<p>每一项导致不同的效应：第一项对应<span data-concept="refractive-index">折射</span>，第二项对应<span data-concept="group-velocity">群速度</span>，第三项对应<span data-concept="group-velocity">群速度</span><span data-concept="dispersion">色散</span>，依此类推。</p>
+<figure class="dv" id="drv-group-velocity"></figure>
+</section>
+
+<section id="two-level">
+<h2>4.2.3 二能级系统</h2>
+<p class="cite-target" id="two-level-obe">考虑光在由全同、无相互作用的<span data-concept="two-level-atom">二能级原子</span>构成的稀薄气体中的传播。在定常态下，我们可以就<span data-concept="steady-state-coherence">密度矩阵的非对角元</span>求解<span data-concept="optical-bloch-equations">光学布洛赫方程</span>，从而得到<span data-concept="slowly-varying-polarization">极化强度</span>，进而得到<span data-concept="two-level-susceptibility">电极化率</span>。</p>
+<figure class="dv" id="drv-two-level-susceptibility"></figure>
+<p id="two-level-gamma">显然，<span data-concept="susceptibility">电极化率</span>呈现<span data-concept="coherence-decay-rate">谱线宽度为$\kgammaonetwo$</span>的洛伦兹线型。将<span data-concept="dipole-matrix-element">偶极矩</span>与<span data-concept="spontaneous-emission-rate">自发发射率</span>等同起来（$\kgamma = \frac{\kmu^2 k_0^3}{3\pi\epsilon_0\hbar}$且$k_0 = 2\pi/\klambda$），我们还可以把<span data-concept="susceptibility">电极化率</span>表示为</p>
+<div class="equation" id="eq-4-44">$$\kchi(\kdeltanu) = i\frac{3}{8\pi^2}\frac{N}{\kV}\klambda^3\left(\krhooneone^0 - \krhotwotwo^0\right)\frac{\kgamma}{\kgammaonetwo - i\kdeltanu}. \tag{4.44}$$</div>
+<figure class="sim" id="sim-susceptibility" data-figure="4.1" data-original="/media/ch04/fig-4-1.png" data-original-caption="共振附近二能级原子电极化率的实部（折射性的）和虚部（吸收性的）">
+  <div class="sim-head"><span class="eyebrow">Figure 4.1</span><span>实线所示的<span data-concept="susceptibility">电极化率</span>虚部是<span data-concept="absorption-coefficient">吸收性的</span>部分，在共振处达到峰值；虚线所示的实部是<span data-concept="refractive-index">折射性的</span>部分，在共振处变号。滑动失谐$\kdeltanu$即可读出两者：在共振处介质只吸收，在远离共振处介质主要折射，那里$\mathrm{Re}[\kchi]$按$1/\kdeltanu$下降，$\mathrm{Im}[\kchi]$按$1/\kdeltanu^2$下降。$\mathrm{Re}[\kchi]$的淡色切线表示它的斜率，该斜率决定<span data-concept="group-velocity">群速度</span>。增大$\kgammaonetwo$，谱线就变宽并变低；取最小值$\kgamma/2$时，增宽纯粹是辐射的。频率以$\kgamma$为单位，$\kchi$以$\frac{3}{8\pi^2}\frac{N}{\kV}\klambda^3$为单位，对应处于基态的原子。</span></div>
+</figure>
+<h3>共振场</h3>
+<figure class="dv" id="drv-resonant-cross-section"></figure>
+<p id="resonant-absorption">这里我们令$\krhooneone^0 = 1, \krhotwotwo^0 = 0$，因为原子正是在上态布居可以忽略的情形下才对场作线性响应。由于$\kchi(0)$是纯虚数，<span data-concept="resonant-absorption">共振时没有折射，但有吸收</span>。</p>
+<p id="unitary-limit">令人惊讶的是，在辐射增宽的情形下，共振<span data-concept="absorption-cross-section">截面</span>与原子<span data-concept="dipole-matrix-element">偶极矩</span>无关，只取决于$\klambda^2$；这个最大的吸收<span data-concept="absorption-cross-section">截面</span>称为“<span data-concept="unitary-limit">幺正极限</span>”。</p>
+<h3>远失谐场</h3>
+<p id="far-detuned">远离共振时，$\kdeltanu \gg \kgammaonetwo$，虚部（<span data-concept="absorption-coefficient">吸收性的</span>）分量$\mathrm{Im}[\kchi] \propto 1/\kdeltanu^2$远小于实部（无功的）分量$\mathrm{Re}[\kchi] \propto 1/\kdeltanu$，因此<span data-concept="far-detuned-refraction">介质几乎完全是折射性的，引起的吸收很小</span>。</p>
+</section>
+
+<section id="broadening">
+<h2>4.2.4 谱线致宽机制</h2>
+<p class="cite-target" id="homogeneous"><span data-concept="unitary-limit">幺正极限</span>的存在表明，不同的谱线致宽机制（例如辐射与非辐射）可以对系统的行为产生不同的影响。特别重要的是区分对每个原子作用相同的过程与使系综的谱线宽度变宽、却不使其组成原子变宽的过程。前者的“<span data-concept="homogeneous-broadening">均匀</span>”谱线宽度在呈现后者的“<span data-concept="inhomogeneous-broadening" id="inhomogeneous">非均匀</span>”增宽的系综中可能看不到。呈现<span data-concept="inhomogeneous-broadening">非均匀谱线增宽</span>的系统有两个重要的例子：</p>
+<p>(1) 固态环境中的光学发射体（例如色心或量子点）。局域场对光学跃迁有很强的影响，因此每个发射体将表现出不同的跃迁强度和频率。</p>
+<p>(2) 具有热速度分布的原子。多普勒效应使它们的共振频率移动，因此每个原子与外加场的相互作用各不相同。</p>
+<h3>多普勒谱线增宽</h3>
+<p id="doppler">为了说明<span data-concept="inhomogeneous-broadening">非均匀谱线增宽</span>如何影响线性光学传播，我们将更详细地考察<span data-concept="doppler-broadening">多普勒谱线增宽的原子</span>。具体地说，我们考虑热气体中的原子，它们在$z$方向上被频率为$\knu$的场照射。每个原子感受到的表观频率为$\knu - \kkmag\kvz + \mathcal{O}(v^2)$，因原子速度$\kvz$而发生多普勒频移。等价地，可以把这看作原子共振频率的移动$\komega \to \komega + \kkmag\kvz$。对于<span data-concept="doppler-broadening">多普勒谱线增宽的介质</span>，入射光束只与<span data-ref="resonant-class">具有适当速度类的一部分原子</span>共振，但<span data-concept="absorption-coefficient">吸收</span>谱将非常宽，宽度的量级为$\kkmag\kvT$，其中$\kvT$是与原子温度对应的特征速度。为了计算<span data-concept="susceptibility">电极化率</span>，我们将确定每个速度类的原子响应，然后对所有速度类求和。因此<span data-concept="susceptibility">电极化率</span>近似为</p>
+<div class="equation" id="eq-4-50">$$\kchi(\kdeltanu) \approx \int d\kvz\frac{\knv}{\kgammaonetwo - i(\kdeltanu - \kkmag\kvz)} \tag{4.50}$$<sup class="fn" data-note="c-eq-4-50"></sup></div>
+<p>其中热速度分布为</p>
+<div class="equation" id="eq-4-51">$$\knv = \frac{N}{\kV}e^{-\kvz^2/\kvT^2}\frac{1}{\sqrt{\pi}\kvT}. \tag{4.51}$$</div>
+<p id="inhomogeneous-cross-section"><a href="#eq-4-50">式 (4.50)</a>中的积分无法精确求解，但我们将考虑两种可以近似计算它的极限情形。对于非常冷的原子，$\kgammaonetwo \gg \kkmag\kvT$，不存在<span data-concept="inhomogeneous-broadening">非均匀谱线增宽</span>，观测到的系综<span data-concept="absorption-coefficient">吸收</span>谱是洛伦兹线型的，与原子的内禀谱线宽度相符。在相反的极限下，<span data-concept="inhomogeneous-broadening">非均匀谱线增宽</span>占主导，系综谱是宽度为$\sim \kkmag\kvT$的高斯型。注意，<span data-concept="inhomogeneous-broadening">非均匀谱线增宽</span>还<span data-concept="inhomogeneous-cross-section">使$\kdeltanu = 0$处的截面减小</span>$\sim\kgammaonetwo/\kkmag\kvT$。</p>
+<figure class="dv" id="drv-doppler-cross-section"></figure>
+<p>作为一个定量的例子，$\kT = 300\text{K}$时的Rb原子具有$\sim 500\text{MHz}$的非均匀线宽，远大于其$\kgamma \approx 5\text{MHz}$的辐射线宽。对于速度的麦克斯韦-玻尔兹曼热分布，多普勒宽度与温度的平方根成正比。通过对原子进行激光冷却（例如在磁光阱中），可以把<span data-concept="doppler-broadening">多普勒谱线增宽</span>减小到小于辐射线宽。</p>
+<figure class="sim" id="sim-doppler" data-figure="4.2" data-original="/media/ch04/fig-4-2.png" data-original-caption="多普勒谱线增宽的原子系综的吸收谱，比单个速度类的吸收谱宽得多，后者的谱线宽度由退相位率γ₁₂决定。">
+  <div class="sim-head"><span class="eyebrow">Figure 4.2</span><span>热气体的每个速度类都在半宽度为$\kgammaonetwo$的洛伦兹线型中吸收，其中心位于该类处于共振之处，$\kdeltanu = \kkmag\kvz$。细线是十三个这样的速度类，每条都画到它们求和所得的实线谱为止。增大$\kkmag\kvT$，谱就展宽为宽度约为$\kkmag\kvT$的高斯型，并沉到单个速度类的虚线峰值之下；把它降到$\kgammaonetwo$以下，就只剩洛伦兹线型。移动场的失谐$\kdeltanu$，即可选出<span data-ref="resonant-class">与它共振的速度类</span>。频率以$\kgamma$为单位，$\kchi$的单位同图 4.1。</span></div>
+</figure>
+<p>然而一般来说，用线性测量无法判断一个系综是均匀增宽还是非均匀增宽。这类性质只有通过测量介质的非线性响应才能探测。</p>
+</section>

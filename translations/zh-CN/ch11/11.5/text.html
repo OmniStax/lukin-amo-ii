@@ -1,0 +1,77 @@
+<section id="opening">
+<p>我们已经对<span data-concept="bose-condensation">玻色-爱因斯坦凝聚体</span>的<span data-concept="condensate-ground-state">基态波函数</span>有了基本的理解；要更完整地描绘凝聚体的行为，就需要了解<span data-concept="bose-condensation">BEC</span>中的元激发。对这类激发的描述，将使我们能够解释凝聚体的谱、有限温度下的热效应，以及类似于光子场<span data-concept="squeezed-state">压缩</span>的可能的非经典效应。</p>
+</section>
+
+<section id="bogoliubov-approximation">
+<h2>11.5.1 博戈留波夫近似</h2>
+<p>我们的做法源于与经典相干光束的类比，其中电场算符$\hat{\mathcal{E}}$可以很好地近似为一个经典数$\mathcal{E}$加上一个很小的算符偏差$\delta\hat{\mathcal{E}}$。对于物质波，我们将把<span data-concept="matter-field-operator">场算符</span>替换为它的平均值加上围绕该平均值的一些小涨落</p>
+<div class="equation" id="eq-11-142">$$\hat{\psi} = \kpsiGP + \delta\hat{\psi}. \tag{11.142}$$</div>
+<p>于是我们可以对$\hat{\psi}$的<span data-concept="heisenberg-picture">海森伯方程</span>就小量$\delta\hat{\psi}$做线性化，得到关于$\delta\hat{\psi}$和$\delta\hat{\psi}^\dagger$的一组线性耦合方程。</p>
+<figure class="dv" id="drv-linearized-field-equation"></figure>
+<p>由于这些耦合方程是线性的，我们可以通过寻找简正模式解来求解它们。我们将定义算符$\hat{\alpha}_j$和$\hat{\alpha}_j{}^\dagger$，它们湮没和产生频率为$\komega_j$的简正模式中的玻色型激发；由于这些激发是玻色子，它们的<span data-concept="creation-annihilation-operators">产生算符与湮没算符</span>服从玻色统计$[\hat{\alpha}_j, \hat{\alpha}_k{}^\dagger] = \delta_{jk}$。我们可以用简正模式展开$\delta\hat{\psi}$</p>
+<div class="equation" id="eq-11-144">$$\delta\hat{\psi} = e^{-i\kmuchem \kt/\hbar}\sum_j\left(u_j(r)\hat{\alpha}_j e^{-i\komega_j \kt} - v_j^*(r)\hat{\alpha}_j^\dagger e^{i\komega_j \kt}\right), \tag{11.144}$$</div>
+<p>并且场算符将被正确归一化，如果</p>
+<div class="equation" id="eq-11-145">$$|u_j|^2 - |v_j|^2 = 1. \tag{11.145}$$</div>
+<p>把$\delta\hat{\psi}$的展开式代入<a href="#drv-linearized-field-equation">式 (11.143)</a>，我们发现每个简正模式的系数是相互独立的，因此对每个模式$j$得到一组方程。</p>
+<figure class="dv" id="drv-bogoliubov-equations"></figure>
+<p>这些与时间无关的方程给出凝聚体中激发的本征频率$\komega_j$和本征模$\{u_j, v_j\}$，它们被称为<span data-concept="bogoliubov-approximation" id="bogoliubov-equations">“博戈留波夫方程”</span>。</p>
+
+<h3>例：均匀势</h3>
+<p>对于处在均匀势$\kV(x) = 0$中的凝聚体，<span data-concept="bogoliubov-approximation">博戈留波夫方程</span>格外简明。<span data-concept="thomas-fermi-approximation">托马斯-费米近似</span>给出$\tilde{\kpsiGP} = \sqrt{\knzero}$，其中$\knzero$是<span data-concept="condensate-density">凝聚体密度</span>，$\kmuchem = \knzero\kUzero$是<span data-concept="chemical-potential">化学势</span>。由于问题中任何地方都不显含位置，本征模在傅里叶域中最容易得到，</p>
+<div class="equation" id="eq-11-148">$$u_j(r) = u_q e^{i\kq r} \tag{11.148}$$</div>
+<div class="equation" id="eq-11-149">$$v_j(r) = v_q e^{i\kq r}. \tag{11.149}$$</div>
+<p><span data-concept="bogoliubov-approximation">博戈留波夫方程</span>变为</p>
+<div class="equation" id="eq-11-150">$$\begin{pmatrix} \kepsq + \knzero\kUzero - \hbar\komegaq &amp; -\knzero\kUzero \\ -\knzero\kUzero &amp; \kepsq + \knzero\kUzero + \hbar\komegaq \end{pmatrix}\begin{pmatrix} u_q \\ v_q \end{pmatrix} = 0, \tag{11.150}$$</div>
+<p><span data-concept="free-particle-energy" id="free-energy">其中$\kepsq = \hbar^2\kq^2/2\km$</span>。要求出与均匀凝聚体中的激发相联系的本征值和本征模，只需求解这个矩阵方程。频率$\komegaq$由令矩阵的行列式为零得出，从而给出<span data-concept="bogoliubov-spectrum" id="dispersion">色散关系</span>。</p>
+<figure class="dv" id="drv-bogoliubov-spectrum"></figure>
+<p>注意，我们取了正的平方根，因为负的平方根不满足归一化条件<a href="#eq-11-145">式 (11.145)</a>。由于相互作用的存在，<span data-concept="bogoliubov-spectrum">色散关系</span>与<span data-concept="free-particle-energy">自由粒子的$\hbar\komegaq = \kepsq$</span>在性质上不同。在大波数和小波数情形下，频率为</p>
+<div class="equation" id="eq-11-152">$$\hbar\komegaq = \begin{cases} \kepsq + \knzero\kUzero &amp; \text{q 大} \\ \hbar \kq\kssound &amp; \text{q 小,} \end{cases} \tag{11.152}$$</div>
+<p>它们分别对应<span data-concept="bogoliubov-spectrum">类粒子</span>激发和<span data-concept="bogoliubov-spectrum">类声</span>激发。<span data-concept="bogoliubov-spectrum">类声谱</span>有<span data-concept="sound-velocity" id="sound-velocity">一个对应的声速</span></p>
+<div class="equation" id="eq-11-153">$$\kssound = \sqrt{\frac{\knzero\kUzero}{\km}}, \tag{11.153}$$</div>
+<p>并且两种情形之间的过渡发生在临界波矢量附近</p>
+<div class="equation" id="eq-11-154">$$\kq_c \sim \hbar^{-1}\sqrt{2\km\knzero\kUzero} \sim \frac{1}{\kxiheal} \sim \frac{\km\kssound}{\sqrt{2}\hbar}. \tag{11.154}$$<sup class="fn" data-note="c-eq-11-154"></sup></div>
+<figure class="sim" id="sim-bogoliubov" data-figure="11.10" data-original="/media/ch11/fig-11-10.png" data-original-caption="约束在均匀势中的凝聚体的博戈留波夫激发谱。注意，在存在相互作用时，必须达到一个临界速度，才能在保持能量和动量守恒的同时激发凝聚体。">
+  <div class="sim-head"><span class="eyebrow">Figure 11.10</span><span>均匀⁸⁷Rb凝聚体的<span data-concept="bogoliubov-spectrum">激发谱</span> $\komegaq$对波矢量$\kq$的关系，并排的还有<span data-concept="free-particle-energy">自由粒子能量</span> $\kepsq$和声速线$\kq\kssound$。从零开始增大$\knzero\kUzero$，自由抛物线在小$\kq$处弯成斜率为$\kssound$的直线，过渡点$\kq_c \sim 1/\kxiheal$随$\sqrt{\knzero\kUzero}$向外移动。以$\kvmag$的速度穿过凝聚体运动的物体，只有在其直线$\kq\kvmag$升到谱之上的地方，才能给予激发以动量$\hbar\kq$和能量$\hbar\komegaq$：在$\kvmag = \kssound$以下，这条直线永远不会如此，物体也就感受不到阻力。让$\kUzero$变为负值，长波长频率就变成虚数，即虚线分支：均匀凝聚体是不稳定的。频率为以kHz计的$\komega/2\pi$，$\knzero\kUzero$以$\knzero\kUzero/h$给出。</span></div>
+</figure>
+<p>从物理上讲，长波长激发对应于凝聚体的集体激发，并导致了<span data-concept="landau-criterion">超流动性</span>现象。一旦波长接近<span data-concept="healing-length">恢复长度的倒数</span>，凝聚体就不再表现为连续介质，而类单粒子激发占主导。</p>
+
+<h3>探测激发谱——编写中</h3>
+<p>实验已经利用<span data-concept="bragg-spectroscopy" id="bragg">布拉格散射技术</span>测量了气态玻色凝聚体中的激发谱。频率为$\komega_1, \komega_2$、波矢量为$\kkmag_1$和$\kkmag_2$的两束激光，在它们的能量差和动量差与准粒子谱相匹配时，可以与凝聚体相互作用而产生激发。吸收一个光子把一个原子从凝聚体中激发出来，而向第二个光学模的受激发射则使一个原子退激发回到凝聚体中。对原子激发态做<span data-concept="adiabatic-elimination">绝热消除</span>，就得到如下形式的相互作用</p>
+<div class="equation" id="eq-11-155">$$\hat{H} \propto \int d^3\mathbf{r}\hat{\psi}^\dagger(\mathbf{r})\hat{\psi}(\mathbf{r})e^{i(\kk_1 - \kk_2)\cdot\mathbf{r}}e^{-i(\komega_1 - \komega_2)\kt}. \tag{11.155}$$</div>
+<p>展开$\hat{\psi} = \kpsiGP + \delta\hat{\psi}$，只保留$\delta\hat{\psi}$的线性项，得到可以产生或湮没准粒子的项。对于一维的均匀势，这一相互作用包含如下形式的项</p>
+<div class="equation" id="eq-11-156">$$\hat{H} \propto \int dx\ \tilde{\kpsiGP}\sum_{\kq}\left(u_q e^{i\kq x}\hat{\alpha}_q e^{-i\komegaq \kt} - v_q^* e^{-i\kq x}\hat{\alpha}_q^\dagger e^{i\komegaq \kt}\right)e^{i(\kkmag_1 - \kkmag_2)x}e^{-i(\komega_1 - \komega_2)\kt}. \tag{11.156}$$</div>
+<p>对$x$的积分保证了在产生动量为$\kq = \kkmag_1 - \kkmag_2$的准粒子时动量守恒，而时间依赖关系导致在$\komegaq = \komega_1 - \komega_2$处发生共振。值得注意的是，这一相互作用即使在零温度下也允许<span data-concept="bragg-spectroscopy">布拉格散射</span>，此时准粒子模的初始占有数为零。</p>
+
+<h3>排斥型原子的超流动性</h3>
+<p><span data-concept="landau-criterion">超流动性</span>要求物体能够缓慢地穿过流体而不受到任何阻力。由于阻力是介质中激发的宏观表现，我们将看到，排斥型玻色凝聚体的激发谱意味着<span data-concept="landau-criterion">超流动性</span>。特别地，考虑一个以速度$\kvmag$穿过玻色凝聚体的物体。只有当它能把自己的动量和能量共振地传给一个元激发时，才会产生激发：</p>
+<div class="equation" id="eq-11-157">$$\Delta \kpcm_\mathrm{object} = \hbar \kq \tag{11.157}$$</div>
+<div class="equation" id="eq-11-158">$$\Delta\keps_\mathrm{object} = \komegaq. \tag{11.158}$$<sup class="fn" data-note="c-eq-11-158"></sup></div>
+<p>运动学要求$\Delta\keps_\mathrm{object} \leq \Delta \kpcm \kvmag$，所以只有当物体运动得比某个<span data-concept="landau-criterion">临界速度</span>更快时，才能产生激发。</p>
+<figure class="dv" id="drv-landau-critical-velocity"></figure>
+<p>这就是<span data-concept="landau-criterion" id="landau">所谓的超流朗道判据</span>，它指出运动得比<span data-concept="sound-velocity">声速</span>慢的物体不产生激发。</p>
+</section>
+
+<section id="attractive-interactions">
+<h2>11.5.2 有吸引相互作用的BEC</h2>
+<p>如果原子间势是吸引的$\kUzero &lt; 0$，长波长激发$\kq \rightarrow 0$就具有虚频率$\hbar\komegaq$。这意味着凝聚体是不稳定的！然而在实验上，已经观测到了有吸引相互作用的稳定凝聚体。<span data-concept="attractive-condensate-stability" id="finite-number">稳定性的解释在于约束在阱中的原子数是有限的。</span></p>
+<p>如果原子云局域在<span data-concept="trap-length">一个特征阱长度$\kat$</span>之内，系统所允许的最小波矢量的量级为</p>
+<div class="equation" id="eq-11-160">$$\kq_\mathrm{min} \approx \frac{1}{\kat}. \tag{11.160}$$</div>
+<figure class="dv" id="drv-attractive-stability"></figure>
+<p>如果凝聚体的大小超过$N_\mathrm{max}$，吸引相互作用将使它失稳并坍缩。</p>
+<figure class="sim" id="sim-attractive">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>原子相互吸引的⁷Li凝聚体的激发谱对波矢量$\kq$的关系。在$\kepsq &lt; 2\knzero|\kUzero|$处，频率$\komegaq$为虚数，即虚线分支：这样的模式会增长而不是振荡。尺寸为$\kat$的原子云容纳不下比它自己更长的波，所以$\kq_\mathrm{min} = 1/\kat$以下的阴影波矢量并不存在。减弱吸引或收紧阱，直到阴影带盖住整条虚线分支：此时$\komega_\mathrm{min}$为实数，<a href="#drv-attractive-stability">(11.162)</a>成立，而<span data-concept="attractive-condensate-stability">凝聚体尽管有吸引仍然稳定</span>。频率为以Hz计的$\komega/2\pi$。</span></div>
+</figure>
+</section>
+
+<section id="observation">
+<h2>11.5.3 BEC的观测</h2>
+<p>正如我们在本章前面提到的，典型的实验用近共振光的<span data-concept="absorption-imaging">吸收成像</span>来探测冷原子云。在某些情况下，可以对阱中的凝聚体成像，得到原子云的空间轮廓。或者，<span data-concept="time-of-flight-imaging">通过把冷原子云从阱中释放并让它膨胀时间$\ktau$</span>，原子的动量分布$\kpcm$就被映射到空间分布$\krdist = \kpcm\ktau/\km$上。<span data-concept="expansion-signature" id="expansion">这样的膨胀图像提供了区分冷的热原子云与凝聚体的手段。</span>在凝聚体中，动量分布由原子云的大小$\kac$和<span data-concept="heisenberg-uncertainty-principle">不确定性原理</span>得出，</p>
+<div class="equation" id="eq-11-164">$$\kpcm_\mathrm{BEC} \sim \frac{\hbar}{\kac}, \tag{11.164}$$</div>
+<p>得出膨胀后的空间分布</p>
+<div class="equation" id="eq-11-165">$$\kRexp_\mathrm{BEC} \sim \frac{\hbar \kt}{\kac\km} \tag{11.165}$$<sup class="fn" data-note="c-eq-11-165"></sup></div>
+<p>相反，热原子云在阱中的动量将具有高斯分布</p>
+<div class="equation" id="eq-11-166">$$P_\mathrm{thermal}(\kpcm) \sim e^{-\kpcm^2/\kpcm_T^2} \tag{11.166}$$</div>
+<p>导致高斯型的空间分布</p>
+<div class="equation" id="eq-11-167">$$P_\mathrm{thermal}(\kRexp) \sim e^{-\kRexp^2/\kRexp_T^2}, \tag{11.167}$$</div>
+<p>其中$\kRexp_T$和$\kpcm_T$是温度为$\kT$的原子云的距离标度和动量标度。这两种动量分布在性质上不同。把观测到的图像拟合到对应于高斯热云和抛物线型凝聚体的<span data-concept="expansion-signature">双峰分布</span>，就能精确算出凝聚原子所占的比例。</p>
+</section>

@@ -1,0 +1,116 @@
+<section id="opening">
+<p class="cite-target" id="focus">在下面的讨论中，我们将集中讨论<span data-concept="lambda-system" id="lambda-def">如<a href="#fig-lambda">图 9.3</a><sup class="fn" data-note="c-fig-9-3"></sup>所示的三能级$\Lambda$ 型系统，其中单个激发态介导两个较低能量态之间的跃迁</span>。由于到<span data-ref="lvl-3">激发态</span>的跃迁是偶极容许的，从<span data-ref="lvl-3">激发态</span>的辐射衰变必定发生得相对较快。然而，从<span data-ref="lvl-2">$|2\rangle$</span>到<span data-ref="lvl-1">$|1\rangle$</span>的跃迁是偶极禁戒的，所以<span data-ref="lvl-2">亚稳态$|2\rangle$</span>可以具有很长的寿命。尽管辐射衰变路径比<span data-ref="lvl-2">亚稳态</span>的衰变率快得多，但为避免虚假的发散，计入这两类衰变可能是重要的。</p>
+</section>
+
+<section id="schrodinger">
+<h2>5.1.1 薛定谔方程方法</h2>
+<p id="detunings">通过确定<span data-concept="lambda-detunings">单光子失谐$\kDeltaone$和$\kDeltatwo$</span>以及<span data-concept="lambda-detunings">双光子失谐$\kdelta = \kDeltaone - \kDeltatwo$</span>，我们可以很容易地写出该系统在合适的<span data-concept="rotating-frame">转动参考系</span>中的<span data-concept="hamiltonian">哈密顿量</span>，</p>
+<div class="equation" id="eq-5-1">$$\kH = -\kDeltaone|3\rangle\langle 3| - \kdelta|2\rangle\langle 2| - \left(\kOmegaone|3\rangle\langle 1| + \kOmegatwo|3\rangle\langle 2| + \kOmegaone^*|1\rangle\langle 3| + \kOmegatwo^*|2\rangle\langle 3|\right), \tag{5.1}$$</div>
+<p>其中我们已将<span data-ref="lvl-1">$|1\rangle$</span>的能量设为零。暂时忽略衰变项，形如</p>
+<div class="equation" id="eq-5-2">$$|\kpsi\rangle = \kcone(\kt)|1\rangle + \kctwo(\kt)|2\rangle + \kcthree(\kt)|3\rangle \tag{5.2}$$</div>
+<p>的一般态服从该<span data-concept="hamiltonian">哈密顿量</span>的<span data-concept="schrodinger-equation">薛定谔方程</span>，由此得到<span data-concept="probability-amplitude">布居概率幅</span>的运动方程，</p>
+<div class="equation" id="eq-5-3">$$\dot{\kcone} = i\kOmegaone^* \kcthree \tag{5.3}$$</div>
+<div class="equation" id="eq-5-4">$$\dot{\kctwo} = i\kdelta \kctwo + i\kOmegatwo^* \kcthree \tag{5.4}$$</div>
+<div class="equation" id="eq-5-5">$$\dot{\kcthree} = i\kDeltaone \kcthree + i\kOmegaone \kcone + i\kOmegatwo \kctwo. \tag{5.5}$$</div>
+<figure class="sim" id="fig-lambda" data-figure="5.2" data-original="/media/ch05/fig-5-2.png" data-original-caption="所考虑的 Λ 型系统，图中标出了单光子失谐和双光子失谐。波浪线表示可能的衰变路径">
+  <div class="sim-head"><span class="eyebrow">Figure 5.2</span><span><span data-concept="lambda-system">Λ 型系统</span>：下方的<span data-ref="lvl-2">$|2\rangle$</span>和<span data-ref="lvl-1">$|1\rangle$</span>经由<span data-ref="lvl-3">$|3\rangle$</span>，被<span data-ref="field-1">频率为$\knu_1$的场$\kOmegaone$</span>和<span data-ref="field-2">频率为$\knu_2$的场$\kOmegatwo$</span>连接起来。每个场都偏离其跃迁一个<span data-concept="lambda-detunings">单光子失谐</span>，$\kDeltaone = \knu_1 - \omega_{13}$和$\kDeltatwo = \knu_2 - \omega_{23}$，两个场所达到的两条虚线相距$\kdelta = \kDeltaone - \kDeltatwo$，即<span data-concept="lambda-detunings">双光子失谐</span>。波浪线是离开<span data-ref="lvl-3">$|3\rangle$</span>的衰变和<span data-ref="lvl-2">$|2\rangle$</span>的慢衰变。未按比例绘制。</span></div>
+</figure>
+<p><span data-concept="lambda-system">$\Lambda$ 型系统</span>在大而相近的<span data-concept="lambda-detunings">单光子失谐</span>$\kDeltaone \sim \kDeltatwo = \kDelta \gg \kOmegaone, \kOmegatwo, \kgammathree, \kdelta$下有一个特别简单的解。由于$\kDelta$远大于问题中所有其他时标，到$\kOmega_{1,2}/\kDelta$的最低阶，<span data-ref="lvl-3">激发态概率幅</span>将是常数。</p>
+<figure class="dv" id="drv-raman-coupling"></figure>
+<p class="cite-target" id="raman"><span data-concept="raman-transition">通过吸收跃迁$\knu_1$上的一个光子并发射频率为$\knu_2$的一个光子，布居可以在两个基态之间被相干转移</span>，从而产生很大的<span data-concept="density-matrix-coherences">相干性$\krhotwoone = \kctwo \kcone^*$</span>。尽管我们忽略了上态衰变的影响，<span data-ref="lvl-3">激发态布居</span>仍被大<span data-concept="detuning">失谐</span>$\kDelta$强烈抑制。因此，<span data-concept="spontaneous-emission">自发发射</span>的概率很小，有效二能级描述看来是一个很好的近似。</p>
+<p>简单的波函数方法让我们对有效<span data-concept="two-level-atom">二能级系统</span>中的双光子跃迁有了一些直观认识。然而，在许多情形下，还需要计入<span data-concept="dephasing-rate">退相位</span>和衰变的影响。</p>
+</section>
+
+<section id="density-matrix-block">
+<h2>5.1.2 密度矩阵方法</h2>
+<p>为了细致地计入衰变和<span data-concept="dephasing-rate">退相位</span>，我们必须求助于<span data-concept="density-matrix">密度矩阵</span>方法。运动方程为</p>
+<div class="equation" id="eq-5-10">$$\dot{\rho} = \mathcal{L}_{31}(\rho) + \mathcal{L}_{32}(\rho) + i[\kH, \rho], \tag{5.10}$$<sup class="fn" data-note="c-eq-5-10"></sup></div>
+<p>其中分别计入从<span data-ref="lvl-3">$|3\rangle$</span>到<span data-ref="lvl-2">$|2\rangle$</span>和从<span data-ref="lvl-3">$|3\rangle$</span>到<span data-ref="lvl-1">$|1\rangle$</span>的衰变的<span data-concept="lindblad-master-equation">刘维尔算符</span>例如为</p>
+<div class="equation" id="eq-5-11">$$\mathcal{L}_{31} = -\frac{\gamma_{3\rightarrow 1}}{2}\left(\sigma_{31}\sigma_{13}\rho - \sigma_{13}\rho\sigma_{31} + h.c.\right). \tag{5.11}$$</div>
+<p>利用三能级系统的<span data-concept="hamiltonian">哈密顿量</span>，我们可以求出<span data-concept="density-matrix">密度矩阵</span>各分量的相干演化。<span data-concept="lindblad-master-equation">刘维尔算符</span>将计入从<span data-ref="lvl-3">$|3\rangle$</span>到<span data-ref="lvl-1">$|1\rangle$</span>的速率$\kgamma$、从<span data-ref="lvl-3">$|3\rangle$</span>到<span data-ref="lvl-2">$|2\rangle$</span>的速率$\tilde{\gamma}$以及从<span data-ref="lvl-2">$|2\rangle$</span>到<span data-ref="lvl-1">$|1\rangle$</span>的速率$\gamma'$。离开<span data-ref="lvl-3">$|3\rangle$</span>的总衰变率为$\kgammathree = \kgamma + \tilde{\gamma}$，而离开<span data-ref="lvl-2">$|2\rangle$</span>的总衰变率为$\kgammatwo = \gamma'$。最后，我们将通过把<span data-concept="coherence-decay-rate">相干性$\rho_{ij}$的衰变率设为$\gamma_{ij}$</span>来纳入非辐射<span data-concept="dephasing-rate">退相干</span>机制。（在辐射<span data-concept="dephasing-rate">退相干</span>的极限下，$\gamma_{ij}$将等于离开$|i\rangle$和$|j\rangle$的衰变率之和的一半。）</p>
+<figure class="dv" id="drv-lambda-density-matrix"></figure>
+<p>注意，其余方程可利用$\rho_{ji} = \rho_{ij}^*$和$\krhooneone + \krhotwotwo + \rho_{33} = 1$求得。为了记号方便，我们将经常把相干性的相位演化和衰变用<span data-concept="complex-decay-rate">复衰变参量</span>表示为</p>
+<div class="equation" id="eq-5-17">$$\kGammaonetwo = \kgammaonetwo - i\kdelta \tag{5.17}$$</div>
+<div class="equation" id="eq-5-18">$$\kGammaonethree = \kgammaonethree - i\kDelta \tag{5.18}$$</div>
+<div class="equation" id="eq-5-19">$$\Gamma_{23} = \gamma_{23} - i(\kDelta - \kdelta). \tag{5.19}$$</div>
+<div class="equation" id="eq-5-20">$$\quad \tag{5.20}$$<sup class="fn" data-note="c-eq-5-20"></sup></div>
+<p>对于$\kDelta \gg \kOmega_{1,2}$的远失谐系统，我们可以利用<span data-concept="adiabatic-elimination">绝热消除</span>令$\rho_{32} = \krhothreeone = 0$来处理这组方程。尽管如此，<span data-concept="density-matrix">密度矩阵</span>运动方程在数学上是繁琐的。</p>
+</section>
+
+<section id="stochastic">
+<h2>5.1.3 随机波函数方法</h2>
+<p><span data-concept="density-matrix">密度矩阵</span>方法涉及令人头疼的数学，但使用<span data-concept="monte-carlo-wavefunction">随机波函数方法</span>来纳入衰变而不增加额外的自由度，我们就能巧妙地绕开它。具体而言，我们将使用一个为原来的厄米部分增加两个衰变通道的<span data-concept="effective-hamiltonian">非厄米哈密顿量</span>来处理该系统，</p>
+<div class="equation" id="eq-5-21">$$\kHeff = \kH - \frac{i\hbar\kgammathree}{2}|3\rangle\langle 3| - \frac{i\hbar\kgammatwo}{2}|2\rangle\langle 2|. \tag{5.21}$$<sup class="fn" data-note="c-eq-5-21"></sup></div>
+<p>我们可以自由使用<span data-concept="schrodinger-equation">薛定谔方程</span>$i\hbar|\kpsi\rangle = \kHeff|\kpsi\rangle$<sup class="fn" data-note="c-schrodinger"></sup>，只要<span data-concept="quantum-jump">量子跳跃</span>的概率很小，</p>
+<div class="equation" id="eq-5-22">$$\kPjump = \int d\kt\left(\kgammatwo|\kctwo(\kt)|^2 + \kgammathree|\kcthree(\kt)|^2\right) \ll 1. \tag{5.22}$$</div>
+<p>这一约束在两种重要情形下得到满足：</p>
+<p>(1) 如果系统一开始处于<span data-ref="lvl-1">$|1\rangle$</span>，且<span data-ref="field-1">探测场</span>很弱，$\kOmegaone \rightarrow 0$，那么态<span data-ref="lvl-2">$|2\rangle$</span>和<span data-ref="lvl-3">$|3\rangle$</span>上的布居为$|\kOmegaone|^2$阶或更高阶，所以到$\kOmegaone$的最低阶，我们可以忽略<span data-concept="quantum-jump">量子跳跃</span>。</p>
+<p>(2) 如果系统在<span data-ref="lvl-1">$|1\rangle$</span>和<span data-ref="lvl-2">$|2\rangle$</span>上都有有限的布居，<span data-concept="quantum-jump">量子跳跃</span>可以忽略，只要从<span data-ref="lvl-2">$|2\rangle$</span>的衰变很慢（$\kgammatwo \rightarrow 0$）且<span data-ref="lvl-3">激发态布居</span>很小（$\rho_{33} \rightarrow 0$）。</p>
+<p>非厄米<span data-concept="schrodinger-equation">薛定谔方程</span>给出<span data-concept="monte-carlo-wavefunction">随机波函数</span>概率幅的如下运动方程：</p>
+<div class="equation" id="eq-5-23">$$\dot{\kcone} = i\kOmegaone^* \kcthree \tag{5.23}$$</div>
+<div class="equation" id="eq-5-24">$$\dot{\kctwo} = -\underbrace{(\frac{\kgammatwo}{2} - i\kdelta)}_{\kGammaonetwo}\kctwo + i\kOmegatwo^* \kcthree \tag{5.24}$$</div>
+<div class="equation" id="eq-5-25">$$\dot{\kcthree} = -\underbrace{(\frac{\kgammathree}{2} - i\kDeltaone)}_{\kGammaonethree}\kcthree + i\kOmegaone \kcone + i\kOmegatwo \kctwo. \tag{5.25}$$</div>
+<p>这些方程可以在不同的情形下用不同的方法求解。如果$\kOmegaone$很弱而$\kOmegatwo$是连续波，则可以用傅里叶变换精确求解。如果外加场的包络随时间变化缓慢，<span data-concept="adiabatic-elimination">绝热消除</span>提供了一种求近似解的方法。无论采用何种具体的数学处理，重要的是始终在最后检查<span data-concept="quantum-jump">量子跳跃</span>的概率确实很小。</p>
+<p>我们现在来考虑<span data-concept="lambda-system">$\Lambda$ 型系统</span>在几种特殊情形下的行为。对于<span data-ref="field-1">弱探测场$\kOmegaone$</span>和<span data-ref="field-2">任意强度的恒定场$\kOmegatwo$</span>，到$\kOmegaone$的零阶，起初处于<span data-ref="lvl-1">$|1\rangle$</span>的系统将保持在<span data-ref="lvl-1">$|1\rangle$</span>，所以$\kcone(\kt) \approx 1$。其余的<span data-concept="probability-amplitude">概率幅</span>可以通过对运动方程做傅里叶变换求得，使得</p>
+<div class="equation" id="eq-5-26">$$\underbrace{(\frac{\kgammatwo}{2} - i(\kdelta - \komega))}_{\kGammaonetwo}\kctwo = i\kOmegatwo^* \kcthree \tag{5.26}$$</div>
+<div class="equation" id="eq-5-27">$$\underbrace{(\frac{\kgammathree}{2} - i(\kDeltaone - \komega))}_{\kGammaonethree}\kcthree = i\kOmegaone + i\kOmegatwo \kctwo. \tag{5.27}$$</div>
+<p>注意，傅里叶频率$\komega$出现的位置与<span data-concept="detuning">失谐</span>相同，所以我们将再次提到<span data-concept="complex-decay-rate">复衰变率</span>$\kGammaonetwo$和$\kGammaonethree$，并记住其中隐含了对频率的依赖。<span data-concept="density-matrix">密度矩阵</span>各分量的结果很容易得出。</p>
+<figure class="dv" id="drv-weak-probe-coherences"></figure>
+<p>所有其他<span data-concept="density-matrix">密度矩阵</span>元均为$|\kOmegaone|^2$阶或更高阶，因而可以忽略。同样的结果可以直接由<span data-concept="master-equation">主方程</span>得到，其中一般而言<span data-concept="complex-decay-rate">复衰变率</span>将包含<span data-concept="dephasing-rate">退相位</span>以及衰变的影响。</p>
+</section>
+
+<section id="large-detuning">
+<h2>5.1.4 大失谐$\Delta$，弱$\Omega_1$</h2>
+<p>在单光子<span data-concept="detuning">失谐</span>$\kDelta$很大的情形下，三能级系统可以被大大简化。当<span data-ref="field-1">探测光</span>很弱时，我们可以用探测跃迁上的<span data-concept="probe-susceptibility">线性电极化率</span>来表征系统的响应，</p>
+<div class="equation" id="eq-5-31">$$\kchione = \frac{|\kmu|^2}{\hbar\epsilon_0}\frac{\krhothreeone}{\kOmegaone}. \tag{5.31}$$<sup class="fn" data-note="c-eq-5-31"></sup></div>
+<figure class="dv" id="drv-probe-response"></figure>
+<p>第一项$i/\kGammaonethree$包含了由$\kOmegaone$耦合的<span data-ref="lvl-1">$|1\rangle$</span>和<span data-ref="lvl-3">$|3\rangle$</span>组成的<span data-concept="two-level-atom">二能级系统</span>的单光子物理，并表现为位于$\knu_1 = \omega_{13}$、谱线宽度为$\kgammaonethree$的宽共振。第二项值得更仔细地对待，因为它描述了双光子跃迁的效应。在$\kDelta \gg \kgammaonethree$的极限下，<span data-concept="complex-decay-rate">复衰变率</span>$\kGammaonethree \approx -i\kDelta$。</p>
+<figure class="dv" id="drv-raman-resonance"></figure>
+<p class="cite-target" id="two-photon-res">分母的实部和复数部分<sup class="fn" data-note="c-real-complex"></sup>对应于<span data-concept="two-photon-resonance">双光子共振</span>的有效宽度和<span data-concept="detuning">失谐</span>。由于我们计入了衰变，<span data-concept="probe-susceptibility">电极化率</span>即使在共振$\kdelta \rightarrow |\kOmegatwo|^2/\kDelta$时也保持有限。<span data-concept="two-photon-resonance">双光子共振</span>的宽度由亚稳态<span data-concept="dephasing-rate">退相干</span>$\kgammaonetwo$和由激发态衰变产生的、被大的单光子<span data-concept="detuning">失谐</span>强烈抑制的一项$\kgammaonethree|\kOmegatwo|^2/\kDelta^2$共同决定。</p>
+<p>从我们对<span data-concept="susceptibility">电极化率</span>的计算还可以推出另一个重要的物理效应。对于恰好处于共振$\kdelta = |\kOmegatwo|^2/\kDelta$、没有<span data-concept="dephasing-rate">退相位</span>$\kgammaonetwo = 0, \kgammaonethree = \kgammathree/2$的系统，<span data-concept="probe-susceptibility">电极化率</span></p>
+<div class="equation" id="eq-5-36">$$\frac{\krhothreeone}{\kOmegaone} \sim \frac{2i}{\kgammathree} \tag{5.36}$$</div>
+<p>与辐射增宽系统的电极化率相对应。因此，系统正趋近<span data-concept="unitary-limit">幺正极限</span>，<span data-concept="absorption-cross-section">截面</span>正比于波长$\klambda^2$。在这种情形下，双光子峰与单光子共振具有相同的振幅。</p>
+<figure class="sim" id="sim-raman-absorption" data-figure="5.3" data-original="/media/ch05/fig-5-3.png" data-original-caption="探测光束电极化率的虚部随探测光束失谐的变化。在远离共振的耦合光束 Ω₂ 存在时，Ω₁ 的吸收呈现双共振线型。在此计算中，γ₁₂ = 0，所以单光子共振与双光子共振具有相同的峰值，但双光子峰的谱线宽度显著更窄。">
+  <div class="sim-head"><span class="eyebrow">Figure 5.3</span><span>弱探测光的吸收，即式 (5.32) 中$\krhothreeone/\kOmegaone$的虚部，随其失谐$\kDeltaone = \knu_1 - \omega_{13}$变化，耦合场$\kOmegatwo$远失谐$\kDeltatwo$；所有频率均以$\kgammaonethree$为单位。在位于$\knu_1 = \omega_{13}$的宽单光子共振旁边，是窄的<span data-concept="two-photon-resonance">双光子峰</span>，它因光致频移而移到$\kdelta = |\kOmegatwo|^2/\kDelta$，刚好越过$\kdelta = 0$处的吸收零点。拖动$\kDeltatwo$使其变窄，$|\kOmegatwo|$使其移动并变宽，$\kgammaonetwo$看它降到单光子峰之下。</span></div>
+</figure>
+<h3>缀饰态解释</h3>
+<p class="cite-target" id="dresses">通过在<span data-concept="dressed-states">缀饰态图像</span>中考察该系统，我们可以深入理解这一结果的物理起源。<span data-ref="field-2">强场$\kOmegatwo$</span><span data-concept="raman-dressed-states">“缀饰”</span>了裸三能级系统，使得$\kOmegaone$所探测的本征态包含态<span data-ref="lvl-2">$|2\rangle$</span>和<span data-ref="lvl-3">$|3\rangle$</span>的混合，</p>
+<div class="equation" id="eq-5-37">$$|+\rangle \approx |3\rangle - \frac{\kOmegatwo^*}{\kDelta}|2\rangle \tag{5.37}$$</div>
+<div class="equation" id="eq-5-38">$$|-\rangle \approx |2\rangle + \frac{\kOmegatwo}{\kDelta}|3\rangle, \tag{5.38}$$<sup class="fn" data-note="c-eq-5-38"></sup></div>
+<p>其中由于大的<span data-concept="detuning">失谐</span>，我们只保留了到$\kOmegatwo/\kDelta$的最低阶项。单光子共振对应于从基态到非常接近<span data-ref="lvl-3">激发态$|3\rangle$</span>的$|+\rangle$的跃迁，因此表现出接近辐射宽度$\kgammathree$的谱线宽度。所观测到的<span data-concept="raman-transition">双光子拉曼跃迁</span>对应于跃迁<span data-ref="lvl-1">$|1\rangle$</span>$\rightarrow |-\rangle$。由于<span data-ref="lvl-1">$|1\rangle$</span>是基态，该跃迁的谱线宽度由$|-\rangle$的<span data-concept="dephasing-rate">退相位率</span>决定，</p>
+<div class="equation" id="eq-5-39">$$\gamma_- \approx \kgammaonetwo + \frac{|\kOmegatwo|^2}{\kDelta^2}\kgammaonethree, \tag{5.39}$$</div>
+<p>这恰好对应于我们数学分析的结果。</p>
+</section>
+
+<section id="rabi-block">
+<h2>5.1.5 大$\Delta$，任意$\Omega_1$：双光子拉比振荡</h2>
+<p>尽管<span data-concept="probe-susceptibility">线性电极化率</span>分析只对弱场$\kOmegaone$成立，但可以使用同样的随机<span data-concept="schrodinger-equation">薛定谔方程</span>来预言<span data-ref="field-1 field-2">两个强场$\kOmegaone$和$\kOmegatwo$</span>的效应。当然，要忽略<span data-concept="quantum-jump">量子跳跃</span>，我们必须验证其概率很小。在远失谐情形$\kDelta \gg \kOmega_{1,2}$下，这一要求变为</p>
+<div class="equation" id="eq-5-40">$$\frac{|\kOmegaone|^2}{\kDelta^2}\kgammathree \kt, \frac{|\kOmegatwo|^2}{\kDelta^2}\kgammathree \kt \ll 1. \tag{5.40}$$</div>
+<p>对于大<span data-concept="detuning">失谐</span>，<span data-ref="lvl-3">激发态</span>可以被消除，即使在$\kOmegaone \sim \kOmegatwo$时，三能级系统也将表现为由双光子跃迁耦合的有效<span data-concept="two-level-atom">二能级系统</span>。特别是，完成的<span data-concept="two-photon-rabi-oscillations">拉比振荡</span>次数可以很大</p>
+<div class="equation" id="eq-5-41">$$\left|\frac{\kOmegaone\kOmegatwo^*}{\kDelta}\right|\kt \gg 1, \tag{5.41}$$</div>
+<p>即使在短到<span data-concept="quantum-jump">量子跳跃</span>不太可能发生的时间内。由于有效<span data-concept="dephasing-rate">退相干</span>率按$1/\kDelta^2$变化，而<span data-concept="effective-raman-coupling">有效拉比频率</span>按$1/\kDelta$变化，原则上总能找到足够大的失谐，使<span data-concept="two-photon-rabi-oscillations">拉比振荡</span>比<span data-concept="dephasing-rate">退相位</span>发生得更快。</p>
+<figure class="sim" id="sim-two-photon-rabi">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>两个场都很强且远失谐，原子从<span data-ref="lvl-1">$|1\rangle$</span>出发。式 (5.23)–(5.25) 被完整积分，其中<span data-ref="lvl-2">$|2\rangle$</span>稳定，双光子失谐保持在光致频移后的共振$\kdelta = (|\kOmegatwo|^2 - |\kOmegaone|^2)/\kDelta$上。布居以$|\kOmegaeff|$在<span data-ref="lvl-1">$|1\rangle$</span>和<span data-ref="lvl-2">$|2\rangle$</span>之间来回翻转，而<span data-ref="lvl-3">$|3\rangle$</span>几乎保持为空，虚线曲线是已发生<span data-concept="quantum-jump">量子跳跃</span>的概率$\kPjump$。增大$\kDelta$：翻转按$1/\kDelta$变慢，跳跃按$1/\kDelta^2$。速率以$\kgammathree$为单位，时间以$1/\kgammathree$为单位。</span></div>
+</figure>
+</section>
+
+<section id="remarks">
+<h2>5.1.6 评注</h2>
+<h3>推广到多个激发态</h3>
+<p>我们的分析也可以轻而易举地推广到包含多个激发态的效应。对于大<span data-concept="detuning">失谐</span>，确切的激发态能级并不重要，因为它们不影响<span data-concept="lambda-detunings">双光子失谐</span>。一旦消除了激发态，<span data-concept="lambda-system">$\Lambda$ 型系统</span>将再次表现为具有<span data-concept="effective-raman-coupling">有效拉比频率</span>的二能级系统</p>
+<div class="equation" id="eq-5-42">$$\kOmegaeff = \sum_i \frac{\kOmega_{1i}\kOmega_{2i}^*}{\kDelta_i}. \tag{5.42}$$</div>
+<p>由多个激发态产生的<span data-concept="ac-stark-shift">斯塔克偏移</span>和有效衰变率可以用类似的方式计算。</p>
+<h3>多普勒谱线增宽的影响</h3>
+<p id="doppler">到目前为止，我们隐含地假定所考虑的三能级原子是静止的。如果它们可以自由运动，我们必须通过改变<span data-concept="detuning">失谐</span>来纳入由原子速度$\kv$产生的多普勒频移</p>
+<div class="equation" id="eq-5-43">$$\kDeltaone \rightarrow \kDeltaone - \kk_1\cdot\kv \tag{5.43}$$</div>
+<div class="equation" id="eq-5-44">$$\kDeltatwo \rightarrow \kDeltatwo - \kk_2\cdot\kv \tag{5.44}$$</div>
+<div class="equation" id="eq-5-45">$$\kdelta \rightarrow \kdelta - (\kk_1 - \kk_2)\cdot\kv. \tag{5.45}$$</div>
+<p><span data-concept="lambda-detunings">单光子失谐</span>$\kDeltaone, \kDeltatwo$的变化对于远离共振的场并不重要。此外，<span data-concept="lambda-detunings">双光子失谐</span>可以做到对<span data-concept="doppler-broadening">多普勒谱线增宽</span>几乎不敏感，只要<span data-ref="field-1 field-2">两束光</span>频率几乎相同，$\knu_1 \approx \knu_2$，并且同向传播，$\kk_1||\kk_2$，从而$\kk_1 \approx \kk_2$。</p>
+<p class="cite-target" id="doppler-free"><span data-concept="doppler-free-raman">消多普勒双光子共振</span>可以通过考虑传给原子的动量冲击从物理上理解。在<span data-concept="raman-transition">拉曼过程</span>中，原子吸收一个光子$\knu_1$，获得动量$\hbar\kk_1$，随后发射一个光子$\knu_2$，失去动量$\hbar\kk_2$，因此总动量传递为$\hbar(\kk_1 - \kk_2)$。尽管$\knu_1 \neq \knu_2$，因而$|k_1| \neq |k_2|$，但它们的差与光频相比可以非常小。例如，对于Rb中超精细能级之间的同向传播双光子跃迁，多普勒效应只对谱线宽度贡献$\sim$kHz。</p>
+<h3>相位敏感性</h3>
+<p class="cite-target" id="phase-sensitivity">在<span data-concept="probe-susceptibility">线性电极化率</span>分析中，我们发现$\krhothreeone/\kOmegaone$只依赖于$|\kOmegatwo|^2$，而不依赖于<span data-ref="field-1 field-2">两个场</span>的相对相位。出现这种情况是因为双光子相干$\krhotwoone$可以自由地跟随光学相干的相位。如果<span data-ref="lvl-1">$|1\rangle$</span>与<span data-ref="lvl-2">$|2\rangle$</span>之间的跃迁是偶极容许的，那么耦合这三个态的三个场的相对相位就会变得重要。</p>
+<h3>级联与 V 型跃迁</h3>
+<p id="configurations"><span data-concept="three-level-configurations">其他三能级构型</span>（见<a href="#5.intro-fig-raman-configs">图 7.3</a><sup class="fn" data-note="c-fig-7-3"></sup>）在大的单光子<span data-concept="detuning">失谐</span>下表现出类似的行为。为了说明差异可能出现在哪里，我们将考察一个远失谐的<span data-concept="three-level-configurations">级联系统</span>。尽管<span data-concept="three-level-configurations">级联系统</span>也会表现出<span data-concept="two-photon-resonance">双光子共振</span>特征，但它在以下方面不同于<span data-concept="lambda-system">$\Lambda$ 型系统</span>：</p>
+<p class="cite-target" id="cascade">(1) 末态$|3\rangle$常常具有偶极容许的<span data-concept="spontaneous-emission">自发发射</span>，因为到（较低的）居间态$|2\rangle$的跃迁是偶极容许的。因此，双光子共振通常会更宽。这一规则的一个显著例外是原子氢中的1s $\rightarrow$ 2p $\rightarrow$ 2s跃迁，其中末态2s是亚稳的，且通常为双光子共振所施加的场都远<span data-concept="detuning">失谐</span>于2p态。</p>
+<p>(2) <span data-concept="three-level-configurations">级联</span>原子具有不同的多普勒性质，因为<span data-concept="raman-transition">拉曼跃迁</span>涉及的是吸收两个光子，而不是吸收一个并发射另一个。因此，对于反向传播的光束，多普勒频移相互抵消，因为不同频率的光子将沿相反方向给予原子动量冲击。</p>
+</section>

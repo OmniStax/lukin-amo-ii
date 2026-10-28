@@ -1,0 +1,439 @@
+{
+ "id": "10",
+ "dir": "ch10",
+ "title": "陷俘离子：量子态工程",
+ "intro": {},
+ "sections": [
+  {
+   "id": "10.1",
+   "title": "离子阱"
+  },
+  {
+   "id": "10.2",
+   "title": "模型：谐振阱中的离子"
+  },
+  {
+   "id": "10.3",
+   "title": "量子态工程"
+  },
+  {
+   "id": "10.4",
+   "title": "离子阱量子计算"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "B",
+   "type": "magnetic-field",
+   "meaning": "彭宁阱的磁场，沿其轴向",
+   "unit": "T",
+   "section": "10.1",
+   "anchor": "10.1-sim-penning"
+  },
+  {
+   "sym": "omega_c",
+   "type": "frequency",
+   "meaning": "自由离子在磁场 B 中的回旋频率 eB/m",
+   "unit": "rad/s",
+   "section": "10.1",
+   "anchor": "10.1-sim-penning"
+  },
+  {
+   "sym": "omega_plus",
+   "type": "frequency",
+   "meaning": "离子在彭宁阱中回旋运动的频率",
+   "unit": "rad/s",
+   "section": "10.1",
+   "anchor": "10.1-sim-penning"
+  },
+  {
+   "sym": "omega_minus",
+   "type": "frequency",
+   "meaning": "离子在彭宁阱中磁控运动的频率",
+   "unit": "rad/s",
+   "section": "10.1",
+   "anchor": "10.1-sim-penning"
+  },
+  {
+   "sym": "omega_z",
+   "type": "frequency",
+   "meaning": "离子在彭宁阱中沿磁场的轴向运动的频率",
+   "unit": "rad/s",
+   "section": "10.1",
+   "anchor": "10.1-sim-penning"
+  },
+  {
+   "sym": "Omega_RF",
+   "type": "frequency",
+   "meaning": "保罗阱的势振荡所用的射频",
+   "unit": "rad/s",
+   "section": "10.1",
+   "anchor": "10.1-sim-paul"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "section": "10.1",
+   "anchor": "10.1-sim-paul"
+  },
+  {
+   "section": "10.2",
+   "sym": "nu",
+   "concept": "trap-frequency",
+   "meaning": "阱频率 ν：约束离子的谐振子的频率，即其运动能级的间距",
+   "unit": "rad/s",
+   "anchor": "10.2-trap-frequency",
+   "redefines": true
+  },
+  {
+   "section": "10.2",
+   "sym": "x_ion",
+   "concept": "ion-position-momentum",
+   "type": "length",
+   "meaning": "陷俘离子的位置算符 x̂",
+   "unit": "m",
+   "anchor": "10.2-eq-10-2"
+  },
+  {
+   "section": "10.2",
+   "sym": "p",
+   "concept": "ion-position-momentum",
+   "type": "momentum",
+   "meaning": "陷俘离子的动量算符 p̂",
+   "unit": "kg·m/s",
+   "anchor": "10.2-eq-10-3"
+  },
+  {
+   "section": "10.2",
+   "sym": "m",
+   "type": "mass",
+   "meaning": "离子的质量",
+   "unit": "kg",
+   "anchor": "10.2-eq-10-2"
+  },
+  {
+   "section": "10.2",
+   "sym": "H_motion",
+   "concept": "motional-hamiltonian",
+   "meaning": "离子在阱中运动的哈密顿量",
+   "unit": "J",
+   "anchor": "10.2-eq-10-4"
+  },
+  {
+   "section": "10.2",
+   "sym": "a_0",
+   "concept": "harmonic-oscillator-length",
+   "meaning": "谐振子长度：离子运动基态的尺寸",
+   "unit": "m",
+   "anchor": "10.2-eq-10-5"
+  },
+  {
+   "section": "10.2",
+   "sym": "H_electronic",
+   "concept": "ion-electronic-hamiltonian",
+   "meaning": "离子两个内部能级的哈密顿量，忽略衰变",
+   "unit": "J",
+   "anchor": "10.2-eq-10-6"
+  },
+  {
+   "section": "10.2",
+   "sym": "omega_eg",
+   "concept": "atomic-transition-frequency",
+   "meaning": "离子内部跃迁的频率：|e⟩ 比 |g⟩ 高 ħω_eg",
+   "unit": "rad/s",
+   "anchor": "10.2-eq-10-6"
+  },
+  {
+   "section": "10.2",
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "激发态的衰变率；在边带冷却中，为冷却跃迁的荧光率",
+   "unit": "s⁻¹",
+   "anchor": "10.2-gamma-tau"
+  },
+  {
+   "section": "10.2",
+   "sym": "tau",
+   "type": "time",
+   "meaning": "操控离子的时标",
+   "unit": "s",
+   "anchor": "10.2-gamma-tau"
+  },
+  {
+   "section": "10.2",
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "|g⟩ → |e⟩ 跃迁上激光的拉比频率",
+   "unit": "rad/s",
+   "anchor": "10.2-eq-10-9"
+  },
+  {
+   "section": "10.2",
+   "sym": "Delta",
+   "type": "frequency",
+   "meaning": "激光相对于裸内部跃迁的失谐 Δ = ω − ω_eg（在拉曼跃迁中，为激光相对于居间能级的失谐）",
+   "unit": "rad/s",
+   "anchor": "10.2-eq-10-14",
+   "redefines": true
+  },
+  {
+   "section": "10.2",
+   "sym": "omega",
+   "type": "frequency",
+   "meaning": "激光的频率",
+   "unit": "rad/s",
+   "anchor": "10.2-eq-10-7",
+   "redefines": true
+  },
+  {
+   "section": "10.2",
+   "sym": "k_mag",
+   "type": "wavevector",
+   "meaning": "激光沿阱轴的波矢量，因此 ħk 是一个光子给予离子的动量",
+   "unit": "m⁻¹",
+   "anchor": "10.2-eq-10-7"
+  },
+  {
+   "section": "10.2",
+   "sym": "E_env",
+   "concept": "slowly-varying-envelope",
+   "meaning": "激光场的振幅 ℰ",
+   "unit": "V/m",
+   "anchor": "10.2-eq-10-7"
+  },
+  {
+   "section": "10.2",
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "unit": "s",
+   "anchor": "10.2-eq-10-7"
+  },
+  {
+   "section": "10.2",
+   "sym": "phi",
+   "type": "phase",
+   "meaning": "驻波相对于阱极小值的相位 φ",
+   "unit": "rad",
+   "anchor": "10.2-eq-10-8",
+   "redefines": true
+  },
+  {
+   "section": "10.2",
+   "sym": "lambda",
+   "type": "length",
+   "meaning": "激光的波长，λ = 2π/k",
+   "unit": "m",
+   "anchor": "10.2-eq-10-12"
+  },
+  {
+   "section": "10.2",
+   "sym": "eta_LD",
+   "concept": "lamb-dicke-parameter",
+   "meaning": "兰姆-迪克参数 η = 2πa₀/λ：离子运动基态的尺寸与激光波长之比",
+   "anchor": "10.2-ld-parameter"
+  },
+  {
+   "section": "10.2",
+   "sym": "omega_R",
+   "concept": "recoil-frequency",
+   "meaning": "反冲频率，ħω_R = (ħk)²/2m",
+   "unit": "rad/s",
+   "anchor": "10.2-eq-10-13"
+  },
+  {
+   "section": "10.2",
+   "sym": "H_r",
+   "concept": "lamb-dicke-hamiltonian",
+   "meaning": "陷俘离子在行波中、转动参考系里的哈密顿量",
+   "unit": "J",
+   "anchor": "10.2-eq-10-14"
+  },
+  {
+   "section": "10.2",
+   "sym": "H_s",
+   "concept": "standing-wave-couplings",
+   "meaning": "陷俘离子在驻波中、转动参考系里的哈密顿量",
+   "unit": "J",
+   "anchor": "10.2-eq-10-15"
+  },
+  {
+   "section": "10.2",
+   "sym": "H_0",
+   "concept": "ion-bare-spectrum",
+   "meaning": "离子运动与内部能级的裸哈密顿量，其本征态为 |g⟩|n⟩ 和 |e⟩|n⟩",
+   "unit": "J",
+   "anchor": "10.2-eq-10-16"
+  },
+  {
+   "section": "10.2",
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "陷俘离子与激光的哈密顿量，及其在裸共振和边带上的形式",
+   "unit": "J",
+   "anchor": "10.2-drv-sideband-couplings"
+  },
+  {
+   "section": "10.2",
+   "sym": "g",
+   "concept": "single-photon-rabi-frequency",
+   "meaning": "腔量子电动力学的真空拉比耦合，在陷俘离子中由 ηΩ 取代它",
+   "unit": "rad/s",
+   "anchor": "10.2-red-jc"
+  },
+  {
+   "section": "10.3",
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "anchor": "10.3-eq-10-27"
+  },
+  {
+   "section": "10.3",
+   "sym": "c_n",
+   "concept": "probability-amplitude",
+   "meaning": "态在基矢态 |n⟩ 上的展开系数",
+   "anchor": "10.3-eq-10-27"
+  },
+  {
+   "section": "10.3",
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "|g⟩ → |e⟩ 跃迁上激光的拉比频率",
+   "unit": "rad/s",
+   "anchor": "10.3-sim-state-prep"
+  },
+  {
+   "section": "10.3",
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "unit": "s",
+   "anchor": "10.3-sim-state-prep"
+  },
+  {
+   "section": "10.3",
+   "sym": "phi",
+   "type": "phase",
+   "meaning": "激光脉冲的相位 φ，它决定该脉冲所驱动的 |g⟩ 与 |e⟩ 之间耦合的相位",
+   "unit": "rad",
+   "anchor": "10.3-sim-state-prep",
+   "redefines": true
+  },
+  {
+   "section": "10.4",
+   "sym": "nu",
+   "concept": "trap-frequency",
+   "meaning": "阱频率 ν：约束离子的谐振子的频率，即其运动能级的间距",
+   "unit": "rad/s",
+   "anchor": "10.4-ion-string"
+  },
+  {
+   "section": "10.4",
+   "sym": "nu_s",
+   "concept": "ion-normal-modes",
+   "meaning": "阱中两个离子的伸缩模式的频率 √3ν",
+   "unit": "rad/s",
+   "anchor": "10.4-normal-modes"
+  },
+  {
+   "section": "10.4",
+   "sym": "m",
+   "type": "mass",
+   "meaning": "离子的质量",
+   "unit": "kg",
+   "anchor": "10.4-eq-10-31"
+  },
+  {
+   "section": "10.4",
+   "sym": "r_dist",
+   "type": "length",
+   "meaning": "离子 i 沿阱轴的位置 r_i",
+   "unit": "m",
+   "anchor": "10.4-eq-10-31",
+   "redefines": true
+  },
+  {
+   "section": "10.4",
+   "sym": "p_cm",
+   "type": "momentum",
+   "meaning": "离子 i 的动量 p_i；p = (p₂ − p₁)/√2 是伸缩模式的相对动量",
+   "unit": "kg·m/s",
+   "anchor": "10.4-eq-10-31",
+   "redefines": true
+  },
+  {
+   "section": "10.4",
+   "sym": "x_disp",
+   "type": "length",
+   "meaning": "离子 i 偏离其平衡位置的位移 x_i；x = (x₂ − x₁)/√2 是伸缩模式的相对坐标",
+   "unit": "m",
+   "anchor": "10.4-drv-two-ion-expansion"
+  },
+  {
+   "section": "10.4",
+   "sym": "X_cm",
+   "type": "length",
+   "meaning": "两个离子的质心坐标 X = (x₁ + x₂)/√2",
+   "unit": "m",
+   "anchor": "10.4-eq-10-33"
+  },
+  {
+   "section": "10.4",
+   "sym": "P_cm",
+   "type": "momentum",
+   "meaning": "两个离子的质心动量 P = (p₁ + p₂)/√2",
+   "unit": "kg·m/s",
+   "anchor": "10.4-eq-10-35"
+  },
+  {
+   "section": "10.4",
+   "sym": "a_sep",
+   "type": "length",
+   "meaning": "阱中两个离子的平衡间距 a",
+   "unit": "m",
+   "anchor": "10.4-drv-two-ion-expansion"
+  },
+  {
+   "section": "10.4",
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "两个陷俘离子的哈密顿量：其运动的 Ĥ_motion，其与激光耦合的 Ĥ_int，整体的 Ĥ",
+   "unit": "J",
+   "anchor": "10.4-eq-10-31",
+   "redefines": true
+  },
+  {
+   "section": "10.4",
+   "sym": "k_mag",
+   "type": "wavevector",
+   "meaning": "激光沿阱轴的波矢量，因此 ħk 是一个光子给予离子的动量",
+   "unit": "m⁻¹",
+   "anchor": "10.4-eq-10-38"
+  },
+  {
+   "section": "10.4",
+   "sym": "Delta",
+   "type": "frequency",
+   "meaning": "激光相对于裸内部跃迁的失谐 Δ = ω − ω_eg（在拉曼跃迁中，为激光相对于居间能级的失谐）",
+   "unit": "rad/s",
+   "anchor": "10.4-eq-10-38"
+  },
+  {
+   "section": "10.4",
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "|g⟩ → |e⟩ 跃迁上激光的拉比频率",
+   "unit": "rad/s",
+   "anchor": "10.4-eq-10-38"
+  },
+  {
+   "section": "10.4",
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "anchor": "10.4-eq-10-44"
+  }
+ ]
+}

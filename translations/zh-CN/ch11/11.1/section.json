@@ -1,0 +1,128 @@
+{
+ "id": "11.1",
+ "chapter": "11",
+ "title": "引言",
+ "short": "引言",
+ "lead": "当冷气体不再表现得像经典气体：原子的<span data-concept=\"de-broglie-wavelength\">物质波包</span>、它们发生重叠时的<span data-concept=\"atom-number-density\">密度</span>和温度、<span data-concept=\"indistinguishability-statistics\">不可分辨</span>原子的<span data-concept=\"bose-einstein-distribution\">玻色-爱因斯坦统计法</span>，以及自由的或处于谐振阱中的理想玻色气体基态中聚集的原子数。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-degeneracy",
+   "kind": "sim",
+   "draws": [
+    "temperature",
+    "density",
+    "length"
+   ],
+   "conventions": [
+    "Rb"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "debroglie",
+   "concept": "de-broglie-wavelength",
+   "verb": "introduces"
+  },
+  {
+   "span": "criterion",
+   "concept": "bec-criterion",
+   "verb": "introduces"
+  },
+  {
+   "span": "density",
+   "concept": "atom-number-density",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-temperature",
+   "concept": "critical-temperature",
+   "verb": "introduces"
+  },
+  {
+   "span": "bose-condensation",
+   "concept": "bose-condensation",
+   "verb": "introduces"
+  },
+  {
+   "span": "be-statistics",
+   "concept": "bose-einstein-distribution",
+   "verb": "introduces"
+  },
+  {
+   "span": "distinguishability",
+   "concept": "indistinguishability-statistics",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-11-4",
+   "concept": "chemical-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "bookkeeping",
+   "concept": "ground-state-occupation-bookkeeping",
+   "verb": "introduces"
+  },
+  {
+   "span": "gs-occupation",
+   "concept": "ideal-gas-condensate-fraction",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [],
+ "footnotes": [
+  {
+   "id": "c-eq-11-7",
+   "kind": "correction",
+   "html": "书中在被积函数的指数中印的是$\\kepsi$。被积函数是$g(\\keps)/(e^{(\\keps - \\kmuchem)/k_B\\kT} - 1)$：指数中出现的是积分变量$\\keps$，而不是某个能级$\\kepsi$。"
+  },
+  {
+   "id": "c-eq-11-8",
+   "kind": "correction",
+   "html": "书中在被积函数的指数中印的是$\\kepsi$。如同<a href=\"#eq-11-7\">(11.7)</a>，被积函数是$\\keps\\, g(\\keps)/(e^{(\\keps - \\kmuchem)/k_B\\kT} - 1)$。"
+  }
+ ]
+}

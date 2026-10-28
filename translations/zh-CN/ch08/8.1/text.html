@@ -1,0 +1,22 @@
+<section id="opening">
+<p class="cite-target" id="two-levels">在讨论原子运动时，为简单起见，我们将着重考虑<span data-concept="two-level-atom">只有两个相关内部能级的原子</span>，$\{$<span data-ref="lvl-1">$|1\rangle$</span>，<span data-ref="lvl-2">$|2\rangle$</span>$\}$。将原子的位置和动量分别用算符$\kr = \{\hat{x}, \hat{y}, \hat{z}\}$和$\kp = \{\kp_x, \kp_y, \kp_z\}$表示，我们可以写出与<span data-concept="rabi-frequency">拉比频率</span>为$\kOmega$的激光相互作用的<span data-concept="moving-atom-hamiltonian" id="moving-hamiltonian">运动原子的哈密顿量</span>：</p>
+<div class="equation" id="eq-8-1">$$\kH = \kH_F + \kH_{AF} + \frac{\kp^2}{2\km} + \kV(\kr). \tag{8.1}$$</div>
+<p id="hamiltonian-parts"><span data-concept="field-hamiltonian">自由场哈密顿量</span>$\kH_F$计入电磁能量密度。<span data-concept="hamiltonian">原子-场哈密顿量</span>$\kH_{AF}$有两个组成部分：（1）<span data-concept="system-reservoir-hamiltonian">原子-热库相互作用</span>$\kH_{AR}$导致<span data-concept="spontaneous-emission">自发发射</span>，（2）原子-激光相互作用$\kH_{AL}$引起两个原子能级之间的跃迁。</p>
+<p id="rwa-coupling">在<span data-concept="rotating-wave-approximation">旋转波近似</span>下，原子-激光相互作用可以写成</p>
+<div class="equation" id="eq-8-2">$$\kH_{AL} = -\hbar\kOmega(\kr)|2\rangle\langle 1| - \hbar\kOmega(\kr)^*|1\rangle\langle 2|, \tag{8.2}$$</div>
+<p>其中我们明确计入了激光振幅和相位的空间依赖，</p>
+<div class="equation" id="eq-8-3">$$\kOmega(\kr) = |\kOmega(\kr)|e^{i\kphi(\kr)}. \tag{8.3}$$</div>
+</section>
+
+<section id="plane-wave">
+<h2>与平面波的相互作用</h2>
+<p class="cite-target" id="plane-wave-phase">平面波对原子所施的力，为<span data-concept="atomic-recoil">光与原子之间的动量传递</span>提供了一个富有启发性的例子。在上面引入的记号中，行波具有恒定的振幅$|\kOmega|$，但相位$\kphi = \kk\cdot\mathbf{r}$随空间变化。对于这一分析，我们假定外势$\kV(\kr)$在该问题的特征距离尺度上可以忽略。因此，动量$\kp$是原子运动态的好量子数，所以把激光相位算符$e^{i\kk\cdot\mathbf{r}}$改写在动量本征基中是有利的。</p>
+<figure class="dv" id="drv-plane-wave-coupling"></figure>
+<p id="recoil">我们立刻看到，光与原子的相互作用不仅涉及内态，还涉及质心动量态。<span data-concept="atomic-recoil" id="atomic-recoil">这种动量传递称为“原子反冲”。</span></p>
+<p id="resonance">设原子从态<span data-ref="lvl-1">$|p\rangle|1\rangle$</span>出发。平面波光会把它激发到态<span data-ref="lvl-2">$|p + \hbar k\rangle|2\rangle$</span>，产生涉及内部自由度和动量自由度的<span data-concept="rabi-oscillations">拉比振荡</span>。若计入原子的运动态，我们发现这两个态之间的能量差并不恰好等于<span data-concept="atomic-transition-frequency">内部跃迁能量$\hbar\komega_{12}$</span>。特别是，<span data-concept="recoil-shifted-resonance" id="resonant-frequency">这一跃迁的共振频率</span>发生了移位。</p>
+<figure class="dv" id="drv-recoil-shifted-resonance"></figure>
+<p id="recoil-scale">这两个修正有简单的物理解释：第一个，$\kpcm\kkmag/\km = v\kkmag$，是<span data-concept="recoil-shifted-resonance">多普勒频移</span>，而第二个是光子的<span data-concept="recoil-frequency" id="recoil-energy">反冲能$\komegaR$</span>。通常，碱金属原子的<span data-concept="recoil-frequency">反冲移位</span>远小于<span data-concept="spontaneous-emission-rate">光学弛豫速率</span>，$\komegaR \sim \kgamma/400 \sim 10 - 100\ \text{kHz}$。然而，<span data-concept="recoil-frequency">反冲移位</span>与<span data-concept="raman-transition">双光子跃迁</span>的谱线宽度相差并不大，这表明在多能级原子的<span data-concept="laser-cooling">激光冷却</span>中可能出现有趣的效应。</p>
+<figure class="sim" id="sim-recoil">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>原子的两个能级与其质心动量的关系：<span data-ref="lvl-1">$|1\rangle$</span>位于动能$\kpcm^2/2\km$的抛物线上，<span data-ref="lvl-2">$|2\rangle$</span>位于抬高$\hbar\komega_{12}$的同一条抛物线上。吸收一个光子使原子从<span data-ref="lvl-1">$|p\rangle|1\rangle$</span>向上并横跨一个$\hbar\kkmag$，到达<span data-ref="lvl-2">$|p + \hbar k\rangle|2\rangle$</span>。拖动$\kpcm$，观察这一步分成两部分：沿切线的上升，即<span data-concept="recoil-shifted-resonance">多普勒频移</span>$\kpcm\kkmag/\km$，随$\kpcm$变化并随之变号；而抛物线在一个$\hbar\kkmag$范围内高出其切线的弯曲，即<span data-concept="recoil-frequency">反冲移位</span>$\hbar\kkmag^2/2\km = \komegaR$，保持不变。动量以$\hbar\kkmag$为单位，频率以$\komegaR$为单位；能量轴是断开的，因为$\komega_{12} \gg \komegaR$。</span></div>
+</figure>
+</section>

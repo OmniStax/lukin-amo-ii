@@ -1,0 +1,2161 @@
+{
+ "id": "9.4",
+ "chapter": "9",
+ "title": "非线性混频过程中的量子动力学",
+ "short": "非线性混频过程",
+ "lead": "量子场的线性与非线性放大：<span data-concept=\"degenerate-opo\">简并</span>与<span data-concept=\"nondegenerate-pdc\">非简并参量下转换</span>，从其经典方程到光子对的有效哈密顿量；它产生的关联光子对和<span data-concept=\"squeezed-state\">压缩态</span>；腔损耗如何影响腔内以及离开腔的光中的压缩；<span data-concept=\"homodyne-detection\">零拍探测</span>；干涉测量中的压缩光；以及原子中的<span data-concept=\"spin-squeezing\">压缩</span>与纠缠。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "MIT 8.422 习题集 1 第 3 题、习题集 3 第 2 题和第 3 题，以及习题集 4 第 1 题，每个小问各用一张卡片，改用卢金的记号重述，并附有 AI 撰写的解答，因为该课程没有公布答案；习题集 1 第 3 题要求作 Q 函数的数值图：这里每个小问改为要求给出解析的 Q(α) 以及该题的各个问题，其图被暂扣。",
+ "figures": [
+  {
+   "id": "fig-opo",
+   "kind": "figure",
+   "number": "9.9",
+   "originals": [
+    "/media/ch09/fig-9-9.png"
+   ],
+   "original_caption": "光学参量振荡器由具有级联能级构型的原子构成，原子位于共振频率为 ν_c = ν₀/2 的腔内。",
+   "draws": [
+    "frequency",
+    "electric-field"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-squeezing",
+   "kind": "sim",
+   "number": "9.10",
+   "originals": [
+    "/media/ch09/fig-9-10.png"
+   ],
+   "original_caption": "真空态、相干态和压缩态中噪声的相空间表示。",
+   "draws": [
+    "quadrature",
+    "state",
+    "phase",
+    "coupling",
+    "time",
+    "frequency",
+    "electric-field"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-output-squeezing",
+   "kind": "sim",
+   "number": "9.11",
+   "originals": [
+    "/media/ch09/fig-9-11.png"
+   ],
+   "original_caption": "输出场的动量正交分量中的压缩，相对于相干态的噪声（称为“标准量子极限”）。",
+   "draws": [
+    "quadrature",
+    "frequency",
+    "rate",
+    "coupling"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "fig-homodyne",
+   "kind": "figure",
+   "number": "9.12",
+   "originals": [
+    "/media/ch09/fig-9-12.png"
+   ],
+   "original_caption": "量子场â的零拍探测示意图。本地振荡器b̂_LO在分束器上与信号混合，两个输出场相减，从而给出对â的正交分量的相位敏感测量。",
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-phase-shift",
+   "kind": "sim",
+   "number": "9.13",
+   "originals": [
+    "/media/ch09/fig-9-13.png"
+   ],
+   "original_caption": "测量相移φ的三种方法。(a) 使用相干态，p̂中的正交分量方差决定了可测量的φ的最小值。(b) 使用⟨ΔP²⟩ < 1/2的压缩态，可以做出更精确的测量。(c) 只需使用更大的相干场就能获得类似的精度改进，这比产生压缩态要容易得多。",
+   "draws": [
+    "quadrature",
+    "state",
+    "phase"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "fig-interferometer",
+   "kind": "figure",
+   "number": "9.14",
+   "originals": [
+    "/media/ch09/fig-9-14.png"
+   ],
+   "original_caption": "测量相移δφ的一种实验构型，利用压缩光来提高精度（见PRL 59 278 (1987)和PRL 59 2153 (1987)。",
+   "draws": [
+    "phase"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "amp-noise",
+   "concept": "linear-amplifier-noise",
+   "verb": "introduces"
+  },
+  {
+   "span": "opo",
+   "concept": "degenerate-opo",
+   "verb": "introduces"
+  },
+  {
+   "span": "phase-gain",
+   "concept": "phase-dependent-amplification",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-9-152",
+   "concept": "opo-heisenberg-langevin",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-9-155",
+   "concept": "nondegenerate-pdc",
+   "verb": "introduces"
+  },
+  {
+   "span": "number-correlations",
+   "concept": "photon-number-correlations",
+   "verb": "introduces"
+  },
+  {
+   "span": "heralded",
+   "concept": "heralded-single-photons",
+   "verb": "introduces"
+  },
+  {
+   "span": "post-selection",
+   "concept": "post-selection",
+   "verb": "introduces"
+  },
+  {
+   "span": "squeezed-def",
+   "concept": "squeezed-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "damped",
+   "concept": "damped-squeezing",
+   "verb": "introduces"
+  },
+  {
+   "span": "threshold",
+   "concept": "steady-state-squeezing",
+   "verb": "introduces"
+  },
+  {
+   "span": "output-field",
+   "concept": "output-squeezing",
+   "verb": "introduces"
+  },
+  {
+   "span": "homodyne",
+   "concept": "homodyne-detection",
+   "verb": "introduces"
+  },
+  {
+   "span": "interferometry",
+   "concept": "squeezed-interferometry",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-squeezing",
+   "concept": "spin-squeezing",
+   "verb": "introduces"
+  },
+  {
+   "span": "atom-photon",
+   "concept": "atom-photon-entanglement",
+   "verb": "introduces"
+  },
+  {
+   "span": "degenerate",
+   "concept": "parametric-processes",
+   "verb": "uses"
+  },
+  {
+   "span": "degenerate",
+   "concept": "second-order-susceptibility",
+   "verb": "uses"
+  },
+  {
+   "span": "amp-noise",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "hl-approach",
+   "concept": "heisenberg-langevin-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "adiabatic",
+   "concept": "adiabatic-elimination",
+   "verb": "uses"
+  },
+  {
+   "span": "squeezed-def",
+   "concept": "coherent-state",
+   "verb": "uses"
+  },
+  {
+   "span": "squeezed-def",
+   "concept": "quadrature-operators",
+   "verb": "uses"
+  },
+  {
+   "span": "damped",
+   "concept": "cavity-langevin-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "damped",
+   "concept": "cavity-loss-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "damped",
+   "concept": "cavity-noise-correlations",
+   "verb": "uses"
+  },
+  {
+   "span": "output-field",
+   "concept": "input-output-relation",
+   "verb": "uses"
+  },
+  {
+   "span": "homodyne",
+   "concept": "local-oscillator",
+   "verb": "uses"
+  },
+  {
+   "span": "homodyne",
+   "concept": "beamsplitter-transformation",
+   "verb": "uses"
+  },
+  {
+   "span": "number-correlations",
+   "concept": "thermal-photon-distribution",
+   "verb": "uses"
+  },
+  {
+   "span": "undepleted",
+   "concept": "undepleted-pump-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "atom-photon",
+   "concept": "raman-transition",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-pair-state",
+   "concept": "photon-pair-state",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "hw1-3i",
+   "source_id": "hw1.3i",
+   "source_number": "Problem Set 1, Problem 3(i)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的括号$|\\alpha)$、$(\\alpha|$写作$|\\alpha\\rangle$、$\\langle\\alpha|$；卢金没有定义的$Q$函数（他的准概率分布是式 (9.40) 的$P$函数）保持为 MIT 的定义；该题允许数值作答的许可被略去，其计算并作图的要求改为计算并描述，图被暂扣；MIT 给出的态的角$\\theta$、$\\phi$予以保留：它们不是式 (9.161) 的抽运相位$\\theta$，也不是式 (9.198) 的本地振荡器相位$\\phi$。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "squeezed-def",
+   "prompt": "诸如$Q(\\alpha)$函数这样的赝概率分布，为刻画光的量子态提供了有用且富有洞察力的方式。在本题中，我们探讨一些重要的态及其刻画。$Q(\\alpha)$函数定义为$$Q_\\rho(\\alpha) \\equiv \\langle\\alpha|\\rho|\\alpha\\rangle, \\qquad (12)$$并且它很容易算出，只需利用任何纯态$\\rho = |\\psi\\rangle\\langle\\psi|$都可以用$$|\\psi\\rangle = \\sum_{n=0}^{\\infty} c_n|n\\rangle, \\qquad (13)$$和$$\\langle n|\\alpha\\rangle = e^{-|\\alpha|^2/2}\\frac{\\alpha^n}{\\sqrt{n!}}. \\qquad (14)$$来表示这一事实。计算并描述$$Q_1(\\alpha) = |\\langle\\alpha|\\psi_1\\rangle|^2, \\qquad (15)$$，对于$$|\\psi_1\\rangle = \\cos\\frac{\\theta}{2}|0\\rangle + e^{i\\phi}\\sin\\frac{\\theta}{2}|12\\rangle, \\qquad (16)$$，其中$|12\\rangle$是十二光子数本征态，对$\\phi$和$\\theta$的各种取值。这是最小不确定态吗？它是压缩态吗？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由 (14)，$\\langle\\alpha|n\\rangle = e^{-|\\alpha|^2/2}(\\alpha^*)^n/\\sqrt{n!}$，所以$$Q_1(\\alpha) = e^{-|\\alpha|^2}\\left|\\cos\\frac{\\theta}{2} + e^{i\\phi}\\sin\\frac{\\theta}{2}\\frac{(\\alpha^*)^{12}}{\\sqrt{12!}}\\right|^2 = e^{-|\\alpha|^2}\\left[\\cos^2\\frac{\\theta}{2} + \\sin^2\\frac{\\theta}{2}\\frac{|\\alpha|^{24}}{12!} + \\sin\\theta\\frac{|\\alpha|^{12}}{\\sqrt{12!}}\\cos(\\phi - 12\\arg\\alpha)\\right].$$在$\\theta = 0$处它是原点处真空的高斯分布；在$\\theta = \\pi$处它是福克态的环，峰值在$|\\alpha|^2 = 12$，并且在每个$\\arg\\alpha$处都相同，因为光子数态没有相位。在二者之间，两者都存在，它们的交叉项在原点周围加上十二重的波纹，在两个概率幅重叠的$|\\alpha|^2 = 6$附近最强；改变$\\phi$使波纹转过$\\phi/12$，而$\\theta$决定图中各含有每个态的多少。由于$|\\psi_1\\rangle$只含有$|0\\rangle$和$|12\\rangle$，$\\langle\\hat{a}\\rangle = \\langle\\hat{a}^2\\rangle = 0$，所以式 (9.13)–(9.14) 的每个正交分量在任意角度下都有$$\\langle\\Delta\\hat{x}^2\\rangle = \\frac{1}{2} + \\langle\\hat{a}^\\dagger\\hat{a}\\rangle = \\frac{1}{2} + 12\\sin^2\\frac{\\theta}{2}.$$乘积$\\langle\\Delta\\hat{x}^2\\rangle\\langle\\Delta\\hat{p}^2\\rangle = (1/2 + 12\\sin^2(\\theta/2))^2$大于$1/4$，除非$\\theta = 0$：该态不是最小不确定态（真空除外），并且由于没有任何正交分量降到$1/2$以下，它不是压缩态。"
+   }
+  },
+  {
+   "id": "hw1-3ii",
+   "source_id": "hw1.3ii",
+   "source_number": "Problem Set 1, Problem 3(ii)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的括号$|\\alpha)$、$(\\alpha|$写作$|\\alpha\\rangle$、$\\langle\\alpha|$；卢金没有定义的$Q$函数（他的准概率分布是式 (9.40) 的$P$函数）保持为 MIT 的定义；该题允许数值作答的许可被略去，其计算并作图的要求改为计算并描述，图被暂扣；两个相干态的振幅写作$\\alpha_0$，以便与$Q$的自变量$\\alpha$区分开，MIT 对二者用同一个字母；在对数标度上作图的指示被表述为该图所显示的内容。该态是 9.2 节的偶薛定谔猫。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "squeezed-def",
+   "prompt": "对于纯态$\\rho = |\\psi\\rangle\\langle\\psi|$的$Q$函数$Q_\\rho(\\alpha) \\equiv \\langle\\alpha|\\rho|\\alpha\\rangle$，由$|\\psi\\rangle = \\sum_n c_n|n\\rangle$和$\\langle n|\\alpha\\rangle = e^{-|\\alpha|^2/2}\\alpha^n/\\sqrt{n!}$算出：计算$$Q_2(\\alpha) = |\\langle\\alpha|\\psi_2\\rangle|^2, \\qquad (17)$$，其中$$|\\psi_2\\rangle = \\frac{|\\alpha_0\\rangle + |-\\alpha_0\\rangle}{\\sqrt{2}}, \\qquad (18)$$，比如取$\\alpha_0 = 3$。在对数标度上你应当看到原点周围的干涉条纹。这是由什么造成的？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由$\\langle\\alpha|\\pm\\alpha_0\\rangle = e^{-|\\alpha|^2/2 - |\\alpha_0|^2/2 \\pm \\alpha^*\\alpha_0}$，对于实的$\\alpha_0$，$$Q_2(\\alpha) = \\frac{1}{2}e^{-|\\alpha|^2 - \\alpha_0^2}\\left|e^{\\alpha^*\\alpha_0} + e^{-\\alpha^*\\alpha_0}\\right|^2 = e^{-|\\alpha|^2 - \\alpha_0^2}\\left[\\cosh(2\\alpha_0\\,\\mathrm{Re}\\,\\alpha) + \\cos(2\\alpha_0\\,\\mathrm{Im}\\,\\alpha)\\right].$$（所写的态的范数为$1 + e^{-2\\alpha_0^2}$，当$\\alpha_0 = 3$时它与 1 相差$10^{-8}$。）cosh 项是两个高斯分布，$\\frac{1}{2}e^{-|\\alpha \\mp \\alpha_0|^2}$，位于$\\pm\\alpha_0 = \\pm 3$。余弦项是一组沿$\\mathrm{Im}\\,\\alpha$排列、周期为$\\pi/\\alpha_0 \\approx 1.05$的条纹，以$e^{-|\\alpha|^2 - \\alpha_0^2}$为权重：在原点附近它们约为峰值的$e^{-9} \\approx 10^{-4}$，这就是它们只在对数标度上才显示出来的原因。它们来自两个分量的干涉，即$\\langle\\alpha|\\alpha_0\\rangle\\langle-\\alpha_0|\\alpha\\rangle$这样的交叉项，而$|\\alpha_0\\rangle$与$|-\\alpha_0\\rangle$的统计混合不会有这些项：条纹是叠加的相干性，是薛定谔猫的标志，$Q$对一个真空大小的圆盘作平滑，只把它保留为这一微小的波纹。"
+   }
+  },
+  {
+   "id": "hw1-3iii",
+   "source_id": "hw1.3iii",
+   "source_number": "Problem Set 1, Problem 3(iii)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的括号$|\\alpha)$、$(\\alpha|$写作$|\\alpha\\rangle$、$\\langle\\alpha|$；卢金没有定义的$Q$函数（他的准概率分布是式 (9.40) 的$P$函数）保持为 MIT 的定义；该题允许数值作答的许可被略去，其计算并作图的要求改为计算并描述，图被暂扣；MIT 给出的态的相位$\\phi$予以保留：它不是式 (9.198) 的本地振荡器相位$\\phi$。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "squeezed-def",
+   "prompt": "对于纯态$\\rho = |\\psi\\rangle\\langle\\psi|$的$Q$函数$Q_\\rho(\\alpha) \\equiv \\langle\\alpha|\\rho|\\alpha\\rangle$，由$|\\psi\\rangle = \\sum_n c_n|n\\rangle$和$\\langle n|\\alpha\\rangle = e^{-|\\alpha|^2/2}\\alpha^n/\\sqrt{n!}$算出：计算$$Q_3(\\alpha) = |\\langle\\alpha|\\psi_3\\rangle|^2, \\qquad (19)$$，对于$$|\\psi_3\\rangle = \\frac{1}{\\sqrt{N}}\\sum_{k=1}^{N} e^{ik\\phi}|k\\rangle, \\qquad (20)$$，其中$|k\\rangle$是含$k$个光子的福克态，比如取$N = 10$和$\\phi = \\pi/4$。你会如何解释这个态的物理含义？当$N \\to \\infty$时会发生什么？这是压缩态吗？又是在什么意义上？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "$$Q_3(\\alpha) = \\frac{e^{-|\\alpha|^2}}{N}\\left|\\sum_{k=1}^{N}\\frac{|\\alpha|^k}{\\sqrt{k!}}e^{ik(\\phi - \\arg\\alpha)}\\right|^2.$$各项在$\\arg\\alpha = \\phi$处同相相加，所以$Q_3$是沿方向$\\pi/4$的一条新月形，角向很窄，在$|\\alpha|$上铺展，范围为其光子数所填充的$1 \\lesssim |\\alpha|^2 \\lesssim N$。该态是截断的相位态：从 1 到$N$的每个光子数权重相等，各带有相位$e^{ik\\phi}$，这是相位为$\\phi$的场赋予其$k$光子概率幅的相位。它描述相位明确定义为$\\phi$而光子数非常不确定的场：对于$N = 10$，$\\bar{n} = 5.5$和$\\langle\\Delta n^2\\rangle = 8.25$，而相干态为 5.5。当$N \\to \\infty$时，它的相位分布$\\left|\\sum_k e^{ik(\\phi - \\varphi)}\\right|^2/N$围绕$\\phi$像$1/N$那样变窄，而它的光子数分布变得平坦且无界：它趋于相位的（不可归一化的）本征态。它是在光子数-相位意义上被压缩，而不是在正交分量上：它的相位展宽像$1/N$那样下降，而具有同样平均光子数的相干态为$1/(2\\sqrt{\\bar{n}}) \\sim 1/\\sqrt{2N}$，代价是超泊松的光子数噪声。不过没有任何正交分量的方差降到真空的$1/2$以下（对于$N = 10$，最小的那个，在与方向$\\phi$成直角处，约为 1.2），所以它在式 (9.168)–(9.169) 的意义上不是压缩态。"
+   }
+  },
+  {
+   "id": "hw1-3iv",
+   "source_id": "hw1.3iv",
+   "source_number": "Problem Set 1, Problem 3(iv)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的括号$|\\alpha)$、$(\\alpha|$写作$|\\alpha\\rangle$、$\\langle\\alpha|$；卢金没有定义的$Q$函数（他的准概率分布是式 (9.40) 的$P$函数）保持为 MIT 的定义；该题允许数值作答的许可被略去，其计算并作图的要求改为计算并描述，图被暂扣；MIT 的压缩参数$\\epsilon$就是卢金式 (9.201) 的$r$。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "squeezed-def",
+   "prompt": "对于纯态$\\rho = |\\psi\\rangle\\langle\\psi|$的$Q$函数$Q_\\rho(\\alpha) \\equiv \\langle\\alpha|\\rho|\\alpha\\rangle$，由$|\\psi\\rangle = \\sum_n c_n|n\\rangle$和$\\langle n|\\alpha\\rangle = e^{-|\\alpha|^2/2}\\alpha^n/\\sqrt{n!}$算出：计算$$Q_4(\\alpha) = |\\langle\\alpha|0_r\\rangle|^2, \\qquad (21)$$，其中$|0_r\\rangle = S(r)|0\\rangle$是压缩参数为$r$的压缩真空态。你可以使用$$S(r)|0\\rangle = \\frac{1}{\\sqrt{\\cosh r}}\\sum_{n=0}^{\\infty}\\frac{\\sqrt{(2n)!}}{2^n n!}(\\tanh r)^n|2n\\rangle. \\qquad (22)$$例如，比较$r = 0.2$、$1.2$和$4$。寻找压缩的特征。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由$\\langle\\alpha|2n\\rangle = e^{-|\\alpha|^2/2}(\\alpha^*)^{2n}/\\sqrt{(2n)!}$，求和为$\\sum_n (\\alpha^{*2}\\tanh r/2)^n/n! = e^{\\alpha^{*2}\\tanh r/2}$，所以$$Q_4(\\alpha) = \\frac{1}{\\cosh r}\\exp\\left[-|\\alpha|^2 + \\tanh r\\,\\mathrm{Re}(\\alpha^{*2})\\right] = \\frac{1}{\\cosh r}\\exp\\left[-(1 - \\tanh r)(\\mathrm{Re}\\,\\alpha)^2 - (1 + \\tanh r)(\\mathrm{Im}\\,\\alpha)^2\\right].$$它是原点处的高斯椭圆，沿$\\mathrm{Re}\\,\\alpha$拉长、沿$\\mathrm{Im}\\,\\alpha$收窄，方差为$\\frac{1}{2(1 \\mp \\tanh r)} = \\frac{1}{4}(e^{\\pm 2r} + 1)$，而真空（$r = 0$）的方差为$\\frac{1}{2}$。在$r = 0.2$（$\\tanh r = 0.20$）时它几乎不是椭圆；在$r = 1.2$（$\\tanh r = 0.83$）时它是一根明显的雪茄形，长约为宽的 3.3 倍；在$r = 4$（$\\tanh r = 0.9993$）时它是沿$\\mathrm{Re}\\,\\alpha$的一条细长的线。压缩的特征是椭圆本身，一个轴增大的同时另一个轴缩小，以及一个从不低于真空的$1/\\sqrt{2}$的窄宽度：$Q$是该态的正交分量噪声被一个真空圆盘平滑后的结果，由$\\frac{1}{4}e^{-2r}$的压缩噪声加上沿$\\mathrm{Im}\\,\\alpha$的平滑带来的$\\frac{1}{4}$组成。在卢金的单位中，被压缩的正交分量有$\\langle\\Delta\\hat{p}^2\\rangle = \\frac{1}{2}e^{-2r}$，式 (9.201)。该态只含偶数光子数，如卢金在式 (9.170) 之后所指出的。"
+   }
+  },
+  {
+   "id": "hw1-3v",
+   "source_id": "hw1.3v",
+   "source_number": "Problem Set 1, Problem 3(v)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的括号$|\\alpha)$、$(\\alpha|$写作$|\\alpha\\rangle$、$\\langle\\alpha|$；卢金没有定义的$Q$函数（他的准概率分布是式 (9.40) 的$P$函数）保持为 MIT 的定义；该题允许数值作答的许可被略去，其计算并作图的要求改为计算并描述，图被暂扣；MIT 的克尔强度$\\xi$写作$K$，因为$\\xi$是式 (9.157) 的下转换参数；相干态$|\\beta\\rangle$写作$|\\alpha_0\\rangle$，因为$\\beta$是式 (9.140) 的增益，并且取$\\hbar = 1$，如 MIT 的哈密顿量中那样；结尾的示例图被略去。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "squeezed-def",
+   "prompt": "对于纯态$\\rho = |\\psi\\rangle\\langle\\psi|$的$Q$函数$Q_\\rho(\\alpha) \\equiv \\langle\\alpha|\\rho|\\alpha\\rangle$，由$|\\psi\\rangle = \\sum_n c_n|n\\rangle$和$\\langle n|\\alpha\\rangle = e^{-|\\alpha|^2/2}\\alpha^n/\\sqrt{n!}$算出：计算$$Q_5(\\alpha) = |\\langle\\alpha|e^{iH_{kerr}t}|\\alpha_0\\rangle|^2, \\qquad (23)$$，其中克尔效应哈密顿量为$$H_{kerr} = K\\hat{a}^\\dagger\\hat{a}(\\hat{a}^\\dagger\\hat{a} - 1) = Kn(n - 1). \\qquad (24)$$这很容易算出，只需利用相干态$|\\alpha_0\\rangle$的光子数基表示。例如取$\\alpha_0 = 4$和$K = \\pi/128$，并跟踪它随时间的变化。初始相干态在什么时刻演化成两个叠加的相干态？它何时回到原来的态？克尔型非线性在非线性光学和相互作用的冷原子气体中都很重要。它产生有趣而有用的压缩态。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在光子数基中，$e^{iH_{kerr}t}|\\alpha_0\\rangle = e^{-|\\alpha_0|^2/2}\\sum_n \\frac{\\alpha_0^n}{\\sqrt{n!}}e^{iKtn(n-1)}|n\\rangle$，所以$$Q_5(\\alpha) = e^{-|\\alpha|^2 - |\\alpha_0|^2}\\left|\\sum_n \\frac{(\\alpha^*\\alpha_0)^n}{n!}e^{iKtn(n-1)}\\right|^2.$$相位$Ktn(n-1)$是$n$的二次函数，所以每个光子数分量以各自的速率转动：$|\\alpha| = 4$处$|\\alpha_0\\rangle$的圆盘首先沿其圆周剪切成新月形，在圆周的横向被压缩，然后沿圆周铺开。由于$n(n-1)$总是偶数，在$Kt = \\pi$时每个相位都是$e^{i\\pi n(n-1)} = 1$，态又成为$|\\alpha_0\\rangle$：取$K = \\pi/128$时，在$t = 128$。中途，在$Kt = \\pi/2$（$t = 64$）时，相位$e^{i\\pi n(n-1)/2}$对于$n \\equiv 0, 1, 2, 3 \\pmod 4$依次为$1, 1, -1, -1$，这等于$\\frac{1}{\\sqrt{2}}\\left[e^{-i\\pi/4}i^n + e^{i\\pi/4}(-i)^n\\right]$，所以$$e^{iH_{kerr}t}|\\alpha_0\\rangle = \\frac{1}{\\sqrt{2}}\\left(e^{-i\\pi/4}|i\\alpha_0\\rangle + e^{i\\pi/4}|-i\\alpha_0\\rangle\\right):$$位于$\\pm 4i$的两个叠加的相干态，从出发处转了四分之一圈，是一只薛定谔猫，如 9.2 节中的那些。在$t = 128$的其他简单分数处，该态经过沿圆周等间隔分布的更多相干态的叠加。"
+   }
+  },
+  {
+   "id": "hw3-2a",
+   "source_id": "hw3.2a",
+   "source_number": "Problem Set 3, Problem 2(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子；MIT 的模频率$\\omega$予以保留（它是 9.4.1 节的腔频率$\\nu_c$，不是式 (9.188) 的傅里叶频率$\\omega$）；该题的哈密顿量是卢金式 (9.152) 的$\\hat{H}_\\mathrm{eff}$，处在以$\\omega$转动的参考系中，其中$\\beta = -2i\\Lambda$，所以式 (9.161) 中有$\\tilde{\\beta} = 2\\Lambda$和$\\theta = 0$。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hl-approach",
+   "prompt": "考虑电磁场的一个模$(\\mathbf{k}, \\boldsymbol{\\varepsilon})$，其波矢量为$\\mathbf{k}$、偏振矢量为$\\boldsymbol{\\varepsilon}$、频率为$\\omega$，其哈密顿量$H$为$$H = \\hbar\\omega\\hat{a}^\\dagger\\hat{a} + i\\hbar\\Lambda\\left((\\hat{a}^\\dagger)^2e^{-2i\\omega t} - \\hat{a}^2e^{2i\\omega t}\\right), \\qquad (2)$$其中$\\hat{a}^\\dagger$和$\\hat{a}$是该模的产生算符和湮没算符。式 (2) 的第一项是自由场时该模的能量。第二项描述双光子相互作用过程，例如参量放大（频率为$2\\omega$的经典波产生两个频率为$\\omega$的光子）。$\\Lambda$是表征相互作用强度的实量。用海森伯绘景写出$\\hat{a}(t)$的运动方程。取$$\\hat{a}(t) = \\hat{b}(t)e^{-i\\omega t}. \\qquad (3)$$ $\\hat{b}(t)$和$\\hat{b}^\\dagger(t)$的运动方程是什么？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在海森伯绘景中$\\frac{d\\hat{a}}{dt} = \\frac{i}{\\hbar}[H, \\hat{a}]$，因为$\\hat{a}$没有显含的时间依赖。利用$[\\hat{a}^\\dagger\\hat{a}, \\hat{a}] = -\\hat{a}$、$[(\\hat{a}^\\dagger)^2, \\hat{a}] = -2\\hat{a}^\\dagger$和$[\\hat{a}^2, \\hat{a}] = 0$，$$\\frac{d\\hat{a}}{dt} = -i\\omega\\hat{a} + 2\\Lambda e^{-2i\\omega t}\\hat{a}^\\dagger.$$代入$\\hat{a} = \\hat{b}e^{-i\\omega t}$和$\\hat{a}^\\dagger = \\hat{b}^\\dagger e^{i\\omega t}$，左边是$\\left(\\frac{d\\hat{b}}{dt} - i\\omega\\hat{b}\\right)e^{-i\\omega t}$，自由项相消，于是$$\\frac{d\\hat{b}}{dt} = 2\\Lambda\\hat{b}^\\dagger, \\qquad \\frac{d\\hat{b}^\\dagger}{dt} = 2\\Lambda\\hat{b}.$$这些是卢金的式 (9.150)–(9.151)，其中$-i\\beta^* = 2\\Lambda$，即$\\beta = -2i\\Lambda$：在转动参考系中哈密顿量为$i\\hbar\\Lambda((\\hat{b}^\\dagger)^2 - \\hat{b}^2) = \\frac{\\hbar}{2}(\\beta\\hat{b}^2 + \\beta^*(\\hat{b}^\\dagger)^2)$，即式 (9.152) 的有效哈密顿量。"
+   }
+  },
+  {
+   "id": "hw3-2b",
+   "source_id": "hw3.2b",
+   "source_number": "Problem Set 3, Problem 2(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子；MIT 的模频率$\\omega$予以保留（它是 9.4.1 节的腔频率$\\nu_c$，不是式 (9.188) 的傅里叶频率$\\omega$）；该题的哈密顿量是卢金式 (9.152) 的$\\hat{H}_\\mathrm{eff}$，处在以$\\omega$转动的参考系中，其中$\\beta = -2i\\Lambda$，所以式 (9.161) 中有$\\tilde{\\beta} = 2\\Lambda$和$\\theta = 0$；MIT 的正交分量$b_P$、$b_Q$予以保留：它们是卢金式 (9.162)–(9.163) 在$\\theta = 0$时的$\\hat{x}/\\sqrt{2}$和$\\hat{p}/\\sqrt{2}$（卢金的正交分量带有$1/\\sqrt{2}$，MIT 的带有$1/2$）；MIT 的场振幅$\\mathcal{E}_\\omega$予以保留；该题的哈密顿量在该问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "squeezed-def",
+   "prompt": "对于满足$H = \\hbar\\omega\\hat{a}^\\dagger\\hat{a} + i\\hbar\\Lambda\\left((\\hat{a}^\\dagger)^2e^{-2i\\omega t} - \\hat{a}^2e^{2i\\omega t}\\right)$和$\\hat{a}(t) = \\hat{b}(t)e^{-i\\omega t}$的模：用海森伯绘景，模$(\\mathbf{k}, \\boldsymbol{\\varepsilon})$对电场的贡献写作$$\\mathbf{E}_\\mathbf{k}(\\mathbf{r}, t) = i\\mathcal{E}_\\omega\\boldsymbol{\\varepsilon}\\left(\\hat{a}(t)e^{i\\mathbf{k}\\cdot\\mathbf{r}} - \\hat{a}^\\dagger(t)e^{-i\\mathbf{k}\\cdot\\mathbf{r}}\\right) \\qquad (4)$$，其中$\\hat{a}(t)$是式 (3) 的解。证明$$\\hat{b}_P(t) = \\frac{\\hat{b}(t) + \\hat{b}^\\dagger(t)}{2} \\quad\\text{和}\\quad \\hat{b}_Q(t) = \\frac{\\hat{b}(t) - \\hat{b}^\\dagger(t)}{2i} \\qquad (5)$$（其中$\\hat{b}(t)$在式 (3) 中定义）在物理上代表场的两个正交分量。求出$\\hat{b}_P(t)$和$\\hat{b}_Q(t)$的运动方程并给出它们的解，假设$\\hat{b}_P(0)$和$\\hat{b}_Q(0)$已知。给出$\\hat{b}(t)$和$\\hat{b}^\\dagger(t)$的相应解。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "取$\\chi = \\mathbf{k}\\cdot\\mathbf{r} - \\omega t$和$\\hat{b} = \\hat{b}_P + i\\hat{b}_Q$，$$\\mathbf{E}_\\mathbf{k} = i\\mathcal{E}_\\omega\\boldsymbol{\\varepsilon}\\left(\\hat{b}e^{i\\chi} - \\hat{b}^\\dagger e^{-i\\chi}\\right) = -2\\mathcal{E}_\\omega\\boldsymbol{\\varepsilon}\\left(\\hat{b}_P\\sin\\chi + \\hat{b}_Q\\cos\\chi\\right):$$ $\\hat{b}_P$和$\\hat{b}_Q$是厄米的，并且乘以场的两个相差四分之一周期的振荡，所以它们是场的两个正交分量，正如$\\hat{x}$和$\\hat{p}$在卢金的式 (9.17) 中那样。由 (a) 问，$$\\frac{d\\hat{b}_P}{dt} = \\frac{2\\Lambda(\\hat{b}^\\dagger + \\hat{b})}{2} = 2\\Lambda\\hat{b}_P, \\qquad \\frac{d\\hat{b}_Q}{dt} = \\frac{2\\Lambda(\\hat{b}^\\dagger - \\hat{b})}{2i} = -2\\Lambda\\hat{b}_Q,$$所以$$\\hat{b}_P(t) = \\hat{b}_P(0)e^{2\\Lambda t}, \\qquad \\hat{b}_Q(t) = \\hat{b}_Q(0)e^{-2\\Lambda t},$$卢金的式 (9.166)–(9.167)，其中$\\tilde{\\beta} = 2\\Lambda$。重新组合，$$\\hat{b}(t) = \\hat{b}(0)\\cosh 2\\Lambda t + \\hat{b}^\\dagger(0)\\sinh 2\\Lambda t, \\qquad \\hat{b}^\\dagger(t) = \\hat{b}^\\dagger(0)\\cosh 2\\Lambda t + \\hat{b}(0)\\sinh 2\\Lambda t.$$"
+   }
+  },
+  {
+   "id": "hw3-2c",
+   "source_id": "hw3.2c",
+   "source_number": "Problem Set 3, Problem 2(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子；MIT 的模频率$\\omega$予以保留（它是 9.4.1 节的腔频率$\\nu_c$，不是式 (9.188) 的傅里叶频率$\\omega$）；该题的哈密顿量是卢金式 (9.152) 的$\\hat{H}_\\mathrm{eff}$，处在以$\\omega$转动的参考系中，其中$\\beta = -2i\\Lambda$，所以式 (9.161) 中有$\\tilde{\\beta} = 2\\Lambda$和$\\theta = 0$；MIT 的正交分量$b_P$、$b_Q$予以保留（即卢金的$\\hat{x}/\\sqrt{2}$、$\\hat{p}/\\sqrt{2}$）；该题的哈密顿量和正交分量在该问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "squeezed-def",
+   "prompt": "对于满足$H = \\hbar\\omega\\hat{a}^\\dagger\\hat{a} + i\\hbar\\Lambda\\left((\\hat{a}^\\dagger)^2e^{-2i\\omega t} - \\hat{a}^2e^{2i\\omega t}\\right)$、$\\hat{a}(t) = \\hat{b}(t)e^{-i\\omega t}$及正交分量$\\hat{b}_P = (\\hat{b} + \\hat{b}^\\dagger)/2$、$\\hat{b}_Q = (\\hat{b} - \\hat{b}^\\dagger)/2i$的模：假设在$t = 0$时电磁场处于真空态。计算在时刻$t$该模$(\\mathbf{k}, \\boldsymbol{\\varepsilon})$中的平均光子数$\\langle N\\rangle$，以及场的两个正交分量的弥散$\\Delta b_P(t)$和$\\Delta b_Q(t)$。解释这些结果。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由 (b) 问，$\\hat{b}(t) = \\hat{b}(0)\\cosh 2\\Lambda t + \\hat{b}^\\dagger(0)\\sinh 2\\Lambda t$，并且在真空中只有$\\langle\\hat{b}(0)\\hat{b}^\\dagger(0)\\rangle = 1$存留，所以$$\\langle N\\rangle = \\langle\\hat{b}^\\dagger\\hat{b}\\rangle = \\sinh^2 2\\Lambda t.$$均值$\\langle\\hat{b}_P\\rangle$和$\\langle\\hat{b}_Q\\rangle$保持为零，真空有$\\langle\\hat{b}_P(0)^2\\rangle = \\langle\\hat{b}_Q(0)^2\\rangle = 1/4$，所以$$\\Delta b_P(t) = \\frac{1}{2}e^{2\\Lambda t}, \\qquad \\Delta b_Q(t) = \\frac{1}{2}e^{-2\\Lambda t}, \\qquad \\Delta b_P\\Delta b_Q = \\frac{1}{4}.$$相互作用从真空中成对地产生光子，其数目按$\\sinh^2 2\\Lambda t$增长，而平均场保持为零：该态是压缩真空态。一个正交分量的噪声被放大，另一个的噪声降到真空值$1/2$以下，它们的乘积保持在$[\\hat{b}_P, \\hat{b}_Q] = i/2$所允许的最小值。这些是卢金的式 (9.168)–(9.169) 在他的单位中的形式，$\\langle\\Delta\\hat{x}^2\\rangle = 2\\Delta b_P^2 = \\frac{1}{2}e^{2\\tilde{\\beta}t}$。"
+   }
+  },
+  {
+   "id": "hw3-3a",
+   "source_id": "hw3.3a",
+   "source_number": "Problem Set 3, Problem 3(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子；MIT 的“第 2 问”是习题集 3 第 2 题，编在本节；印出的压缩参数“r = 2Λr”读作$r = 2\\Lambda t_0$，即卢金式 (9.201) 的$r$，其中$\\tilde{\\beta} = 2\\Lambda$；功率透射率$T = t^2$写作$T = |t|^2$，其中卢金的振幅$t$见式 (9.80)；第 2 问的哈密顿量被写了出来。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "squeezed-def",
+   "prompt": "现在我们来看由第 2 问的双光子哈密顿量$H = \\hbar\\omega\\hat{a}^\\dagger\\hat{a} + i\\hbar\\Lambda\\left((\\hat{a}^\\dagger)^2e^{-2i\\omega t} - \\hat{a}^2e^{2i\\omega t}\\right)$产生的压缩态的噪声性质。所得结果在这里会有用，即$\\hat{b}$和$\\hat{b}^\\dagger$、正交分量$\\hat{b}_P$和$\\hat{b}_Q$以及它们的弥散$\\Delta b_P$和$\\Delta b_Q$在压缩下的变换。我们再次从$t = 0$时的真空态出发，并且为简单起见，把相互作用时间固定为$t = t_0$。我们把所得压缩真空态的压缩参数定义为$r = 2\\Lambda t_0$。计算这个压缩真空态的光子数方差$\\langle\\Delta n^2\\rangle$。它与场的两个正交分量的方差$\\langle\\Delta b_P^2\\rangle$和$\\langle\\Delta b_Q^2\\rangle$有什么关系？取大压缩极限$r \\gg 1$。光子数方差如何随压缩真空态的平均光子数标度？把这一标度与强相干态（经典激光束）作比较。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "对真空作用的$\\hat{b} = \\hat{b}_0\\cosh r + \\hat{b}_0^\\dagger\\sinh r$，有$\\bar{n} = \\sinh^2 r$和$\\langle\\hat{b}^2\\rangle = \\sinh r\\cosh r$；该态是高斯的，所以$\\langle\\hat{b}^{\\dagger 2}\\hat{b}^2\\rangle = 2\\bar{n}^2 + |\\langle\\hat{b}^2\\rangle|^2$和$$\\langle\\Delta n^2\\rangle = \\langle\\hat{b}^{\\dagger 2}\\hat{b}^2\\rangle + \\bar{n} - \\bar{n}^2 = 2\\sinh^2 r\\cosh^2 r = 2\\bar{n}(\\bar{n} + 1).$$用正交分量表示，$\\langle\\Delta b_P^2\\rangle = \\frac{1}{4}e^{2r}$、$\\langle\\Delta b_Q^2\\rangle = \\frac{1}{4}e^{-2r}$、$\\bar{n} = \\langle\\Delta b_P^2\\rangle + \\langle\\Delta b_Q^2\\rangle - \\frac{1}{2}$和$$\\langle\\Delta n^2\\rangle = 2\\left(\\langle\\Delta b_P^2\\rangle^2 + \\langle\\Delta b_Q^2\\rangle^2\\right) - \\frac{1}{4} = \\frac{1}{2}\\sinh^2 2r.$$对于$r \\gg 1$，$\\bar{n} \\approx e^{2r}/4$和$\\langle\\Delta n^2\\rangle \\approx 2\\bar{n}^2$：光子数噪声由大的、反压缩的正交分量决定，并按平均值的平方增长，$\\Delta n \\approx \\sqrt{2}\\,\\bar{n}$，甚至比热光的$\\bar{n}(\\bar{n} + 1)$还大。强相干态具有泊松的$\\langle\\Delta n^2\\rangle = \\bar{n}$，$\\Delta n = \\sqrt{\\bar{n}}$，所以相对于其平均值，压缩真空态的光子数噪声大得多，尽管它的一个正交分量比真空的更安静。"
+   }
+  },
+  {
+   "id": "hw3-3b",
+   "source_id": "hw3.3b",
+   "source_number": "Problem Set 3, Problem 3(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子；MIT 的“第 2 问”是习题集 3 第 2 题，编在本节；印出的压缩参数“r = 2Λr”读作$r = 2\\Lambda t_0$，即卢金式 (9.201) 的$r$，其中$\\tilde{\\beta} = 2\\Lambda$；功率透射率$T = t^2$写作$T = |t|^2$，其中卢金的振幅$t$见式 (9.80)；MIT 的第 1 题是习题集 3 第 1 题，编在 9.3 节，其分束器损耗模型就是卢金的式 (9.80)；该压缩真空态的方差在该问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "damped",
+   "prompt": "对于压缩参数为$r = 2\\Lambda t_0$、且$\\langle\\Delta b_P^2\\rangle = \\frac{1}{4}e^{2r}$和$\\langle\\Delta b_Q^2\\rangle = \\frac{1}{4}e^{-2r}$的压缩真空态：现在考虑我们的压缩真空态被衰减，并且如第 1 题中那样，我们用一个在第二端口输入真空态的幺正分束器来模拟损耗。设$T = |t|^2$是分束器的透射系数（其中$t$是振幅透射系数），$R = 1 - T$是反射系数。让我们用两个正交分量的方差之比$c^2$（较大方差与较小方差之比）来量化压缩态的品质。在衰减到什么程度（$T$的取值）时，压缩的品质$c^2$降为原来的一半？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由式 (9.80)，透射的模为$t\\hat{b} + i\\sqrt{1 - |t|^2}\\,\\hat{b}_\\mathrm{vac}$，所以每个正交分量的方差变为它自身的$T$倍加上真空方差$\\frac{1}{4}$的$R$倍：$$\\langle\\Delta b_P^2\\rangle' = \\frac{1}{4}(Te^{2r} + R), \\qquad \\langle\\Delta b_Q^2\\rangle' = \\frac{1}{4}(Te^{-2r} + R),$$ 且$c^2 = (Te^{2r} + R)/(Te^{-2r} + R)$，从$T = 1$时的$c_0^2 = e^{4r}$降到$T = 0$时的 1。令$c^2 = e^{4r}/2$，其中$R = 1 - T$，并对$T$解这个线性方程，$$T = \\frac{e^{4r} - 2}{e^{4r} + e^{2r} - 2} = \\frac{e^{4r} - 2}{(e^{2r} + 2)(e^{2r} - 1)},$$ 这要求$e^{4r} > 2$。对于大压缩$T \\approx 1 - e^{-2r}$：仅$R \\approx e^{-2r}$的损耗，即压缩方差本身占真空噪声的比例，就已使品质减半，因为分束器引入的真空噪声首先填满安静的正交分量。对于$r = 1$，$T \\approx 0.88$。"
+   }
+  },
+  {
+   "id": "hw3-3ci",
+   "source_id": "hw3.3ci",
+   "source_number": "Problem Set 3, Problem 3(c)i",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子；MIT 的“第 2 问”是习题集 3 第 2 题，编在本节；印出的压缩参数“r = 2Λr”读作$r = 2\\Lambda t_0$，即卢金式 (9.201) 的$r$，其中$\\tilde{\\beta} = 2\\Lambda$；功率透射率$T = t^2$写作$T = |t|^2$，其中卢金的振幅$t$见式 (9.80)；本地振荡器$|\\alpha\\rangle$是振幅为$\\alpha$的相干态，如 9.1 节那样；草图用文字作答。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "homodyne",
+   "prompt": "对于压缩参数为$r$、在透射率为$T = |t|^2$、反射率为$R = 1 - T$的分束器上被衰减的压缩真空态，如 (b) 问：现在让我们看看，当我们把分束器第二端口输入的真空态换成相干态$|\\alpha\\rangle$（本地振荡器 (LO)）时，压缩真空态会发生什么。记住，在分束器上与相干态混合近似于一个位移操作。假设该相干态沿方差较小的正交分量对压缩真空态作位移（这对应于对$\\alpha$的相位的选择）。画出输出态的相空间草图。输出处的平均光子数是多少？用输入态的平均光子数表示结果。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "输出端口带有$t\\hat{b} + r_{bs}\\hat{a}_{LO}$，其中$|r_{bs}|^2 = R$：即 (b) 问的被衰减的压缩真空态，被相干振幅$r_{bs}\\alpha$位移，大小为$\\sqrt{R}|\\alpha|$。在相空间中它是压缩椭圆，沿$b_P$很长（方差$\\frac{1}{4}(Te^{2r} + R)$）、沿$b_Q$很短（方差$\\frac{1}{4}(Te^{-2r} + R)$），被带到沿$b_Q$向外$\\sqrt{R}|\\alpha|$的距离处：它的窄方向指向它自己的位移，所以它到原点的距离，即振幅，其噪声是压缩的噪声，而它的角度，即相位，其噪声是被拉长的那个。平均光子数为$$\\langle n\\rangle = R|\\alpha|^2 + T\\sinh^2 r = R\\,\\bar{n}_{LO} + T\\,\\bar{n}_{sq},$$ 每个输入的平均数以其被该端口接收的比例加权，没有干涉项，因为压缩真空态的平均场为零。"
+   }
+  },
+  {
+   "id": "hw3-3cii",
+   "source_id": "hw3.3cii",
+   "source_number": "Problem Set 3, Problem 3(c)ii",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子；MIT 的“第 2 问”是习题集 3 第 2 题，编在本节；印出的压缩参数“r = 2Λr”读作$r = 2\\Lambda t_0$，即卢金式 (9.201) 的$r$，其中$\\tilde{\\beta} = 2\\Lambda$；功率透射率$T = t^2$写作$T = |t|^2$，其中卢金的振幅$t$见式 (9.80)；(c) 问的布置在该问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "homodyne",
+   "prompt": "对于压缩参数为$r$、在透射率为$T = |t|^2$、反射率为$R = 1 - T$的分束器上被衰减（如 (b) 问）的压缩真空态，其第二个输入现在带有一个相干的本地振荡器$|\\alpha\\rangle$，使它沿方差较小的正交分量位移：输出处的光子数方差是多少？（提示：请记住课堂笔记中的结论，压缩真空态只由偶光子数本征态构成。）指出不同的贡献。取大压缩和小衰减（使之不降低压缩的品质；参见 (b) 问）的极限。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "把输出模写成$\\hat{c} = \\gamma + \\delta\\hat{c}$，其中$\\gamma = r_{bs}\\alpha$沿低方差正交分量$b_Q$（$|\\gamma|^2 = R|\\alpha|^2$），$\\delta\\hat{c}$是被衰减的压缩真空态，其奇数阶矩为零（它含有偶数光子数，而损耗使它保持高斯分布、均值为零）。于是$\\hat{n} = |\\gamma|^2 + 2|\\gamma|\\delta\\hat{b}_Q + \\delta\\hat{c}^\\dagger\\delta\\hat{c}$，中间项与最后一项不相关，并且$$\\langle\\Delta n^2\\rangle = 4|\\gamma|^2\\langle\\Delta b_Q^2\\rangle' + \\langle\\Delta n^2\\rangle_{sq}' = R|\\alpha|^2\\left(Te^{-2r} + R\\right) + T\\sinh^2 r\\left(2T\\cosh^2 r + R\\right).$$ 第一项是强本地振荡器与被压缩的正交分量的噪声的拍，即卢金式 (9.199) 的零拍项；第二项是被衰减的压缩真空态自身的光子数噪声，在$T = 1$时为$2\\bar{n}(\\bar{n} + 1)$，如 (a) 问。对于大压缩且$R \\ll e^{-2r}$（(b) 问），$$\\langle\\Delta n^2\\rangle \\approx R|\\alpha|^2e^{-2r} + 2\\sinh^2 r\\cosh^2 r \\approx R|\\alpha|^2e^{-2r} + \\frac{e^{4r}}{8}.$$"
+   }
+  },
+  {
+   "id": "hw3-3ciii",
+   "source_id": "hw3.3ciii",
+   "source_number": "Problem Set 3, Problem 3(c)iii",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子；MIT 的“第 2 问”是习题集 3 第 2 题，编在本节；印出的压缩参数“r = 2Λr”读作$r = 2\\Lambda t_0$，即卢金式 (9.201) 的$r$，其中$\\tilde{\\beta} = 2\\Lambda$；功率透射率$T = t^2$写作$T = |t|^2$，其中卢金的振幅$t$见式 (9.80)；(c) 问的布置在该问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "homodyne",
+   "prompt": "对于压缩参数为$r$、在透射率为$T = |t|^2$、反射率为$R = 1 - T$的分束器上被衰减（如 (b) 问）的压缩真空态，其第二个输入现在带有一个相干的本地振荡器$|\\alpha\\rangle$，使它沿方差较小的正交分量位移：在输出处能否实现亚泊松的光子数涨落？如果能，对本地振荡器的强度$|\\alpha|^2$有什么限制？你能给出一个直观的理由，说明为什么与本地振荡器混合会改变压缩态的光子数涨落的性质吗？这说明压缩可以用单个光电探测器来测量，而无需测量场的正交分量。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "亚泊松意味着$\\langle\\Delta n^2\\rangle < \\langle n\\rangle$。由 (c)i 和 (c)ii 问，$$\\langle\\Delta n^2\\rangle - \\langle n\\rangle = -R|\\alpha|^2T(1 - e^{-2r}) + T^2\\sinh^2 r\\cosh 2r,$$它在$$R|\\alpha|^2 > \\frac{T\\sinh^2 r\\cosh 2r}{1 - e^{-2r}}.$$时为负。所以是的，对任意$r > 0$，只要本地振荡器足够强；对于$T \\to 1$和$r \\gg 1$，条件是$R|\\alpha|^2 \\gtrsim e^{4r}/8 \\approx 2\\bar{n}_{sq}^2$，即位移场超过压缩真空态光子数的平方。原因在于：强位移把光子数噪声变成沿位移方向的正交分量的噪声，$\\langle\\Delta n^2\\rangle \\approx 4|\\gamma|^2\\langle\\Delta b_Q^2\\rangle$，如零拍探测中那样，式 (9.199)。对相干态，该正交分量带有真空的噪声，计数是泊松的，$\\langle\\Delta n^2\\rangle = |\\gamma|^2$；沿被压缩的正交分量位移，使其噪声比真空低$e^{-2r}$，所以计数比泊松安静约这个因子，只要这一拍项超过压缩真空态自身的大的光子数噪声。因此单个光电探测器对光子计数就能看到压缩。"
+   }
+  },
+  {
+   "id": "hw4-1a",
+   "source_id": "hw4.1a",
+   "source_number": "Problem Set 4, Problem 1(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子，MIT 的括号$|\\cdot)$写作$|\\cdot\\rangle$；MIT 的分束器$B$是卢金的式 (9.48)–(9.49)，其中$t = r = 1/\\sqrt{2}$，其移相器$P$是式 (9.44)，而$M$是式 (9.203) 的差计数$\\hat{n}_-$；MIT 的干涉仪草图用文字描述。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "interferometry",
+   "prompt": "尤尔克态$|\\psi\\rangle = (|n\\rangle|n-1\\rangle + |n-1\\rangle|n\\rangle)/\\sqrt{2}$使人们能够对未知相位$\\phi$作出测量，不确定度为$\\Delta\\phi = \\sqrt{2}/n$，<sup class=\"fn\" data-note=\"c-hw4-1a\"></sup>借助马赫-曾德尔干涉仪。已有人提出了在实验上实现这些态的方法，例如利用玻色-爱因斯坦凝聚体 [卡斯坦和达利巴尔，Phys. Rev. A 第 55 卷，第 4330 页，1997]。对于本题，分束器采用如下定义：$$B\\hat{a}B^\\dagger = \\frac{1}{\\sqrt{2}}(\\hat{a} + i\\hat{b}), \\qquad B\\hat{b}B^\\dagger = \\frac{1}{\\sqrt{2}}(\\hat{b} + i\\hat{a}). \\qquad (1)$$ 现在让我们分析马赫-曾德尔干涉仪，以尤尔克态为输入，其中模$\\hat{a}$和$\\hat{b}$在第一个 50/50 分束器上相遇，随后模$\\hat{a}$经过移相器$P$，两者在第二个分束器上重新合并。在薛定谔绘景中工作，具体如下。令输入为尤尔克态，$|\\phi_0\\rangle = |\\psi\\rangle$，令第一个 50/50 分束器之后的态为$|\\phi_1\\rangle = B|\\phi_0\\rangle$，移相器之后的态为$|\\phi_2\\rangle = P|\\phi_1\\rangle$，最后一个 50/50 分束器之后的态为$|\\phi_3\\rangle = B^\\dagger|\\phi_2\\rangle$。给出$|\\phi_1\\rangle$、$|\\phi_2\\rangle$和$|\\phi_3\\rangle$的表达式。注意移相器$P$的变换为$P\\hat{a}P^\\dagger = \\hat{a}e^{i\\phi}$。再检查一下，当$\\phi = 0$时，输出与输入相同，$|\\phi_3\\rangle = |\\phi_0\\rangle$。提示：用作用在真空上的算符来写出这些态。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "用作用在真空上的算符写出尤尔克态，$|\\phi_0\\rangle = \\frac{1}{\\sqrt{\\mathcal{N}}}\\left[(\\hat{a}^\\dagger)^n(\\hat{b}^\\dagger)^{n-1} + (\\hat{a}^\\dagger)^{n-1}(\\hat{b}^\\dagger)^n\\right]|0\\rangle$，其中$\\mathcal{N} = 2\\,n!\\,(n-1)!$。每个元件都不改变真空，所以变换一个态就是变换它的产生算符：$B\\hat{a}^\\dagger B^\\dagger = (\\hat{a}^\\dagger - i\\hat{b}^\\dagger)/\\sqrt{2}$和$B\\hat{b}^\\dagger B^\\dagger = (\\hat{b}^\\dagger - i\\hat{a}^\\dagger)/\\sqrt{2}$，即 (1) 的共轭，以及$P\\hat{a}^\\dagger P^\\dagger = \\hat{a}^\\dagger e^{-i\\phi}$。因此$$|\\phi_1\\rangle = \\frac{1}{\\sqrt{\\mathcal{N}}}\\left[\\left(\\tfrac{\\hat{a}^\\dagger - i\\hat{b}^\\dagger}{\\sqrt{2}}\\right)^n\\left(\\tfrac{\\hat{b}^\\dagger - i\\hat{a}^\\dagger}{\\sqrt{2}}\\right)^{n-1} + \\left(\\tfrac{\\hat{a}^\\dagger - i\\hat{b}^\\dagger}{\\sqrt{2}}\\right)^{n-1}\\left(\\tfrac{\\hat{b}^\\dagger - i\\hat{a}^\\dagger}{\\sqrt{2}}\\right)^n\\right]|0\\rangle,$$ $|\\phi_2\\rangle$与之相同，只是每个$\\hat{a}^\\dagger$都换成$\\hat{a}^\\dagger e^{-i\\phi}$，并且由于$B^\\dagger\\hat{a}^\\dagger B = (\\hat{a}^\\dagger + i\\hat{b}^\\dagger)/\\sqrt{2}$和$B^\\dagger\\hat{b}^\\dagger B = (\\hat{b}^\\dagger + i\\hat{a}^\\dagger)/\\sqrt{2}$，整个干涉仪的变换为$$\\hat{a}^\\dagger \\to e^{-i\\phi/2}\\left(c\\,\\hat{a}^\\dagger + s\\,\\hat{b}^\\dagger\\right), \\qquad \\hat{b}^\\dagger \\to e^{-i\\phi/2}\\left(-s\\,\\hat{a}^\\dagger + c\\,\\hat{b}^\\dagger\\right), \\qquad c = \\cos\\tfrac{\\phi}{2},\\ s = \\sin\\tfrac{\\phi}{2},$$从而$$|\\phi_3\\rangle = \\frac{e^{-i(2n-1)\\phi/2}}{\\sqrt{\\mathcal{N}}}\\left[(c\\hat{a}^\\dagger + s\\hat{b}^\\dagger)^n(-s\\hat{a}^\\dagger + c\\hat{b}^\\dagger)^{n-1} + (c\\hat{a}^\\dagger + s\\hat{b}^\\dagger)^{n-1}(-s\\hat{a}^\\dagger + c\\hat{b}^\\dagger)^n\\right]|0\\rangle.$$ 在$\\phi = 0$时，$c = 1$和$s = 0$，且$|\\phi_3\\rangle = |\\phi_0\\rangle$：两个分束器互相抵消。"
+   }
+  },
+  {
+   "id": "hw4-1b",
+   "source_id": "hw4.1b",
+   "source_number": "Problem Set 4, Problem 1(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子，MIT 的括号$|\\cdot)$写作$|\\cdot\\rangle$；MIT 的分束器$B$是卢金的式 (9.48)–(9.49)，其中$t = r = 1/\\sqrt{2}$，其移相器$P$是式 (9.44)，而$M$是式 (9.203) 的差计数$\\hat{n}_-$；MIT 的干涉仪草图用文字描述；干涉仪和尤尔克态在该问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "interferometry",
+   "prompt": "对于本题的马赫-曾德尔干涉仪（分束器$B\\hat{a}B^\\dagger = (\\hat{a} + i\\hat{b})/\\sqrt{2}$、$B\\hat{b}B^\\dagger = (\\hat{b} + i\\hat{a})/\\sqrt{2}$，一个移相器$P\\hat{a}P^\\dagger = \\hat{a}e^{i\\phi}$位于二者之间的臂$\\hat{a}$中，输出态为$B^\\dagger PB|\\text{输入}\\rangle$），输入尤尔克态$(|n\\rangle|n-1\\rangle + |n-1\\rangle|n\\rangle)/\\sqrt{2}$：利用尤尔克态输入，你能以多大的不确定度确定$\\phi$？这是$$\\langle\\Delta\\phi^2\\rangle = \\frac{\\langle\\Delta M^2\\rangle}{\\left|\\partial\\langle M\\rangle/\\partial\\phi\\right|^2}, \\qquad (2)$$ 其中$M = \\hat{a}^\\dagger\\hat{a} - \\hat{b}^\\dagger\\hat{b}$是干涉仪输出处测得的光子数之差。计算$\\langle\\Delta\\phi^2\\rangle$，在$\\phi = 0$（干涉仪平衡的点）处求值，使用你在上面得到的$|\\phi_3\\rangle$。你应当得到$\\Delta\\phi = \\sqrt{2}/n$。<sup class=\"fn\" data-note=\"c-hw4-1b\"></sup>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在海森伯绘景中，干涉仪把$\\hat{a}^\\dagger$和$\\hat{b}^\\dagger$转过 (a) 问的角度$\\phi/2$，所以，平均值取在输入态中，$$\\langle M\\rangle_\\phi = \\cos\\phi\\,\\langle M\\rangle_0 - \\sin\\phi\\,\\langle\\hat{a}^\\dagger\\hat{b} + \\hat{b}^\\dagger\\hat{a}\\rangle_0.$$ 对于尤尔克态$\\langle M\\rangle_0 = 0$，因为它的两个分量有$M = \\pm 1$，而$\\hat{a}^\\dagger\\hat{b}$把$|n-1\\rangle|n\\rangle$变为$n|n\\rangle|n-1\\rangle$，所以$\\langle\\hat{a}^\\dagger\\hat{b}\\rangle_0 = \\langle\\hat{b}^\\dagger\\hat{a}\\rangle_0 = n/2$和$\\langle M\\rangle_\\phi = -n\\sin\\phi$。在$\\phi = 0$时输出就是输入，在其上$M^2 = 1$，所以$\\langle\\Delta M^2\\rangle = 1$，斜率为$|\\partial\\langle M\\rangle/\\partial\\phi| = n$：$$\\langle\\Delta\\phi^2\\rangle = \\frac{1}{n^2}, \\qquad \\Delta\\phi = \\frac{1}{n}.$$ 不确定度按光子数的倒数下降，即海森伯标度，而相干态为$1/\\sqrt{\\bar{n}}$（(d) 问）。"
+   }
+  },
+  {
+   "id": "hw4-1c",
+   "source_id": "hw4.1c",
+   "source_number": "Problem Set 4, Problem 1(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子，MIT 的括号$|\\cdot)$写作$|\\cdot\\rangle$；MIT 的分束器$B$是卢金的式 (9.48)–(9.49)，其中$t = r = 1/\\sqrt{2}$，其移相器$P$是式 (9.44)，而$M$是式 (9.203) 的差计数$\\hat{n}_-$；MIT 的干涉仪草图用文字描述；MIT 的“使用与上面相同的图”指的是 (a) 问中描述的布置，在该问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "interferometry",
+   "prompt": "对于本题的马赫-曾德尔干涉仪（分束器$B\\hat{a}B^\\dagger = (\\hat{a} + i\\hat{b})/\\sqrt{2}$、$B\\hat{b}B^\\dagger = (\\hat{b} + i\\hat{a})/\\sqrt{2}$，一个移相器$P\\hat{a}P^\\dagger = \\hat{a}e^{i\\phi}$位于二者之间的臂$\\hat{a}$中，输出态为$B^\\dagger PB|\\text{输入}\\rangle$）：在课堂上，我们用海森伯绘景计算了以相干态为输入时干涉仪性能的统计量。为了与尤尔克态比较，现在让我们在薛定谔绘景中求出相干态会发生什么。使用同样的布置，令输入现在为一个相干态和一个真空态，$|\\psi_0\\rangle = |\\alpha\\rangle|0\\rangle$。与尤尔克态一样，令第一个 50/50 分束器之后的态为$|\\psi_1\\rangle = B|\\psi_0\\rangle$，移相器之后的态为$|\\psi_2\\rangle = P|\\psi_1\\rangle$，最后一个 50/50 分束器之后的态为$|\\psi_3\\rangle = B^\\dagger|\\psi_2\\rangle$。给出$|\\psi_1\\rangle$、$|\\psi_2\\rangle$和$|\\psi_3\\rangle$的表达式。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "相干态是位移的真空，$|\\alpha\\rangle|0\\rangle = e^{\\alpha\\hat{a}^\\dagger - \\alpha^*\\hat{a}}|0\\rangle$（式 (9.19)），按 (a) 问那样变换产生算符就移动了它的振幅：$$|\\psi_1\\rangle = \\left|\\tfrac{\\alpha}{\\sqrt{2}}\\right\\rangle_a\\left|\\tfrac{-i\\alpha}{\\sqrt{2}}\\right\\rangle_b, \\qquad |\\psi_2\\rangle = \\left|\\tfrac{\\alpha e^{-i\\phi}}{\\sqrt{2}}\\right\\rangle_a\\left|\\tfrac{-i\\alpha}{\\sqrt{2}}\\right\\rangle_b, \\qquad |\\psi_3\\rangle = \\left|\\alpha e^{-i\\phi/2}\\cos\\tfrac{\\phi}{2}\\right\\rangle_a\\left|\\alpha e^{-i\\phi/2}\\sin\\tfrac{\\phi}{2}\\right\\rangle_b.$$ 输出仍是相干态，正如卢金的式 (9.50) 说分束器保持它们那样；在$\\phi = 0$时所有的光都从$\\hat{a}$射出，$|\\psi_3\\rangle = |\\alpha\\rangle|0\\rangle$。"
+   }
+  },
+  {
+   "id": "hw4-1d",
+   "source_id": "hw4.1d",
+   "source_number": "Problem Set 4, Problem 1(d)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：算符带有帽子，MIT 的括号$|\\cdot)$写作$|\\cdot\\rangle$；MIT 的分束器$B$是卢金的式 (9.48)–(9.49)，其中$t = r = 1/\\sqrt{2}$，其移相器$P$是式 (9.44)，而$M$是式 (9.203) 的差计数$\\hat{n}_-$；MIT 的干涉仪草图用文字描述；干涉仪在该问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "interferometry",
+   "prompt": "对于本题的马赫-曾德尔干涉仪（分束器$B\\hat{a}B^\\dagger = (\\hat{a} + i\\hat{b})/\\sqrt{2}$、$B\\hat{b}B^\\dagger = (\\hat{b} + i\\hat{a})/\\sqrt{2}$，一个移相器$P\\hat{a}P^\\dagger = \\hat{a}e^{i\\phi}$位于二者之间的臂$\\hat{a}$中，输出态为$B^\\dagger PB|\\text{输入}\\rangle$），输入为$|\\alpha\\rangle|0\\rangle$：给定相干态的量子涨落，用不确定度传播来确定，利用相干态输入时你能以多大的不确定度确定$\\phi$，作为$\\bar{n} = |\\alpha|^2$和移相角$\\phi$的函数。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由 (c) 问，输出是相干态，平均数为$\\bar{n}\\cos^2(\\phi/2)$和$\\bar{n}\\sin^2(\\phi/2)$，所以，两个独立的泊松方差相加，$$\\langle M\\rangle = \\bar{n}\\cos\\phi, \\qquad \\langle\\Delta M^2\\rangle = \\bar{n}\\cos^2\\tfrac{\\phi}{2} + \\bar{n}\\sin^2\\tfrac{\\phi}{2} = \\bar{n}.$$ 取$|\\partial\\langle M\\rangle/\\partial\\phi| = \\bar{n}|\\sin\\phi|$，$$\\Delta\\phi = \\frac{\\sqrt{\\bar{n}}}{\\bar{n}|\\sin\\phi|} = \\frac{1}{\\sqrt{\\bar{n}}\\,|\\sin\\phi|}.$$ 它在$\\phi = \\pi/2$处最小，$\\Delta\\phi = 1/\\sqrt{\\bar{n}}$，即散粒噪声极限或标准量子极限，并在$\\phi = 0$处发散，那里所有的光都从一个端口射出，$\\langle M\\rangle$是平坦的。这是卢金式 (9.202) 的$\\delta\\phi_\\mathrm{min} \\sim e^{-r}/\\sqrt{n}$在$r = 0$时的情形：压缩空端口使它按$e^{-r}$降低，而 (b) 问的尤尔克态达到$1/n$。"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "hw1-3i",
+   "concept": "fock-states"
+  },
+  {
+   "exercise": "hw1-3i",
+   "concept": "coherent-state-uncertainty"
+  },
+  {
+   "exercise": "hw1-3ii",
+   "concept": "schrodinger-cat-state"
+  },
+  {
+   "exercise": "hw1-3ii",
+   "concept": "coherent-state"
+  },
+  {
+   "exercise": "hw1-3iii",
+   "concept": "fock-states"
+  },
+  {
+   "exercise": "hw1-3iii",
+   "concept": "coherent-state-uncertainty"
+  },
+  {
+   "exercise": "hw1-3iv",
+   "concept": "squeezed-state"
+  },
+  {
+   "exercise": "hw1-3iv",
+   "concept": "squeezed-interferometry"
+  },
+  {
+   "exercise": "hw1-3v",
+   "concept": "kerr-effect"
+  },
+  {
+   "exercise": "hw1-3v",
+   "concept": "schrodinger-cat-state"
+  },
+  {
+   "exercise": "hw3-2a",
+   "concept": "opo-heisenberg-langevin"
+  },
+  {
+   "exercise": "hw3-2a",
+   "concept": "heisenberg-picture"
+  },
+  {
+   "exercise": "hw3-2b",
+   "concept": "squeezed-state"
+  },
+  {
+   "exercise": "hw3-2b",
+   "concept": "quadrature-operators"
+  },
+  {
+   "exercise": "hw3-2c",
+   "concept": "squeezed-state"
+  },
+  {
+   "exercise": "hw3-2c",
+   "concept": "coherent-state-uncertainty"
+  },
+  {
+   "exercise": "hw3-3a",
+   "concept": "squeezed-state"
+  },
+  {
+   "exercise": "hw3-3a",
+   "concept": "photon-statistics"
+  },
+  {
+   "exercise": "hw3-3b",
+   "concept": "beamsplitter-loss-model"
+  },
+  {
+   "exercise": "hw3-3b",
+   "concept": "squeezed-state"
+  },
+  {
+   "exercise": "hw3-3ci",
+   "concept": "shift-operator"
+  },
+  {
+   "exercise": "hw3-3ci",
+   "concept": "beamsplitter-transformation"
+  },
+  {
+   "exercise": "hw3-3cii",
+   "concept": "photon-statistics"
+  },
+  {
+   "exercise": "hw3-3cii",
+   "concept": "squeezed-state"
+  },
+  {
+   "exercise": "hw3-3ciii",
+   "concept": "poisson-photon-statistics"
+  },
+  {
+   "exercise": "hw3-3ciii",
+   "concept": "homodyne-detection"
+  },
+  {
+   "exercise": "hw4-1a",
+   "concept": "beamsplitter-transformation"
+  },
+  {
+   "exercise": "hw4-1a",
+   "concept": "linear-optical-transformations"
+  },
+  {
+   "exercise": "hw4-1b",
+   "concept": "squeezed-interferometry"
+  },
+  {
+   "exercise": "hw4-1b",
+   "concept": "beamsplitter-transformation"
+  },
+  {
+   "exercise": "hw4-1c",
+   "concept": "coherent-state"
+  },
+  {
+   "exercise": "hw4-1c",
+   "concept": "beamsplitter-transformation"
+  },
+  {
+   "exercise": "hw4-1d",
+   "concept": "squeezed-interferometry"
+  },
+  {
+   "exercise": "hw4-1d",
+   "concept": "poisson-photon-statistics"
+  }
+ ],
+ "referents": [
+  {
+   "id": "lvl-1",
+   "label": "基态|1⟩",
+   "figures": [
+    "fig-opo"
+   ]
+  },
+  {
+   "id": "lvl-2",
+   "label": "上态|2⟩",
+   "figures": [
+    "fig-opo"
+   ]
+  },
+  {
+   "id": "lvl-3",
+   "label": "居间态|3⟩",
+   "figures": [
+    "fig-opo"
+   ]
+  },
+  {
+   "id": "pump",
+   "label": "ν₀处的抽运场ℰ₀",
+   "figures": [
+    "fig-opo"
+   ]
+  },
+  {
+   "id": "generated",
+   "label": "ν_c处的产生场ℰ₁ = ℰ₂",
+   "figures": [
+    "fig-opo"
+   ]
+  },
+  {
+   "id": "signal",
+   "label": "信号场â",
+   "figures": [
+    "fig-homodyne"
+   ]
+  },
+  {
+   "id": "lo",
+   "label": "本地振荡器b̂_LO",
+   "figures": [
+    "fig-homodyne"
+   ]
+  },
+  {
+   "id": "sq-in",
+   "label": "压缩输入â_i",
+   "figures": [
+    "fig-interferometer"
+   ]
+  },
+  {
+   "id": "coh-in",
+   "label": "相干输入b̂_i",
+   "figures": [
+    "fig-interferometer"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-eq-9-146",
+   "kind": "correction",
+   "html": "书中把左边印成$\\dot{\\sigma}_{13}^{(j)}$，没有其右边所带的帽子；它是算符$\\hat{\\sigma}_{13}^{(j)}$对时间的导数。它的项$-i\\kg_j\\hat{a}^\\dagger\\hat{\\sigma}_{12}^{(j)}$的符号也不对：对于 (9.144) 的哈密顿量，$[\\hat{\\sigma}_{32}, \\hat{\\sigma}_{13}] = -\\hat{\\sigma}_{12}$和$[\\hat{\\sigma}_{31}, \\hat{\\sigma}_{13}] = \\hat{\\sigma}_{33} - \\hat{\\sigma}_{11}$，所以两个耦合项是$+i\\kg_j\\hat{a}^\\dagger\\hat{\\sigma}_{12}^{(j)} + i\\kg_j\\hat{a}(\\hat{\\sigma}_{11} - \\hat{\\sigma}_{33})$，符号相同。照书中所印，绝热消除会使式 (9.147) 的两项符号相反，式 (9.149) 的两项会相互抵消；符号改正后，它给出式 (9.147)，至多差一个由$\\kdelta$的符号决定的总符号，而这只改变$\\kbetagain$的相位。"
+  },
+  {
+   "id": "c-sigma-21",
+   "kind": "correction",
+   "html": "书中印的是$\\hat{\\sigma}_{12} = \\kOmega_0/\\kDelta$。被换成其经典值的算符是$\\hat{\\sigma}_{21}$，正如同一句话和下一句话所说：$\\hat{\\sigma}_{21} \\approx \\kOmega_0/\\kDelta$。"
+  },
+  {
+   "id": "c-eq-9-158",
+   "kind": "correction",
+   "html": "书中印的是$p(n) = \\tanh^2\\kxipdc/\\cosh^2\\kxipdc$，不依赖于$n$。每个模的热分布是$p(n) = \\tanh^{2n}\\kxipdc/\\cosh^2\\kxipdc$，其平均光子数为$\\sinh^2\\kxipdc$。"
+  },
+  {
+   "id": "c-beta-kappa",
+   "kind": "correction",
+   "html": "书中在这里以及随后的条件$\\kbetagain \\gt \\kkappa/2$、$\\kbetagain \\lt \\kkappa/2$、$\\kbetagain = \\kkappa/2$和$\\kbetagain \\to \\kkappa/2$中写的是$\\kbetagain$。与$\\kkappa$比较的速率是式 (9.174)–(9.185) 中的实增益$\\kbetatilde$：$\\kkappa \\gg \\kbetatilde$，阈值在$\\kbetatilde = \\kkappa/2$。"
+  },
+  {
+   "id": "c-eq-9-205",
+   "kind": "correction",
+   "html": "取$\\kphi = \\pi/2 + \\delta\\kphi$，式 (9.204) 有$\\cos\\kphi \\approx -\\delta\\kphi$和$\\sin\\kphi \\approx 1$，且压缩真空态有$\\langle\\hat{a}_i\\rangle = 0$，所以$\\langle\\hat{n}_-\\rangle \\approx -\\delta\\kphi\\langle\\hat{b}_i^\\dagger\\hat{b}_i\\rangle = -\\bar{\\beta}^2\\delta\\kphi$，忽略压缩真空态的少量光子。书中多出的因子$\\bar{\\beta}$及其符号并不由式 (9.204) 得出。"
+  },
+  {
+   "id": "c-eq-9-208",
+   "kind": "correction",
+   "html": "对于$N$个沿$z$极化的自旋为½的原子，每个原子有$S_{i,x}^2 = S_{i,y}^2 = 1/4$（取$\\hbar = 1$），不同原子互不关联，所以$\\langle\\kScoll_x^2\\rangle = \\langle\\kScoll_y^2\\rangle = N/4$，而不是$N/2$；式 (9.209) 和 (9.210) 中的原子散粒噪声同样是$N/4$。"
+  },
+  {
+   "id": "c-hw4-1a",
+   "kind": "correction",
+   "html": "用本题的分束器，尤尔克态给出$\\Delta\\phi = 1/n$，如 (b) 问所示；这里印出的$\\sqrt{2}/n$大了$\\sqrt{2}$倍。"
+  },
+  {
+   "id": "c-hw4-1b",
+   "kind": "correction",
+   "html": "用本题自己的分束器和移相器求值，$\\langle M\\rangle = -n\\sin\\phi$和在$\\phi = 0$处的$\\langle\\Delta M^2\\rangle = 1$，所以$\\Delta\\phi = 1/n$，而不是$\\sqrt{2}/n$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "damped-quadrature-equations",
+   "what": "阻尼腔中的正交分量方程",
+   "source": "现代原子与光学物理 II，9.4.3 损耗的影响",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\frac{d\\hat{a}}{d\\kt} = -i\\kbetagain^*\\hat{a}^\\dagger - \\frac{\\kkappa}{2}\\hat{a} + \\kFnoise",
+       "src": "(9.171)"
+      },
+      {
+       "tex": "\\frac{d\\hat{a}^\\dagger}{d\\kt} = i\\kbetagain\\hat{a} - \\frac{\\kkappa}{2}\\hat{a}^\\dagger + \\kFnoise^\\dagger",
+       "src": "(9.172)"
+      },
+      {
+       "tex": "\\frac{d\\kxquad}{d\\kt} = \\kbetatilde\\kxquad",
+       "src": "(9.164)"
+      },
+      {
+       "tex": "\\kxquad = \\frac{1}{\\sqrt{2}}\\left(\\hat{a}e^{i\\ktheta/2} + \\hat{a}^\\dagger e^{-i\\ktheta/2}\\right)",
+       "src": "(9.162)"
+      },
+      {
+       "tex": "\\kFnoise_x = \\frac{1}{\\sqrt{2}}\\left(\\kFnoise e^{i\\ktheta/2} + \\kFnoise^\\dagger e^{-i\\ktheta/2}\\right)",
+       "src": "(9.176)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = \\mk{R}{\\frac{1}{\\sqrt{2}}\\left(\\frac{d\\hat{a}}{d\\kt}e^{i\\ktheta/2} + \\frac{d\\hat{a}^\\dagger}{d\\kt}e^{-i\\ktheta/2}\\right)}",
+      "uses": [
+       3
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = \\mk{b}{\\frac{1}{\\sqrt{2}}\\left(-i\\kbetagain^*\\hat{a}^\\dagger e^{i\\ktheta/2} + i\\kbetagain\\hat{a}e^{-i\\ktheta/2}\\right)} - \\mk{k}{\\frac{\\kkappa}{2}\\frac{1}{\\sqrt{2}}\\left(\\hat{a}e^{i\\ktheta/2} + \\hat{a}^\\dagger e^{-i\\ktheta/2}\\right)} + \\mk{f}{\\frac{1}{\\sqrt{2}}\\left(\\kFnoise e^{i\\ktheta/2} + \\kFnoise^\\dagger e^{-i\\ktheta/2}\\right)}",
+       "uses": [
+        0,
+        1
+       ],
+       "map": {
+        "R": [
+         "b",
+         "k",
+         "f"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = \\mk{b}{\\kbetatilde\\kxquad} - \\mk{k}{\\frac{\\kkappa}{2}\\frac{1}{\\sqrt{2}}\\left(\\hat{a}e^{i\\ktheta/2} + \\hat{a}^\\dagger e^{-i\\ktheta/2}\\right)} + \\mk{f}{\\frac{1}{\\sqrt{2}}\\left(\\kFnoise e^{i\\ktheta/2} + \\kFnoise^\\dagger e^{-i\\ktheta/2}\\right)}",
+       "uses": [
+        2
+       ],
+       "cap": "$\\beta$项就是无损耗方程中的那些项，它们给出式 (9.164)。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = \\mk{b}{\\kbetatilde\\kxquad} - \\mk{k}{\\frac{\\kkappa}{2}\\kxquad} + \\mk{f}{\\frac{1}{\\sqrt{2}}\\left(\\kFnoise e^{i\\ktheta/2} + \\kFnoise^\\dagger e^{-i\\ktheta/2}\\right)}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = \\mk{b}{\\kbetatilde\\kxquad} - \\mk{k}{\\frac{\\kkappa}{2}\\kxquad} + \\mk{f}{\\kFnoise_x}",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = -\\mk{x}{\\left(\\frac{\\kkappa}{2} - \\kbetatilde\\right)\\kxquad} + \\mk{f}{\\kFnoise_x}",
+       "uses": [],
+       "map": {
+        "b": "x",
+        "k": "x"
+       }
+      }
+     ],
+     "num": "(9.174)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\frac{d\\hat{a}}{d\\kt} = -i\\kbetagain^*\\hat{a}^\\dagger - \\frac{\\kkappa}{2}\\hat{a} + \\kFnoise",
+       "src": "(9.171)"
+      },
+      {
+       "tex": "\\frac{d\\hat{a}^\\dagger}{d\\kt} = i\\kbetagain\\hat{a} - \\frac{\\kkappa}{2}\\hat{a}^\\dagger + \\kFnoise^\\dagger",
+       "src": "(9.172)"
+      },
+      {
+       "tex": "\\frac{d\\kpquad}{d\\kt} = -\\kbetatilde\\kpquad",
+       "src": "(9.165)"
+      },
+      {
+       "tex": "\\kpquad = \\frac{1}{\\sqrt{2}i}\\left(\\hat{a}e^{i\\ktheta/2} - \\hat{a}^\\dagger e^{-i\\ktheta/2}\\right)",
+       "src": "(9.163)"
+      },
+      {
+       "tex": "\\kFnoise_p = \\frac{1}{\\sqrt{2}i}\\left(\\kFnoise e^{i\\ktheta/2} - \\kFnoise^\\dagger e^{-i\\ktheta/2}\\right)",
+       "src": "(9.177)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = \\mk{R}{\\frac{1}{\\sqrt{2}i}\\left(\\frac{d\\hat{a}}{d\\kt}e^{i\\ktheta/2} - \\frac{d\\hat{a}^\\dagger}{d\\kt}e^{-i\\ktheta/2}\\right)}",
+      "uses": [
+       3
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = \\mk{b}{\\frac{1}{\\sqrt{2}i}\\left(-i\\kbetagain^*\\hat{a}^\\dagger e^{i\\ktheta/2} - i\\kbetagain\\hat{a}e^{-i\\ktheta/2}\\right)} - \\mk{k}{\\frac{\\kkappa}{2}\\frac{1}{\\sqrt{2}i}\\left(\\hat{a}e^{i\\ktheta/2} - \\hat{a}^\\dagger e^{-i\\ktheta/2}\\right)} + \\mk{f}{\\frac{1}{\\sqrt{2}i}\\left(\\kFnoise e^{i\\ktheta/2} - \\kFnoise^\\dagger e^{-i\\ktheta/2}\\right)}",
+       "uses": [
+        0,
+        1
+       ],
+       "map": {
+        "R": [
+         "b",
+         "k",
+         "f"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = -\\mk{b}{\\kbetatilde\\kpquad} - \\mk{k}{\\frac{\\kkappa}{2}\\frac{1}{\\sqrt{2}i}\\left(\\hat{a}e^{i\\ktheta/2} - \\hat{a}^\\dagger e^{-i\\ktheta/2}\\right)} + \\mk{f}{\\frac{1}{\\sqrt{2}i}\\left(\\kFnoise e^{i\\ktheta/2} - \\kFnoise^\\dagger e^{-i\\ktheta/2}\\right)}",
+       "uses": [
+        2
+       ],
+       "cap": "$\\beta$项就是无损耗方程中的那些项，它们给出式 (9.165)。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = -\\mk{b}{\\kbetatilde\\kpquad} - \\mk{k}{\\frac{\\kkappa}{2}\\kpquad} + \\mk{f}{\\frac{1}{\\sqrt{2}i}\\left(\\kFnoise e^{i\\ktheta/2} - \\kFnoise^\\dagger e^{-i\\ktheta/2}\\right)}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = -\\mk{b}{\\kbetatilde\\kpquad} - \\mk{k}{\\frac{\\kkappa}{2}\\kpquad} + \\mk{f}{\\kFnoise_p}",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = -\\mk{x}{\\left(\\frac{\\kkappa}{2} + \\kbetatilde\\right)\\kpquad} + \\mk{f}{\\kFnoise_p}",
+       "uses": [],
+       "map": {
+        "b": "x",
+        "k": "x"
+       }
+      }
+     ],
+     "num": "(9.175)"
+    }
+   ]
+  },
+  {
+   "id": "damped-squeezing",
+   "what": "阻尼腔中的压缩",
+   "source": "现代原子与光学物理 II，9.4.3 损耗的影响",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\langle\\kFnoise(\\kt)\\kFnoise^\\dagger(\\kt')\\rangle = \\kkappa\\delta(\\kt - \\kt')",
+       "src": "(9.173)"
+      },
+      {
+       "text": "腔外的场处于真空时，$\\langle\\hat{\\mathcal F}\\hat{\\mathcal F}\\rangle$、$\\langle\\hat{\\mathcal F}^\\dagger\\hat{\\mathcal F}^\\dagger\\rangle$和$\\langle\\hat{\\mathcal F}^\\dagger\\hat{\\mathcal F}\\rangle$为零：$\\hat{\\mathcal F}$湮没真空。",
+       "src": "9.3.2"
+      },
+      {
+       "tex": "\\kFnoise_x = \\frac{1}{\\sqrt{2}}\\left(\\kFnoise e^{i\\ktheta/2} + \\kFnoise^\\dagger e^{-i\\ktheta/2}\\right)",
+       "src": "(9.176)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\langle\\kFnoise_x(\\kt)\\kFnoise_x(\\kt')\\rangle} = \\mk{R}{\\frac{1}{2}\\langle(\\kFnoise(\\kt) e^{i\\ktheta/2} + \\kFnoise^\\dagger(\\kt) e^{-i\\ktheta/2})(\\kFnoise(\\kt') e^{i\\ktheta/2} + \\kFnoise^\\dagger(\\kt') e^{-i\\ktheta/2})\\rangle}",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\langle\\kFnoise_x(\\kt)\\kFnoise_x(\\kt')\\rangle} = \\mk{R}{\\frac{1}{2}\\langle\\kFnoise(\\kt)\\kFnoise^\\dagger(\\kt')\\rangle}",
+       "uses": [
+        1
+       ],
+       "cap": "只有编序$\\hat{\\mathcal F}\\hat{\\mathcal F}^\\dagger$保留下来，并且它的相位相消。"
+      },
+      {
+       "tex": "\\mk{c}{\\langle\\kFnoise_x(\\kt)\\kFnoise_x(\\kt')\\rangle} = \\mk{R}{\\frac{\\kkappa}{2}\\delta(\\kt - \\kt')}",
+       "uses": [
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\langle\\kFnoise(\\kt)\\kFnoise^\\dagger(\\kt')\\rangle = \\kkappa\\delta(\\kt - \\kt')",
+       "src": "(9.173)"
+      },
+      {
+       "text": "腔外的场处于真空时，$\\langle\\hat{\\mathcal F}\\hat{\\mathcal F}\\rangle$、$\\langle\\hat{\\mathcal F}^\\dagger\\hat{\\mathcal F}^\\dagger\\rangle$和$\\langle\\hat{\\mathcal F}^\\dagger\\hat{\\mathcal F}\\rangle$为零：$\\hat{\\mathcal F}$湮没真空。",
+       "src": "9.3.2"
+      },
+      {
+       "tex": "\\kFnoise_p = \\frac{1}{\\sqrt{2}i}\\left(\\kFnoise e^{i\\ktheta/2} - \\kFnoise^\\dagger e^{-i\\ktheta/2}\\right)",
+       "src": "(9.177)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\langle\\kFnoise_p(\\kt)\\kFnoise_p(\\kt')\\rangle} = \\mk{R}{-\\frac{1}{2}\\langle(\\kFnoise(\\kt) e^{i\\ktheta/2} - \\kFnoise^\\dagger(\\kt) e^{-i\\ktheta/2})(\\kFnoise(\\kt') e^{i\\ktheta/2} - \\kFnoise^\\dagger(\\kt') e^{-i\\ktheta/2})\\rangle}",
+      "uses": [
+       3
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\langle\\kFnoise_p(\\kt)\\kFnoise_p(\\kt')\\rangle} = \\mk{R}{\\frac{1}{2}\\langle\\kFnoise(\\kt)\\kFnoise^\\dagger(\\kt')\\rangle}",
+       "uses": [
+        2
+       ],
+       "cap": "只有编序$\\hat{\\mathcal F}\\hat{\\mathcal F}^\\dagger$保留下来；它带着负号进入，负号与$-\\frac{1}{2}$相消，并且它的相位相消。"
+      },
+      {
+       "tex": "\\mk{c}{\\langle\\kFnoise_p(\\kt)\\kFnoise_p(\\kt')\\rangle} = \\mk{R}{\\frac{\\kkappa}{2}\\delta(\\kt - \\kt')}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{x}{\\langle\\kFnoise_x(\\kt)\\kFnoise_x(\\kt')\\rangle} = \\mk{c}{\\langle\\kFnoise_p(\\kt)\\kFnoise_p(\\kt')\\rangle} = \\mk{R}{\\frac{\\kkappa}{2}\\delta(\\kt - \\kt')}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(9.178)"
+    },
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = -\\mk{x}{\\left(\\frac{\\kkappa}{2} - \\kbetatilde\\right)\\kxquad} + \\mk{f}{\\kFnoise_x}",
+      "src": "(9.174)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\left(e^{(\\kkappa/2 - \\kbetatilde)\\kt}\\kxquad\\right)} = \\mk{f}{e^{(\\kkappa/2 - \\kbetatilde)\\kt}\\kFnoise_x}",
+       "uses": [],
+       "cap": "乘以指数因子，把衰变项并入导数。",
+       "map": {
+        "x": "L"
+       }
+      },
+      {
+       "tex": "\\mk{L}{e^{(\\kkappa/2 - \\kbetatilde)\\kt}\\kxquad(\\kt) - \\kxquad(0)} = \\mk{f}{\\int_0^{\\kt} d\\kt' e^{(\\kkappa/2 - \\kbetatilde)\\kt'}\\kFnoise_x(\\kt')}",
+       "uses": [],
+       "cap": "从$0$积分到$t$。"
+      },
+      {
+       "tex": "\\mk{L}{\\kxquad(\\kt)} = \\mk{q0}{e^{-(\\kkappa/2 - \\kbetatilde)\\kt}\\kxquad(0)} + \\mk{f}{\\int_0^{\\kt} d\\kt' e^{-(\\kkappa/2 - \\kbetatilde)(\\kt - \\kt')}\\kFnoise_x(\\kt')}",
+       "uses": []
+      }
+     ],
+     "num": "(9.179)"
+    },
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = -\\mk{x}{\\left(\\frac{\\kkappa}{2} + \\kbetatilde\\right)\\kpquad} + \\mk{f}{\\kFnoise_p}",
+      "src": "(9.175)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\left(e^{(\\kkappa/2 + \\kbetatilde)\\kt}\\kpquad\\right)} = \\mk{f}{e^{(\\kkappa/2 + \\kbetatilde)\\kt}\\kFnoise_p}",
+       "uses": [],
+       "cap": "乘以指数因子，把衰变项并入导数。",
+       "map": {
+        "x": "L"
+       }
+      },
+      {
+       "tex": "\\mk{L}{e^{(\\kkappa/2 + \\kbetatilde)\\kt}\\kpquad(\\kt) - \\kpquad(0)} = \\mk{f}{\\int_0^{\\kt} d\\kt' e^{(\\kkappa/2 + \\kbetatilde)\\kt'}\\kFnoise_p(\\kt')}",
+       "uses": [],
+       "cap": "从$0$积分到$t$。"
+      },
+      {
+       "tex": "\\mk{L}{\\kpquad(\\kt)} = \\mk{q0}{e^{-(\\kkappa/2 + \\kbetatilde)\\kt}\\kpquad(0)} + \\mk{f}{\\int_0^{\\kt} d\\kt' e^{-(\\kkappa/2 + \\kbetatilde)(\\kt - \\kt')}\\kFnoise_p(\\kt')}",
+       "uses": []
+      }
+     ],
+     "num": "(9.180)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "腔模从相干态出发，每个正交分量的方差为$1/2$，与来自外部的噪声不关联。",
+       "src": "9.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{v}{\\langle\\Delta\\kxquad^2(\\kt)\\rangle} = \\mk{R}{\\langle\\kxquad(\\kt)^2\\rangle - \\langle\\kxquad(\\kt)\\rangle^2}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{v}{\\langle\\Delta\\kxquad^2(\\kt)\\rangle} = \\mk{a}{e^{-(\\kkappa - 2\\kbetatilde)\\kt}\\langle\\Delta\\kxquad^2(0)\\rangle} + \\mk{n}{\\int_0^{\\kt}\\int_0^{\\kt} d\\kt'd\\kt'' e^{-(\\kkappa/2 - \\kbetatilde)(\\kt - \\kt')}e^{-(\\kkappa/2 - \\kbetatilde)(\\kt - \\kt'')}\\langle\\kFnoise_x(\\kt')\\kFnoise_x(\\kt'')\\rangle}",
+       "uses": [
+        0,
+        2
+       ],
+       "cap": "对解取平方：与噪声的交叉项平均为零。",
+       "map": {
+        "R": [
+         "a",
+         "n"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{v}{\\langle\\Delta\\kxquad^2(\\kt)\\rangle} = \\mk{a}{e^{-(\\kkappa - 2\\kbetatilde)\\kt}\\langle\\Delta\\kxquad^2(0)\\rangle} + \\mk{n}{\\frac{\\kkappa}{2}\\int_0^{\\kt} d\\kt' e^{-(\\kkappa - 2\\kbetatilde)(\\kt - \\kt')}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{v}{\\langle\\Delta\\kxquad^2(\\kt)\\rangle} = \\mk{a}{\\frac{1}{2}e^{-(\\kkappa - 2\\kbetatilde)\\kt}} + \\mk{n}{\\frac{\\kkappa}{2}\\frac{1 - e^{-(\\kkappa - 2\\kbetatilde)\\kt}}{\\kkappa - 2\\kbetatilde}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(9.181)",
+     "note": "书中把指数印成$-(\\kappa/2 - \\tilde\\beta)t$。方差的衰变速率是式 (9.179) 中振幅的两倍，所以它的指数是$-(\\kappa - 2\\tilde\\beta)t$；取$\\kappa = 0$时结果是式 (9.168)。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "腔模从相干态出发，每个正交分量的方差为$1/2$，与来自外部的噪声不关联。",
+       "src": "9.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{v}{\\langle\\Delta\\kpquad^2(\\kt)\\rangle} = \\mk{R}{\\langle\\kpquad(\\kt)^2\\rangle - \\langle\\kpquad(\\kt)\\rangle^2}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{v}{\\langle\\Delta\\kpquad^2(\\kt)\\rangle} = \\mk{a}{e^{-(\\kkappa + 2\\kbetatilde)\\kt}\\langle\\Delta\\kpquad^2(0)\\rangle} + \\mk{n}{\\int_0^{\\kt}\\int_0^{\\kt} d\\kt'd\\kt'' e^{-(\\kkappa/2 + \\kbetatilde)(\\kt - \\kt')}e^{-(\\kkappa/2 + \\kbetatilde)(\\kt - \\kt'')}\\langle\\kFnoise_p(\\kt')\\kFnoise_p(\\kt'')\\rangle}",
+       "uses": [
+        0,
+        2
+       ],
+       "cap": "对解取平方：与噪声的交叉项平均为零。",
+       "map": {
+        "R": [
+         "a",
+         "n"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{v}{\\langle\\Delta\\kpquad^2(\\kt)\\rangle} = \\mk{a}{e^{-(\\kkappa + 2\\kbetatilde)\\kt}\\langle\\Delta\\kpquad^2(0)\\rangle} + \\mk{n}{\\frac{\\kkappa}{2}\\int_0^{\\kt} d\\kt' e^{-(\\kkappa + 2\\kbetatilde)(\\kt - \\kt')}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{v}{\\langle\\Delta\\kpquad^2(\\kt)\\rangle} = \\mk{a}{\\frac{1}{2}e^{-(\\kkappa + 2\\kbetatilde)\\kt}} + \\mk{n}{\\frac{\\kkappa}{2}\\frac{1 - e^{-(\\kkappa + 2\\kbetatilde)\\kt}}{\\kkappa + 2\\kbetatilde}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(9.182)",
+     "note": "书中把指数印成$-(\\kappa/2 + \\tilde\\beta)t$。方差的衰变速率是式 (9.180) 中振幅的两倍，所以它的指数是$-(\\kappa + 2\\tilde\\beta)t$；取$\\kappa = 0$时结果是式 (9.169)。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 5
+      },
+      {
+       "text": "在长时间下，$t \\to \\infty$。"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{v}{\\langle\\Delta\\kpquad^2(\\kt)\\rangle} = \\mk{a}{\\frac{1}{2}e^{-(\\kkappa + 2\\kbetatilde)\\kt}} + \\mk{n}{\\frac{\\kkappa}{2}\\frac{1 - e^{-(\\kkappa + 2\\kbetatilde)\\kt}}{\\kkappa + 2\\kbetatilde}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{v}{\\langle\\Delta\\kpquad^2\\rangle} \\to \\mk{n}{\\frac{\\kkappa}{2(\\kkappa + 2\\kbetatilde)}}",
+       "uses": [
+        1
+       ],
+       "cap": "两个指数函数都消失。",
+       "map": {
+        "a": "n"
+       }
+      }
+     ],
+     "num": "(9.183)"
+    }
+   ]
+  },
+  {
+   "id": "homodyne-difference",
+   "what": "零拍探测的差电流",
+   "source": "现代原子与光学物理 II，9.4.3 损耗的影响",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "(\\hat{a}_\\mathrm{out}^{(1)})^\\dagger\\hat{a}_\\mathrm{out}^{(1)} = \\frac{1}{2}\\left(\\hat{a}^\\dagger\\hat{a} + \\hat{b}_{LO}^\\dagger\\hat{b}_{LO}\\right) + \\frac{i}{2}\\left(\\hat{a}^\\dagger\\hat{b}_{LO} - \\hat{b}_{LO}^\\dagger\\hat{a}\\right)",
+       "src": "(9.194)"
+      },
+      {
+       "tex": "(\\hat{a}_\\mathrm{out}^{(2)})^\\dagger\\hat{a}_\\mathrm{out}^{(2)} = \\frac{1}{2}\\left(\\hat{a}^\\dagger\\hat{a} + \\hat{b}_{LO}^\\dagger\\hat{b}_{LO}\\right) - \\frac{i}{2}\\left(\\hat{a}^\\dagger\\hat{b}_{LO} - \\hat{b}_{LO}^\\dagger\\hat{a}\\right)",
+       "src": "(9.195)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\hat{n}_-} = \\mk{a}{(\\hat{a}_\\mathrm{out}^{(1)})^\\dagger\\hat{a}_\\mathrm{out}^{(1)}} - \\mk{b}{(\\hat{a}_\\mathrm{out}^{(2)})^\\dagger\\hat{a}_\\mathrm{out}^{(2)}}",
+      "src": "(9.196)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\hat{n}_-} = \\mk{a}{\\frac{1}{2}\\left(\\hat{a}^\\dagger\\hat{a} + \\hat{b}_{LO}^\\dagger\\hat{b}_{LO}\\right) + \\frac{i}{2}\\left(\\hat{a}^\\dagger\\hat{b}_{LO} - \\hat{b}_{LO}^\\dagger\\hat{a}\\right)} - \\mk{b}{\\left(\\frac{1}{2}\\left(\\hat{a}^\\dagger\\hat{a} + \\hat{b}_{LO}^\\dagger\\hat{b}_{LO}\\right) - \\frac{i}{2}\\left(\\hat{a}^\\dagger\\hat{b}_{LO} - \\hat{b}_{LO}^\\dagger\\hat{a}\\right)\\right)}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\hat{n}_-} = \\mk{R}{i\\left(\\hat{a}^\\dagger\\hat{b}_{LO} - \\hat{b}_{LO}^\\dagger\\hat{a}\\right)}",
+       "uses": [],
+       "map": {
+        "a": "R",
+        "b": "R"
+       }
+      }
+     ],
+     "num": "(9.197)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "本地振荡器处于相干态$|\\beta\\rangle$，其中$\\beta = \\bar\\beta e^{i\\phi}$，所以$\\hat b_{LO}|\\beta\\rangle = \\bar\\beta e^{i\\phi}|\\beta\\rangle$。",
+       "src": "(9.10)"
+      },
+      {
+       "text": "信号和本地振荡器从态$|\\psi\\rangle = |\\psi\\rangle_a|\\beta\\rangle$出发。",
+       "src": "9.4.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\hat{n}_-\\rangle} = \\mk{R}{\\langle i\\left(\\hat{a}^\\dagger\\hat{b}_{LO} - \\hat{b}_{LO}^\\dagger\\hat{a}\\right)\\rangle}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\hat{n}_-\\rangle} = \\mk{R}{\\bar{\\beta}\\langle i\\left(\\hat{a}^\\dagger e^{i\\kphi} - \\hat{a}e^{-i\\kphi}\\right)\\rangle}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "$\\hat b_{LO}$把$\\bar\\beta e^{i\\phi}$从$|\\beta\\rangle$中取出，$\\hat b_{LO}^\\dagger$把$\\bar\\beta e^{-i\\phi}$从$\\langle\\beta|$中取出。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\hat{n}_-\\rangle} = \\mk{R}{\\bar{\\beta}\\langle i\\left(\\hat{a}^\\dagger e^{i\\kphi} - \\hat{a}e^{-i\\kphi}\\right)\\rangle} = \\mk{P}{\\bar{\\beta}\\langle \\kPquad_{\\kphi}\\rangle}",
+       "uses": [],
+       "cap": "把信号的正交分量命名为$\\hat P_\\phi = i(\\hat a^\\dagger e^{i\\phi} - \\hat a e^{-i\\phi})$。"
+      }
+     ],
+     "num": "(9.198)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "本地振荡器很强，$\\bar\\beta \\gg 1$。",
+       "src": "9.4.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\Delta\\hat{n}_-^2\\rangle} = \\mk{R}{\\langle\\hat{n}_-^2\\rangle - \\langle\\hat{n}_-\\rangle^2}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\Delta\\hat{n}_-^2\\rangle} \\approx \\mk{R}{\\bar{\\beta}^2\\left(\\langle\\kPquad_{\\kphi}^2\\rangle - \\langle\\kPquad_{\\kphi}\\rangle^2\\right)}",
+       "uses": [
+        0,
+        1,
+        2
+       ],
+       "cap": "对于$\\bar\\beta \\gg 1$，本地振荡器自身的涨落，量级为一，与$\\bar\\beta$相比可以忽略，而$\\hat n_-$的作用相当于$\\bar\\beta\\hat P_\\phi$。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\Delta\\hat{n}_-^2\\rangle} \\approx \\mk{R}{\\bar{\\beta}^2\\langle\\Delta \\kPquad_{\\kphi}^2\\rangle}",
+       "uses": []
+      }
+     ],
+     "num": "(9.199)"
+    }
+   ]
+  },
+  {
+   "id": "homodyne-intensities",
+   "what": "两个探测器处的光强",
+   "source": "现代原子与光学物理 II，9.4.3 损耗的影响",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\hat{a}_\\mathrm{out}^{(1)} = \\frac{1}{\\sqrt{2}}\\left(\\hat{a} + i\\hat{b}_{LO}\\right)",
+       "src": "(9.192)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{(\\hat{a}_\\mathrm{out}^{(1)})^\\dagger\\hat{a}_\\mathrm{out}^{(1)}} = \\mk{R}{\\frac{1}{2}\\left(\\hat{a}^\\dagger - i\\hat{b}_{LO}^\\dagger\\right)\\left(\\hat{a} + i\\hat{b}_{LO}\\right)}",
+      "uses": [
+       0
+      ],
+      "why": "$\\hat a + i\\hat b_{LO}$的伴随是$\\hat a^\\dagger - i\\hat b_{LO}^\\dagger$。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{(\\hat{a}_\\mathrm{out}^{(1)})^\\dagger\\hat{a}_\\mathrm{out}^{(1)}} = \\mk{R}{\\frac{1}{2}\\left(\\hat{a}^\\dagger\\hat{a} + i\\hat{a}^\\dagger\\hat{b}_{LO} - i\\hat{b}_{LO}^\\dagger\\hat{a} + \\hat{b}_{LO}^\\dagger\\hat{b}_{LO}\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{(\\hat{a}_\\mathrm{out}^{(1)})^\\dagger\\hat{a}_\\mathrm{out}^{(1)}} = \\mk{R}{\\frac{1}{2}\\left(\\hat{a}^\\dagger\\hat{a} + \\hat{b}_{LO}^\\dagger\\hat{b}_{LO}\\right) + \\frac{i}{2}\\left(\\hat{a}^\\dagger\\hat{b}_{LO} - \\hat{b}_{LO}^\\dagger\\hat{a}\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(9.194)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\hat{a}_\\mathrm{out}^{(2)} = \\frac{1}{\\sqrt{2}}\\left(i\\hat{a} + \\hat{b}_{LO}\\right)",
+       "src": "(9.193)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{(\\hat{a}_\\mathrm{out}^{(2)})^\\dagger\\hat{a}_\\mathrm{out}^{(2)}} = \\mk{R}{\\frac{1}{2}\\left(-i\\hat{a}^\\dagger + \\hat{b}_{LO}^\\dagger\\right)\\left(i\\hat{a} + \\hat{b}_{LO}\\right)}",
+      "uses": [
+       0
+      ],
+      "why": "$i\\hat a + \\hat b_{LO}$的伴随是$-i\\hat a^\\dagger + \\hat b_{LO}^\\dagger$。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{(\\hat{a}_\\mathrm{out}^{(2)})^\\dagger\\hat{a}_\\mathrm{out}^{(2)}} = \\mk{R}{\\frac{1}{2}\\left(\\hat{a}^\\dagger\\hat{a} - i\\hat{a}^\\dagger\\hat{b}_{LO} + i\\hat{b}_{LO}^\\dagger\\hat{a} + \\hat{b}_{LO}^\\dagger\\hat{b}_{LO}\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{(\\hat{a}_\\mathrm{out}^{(2)})^\\dagger\\hat{a}_\\mathrm{out}^{(2)}} = \\mk{R}{\\frac{1}{2}\\left(\\hat{a}^\\dagger\\hat{a} + \\hat{b}_{LO}^\\dagger\\hat{b}_{LO}\\right) - \\frac{i}{2}\\left(\\hat{a}^\\dagger\\hat{b}_{LO} - \\hat{b}_{LO}^\\dagger\\hat{a}\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(9.195)"
+    }
+   ]
+  },
+  {
+   "id": "output-squeezing",
+   "what": "输出场的压缩",
+   "source": "现代原子与光学物理 II，9.4.3 损耗的影响",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "在傅里叶域中，$d/dt$变为$i\\omega$。",
+       "src": "9.4.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\kPquad}{d\\kt}} = -\\mk{x}{\\left(\\frac{\\kkappa}{2} + \\kbetatilde\\right)\\kPquad} + \\mk{R}{\\kFnoise_p}",
+      "src": "(9.175)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\komega\\kPquad(\\komega)} = -\\mk{x}{\\left(\\frac{\\kkappa}{2} + \\kbetatilde\\right)\\kPquad(\\komega)} + \\mk{R}{\\kFnoise_p(\\komega)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\left(i\\komega + \\frac{\\kkappa}{2} + \\kbetatilde\\right)\\kPquad(\\komega)} = \\mk{R}{\\kFnoise_p(\\komega)}",
+       "uses": [],
+       "map": {
+        "x": "L"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\kPquad(\\komega)} = \\mk{R}{\\frac{\\kFnoise_p(\\komega)}{i\\komega + (\\kkappa/2 + \\kbetatilde)}}",
+       "uses": []
+      }
+     ],
+     "num": "(9.190)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{o}{\\kPquad_\\mathrm{out}(\\komega)} = -\\mk{f}{\\frac{\\kFnoise_p(\\komega)}{\\sqrt{\\kkappa}}} + \\mk{p}{\\sqrt{\\kkappa}\\kPquad(\\komega)}",
+      "src": "(9.189)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{o}{\\kPquad_\\mathrm{out}(\\komega)} = -\\mk{f}{\\frac{\\kFnoise_p(\\komega)}{\\sqrt{\\kkappa}}} + \\mk{p}{\\sqrt{\\kkappa}\\frac{\\kFnoise_p(\\komega)}{i\\komega + (\\kkappa/2 + \\kbetatilde)}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{o}{\\kPquad_\\mathrm{out}(\\komega)} = \\mk{p}{\\frac{\\kFnoise_p(\\komega)}{\\sqrt{\\kkappa}}\\left(\\frac{\\kkappa}{i\\komega + (\\kkappa/2 + \\kbetatilde)} - 1\\right)}",
+       "uses": [],
+       "map": {
+        "f": "p"
+       }
+      }
+     ],
+     "num": "(9.191)"
+    }
+   ]
+  },
+  {
+   "id": "pair-state",
+   "what": "光子对的态",
+   "source": "现代原子与光学物理 II，9.4.1 非线性放大",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kHeff = \\hbar\\left(\\kbetagain\\hat{a}_1\\hat{a}_2 + \\kbetagain^*\\hat{a}_1^\\dagger\\hat{a}_2^\\dagger\\right)",
+       "src": "(9.155)"
+      },
+      {
+       "text": "湮没算符湮没真空，$\\hat a_1|\\mathrm{vac}\\rangle = \\hat a_2|\\mathrm{vac}\\rangle = 0$。",
+       "src": "9.1"
+      },
+      {
+       "tex": "|n, m\\rangle = (\\hat{a}_1^\\dagger)^n(\\hat{a}_2^\\dagger)^m|\\mathrm{vac}\\rangle",
+       "src": "9.4.1"
+      },
+      {
+       "tex": "\\kxipdc = -i\\kbetagain^* \\kt",
+       "src": "9.4.1"
+      },
+      {
+       "tex": "[\\hat{a}, \\hat{a}^\\dagger] = 1",
+       "src": "(11.114)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|\\kpsi\\rangle} = \\mk{R}{e^{-i\\kHeff \\kt/\\hbar}|\\mathrm{vac}\\rangle}",
+      "src": "(9.156)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{|\\kpsi\\rangle} = \\mk{v}{|\\mathrm{vac}\\rangle} - \\mk{p1}{\\frac{i\\kt}{\\hbar}\\kHeff|\\mathrm{vac}\\rangle} - \\mk{p2}{\\frac{\\kt^2}{2\\hbar^2}\\kHeff^2|\\mathrm{vac}\\rangle} + \\ldots",
+       "uses": [],
+       "cap": "把指数函数写成幂级数，到$t$的二阶。",
+       "map": {
+        "R": [
+         "v",
+         "p1",
+         "p2"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi\\rangle} = \\mk{v}{|\\mathrm{vac}\\rangle} - \\mk{p1}{i\\kbetagain^*\\kt\\,\\hat{a}_1^\\dagger\\hat{a}_2^\\dagger|\\mathrm{vac}\\rangle} - \\mk{p2}{\\frac{\\kt^2}{2}\\left(\\kbetagain^{*2}(\\hat{a}_1^\\dagger\\hat{a}_2^\\dagger)^2 + |\\kbetagain|^2\\hat{a}_1\\hat{a}_2\\hat{a}_1^\\dagger\\hat{a}_2^\\dagger\\right)|\\mathrm{vac}\\rangle} + \\ldots",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "作用在真空上时，只有$\\hat a_1^\\dagger\\hat a_2^\\dagger$保留在$\\hat H_\\mathrm{eff}$中，而在$\\hat H_\\mathrm{eff}^2$中只有$(\\hat a_1^\\dagger\\hat a_2^\\dagger)^2$和$\\hat a_1\\hat a_2\\hat a_1^\\dagger\\hat a_2^\\dagger$。"
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi\\rangle} = \\mk{v}{\\left(1 - \\frac{|\\kbetagain|^2\\kt^2}{2}\\right)|\\mathrm{vac}\\rangle} - \\mk{p1}{i\\kbetagain^*\\kt|1, 1\\rangle} - \\mk{p2}{\\frac{\\kbetagain^{*2}\\kt^2}{2}|2, 2\\rangle} + \\ldots",
+       "uses": [
+        2,
+        4
+       ],
+       "cap": "$\\hat a_1\\hat a_2\\hat a_1^\\dagger\\hat a_2^\\dagger|\\mathrm{vac}\\rangle = |\\mathrm{vac}\\rangle$，由$[\\hat a, \\hat a^\\dagger] = 1$。",
+       "map": {
+        "p2": [
+         "v",
+         "p2"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi\\rangle} = \\mk{v}{\\left(1 - \\frac{|\\kxipdc|^2}{2}\\right)|\\mathrm{vac}\\rangle} + \\mk{p1}{\\kxipdc|1, 1\\rangle} + \\mk{p2}{\\frac{\\kxipdc^2}{2}|2, 2\\rangle} + \\ldots",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(9.157)",
+     "note": "书中印的是$|\\mathrm{vac}\\rangle + \\xi|1, 1\\rangle + \\xi^2|2, 2\\rangle + \\ldots$。在二阶，$|2, 2\\rangle = (\\hat a_1^\\dagger)^2(\\hat a_2^\\dagger)^2|\\mathrm{vac}\\rangle$的系数是$\\xi^2/2$，而真空概率幅减小$|\\xi|^2/2$，使态保持归一化。"
+    }
+   ]
+  },
+  {
+   "id": "phase-dependent-amplification",
+   "what": "简并下转换的简正模式",
+   "source": "现代原子与光学物理 II，9.4.1 非线性放大",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\frac{\\partial\\kEenv_1}{\\partial \\kt} = i\\kbetagain\\kEenv_1^*",
+       "src": "(9.140)"
+      },
+      {
+       "tex": "\\frac{\\partial\\kEenv_1^*}{\\partial \\kt} = -i\\kbetagain^*\\kEenv_1",
+       "src": "(9.141)"
+      },
+      {
+       "text": "选取$\\beta$的相位为纯虚数，$\\beta = i\\tilde\\beta$，其中$\\tilde\\beta$为实数。",
+       "src": "9.4.1"
+      },
+      {
+       "text": "简正模式是$\\mathcal{E}_\\pm = \\mathcal{E}_1 \\pm \\mathcal{E}_1^*$。",
+       "src": "9.4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{\\partial \\kEp}{\\partial \\kt}} = \\mk{R}{\\frac{\\partial \\kEenv_1}{\\partial \\kt} + \\frac{\\partial \\kEenv_1^*}{\\partial \\kt}}",
+      "uses": [
+       3
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{\\partial \\kEp}{\\partial \\kt}} = \\mk{R}{i\\kbetagain\\kEenv_1^* - i\\kbetagain^*\\kEenv_1}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\partial \\kEp}{\\partial \\kt}} = \\mk{R}{-\\kbetatilde\\kEenv_1^* - \\kbetatilde\\kEenv_1}",
+       "uses": [
+        2
+       ],
+       "cap": "取$\\beta = i\\tilde\\beta$，$i\\beta = -\\tilde\\beta$和$-i\\beta^* = -i(-i\\tilde\\beta) = -\\tilde\\beta$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\partial \\kEp}{\\partial \\kt}} = \\mk{R}{-\\kbetatilde(\\kEenv_1 + \\kEenv_1^*)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\partial \\kEp}{\\partial \\kt}} = \\mk{R}{-\\kbetatilde\\kEp}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(9.142)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\frac{\\partial\\kEenv_1}{\\partial \\kt} = i\\kbetagain\\kEenv_1^*",
+       "src": "(9.140)"
+      },
+      {
+       "tex": "\\frac{\\partial\\kEenv_1^*}{\\partial \\kt} = -i\\kbetagain^*\\kEenv_1",
+       "src": "(9.141)"
+      },
+      {
+       "text": "选取$\\beta$的相位为纯虚数，$\\beta = i\\tilde\\beta$，其中$\\tilde\\beta$为实数。",
+       "src": "9.4.1"
+      },
+      {
+       "text": "简正模式是$\\mathcal{E}_\\pm = \\mathcal{E}_1 \\pm \\mathcal{E}_1^*$。",
+       "src": "9.4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{\\partial \\kEm}{\\partial \\kt}} = \\mk{R}{\\frac{\\partial \\kEenv_1}{\\partial \\kt} - \\frac{\\partial \\kEenv_1^*}{\\partial \\kt}}",
+      "uses": [
+       3
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{\\partial \\kEm}{\\partial \\kt}} = \\mk{R}{i\\kbetagain\\kEenv_1^* + i\\kbetagain^*\\kEenv_1}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\partial \\kEm}{\\partial \\kt}} = \\mk{R}{-\\kbetatilde\\kEenv_1^* + \\kbetatilde\\kEenv_1}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\partial \\kEm}{\\partial \\kt}} = \\mk{R}{\\kbetatilde(\\kEenv_1 - \\kEenv_1^*)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\partial \\kEm}{\\partial \\kt}} = \\mk{R}{\\kbetatilde\\kEm}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(9.143)",
+     "note": "书中左边印的是$\\partial\\mathcal{E}_-^*/\\partial t$；满足该方程的简正模式是$\\mathcal{E}_- = \\mathcal{E}_1 - \\mathcal{E}_1^*$。"
+    }
+   ]
+  },
+  {
+   "id": "quadrature-squeezing",
+   "what": "正交分量的压缩",
+   "source": "现代原子与光学物理 II，9.4.2 压缩态",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\frac{d\\hat{a}}{d\\kt} = -i\\kbetagain^*\\hat{a}^\\dagger",
+       "src": "(9.150)"
+      },
+      {
+       "tex": "\\frac{d\\hat{a}^\\dagger}{d\\kt} = i\\kbetagain\\hat{a}",
+       "src": "(9.151)"
+      },
+      {
+       "tex": "\\kbetagain = \\kbetatilde e^{i(\\ktheta - \\pi/2)}",
+       "src": "(9.161)"
+      },
+      {
+       "tex": "\\kxquad = \\frac{1}{\\sqrt{2}}\\left(\\hat{a}e^{i\\ktheta/2} + \\hat{a}^\\dagger e^{-i\\ktheta/2}\\right)",
+       "src": "(9.162)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = \\mk{R}{\\frac{1}{\\sqrt{2}}\\left(\\frac{d\\hat{a}}{d\\kt}e^{i\\ktheta/2} + \\frac{d\\hat{a}^\\dagger}{d\\kt}e^{-i\\ktheta/2}\\right)}",
+      "uses": [
+       3
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = \\mk{R}{\\frac{1}{\\sqrt{2}}\\left(-i\\kbetagain^*\\hat{a}^\\dagger e^{i\\ktheta/2} + i\\kbetagain\\hat{a}e^{-i\\ktheta/2}\\right)}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = \\mk{R}{\\frac{1}{\\sqrt{2}}\\left(\\kbetatilde\\hat{a}^\\dagger e^{-i\\ktheta/2} + \\kbetatilde\\hat{a}e^{i\\ktheta/2}\\right)}",
+       "uses": [
+        2
+       ],
+       "cap": "由式 (9.161)，$-i\\beta^* = \\tilde\\beta e^{-i\\theta}$和$i\\beta = \\tilde\\beta e^{i\\theta}$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = \\mk{R}{\\kbetatilde\\kxquad}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(9.164)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\frac{d\\hat{a}}{d\\kt} = -i\\kbetagain^*\\hat{a}^\\dagger",
+       "src": "(9.150)"
+      },
+      {
+       "tex": "\\frac{d\\hat{a}^\\dagger}{d\\kt} = i\\kbetagain\\hat{a}",
+       "src": "(9.151)"
+      },
+      {
+       "tex": "\\kbetagain = \\kbetatilde e^{i(\\ktheta - \\pi/2)}",
+       "src": "(9.161)"
+      },
+      {
+       "tex": "\\kpquad = \\frac{1}{\\sqrt{2}i}\\left(\\hat{a}e^{i\\ktheta/2} - \\hat{a}^\\dagger e^{-i\\ktheta/2}\\right)",
+       "src": "(9.163)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = \\mk{R}{\\frac{1}{\\sqrt{2}i}\\left(\\frac{d\\hat{a}}{d\\kt}e^{i\\ktheta/2} - \\frac{d\\hat{a}^\\dagger}{d\\kt}e^{-i\\ktheta/2}\\right)}",
+      "uses": [
+       3
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = \\mk{R}{\\frac{1}{\\sqrt{2}i}\\left(-i\\kbetagain^*\\hat{a}^\\dagger e^{i\\ktheta/2} - i\\kbetagain\\hat{a}e^{-i\\ktheta/2}\\right)}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = \\mk{R}{\\frac{1}{\\sqrt{2}i}\\left(\\kbetatilde\\hat{a}^\\dagger e^{-i\\ktheta/2} - \\kbetatilde\\hat{a}e^{i\\ktheta/2}\\right)}",
+       "uses": [
+        2
+       ],
+       "cap": "由式 (9.161)，$-i\\beta^* = \\tilde\\beta e^{-i\\theta}$和$i\\beta = \\tilde\\beta e^{i\\theta}$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = \\mk{R}{-\\kbetatilde\\kpquad}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(9.165)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\kxquad}{d\\kt}} = \\mk{R}{\\kbetatilde\\kxquad}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kxquad(\\kt)} = \\mk{R}{\\kxquad(0)e^{\\kbetatilde \\kt}}",
+       "uses": [],
+       "cap": "积分。"
+      }
+     ],
+     "num": "(9.166)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\kpquad}{d\\kt}} = \\mk{R}{-\\kbetatilde\\kpquad}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kpquad(\\kt)} = \\mk{R}{\\kpquad(0)e^{-\\kbetatilde \\kt}}",
+       "uses": [],
+       "cap": "积分。"
+      }
+     ],
+     "num": "(9.167)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "腔模从相干态出发，其正交分量的方差为$1/2$。",
+       "src": "(9.15), (9.16)"
+      },
+      {
+       "text": "$x$正交分量被放大，$\\tilde\\beta > 0$。",
+       "src": "9.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\Delta\\kxquad^2\\rangle} = \\mk{R}{\\langle\\kxquad(\\kt)^2\\rangle - \\langle\\kxquad(\\kt)\\rangle^2}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\Delta\\kxquad^2\\rangle} = \\mk{R}{\\left(\\langle\\kxquad(0)^2\\rangle - \\langle\\kxquad(0)\\rangle^2\\right)e^{2\\kbetatilde \\kt}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\Delta\\kxquad^2\\rangle} = \\mk{R}{\\frac{1}{2}e^{2\\kbetatilde \\kt}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\Delta\\kxquad^2\\rangle} = \\mk{R}{\\frac{1}{2}e^{2\\kbetatilde \\kt}} \\to \\mk{i}{\\infty}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(9.168)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "腔模从相干态出发，其正交分量的方差为$1/2$。",
+       "src": "(9.15), (9.16)"
+      },
+      {
+       "text": "$x$正交分量被放大，$\\tilde\\beta > 0$。",
+       "src": "9.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\Delta\\kpquad^2\\rangle} = \\mk{R}{\\langle\\kpquad(\\kt)^2\\rangle - \\langle\\kpquad(\\kt)\\rangle^2}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\Delta\\kpquad^2\\rangle} = \\mk{R}{\\left(\\langle\\kpquad(0)^2\\rangle - \\langle\\kpquad(0)\\rangle^2\\right)e^{-2\\kbetatilde \\kt}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\Delta\\kpquad^2\\rangle} = \\mk{R}{\\frac{1}{2}e^{-2\\kbetatilde \\kt}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\Delta\\kpquad^2\\rangle} = \\mk{R}{\\frac{1}{2}e^{-2\\kbetatilde \\kt}} \\to \\mk{i}{0}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(9.169)"
+    }
+   ]
+  },
+  {
+   "id": "squeezed-phase-sensitivity",
+   "what": "压缩场所能分辨的最小相位",
+   "source": "现代原子与光学物理 II，9.4.3 损耗的影响",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\Delta P = \\langle x\\rangle\\delta\\kphi",
+       "src": "(9.200)"
+      },
+      {
+       "tex": "\\langle\\Delta P^2\\rangle = \\frac{1}{2}e^{-2\\krsq}",
+       "src": "(9.201)"
+      },
+      {
+       "text": "可测量的最小相位给出与噪声相等的信号。",
+       "src": "9.4.3"
+      },
+      {
+       "text": "含$n$个光子的场有$\\langle\\hat x\\rangle \\sim \\sqrt{n}$，如同相干态的$\\bar n = |\\alpha|^2$。",
+       "src": "(9.27)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\kxquad\\rangle\\delta\\kphi_\\mathrm{min}} = \\mk{R}{\\sqrt{\\langle\\Delta P^2\\rangle}}",
+      "uses": [
+       0,
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\kxquad\\rangle\\delta\\kphi_\\mathrm{min}} = \\mk{R}{\\frac{1}{\\sqrt{2}}e^{-\\krsq}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\delta\\kphi_\\mathrm{min}} = \\mk{R}{\\frac{1}{\\sqrt{2}\\langle\\kxquad\\rangle}e^{-\\krsq}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\delta\\kphi_\\mathrm{min}} \\sim \\mk{R}{\\frac{1}{\\langle\\kxquad\\rangle}e^{-\\krsq}} \\sim \\mk{n}{\\frac{1}{\\sqrt{n}}e^{-\\krsq}}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(9.202)"
+    }
+   ]
+  },
+  {
+   "id": "squeezing-equations",
+   "what": "简并下转换的算符方程",
+   "source": "现代原子与光学物理 II，9.4.1 非线性放大",
+   "nodes": [
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\hat{a}}{d\\kt}} = \\mk{R}{-2i\\sum_j \\frac{\\kOmega_0}{\\kDelta\\kdelta}\\kg_j^2\\hat{a}^\\dagger}",
+      "uses": [],
+      "src": "(9.149)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d\\hat{a}}{d\\kt}} = \\mk{R}{-i\\kbetagain^*\\hat{a}^\\dagger}",
+       "uses": [],
+       "cap": "确定比例常量$\\beta^* = 2\\sum_j \\Omega_0 g_j^2/\\Delta\\delta$。"
+      }
+     ],
+     "num": "(9.150)",
+     "note": "书中确定的是$\\beta^* = -2\\sum_j \\Omega_0^* g_j^2/\\Delta\\delta$；把式 (9.149) 与式 (9.150) 对应，得到$\\beta^* = 2\\sum_j \\Omega_0 g_j^2/\\Delta\\delta$。只有$\\beta$的相位不同，而式 (9.161) 可以自由地选取该相位。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\hat{a}}{d\\kt}} = \\mk{R}{-i\\kbetagain^*\\hat{a}^\\dagger}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d\\hat{a}^\\dagger}{d\\kt}} = \\mk{R}{i\\kbetagain\\hat{a}}",
+       "uses": [],
+       "cap": "取厄米共轭。"
+      }
+     ],
+     "num": "(9.151)"
+    }
+   ]
+  },
+  {
+   "id": "two-photon-drive",
+   "what": "简并下转换的场方程",
+   "source": "现代原子与光学物理 II，9.4.1 非线性放大",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\hat{\\sigma}_{13}^{(j)} = -\\frac{\\kOmega_0}{\\kDelta\\kdelta}\\kg_j\\hat{a}^\\dagger - \\frac{\\kg_j\\hat{a}}{\\kdelta}",
+       "src": "(9.147)"
+      },
+      {
+       "tex": "\\hat{\\sigma}_{32} \\approx -\\frac{\\kOmega_0}{\\kDelta\\kdelta}\\kg_j\\hat{a}^\\dagger",
+       "src": "(9.148)"
+      },
+      {
+       "text": "相位匹配条件得到满足：含$\\hat a$的项，即腔频率的移位，被调谐掉。",
+       "src": "9.4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\hat{a}}{d\\kt}} = \\mk{R}{i\\sum_j \\left(\\kg_j\\hat{\\sigma}_{32}^{(j)} + \\kg_j\\hat{\\sigma}_{13}^{(j)}\\right)}",
+      "src": "(9.145)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d\\hat{a}}{d\\kt}} = \\mk{R}{i\\sum_j \\left(-\\frac{\\kOmega_0}{\\kDelta\\kdelta}\\kg_j^2\\hat{a}^\\dagger - \\frac{\\kOmega_0}{\\kDelta\\kdelta}\\kg_j^2\\hat{a}^\\dagger - \\frac{\\kg_j^2}{\\kdelta}\\hat{a}\\right)}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\hat{a}}{d\\kt}} = \\mk{p}{-2i\\sum_j \\frac{\\kOmega_0}{\\kDelta\\kdelta}\\kg_j^2\\hat{a}^\\dagger} - \\mk{s}{i\\sum_j\\frac{\\kg_j^2}{\\kdelta}\\hat{a}}",
+       "uses": [],
+       "map": {
+        "R": [
+         "p",
+         "s"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\hat{a}}{d\\kt}} = \\mk{p}{-2i\\sum_j \\frac{\\kOmega_0}{\\kDelta\\kdelta}\\kg_j^2\\hat{a}^\\dagger}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(9.149)"
+    }
+   ]
+  }
+ ]
+}

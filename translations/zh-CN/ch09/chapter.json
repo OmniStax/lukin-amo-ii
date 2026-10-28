@@ -1,0 +1,836 @@
+{
+ "id": "9",
+ "dir": "ch09",
+ "title": "光与物质相互作用的量子性质",
+ "intro": {},
+ "sections": [
+  {
+   "id": "9.1",
+   "title": "量子场的基本性质"
+  },
+  {
+   "id": "9.2",
+   "title": "单模辐射场与二能级原子的相互作用"
+  },
+  {
+   "id": "9.3",
+   "title": "耗散对量子场的影响"
+  },
+  {
+   "id": "9.4",
+   "title": "非线性混频过程中的量子动力学"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "g",
+   "concept": "single-photon-rabi-frequency",
+   "meaning": "单光子拉比频率，即原子与场的一个模的耦合",
+   "anchor": "9.2-eq-9-53",
+   "section": "9.2"
+  },
+  {
+   "sym": "H",
+   "concept": "jaynes-cummings-model",
+   "meaning": "原子与一个共振腔模的 J-C 哈密顿量，在转动参考系中",
+   "anchor": "9.2-eq-9-53",
+   "section": "9.2",
+   "redefines": true
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "anchor": "9.2-eq-9-54",
+   "section": "9.2"
+  },
+  {
+   "sym": "c_n",
+   "concept": "probability-amplitude",
+   "meaning": "态在基矢态 |n⟩ 上的展开系数",
+   "anchor": "9.2-eq-9-54",
+   "section": "9.2"
+  },
+  {
+   "sym": "c_np1",
+   "concept": "probability-amplitude",
+   "meaning": "态在基矢态 |n+1⟩ 上的展开系数",
+   "anchor": "9.2-drv-jaynes-cummings-equations",
+   "section": "9.2"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "section": "9.2",
+   "anchor": "9.2-jc-pairs"
+  },
+  {
+   "sym": "H_eff",
+   "type": "energy",
+   "meaning": "投影到两个态 |2⟩_a|0⟩ 和 |1⟩_a|1⟩ 上的 J-C 哈密顿量",
+   "anchor": "9.2-eq-9-61",
+   "section": "9.2",
+   "redefines": true
+  },
+  {
+   "sym": "alpha_coh",
+   "concept": "coherent-amplitude",
+   "meaning": "相干振幅：相干态 |α⟩ 中湮没算符的本征值，α = |α|e^{iφ}",
+   "anchor": "9.2-eq-9-63",
+   "section": "9.2"
+  },
+  {
+   "sym": "tau_Rabi",
+   "concept": "coherent-state-rabi-oscillations",
+   "meaning": "原子在相干场中的拉比振荡的周期",
+   "anchor": "9.2-drv-naive-rabi-oscillation",
+   "section": "9.2"
+  },
+  {
+   "sym": "phi",
+   "type": "phase",
+   "meaning": "福克分量 |n⟩ 的正弦和余弦的相位 g√(n+1)t",
+   "anchor": "9.2-drv-rabi-phase-expansion",
+   "section": "9.2",
+   "redefines": true
+  },
+  {
+   "sym": "tau_collapse",
+   "concept": "rabi-collapse",
+   "meaning": "相干场中的拉比振荡在此之后坍缩的时间",
+   "anchor": "9.2-eq-9-70",
+   "section": "9.2"
+  },
+  {
+   "sym": "tau_revival",
+   "concept": "rabi-revival",
+   "meaning": "已坍缩的拉比振荡恢复的时刻",
+   "anchor": "9.2-eq-9-71",
+   "section": "9.2"
+  },
+  {
+   "sym": "p_2",
+   "concept": "born-rule",
+   "meaning": "激发态 |2⟩ 的布居",
+   "section": "9.2",
+   "anchor": "9.2-sim-collapse-revival"
+  },
+  {
+   "sym": "rho_hat",
+   "concept": "reduced-density-operator",
+   "meaning": "腔场的密度算符，对原子求阵迹",
+   "section": "9.2",
+   "anchor": "9.2-sim-collapse-revival",
+   "redefines": true
+  },
+  {
+   "sym": "n_bar",
+   "meaning": "模的平均光子数，Σ n ρ_nn：热模为玻色-爱因斯坦平均值，相干态为 |α|²",
+   "anchor": "9.2-naive",
+   "section": "9.2",
+   "concept": "mean-photon-number"
+  },
+  {
+   "section": "9.1",
+   "sym": "alpha_coh",
+   "concept": "coherent-amplitude",
+   "meaning": "相干振幅：相干态 |α⟩ 中湮没算符的本征值，α = |α|e^{iφ}",
+   "anchor": "9.1-eq-9-10"
+  },
+  {
+   "section": "9.1",
+   "sym": "x_quad",
+   "concept": "quadrature-operators",
+   "meaning": "模的同相正交分量算符，(â + â†)/√2",
+   "anchor": "9.1-eq-9-13"
+  },
+  {
+   "section": "9.1",
+   "sym": "p_quad",
+   "concept": "quadrature-operators",
+   "meaning": "模的异相正交分量算符，(â − â†)/i√2",
+   "anchor": "9.1-eq-9-14"
+  },
+  {
+   "section": "9.1",
+   "sym": "D_shift",
+   "concept": "shift-operator",
+   "meaning": "平移算符，它使态在 x̂ 和 p̂ 的平面中平移 α",
+   "anchor": "9.1-eq-9-19"
+  },
+  {
+   "section": "9.1",
+   "sym": "P_alpha",
+   "concept": "p-representation",
+   "meaning": "场在相干态 |α⟩ 上的准概率分布",
+   "anchor": "9.1-eq-9-40"
+  },
+  {
+   "section": "9.1",
+   "sym": "n_bar",
+   "meaning": "模的平均光子数，Σ n ρ_nn：热模为玻色-爱因斯坦平均值，相干态为 |α|²",
+   "anchor": "9.1-eq-9-7",
+   "redefines": true,
+   "concept": "mean-photon-number"
+  },
+  {
+   "section": "9.1",
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "温度",
+   "anchor": "9.1-eq-9-5"
+  },
+  {
+   "section": "9.1",
+   "sym": "omega",
+   "type": "frequency",
+   "meaning": "场模的频率",
+   "anchor": "9.1-eq-9-6",
+   "redefines": true
+  },
+  {
+   "section": "9.1",
+   "sym": "omega_k",
+   "type": "frequency",
+   "meaning": "场模 {k, α} 的频率",
+   "anchor": "9.1-eq-9-1",
+   "redefines": true
+  },
+  {
+   "section": "9.1",
+   "sym": "k",
+   "type": "wavevector",
+   "meaning": "场模的波矢量",
+   "anchor": "9.1-eq-9-1"
+  },
+  {
+   "section": "9.1",
+   "sym": "V",
+   "type": "volume",
+   "meaning": "场在其中被量子化的腔的体积",
+   "anchor": "9.1-eq-9-1"
+  },
+  {
+   "section": "9.1",
+   "sym": "E_hat",
+   "concept": "quantized-electric-field",
+   "meaning": "电场算符",
+   "anchor": "9.1-eq-9-8"
+  },
+  {
+   "section": "9.1",
+   "sym": "rho_nn",
+   "concept": "density-matrix-populations",
+   "meaning": "密度矩阵的对角元：占据态 |n⟩ 的概率",
+   "anchor": "9.1-eq-9-6"
+  },
+  {
+   "section": "9.1",
+   "sym": "rho_hat",
+   "concept": "density-operator",
+   "meaning": "系统的密度算符",
+   "anchor": "9.1-eq-9-5"
+  },
+  {
+   "section": "9.1",
+   "sym": "theta",
+   "type": "phase",
+   "meaning": "分束器参数，它决定分束器的透射系数和反射系数",
+   "anchor": "9.1-eq-9-52",
+   "redefines": true
+  },
+  {
+   "section": "9.1",
+   "sym": "phi",
+   "type": "phase",
+   "meaning": "相干振幅的相位，α = |α|e^{iφ}，以及相移所增加的相位",
+   "anchor": "9.1-drv-coherent-state-completeness",
+   "redefines": true
+  },
+  {
+   "section": "9.1",
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "anchor": "9.1-eq-9-2"
+  },
+  {
+   "section": "9.1",
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "anchor": "9.1-eq-9-1"
+  },
+  {
+   "section": "9.1",
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "anchor": "9.1-eq-9-9"
+  },
+  {
+   "sym": "kappa",
+   "concept": "cavity-loss-rate",
+   "meaning": "腔损耗率：腔内场能量通过部分透射镜泄漏出去的速率",
+   "unit": "s⁻¹",
+   "anchor": "9.3-loss-rate",
+   "section": "9.3"
+  },
+  {
+   "sym": "gamma_eff",
+   "concept": "purcell-effect",
+   "meaning": "与过阻尼腔模耦合的原子的有效衰变率，开腔中为 γ_eff^open，闭腔中为 γ_eff^closed",
+   "unit": "s⁻¹",
+   "anchor": "9.3-purcell",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "Q_fac",
+   "concept": "quality-factor",
+   "meaning": "腔模的品质因数",
+   "anchor": "9.3-q-factor",
+   "section": "9.3"
+  },
+  {
+   "sym": "F_fin",
+   "concept": "cavity-finesse",
+   "meaning": "腔精细度：光子在漏出之前平均在腔中循环的次数",
+   "anchor": "9.3-finesse",
+   "section": "9.3"
+  },
+  {
+   "sym": "g2",
+   "concept": "second-order-correlation",
+   "meaning": "归一化的二阶关联函数",
+   "anchor": "9.3-g2-def",
+   "section": "9.3"
+  },
+  {
+   "sym": "F_noise",
+   "concept": "cavity-noise-correlations",
+   "meaning": "腔模的噪声算符：通过反射镜漏入的外部场",
+   "anchor": "9.3-eq-9-89",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "原子向腔模以外的自由空间模发射的速率",
+   "unit": "s⁻¹",
+   "anchor": "9.3-cqed-system",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "g",
+   "concept": "single-photon-rabi-frequency",
+   "meaning": "单光子拉比频率，即原子与场的一个模的耦合",
+   "unit": "s⁻¹",
+   "anchor": "9.3-cqed-system",
+   "section": "9.3"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "腔模的频率",
+   "unit": "rad/s",
+   "anchor": "9.3-cavity-frequency",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "nu_bar",
+   "type": "frequency",
+   "meaning": "腔共振的中心频率",
+   "unit": "rad/s",
+   "anchor": "9.3-centre-frequency",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "nu_k",
+   "type": "frequency",
+   "meaning": "腔外连续区模 â_k 的频率",
+   "unit": "rad/s",
+   "anchor": "9.3-cavity-frequency",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "delta",
+   "concept": "detuning",
+   "meaning": "腔模相对于原子跃迁的失谐 δ = ν − ω",
+   "unit": "rad/s",
+   "anchor": "9.3-cavity-detuning",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "delta_k",
+   "type": "frequency",
+   "meaning": "自由场模 â_k 相对于腔模的失谐",
+   "unit": "rad/s",
+   "anchor": "9.3-eq-9-130",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "omega",
+   "concept": "atomic-transition-frequency",
+   "meaning": "原子跃迁频率：两个能级相距 ħω",
+   "unit": "rad/s",
+   "anchor": "9.3-cavity-detuning",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "c_11",
+   "concept": "probability-amplitude",
+   "meaning": "|1⟩_a|1⟩ 的概率幅：原子处于 |1⟩，腔中有一个光子",
+   "anchor": "9.3-eq-9-112",
+   "section": "9.3"
+  },
+  {
+   "sym": "c_20",
+   "concept": "probability-amplitude",
+   "meaning": "|2⟩_a|0⟩ 的概率幅：原子被激发，腔为空",
+   "anchor": "9.3-eq-9-112",
+   "section": "9.3"
+  },
+  {
+   "sym": "c_k",
+   "concept": "probability-amplitude",
+   "meaning": "|1⟩_a|0⟩|1_k⟩ 的概率幅：光子在自由场模 k 中",
+   "anchor": "9.3-eq-9-131",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "H",
+   "concept": "jaynes-cummings-model",
+   "meaning": "原子与腔模的 J-C 哈密顿量，在以原子频率转动的参考系中",
+   "anchor": "9.3-eq-9-110",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "H_eff",
+   "concept": "effective-hamiltonian",
+   "meaning": "腔损耗和原子衰变的非厄米有效哈密顿量",
+   "anchor": "9.3-eq-9-115",
+   "section": "9.3"
+  },
+  {
+   "sym": "rho_hat",
+   "concept": "density-operator",
+   "meaning": "系统的密度算符：腔模，或原子与腔模一起",
+   "anchor": "9.3-cavity-master",
+   "section": "9.3"
+  },
+  {
+   "sym": "E_cav",
+   "type": "electric-field",
+   "meaning": "腔内的经典场 E(t)；E_in 是入射到腔上的场，E_out 是离开腔的场",
+   "unit": "V/m",
+   "anchor": "9.3-round-trip",
+   "section": "9.3"
+  },
+  {
+   "sym": "E_hat",
+   "concept": "quantized-electric-field",
+   "meaning": "输入场算符 Ê_in(t)：腔外通过反射镜漏入的场",
+   "anchor": "9.3-input-field",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "E_env",
+   "type": "electric-field",
+   "meaning": "探测器处位置 r、时刻 t 的场算符 𝓔(r, t)",
+   "anchor": "9.3-eq-9-133",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "L_med",
+   "type": "length",
+   "meaning": "腔的长度",
+   "unit": "m",
+   "anchor": "9.3-round-trip",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "lambda",
+   "type": "length",
+   "meaning": "腔模和原子跃迁的波长",
+   "unit": "m",
+   "anchor": "9.3-open-closed",
+   "section": "9.3"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "腔模的体积",
+   "unit": "m³",
+   "anchor": "9.3-mode-volume",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "mu",
+   "type": "dipole",
+   "meaning": "原子跃迁的偶极矩阵元",
+   "unit": "C·m",
+   "anchor": "9.3-mode-volume",
+   "section": "9.3"
+  },
+  {
+   "sym": "P_nl",
+   "concept": "macroscopic-polarization",
+   "meaning": "腔内介质的极化强度",
+   "unit": "C/m²",
+   "anchor": "9.3-eq-9-87",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "Delta_t",
+   "type": "time",
+   "meaning": "腔的往返时间 2L/c",
+   "unit": "s",
+   "anchor": "9.3-round-trip",
+   "redefines": true,
+   "section": "9.3"
+  },
+  {
+   "sym": "x_quad",
+   "concept": "quadrature-operators",
+   "meaning": "模的同相正交分量算符，(â + â†)/√2",
+   "anchor": "9.3-drv-damped-quadrature-variance",
+   "section": "9.3"
+  },
+  {
+   "sym": "p_quad",
+   "meaning": "模的异相正交分量算符，(â − â†)/i√2",
+   "anchor": "9.3-variance-stays",
+   "section": "9.3",
+   "concept": "quadrature-operators"
+  },
+  {
+   "sym": "alpha_coh",
+   "concept": "coherent-amplitude",
+   "meaning": "相干振幅：相干态 |α⟩ 中湮没算符的本征值，α = |α|e^{iφ}",
+   "anchor": "9.3-coherent-example",
+   "section": "9.3"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "section": "9.3"
+  },
+  {
+   "sym": "sigma_gain",
+   "concept": "linear-amplifier-noise",
+   "meaning": "线性放大器的增益系数 σ > 1",
+   "anchor": "9.4-amp-noise",
+   "section": "9.4"
+  },
+  {
+   "sym": "beta_gain",
+   "concept": "degenerate-opo",
+   "meaning": "简并下转换的增益 β：抽运功率和非线性电极化率合在一个常量中，β = β̃e^{i(θ−π/2)}",
+   "unit": "s⁻¹",
+   "anchor": "9.4-eq-9-140",
+   "section": "9.4"
+  },
+  {
+   "sym": "beta_tilde",
+   "concept": "phase-dependent-amplification",
+   "meaning": "简并下转换增益的大小 β̃，即一个正交分量增长而另一个缩小的速率",
+   "unit": "s⁻¹",
+   "anchor": "9.4-phase-gain-def",
+   "section": "9.4"
+  },
+  {
+   "sym": "xi_pdc",
+   "concept": "photon-pair-state",
+   "meaning": "非简并下转换的光子对振幅 ξ = −iβ*t",
+   "anchor": "9.4-pair-limits",
+   "section": "9.4"
+  },
+  {
+   "sym": "r_sq",
+   "concept": "squeezed-interferometry",
+   "meaning": "压缩参数 r：被压缩的正交分量的噪声为 e^{−2r}/2",
+   "anchor": "9.4-interferometry",
+   "section": "9.4"
+  },
+  {
+   "sym": "S_coll",
+   "concept": "spin-squeezing",
+   "meaning": "N 个原子的集体自旋 S = Σ_i S_i，及其分量 S_x、S_y、S_z",
+   "anchor": "9.4-eq-9-207",
+   "section": "9.4"
+  },
+  {
+   "sym": "H_eff",
+   "concept": "opo-heisenberg-langevin",
+   "meaning": "下转换的有效哈密顿量：一个模为 ℏ(βâ² + β*â†²)/2，两个模为 ℏ(βâ₁â₂ + β*â₁†â₂†)",
+   "anchor": "9.4-eq-9-152",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "x_quad",
+   "concept": "quadrature-operators",
+   "meaning": "腔模的正交分量 x̂ = (âe^{iθ/2} + â†e^{−iθ/2})/√2，按抽运相位 θ 加权：被抽运放大的正交分量",
+   "anchor": "9.4-eq-9-162",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "p_quad",
+   "concept": "quadrature-operators",
+   "meaning": "腔模的正交分量 p̂ = (âe^{iθ/2} − â†e^{−iθ/2})/i√2，按抽运相位 θ 加权：被抽运衰减的正交分量",
+   "anchor": "9.4-eq-9-163",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "P_quad",
+   "concept": "quadrature-operators",
+   "meaning": "傅里叶域中场的动量正交分量 P̂，P̂_out 是输出场的动量正交分量；P̂_φ 是零拍探测器在本地振荡器相位 φ 下读出的正交分量",
+   "anchor": "9.4-eq-9-189",
+   "section": "9.4"
+  },
+  {
+   "sym": "kappa",
+   "concept": "cavity-loss-rate",
+   "meaning": "腔损耗率：腔内场能量通过部分透射镜泄漏出去的速率",
+   "unit": "s⁻¹",
+   "anchor": "9.4-damped",
+   "section": "9.4"
+  },
+  {
+   "sym": "F_noise",
+   "concept": "cavity-noise-correlations",
+   "meaning": "腔模的噪声算符：通过反射镜漏入的外部场；𝓕̂_x、𝓕̂_p 是它的正交分量，𝓕̂₁₃ 是原子相干性 σ̂₁₃ 上的噪声",
+   "anchor": "9.4-damped",
+   "section": "9.4"
+  },
+  {
+   "sym": "E_env",
+   "concept": "slowly-varying-envelope",
+   "meaning": "下转换中场 i 的缓变振幅 ℰ_i：抽运 ℰ₀ 和产生场 ℰ₁、ℰ₂",
+   "unit": "V/m",
+   "anchor": "9.4-degenerate",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "E_pm",
+   "type": "electric-field",
+   "meaning": "简并下转换的简正模式 ℰ± = ℰ₁ ± ℰ₁*",
+   "unit": "V/m",
+   "anchor": "9.4-phase-gain-def",
+   "section": "9.4"
+  },
+  {
+   "sym": "E_p",
+   "type": "electric-field",
+   "meaning": "简正模式 ℰ₊ = ℰ₁ + ℰ₁*，以速率 β̃ 被去放大",
+   "unit": "V/m",
+   "anchor": "9.4-drv-phase-dependent-amplification",
+   "section": "9.4"
+  },
+  {
+   "sym": "E_m",
+   "type": "electric-field",
+   "meaning": "简正模式 ℰ₋ = ℰ₁ − ℰ₁*，以速率 β̃ 被放大",
+   "unit": "V/m",
+   "anchor": "9.4-drv-phase-dependent-amplification",
+   "section": "9.4"
+  },
+  {
+   "sym": "E_cav",
+   "type": "electric-field",
+   "meaning": "腔内的经典场 E(t)；E_in 是入射到腔上的场，E_out 是离开腔的场",
+   "unit": "V/m",
+   "anchor": "9.4-eq-9-186",
+   "section": "9.4"
+  },
+  {
+   "sym": "E_hat",
+   "concept": "quantized-electric-field",
+   "meaning": "离开腔的光的场算符 Ê_out",
+   "anchor": "9.4-eq-9-187",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "P_nl",
+   "concept": "macroscopic-polarization",
+   "meaning": "驱动产生场的极化强度：场 ℰ₁ 和 ℰ₂ 的 P₁ 和 P₂，以及腔频率处的 P",
+   "unit": "C/m²",
+   "anchor": "9.4-degenerate",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "chi_2nd",
+   "concept": "second-order-susceptibility",
+   "meaning": "介质的二阶非线性电极化率 χ⁽²⁾",
+   "anchor": "9.4-degenerate",
+   "section": "9.4"
+  },
+  {
+   "sym": "chi",
+   "concept": "susceptibility",
+   "meaning": "介质在场 i 的频率处的线性电极化率 χ_i",
+   "anchor": "9.4-degenerate",
+   "section": "9.4"
+  },
+  {
+   "sym": "Delta_k",
+   "concept": "wavevector-mismatch",
+   "meaning": "抽运与两个产生场的波矢量失配 Δk",
+   "unit": "m⁻¹",
+   "anchor": "9.4-degenerate",
+   "section": "9.4"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "抽运的频率 ν₀，腔的频率 ν_c，以及产生场的频率 ν₁、ν₂",
+   "unit": "rad/s",
+   "anchor": "9.4-degenerate",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "Delta",
+   "type": "frequency",
+   "meaning": "经典抽运相对于级联原子 |1⟩ → |2⟩ 跃迁的失谐 Δ",
+   "unit": "rad/s",
+   "anchor": "9.4-adiabatic",
+   "section": "9.4"
+  },
+  {
+   "sym": "delta",
+   "concept": "detuning",
+   "meaning": "产生场相对于级联原子居间态 |3⟩ 的失谐 δ",
+   "unit": "rad/s",
+   "anchor": "9.4-adiabatic",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "经典抽运在 |1⟩ → |2⟩ 跃迁上的拉比频率 Ω₀",
+   "unit": "rad/s",
+   "anchor": "9.4-adiabatic",
+   "section": "9.4"
+  },
+  {
+   "sym": "g",
+   "concept": "single-photon-rabi-frequency",
+   "meaning": "单光子拉比频率，即原子与场的一个模的耦合",
+   "anchor": "9.4-eq-9-144",
+   "section": "9.4"
+  },
+  {
+   "sym": "mu",
+   "concept": "dipole-matrix-element",
+   "meaning": "级联原子能级 |i⟩ 和 |j⟩ 之间的偶极矩阵元 μ_ij",
+   "unit": "C·m",
+   "anchor": "9.4-eq-9-138",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "rho_31",
+   "concept": "density-matrix-coherences",
+   "meaning": "级联原子的居间态 |3⟩ 与基态 |1⟩ 之间的相干性",
+   "anchor": "9.4-eq-9-138",
+   "section": "9.4"
+  },
+  {
+   "sym": "gamma_13",
+   "concept": "coherence-decay-rate",
+   "meaning": "|1⟩ 与居间态 |3⟩ 之间的相干性 σ̂₁₃ 的衰变率",
+   "unit": "s⁻¹",
+   "anchor": "9.4-eq-9-146",
+   "section": "9.4"
+  },
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "anchor": "9.4-eq-9-144",
+   "section": "9.4"
+  },
+  {
+   "sym": "theta",
+   "type": "phase",
+   "meaning": "抽运的相位 θ，它决定增益的相位，β = β̃e^{i(θ−π/2)}",
+   "unit": "rad",
+   "anchor": "9.4-eq-9-161",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "phi",
+   "type": "phase",
+   "meaning": "本地振荡器的相位 φ，以及干涉仪的一臂所增加的相位 φ = π/2 + δφ",
+   "unit": "rad",
+   "anchor": "9.4-drv-homodyne-difference",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "omega",
+   "type": "frequency",
+   "meaning": "输出场的傅里叶频率，从腔频率量起",
+   "unit": "rad/s",
+   "anchor": "9.4-eq-9-188",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "n_bar",
+   "concept": "mean-thermal-photon-number",
+   "meaning": "热库的一个模中热光子的平均数",
+   "anchor": "9.4-damped",
+   "redefines": true,
+   "section": "9.4"
+  },
+  {
+   "sym": "alpha_coh",
+   "concept": "coherent-amplitude",
+   "meaning": "相干振幅：相干态 |α⟩ 中湮没算符的本征值，α = |α|e^{iφ}",
+   "anchor": "9.4-eq-9-170",
+   "section": "9.4"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "anchor": "9.4-drv-pair-state",
+   "section": "9.4"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "unit": "s",
+   "anchor": "9.4-eq-9-140",
+   "section": "9.4"
+  }
+ ]
+}

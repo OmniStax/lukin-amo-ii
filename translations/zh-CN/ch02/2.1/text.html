@@ -1,0 +1,118 @@
+<section id="opening">
+<p class="cite-target">在导论讲义中，我们回顾了类氢原子较为复杂的能级结构。<span data-concept="selection-rules">选择定则</span>与能量守恒使我们能够挑出一部分跃迁，从而使相关动力学中只涉及少数几个能级。在本讲中，我们将详细讨论最简单的原子-场系统，即只有两个原子能级与外加激光场相互作用的系统。</p>
+</section>
+
+<section id="two-level">
+<h2>2.1.1 二能级原子</h2>
+<p class="cite-target" id="two-level-def">当外场较弱且与单一原子跃迁近共振时，把原子近似为<span data-concept="two-level-atom">二能级系统</span>是成立的。此时只有<span data-ref="lvl-1">基态</span>和<span data-ref="lvl-2">近共振的激发能级</span>才有可观的占据概率。我们把这两个态分别记为<span data-ref="lvl-1">$|1\rangle$</span>和<span data-ref="lvl-2">$|2\rangle$</span>，并把<span data-concept="atomic-transition-frequency" id="transition-frequency">它们的能量差记为$\hbar\komega$</span>。</p>
+<p>我们考虑该系统在近单色经典电磁场照射下的演化</p>
+<div class="equation" id="eq-2-1">$$\kEfield(\mathbf{r}, \kt) = \kEenv(\mathbf{r}, \kt)e^{-i(\knu \kt - \kk\cdot\mathbf{r})} + \kEenv(\mathbf{r}, \kt)^* e^{i(\knu \kt - \kk\cdot\mathbf{r})}, \tag{2.1}$$</div>
+<p id="optical-frequency">其中<span data-concept="slowly-varying-envelope" id="envelope">缓变包络</span>$\kEenv(\mathbf{r}, \kt)$变化的时标远慢于<span data-concept="optical-frequency">光频$\knu \approx \komega$</span>，长度尺度远大于光波长$2\pi/|\kk|$。该电场与原子偶极子相互作用，原子偶极子由算符$\hat{d} = e\kr$给出，它可以方便地用原子本征态和<span data-concept="dipole-matrix-element">偶极矩阵元</span>$\kmu_{a,b} = \langle a|\hat{d}|b\rangle$来表示：</p>
+<div class="equation" id="eq-dipole">$$\begin{aligned} \hat{d} &amp;= \sum_{n,n'} |n'\rangle\langle n|\kmu_{n',n} \\ &amp;= |1\rangle\langle 2|\kmu_{1,2} + |2\rangle\langle 1|\kmu_{2,1}. \end{aligned}$$</div>
+<p>在后一个表达式中，我们把求和截断为只包含两个相关能级，并假设原子本征态<span data-ref="lvl-1">$|1\rangle$</span>和<span data-ref="lvl-2">$|2\rangle$</span>不具有相应的永久电偶极子，即$\langle 1|\hat{d}|1\rangle = \langle 2|\hat{d}|2\rangle = 0$。对于保持旋转对称性的孤立原子系统，情况就是如此。</p>
+<figure class="sim" id="fig-level-scheme" data-figure="2.1" data-original="/media/ch02/fig-2-1.png" data-original-caption="二能级系统的结构。外加经典场的角频率为ν，而原子能级之间相隔的能量为ħω。">
+  <div class="sim-head"><span class="eyebrow">Figure 2.1</span><span>两个能级<span data-ref="lvl-1">$|1\rangle$</span>和<span data-ref="lvl-2">$|2\rangle$</span>相距$\hbar\komega$。频率为$\knu$的外加场到达虚线，虚线位于<span data-ref="lvl-2">$|2\rangle$</span>之下$-\kdelta = \komega - \knu$处，即场相对于该跃迁的<span data-concept="detuning">失谐</span>。</span></div>
+</figure>
+<p>系统的动力学由<span data-concept="two-level-atom">二能级原子</span>与经典场的完整<span data-concept="hamiltonian">哈密顿量</span>支配：</p>
+<div class="equation" id="eq-2-2">$$\kH = \hbar\komega|2\rangle\langle 2| - (|1\rangle\langle 2|\kmu_{1,2} + |2\rangle\langle 1|\kmu_{2,1}) \cdot \left(\kEenv e^{-i\knu \kt} + \kEenv^* e^{i\knu \kt}.\right). \tag{2.2}$$<sup class="fn" data-note="c-eq-2-2"></sup></div>
+<p>为得到含时的原子态，我们在自由<span data-concept="hamiltonian">哈密顿量</span>的本征态基中表示波函数</p>
+<div class="equation" id="eq-2-3">$$|\kpsi\rangle = \kcone(\kt)|1\rangle + \kctwo(\kt)|2\rangle. \tag{2.3}$$</div>
+<p>注意原子本征态与时间无关，因此$|\kpsi\rangle$的全部时间依赖关系都包含在<span data-concept="probability-amplitude">概率幅</span>$\kcone(\kt), \kctwo(\kt)$中。</p>
+<p>由<span data-concept="schrodinger-equation">薛定谔方程</span></p>
+<div class="equation" id="eq-2-4">$$i\hbar\frac{d}{d\kt}|\kpsi\rangle = \kH|\kpsi\rangle, \tag{2.4}$$</div>
+<p>我们得到关于<span data-concept="probability-amplitude">概率幅</span>的耦合微分方程。</p>
+<p>这些<span data-concept="probability-amplitude">概率幅</span>$\kcone(\kt)$和$\kctwo(\kt)$具有随时间快速演化的含时相对相位。通过变换到<span data-concept="rotating-frame" id="rotating-frame">适当的转动参考系</span>，我们可以消去运动方程中显含时间的项。具体地，我们将通过定义<span data-concept="rotating-frame">缓变振幅</span>$\kctildetwo(\kt)$来改写上述方程，</p>
+<div class="equation" id="eq-2-5">$$\kctwo(\kt) = \kctildetwo(\kt)e^{-i\knu \kt}. \tag{2.5}$$</div>
+<figure class="dv" id="drv-rotating-frame-equations"></figure>
+<p id="detuning">这里$\kmu = \kmu_{21}$，且<span data-concept="detuning">$\kdelta = \knu - \komega$</span>。这些方程可以数值求解，但很难解析处理。然而，当我们关心的是时标比<span data-concept="optical-frequency">光频$\knu$</span>长得多的动力学时，这些方程还可以进一步简化。对于光场来说，这几乎总是成立的，此时$\knu \sim \text{THz}$；在其他情形下则必须更加小心。</p>
+<p>我们所关心的动力学发生在与<span data-concept="rabi-frequency" id="rabi-frequency">拉比频率</span>成比例的频率上，</p>
+<div class="equation" id="eq-2-8">$$\kOmega = \kEenv\kmu/\hbar, \tag{2.8}$$</div>
+<p id="rwa">而且直观上不难理解，快速振荡的项平均而言对原子<span data-concept="born-rule">布居</span>几乎没有影响。更定量地说，在下列情形下，我们可以做<span data-concept="rotating-wave-approximation">旋转波近似（RWA）</span>，忽略$\propto e^{\pm 2i\knu \kt}$的项：</p>
+<div class="equation" id="eq-2-9">$$\begin{aligned} &amp;\text{(a) 场接近共振} : \kdelta \ll \knu, \komega \\ &amp;\text{(b) 场很弱} : \kOmega \ll \knu \end{aligned} \tag{2.9}$$</div>
+<p>正如我们前面所指出的，这些要求在实际的实验条件下往往可以满足，但肯定并非总是如此。</p>
+<figure class="dv" id="drv-rwa-equations"></figure>
+<p>这些方程可以严格求解，但考察两种特殊情形的解可以获得许多深入的认识：恰好共振的场，以及与共振远<span data-concept="detuning">失谐</span>的场。</p>
+</section>
+
+<section id="resonant">
+<h2>共振场$\kdelta = 0$</h2>
+<p class="cite-target">运动方程在$\kdelta = 0$时取特别简单的形式，因此概率幅按正弦和余弦演化。对于初始处于<span data-ref="lvl-1">$|1\rangle$态</span>的原子，布居在两个能级之间以频率$\kOmega$振荡。</p>
+<figure class="dv" id="drv-rabi-oscillations"></figure>
+<p id="rabi-oscillations">从物理上讲，概率幅的绝对值对应于<span data-concept="born-rule">两个能级的布居</span>$p_{1,2} = |c_{1,2}|^2$，二者反相振荡。这些“<span data-concept="rabi-oscillations">拉比振荡</span>”对应于辐射的周期性吸收与受激发射。</p>
+<p id="polarization">并非所有感兴趣的量都像原子<span data-concept="born-rule">布居</span>那样变化缓慢。例如，<span data-concept="atomic-polarization">原子的瞬时极化</span>可由偶极矩算符的<span data-concept="expectation-value">期望值</span>得到，</p>
+<div class="equation" id="eq-2-15">$$\langle\hat{d}\rangle = \kcone(\kt)^* \kctwo(\kt)\kmu^* + \kcone(\kt)\kctwo(\kt)^*\kmu. \tag{2.15}$$</div>
+<p><span data-concept="atomic-polarization">极化</span>既随$\kctwo(\kt)$演化的快时标$\knu$变化，也随<span data-concept="born-rule">布居</span>演化的较慢时标$\kOmega$变化。还要注意，$\kOmega$与$\langle\hat{d}\rangle$之间存在相移；当我们研究光在原子介质中的传播时，这将变得很重要。</p>
+<p id="pulse-area">即使外加场振幅$|\kOmega(\kt)|$随时间变化，系统也有简单的解。在这种情形下，概率幅取决于<span data-concept="pulse-area">外加场下的总面积</span>。这可以通过对时间重新归一化$d\ktau = |\kOmega(\kt)|d\kt$或$\ktau = \int|\kOmega|d\kt$看出。</p>
+<figure class="dv" id="drv-pulse-area"></figure>
+<figure class="sim" id="sim-pulse-area">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>场的一个脉冲在共振下驱动从<span data-ref="lvl-1">$|1\rangle$</span>出发的原子。上方的条带是脉冲$|\kOmega(\kt)|$，其<span data-concept="pulse-area">面积</span>随脉冲经过而逐渐填满；下方的条带是<span data-ref="lvl-2">$|\tilde{2}\rangle$</span>的布居$\kptwo = \sin^2\left(\int|\kOmega|d\kt\right)$。改变脉冲的形状及其面积。无论形状如何，$\kptwo$最终停在仅由面积决定的位置：面积为$\pi/2$时一路升到顶，为$\pi/4$时升到一半，为$\pi$时又回落到底。时间以μs为单位，$|\kOmega|$以μs⁻¹为单位；只有它们的乘积即面积，决定$\kptwo$最终停在何处。</span></div>
+</figure>
+</section>
+
+<section id="far-detuned">
+<h2>远失谐场$\knu \gg \kdelta \gg \kOmega$：绝热消除</h2>
+<p class="cite-target" id="adiabatic-elimination">运动方程对任意<span data-concept="detuning">失谐</span>都可以严格求解（只要<span data-concept="rotating-wave-approximation">旋转波近似</span>仍然成立，$\knu \gg \kdelta$）。然而，发展近似技术是有益的，当我们考虑越来越复杂的系统时，这些技术将被证明是不可或缺的。在这里我们将介绍一种称为“<span data-concept="adiabatic-elimination">绝热消除</span>”的技术。</p>
+<p>我们的物理直觉告诉我们，远离共振的场几乎不会引起向<span data-ref="lvl-2">激发态</span>的跃迁，即$|\kcone(\kt)| \approx 1, |\kctwo(\kt)| \ll 1$。在最低阶，我们可以考虑令$\kcone(\kt) = 1$。</p>
+<figure class="dv" id="drv-far-detuned-excitation"></figure>
+<p>我们将会看到，这并不是在这种情形下所能做出的最佳近似，但它确实让我们对$\kctwo(\kt)$的结构有所了解。具体地说，一项是常数，而另一项随（很大的）<span data-concept="detuning">失谐</span>$\kdelta$极快地振荡。在$\kt &gt; 1/\kdelta$的时标上，快速振荡项的影响应当平均为零，因此要理解相关的缓慢演化的动力学，我们只需考虑常数项。</p>
+<p id="adiabatic-follow">上述练习引出了<span data-concept="adiabatic-elimination">绝热消除</span>的概念，在其中我们忽略概率幅$\kctwo(\kt)$中随时间变化的部分，以求得相关的缓变动力学。更准确地说，我们要求解方程$\dot{\kctildetwo} = i\kdelta\kctildetwo + i\kOmega \kcone$，将$\kctildetwo$用$\kcone$表示。由于$i\kdelta\kctildetwo$非常大，$\kctildetwo$中随时间变化的部分将由平均为零的快速振荡主导，因而我们可以令$\dot{\kctildetwo} \approx 0$。这给出解$\kctildetwo$，它按照$\kctildetwo = -(\kOmega/\kdelta)\kcone$<span data-concept="adiabatic-elimination">绝热跟随</span>概率幅$\kcone$。把$\kctwo$的表达式代入<a href="#drv-rwa-equations">式 (2.10)</a><sup class="fn" data-note="c-eq-2-10-cited"></sup>之后，我们得到$\dot{\kcone} = -i(|\kOmega|^2/\kdelta)\kcone$。<sup class="fn" data-note="footnote-1"></sup></p>
+<figure class="dv" id="drv-ac-stark-shift"></figure>
+<p id="light-shift">下态概率幅的演化就好像该态的能量移动了$|\kOmega|^2/\kdelta$，这一效应称为<span data-concept="ac-stark-shift">交流斯塔克偏移或“光致频移”</span>。［注意，由于我们假设了$\kctwo(\kt) \approx 0$，所以无法从这一计算得到上态布居的能量移位；要做到这一点，需要从初始条件$\kctwo(0) = 1, \kcone(0) = 0$出发做类似的计算。］</p>
+<p>远非共振的场对能量（以及本征态）诱导出一个按$|\kOmega|^2/\kdelta^2$标度的修正。因此我们的微扰处理只有在$\kOmega \ll \kdelta$时才成立。这一观察有助于理解<span data-concept="rotating-wave-approximation">旋转波近似</span>成立的第二个要求，因为被忽略的项就像是相对于<span data-concept="atomic-transition-frequency">原子跃迁频率</span><span data-concept="detuning">失谐</span>$\pm 2\knu$的外加场。计入这些项会导致按$|\kOmega|^2/(2\knu)^2$标度的修正，因此要忽略它们，我们要求$|\kOmega| \ll \knu$。</p>
+</section>
+
+<section id="dressed">
+<h2>缀饰态</h2>
+<p class="cite-target" id="dressed-states">刚才所描述的量子动力学，可以在<span data-concept="dressed-states">所谓“缀饰”原子态</span>的基中得到一种优美的诠释。这类态在涉及光与复杂系统相互作用的情形中尤为重要，在那里已经没有简单的解可用。</p>
+<p><span data-concept="rotating-frame">缓变振幅</span>的运动方程（<a href="#drv-rwa-equations">2.10</a>，<a href="#drv-rwa-equations">2.11</a>）可以看作由<span data-concept="rotating-frame-hamiltonian">有效哈密顿量</span>得出</p>
+<div class="equation" id="eq-2-23">$$\kHtilde = -\hbar\kdelta|\tilde{2}\rangle\langle\tilde{2}| - \hbar(\kOmega|\tilde{2}\rangle\langle 1| + \kOmega^*|1\rangle\langle\tilde{2}|), \tag{2.23}$$</div>
+<p id="bare-states">它不显含时间。这对应于做了<span data-concept="rotating-wave-approximation">旋转波近似</span>之后、写在<span data-concept="rotating-frame">转动参考系</span>中的原始<span data-concept="hamiltonian">哈密顿量</span>。这个<span data-concept="rotating-frame-hamiltonian">哈密顿量</span>可以很容易地对角化。本征矢量<span data-ref="dressed-plus dressed-minus">$|\pm\rangle$</span>是<span data-concept="bare-states">裸原子态</span><span data-ref="lvl-1 lvl-2">$|1, 2\rangle$</span>的混合，称为<span data-concept="dressed-states">缀饰态</span>；相应的本征能量为</p>
+<div class="equation" id="eq-2-24">$$\kepspm = \hbar\left(-\frac{\kdelta}{2} \mp \sqrt{(\frac{\kdelta}{2})^2 + |\kOmega|^2}\right). \tag{2.24}$$</div>
+<p>在共振场$\kdelta = 0$中，<span data-concept="dressed-states">缀饰态</span>是<span data-concept="bare-states">裸原子态</span>的对称组合和反对称组合，<span data-ref="dressed-plus dressed-minus">$|\pm\rangle$</span>$= (|\tilde{1}\rangle \pm |\tilde{2}\rangle)/\sqrt{2}$，其中<span data-ref="lvl-1">$|\tilde{1}\rangle$</span>$= (|\kOmega|/\kOmega)\,|1\rangle$。它们的能量间隔是<span data-concept="rabi-frequency">拉比频率</span>的两倍，$2|\kOmega|$。共振时的量子动力学可以很容易地借助<span data-concept="dressed-states">缀饰态</span>图像来理解。具体地说，<span data-ref="lvl-1">态$|1\rangle$</span>是分裂态<span data-ref="dressed-plus dressed-minus">$|\pm\rangle$</span>的对称叠加。随着系统随时间演化，<span data-ref="dressed-plus dressed-minus">$|\pm\rangle$</span>的相位向相反的方向转动，经过时间$\kt = \pi/2\kOmega$之后，系统处于态<span data-ref="dressed-plus dressed-minus">$|\pm\rangle$</span>的反对称叠加，这恰好对应于<span data-concept="bare-states">裸态</span><span data-ref="lvl-2">$|\tilde{2}\rangle$</span>。</p>
+<p>远非共振的场$\kdelta \gg \kOmega$所导致的<span data-concept="dressed-states">缀饰态</span>，与原来的原子态非常相似，只混入了另一个态的少量成分。能量与本征态</p>
+<div class="equation" id="eq-2-25">$$\kepsm = \frac{|\kOmega|^2}{\kdelta} \qquad |-\rangle = |1\rangle - \frac{\kOmega}{\kdelta}|\tilde{2}\rangle \tag{2.25}$$<sup class="fn" data-note="c-eq-2-25"></sup></div>
+<div class="equation" id="eq-2-26">$$\kepsp = -\kdelta - \frac{|\kOmega|^2}{\kdelta} \qquad |+\rangle = |\tilde{2}\rangle + \frac{\kOmega^*}{\kdelta}|1\rangle \tag{2.26}$$</div>
+<p>也接近于裸能量和本征态。</p>
+<figure class="dv" id="drv-dressed-states"></figure>
+<figure class="sim" id="sim-dressed" data-figure="2.2" data-original="/media/ch02/fig-2-2.png" data-original-caption="(a) 变换到转动参考系的示意图。在没有外加场时，两个原子能级之间相隔原子跃迁频率ω。施加频率为ν的经典场后，我们变换到以频率ν转动的参考系，其中态|2̃⟩的能量为−δ = ω − ν。在旋转波近似下，这两个态|1⟩和|2̃⟩由一个静态混合项Ω耦合。(b) 缀饰态能级（红色）以失谐的函数形式给出。作为参照，裸态能级（虚线，蓝色）也一并给出。裸态是没有外加场（Ω = 0）时系统的本征态。">
+  <div class="sim-head"><span class="eyebrow">Figure 2.2</span><sup class="fn" data-note="c-fig-2-2b"></sup><span>在<span data-concept="rotating-frame">转动参考系</span>中，<span data-ref="lvl-1">$|1\rangle$</span>位于零点，<span data-ref="lvl-2">$|\tilde{2}\rangle$</span>位于$-\kdelta$：这就是<span data-concept="bare-states">裸态</span>，用虚线表示。图线给出<span data-concept="dressed-states">缀饰态</span><span data-ref="dressed-plus">$|+\rangle$</span>和<span data-ref="dressed-minus">$|-\rangle$</span>的能量$\kepspm$随<span data-concept="detuning">失谐</span>的变化：在裸态线本应交叉之处，缀饰态相互排斥，保持相距$2|\kOmega|$。图旁是所选$\kdelta$下的各能级，每个缀饰能级按其所含<span data-ref="lvl-1">$|1\rangle$</span>和<span data-ref="lvl-2">$|\tilde{2}\rangle$</span>的比例划分。将$\kdelta$拖过共振点，可以看到缀饰态互换特征；把$|\kOmega|$设为零，它们就落到裸态上。频率以μs⁻¹为单位；只有$\kdelta$与$|\kOmega|$之比决定图像的形状。</span></div>
+</figure>
+</section>
+
+<section id="bloch">
+<h2>布洛赫球绘景</h2>
+<p class="cite-target" id="bloch-sphere">到目前为止，我们一直用两个复数$\kcone$和$\kctwo$来表示<span data-concept="two-level-atom">二能级原子</span>，它们满足$|\kcone|^2 + |\kctwo|^2 = 1$。或者，<span data-concept="two-level-atom">二能级系统</span>的态可以表示为<span data-concept="bloch-sphere">单位球面上的一个矢量</span>（见<a href="#sim-bloch">图 2.3</a>）。指向正$\hat{z}$方向的矢量与<span data-ref="lvl-2">态$|2\rangle$</span>对应，而指向负$\hat{z}$方向的矢量则表示<span data-ref="lvl-1">态$|1\rangle$</span>。$\hat{x} - \hat{y}$平面内的矢量是叠加态$\left(|1\rangle + e^{i\phi}|2\rangle\right)/\sqrt{2}$。在<span data-concept="bloch-sphere">布洛赫球绘景</span>中，<span data-concept="rotating-frame">转动参考系</span>有一种特别漂亮的诠释：我们从一个绕$\hat{z}$轴以<span data-concept="optical-frequency">光频$\knu$</span>转动的参考系来看这个矢量。</p>
+<figure class="sim" id="sim-bloch" data-figure="2.3" data-original="/media/ch02/fig-2-3.png" data-original-caption="(a) 二能级系统的任意态都可以表示为单位球面上的矢量。这里我们是在转动参考系中工作。(b) 没有外场时，系统以两个态之间（在转动参考系中）的能量差进动。c) 在存在共振外加场时，态绕x-y平面内的一条轴进动，该轴的方位角由外加场的相位决定。">
+  <div class="sim-head"><span class="eyebrow">Figure 2.3</span><span>原子的态是单位球面上的矢量$\kStilde$，<span data-ref="lvl-2">$|\tilde{2}\rangle$</span>在顶部，<span data-ref="lvl-1">$|1\rangle$</span>在底部，这是在<span data-concept="rotating-frame">转动参考系</span>中看到的。它绕驱动矢量$\kOmegavec$进动，其$x$和$y$分量来自场，$z$分量为$-\kdelta$，下方的条带记录<span data-ref="lvl-2">$|\tilde{2}\rangle$</span>的布居$\kptwo$。共振时驱动位于赤道上，态从一极摆到另一极。使场<span data-concept="detuning">失谐</span>，转轴就会倾斜：态扫过的圆变小、变快，$\kptwo$不再达到一。当$|\kOmega| = 0$且以叠加态为起点时，态绕$z$轴以$\kdelta$转圈。拖动球体可使其转动。频率以μs⁻¹为单位，时间以μs为单位。</span></div>
+</figure>
+<p id="precession">把这个矢量解释为磁偶极子，系统的动力学可以看作是<span data-concept="bloch-precession">绕有效磁场的进动</span>所产生的结果。具体地，设$\kOmega = 0$。在裸参考系中，矢量绕$\hat{z}$轴以频率$\komega$进动。把一个“自旋”$\{\kcone, \kctwo\}$与相应的自旋算符等同起来，</p>
+<div class="equation" id="eq-2-27">$$\hat{S}_z = |2\rangle\langle 2| - |1\rangle\langle 1| \tag{2.27}$$</div>
+<div class="equation" id="eq-2-28">$$\hat{S}_x = |1\rangle\langle 2| + |2\rangle\langle 1| \tag{2.28}$$</div>
+<div class="equation" id="eq-2-29">$$\hat{S}_y = -i|2\rangle\langle 1| + i|1\rangle\langle 2|, \tag{2.29}$$</div>
+<p>我们可以把<span data-concept="hamiltonian">哈密顿量</span>改写为一个有效磁场：</p>
+<div class="equation" id="eq-2-30">$$\kH = \hbar\komega|2\rangle\langle 2| \rightarrow \frac{\hbar\komega}{2}\left(1 + \hat{S}_z\right). \tag{2.30}$$</div>
+<p>变换到<span data-concept="rotating-frame">转动参考系</span>，</p>
+<div class="equation" id="eq-2-31">$$\kH = -\hbar\kdelta|\tilde{2}\rangle\langle\tilde{2}| \rightarrow -\frac{\hbar\kdelta}{2}\left(\hat{S}_z + 1\right). \tag{2.31}$$</div>
+<p>我们也可以把外加场$\kOmega$理解为一个有效磁场。具体地，<a href="#eq-2-23">式 (2.23)</a>的<span data-concept="rotating-frame-hamiltonian">有效哈密顿量</span>变为</p>
+<div class="equation" id="eq-2-32">$$\kH = -\frac{\hbar\kdelta}{2}\left(\hat{S}_z + 1\right) - \hbar\left(\mathrm{Re}\,\kOmega\right)\hat{\tilde{S}}_x - \hbar\left(\mathrm{Im}\,\kOmega^*\right)\hat{\tilde{S}}_y, \tag{2.32}$$</div>
+<p id="bloch-invitation">其中$\hat{\tilde{S}}_{x,y}$是自旋在<span data-concept="rotating-frame">转动参考系</span>中的$\hat{x}, \hat{y}$分量。<a href="#eq-2-32">式 (2.32)</a>中的常数项可以忽略，因为它只给系统贡献一个整体相位。于是在<span data-concept="heisenberg-picture">海森伯绘景</span>中，作为一个有益的练习，可以证明<a href="#eq-2-32">式 (2.32)</a>的<span data-concept="hamiltonian">哈密顿量</span>导致如下运动方程</p>
+<div class="equation" id="eq-2-33">$$\frac{d}{d\kt}\kStilde = \kOmegavec(\kt) \times \kStilde, \tag{2.33}$$</div>
+<p id="bloch-vector">其中矢量$\kStilde = \left\{\tilde{S}_x, \tilde{S}_y, \tilde{S}_z\right\}$，$\kOmegavec(\kt) = \{-2\,\mathrm{Re}\,\kOmega(\kt), -2\,\mathrm{Im}\,\kOmega^*(\kt), -\kdelta\}$。<a href="#eq-2-33">式 (2.33)</a>类似于磁偶极子在磁场中的运动方程，并给出了<span data-concept="two-level-atom">二能级系统</span>动力学的一种漂亮的可视化，如<a href="#sim-bloch">图 2.3</a>所示。即使在二能级动力学中包含<span data-concept="spontaneous-emission">自发发射</span>和退相位之类的过程，这种<span data-concept="bloch-sphere">布洛赫绘景</span>仍然方便。</p>
+<div class="exercises" data-place="bloch-vector"></div>
+</section>
+
+<section id="multistate">
+<h2>向多态系统的推广</h2>
+<p class="cite-target">处理<span data-concept="two-level-atom">二能级原子</span>的技术同样适用于多态系统，其中每个原子跃迁在共振附近至多有一个缓变场。为说明如何把二能级计算推广到多个能级，我们考虑一个具有单一基态$|1\rangle$和许多激发态$|k\rangle$的原子。每个激发态与$|1\rangle$之间由一个振幅为$\kEenv_k$、频率为$\knuk$的场耦合，而第$k$个跃迁的偶极矩阵元为$\hat{d}_{k,1} = \kmu_k|k\rangle\langle 1| + \kmu_k^*|1\rangle\langle k|$。偶极子与场之间的相互作用有四项，应用<span data-concept="rotating-wave-approximation">旋转波近似</span>将其截断为两项，从而得到<span data-concept="hamiltonian">哈密顿量</span></p>
+<div class="equation" id="eq-2-34">$$\kH_{RWA} = \sum_k \hbar\komegak|k\rangle\langle k| - \hbar\sum_k\left(\kOmegak e^{-i\knuk \kt}|k\rangle\langle 1| + \kOmegak^* e^{i\knuk \kt}|1\rangle\langle k|\right) \tag{2.34}$$</div>
+<p>其中$\komegak$是第$k$个跃迁的能量，$\kOmegak = \kEenv_k\kmu_k/\hbar$。</p>
+<p id="multilevel">尽管每个激发态的快速相位演化各不相同，我们仍然可以通过<span data-concept="multilevel-rotating-frame">做一个幺正变换</span>，从<span data-concept="hamiltonian">哈密顿量</span>中去掉显含的时间依赖，由算符表示</p>
+<div class="equation" id="eq-2-35">$$\hat{U} = e^{-i\sum_k \knuk \kt|k\rangle\langle k|}. \tag{2.35}$$</div>
+<p>态矢量$|\kpsi\rangle$在由$\hat{U}|\tilde{\psi}\rangle = |\kpsi\rangle$定义的新基中表示。由于$\hat{U}(\kt)$依赖于时间，当我们变换到这个新基时，它会在<span data-concept="hamiltonian">哈密顿量</span>中引入新项。</p>
+<figure class="dv" id="drv-multilevel-rotating-frame"></figure>
+<p>通过应用<span data-concept="rotating-wave-approximation">旋转波近似</span>并<span data-concept="multilevel-rotating-frame">变换到每个原子态以相应光频转动的参考系</span>，我们找到了一个使<span data-concept="hamiltonian">哈密顿量</span>与时间无关的基。同样的方法适用于具有许多基态和许多激发态的多能级系统，只要没有任何一个原子跃迁与多于一个外加场相联系。在后面的计算中，我们通常会在<span data-concept="rotating-frame">转动参考系</span>中工作，因此为记号方便起见，可以去掉波浪号。</p>
+<p>当两个场都与同一个跃迁近共振时，这些技术就失效了。如果我们变换到以第一个场的频率转动的参考系，<span data-concept="hamiltonian">哈密顿量</span>仍将保留一个与第二个场相关的时间依赖。例如，假设前面考虑过的<span data-concept="two-level-atom">二能级系统</span>现在受到两个外加场的作用，其<span data-concept="rabi-frequency">拉比频率</span>为$\kOmega_a$和$\kOmega_b$，光频为$\knu_a$和$\knu_b$。运动方程（在<span data-concept="rotating-wave-approximation">旋转波近似</span>和<span data-concept="rotating-frame">转动参考系</span>中）现在包含一个以<span data-concept="floquet-basis">拍频</span>$\kDelta = \knu_a - \knu_b$振荡的项：</p>
+<div class="equation" id="eq-2-40">$$i\hbar\dot{\kctildetwo}(\kt) = -\hbar\kdelta\kctildetwo(\kt) - \hbar\left(\kOmega_a + \kOmega_b e^{i\kDelta \kt}\right)\kcone(\kt) \tag{2.40}$$</div>
+<div class="equation" id="eq-2-41">$$i\hbar\dot{\kcone}(\kt) = -\hbar\left(\kOmega_a^* + \kOmega_b^* e^{-i\kDelta \kt}\right)\kctildetwo(\kt). \tag{2.41}$$</div>
+<p id="floquet">求解这些方程需要把<span data-concept="probability-amplitude">概率幅</span>展开为傅里叶级数$c_i = \sum_n c_i^{(n)}e^{in\kDelta \kt}$，这也称为“<span data-concept="floquet-basis">弗洛凯基</span>”。不同的傅里叶分量彼此全部耦合，因此<span data-concept="probability-amplitude">概率幅</span>随<span data-concept="floquet-basis">拍频</span>及其所有高次谐波演化。这个简单的例子说明了非线性光学背后的一种机制。</p>
+</section>

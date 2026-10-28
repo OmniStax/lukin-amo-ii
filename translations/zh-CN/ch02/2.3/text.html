@@ -1,0 +1,103 @@
+<section id="opening">
+<p class="cite-target" id="spontaneous">到目前为止，我们考虑的原子吸收和发射过程都是由经典场的存在所激发的。然而，实际经验告诉我们，即使没有任何外加场，真实的原子也会从激发态衰变。这类<span data-concept="spontaneous-emission">自发发射</span>过程源于原子与场的真空<span data-concept="cavity-modes">模</span>的相互作用；要描述它们，需要对电磁场做量子力学处理。</p>
+</section>
+
+<section id="quantization">
+<h2>2.3.1 量子化</h2>
+<p class="cite-target">我们将采用一种量子化步骤（例如参照迈斯特和萨金特的“Elements of Quantum Optics”），它从自由场的麦克斯韦方程组出发，即在没有任何源的情形下。对于自由场，麦克斯韦方程组可以化为电场和磁场的波动方程。由于波动方程描述谐振子的经典演化，我们将以与谐振子量子化完全类似的方式对电场进行量子化。具体来说，电场满足波动方程</p>
+<div class="equation" id="eq-2-55">$$\nabla^2\kEfield = \frac{1}{c^2}\frac{\partial^2\kEfield}{\partial^2 \kt}, \tag{2.55}$$<sup class="fn" data-note="c-eq-2-55"></sup></div>
+<p>而相伴的磁场可以由下式求得</p>
+<div class="equation" id="eq-2-56">$$\nabla\times\kB = \frac{1}{c^2}\frac{\partial\kEfield}{\partial \kt}. \tag{2.56}$$</div>
+<p>注意，这些公式以及后面的公式都是用国际单位制写的。</p>
+<p id="eigenmodes">我们的方法考虑一个包含在长度为$L$、体积为$\kV$的大腔中的场，并带有周期边界条件。<span data-concept="cavity-modes">这样一个系统的本征模是行波</span>$\propto e^{i\kk\cdot\mathbf{r}}$，其允许的波矢量为</p>
+<div class="equation" id="eq-2-57">$$k_{\alpha,j}L_\alpha = 2\pi j_\alpha \text{ where } \alpha = \{x, y, z\} \text{ and } j_\alpha = \{\ldots, -2, -1, 1, 2, \ldots\}. \tag{2.57}$$</div>
+<p id="polarizations">每个$\kk$矢量可以有两个可能的<span data-concept="cavity-modes">模</span>，对应于<span data-concept="light-polarization">与$\kk$正交的两个偏振</span>。为了记号方便，我们假定$\kk_j$带有一个下标$j$，它同时包含波的<span data-concept="cavity-modes">模数</span>和<span data-concept="light-polarization">偏振</span>。注意，可以按任意完备的模函数集进行展开。例如，边界处电场为零的大腔将支持正弦<span data-concept="cavity-modes">模</span>；而研究激光束的传播时，厄米-高斯模可能更合适。</p>
+<p id="mode-expansion"><span data-concept="field-mode-expansion">任意激发都可以按这些<span data-concept="cavity-modes">空间模</span>展开</span>。对于<span data-concept="cavity-modes">行波模</span>，沿$\hat{z}$轴传播的$\hat{x}-$偏振场可以写成</p>
+<div class="equation" id="eq-2-58">$$E_x(z,\kt) = \sum_j \underbrace{\sqrt{\frac{\knu_i^2}{\epsilon_0 \kV}}}_{A_j} \kqj_j(\kt)e^{ik_jz}, \tag{2.58}$$<sup class="fn" data-note="c-eq-2-58"></sup></div>
+<p>其中时间依赖关系包含在$\kqj_j(\kt)$中，而$A_j$的选取使得$\kqj_j$对应于谐振子的位置坐标。相伴的磁场为</p>
+<div class="equation" id="eq-2-59">$$B_y = \frac{1}{c^2}\sum_j \frac{\dot{\kqj}_j(\kt)}{k_j}A_je^{ik_jz}. \tag{2.59}$$</div>
+<p>如果我们改为按驻波展开，那么对应于$\kk||\hat{\mathbf{z}}$的$\hat{x}$偏振场的电场和磁场可以写成</p>
+<div class="equation" id="eq-2-60">$$E_x(z,\kt) = \sum_j \underbrace{\sqrt{\frac{2\knu_j^2}{\epsilon_0 \kV}}}_{\mathcal{A}_j} \kqj_j\sin k_jz \tag{2.60}$$</div>
+<div class="equation" id="eq-2-61">$$B_y(z,\kt) = \frac{1}{c^2}\sum_j \frac{\dot{\kqj}_j}{k_j}\mathcal{A}_j\cos k_jz. \tag{2.61}$$</div>
+<p>注意，模函数的归一化会带来一个略有不同的比例因子$\mathcal{A}_j \neq A_j$。</p>
+<p id="field-energy"><span data-concept="field-hamiltonian">量子力学哈密顿量对应于腔内的经典能量</span>，</p>
+<div class="equation" id="eq-2-62">$$H = \frac{1}{2}\int dV\left(\epsilon_0E^2 + \frac{1}{\mu_0}B^2\right) \tag{2.62}$$</div>
+<div class="equation" id="eq-2-63">$$= \sum_j \frac{\knu_j^2\kqj_j^2}{2} + \frac{\dot{\kqj}_j^2}{2}. \tag{2.63}$$</div>
+<p id="quadratures">不存在交叉乘积项$\kqj_j\dot{\kqj}_j$，因为我们是在适当的本征基中展开的；我们对$A_j$的归一化选择给出一个类似于一组位置为$\kqj_j$、频率为$\knu_j$、质量为单位质量的谐振子的<span data-concept="field-hamiltonian">哈密顿量</span>。因此，量子化步骤与熟悉的谐振子量子化完全相同，其中<span data-concept="field-quadratures">我们把$\kqj_j$和$\dot{\kqj}_j$看作不<span data-concept="commutator">对易</span>的算符</span>：</p>
+<div class="equation" id="eq-2-64">$$\kqj_j \to \hat{\kqj}_j \quad \dot{\kqj}_j \to \hat{\kpj}_j \tag{2.64}$$</div>
+<div class="equation" id="eq-2-65">$$[\hat{\kqj}_j, \hat{\kpj}_{j'}] = i\hbar\delta_{j,j'}. \tag{2.65}$$</div>
+<p id="ladder-operators">我们还可以为每个<span data-concept="cavity-modes">模和偏振$j$</span>的激发定义<span data-concept="creation-annihilation-operators">产生算符和湮没算符</span>，</p>
+<div class="equation" id="eq-2-66">$$\hat{a}_j = \frac{1}{\sqrt{2\hbar\knu_j}}\left(\knu_j\hat{\kqj}_j + i\hat{\kpj}_j\right) \qquad \hat{\kqj}_j = \sqrt{\frac{\hbar}{2\knu_j}}\left(\hat{a}_j + \hat{a}_j^\dagger\right) \tag{2.66}$$</div>
+<div class="equation" id="eq-2-67">$$\hat{a}_j^\dagger = \frac{1}{\sqrt{2\hbar\knu_j}}\left(\knu_j\hat{\kqj}_j - i\hat{\kpj}_j\right) \qquad \hat{\kpj}_j = -i\sqrt{\frac{\hbar\knu_j}{2}}\left(\hat{a}_j - \hat{a}_j^\dagger\right). \tag{2.67}$$</div>
+<p>由此，<span data-concept="field-hamiltonian">哈密顿量</span>可以写成简单得多的形式。</p>
+<figure class="dv" id="drv-field-hamiltonian-ladder"></figure>
+<p id="field-operator">在后面的计算中，我们需要用<span data-concept="creation-annihilation-operators">产生算符和湮没算符</span>来表示其他算符。例如，<span data-concept="quantized-electric-field">偏振矢量为$\epsilon_\alpha$的电场可以按行波激发展开</span><sup class="fn" data-note="footnote-3"></sup>为</p>
+<div class="equation" id="eq-2-70">$$\hat{E_\alpha} = \epsilon_\alpha\sum_j \underbrace{A_j\sqrt{\frac{\hbar}{\knu_j}}}_{\kEbar_j}\frac{\left(\hat{a}_je^{i\kk_j\cdot\mathbf{r}} + \hat{a}_j^\dagger e^{-i\kk_j\cdot\mathbf{r}}\right)}{\sqrt{2}}. \tag{2.70}$$</div>
+<p id="one-photon-field">这些计算得出了一个重要的量：<span data-concept="single-photon-field">$\kEbar_j$是与频率为$\knu_j$的单光子相关联的电场</span>。</p>
+<div class="equation" id="eq-2-71">$$\kEbar_j = \sqrt{\frac{\hbar\knu_j}{\epsilon_0 \kV}} \tag{2.71}$$</div>
+<p id="pos-neg">是任何依赖原子与真空场相互作用的现象的优值——例如腔量子电动力学。事实上，令一个光子的量子力学能量$\hbar\knu_j$等于它的经典能量$(1/2)\int dV(\epsilon_0E^2 + B^2/\mu_0) \approx \epsilon_0E^2\kV$，就可以估计$\kEbar_j$。把电场分成<span data-concept="quantized-electric-field">正频分量和负频分量</span>也很方便，</p>
+<div class="equation" id="eq-2-72">$$\kEhat_\alpha = \kEplus_\alpha + \kEplus_\alpha^\dagger \tag{2.72}$$</div>
+<div class="equation" id="eq-2-73">$$\kEplus_\alpha = \epsilon_\alpha\sum_j\sqrt{\frac{\hbar\knu_j}{2\epsilon_0\kV}}\hat{a}_je^{i\kk_j\cdot\mathbf{r}}. \tag{2.73}$$</div>
+</section>
+
+<section id="atom-field-block">
+<h2>2.3.2 原子与量子化场的相互作用</h2>
+<p class="cite-target" id="atom-field">原子与量子化场之间的相互作用，看上去与半经典相互作用大致相同。从<span data-concept="two-level-atom">二能级原子</span>的<span data-concept="dipole-interaction">偶极哈密顿量</span>出发，<span data-concept="atom-field-interaction">我们把$E$替换为相应的算符</span>。</p>
+<p>与半经典分析中一样，<span data-concept="atom-field-interaction">哈密顿量</span>包含四项，现在它们有了更清晰的物理图像：</p>
+<ul>
+<li>$\hat{a}^\dagger|1\rangle\langle 2| \Rightarrow$原子从$|2\rangle$衰变到$|1\rangle$并发射一个光子</li>
+<li>$\hat{a}|2\rangle\langle 1| \Rightarrow$原子从$|1\rangle$被激发到$|2\rangle$并吸收一个光子</li>
+<li>$\hat{a}^\dagger|2\rangle\langle 1| \Rightarrow$原子从$|1\rangle$被激发到$|2\rangle$并发射一个光子</li>
+<li>$\hat{a}|1\rangle\langle 2| \Rightarrow$原子从$|2\rangle$衰变到$|1\rangle$并吸收一个光子</li>
+</ul>
+<p id="rwa-terms">对于接近原子跃迁共振的光子，前两个过程能量守恒；后两个过程能量不守恒，直觉表明可以忽略它们。事实上，<span data-concept="rotating-wave-approximation">旋转波近似</span>与能量守恒之间存在直接的对应关系：后两个过程恰好就是我们先前略去的那些快速转动项。为了阐明这一类比，考虑<span data-concept="creation-annihilation-operators">湮没算符</span>$\dot{\hat{a}}_j = -i[\hat{a}_j, \kH]/\hbar = -i\knu_j\hat{a}_j \Rightarrow \hat{a}(\kt) = \hat{a}(0)e^{-i\knu_j\kt}$的时间依赖关系。因此，<span data-concept="creation-annihilation-operators">湮没算符</span>被等同于半经典分析中的项$\kOmega e^{-i\knu \kt}$。于是，在<span data-concept="rotating-wave-approximation">旋转波近似</span>成立的同样条件下，我们可以忽略后两项。</p>
+<p id="coupling">接下来求出<span data-concept="single-photon-rabi-frequency">耦合常数</span>（用<span data-concept="dipole-matrix-element">原子偶极矩</span>$\kmu_\alpha$表示，对于电场<span data-concept="light-polarization">偏振</span>$\alpha$）。</p>
+<figure class="dv" id="drv-atom-field-coupling"></figure>
+<p id="single-photon-rabi">常数$\kg_{j,\alpha}$被称为“<span data-concept="single-photon-rabi-frequency">单光子拉比频率</span>”，因为它对应于原子<span data-concept="spontaneous-emission">自发发射</span>并重新吸收一个频率为$\knu_j$的共振单光子的频率。一个有趣的情形出现在被限制于腔的驻波<span data-concept="cavity-modes">模</span>中的光子上。此时<span data-concept="single-photon-rabi-frequency">单光子拉比频率</span>具有空间依赖关系$\sin\kk_j\cdot\mathbf{r}$，所以原子-场<span data-concept="single-photon-rabi-frequency">耦合常数</span>取决于原子在腔中的位置。</p>
+</section>
+
+<section id="remarks">
+<h2>2.3.3 关于量子化的说明</h2>
+<p class="cite-target" id="transverse">上面详述的量子化步骤和由此得到的相互作用看上去可能相当普遍，但实际上我们在一开始就作了一个重要假设，它将限制它们的适用范围：我们只考虑了没有源的情形，因此<span data-concept="transverse-fields-and-gauge">我们隐含地只处理了横场</span>，其中$\nabla\cdot E = 0$。<span data-concept="transverse-fields-and-gauge">纵场</span>由电荷分布$\rho$产生，有$E_L = -\nabla\phi$和$\nabla^2\phi = 4\pi\rho$<sup class="fn" data-note="c-poisson"></sup>，并且它们不满足波动方程。有关这一主题的更多信息，参见例如科恩-塔诺季<em>等</em>，”Atom-Photon Interactions”。</p>
+<p>然而，只考虑<span data-concept="transverse-fields-and-gauge">横场</span>，我们便进一步避开了<span data-concept="transverse-fields-and-gauge">规范</span>问题。由于<span data-concept="transverse-fields-and-gauge">横电场</span>$E_T$满足波动方程，我们可以直接对其量子化，而无需中途借助矢势$A$。此外，从<span data-concept="dipole-interaction">偶极相互作用哈密顿量</span>$\kEhat\cdot\hat{d}$出发，我们从未需要$A$，因而从未遇到<span data-concept="transverse-fields-and-gauge">规范</span>的选择。事实上，这一步骤可以看作对应于一种隐含的<span data-concept="transverse-fields-and-gauge">规范</span>选择$\phi = 0$，$\nabla\cdot A = 0$，在我们最初只处理<span data-concept="transverse-fields-and-gauge">横场</span>的决定中。</p>
+<p id="canonical">更一般的方法可以使用电磁场中质量为$\km$、电荷为$q$的粒子的<span data-concept="transverse-fields-and-gauge">正则哈密顿量</span>。在这种方法中，粒子动量$\kp$被替换为<span data-concept="transverse-fields-and-gauge">正则动量</span>$\kp - q\hat{A}/c$<sup class="fn" data-note="c-canonical"></sup>，因此哈密顿量含有类似$(\kp - qA/c)^2/2\km$的项。对于适当的<span data-concept="transverse-fields-and-gauge">规范</span>选择，$\kp\cdot\hat{A}$项蕴含<span data-concept="dipole-interaction">偶极相互作用</span>$\kEhat\cdot\hat{d}$。有关这一主题的更多信息，可以参见例如斯库利和祖拜里的“Quantum Optics.”</p>
+</section>
+
+<section id="wigner-weisskopf-block">
+<h2>2.3.4 自发发射的维格纳-韦斯科普夫理论</h2>
+<p class="cite-target">有了处理量子化辐射<span data-concept="cavity-modes">模</span>的形式体系，我们现在来计算原子<span data-concept="spontaneous-emission">自发弛豫到能量较低的态并同时发射一个光子</span>的速率。事实上，我们将发现这个问题可以归结为我们已经知道如何处理的问题：<span data-concept="bound-continuum-transition">束缚态到连续谱的跃迁</span>。</p>
+<p id="ww-states">设<span data-concept="two-level-atom">二能级原子</span>起始于其激发态$|2\rangle$，而与之相互作用的辐射场起始于真空态$\hat{a}_j|n_j = 0\rangle = 0$。注意，初始为真空态的假设并不总是成立，但对光学频率是一个很好的近似。通过与量子化电磁场的相互作用，原子可以跃迁到其基态$|1\rangle$，同时发射一个频率为$\knuk$的光子，因此场最终处于态$|1_k\rangle$。我们只需考虑形如$|1\rangle|1_k\rangle = |1, 1_k\rangle$的末态，因此可以将完整的<span data-concept="wigner-weisskopf">哈密顿量</span></p>
+<div class="equation" id="eq-2-78">$$\kH = \hbar\komega|2\rangle\langle 2| + \sum_j\hbar\knu_j\left(\hat{a}_j^\dagger\hat{a}_j + \frac{1}{2}\right) - \sum_j\left(\hbar \kg_j|2\rangle\langle 1|\hat{a}_j + \hbar \kg_j^*|1\rangle\langle 2|\hat{a}_j^\dagger\right) \tag{2.78}$$</div>
+<p>投影到相关态$|2, 0\rangle$和$|1, 1_k\rangle$上，得到<span data-concept="wigner-weisskopf">有效哈密顿量</span></p>
+<div class="equation" id="eq-2-79">$$\begin{aligned} \kH = {} & \hbar\komega|2,0\rangle\langle 2,0| + \textstyle\sum_k\hbar\knuk|1,1_k\rangle\langle 1,1_k| \\ & - \textstyle\sum_k\left(\hbar \kg_k|2,0\rangle\langle 1,1_k| + \hbar \kg_k^*|1,1_k\rangle\langle 2,0|\right). \end{aligned} \tag{2.79}$$</div>
+<p>从数学上讲，这个<span data-concept="wigner-weisskopf">有效哈密顿量</span>是通过取<span data-concept="wigner-weisskopf">哈密顿量</span>在相关态之间的矩阵元得到的。</p>
+<p id="ww-continuum">在光子频率间隔很小的极限下，<span data-concept="wigner-weisskopf">有效哈密顿量恰好对应于离散态$|2, 0\rangle$与$|1, 1_k\rangle$<span data-concept="bound-continuum-transition">态的连续谱</span>之间的<span data-concept="bound-continuum-transition">束缚态到连续谱的跃迁</span></span>。我们已经推出了这些结果：</p>
+<p id="lamb">(1) 存在<span data-concept="lamb-shift">能级的移位</span>。在原子-场相互作用的情形下，它被称为<span data-concept="lamb-shift">兰姆移位</span>，并且由于它只依赖于<span data-concept="single-photon-rabi-frequency">耦合常数</span>$\kg_j$，通常把它并入对<span data-concept="atomic-transition-frequency">原子跃迁频率</span>$\komega$的重正化之中。然而，如果把原子放入不同的环境，例如腔中，那里的态密度和$\kg_j$都不同，<span data-concept="lamb-shift">兰姆移位</span>就会改变。</p>
+<p id="decay-rate">(2) <span data-concept="spontaneous-emission-rate">原子以速率$\kgamma$从激发态$|2\rangle$衰变</span>。</p>
+<figure class="dv" id="drv-spontaneous-emission-rate"></figure>
+<p id="einstein-a">这就是<span data-concept="spontaneous-emission-rate">自发发射率</span>（也称为<span data-concept="spontaneous-emission-rate">爱因斯坦 A 系数</span>）的通常表达式。</p>
+<p>注意，<span data-concept="spontaneous-emission-rate">自发发射率</span>与<span data-concept="dipole-matrix-element">原子偶极矩</span>的平方和<span data-concept="atomic-transition-frequency">原子跃迁频率</span>的立方成正比。因此，偶极矩大、能量分裂大的跃迁衰变得最快。</p>
+<p id="no-rotating-frame"><span data-concept="spontaneous-emission">自发发射</span>过程所产生的动力学，与<span data-concept="bound-continuum-transition">束缚态到连续谱的跃迁</span>所讨论的动力学非常相似。然而，与先前的情形不同，这里不需要变换到<span data-concept="rotating-frame">转动参考系</span>。由于辐射场和原子被置于同等地位来处理（光子能量已并入<span data-concept="wigner-weisskopf">哈密顿量</span>），初态和末态本来就已接近共振。变换到<span data-concept="rotating-frame">转动参考系</span>是把系统当作经典系统处理时产生的人为产物。</p>
+<p>我们还可以显式地计算动力学：如果系统的状态由$|\kpsi\rangle = \kctwo|2,0\rangle + \sum_{k,\alpha}c_{k,\alpha}|1, 1_{k,\alpha}\rangle$给出，则系数满足运动方程</p>
+<div class="equation" id="eq-2-90">$$\dot{\kctwo} = -(\kgamma/2)\kctwo - i\komega \kctwo \tag{2.90}$$</div>
+<div class="equation" id="eq-2-91">$$\dot{c}_{k,\alpha} = -i\knuk c_{k,\alpha} + i\kg_{k,\alpha}\kctwo(\kt), \tag{2.91}$$</div>
+<p>其中$\komega$和$\knuk$在两个方程中出现在等价的位置。如同我们先前所发现的，处于<span data-concept="light-polarization">偏振</span>为$\alpha$、波矢量为$k$的光子态的概率幅趋于</p>
+<div class="equation" id="eq-2-92">$$\lim\limits_{\kt\to\infty}c_{k,\alpha} = \frac{\kg_{k,\alpha}}{\knuk - \komega + i\kgamma/2}e^{-i\knuk \kt} \tag{2.92}$$</div>
+<p id="dipole-decays">在长时极限下。现在考虑一个起始于态叠加的原子，$|\kpsi_0\rangle = \kctwo^0|2,0\rangle + \kcone^0|1,0\rangle$。由于$|1,0\rangle$不与场相互作用，在时刻 t 系统处于态$|\kpsi(\kt)\rangle = e^{-\kgamma \kt/2}e^{-i\komega \kt}\kctwo^0|2,0\rangle + \kcone^0|1,0\rangle + \sum_jc_j(\kt)|1,1_j\rangle$。与经典的<span data-concept="rabi-oscillations">拉比振荡</span>不同，<span data-concept="dipole-decay">原子偶极矩随时间衰变</span>：</p>
+<figure class="dv" id="drv-dipole-decay"></figure>
+<p>注意，单光子系数$c_j(\kt)$没有贡献，因为单光子态与辐射真空态正交。因此，系统在原子能级之间发生跃迁，而不伴随原子相干性的积累。</p>
+<p>我们还可以描述原子<span data-concept="spontaneous-emission">自发发射</span>所产生的辐射场的状态。在长时极限下，系统的状态为</p>
+<div class="equation" id="eq-2-95">$$|\kpsi\rangle = |1\rangle\otimes\sum_{k,\alpha}\frac{\kg_{k,\alpha}}{\knuk - \komega + i\kgamma/2}e^{-i\knuk \kt}|1_{k,\alpha}\rangle. \tag{2.95}$$</div>
+<p id="photon-wavepacket">我们希望理解<span data-concept="emitted-photon-wavepacket">这个态所描述的物理光子波包</span>。朴素地，人们可能会尝试计算<span data-concept="quantized-electric-field">电场</span>的期望值，但实际上它等于零</p>
+<div class="equation" id="eq-2-96">$$\langle\kpsi|\kEhat_\alpha|\kpsi\rangle = 0 \tag{2.96}$$</div>
+<p>单光子场$|\kpsi\rangle$不是经典场，因此它不必是<span data-concept="quantized-electric-field">电场算符</span>的本征态。用更花哨的话说，单光子场不具有与激光相关联的“<span data-concept="emitted-photon-wavepacket">一级相干性</span>”。尽管如此，诸如$\langle\kpsi|\kEplus_\alpha^\dagger\kEplus_\alpha|\kpsi\rangle$的高阶算符可以不为零。特别地，当我们把一组完备态引入期望值时，我们发现只有$n = 0$的态有贡献（因为<span data-concept="quantized-electric-field">正频分量</span>$\kEplus_\alpha \propto \hat{a}$）：</p>
+<div class="equation" id="eq-2-97">$$\langle\kpsi|\kEplus_\alpha^\dagger\kEplus_\alpha|\kpsi\rangle = \sum_n\langle\kpsi|\kEplus_\alpha^\dagger|n\rangle\langle n|\kEplus_\alpha|\kpsi\rangle \tag{2.97}$$</div>
+<div class="equation" id="eq-2-98">$$= \langle\kpsi|\kEplus_\alpha^\dagger|0\rangle\langle 0|\kEplus_\alpha|\kpsi\rangle. \tag{2.98}$$</div>
+<p>因此我们可以认定<sup class="fn" data-note="footnote-4"></sup></p>
+<div class="equation" id="eq-2-99">$$\langle 0|\kEplus_\alpha|\kpsi\rangle = \sum_k\kEbar_k\frac{\kg_{k,\alpha}}{\knuk - \komega + i\kgamma/2}e^{i(kz - \knuk \kt)} \tag{2.99}$$</div>
+<div class="equation" id="eq-2-100">$$\propto \frac{e^{-\kgamma(\kt - z/c)/2}}{z}\Theta(\kt - z/c) \tag{2.100}$$</div>
+<p id="outgoing">带有光子的一种“波函数”，描述<span data-concept="emitted-photon-wavepacket">从原子的初始位置以速度 c 出射的波包</span>。</p>
+<figure class="sim" id="sim-photon-wavepacket">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>位于 z = 0 处的原子从激发态出发，场处于真空态；随着时间推移，<a href="#eq-2-100">式 (2.100)</a>的<span data-concept="emitted-photon-wavepacket">光子波包</span>以速度 c 离开原子，而原子旁边的条形，即激发态布居 |c<sub>2</sub>|² = e<sup>−γt</sup>，不断减少。在波前 z = ct 之后，距离 z 处的场就是原子在较早时刻 t − z/c 所发射的场，所以拖尾就是原子自身的衰变沿 z 展开，长度为 c/γ。曲线是 z 乘以单光子概率幅，去掉了出射球面波的 1/z；光学载波比坐标轴细数百万倍，没有画出。改变<span data-concept="atomic-transition-frequency">跃迁频率</span> ω 或<span data-concept="dipole-matrix-element">偶极矩</span> |μ|，<a href="#drv-spontaneous-emission-rate">式 (2.89)</a>的<span data-concept="spontaneous-emission-rate">自发发射率</span>随之按 ω³|μ|² 变化，压缩或拉伸波包，而其波前始终与 c 保持同步。所用数值是真实光学跃迁的数值，ω 以 10¹⁵ s⁻¹ 计，|μ| 以 e a₀ 为单位，所以 γ 起始于约 10⁸ s⁻¹，波包 c/γ 长几米。</span></div>
+</figure>
+</section>

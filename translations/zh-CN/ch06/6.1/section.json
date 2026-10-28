@@ -1,0 +1,473 @@
+{
+ "id": "6.1",
+ "chapter": "6",
+ "title": "形式体系",
+ "short": "形式体系",
+ "lead": "<span data-concept=\"lindblad-master-equation\">主方程的最一般形式</span>、<span data-concept=\"effective-hamiltonian\">有效哈密顿量</span>、<span data-concept=\"quantum-jump\">量子跳跃</span>及其各自在一个小时间步长内的概率，以及用<span data-concept=\"state-vector\">态矢量</span>代替<span data-concept=\"density-matrix\">密度矩阵</span>进行演化的<span data-concept=\"monte-carlo-procedure\">蒙特卡罗流程</span>。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "figures": [
+  {
+   "id": "sim-monte-carlo",
+   "kind": "sim",
+   "draws": [
+    "population",
+    "coupling",
+    "time",
+    "rate",
+    "state"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "eq-6-1",
+   "concept": "lindblad-master-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "effective-hamiltonian",
+   "concept": "effective-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-jump",
+   "concept": "quantum-jump",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-6-14",
+   "concept": "jump-probability",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-6-17",
+   "concept": "no-jump-evolution",
+   "verb": "introduces"
+  },
+  {
+   "span": "statistical-picture",
+   "concept": "monte-carlo-wavefunction",
+   "verb": "introduces"
+  },
+  {
+   "span": "table-6-1",
+   "concept": "monte-carlo-procedure",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-6-1",
+   "concept": "master-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-6-1",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-6-1",
+   "concept": "reduced-density-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-6-9",
+   "concept": "schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-6-14",
+   "concept": "expectation-value",
+   "verb": "uses"
+  },
+  {
+   "span": "statistical-picture",
+   "concept": "state-vector",
+   "verb": "uses"
+  },
+  {
+   "span": "statistical-picture",
+   "concept": "density-matrix",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-jump-decomposition",
+   "concept": "stochastic-master-equation",
+   "verb": "introduces"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-tilde",
+   "kind": "correction",
+   "html": "书中此处写了波浪号。未归一化的态是式 (6.10) 中的$|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle$，不带波浪号；波浪号标记的是式 (6.17) 中归一化的态。"
+  },
+  {
+   "id": "c-table-step-3",
+   "kind": "correction",
+   "html": "书中写出的$|\\tilde{\\phi}_{k,\\alpha}\\rangle$带有一个检验并未确定的$k$。当$K$从$0$开始取值、空和取为零时，检验$\\sum_{k=1}^{K}\\kdeltapk \\leq r < \\sum_{k=1}^{K+1}\\kdeltapk$选出通道$K+1$，因此$|\\kpsi_\\alpha\\rangle$被替换为$|\\tilde{\\phi}_{K+1,\\alpha}\\rangle$。"
+  },
+  {
+   "id": "c-table-step-7",
+   "kind": "correction",
+   "html": "书中除以$N$，却只对初态求和。平均同样遍及每个初态的$N$条轨迹：$\\krhoS(\\kt) = \\frac{1}{N}\\sum_\\alpha p_\\alpha\\sum_{n=1}^{N}|\\kpsi_\\alpha^{(n)}(\\kt)\\rangle\\langle\\kpsi_\\alpha^{(n)}(\\kt)|$，其中$|\\kpsi_\\alpha^{(n)}(\\kt)\\rangle$是从$|\\kpsi_\\alpha\\rangle$出发的第$n$条轨迹。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "master-equation-pure-states",
+   "what": "纯态混合上的主方程",
+   "source": "现代原子与光学物理 II，6.1 形式体系",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\mathcal{L}(\\krhoS) = -\\sum_k \\frac{\\kgammak}{2}\\left(\\kchatk^\\dagger\\kchatk\\krhoS + \\krhoS\\kchatk^\\dagger\\kchatk - 2\\kchatk\\krhoS\\kchatk^\\dagger\\right)",
+       "src": "(6.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\mk{H}{\\frac{1}{i\\hbar}[\\kH_S, \\krhoS]} + \\mk{D}{\\mathcal{L}(\\krhoS)}",
+      "src": "(6.1)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\mk{H}{\\frac{1}{i\\hbar}[\\kH_S, \\krhoS]} \\mk{D}{- \\sum_k \\frac{\\kgammak}{2}\\left(\\kchatk^\\dagger\\kchatk\\krhoS + \\krhoS\\kchatk^\\dagger\\kchatk - 2\\kchatk\\krhoS\\kchatk^\\dagger\\right)}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(6.5)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\krhoS = \\sum_\\alpha p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|",
+       "src": "6.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\mk{H}{\\frac{1}{i\\hbar}[\\kH_S, \\krhoS]} \\mk{D}{- \\sum_k \\frac{\\kgammak}{2}\\left(\\kchatk^\\dagger\\kchatk\\krhoS + \\krhoS\\kchatk^\\dagger\\kchatk - 2\\kchatk\\krhoS\\kchatk^\\dagger\\right)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\mk{a}{\\frac{1}{i\\hbar}\\kH_S\\krhoS} - \\mk{b}{\\frac{1}{i\\hbar}\\krhoS\\kH_S} - \\mk{c}{\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk\\krhoS} - \\mk{d}{\\krhoS\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk} + \\mk{j}{\\sum_k \\kgammak\\kchatk\\krhoS\\kchatk^\\dagger}",
+       "uses": [],
+       "map": {
+        "H": [
+         "a",
+         "b"
+        ],
+        "D": [
+         "c",
+         "d",
+         "j"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\mk{a}{\\frac{1}{i\\hbar}\\left(\\kH_S - i\\hbar\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk\\right)\\krhoS} - \\mk{b}{\\frac{1}{i\\hbar}\\krhoS\\left(\\kH_S + i\\hbar\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk\\right)} + \\mk{j}{\\sum_k \\kgammak\\kchatk\\krhoS\\kchatk^\\dagger}",
+       "uses": [],
+       "cap": "由于$\\frac{1}{i\\hbar}(\\mp i\\hbar) = \\mp 1$，每个衰变项都并入$\\hat{\\rho}_S$同侧的哈密顿量项中。",
+       "map": {
+        "c": "a",
+        "d": "b"
+       }
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\sum_\\alpha \\Big\\{ &\\mk{a}{\\frac{1}{i\\hbar}\\left(\\kH_S - i\\hbar\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk\\right)p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|} \\\\ &- \\mk{b}{\\frac{1}{i\\hbar}p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\left(\\kH_S + i\\hbar\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk\\right)} \\\\ &+ \\mk{j}{\\sum_k p_\\alpha\\kgammak\\kchatk|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kchatk^\\dagger} \\Big\\}\\end{aligned}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(6.6)"
+    }
+   ]
+  },
+  {
+   "id": "effective-hamiltonian-master-equation",
+   "what": "含有效哈密顿量的主方程",
+   "source": "现代原子与光学物理 II，6.1 形式体系",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kHeff = \\kH_S - i\\hbar\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk",
+       "src": "(6.7)"
+      },
+      {
+       "text": "哈密顿量$\\kH_S$是可观测量，所以它是厄米的：$\\kH_S^\\dagger = \\kH_S$。",
+       "src": "1.2"
+      }
+     ],
+     "then": {
+      "tex": "\\begin{aligned}\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\sum_\\alpha \\Big\\{ &\\mk{a}{\\frac{1}{i\\hbar}\\left(\\kH_S - i\\hbar\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk\\right)p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|} \\\\ &- \\mk{b}{\\frac{1}{i\\hbar}p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\left(\\kH_S + i\\hbar\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk\\right)} \\\\ &+ \\mk{j}{\\sum_k p_\\alpha\\kgammak\\kchatk|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kchatk^\\dagger} \\Big\\}\\end{aligned}",
+      "src": "(6.6)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\sum_\\alpha \\Big\\{ &\\mk{a}{\\frac{1}{i\\hbar}\\kHeff p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|} \\\\ &- \\mk{b}{\\frac{1}{i\\hbar}p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\left(\\kH_S + i\\hbar\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk\\right)} \\\\ &+ \\mk{j}{\\sum_k p_\\alpha\\kgammak\\kchatk|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kchatk^\\dagger} \\Big\\}\\end{aligned}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\sum_\\alpha \\Big\\{ &\\mk{a}{\\frac{1}{i\\hbar}\\kHeff p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|} \\\\ &- \\mk{b}{\\frac{1}{i\\hbar}p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kHeff^\\dagger} \\\\ &+ \\mk{j}{\\sum_k p_\\alpha\\kgammak\\kchatk|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kchatk^\\dagger} \\Big\\}\\end{aligned}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "由于$\\hat{H}_S$是厄米的且速率$\\gamma_k$为实数，(6.7) 的伴随为$\\hat{H}_\\mathrm{eff}^\\dagger = \\hat{H}_S + i\\hbar\\sum_k \\frac{\\gamma_k}{2}\\hat{c}_k^\\dagger\\hat{c}_k$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\sum_\\alpha p_\\alpha\\left(\\mk{a}{\\frac{1}{i\\hbar}\\left(\\kHeff|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha| - |\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kHeff^\\dagger\\right)} + \\mk{j}{\\sum_k \\kgammak\\kchatk|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kchatk^\\dagger}\\right)",
+       "uses": [],
+       "map": {
+        "b": "a"
+       }
+      }
+     ],
+     "num": "(6.8)"
+    }
+   ]
+  },
+  {
+   "id": "no-jump-norm",
+   "what": "未跳跃的态的范数",
+   "source": "现代原子与光学物理 II，6.1 形式体系",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kHeff = \\kH_S - i\\hbar\\sum_k \\frac{\\kgammak}{2}\\kchatk^\\dagger\\kchatk",
+       "src": "(6.7)"
+      },
+      {
+       "text": "哈密顿量$\\kH_S$是可观测量，所以它是厄米的：$\\kH_S^\\dagger = \\kH_S$。",
+       "src": "1.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle} = \\mk{R}{\\left(1 + \\frac{\\kHeff\\delta\\kt}{i\\hbar}\\right)|\\kpsi_\\alpha(\\kt)\\rangle}",
+      "src": "(6.10)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\kpsi_\\alpha(\\kt+\\delta\\kt)|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle} = \\mk{R}{\\langle\\kpsi_\\alpha|(1 - \\frac{\\kHeff^\\dagger\\delta\\kt}{i\\hbar})(1 + \\frac{\\kHeff\\delta\\kt}{i\\hbar})|\\kpsi_\\alpha\\rangle}",
+       "uses": [],
+       "cap": "左矢是右矢的伴随，且$(1/i)^* = -1/i$。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kpsi_\\alpha(\\kt+\\delta\\kt)|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle} = \\mk{R}{\\langle\\kpsi_\\alpha|\\left(1 - \\frac{\\delta\\kt}{i\\hbar}(\\kHeff^\\dagger - \\kHeff)\\right)|\\kpsi_\\alpha\\rangle}",
+       "uses": [],
+       "cap": "到小时间$\\delta t$的最低阶：略去$\\delta t^2$项。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kpsi_\\alpha(\\kt+\\delta\\kt)|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle} = \\mk{R}{\\langle\\kpsi_\\alpha|\\left(1 - \\delta\\kt\\sum_k \\kgammak\\kchatk^\\dagger\\kchatk\\right)|\\kpsi_\\alpha\\rangle}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "由 (6.7)，$\\hat{H}_\\mathrm{eff}^\\dagger - \\hat{H}_\\mathrm{eff} = i\\hbar\\sum_k \\gamma_k\\hat{c}_k^\\dagger\\hat{c}_k$。"
+      }
+     ],
+     "num": "(6.13)"
+    }
+   ]
+  },
+  {
+   "id": "no-jump-probability",
+   "what": "用跳跃概率表示的范数",
+   "source": "现代原子与光学物理 II，6.1 形式体系",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kdeltapk = \\delta\\kt\\,\\kgammak\\langle\\kpsi_\\alpha|\\kchatk^\\dagger\\kchatk|\\kpsi_\\alpha\\rangle",
+       "src": "(6.14)"
+      },
+      {
+       "tex": "\\kdeltap = \\delta\\kt\\sum_k \\kgammak\\langle\\kpsi_\\alpha|\\kchatk^\\dagger\\kchatk|\\kpsi_\\alpha\\rangle",
+       "src": "(6.15)"
+      },
+      {
+       "tex": "\\langle\\kpsi_\\alpha|\\kpsi_\\alpha\\rangle = 1",
+       "src": "6.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\kpsi_\\alpha(\\kt+\\delta\\kt)|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle} = \\mk{R}{\\langle\\kpsi_\\alpha|\\left(1 - \\delta\\kt\\sum_k \\kgammak\\kchatk^\\dagger\\kchatk\\right)|\\kpsi_\\alpha\\rangle}",
+      "src": "(6.13)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\kpsi_\\alpha(\\kt+\\delta\\kt)|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle} = \\mk{R}{1 - \\sum_k \\delta\\kt\\,\\kgammak\\langle\\kpsi_\\alpha|\\kchatk^\\dagger\\kchatk|\\kpsi_\\alpha\\rangle}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kpsi_\\alpha(\\kt+\\delta\\kt)|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle} = \\mk{R}{1 - \\sum_k \\kdeltapk}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kpsi_\\alpha(\\kt+\\delta\\kt)|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle} = \\mk{R}{1 - \\sum_k \\kdeltapk} = \\mk{S}{1 - \\kdeltap}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(6.16)"
+    }
+   ]
+  },
+  {
+   "id": "jump-decomposition",
+   "what": "一个时间步长上的主方程",
+   "source": "现代原子与光学物理 II，6.1 形式体系",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\krhoS = \\sum_\\alpha p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|",
+       "src": "6.1"
+      },
+      {
+       "tex": "|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle = \\left(1 + \\frac{\\kHeff\\delta\\kt}{i\\hbar}\\right)|\\kpsi_\\alpha(\\kt)\\rangle",
+       "src": "(6.10)"
+      },
+      {
+       "tex": "|\\phi_{k,\\alpha}\\rangle = \\kchatk|\\kpsi_\\alpha\\rangle",
+       "src": "6.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d\\krhoS}{d\\kt}} = \\sum_\\alpha p_\\alpha\\left(\\mk{a}{\\frac{1}{i\\hbar}\\left(\\kHeff|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha| - |\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kHeff^\\dagger\\right)} + \\mk{j}{\\sum_k \\kgammak\\kchatk|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kchatk^\\dagger}\\right)",
+      "src": "(6.8)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\krhoS(\\kt+\\delta\\kt)} = \\mk{r}{\\sum_\\alpha p_\\alpha|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|} + \\mk{a}{\\delta\\kt\\sum_\\alpha p_\\alpha\\frac{1}{i\\hbar}\\left(\\kHeff|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha| - |\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kHeff^\\dagger\\right)} + \\mk{j}{\\delta\\kt\\sum_\\alpha p_\\alpha\\sum_k \\kgammak\\kchatk|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kchatk^\\dagger}",
+       "uses": [
+        0
+       ],
+       "cap": "在一个小时间步长内，$\\hat{\\rho}_S(t+\\delta t) = \\hat{\\rho}_S(t) + \\delta t\\,d\\hat{\\rho}_S/dt$。"
+      },
+      {
+       "tex": "\\mk{L}{\\krhoS(\\kt+\\delta\\kt)} = \\sum_\\alpha p_\\alpha\\left(\\mk{r}{\\left(1 + \\frac{\\kHeff\\delta\\kt}{i\\hbar}\\right)|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\left(1 - \\frac{\\kHeff^\\dagger\\delta\\kt}{i\\hbar}\\right)} + \\mk{j}{\\delta\\kt\\sum_k \\kgammak\\kchatk|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kchatk^\\dagger}\\right)",
+       "uses": [],
+       "cap": "到$\\delta t$的一阶，$|\\psi\\rangle\\langle\\psi| + \\frac{\\delta t}{i\\hbar}(\\hat{H}|\\psi\\rangle\\langle\\psi| - |\\psi\\rangle\\langle\\psi|\\hat{H}^\\dagger)$即$(1 + \\frac{\\hat{H}\\delta t}{i\\hbar})|\\psi\\rangle\\langle\\psi|(1 - \\frac{\\hat{H}^\\dagger\\delta t}{i\\hbar})$。",
+       "map": {
+        "a": "r"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\krhoS(\\kt+\\delta\\kt)} = \\sum_\\alpha p_\\alpha\\left(\\mk{r}{|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle\\langle\\kpsi_\\alpha(\\kt+\\delta\\kt)|} + \\mk{j}{\\delta\\kt\\sum_k \\kgammak\\kchatk|\\kpsi_\\alpha\\rangle\\langle\\kpsi_\\alpha|\\kchatk^\\dagger}\\right)",
+       "uses": [
+        1
+       ],
+       "cap": "(6.10) 的左矢是$\\langle\\psi_\\alpha(t)|(1 - \\hat{H}_\\mathrm{eff}^\\dagger\\delta t/i\\hbar)$。"
+      },
+      {
+       "tex": "\\mk{L}{\\krhoS(\\kt+\\delta\\kt)} = \\sum_\\alpha p_\\alpha\\left(\\mk{r}{|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle\\langle\\kpsi_\\alpha(\\kt+\\delta\\kt)|} + \\mk{j}{\\delta\\kt\\sum_k \\kgammak|\\phi_{k,\\alpha}\\rangle\\langle\\phi_{k,\\alpha}|}\\right)",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(6.20)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle = \\left(1 + \\frac{\\kHeff\\delta\\kt}{i\\hbar}\\right)|\\kpsi_\\alpha(\\kt)\\rangle",
+       "src": "(6.10)"
+      },
+      {
+       "tex": "|\\tilde{\\kpsi}_\\alpha(\\kt+\\delta\\kt)\\rangle = \\frac{1 + \\kHeff\\delta\\kt/i\\hbar}{\\sqrt{1-\\kdeltap}}|\\kpsi_\\alpha(\\kt)\\rangle",
+       "src": "(6.17)"
+      },
+      {
+       "tex": "|\\tilde{\\phi}_{k,\\alpha}\\rangle = \\sqrt{\\frac{\\kgammak\\delta\\kt}{\\kdeltapk}}|\\phi_{k,\\alpha}\\rangle",
+       "src": "(6.19)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\krhoS(\\kt+\\delta\\kt)} = \\sum_\\alpha p_\\alpha\\left(\\mk{r}{|\\kpsi_\\alpha(\\kt+\\delta\\kt)\\rangle\\langle\\kpsi_\\alpha(\\kt+\\delta\\kt)|} + \\mk{j}{\\delta\\kt\\sum_k \\kgammak|\\phi_{k,\\alpha}\\rangle\\langle\\phi_{k,\\alpha}|}\\right)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\krhoS(\\kt+\\delta\\kt)} = \\sum_\\alpha p_\\alpha\\left(\\mk{r}{(1-\\kdeltap)|\\tilde{\\kpsi}_\\alpha(\\kt+\\delta\\kt)\\rangle\\langle\\tilde{\\kpsi}_\\alpha(\\kt+\\delta\\kt)|} + \\mk{j}{\\delta\\kt\\sum_k \\kgammak|\\phi_{k,\\alpha}\\rangle\\langle\\phi_{k,\\alpha}|}\\right)",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "由 (6.10) 和 (6.17)，$|\\psi_\\alpha(t+\\delta t)\\rangle = \\sqrt{1-\\delta p_\\alpha}\\,|\\tilde{\\psi}_\\alpha(t+\\delta t)\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{\\krhoS(\\kt+\\delta\\kt)} = \\sum_\\alpha p_\\alpha\\left(\\mk{r}{(1-\\kdeltap)|\\tilde{\\kpsi}_\\alpha(\\kt+\\delta\\kt)\\rangle\\langle\\tilde{\\kpsi}_\\alpha(\\kt+\\delta\\kt)|} + \\mk{j}{\\sum_k \\kdeltapk|\\tilde{\\phi}_{k,\\alpha}\\rangle\\langle\\tilde{\\phi}_{k,\\alpha}|}\\right)",
+       "uses": [
+        3
+       ],
+       "cap": "由 (6.19)，$\\delta t\\,\\gamma_k|\\phi_{k,\\alpha}\\rangle\\langle\\phi_{k,\\alpha}| = \\delta p_{k,\\alpha}|\\tilde{\\phi}_{k,\\alpha}\\rangle\\langle\\tilde{\\phi}_{k,\\alpha}|$。"
+      }
+     ],
+     "num": "(6.21)"
+    }
+   ]
+  }
+ ]
+}

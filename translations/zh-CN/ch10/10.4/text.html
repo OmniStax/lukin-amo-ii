@@ -1,0 +1,52 @@
+<section id="opening">
+<p class="cite-target">在前面各节中，我们已经看到如何能够同时控制离子的运动态和电子态，使我们能够<span data-concept="motional-state-engineering">写入任意量子态</span>。为了用离子进行非平庸的计算，我们需要一种把不同离子联系起来的机制，而运动自由度提供了一个方便的工具。</p>
+<p id="ion-string">被约束在同一个各向异性阱$\knu_x \ll \knu_y, \knu_z$中的多个离子相互排斥，所以在运动基态下<span data-concept="ion-string">它们形成一串离子，每个离子相隔<span data-type="length">5-10$\mu$m</span></span>。库仑斥力因而提供了足够的间隔，使人们能够用聚焦的激光束在空间上分辨单个离子。此外，<span data-concept="ion-normal-modes">库仑相互作用把它们的运动自由度耦合起来</span>。<span data-concept="ion-normal-modes">离子的振动模式可以解释为具有不同频率和空间模式的声子</span>。</p>
+</section>
+
+<section id="two-ions">
+<h2>10.4.1 线性阱中的两个离子</h2>
+<p class="cite-target">为了理解线性离子阱的物理，分析被约束在同一个阱中、位置为$\krdist_1, \krdist_2$、动量为$\kpcm_1, \kpcm_2$的两个离子的演化是有启发性的。离子既受到阱的谐振约束，也受到库仑斥力，对应于</p>
+<div class="equation" id="eq-10-31">$$\kH_{motion} = \sum_i\left(\frac{\kpcm_i^2}{2\km} + \frac{\km}{2}\knu^2 \krdist_i^2\right) + \frac{e^2}{4\pi\epsilon_0|\krdist_1 - \krdist_2|}. \tag{10.31}$$</div>
+<p>如果离子的平衡位置为$\langle \krdist_1\rangle = -\kasep/2$和$\langle \krdist_2\rangle = \kasep/2$，且$\krdist_i = \langle \krdist_i\rangle + \kxdisp_i$，那么我们可以把这些项重写到$\kxdisp_i$的最低阶。</p>
+<figure class="dv" id="drv-two-ion-expansion"></figure>
+<p>这一系统的<span data-concept="ion-normal-modes">简正模式</span>对应于离子的对称运动和反对称运动，所以用质心坐标和相对坐标来处理可以得到相当大的简化：</p>
+<div class="equation" id="eq-10-33">$$\kXcm = \frac{1}{\sqrt{2}}(\kxdisp_1 + \kxdisp_2) \tag{10.33}$$</div>
+<figure class="sim" id="sim-ion-string" data-figure="10.7">
+  <div class="sim-head"><span class="eyebrow">Figure 10.7</span><span>一个谐振阱中的<span data-concept="ion-string">⁴⁰Ca⁺ 离子串</span>，每个离子位于阱的拉力与其他离子的库仑斥力相平衡的位置。离子在<span data-ref="mode-cm">质心模式</span>、<span data-ref="mode-s">伸缩模式</span>或二者同时摆动，曲线图跟随<a href="#eq-10-33">式 (10.33)</a>–<a href="#eq-10-34">(10.34)</a>的两个坐标$\kXcm$和$\kxdisp$。两个模式都开启时，每个离子自身的运动看上去不规则，然而$\kXcm$只以$\knu$摆动，$\kxdisp$只以$\knus$摆动。提高$\knu$，离子串就收拢，而两个频率之比保持为$\sqrt{3}$。离子更多时，质心模式仍使每个离子以$\knu$一起摆动，位于$\knus$的模式仍使离子串绕其中点伸缩，每个离子的位移与它到中点的距离成正比。所画的摆动比离子的约 10 nm 的基态运动大数百倍。</span></div>
+</figure>
+<div class="equation" id="eq-10-34">$$\kxdisp = \frac{1}{\sqrt{2}}(\kxdisp_2 - \kxdisp_1) \tag{10.34}$$</div>
+<div class="equation" id="eq-10-35">$$\kPcm = \frac{1}{\sqrt{2}}(\kpcm_1 + \kpcm_2) \tag{10.35}$$</div>
+<div class="equation" id="eq-10-36">$$\kpcm = \frac{1}{\sqrt{2}}(\kpcm_2 - \kpcm_1). \tag{10.36}$$</div>
+<figure class="dv" id="drv-two-ion-normal-modes"></figure>
+<p id="normal-modes">我们发现<span data-concept="ion-normal-modes">两个离子以频率$\knu$的<span data-ref="mode-cm">质心模式</span>和频率$\knus$的<span data-ref="mode-s">伸缩模式</span>振动</span>，我们将这两个<span data-concept="ion-normal-modes">声子模式</span>分别用<span data-concept="creation-annihilation-operators">湮没算符</span>$\hat{a}_{cm}$和$\hat{a}_s$表示。</p>
+<p>对每个离子的光照射耦合离子的内态和运动态，经由</p>
+<div class="equation" id="eq-10-38">$$\kH_{int} = -\sum_i\left(\hbar\kDelta_i|e\rangle_{ii}\langle e| + \hbar\kOmega_i\left(|e\rangle_{ii}\langle g|e^{i\kkmag \kxdisp_i} + h.c.\right)\right), \tag{10.38}$$</div>
+<p>其中离子平衡位置带来的任何相位偏移都已被吸收进$\kOmega_i$。用声子的<span data-concept="creation-annihilation-operators">产生算符和湮没算符</span>重写这一相互作用，我们得到<span data-concept="two-ion-laser-hamiltonian">系统的完整哈密顿量</span>。</p>
+<figure class="dv" id="drv-two-ion-hamiltonian"></figure>
+<p id="separate-modes">注意，<span data-concept="two-ion-laser-hamiltonian">选择适当的激光失谐，就可以分别对这两个声子模式寻址</span>。</p>
+</section>
+
+<section id="gates">
+<h2>10.4.2 量子门</h2>
+<p class="cite-target" id="qubit">量子计算机使用<span data-concept="two-level-atom">二能级量子系统</span>来存储信息。内态被解释为比特值，<span data-ref="lvl-g">$|g\rangle = |0\rangle$</span>和<span data-ref="lvl-e">$|e\rangle = |1\rangle$</span>，信息则编码在所谓“<span data-concept="qubit">量子比特</span>”的<span data-concept="superposition">态$\alpha|0\rangle + \beta|1\rangle$</span>中。这些<span data-concept="qubit">量子比特</span>构成量子计算机的骨干，为量子态提供存储器。</p>
+<p id="universal">通过操控<span data-concept="qubit">量子比特</span>，人们可以进行计算。事实上，可以证明，只需能够进行很少几种操控，就能够进行所有的计算。<span data-concept="universal-gate-set">如果能够对每个<span data-concept="qubit">量子比特</span>寻址并对其态做任意旋转，那么要具备普适计算能力，只需要一个耦合任意一对<span data-concept="qubit">量子比特</span>的非平庸门</span>。这样的<span data-concept="pi-phase-gate">双量子比特门</span>之一是<span data-concept="pi-phase-gate" id="phase-gate">$\pi$相位门</span>，它按下表映射两个<span data-concept="qubit">量子比特</span></p>
+<div class="equation" id="eq-10-40">$$|0\rangle|0\rangle \rightarrow |0\rangle|0\rangle \tag{10.40}$$</div>
+<div class="equation" id="eq-10-41">$$|0\rangle|1\rangle \rightarrow |0\rangle|1\rangle \tag{10.41}$$</div>
+<div class="equation" id="eq-10-42">$$|1\rangle|0\rangle \rightarrow |1\rangle|0\rangle \tag{10.42}$$</div>
+<div class="equation" id="eq-10-43">$$|1\rangle|1\rangle \rightarrow -|1\rangle|1\rangle. \tag{10.43}$$</div>
+<p>一个<span data-concept="qubit">量子比特</span>的激发态的符号，仅当另一个<span data-concept="qubit">量子比特</span>也处于激发态时才被翻转。</p>
+<p id="architecture">陷俘离子为量子计算机提供了一种可能的架构。我们已经看到，<span data-concept="carrier-transition">施加与裸原子频率共振的激光，就可以进行单<span data-concept="qubit">量子比特</span>旋转</span>。此外，阱中离子的集体运动提供了实现<span data-concept="pi-phase-gate">双量子比特门</span>所需的相互作用。我们现在来说明，<span data-concept="ion-trap-phase-gate">相位门</span>如何能够在线性离子阱中的任意两个离子之间实现。</p>
+<h3>相位门的要求</h3>
+<p id="requirements"><span data-concept="phase-gate-requirements">按我们在这里的介绍，<span data-concept="ion-trap-phase-gate">陷俘离子的相位门</span>要求<span data-concept="sideband-cooling">把振动模式冷却到基态</span>，此时没有声子存在</span>。如果阱中$N$个离子内态的直积态用$|x_{N-1}\ldots x_0\rangle_\mathrm{ion}$表示，那么系统的整体初态可以写成这类态的叠加</p>
+<div class="equation" id="eq-10-44">$$|\kpsi\rangle = \sum_x c_x|x_{N-1}\ldots x_0\rangle_\mathrm{ion} \otimes |0\rangle_\mathrm{phonon}. \tag{10.44}$$</div>
+<p id="auxiliary"><span data-concept="phase-gate-requirements">除了前面考虑过的<span data-ref="lvl-e lvl-g">激发态和基态</span>之外，我们还需要用到与<span data-ref="lvl-e">激发态</span>简并、并与<span data-ref="lvl-g">基态</span>通过<span data-concept="light-polarization">正交的激光偏振</span>耦合的<span data-ref="lvl-aux">一个辅助离子能级</span></span>（见<a href="#fig-gate-levels">图 10.8</a>）。</p>
+<h3>相位门的步骤</h3>
+<p id="procedure"><span data-concept="ion-trap-phase-gate">假设我们希望对阱中<span data-ref="ion-m">第$m$个</span>和<span data-ref="ion-n">第$n$个离子</span>执行相位门。通过<span data-concept="internal-motional-swap">把<span data-ref="ion-m">第$m$个离子</span>的量子态转移到振动模式上</span>，<span data-ref="ion-n">第$n$个原子</span>的裸能级受到影响。然后以阱的振动态为条件，对<span data-ref="ion-n">第$n$个原子</span>执行单<span data-concept="qubit">量子比特</span>旋转。最后，存储在集体模式中的信息被转移回<span data-ref="ion-m">第$m$个离子</span>的态</span>。</p>
+<p><span data-concept="ion-trap-phase-gate">相位门的实现</span>的精确序列在<a href="#sim-phase-gate">图 10.9</a>中加以描述和图示。</p>
+<figure class="sim" id="fig-gate-levels" data-figure="10.8" data-original="/media/ch10/fig-10-8.png" data-original-caption="用于实现相位门的四个能级。偶极容许跃迁用来冷却离子，而辅助态用来实现量子比特态的相移。">
+  <div class="sim-head"><span class="eyebrow">Figure 10.8</span><span>用于实现<span data-concept="ion-trap-phase-gate">相位门</span>的四个能级。<span data-ref="lvl-g">$|g\rangle$</span>和<span data-ref="lvl-e">$|e\rangle$</span>构成<span data-concept="qubit">量子比特</span>。<span data-ref="lvl-aux">辅助能级$|r_1\rangle$</span>与<span data-ref="lvl-e">$|e\rangle$</span>简并，由<span data-ref="lvl-g">$|g\rangle$</span>经另一偏振的光到达，并实现<span data-concept="qubit">量子比特</span>态的相移。右侧通向一个短寿命能级的<span data-concept="selection-rules">偶极容许</span>跃迁使离子冷却，并通过<span data-concept="quantum-jump">量子跳跃</span>读出其态。</span></div>
+</figure>
+<figure class="sim" id="sim-phase-gate" data-figure="10.9" data-original="/media/ch10/fig-10-9.png" data-original-caption="条件相位门分三步实现。第一步把量子比特 m 的态写到离子的集体运动上。第二步通过对辅助能级施加 2π 脉冲，有条件地改变量子比特 n 的相位，仅当量子比特 m 处于激发态且量子比特 n 处于基态时，这才改变符号。第三步把集体运动写回量子比特 m，由于两个连续的 π 脉冲而引起整体的符号改变。末态保持不变，除非两个量子比特都处于激发态，此时它乘以整体的负号。">
+  <div class="sim-head"><span class="eyebrow">Figure 10.9</span><span>分三步的条件<span data-concept="ion-trap-phase-gate">相位门</span>，同时对全部四种输入进行跟踪。第1步中，<span data-ref="ion-m">离子$m$</span>的<span data-concept="sideband-couplings">红边带</span>上的$\pi$脉冲把其<span data-concept="qubit">量子比特</span>写到集体运动上：<span data-ref="lvl-e">$|e\rangle$</span>$|0\rangle$变为<span data-ref="lvl-g">$|g\rangle$</span>$|1\rangle$，而<span data-ref="lvl-g">$|g\rangle$</span>$|0\rangle$，其下方空无一物，保持不变。第2步中，<span data-ref="ion-n">离子$n$</span>上的$2\pi$脉冲把<span data-ref="lvl-g">$|g\rangle$</span>$|1\rangle$带到<span data-ref="lvl-aux">辅助能级</span>，<span data-ref="lvl-aux">$|r_1\rangle$</span>$|0\rangle$，再带回，其符号改变，这只有在<span data-ref="ion-m">量子比特$m$</span>被激发且<span data-ref="ion-n">量子比特$n$</span>处于基态时才会发生。第3步把运动写回<span data-ref="ion-m">量子比特$m$</span>，同一对上的两个$\pi$脉冲改变其符号。选择一个步骤并跟踪每一行：只有两个量子比特都被激发的输入，最终乘以$-1$。</span></div>
+</figure>
+</section>

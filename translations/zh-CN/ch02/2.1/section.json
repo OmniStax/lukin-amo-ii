@@ -1,0 +1,1706 @@
+{
+ "id": "2.1",
+ "chapter": "2",
+ "title": "原子跃迁",
+ "short": "原子跃迁",
+ "lead": "最简单的原子-场系统，即由近共振的经典场驱动的两个原子能级：<span data-concept=\"rotating-frame\">转动参考系</span>与<span data-concept=\"rotating-wave-approximation\">旋转波近似</span>，<span data-concept=\"rabi-oscillations\">拉比振荡</span>与脉冲面积，<span data-concept=\"adiabatic-elimination\">绝热消除</span>与<span data-concept=\"ac-stark-shift\">光致频移</span>，<span data-concept=\"dressed-states\">缀饰态</span>，<span data-concept=\"bloch-sphere\">布洛赫球</span>，以及这种处理如何推广到具有多个能级和多个场的原子。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "MIT 8.422 习题集 7 第 3 题，以及它的延续——习题集 10 第 1 题(a)–(e)，共分为十个小问，改用卢金的记号重述，并附有 AI 撰写的解答，因为该课程没有公布答案；没有任何一问是数值题，因此没有一问被暂扣。习题集 10 第 1 题的(f)问需要量子化的场，编入 9.3 节。",
+ "figures": [
+  {
+   "id": "fig-level-scheme",
+   "kind": "figure",
+   "number": "2.1",
+   "originals": [
+    "/media/ch02/fig-2-1.png"
+   ],
+   "original_caption": "二能级系统的结构。外加经典场的角频率为ν，而原子能级之间相隔的能量为ħω。",
+   "draws": [
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-pulse-area",
+   "kind": "sim",
+   "draws": [
+    "coupling",
+    "phase",
+    "population",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-dressed",
+   "kind": "sim",
+   "number": "2.2",
+   "originals": [
+    "/media/ch02/fig-2-2.png"
+   ],
+   "original_caption": "(a) 变换到转动参考系的示意图。在没有外加场时，两个原子能级之间相隔原子跃迁频率ω。施加频率为ν的经典场后，我们变换到以频率ν转动的参考系，其中态|2̃⟩的能量为−δ = ω − ν。在旋转波近似下，这两个态|1⟩和|2̃⟩由一个静态混合项Ω耦合。(b) 缀饰态能级（红色）以失谐的函数形式给出。作为参照，裸态能级（虚线，蓝色）也一并给出。裸态是没有外加场（Ω = 0）时系统的本征态。",
+   "draws": [
+    "frequency",
+    "coupling",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-bloch",
+   "kind": "sim",
+   "number": "2.3",
+   "originals": [
+    "/media/ch02/fig-2-3.png"
+   ],
+   "original_caption": "(a) 二能级系统的任意态都可以表示为单位球面上的矢量。这里我们是在转动参考系中工作。(b) 没有外场时，系统以两个态之间（在转动参考系中）的能量差进动。c) 在存在共振外加场时，态绕x-y平面内的一条轴进动，该轴的方位角由外加场的相位决定。",
+   "draws": [
+    "state",
+    "coupling",
+    "frequency",
+    "population",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "two-level-def",
+   "concept": "two-level-atom",
+   "verb": "introduces"
+  },
+  {
+   "span": "transition-frequency",
+   "concept": "atomic-transition-frequency",
+   "verb": "introduces"
+  },
+  {
+   "span": "envelope",
+   "concept": "slowly-varying-envelope",
+   "verb": "introduces"
+  },
+  {
+   "span": "optical-frequency",
+   "concept": "optical-frequency",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-dipole",
+   "concept": "two-level-dipole-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-2-2",
+   "concept": "two-level-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "detuning",
+   "concept": "detuning",
+   "verb": "introduces"
+  },
+  {
+   "span": "rotating-frame",
+   "concept": "rotating-frame",
+   "verb": "introduces"
+  },
+  {
+   "span": "rabi-frequency",
+   "concept": "rabi-frequency",
+   "verb": "introduces"
+  },
+  {
+   "span": "rwa",
+   "concept": "rotating-wave-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "rabi-oscillations",
+   "concept": "rabi-oscillations",
+   "verb": "introduces"
+  },
+  {
+   "span": "polarization",
+   "concept": "atomic-polarization",
+   "verb": "introduces"
+  },
+  {
+   "span": "pulse-area",
+   "concept": "pulse-area",
+   "verb": "introduces"
+  },
+  {
+   "span": "adiabatic-elimination",
+   "concept": "adiabatic-elimination",
+   "verb": "introduces"
+  },
+  {
+   "span": "light-shift",
+   "concept": "ac-stark-shift",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-2-23",
+   "concept": "rotating-frame-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "bare-states",
+   "concept": "bare-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "dressed-states",
+   "concept": "dressed-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-2-24",
+   "concept": "dressed-state-energies",
+   "verb": "introduces"
+  },
+  {
+   "span": "bloch-sphere",
+   "concept": "bloch-sphere",
+   "verb": "introduces"
+  },
+  {
+   "span": "precession",
+   "concept": "bloch-precession",
+   "verb": "introduces"
+  },
+  {
+   "span": "multilevel",
+   "concept": "multilevel-rotating-frame",
+   "verb": "introduces"
+  },
+  {
+   "span": "floquet",
+   "concept": "floquet-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "selection-rules",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-2-2",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "optical-frequency",
+   "concept": "dipole-matrix-element",
+   "verb": "uses"
+  },
+  {
+   "span": "rabi-oscillations",
+   "concept": "born-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "polarization",
+   "concept": "expectation-value",
+   "verb": "uses"
+  },
+  {
+   "span": "bloch-invitation",
+   "concept": "heisenberg-picture",
+   "verb": "uses"
+  },
+  {
+   "span": "multilevel",
+   "concept": "time-evolution-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-rotating-frame-equations",
+   "concept": "two-level-equations-of-motion",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-rotating-frame-equations",
+   "concept": "schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-rotating-frame-equations",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ex-bloch-eom",
+   "source_id": "it is a useful exercise to show that the Hamiltonian of Eq. (2.32) leads to the equations of motion",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "inline",
+    "after": "bloch-vector"
+   },
+   "cite": "bloch-invitation",
+   "prompt": "在海森伯绘景中证明，式 (2.32) 的哈密顿量在忽略其常数项后，导出式 (2.33) 的运动方程。",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "$$\\frac{d}{dt}\\tilde{\\mathbf{S}} = \\boldsymbol{\\Omega}(t) \\times \\tilde{\\mathbf{S}},$$其中矢量$\\tilde{\\mathbf{S}} = \\left\\{\\tilde{S}_x, \\tilde{S}_y, \\tilde{S}_z\\right\\}$，$\\boldsymbol{\\Omega}(t) = \\{-2\\,\\mathrm{Re}\\,\\Omega(t), -2\\,\\mathrm{Im}\\,\\Omega^*(t), -\\delta\\}$。"
+   }
+  },
+  {
+   "id": "hw7-3a",
+   "source_id": "hw7.3a",
+   "source_number": "Problem Set 7, Problem 3(a)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的$\\Omega_1$写作$2\\Omega$，$\\omega_0$为$\\omega$，$\\omega_L$为$\\nu$，$\\delta_L = \\omega_L - \\omega_0$为$\\delta$，$|g\\rangle$、$|e\\rangle$为$|1\\rangle$、$|2\\rangle$。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-states",
+   "prompt": "受经典激光场驱动的二能级原子，常常在定态基中研究起来很方便，所谓定态基，就是由哈密顿量的本征态所定义的基。这些基矢态称为缀饰态，它们对于解释原子物理中的许多现象和求解问题很有用。设经典驱动原子的哈密顿量为$$H = \\frac{\\hbar\\omega}{2}Z + \\hbar\\Omega\\left[X\\cos(\\nu t) + Y\\sin(\\nu t)\\right],$$其中$X$、$Y$和$Z$是通常的泡利矩阵，$\\omega$是原子能级$|2\\rangle$与$|1\\rangle$之间的能量差，$\\nu$是激光频率，$\\Omega = eE_0\\langle 1|z|2\\rangle/2\\hbar$是拉比频率。采用形如$|\\psi(t)\\rangle = a e^{i\\omega_1 t}|1\\rangle + b e^{i\\omega_2 t}|2\\rangle$的解拟设，写出耦合的含时薛定谔方程。选取这些频率，使方程为定常态，不含任何振荡项。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由$Z = |2\\rangle\\langle 2| - |1\\rangle\\langle 1|$和$X\\cos\\nu t + Y\\sin\\nu t = e^{-i\\nu t}|2\\rangle\\langle 1| + e^{i\\nu t}|1\\rangle\\langle 2|$，把$i\\hbar\\frac{d}{dt}|\\psi\\rangle = H|\\psi\\rangle$投影到$|1\\rangle$和$|2\\rangle$上，得到$$i\\dot a = \\left(\\omega_1 - \\frac{\\omega}{2}\\right)a + \\Omega e^{i(\\omega_2 - \\omega_1 + \\nu)t}\\, b, \\qquad i\\dot b = \\left(\\omega_2 + \\frac{\\omega}{2}\\right)b + \\Omega e^{-i(\\omega_2 - \\omega_1 + \\nu)t}\\, a.$$当$\\omega_2 - \\omega_1 = -\\nu$时，振荡因子消失。对称的选择$\\omega_1 = \\nu/2$，$\\omega_2 = -\\nu/2$，取$\\delta = \\nu - \\omega$，给出定常态方程$$i\\dot a = \\frac{\\delta}{2}a + \\Omega b, \\qquad i\\dot b = -\\frac{\\delta}{2}b + \\Omega a.$$满足$\\omega_2 - \\omega_1 = -\\nu$的任何其他选择，都会给两个对角项加上同一个常数，即一个整体相位。选择$\\omega_1 = 0$，$\\omega_2 = -\\nu$就是卢金在式 (2.5) 中的转动参考系，$b = \\tilde{c}_2$。"
+   }
+  },
+  {
+   "id": "hw7-3b",
+   "source_id": "hw7.3b",
+   "source_number": "Problem Set 7, Problem 3(b)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的$\\Omega_1$写作$2\\Omega$，$\\omega_0$为$\\omega$，$\\omega_L$为$\\nu$，$\\delta_L = \\omega_L - \\omega_0$为$\\delta$，$|g\\rangle$、$|e\\rangle$为$|1\\rangle$、$|2\\rangle$；该题的哈密顿量在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-states",
+   "prompt": "对于哈密顿量为$H = \\frac{\\hbar\\omega}{2}Z + \\hbar\\Omega\\left[X\\cos(\\nu t) + Y\\sin(\\nu t)\\right]$的受驱二能级原子：你刚刚写出的薛定谔方程，与某个系统的薛定谔方程相同，该系统的哈密顿量仅是拉比频率和失谐$\\delta = \\nu - \\omega$的函数。给出这个哈密顿量，记为$H'$。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "把(a)问的方程读作$i\\hbar\\frac{d}{dt}(a, b) = H'(a, b)$，在基$\\{|1\\rangle, |2\\rangle\\}$中$$H' = \\hbar\\begin{pmatrix} \\delta/2 & \\Omega \\\\ \\Omega & -\\delta/2 \\end{pmatrix} = -\\frac{\\hbar\\delta}{2}Z + \\hbar\\Omega X.$$它不含时，只依赖于$\\Omega$和$\\delta$。它是式 (2.23) 的转动参考系哈密顿量$\\tilde{H}$加上常数$\\hbar\\delta/2$，耦合的符号相反，这是因为这里的$H$把驱动写成正号，而卢金的$-\\hat{d}\\cdot\\mathbf{E}$带负号。"
+   }
+  },
+  {
+   "id": "hw7-3c",
+   "source_id": "hw7.3c",
+   "source_number": "Problem Set 7, Problem 3(c)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的$\\Omega_1$写作$2\\Omega$，$\\omega_0$为$\\omega$，$\\omega_L$为$\\nu$，$\\delta_L = \\omega_L - \\omega_0$为$\\delta$，$|g\\rangle$、$|e\\rangle$为$|1\\rangle$、$|2\\rangle$；MIT 的有效拉比频率$\\Omega$改名为$\\Omega'$，以免与卢金的$\\Omega$冲突，且该题的哈密顿量在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-states",
+   "prompt": "对于哈密顿量为$H = \\frac{\\hbar\\omega}{2}Z + \\hbar\\Omega\\left[X\\cos(\\nu t) + Y\\sin(\\nu t)\\right]$的受驱二能级原子：用三角函数写出$H'$，其中$\\sin 2\\theta = 2\\Omega/\\Omega'$，$\\Omega' = \\sqrt{4\\Omega^2 + \\delta^2}$是“有效”拉比频率。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "由$\\sin 2\\theta = 2\\Omega/\\Omega'$和$\\cos 2\\theta = \\delta/\\Omega'$，$$H' = \\frac{\\hbar\\Omega'}{2}\\left(-\\cos 2\\theta\\, Z + \\sin 2\\theta\\, X\\right) = \\frac{\\hbar\\Omega'}{2}\\begin{pmatrix} \\cos 2\\theta & \\sin 2\\theta \\\\ \\sin 2\\theta & -\\cos 2\\theta \\end{pmatrix}$$在基$\\{|1\\rangle, |2\\rangle\\}$中：这是一个强度为$\\Omega'$、从$z$轴倾斜$2\\theta$的场，即式 (2.33) 的驱动矢量$\\boldsymbol{\\Omega}$，至多相差一个符号。共振时$2\\theta = \\pi/2$；远失谐时，$2\\theta \\to 0$。"
+   }
+  },
+  {
+   "id": "hw7-3d",
+   "source_id": "hw7.3d",
+   "source_number": "Problem Set 7, Problem 3(d)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的$\\Omega_1$写作$2\\Omega$，$\\omega_0$为$\\omega$，$\\omega_L$为$\\nu$，$\\delta_L = \\omega_L - \\omega_0$为$\\delta$，$|g\\rangle$、$|e\\rangle$为$|1\\rangle$、$|2\\rangle$；MIT 的有效拉比频率$\\Omega$写作$\\Omega' = \\sqrt{4\\Omega^2 + \\delta^2}$，且该题的哈密顿量在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-states",
+   "prompt": "对于哈密顿量为$H = \\frac{\\hbar\\omega}{2}Z + \\hbar\\Omega\\left[X\\cos(\\nu t) + Y\\sin(\\nu t)\\right]$的受驱二能级原子：将$H'$对角化，求出本征值及相应的本征矢量。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "本征值为$\\pm\\frac{\\hbar\\Omega'}{2} = \\pm\\hbar\\sqrt{\\frac{\\delta^2}{4} + \\Omega^2}$，本征矢量为$$+\\frac{\\hbar\\Omega'}{2}:\\ \\cos\\theta\\,|1\\rangle + \\sin\\theta\\,|2\\rangle, \\qquad -\\frac{\\hbar\\Omega'}{2}:\\ -\\sin\\theta\\,|1\\rangle + \\cos\\theta\\,|2\\rangle,$$正如半角恒等式所示：(c)问的矩阵把$(\\cos\\theta, \\sin\\theta)$映为$(\\cos(2\\theta - \\theta), \\sin(2\\theta - \\theta))$。这些就是缀饰态。它们的分裂$\\hbar\\Omega' = 2\\hbar\\sqrt{(\\delta/2)^2 + \\Omega^2}$就是式 (2.24) 中的$\\epsilon_- - \\epsilon_+$，本征值为$\\epsilon_\\mp + \\hbar\\delta/2$：较低的态$-\\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$是卢金的$|+\\rangle$，较高的态$\\cos\\theta|1\\rangle + \\sin\\theta|2\\rangle$是他的$|-\\rangle$，至多相差$\\Omega$的符号。共振时$\\theta = \\pi/4$，它们是$(|1\\rangle \\pm |2\\rangle)/\\sqrt{2}$，分裂为$2\\Omega$；远失谐时，$\\theta \\approx \\Omega/\\delta$，上态为$|1\\rangle + (\\Omega/\\delta)|2\\rangle$，能量为$\\hbar\\delta/2 + \\hbar\\Omega^2/\\delta$，即式 (2.25) 的光致频移$\\hbar\\Omega^2/\\delta$，位于该参考系的常数之上。"
+   }
+  },
+  {
+   "id": "hw7-3e",
+   "source_id": "hw7.3e",
+   "source_number": "Problem Set 7, Problem 3(e)",
+   "origin": "mit-8422",
+   "changes": "改用卢金的记号重述：MIT 的$\\Omega_1$写作$2\\Omega$，$\\omega_0$为$\\omega$，$\\omega_L$为$\\nu$，$\\delta_L = \\omega_L - \\omega_0$为$\\delta$，$|g\\rangle$、$|e\\rangle$为$|1\\rangle$、$|2\\rangle$；MIT 的有效拉比频率$\\Omega$写作$\\Omega' = \\sqrt{4\\Omega^2 + \\delta^2}$，且该题的哈密顿量在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-states",
+   "prompt": "对于哈密顿量为$H = \\frac{\\hbar\\omega}{2}Z + \\hbar\\Omega\\left[X\\cos(\\nu t) + Y\\sin(\\nu t)\\right]$的受驱二能级原子：利用这些结果，求出$H$的薛定谔方程在原参考系中的含时解。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "每个缀饰态以各自的相位演化，能量$\\pm\\hbar\\Omega'/2$对应$e^{\\mp i\\Omega' t/2}$，而(a)问的参考系由$|\\psi(t)\\rangle = e^{i\\nu t/2}a(t)|1\\rangle + e^{-i\\nu t/2}b(t)|2\\rangle$还原。取$A = -\\sin\\theta\\, a(0) + \\cos\\theta\\, b(0)$和$B = \\cos\\theta\\, a(0) + \\sin\\theta\\, b(0)$，$$|\\psi(t)\\rangle = \\left[-A\\sin\\theta\\, e^{i\\Omega' t/2} + B\\cos\\theta\\, e^{-i\\Omega' t/2}\\right]e^{i\\nu t/2}|1\\rangle + \\left[A\\cos\\theta\\, e^{i\\Omega' t/2} + B\\sin\\theta\\, e^{-i\\Omega' t/2}\\right]e^{-i\\nu t/2}|2\\rangle.$$对于从$|1\\rangle$出发的原子，这是$$|\\psi(t)\\rangle = \\left[\\cos\\frac{\\Omega' t}{2} - i\\frac{\\delta}{\\Omega'}\\sin\\frac{\\Omega' t}{2}\\right]e^{i\\nu t/2}|1\\rangle - i\\frac{2\\Omega}{\\Omega'}\\sin\\frac{\\Omega' t}{2}\\, e^{-i\\nu t/2}|2\\rangle,$$所以$p_2 = \\frac{4\\Omega^2}{4\\Omega^2 + \\delta^2}\\sin^2\\frac{\\Omega' t}{2}$：以有效频率进行的拉比振荡，其衬度因失谐而减小。共振时这就是$p_2 = \\sin^2\\Omega t$，即式 (2.13)–(2.14)。"
+   }
+  },
+  {
+   "id": "hw10-1a",
+   "source_id": "hw10.1a",
+   "source_number": "Problem Set 10, Problem 1(a)",
+   "origin": "mit-8422",
+   "changes": "与习题集 7 第 3 题一样，改用卢金的记号重述：MIT 的$\\Omega_1$写作$2\\Omega$，$\\omega_0$为$\\omega$，$\\omega_L$为$\\nu$，$\\delta_L = \\omega_L - \\omega_0$为$\\delta$，$|a\\rangle$、$|b\\rangle$为$|1\\rangle$、$|2\\rangle$；前一题的哈密顿量和缀饰态在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-states",
+   "prompt": "对于习题集 7 第 3 题中哈密顿量为$H = \\frac{\\hbar\\omega}{2}Z + \\hbar\\Omega\\left[X\\cos(\\nu t) + Y\\sin(\\nu t)\\right]$的受驱二能级原子，其转动参考系哈密顿量$H' = \\hbar\\begin{pmatrix} \\delta/2 & \\Omega \\\\ \\Omega & -\\delta/2 \\end{pmatrix}$有缀饰态$\\cos\\theta|1\\rangle + \\sin\\theta|2\\rangle$和$-\\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$，位于$\\pm\\hbar\\Omega'/2$，其中$\\Omega' = \\sqrt{4\\Omega^2 + \\delta^2}$且$\\sin 2\\theta = 2\\Omega/\\Omega'$：指出缀饰态中的交流斯塔克偏移。它表现为这两个缀饰态的能级相对于未耦合态的偏移。在$\\Omega \\ll |\\delta|$的极限下，斯塔克偏移是多少？写出这一极限下的缀饰态。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在转动参考系中，未耦合态位于$+\\hbar\\delta/2$（$|1\\rangle$）和$-\\hbar\\delta/2$（$|2\\rangle$）；耦合把它们推开到$\\pm\\hbar\\Omega'/2$。每个能级移动$\\frac{\\hbar}{2}(\\Omega' - |\\delta|)$，延续$|1\\rangle$的那个沿$\\delta$的方向移动，延续$|2\\rangle$的那个则沿相反方向。对于$\\Omega \\ll |\\delta|$，$\\Omega' \\approx |\\delta| + 2\\Omega^2/|\\delta|$，所以$$\\Delta E_1 = +\\frac{\\hbar\\Omega^2}{\\delta}, \\qquad \\Delta E_2 = -\\frac{\\hbar\\Omega^2}{\\delta},$$这就是 2.1 节的光致频移：红失谐（$\\delta < 0$）使基态降低。在这一极限下$\\theta \\approx \\Omega/\\delta$（对$\\delta < 0$为$\\pi/2 + \\Omega/\\delta$），到$\\Omega/\\delta$的一阶，缀饰态为$$|1\\rangle + \\frac{\\Omega}{\\delta}|2\\rangle, \\qquad |2\\rangle - \\frac{\\Omega}{\\delta}|1\\rangle:$$每个裸态都混有少量的另一个态。"
+   }
+  },
+  {
+   "id": "hw10-1b",
+   "source_id": "hw10.1b",
+   "source_number": "Problem Set 10, Problem 1(b)",
+   "origin": "mit-8422",
+   "changes": "与习题集 7 第 3 题一样，改用卢金的记号重述：MIT 的$\\Omega_1$写作$2\\Omega$，$\\omega_0$为$\\omega$，$\\omega_L$为$\\nu$，$\\delta_L = \\omega_L - \\omega_0$为$\\delta$，$|a\\rangle$、$|b\\rangle$为$|1\\rangle$、$|2\\rangle$；前一题的哈密顿量和缀饰态在本问开头重复给出；MIT 的$\\mathcal{P}(\\omega_L, t)$写作$P(\\nu, t)$，其$\\alpha(\\omega_L)$为$\\alpha(\\nu)$。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-states",
+   "prompt": "对于习题集 7 第 3 题中哈密顿量为$H = \\frac{\\hbar\\omega}{2}Z + \\hbar\\Omega\\left[X\\cos(\\nu t) + Y\\sin(\\nu t)\\right]$的受驱二能级原子，其转动参考系哈密顿量$H' = \\hbar\\begin{pmatrix} \\delta/2 & \\Omega \\\\ \\Omega & -\\delta/2 \\end{pmatrix}$有缀饰态$\\cos\\theta|1\\rangle + \\sin\\theta|2\\rangle$和$-\\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$，位于$\\pm\\hbar\\Omega'/2$，其中$\\Omega' = \\sqrt{4\\Omega^2 + \\delta^2}$且$\\sin 2\\theta = 2\\Omega/\\Omega'$：极化是偶极算符对缀饰态的期望值。它也可以写成$P(\\nu, t) = \\alpha(\\nu)E_0\\cos(\\nu t)$。比较这两个表达式，并把$\\alpha(\\nu)$表示成$|\\langle 1|z|2\\rangle|^2$的函数。把振子强度$f_{12} = \\frac{2m\\omega}{\\hbar}|\\langle 1|z|2\\rangle|^2$代入该表达式，并与已知表达式$\\alpha(\\nu) = \\frac{e^2}{m}\\frac{f_{12}}{\\omega^2 - \\nu^2}$比较。它们在何处一致？简要评述$\\nu \\to \\omega$的物理。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "取原子处于延续$|1\\rangle$的缀饰态，$\\Omega \\ll |\\delta|$。在原参考系中（习题 7.3(a) 的拟设，$\\omega_1 = \\nu/2$，$\\omega_2 = -\\nu/2$），它是$e^{i\\nu t/2}|1\\rangle + \\frac{\\Omega}{\\delta}e^{-i\\nu t/2}|2\\rangle$。偶极子为$-ez$，$z_{12} = \\langle 1|z|2\\rangle$取实数，则$$P = -e\\langle z\\rangle = -\\frac{2e z_{12}\\Omega}{\\delta}\\cos\\nu t = \\frac{e^2|z_{12}|^2}{\\hbar(\\omega - \\nu)}E_0\\cos\\nu t,$$这里用了$\\Omega = eE_0 z_{12}/2\\hbar$和$\\delta = \\nu - \\omega$。于是$\\alpha(\\nu) = \\frac{e^2|z_{12}|^2}{\\hbar(\\omega - \\nu)}$。代入$f_{12}$的振子表达式为$$\\alpha(\\nu) = \\frac{2e^2\\omega|z_{12}|^2}{\\hbar(\\omega^2 - \\nu^2)} = \\frac{e^2|z_{12}|^2}{\\hbar}\\left[\\frac{1}{\\omega - \\nu} + \\frac{1}{\\omega + \\nu}\\right].$$它们在共振附近$\\nu \\approx \\omega$处一致，那里第一项占主导。当$\\nu \\to \\omega$时两者都发散：缀饰态的结果要求$\\Omega \\ll |\\delta|$，在那里不成立；而在真实原子中，自发衰变（谱线宽度$\\gamma$）和饱和使响应保持有限，此时极化落后于场$\\pi/2$（吸收）。"
+   }
+  },
+  {
+   "id": "hw10-1c",
+   "source_id": "hw10.1c",
+   "source_number": "Problem Set 10, Problem 1(c)",
+   "origin": "mit-8422",
+   "changes": "与习题集 7 第 3 题一样，改用卢金的记号重述：MIT 的$\\Omega_1$写作$2\\Omega$，$\\omega_0$为$\\omega$，$\\omega_L$为$\\nu$，$\\delta_L = \\omega_L - \\omega_0$为$\\delta$，$|a\\rangle$、$|b\\rangle$为$|1\\rangle$、$|2\\rangle$；前一题的哈密顿量和缀饰态在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-states",
+   "prompt": "对于习题集 7 第 3 题中哈密顿量为$H = \\frac{\\hbar\\omega}{2}Z + \\hbar\\Omega\\left[X\\cos(\\nu t) + Y\\sin(\\nu t)\\right]$的受驱二能级原子，其转动参考系哈密顿量$H' = \\hbar\\begin{pmatrix} \\delta/2 & \\Omega \\\\ \\Omega & -\\delta/2 \\end{pmatrix}$有缀饰态$\\cos\\theta|1\\rangle + \\sin\\theta|2\\rangle$和$-\\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$，位于$\\pm\\hbar\\Omega'/2$，其中$\\Omega' = \\sqrt{4\\Omega^2 + \\delta^2}$且$\\sin 2\\theta = 2\\Omega/\\Omega'$：令$\\nu \\to 0$，对两个表达式写出直流极化率。做了什么近似，才造成了这一差异？",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "缀饰态的结果给出$\\alpha(0) = \\frac{e^2|z_{12}|^2}{\\hbar\\omega}$，振子表达式给出$\\alpha(0) = \\frac{2e^2|z_{12}|^2}{\\hbar\\omega}$，是前者的两倍。差异来自旋转波近似：$H$只保留了驱动的同旋转部分，因而丢掉了反旋转项$1/(\\omega + \\nu)$，它在共振附近可以忽略，但在$\\nu = 0$时等于共振项$1/(\\omega - \\nu)$。静场没有旋转的方向，两项的贡献相等。"
+   }
+  },
+  {
+   "id": "hw10-1d",
+   "source_id": "hw10.1d",
+   "source_number": "Problem Set 10, Problem 1(d)",
+   "origin": "mit-8422",
+   "changes": "与习题集 7 第 3 题一样，改用卢金的记号重述：MIT 的$\\Omega_1$写作$2\\Omega$，$\\omega_0$为$\\omega$，$\\omega_L$为$\\nu$，$\\delta_L = \\omega_L - \\omega_0$为$\\delta$，$|a\\rangle$、$|b\\rangle$为$|1\\rangle$、$|2\\rangle$；前一题的哈密顿量和缀饰态在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-states",
+   "prompt": "对于习题集 7 第 3 题中哈密顿量为$H = \\frac{\\hbar\\omega}{2}Z + \\hbar\\Omega\\left[X\\cos(\\nu t) + Y\\sin(\\nu t)\\right]$的受驱二能级原子，其转动参考系哈密顿量$H' = \\hbar\\begin{pmatrix} \\delta/2 & \\Omega \\\\ \\Omega & -\\delta/2 \\end{pmatrix}$有缀饰态$\\cos\\theta|1\\rangle + \\sin\\theta|2\\rangle$和$-\\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$，位于$\\pm\\hbar\\Omega'/2$，其中$\\Omega' = \\sqrt{4\\Omega^2 + \\delta^2}$且$\\sin 2\\theta = 2\\Omega/\\Omega'$：令$|\\psi(t = 0)\\rangle = |1\\rangle$。把$|\\psi(t)\\rangle$表示成缀饰态的线性叠加。发现$|\\psi(t)\\rangle$处于态$|1\\rangle$的概率$P(t)$是多少？这表明缀饰态包含了拉比“章动”或振荡的物理。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "取$|u\\rangle = \\cos\\theta|1\\rangle + \\sin\\theta|2\\rangle$（能量$+\\hbar\\Omega'/2$）和$|l\\rangle = -\\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$（$-\\hbar\\Omega'/2$），$|1\\rangle = \\cos\\theta|u\\rangle - \\sin\\theta|l\\rangle$，所以在转动参考系中$$|\\psi(t)\\rangle = \\cos\\theta\\, e^{-i\\Omega' t/2}|u\\rangle - \\sin\\theta\\, e^{i\\Omega' t/2}|l\\rangle,$$而原参考系只是给$|1\\rangle$、$|2\\rangle$加上相位$e^{\\pm i\\nu t/2}$。于是$\\langle 1|\\psi\\rangle = \\cos^2\\theta\\, e^{-i\\Omega' t/2} + \\sin^2\\theta\\, e^{i\\Omega' t/2}$，至多差一个相位，$$P(t) = \\cos^2\\frac{\\Omega' t}{2} + \\cos^2 2\\theta\\sin^2\\frac{\\Omega' t}{2} = 1 - \\frac{4\\Omega^2}{4\\Omega^2 + \\delta^2}\\sin^2\\frac{\\Omega' t}{2}.$$这两个缀饰态各自以稳定的相位演化；它们在分裂$\\Omega'$处的拍就是广义拉比频率下的拉比振荡，在共振（$\\theta = \\pi/4$）时是完全的。"
+   }
+  },
+  {
+   "id": "hw10-1e",
+   "source_id": "hw10.1e",
+   "source_number": "Problem Set 10, Problem 1(e)",
+   "origin": "mit-8422",
+   "changes": "与习题集 7 第 3 题一样，改用卢金的记号重述：MIT 的$\\Omega_1$写作$2\\Omega$，$\\omega_0$为$\\omega$，$\\omega_L$为$\\nu$，$\\delta_L = \\omega_L - \\omega_0$为$\\delta$，$|a\\rangle$、$|b\\rangle$为$|1\\rangle$、$|2\\rangle$；前一题的哈密顿量和缀饰态在本问开头重复给出。",
+   "kind": "problem",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dressed-states",
+   "prompt": "对于习题集 7 第 3 题中哈密顿量为$H = \\frac{\\hbar\\omega}{2}Z + \\hbar\\Omega\\left[X\\cos(\\nu t) + Y\\sin(\\nu t)\\right]$的受驱二能级原子，其转动参考系哈密顿量$H' = \\hbar\\begin{pmatrix} \\delta/2 & \\Omega \\\\ \\Omega & -\\delta/2 \\end{pmatrix}$有缀饰态$\\cos\\theta|1\\rangle + \\sin\\theta|2\\rangle$和$-\\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$，位于$\\pm\\hbar\\Omega'/2$，其中$\\Omega' = \\sqrt{4\\Omega^2 + \\delta^2}$且$\\sin 2\\theta = 2\\Omega/\\Omega'$：利用你的解，求出作用在两个缀饰态中每一个上的受激光力。",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "在场、因而$\\Omega(\\mathbf{r})$随空间变化之处，绝热地跟随某个缀饰态的原子，会在其能量$\\pm\\hbar\\Omega'/2$构成的势中运动：$$\\mathbf{F}_\\pm = \\mp\\frac{\\hbar}{2}\\nabla\\Omega' = \\mp\\frac{2\\hbar\\Omega}{\\Omega'}\\nabla\\Omega = \\mp\\hbar\\sin 2\\theta\\,\\nabla\\Omega.$$较高的缀饰态被推向弱场，较低的缀饰态被推向强场，两者所受的力大小相等、方向相反。对于$\\delta > 0$，处于$|1\\rangle$的原子跟随较高的态，被光排斥；对于$\\delta < 0$，它跟随较低的态，被光吸引。远离共振时，基态所受的力是$-\\nabla(\\hbar\\Omega^2/\\delta)$，即(a)问光致频移的梯度：8.2 节的偶极力。处于叠加态的原子，感受到按其缀饰态布居加权的这两个力。"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ex-bloch-eom",
+   "concept": "bloch-precession"
+  },
+  {
+   "exercise": "ex-bloch-eom",
+   "concept": "heisenberg-picture"
+  },
+  {
+   "exercise": "hw7-3a",
+   "concept": "rotating-frame"
+  },
+  {
+   "exercise": "hw7-3a",
+   "concept": "two-level-equations-of-motion"
+  },
+  {
+   "exercise": "hw7-3b",
+   "concept": "rotating-frame-hamiltonian"
+  },
+  {
+   "exercise": "hw7-3b",
+   "concept": "detuning"
+  },
+  {
+   "exercise": "hw7-3c",
+   "concept": "rotating-frame-hamiltonian"
+  },
+  {
+   "exercise": "hw7-3c",
+   "concept": "rabi-frequency"
+  },
+  {
+   "exercise": "hw7-3d",
+   "concept": "dressed-states"
+  },
+  {
+   "exercise": "hw7-3d",
+   "concept": "dressed-state-energies"
+  },
+  {
+   "exercise": "hw7-3e",
+   "concept": "dressed-states"
+  },
+  {
+   "exercise": "hw7-3e",
+   "concept": "rabi-oscillations"
+  },
+  {
+   "exercise": "hw10-1a",
+   "concept": "ac-stark-shift"
+  },
+  {
+   "exercise": "hw10-1a",
+   "concept": "dressed-state-energies"
+  },
+  {
+   "exercise": "hw10-1b",
+   "concept": "dressed-states"
+  },
+  {
+   "exercise": "hw10-1b",
+   "concept": "rotating-wave-approximation"
+  },
+  {
+   "exercise": "hw10-1c",
+   "concept": "rotating-wave-approximation"
+  },
+  {
+   "exercise": "hw10-1d",
+   "concept": "dressed-states"
+  },
+  {
+   "exercise": "hw10-1d",
+   "concept": "rabi-oscillations"
+  },
+  {
+   "exercise": "hw10-1e",
+   "concept": "dressed-state-energies"
+  },
+  {
+   "exercise": "hw10-1e",
+   "concept": "dressed-states"
+  }
+ ],
+ "referents": [
+  {
+   "id": "lvl-1",
+   "label": "基态|1⟩",
+   "figures": [
+    "fig-level-scheme",
+    "sim-pulse-area",
+    "sim-dressed",
+    "sim-bloch"
+   ]
+  },
+  {
+   "id": "lvl-2",
+   "label": "激发态|2⟩",
+   "figures": [
+    "fig-level-scheme",
+    "sim-pulse-area",
+    "sim-dressed",
+    "sim-bloch"
+   ]
+  },
+  {
+   "id": "dressed-plus",
+   "label": "缀饰态|+⟩",
+   "figures": [
+    "sim-dressed"
+   ]
+  },
+  {
+   "id": "dressed-minus",
+   "label": "缀饰态|−⟩",
+   "figures": [
+    "sim-dressed"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "footnote-1",
+   "kind": "book",
+   "number": "1",
+   "html": "对这一绝热跟随的修正，可以通过把此解代入<a href=\"#drv-rwa-equations\">(2.10)</a>得到，结果为$\\kctildetwo = -(\\kOmega/\\kdelta)\\kcone + (i/\\kdelta)d/d\\kt((\\kOmega/\\kdelta)\\kcone) + ....$。这一过程有时称为<span data-concept=\"adiabatic-elimination\">绝热展开</span>。"
+  },
+  {
+   "id": "c-eq-2-2",
+   "kind": "correction",
+   "html": "书中在右括号内印了一个句点，$\\kEenv^* e^{i\\knu \\kt}.)$。场因子为$(\\kEenv e^{-i\\knu \\kt} + \\kEenv^* e^{i\\knu \\kt})$。"
+  },
+  {
+   "id": "c-eq-2-10-cited",
+   "kind": "correction",
+   "html": "书中引用的是式 (2.10)。$\\dot{\\kcone}$的方程是式 (2.11)：把$\\kctildetwo = -(\\kOmega/\\kdelta)\\kcone$代入$\\dot{\\kcone} = i\\kOmega^*\\kctildetwo$，得到$\\dot{\\kcone} = -i(|\\kOmega|^2/\\kdelta)\\kcone$。"
+  },
+  {
+   "id": "c-eq-2-25",
+   "kind": "correction",
+   "html": "书中印的是$\\kepsm = |\\kOmega|^2/\\kdelta$和$\\kepsp = -\\kdelta - |\\kOmega|^2/\\kdelta$。式 (2.24) 带有因子$\\hbar$，所以远失谐时的能量为$\\kepsm \\approx \\hbar|\\kOmega|^2/\\kdelta$和$\\kepsp \\approx -\\hbar\\kdelta - \\hbar|\\kOmega|^2/\\kdelta$。"
+  },
+  {
+   "id": "c-fig-2-2b",
+   "kind": "correction",
+   "html": "书中的图 2.2b 把上支标为$|+\\rangle$，下支标为$|-\\rangle$。由式 (2.24)，$\\kepsp = \\hbar(-\\kdelta/2 - \\sqrt{(\\kdelta/2)^2 + |\\kOmega|^2})$是较低的能量，式 (2.25) 和式 (2.26) 也证实了这一点，所以上支是$|-\\rangle$，下支是$|+\\rangle$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "rotating-frame-equations",
+   "what": "转动参考系中的运动方程",
+   "source": "现代原子与光学物理 II，2.1.1 二能级原子",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = \\hbar\\komega|2\\rangle\\langle 2| - (|1\\rangle\\langle 2|\\kmu_{1,2} + |2\\rangle\\langle 1|\\kmu_{2,1})\\left(\\kEenv e^{-i\\knu \\kt} + \\kEenv^* e^{i\\knu \\kt}\\right)",
+       "src": "(2.2)"
+      },
+      {
+       "tex": "|\\kpsi\\rangle = \\kcone(\\kt)|1\\rangle + \\kctwo(\\kt)|2\\rangle",
+       "src": "(2.3)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\kH|\\kpsi\\rangle}",
+      "src": "(2.4)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle 2|i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\langle 2|\\kH|\\kpsi\\rangle}",
+       "uses": [],
+       "cap": "将两边与$\\langle 2|$求内积。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kctwo}(\\kt)} = \\mk{w}{\\hbar\\komega\\, \\kctwo(\\kt)} - \\mk{R}{\\left(\\kEenv e^{-i\\knu \\kt} + \\kEenv^* e^{i\\knu \\kt}\\right)\\kmu_{21}\\kcone(\\kt)}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "这些态是规范正交的，所以$\\langle 2|\\psi\\rangle = c_2$；$\\hat{H}$中只有$\\hbar\\omega|2\\rangle\\langle 2|$和含$|2\\rangle\\langle 1|\\mu_{2,1}$的项能到达$\\langle 2|$。",
+       "map": {
+        "R": [
+         "w",
+         "R"
+        ]
+       }
+      }
+     ],
+     "src": "2.1.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = \\hbar\\komega|2\\rangle\\langle 2| - (|1\\rangle\\langle 2|\\kmu_{1,2} + |2\\rangle\\langle 1|\\kmu_{2,1})\\left(\\kEenv e^{-i\\knu \\kt} + \\kEenv^* e^{i\\knu \\kt}\\right)",
+       "src": "(2.2)"
+      },
+      {
+       "tex": "|\\kpsi\\rangle = \\kcone(\\kt)|1\\rangle + \\kctwo(\\kt)|2\\rangle",
+       "src": "(2.3)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\kH|\\kpsi\\rangle}",
+      "src": "(2.4)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle 1|i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\langle 1|\\kH|\\kpsi\\rangle}",
+       "uses": [],
+       "cap": "将两边与$\\langle 1|$求内积。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcone}(\\kt)} = -\\mk{R}{\\left(\\kEenv e^{-i\\knu \\kt} + \\kEenv^* e^{i\\knu \\kt}\\right)\\kmu_{12}\\kctwo(\\kt)}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "$\\hat{H}$中只有含$|1\\rangle\\langle 2|\\mu_{1,2}$的项能到达$\\langle 1|$。"
+      }
+     ],
+     "src": "2.1.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kctwo(\\kt) = \\kctildetwo(\\kt)e^{-i\\knu \\kt}",
+       "src": "(2.5)"
+      },
+      {
+       "tex": "\\kdelta = \\knu - \\komega",
+       "src": "2.1.1"
+      },
+      {
+       "tex": "\\kmu = \\kmu_{21}",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\dot{\\kctwo}(\\kt)} = \\mk{w}{\\hbar\\komega\\, \\kctwo(\\kt)} - \\mk{R}{\\left(\\kEenv e^{-i\\knu \\kt} + \\kEenv^* e^{i\\knu \\kt}\\right)\\kmu_{21}\\kcone(\\kt)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar(\\dot{\\kctildetwo} - i\\knu\\kctildetwo)e^{-i\\knu \\kt}} = \\mk{w}{\\hbar\\komega\\, \\kctildetwo e^{-i\\knu \\kt}} - \\mk{R}{\\left(\\kEenv e^{-i\\knu \\kt} + \\kEenv^* e^{i\\knu \\kt}\\right)\\kmu_{21}\\kcone(\\kt)}",
+       "uses": [
+        1
+       ],
+       "cap": "取$c_2 = \\tilde{c}_2e^{-i\\nu t}$，由乘积法则得$\\dot{c}_2 = (\\dot{\\tilde{c}}_2 - i\\nu\\tilde{c}_2)e^{-i\\nu t}$。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar(\\dot{\\kctildetwo} - i\\knu\\kctildetwo)} = \\mk{w}{\\hbar\\komega\\, \\kctildetwo} - \\mk{R}{\\left(\\kEenv + \\kEenv^* e^{2i\\knu \\kt}\\right)\\kmu_{21}\\kcone(\\kt)}",
+       "uses": [],
+       "cap": "全式乘以$e^{i\\nu t}$。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kctildetwo}(\\kt)} = \\mk{w}{-\\hbar(\\knu - \\komega)\\kctildetwo(\\kt)} - \\mk{R}{\\left(\\kEenv + \\kEenv^* e^{2i\\knu \\kt}\\right)\\kmu_{21}\\kcone(\\kt)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kctildetwo}(\\kt)} = \\mk{w}{-\\hbar\\kdelta\\kctildetwo(\\kt)} - \\mk{R}{\\left(\\kEenv + \\kEenv^* e^{2i\\knu \\kt}\\right)\\kmu \\kcone(\\kt)}",
+       "uses": [
+        2,
+        3
+       ]
+      }
+     ],
+     "num": "(2.6)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kctwo(\\kt) = \\kctildetwo(\\kt)e^{-i\\knu \\kt}",
+       "src": "(2.5)"
+      },
+      {
+       "tex": "\\langle\\kpsi_1|\\hat{O}|\\kpsi_2\\rangle = (\\langle\\kpsi_2|\\hat{O}|\\kpsi_1\\rangle)^*",
+       "src": "(1.5)"
+      },
+      {
+       "tex": "\\kmu = \\kmu_{21}",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\dot{\\kcone}(\\kt)} = -\\mk{R}{\\left(\\kEenv e^{-i\\knu \\kt} + \\kEenv^* e^{i\\knu \\kt}\\right)\\kmu_{12}\\kctwo(\\kt)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcone}(\\kt)} = -\\mk{R}{\\left(\\kEenv e^{-i\\knu \\kt} + \\kEenv^* e^{i\\knu \\kt}\\right)\\kmu_{12}\\kctildetwo(\\kt)e^{-i\\knu \\kt}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcone}(\\kt)} = -\\mk{R}{\\left(\\kEenv e^{-2i\\knu \\kt} + \\kEenv^*\\right)\\kmu_{12}\\kctildetwo(\\kt)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcone}(\\kt)} = -\\mk{R}{\\left(\\kEenv e^{-2i\\knu \\kt} + \\kEenv^*\\right)\\kmu^*\\kctildetwo(\\kt)}",
+       "uses": [
+        2,
+        3
+       ],
+       "cap": "偶极算符是厄米的，所以$\\mu_{12} = \\mu_{21}^* = \\mu^*$。"
+      }
+     ],
+     "num": "(2.7)"
+    }
+   ]
+  },
+  {
+   "id": "rwa-equations",
+   "what": "旋转波近似下的运动方程",
+   "source": "现代原子与光学物理 II，2.1.1 二能级原子",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "在条件 (2.9) 下，忽略$\\propto e^{\\pm 2i\\nu t}$的项，它们以两倍光频振荡：这就是旋转波近似。",
+       "src": "(2.9)"
+      },
+      {
+       "tex": "\\kOmega = \\kEenv\\kmu/\\hbar",
+       "src": "(2.8)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\dot{\\kctildetwo}(\\kt)} = \\mk{w}{-\\hbar\\kdelta\\kctildetwo(\\kt)} - \\mk{R}{\\left(\\kEenv + \\kEenv^* e^{2i\\knu \\kt}\\right)\\kmu \\kcone(\\kt)}",
+      "src": "(2.6)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kctildetwo}(\\kt)} = \\mk{w}{-\\hbar\\kdelta\\kctildetwo(\\kt)} - \\mk{R}{\\kEenv\\kmu \\kcone(\\kt)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kctildetwo}(\\kt)} = \\mk{w}{i\\kdelta\\kctildetwo(\\kt)} + \\mk{R}{i\\frac{\\kEenv\\kmu}{\\hbar}\\kcone(\\kt)}",
+       "uses": [],
+       "cap": "除以$i\\hbar$，其中$1/i = -i$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kctildetwo}(\\kt)} = \\mk{w}{i\\kdelta\\kctildetwo(\\kt)} + \\mk{R}{i\\kOmega \\kcone(\\kt)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(2.10)"
+    },
+    {
+     "assumes": [
+      {
+       "text": "在条件 (2.9) 下，忽略$\\propto e^{\\pm 2i\\nu t}$的项，它们以两倍光频振荡：这就是旋转波近似。",
+       "src": "(2.9)"
+      },
+      {
+       "tex": "\\kOmega = \\kEenv\\kmu/\\hbar",
+       "src": "(2.8)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\dot{\\kcone}(\\kt)} = -\\mk{R}{\\left(\\kEenv e^{-2i\\knu \\kt} + \\kEenv^*\\right)\\kmu^*\\kctildetwo(\\kt)}",
+      "src": "(2.7)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcone}(\\kt)} = -\\mk{R}{\\kEenv^*\\kmu^*\\kctildetwo(\\kt)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}(\\kt)} = \\mk{R}{i\\frac{\\kEenv^*\\kmu^*}{\\hbar}\\kctildetwo(\\kt)}",
+       "uses": [],
+       "cap": "除以$i\\hbar$，其中$1/i = -i$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}(\\kt)} = \\mk{R}{i\\kOmega^*\\kctildetwo(\\kt)}",
+       "uses": [
+        1
+       ],
+       "cap": "式 (2.8) 的共轭为$\\Omega^* = \\mathcal{E}^*\\mu^*/\\hbar$。"
+      }
+     ],
+     "num": "(2.11)"
+    }
+   ]
+  },
+  {
+   "id": "rabi-oscillations",
+   "what": "共振时的拉比振荡",
+   "source": "现代原子与光学物理 II，2.1.1 二能级原子",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dot{\\kctildetwo}(\\kt) = i\\kdelta\\kctildetwo(\\kt) + i\\kOmega \\kcone(\\kt)",
+       "src": "(2.10)"
+      },
+      {
+       "text": "场处于共振，$\\kdelta = 0$，$\\kOmega$为常数。",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcone}(\\kt)} = \\mk{R}{i\\kOmega^*\\kctildetwo(\\kt)}",
+      "src": "(2.11)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\ddot{\\kcone}(\\kt)} = \\mk{R}{i\\kOmega^*\\dot{\\kctildetwo}(\\kt)}",
+       "uses": [
+        1
+       ],
+       "cap": "再微分一次；$\\Omega$为常数。"
+      },
+      {
+       "tex": "\\mk{L}{\\ddot{\\kcone}(\\kt)} = \\mk{R}{i\\kOmega^*\\,i\\kOmega\\kcone(\\kt)}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\ddot{\\kcone}(\\kt)} = \\mk{R}{-|\\kOmega|^2 \\kcone(\\kt)}",
+       "uses": []
+      }
+     ],
+     "num": "(2.12)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\dot{\\kcone}(\\kt) = i\\kOmega^*\\kctildetwo(\\kt)",
+       "src": "(2.11)"
+      },
+      {
+       "text": "场处于共振，$\\kdelta = 0$，$\\kOmega$为常数。",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kctildetwo}(\\kt)} = \\mk{d}{i\\kdelta\\kctildetwo(\\kt)} + \\mk{R}{i\\kOmega \\kcone(\\kt)}",
+      "src": "(2.10)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kctildetwo}(\\kt)} = \\mk{R}{i\\kOmega \\kcone(\\kt)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\ddot{\\kctildetwo}(\\kt)} = \\mk{R}{i\\kOmega\\dot{\\kcone}(\\kt)}",
+       "uses": [
+        1
+       ],
+       "cap": "再微分一次；$\\Omega$为常数。"
+      },
+      {
+       "tex": "\\mk{L}{\\ddot{\\kctildetwo}(\\kt)} = \\mk{R}{i\\kOmega\\, i\\kOmega^*\\kctildetwo(\\kt)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\ddot{\\kctildetwo}(\\kt)} = \\mk{R}{-|\\kOmega|^2\\kctildetwo(\\kt)}",
+       "uses": []
+      }
+     ],
+     "num": "(2.12)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "概率幅按正弦和余弦演化：$\\ddot{x} = -|\\kOmega|^2 x$的解是$\\cos|\\kOmega|\\kt$与$\\sin|\\kOmega|\\kt$之和。",
+       "src": "2.1.1"
+      },
+      {
+       "text": "原子初始处于态$|1\\rangle$：$\\kcone(0) = 1$，$\\kctildetwo(0) = 0$。",
+       "src": "2.1.1"
+      },
+      {
+       "tex": "\\dot{\\kcone}(\\kt) = i\\kOmega^*\\kctildetwo(\\kt)",
+       "src": "(2.11)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\ddot{\\kcone}(\\kt)} = \\mk{R}{-|\\kOmega|^2 \\kcone(\\kt)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kcone(\\kt)} = \\mk{a}{a\\cos|\\kOmega|\\kt} + \\mk{b}{b\\sin|\\kOmega|\\kt}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "R": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\kcone(\\kt)} = \\mk{a}{\\cos|\\kOmega|\\kt} + \\mk{b}{b\\sin|\\kOmega|\\kt}",
+       "uses": [
+        2
+       ],
+       "cap": "在$t = 0$时，$c_1(0) = a = 1$。"
+      },
+      {
+       "tex": "\\mk{L}{\\kcone(\\kt)} = \\mk{a}{\\cos|\\kOmega|\\kt}",
+       "uses": [
+        2,
+        3
+       ],
+       "cap": "$\\dot{c}_1(0) = b|\\Omega|$，而式 (2.11) 给出$\\dot{c}_1(0) = i\\Omega^*\\tilde{c}_2(0) = 0$，所以$b = 0$。"
+      }
+     ],
+     "num": "(2.13)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\dot{\\kcone}(\\kt) = i\\kOmega^*\\kctildetwo(\\kt)",
+       "src": "(2.11)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\kcone(\\kt)} = \\mk{R}{\\cos|\\kOmega|\\kt}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\dot{\\kcone}(\\kt)} = \\mk{R}{-|\\kOmega|\\sin|\\kOmega|\\kt}",
+       "uses": [],
+       "cap": "微分。"
+      },
+      {
+       "tex": "\\mk{c}{i\\kOmega^*\\kctildetwo(\\kt)} = \\mk{R}{-|\\kOmega|\\sin|\\kOmega|\\kt}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\kctildetwo(\\kt)} = \\mk{R}{i\\frac{|\\kOmega|}{\\kOmega^*}\\sin|\\kOmega|\\kt}",
+       "uses": [],
+       "cap": "除以$i\\Omega^*$，其中$1/i = -i$。"
+      },
+      {
+       "tex": "\\mk{c}{\\kctildetwo(\\kt)} = \\mk{R}{i\\frac{\\kOmega}{|\\kOmega|}\\sin|\\kOmega|\\kt}",
+       "uses": [],
+       "cap": "$|\\Omega|/\\Omega^* = |\\Omega|\\Omega/|\\Omega|^2 = \\Omega/|\\Omega|$。"
+      }
+     ],
+     "num": "(2.14)"
+    }
+   ]
+  },
+  {
+   "id": "pulse-area",
+   "what": "给定面积脉冲下的概率幅",
+   "source": "现代原子与光学物理 II，2.1.1 二能级原子",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "时间按$d\\ktau = |\\kOmega(\\kt)|d\\kt$或$\\ktau = \\int|\\kOmega|d\\kt$重新归一化。",
+       "src": "2.1.1"
+      },
+      {
+       "text": "场处于共振，$\\kdelta = 0$。",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kctildetwo(\\kt)} = \\mk{d}{i\\kdelta\\kctildetwo(\\kt)} + \\mk{R}{i\\kOmega \\kcone(\\kt)}",
+      "src": "(2.10)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kctildetwo(\\kt)} = \\mk{R}{i\\kOmega \\kcone(\\kt)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{|\\kOmega|\\frac{d}{d\\ktau}\\kctildetwo(\\ktau)} = \\mk{R}{i\\kOmega \\kcone(\\ktau)}",
+       "uses": [
+        0
+       ],
+       "cap": "由$d\\tau = |\\Omega|dt$得$d/dt = |\\Omega|\\,d/d\\tau$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\ktau}\\kctildetwo(\\ktau)} = \\mk{R}{i(\\kOmega/|\\kOmega|)\\kcone(\\ktau)}",
+       "uses": []
+      }
+     ],
+     "num": "(2.16)"
+    },
+    {
+     "assumes": [
+      {
+       "text": "时间按$d\\ktau = |\\kOmega(\\kt)|d\\kt$或$\\ktau = \\int|\\kOmega|d\\kt$重新归一化。",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kcone(\\kt)} = \\mk{R}{i\\kOmega^*\\kctildetwo(\\kt)}",
+      "src": "(2.11)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{|\\kOmega|\\frac{d}{d\\ktau}\\kcone(\\ktau)} = \\mk{R}{i\\kOmega^*\\kctildetwo(\\ktau)}",
+       "uses": [
+        0
+       ],
+       "cap": "由$d\\tau = |\\Omega|dt$得$d/dt = |\\Omega|\\,d/d\\tau$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\ktau}\\kcone(\\ktau)} = \\mk{R}{i(\\kOmega^*/|\\kOmega|)\\kctildetwo(\\ktau)}",
+       "uses": []
+      }
+     ],
+     "num": "(2.17)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "脉冲没有啁啾，所以$\\kOmega/|\\kOmega|$为常数。",
+       "src": "2.1.1"
+      },
+      {
+       "text": "时间按$d\\ktau = |\\kOmega(\\kt)|d\\kt$或$\\ktau = \\int|\\kOmega|d\\kt$重新归一化。",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kcone(\\kt)} = \\mk{R}{\\cos|\\kOmega|\\kt}",
+      "src": "(2.13)",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kcone(\\ktau)} = \\mk{R}{\\cos\\ktau}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "在$\\tau$中，这些方程就是恒定拉比频率$\\Omega/|\\Omega|$，模为一，的共振场的方程，所以只要把$|\\Omega|t$换成$\\tau$，其解仍然成立。"
+      },
+      {
+       "tex": "\\mk{L}{\\kcone(\\kt)} = \\mk{R}{\\cos\\left(\\int|\\kOmega|d\\kt\\right)}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(2.18)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "脉冲没有啁啾，所以$\\kOmega/|\\kOmega|$为常数。",
+       "src": "2.1.1"
+      },
+      {
+       "text": "时间按$d\\ktau = |\\kOmega(\\kt)|d\\kt$或$\\ktau = \\int|\\kOmega|d\\kt$重新归一化。",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kctildetwo(\\kt)} = \\mk{R}{i\\frac{\\kOmega}{|\\kOmega|}\\sin|\\kOmega|\\kt}",
+      "src": "(2.14)",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kctildetwo(\\ktau)} = \\mk{R}{i\\frac{\\kOmega}{|\\kOmega|}\\sin\\ktau}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "在$\\tau$中，这些方程就是恒定拉比频率$\\Omega/|\\Omega|$，模为一，的共振场的方程，所以只要把$|\\Omega|t$换成$\\tau$，其解仍然成立。"
+      },
+      {
+       "tex": "\\mk{L}{\\kctildetwo(\\kt)} = \\mk{R}{i\\frac{\\kOmega}{|\\kOmega|}\\sin\\left(\\int|\\kOmega|d\\kt\\right)}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(2.19)"
+    }
+   ]
+  },
+  {
+   "id": "far-detuned-excitation",
+   "what": "远失谐场中的激发态概率幅，到最低阶",
+   "source": "现代原子与光学物理 II，2.1.1 二能级原子，远失谐场",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "远离共振的场几乎不会引起跃迁，所以在最低阶$\\kcone(\\kt) = 1$。",
+       "src": "2.1.1"
+      },
+      {
+       "text": "原子从$|1\\rangle$出发，所以$\\kctildetwo(0) = 0$。"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kctildetwo}} = \\mk{d}{i\\kdelta\\kctildetwo} + \\mk{R}{i\\kOmega\\kcone}",
+      "src": "(2.10)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kctildetwo}} = \\mk{d}{i\\kdelta\\kctildetwo} + \\mk{R}{i\\kOmega}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\kctildetwo(\\kt)} = \\mk{R}{\\int_0^{\\kt} i\\kOmega e^{i\\kdelta(\\kt-\\kt')}d\\kt'}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\dot{x} = i\\delta x + f$在$x(0) = 0$下的解为$x(t) = \\int_0^t f e^{i\\delta(t - t')}dt'$，对它微分即可验证。",
+       "map": {
+        "d": "R"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\kctildetwo(\\kt)} = \\mk{R}{i\\kOmega e^{i\\kdelta\\kt}\\,\\frac{1 - e^{-i\\kdelta\\kt}}{i\\kdelta}}",
+       "uses": [],
+       "cap": "$\\int_0^t e^{-i\\delta t'}dt' = (1 - e^{-i\\delta t})/(i\\delta)$。"
+      },
+      {
+       "tex": "\\mk{L}{\\kctildetwo(\\kt)} = \\mk{R}{-\\frac{\\kOmega}{\\kdelta}\\left(1 - e^{i\\kdelta \\kt}\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(2.21)"
+    }
+   ]
+  },
+  {
+   "id": "ac-stark-shift",
+   "what": "由绝热消除得到的光致频移",
+   "source": "现代原子与光学物理 II，2.1.1 二能级原子，远失谐场",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "由于$i\\kdelta\\kctildetwo$非常大，$\\kctildetwo$中随时间变化的部分由平均为零的快速振荡主导，因而$\\dot{\\kctildetwo} \\approx 0$。",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kctildetwo}} = \\mk{d}{i\\kdelta\\kctildetwo} + \\mk{R}{i\\kOmega\\kcone}",
+      "src": "(2.10)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{0} \\approx \\mk{d}{i\\kdelta\\kctildetwo} + \\mk{R}{i\\kOmega\\kcone}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\kctildetwo} = \\mk{R}{-(\\kOmega/\\kdelta)\\kcone}",
+       "uses": [],
+       "map": {
+        "L": "R"
+       }
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{i\\kOmega^*\\kctildetwo}",
+      "src": "(2.11)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{i\\kOmega^*\\left(-\\frac{\\kOmega}{\\kdelta}\\right)\\kcone}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcone}} = \\mk{R}{-i(|\\kOmega|^2/\\kdelta)\\kcone}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\kcone(\\kt)} \\approx \\mk{R}{\\kcone(0)e^{-i|\\kOmega|^2 \\kt/\\kdelta}}",
+       "uses": [],
+       "cap": "满足$\\dot{x} = -iax$且$a$为常数的概率幅，按$x(t) = x(0)e^{-iat}$演化。"
+      }
+     ],
+     "num": "(2.22)"
+    }
+   ]
+  },
+  {
+   "id": "dressed-states",
+   "what": "二能级原子的缀饰态",
+   "source": "现代原子与光学物理 II，2.1.1 二能级原子，缀饰态",
+   "nodes": [
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{H}{\\kHtilde} = \\mk{R}{-\\hbar\\kdelta|\\tilde{2}\\rangle\\langle\\tilde{2}| - \\hbar(\\kOmega|\\tilde{2}\\rangle\\langle 1| + \\kOmega^*|1\\rangle\\langle\\tilde{2}|)}",
+      "src": "(2.23)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kHtilde} = \\mk{R}{\\begin{pmatrix} 0 & -\\hbar\\kOmega^* \\\\ -\\hbar\\kOmega & -\\hbar\\kdelta \\end{pmatrix}}",
+       "uses": [],
+       "cap": "写成基$\\{|1\\rangle, |\\tilde{2}\\rangle\\}$中的矩阵。"
+      },
+      {
+       "tex": "\\mk{H}{\\det(\\kHtilde - \\epsilon)} = \\mk{R}{(-\\epsilon)(-\\hbar\\kdelta - \\epsilon) - \\hbar^2|\\kOmega|^2} = \\mk{z}{0}",
+       "uses": [],
+       "cap": "本征能量$\\epsilon$是$\\det(\\tilde{H} - \\epsilon) = 0$的根。"
+      },
+      {
+       "tex": "\\mk{R}{\\epsilon^2 + \\hbar\\kdelta\\epsilon - \\hbar^2|\\kOmega|^2} = \\mk{z}{0}",
+       "uses": [],
+       "map": {
+        "H": "R"
+       }
+      },
+      {
+       "tex": "\\mk{e}{\\kepspm} = \\mk{R}{\\hbar\\left(-\\frac{\\kdelta}{2} \\mp \\sqrt{(\\frac{\\kdelta}{2})^2 + |\\kOmega|^2}\\right)}",
+       "uses": [],
+       "cap": "二次方程的两个根，$\\epsilon_+$取下面的符号。",
+       "map": {
+        "z": "e"
+       }
+      }
+     ],
+     "num": "(2.24)"
+    },
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{H}{\\kHtilde(a|1\\rangle + b|\\tilde{2}\\rangle)} = \\mk{e}{\\epsilon(a|1\\rangle + b|\\tilde{2}\\rangle)}",
+      "src": "(2.23)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{-\\hbar\\kOmega^* b} = \\mk{e}{\\epsilon a}",
+       "uses": [],
+       "cap": "沿$|1\\rangle$的分量，$\\tilde{H}$取节点 1 的矩阵。"
+      },
+      {
+       "tex": "\\mk{H}{b} = \\mk{e}{-\\frac{\\epsilon}{\\hbar\\kOmega^*}a}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "在共振场中$\\kdelta = 0$。",
+       "src": "2.1.1"
+      },
+      {
+       "tex": "|\\tilde{1}\\rangle = (|\\kOmega|/\\kOmega)\\,|1\\rangle",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{b} = \\mk{e}{-\\frac{\\epsilon}{\\hbar\\kOmega^*}a}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{b_\\pm} = \\mk{e}{\\pm\\frac{|\\kOmega|}{\\kOmega^*}a_\\pm}",
+       "uses": [
+        0,
+        2
+       ],
+       "cap": "在$\\delta = 0$时，式 (2.24) 给出$\\epsilon_\\pm = \\mp\\hbar|\\Omega|$。"
+      },
+      {
+       "tex": "\\mk{H}{b_\\pm} = \\mk{e}{\\pm\\frac{\\kOmega}{|\\kOmega|}a_\\pm}",
+       "uses": [],
+       "cap": "$|\\Omega|/\\Omega^* = \\Omega/|\\Omega|$。"
+      },
+      {
+       "tex": "\\mk{H}{|\\pm\\rangle} = \\mk{e}{(|\\tilde{1}\\rangle \\pm |\\tilde{2}\\rangle)/\\sqrt{2}}",
+       "uses": [
+        3
+       ],
+       "cap": "取$a_\\pm = |\\Omega|/(\\sqrt{2}\\,\\Omega)$使$b_\\pm = \\pm 1/\\sqrt{2}$，且态归一化。"
+      }
+     ],
+     "src": "2.1.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "远非共振的场有$\\kdelta \\gg |\\kOmega|$，且$\\kdelta > 0$。",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kepspm} = \\mk{R}{\\hbar\\left(-\\frac{\\kdelta}{2} \\mp \\sqrt{(\\frac{\\kdelta}{2})^2 + |\\kOmega|^2}\\right)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kepspm} \\approx \\mk{R}{\\hbar\\left(-\\frac{\\kdelta}{2} \\mp \\left(\\frac{\\kdelta}{2} + \\frac{|\\kOmega|^2}{\\kdelta}\\right)\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "对于$|\\Omega| \\ll \\delta$，$\\sqrt{(\\delta/2)^2 + |\\Omega|^2} = \\frac{\\delta}{2}\\sqrt{1 + 4|\\Omega|^2/\\delta^2} \\approx \\frac{\\delta}{2} + \\frac{|\\Omega|^2}{\\delta}$。"
+      },
+      {
+       "tex": "\\mk{e}{\\kepsm} \\approx \\mk{R}{\\hbar\\frac{|\\kOmega|^2}{\\kdelta}},\\qquad \\mk{p}{\\kepsp} \\approx \\mk{Q}{-\\hbar\\kdelta - \\hbar\\frac{|\\kOmega|^2}{\\kdelta}}",
+       "uses": [],
+       "map": {
+        "e": [
+         "e",
+         "p"
+        ],
+        "R": [
+         "R",
+         "Q"
+        ]
+       }
+      }
+     ],
+     "num": "(2.25), (2.26)",
+     "note": "书中印的是$\\kepsm = |\\kOmega|^2/\\kdelta$和$\\kepsp = -\\kdelta - |\\kOmega|^2/\\kdelta$，没有式 (2.24) 所带的因子$\\hbar$。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{b} = \\mk{e}{-\\frac{\\epsilon}{\\hbar\\kOmega^*}a}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{b_-} \\approx \\mk{e}{-\\frac{\\kOmega}{\\kdelta}a_-},\\qquad \\mk{p}{a_+} \\approx \\mk{Q}{\\frac{\\kOmega^*}{\\kdelta}b_+}",
+       "uses": [
+        1
+       ],
+       "cap": "取$\\epsilon_- \\approx \\hbar|\\Omega|^2/\\delta$，则$b_- = -(|\\Omega|^2/\\delta\\Omega^*)a_- = -(\\Omega/\\delta)a_-$；取到最低阶的$\\epsilon_+ \\approx -\\hbar\\delta$，则$b_+ \\approx (\\delta/\\Omega^*)a_+$。",
+       "map": {
+        "H": [
+         "H",
+         "p"
+        ],
+        "e": [
+         "e",
+         "Q"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{H}{|-\\rangle} = \\mk{e}{|1\\rangle - \\frac{\\kOmega}{\\kdelta}|\\tilde{2}\\rangle},\\qquad \\mk{p}{|+\\rangle} = \\mk{Q}{|\\tilde{2}\\rangle + \\frac{\\kOmega^*}{\\kdelta}|1\\rangle}",
+       "uses": [],
+       "cap": "取$a_- = 1$和$b_+ = 1$；两个态到$\\Omega/\\delta$的一阶都是归一化的。"
+      }
+     ],
+     "num": "(2.25), (2.26)"
+    }
+   ]
+  },
+  {
+   "id": "multilevel-rotating-frame",
+   "what": "多能级原子在转动参考系中的哈密顿量",
+   "source": "现代原子与光学物理 II，2.1.1，向多态系统的推广",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\hat{U}|\\tilde{\\psi}\\rangle = |\\kpsi\\rangle",
+       "src": "2.1.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\kH|\\kpsi\\rangle}",
+      "src": "(1.11)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}\\left(\\hat{U}|\\tilde{\\psi}\\rangle\\right)} = \\mk{R}{\\kH\\hat{U}|\\tilde{\\psi}\\rangle}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\left(\\hat{U}\\frac{d}{d\\kt}|\\tilde{\\psi}\\rangle + \\left(\\frac{d\\hat{U}}{d\\kt}\\right)|\\tilde{\\psi}\\rangle\\right)} = \\mk{R}{\\kH\\hat{U}|\\tilde{\\psi}\\rangle}",
+       "uses": [],
+       "cap": "乘积法则。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\hat{U}\\frac{d}{d\\kt}|\\tilde{\\psi}\\rangle} = \\mk{R}{\\kH\\hat{U}|\\tilde{\\psi}\\rangle} - \\mk{u}{i\\hbar\\frac{d\\hat{U}}{d\\kt}|\\tilde{\\psi}\\rangle}",
+       "uses": [],
+       "map": {
+        "L": [
+         "L",
+         "u"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}|\\tilde{\\psi}\\rangle} = (\\mk{R}{\\hat{U}^{-1}\\kH\\hat{U}} - \\mk{u}{i\\hbar\\hat{U}^{-1}\\frac{d\\hat{U}}{d\\kt}})|\\tilde{\\psi}\\rangle",
+       "uses": [],
+       "cap": "从左边乘以$\\hat{U}^{-1}$。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}|\\tilde{\\psi}\\rangle} = \\mk{R}{\\kHtilde|\\tilde{\\psi}\\rangle},\\qquad \\kHtilde = \\hat{U}^{-1}\\kH\\hat{U} - i\\hbar\\hat{U}^{-1}\\frac{d\\hat{U}}{d\\kt}",
+       "uses": [],
+       "cap": "把括号中的算符记为$\\tilde{H}$，即转动参考系中的哈密顿量。",
+       "map": {
+        "u": "R"
+       }
+      }
+     ],
+     "num": "(2.37), (2.38)",
+     "note": "书中用$dU/d\\kt$表示算符的导数$d\\hat{U}/d\\kt$，且式 (2.37) 中有一个多余的右括号。"
+    },
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{U}{\\hat{U}} = \\mk{R}{e^{-i\\sum_k \\knuk \\kt|k\\rangle\\langle k|}}",
+      "src": "(2.35)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{U}{\\frac{d\\hat{U}}{d\\kt}} = \\mk{R}{-i\\sum_k\\knuk|k\\rangle\\langle k|\\,\\hat{U}}",
+       "uses": [],
+       "cap": "对指数求导；其指数中的算符在任何时刻都与自身对易。"
+      },
+      {
+       "tex": "\\mk{U}{-i\\hbar\\hat{U}^{-1}\\frac{d\\hat{U}}{d\\kt}} = \\mk{R}{-i\\hbar(-i)\\sum_k\\knuk|k\\rangle\\langle k|}",
+       "uses": [],
+       "cap": "$\\hat{U}$与$\\sum_k\\nu_k|k\\rangle\\langle k|$对易，所以$\\hat{U}^{-1}$遇到$\\hat{U}$就把它消去。"
+      },
+      {
+       "tex": "\\mk{U}{-i\\hbar\\hat{U}^{-1}\\frac{d\\hat{U}}{d\\kt}} = \\mk{R}{-\\sum_k\\hbar\\knuk|\\tilde{k}\\rangle\\langle\\tilde{k}|}",
+       "uses": []
+      }
+     ],
+     "note": "书中说第二项是$\\sum_k \\hbar\\knuk|\\tilde{k}\\rangle\\langle\\tilde{k}|$。它其实是$-\\sum_k \\hbar\\knuk|\\tilde{k}\\rangle\\langle\\tilde{k}|$，式 (2.39) 即带有这个符号。"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\hat{U}^{-1}|k\\rangle = e^{i\\knuk\\kt}|k\\rangle,\\quad \\langle 1|\\hat{U} = \\langle 1|",
+       "src": "(2.35)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH_{RWA}} = \\mk{w}{\\sum_k \\hbar\\komegak|k\\rangle\\langle k|} - \\mk{c}{\\hbar\\sum_k\\left(\\kOmegak e^{-i\\knuk \\kt}|k\\rangle\\langle 1| + \\kOmegak^* e^{i\\knuk \\kt}|1\\rangle\\langle k|\\right)}",
+      "src": "(2.34)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\hat{U}^{-1}\\kH_{RWA}\\hat{U}} = \\mk{w}{\\sum_k \\hbar\\komegak|k\\rangle\\langle k|} - \\mk{c}{\\hbar\\sum_k\\left(\\kOmegak e^{-i\\knuk \\kt}\\hat{U}^{-1}|k\\rangle\\langle 1|\\hat{U} + \\kOmegak^* e^{i\\knuk \\kt}\\hat{U}^{-1}|1\\rangle\\langle k|\\hat{U}\\right)}",
+       "uses": [],
+       "cap": "$\\hat{U}$与每个$|k\\rangle\\langle k|$对易，并给它乘上一个相位。"
+      },
+      {
+       "tex": "\\mk{H}{\\hat{U}^{-1}\\kH_{RWA}\\hat{U}} = \\mk{w}{\\sum_k \\hbar\\komegak|k\\rangle\\langle k|} - \\mk{c}{\\hbar\\sum_k\\left(\\kOmegak|k\\rangle\\langle 1| + \\kOmegak^*|1\\rangle\\langle k|\\right)}",
+       "uses": [
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kHtilde} = \\mk{a}{\\hat{U}^{-1}\\kH\\hat{U}} - \\mk{b}{i\\hbar\\hat{U}^{-1}\\frac{d\\hat{U}}{d\\kt}}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kHtilde} = \\mk{a}{\\sum_k \\hbar\\komegak|k\\rangle\\langle k| - \\hbar\\sum_k\\left(\\kOmegak|k\\rangle\\langle 1| + \\kOmegak^*|1\\rangle\\langle k|\\right)} - \\mk{b}{\\sum_k\\hbar\\knuk|k\\rangle\\langle k|}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{H}{\\kHtilde} = \\mk{w}{\\sum_k \\hbar(\\komegak - \\knuk)|\\tilde{k}\\rangle\\langle\\tilde{k}|} - \\mk{c}{\\hbar\\sum_k\\left(\\kOmegak|\\tilde{k}\\rangle\\langle\\tilde{1}| + \\kOmegak^*|\\tilde{1}\\rangle\\langle\\tilde{k}|\\right)}",
+       "uses": [],
+       "cap": "用波浪号写出新基的态。",
+       "map": {
+        "a": [
+         "w",
+         "c"
+        ],
+        "b": "w"
+       }
+      }
+     ],
+     "num": "(2.39)"
+    }
+   ]
+  }
+ ]
+}

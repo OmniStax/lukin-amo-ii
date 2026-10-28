@@ -1,0 +1,9 @@
+<section id="system-and-environment">
+<p class="cite-target"><span data-concept="density-operator">密度算符</span>形式体系非常适合处理由两部分组成、而只有一个子系统相关的系统。<span id="universe">为清晰起见，我们将总系统称为<span data-concept="open-system">宇宙</span>，其组成部分是系统和<span data-concept="open-system">环境</span>。</span> <span data-concept="open-system">宇宙</span>可以用<span data-concept="state-vector">一个量子态 $|\kpsi\rangle$</span>描述，其对应的<span data-concept="density-operator">密度算符</span>为 $\krhohat = |\kpsi\rangle\langle\kpsi|$，原则上我们可以先求出<span data-concept="open-system">宇宙</span>如何演化，从而求解系统的动力学。由于我们真正感兴趣的只是系统，我们希望找到一种更有效的描述，它不需要我们精确计算<span data-concept="open-system">环境</span>自由度发生了什么。</p>
+<p>我们首先将总<span data-concept="state-vector">态矢量</span>按直积基 $\{|n\rangle|e\rangle\}$ 展开，其中 $|n\rangle$ 是系统的一个态，$|e\rangle$ 是<span data-concept="open-system">环境</span>的一个态，于是</p>
+<div class="equation" id="eq-3-17">$$|\kpsi\rangle = \sum_{\{n,e\}}|n\rangle|e\rangle\langle n, e|\kpsi\rangle. \tag{3.17}$$</div>
+<p>考虑只作用于系统自由度的算符 $\kShat$ 在此态中的<span data-concept="expectation-value">期望值</span>。</p>
+<figure class="dv" id="drv-reduced-density-operator"></figure>
+<p>阵迹的下标 S (R) 表示求和中只包含系统（<span data-concept="open-system">热库</span>）的态。<span id="reduced"><a href="#drv-reduced-density-operator">式 (3.20)</a> 表明，系统算符的<span data-concept="expectation-value">期望值</span>总可以通过<span data-concept="reduced-density-operator">约化密度算符</span>求得</span>。</p>
+<p id="open">注意 $\krhoS$ 具有<span data-concept="density-operator-properties">密度算符的所有性质</span>，并且可以表示为系统态的概率混合， $\krhoS = \sum_\alpha p_\alpha|\kpsi_\alpha^S\rangle\langle\kpsi_\alpha^S|$。然而一般而言，$\krhoS$ 不必描述<span data-concept="pure-and-mixed-states">纯态</span>，这反映出所考虑的系统与<span data-concept="open-system">环境</span>相互作用，即它是一个<span data-concept="open-system">开放系统</span>。</p>
+</section>

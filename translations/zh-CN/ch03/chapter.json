@@ -1,0 +1,555 @@
+{
+ "id": "3",
+ "dir": "ch03",
+ "title": "开放系统的数学方法",
+ "intro": {},
+ "sections": [
+  {
+   "id": "3.1",
+   "title": "密度算符"
+  },
+  {
+   "id": "3.2",
+   "title": "系统与环境"
+  },
+  {
+   "id": "3.3",
+   "title": "开放系统的动力学"
+  },
+  {
+   "id": "3.4",
+   "title": "主方程"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "rho_S",
+   "concept": "reduced-density-operator",
+   "meaning": "系统的约化密度算符",
+   "anchor": "3.2-drv-reduced-density-operator",
+   "section": "3.2"
+  },
+  {
+   "sym": "rho_hat",
+   "concept": "density-operator",
+   "meaning": "宇宙的密度算符，即系统及其环境合在一起",
+   "anchor": "3.2-universe",
+   "section": "3.2",
+   "redefines": true
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "宇宙的态矢量，即系统及其环境合在一起",
+   "anchor": "3.2-eq-3-17",
+   "section": "3.2",
+   "redefines": true
+  },
+  {
+   "sym": "S_hat",
+   "meaning": "系统的可观测量",
+   "anchor": "3.2-drv-reduced-density-operator",
+   "section": "3.2"
+  },
+  {
+   "sym": "rho_hat",
+   "concept": "density-operator",
+   "meaning": "系统的密度算符",
+   "anchor": "3.1-eq-3-1",
+   "section": "3.1"
+  },
+  {
+   "sym": "rho_nn",
+   "concept": "density-matrix-populations",
+   "meaning": "密度矩阵的对角元：处于态 |n⟩ 的概率",
+   "anchor": "3.1-populations",
+   "section": "3.1"
+  },
+  {
+   "sym": "rho_nm",
+   "concept": "density-matrix-coherences",
+   "meaning": "密度矩阵在态 |n⟩ 与 |m⟩ 之间的非对角元",
+   "anchor": "3.1-coherences",
+   "section": "3.1"
+  },
+  {
+   "sym": "rho_11",
+   "concept": "density-matrix-populations",
+   "ref": "lvl-1",
+   "meaning": "能级 |1⟩ 的布居",
+   "anchor": "3.1-eq-3-7",
+   "section": "3.1"
+  },
+  {
+   "sym": "rho_22",
+   "concept": "density-matrix-populations",
+   "ref": "lvl-2",
+   "meaning": "能级 |2⟩ 的布居",
+   "anchor": "3.1-eq-3-7",
+   "section": "3.1"
+  },
+  {
+   "sym": "rho_12",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |1⟩ 与 |2⟩ 之间的相干性",
+   "anchor": "3.1-eq-3-7",
+   "section": "3.1"
+  },
+  {
+   "sym": "rho_21",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |2⟩ 与 |1⟩ 之间的相干性，即 ρ₁₂ 的复共轭",
+   "anchor": "3.1-eq-3-7",
+   "section": "3.1"
+  },
+  {
+   "sym": "n_bar",
+   "concept": "mean-thermal-photon-number",
+   "meaning": "热模 j 中的平均光子数",
+   "anchor": "3.1-eq-3-16",
+   "section": "3.1"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "温度",
+   "anchor": "3.1-eq-3-10",
+   "section": "3.1"
+  },
+  {
+   "sym": "S_hat",
+   "meaning": "系统的可观测量",
+   "anchor": "3.1-drv-expectation-as-trace",
+   "section": "3.1"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "anchor": "3.1-eq-3-1",
+   "section": "3.1"
+  },
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "anchor": "3.1-eq-3-10",
+   "section": "3.1"
+  },
+  {
+   "sym": "omega",
+   "concept": "atomic-transition-frequency",
+   "meaning": "原子跃迁频率：两个能级相距 ħω",
+   "anchor": "3.1-thermal-atom",
+   "section": "3.1"
+  },
+  {
+   "sym": "c_1",
+   "concept": "probability-amplitude",
+   "ref": "lvl-1",
+   "meaning": "基态 |1⟩ 的概率幅",
+   "anchor": "3.1-pure-density-matrix",
+   "section": "3.1"
+  },
+  {
+   "sym": "c_2",
+   "concept": "probability-amplitude",
+   "ref": "lvl-2",
+   "meaning": "激发态 |2⟩ 的概率幅",
+   "anchor": "3.1-pure-density-matrix",
+   "section": "3.1"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "场模 j 的频率 ν_j，或这些模所取代的经典场的频率 ν",
+   "anchor": "3.1-thermal-field",
+   "section": "3.1",
+   "redefines": true
+  },
+  {
+   "sym": "H_SR",
+   "concept": "system-reservoir-hamiltonian",
+   "meaning": "系统与热库之间的相互作用哈密顿量",
+   "anchor": "3.3-eq-3-27",
+   "section": "3.3"
+  },
+  {
+   "sym": "H_S",
+   "type": "energy",
+   "meaning": "系统哈密顿量，只作用于系统",
+   "anchor": "3.3-drv-density-operator-evolution",
+   "section": "3.3"
+  },
+  {
+   "sym": "H_R",
+   "type": "energy",
+   "meaning": "热库哈密顿量，只作用于热库",
+   "anchor": "3.3-eq-3-27",
+   "section": "3.3"
+  },
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统与热库合在一起的总哈密顿量",
+   "anchor": "3.3-eq-3-27",
+   "redefines": true,
+   "section": "3.3"
+  },
+  {
+   "sym": "H_tilde",
+   "concept": "system-reservoir-hamiltonian",
+   "meaning": "相互作用绘景中的相互作用哈密顿量 H̃_SR",
+   "anchor": "3.3-eq-3-39",
+   "section": "3.3"
+  },
+  {
+   "sym": "tau_c",
+   "concept": "correlation-time",
+   "meaning": "关联时间：无规场或热库变化所在的时标",
+   "anchor": "3.3-correlation-time",
+   "section": "3.3"
+  },
+  {
+   "sym": "tau_S",
+   "type": "time",
+   "meaning": "系统演化所在的典型时标",
+   "anchor": "3.3-born-markov",
+   "section": "3.3"
+  },
+  {
+   "sym": "Delta_t",
+   "type": "time",
+   "meaning": "平均时间步长，介于热库的关联时间与系统的演化时间之间",
+   "anchor": "3.3-coarse",
+   "section": "3.3"
+  },
+  {
+   "sym": "rho_S",
+   "concept": "reduced-density-operator",
+   "meaning": "系统的约化密度算符",
+   "anchor": "3.4-eq-3-79",
+   "section": "3.4"
+  },
+  {
+   "sym": "F_R",
+   "concept": "bilinear-system-reservoir-coupling",
+   "meaning": "相互作用绘景的热库算符，带有 H̃_SR 的全部时间依赖",
+   "anchor": "3.3-eq-3-42",
+   "section": "3.3"
+  },
+  {
+   "sym": "Delta_t",
+   "type": "time",
+   "meaning": "主方程跟踪系统变化 Δρ̂_S 所在的区间",
+   "anchor": "3.4-eq-3-79",
+   "section": "3.4"
+  },
+  {
+   "sym": "S_hat",
+   "meaning": "一般的系统算符，与热库算符双线性耦合",
+   "anchor": "3.3-eq-3-41",
+   "redefines": true,
+   "section": "3.3"
+  },
+  {
+   "sym": "gamma_p",
+   "type": "rate",
+   "meaning": "第 p 个系统-热库相互作用的速率",
+   "anchor": "3.4-channels",
+   "section": "3.4"
+  },
+  {
+   "sym": "rho_tilde",
+   "type": "state",
+   "meaning": "相互作用绘景中系统与热库的密度算符",
+   "anchor": "3.3-eq-3-38",
+   "section": "3.3"
+  },
+  {
+   "sym": "n_bar",
+   "concept": "mean-thermal-photon-number",
+   "meaning": "热库某一模中的平均热光子数",
+   "anchor": "3.4-eq-3-79",
+   "section": "3.4"
+  },
+  {
+   "sym": "f_t",
+   "type": "frequency",
+   "meaning": "无规场：自旋的涨落分裂 ħf(t) 除以 ħ",
+   "anchor": "3.3-eq-3-32",
+   "section": "3.3"
+  },
+  {
+   "sym": "S_hat",
+   "meaning": "一般的系统算符，与热库算符双线性耦合；Ŝ_p 是第 p 个相互作用的算符，对于二能级原子 Ŝ = |1⟩⟨2|",
+   "anchor": "3.4-channels",
+   "section": "3.4"
+  },
+  {
+   "sym": "phi",
+   "type": "phase",
+   "meaning": "自旋的一个实现所获得的无规相位，即 δf(t′) 对时间的积分",
+   "anchor": "3.3-sim-spin-echo",
+   "section": "3.3"
+  },
+  {
+   "sym": "H_S",
+   "type": "energy",
+   "meaning": "系统单独的哈密顿量；对于二能级原子，是它与驱动场的相干相互作用",
+   "anchor": "3.4-eq-3-84",
+   "section": "3.4"
+  },
+  {
+   "sym": "rho_hat",
+   "concept": "density-operator",
+   "meaning": "宇宙的密度算符，即系统及其环境合在一起",
+   "anchor": "3.3-drv-reduced-density-equation",
+   "redefines": true,
+   "section": "3.3"
+  },
+  {
+   "sym": "H_SR",
+   "concept": "system-reservoir-hamiltonian",
+   "meaning": "系统与热库之间的相互作用哈密顿量",
+   "anchor": "3.4-channels",
+   "section": "3.4"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "宇宙的态矢量，即系统及其环境合在一起",
+   "anchor": "3.3-drv-decaying-atom-density-matrix",
+   "redefines": true,
+   "section": "3.3"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "anchor": "3.4-eq-3-80",
+   "section": "3.4"
+  },
+  {
+   "sym": "rho_S",
+   "concept": "reduced-density-operator",
+   "meaning": "系统的约化密度算符",
+   "anchor": "3.3-drv-density-operator-evolution",
+   "section": "3.3"
+  },
+  {
+   "sym": "rho_tilde",
+   "type": "state",
+   "meaning": "相互作用绘景中系统与热库的密度算符；ρ̃_S 与 ρ̃_R 分别是系统与热库的，ρ̃_corr 是二者之间的关联",
+   "anchor": "3.4-eq-3-80",
+   "section": "3.4"
+  },
+  {
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 节的衰变，以场的真空模为连续谱",
+   "anchor": "3.3-decay",
+   "section": "3.3"
+  },
+  {
+   "sym": "tau_c",
+   "concept": "correlation-time",
+   "meaning": "关联时间：无规场或热库变化所在的时标",
+   "anchor": "3.4-memoryless",
+   "section": "3.4"
+  },
+  {
+   "sym": "g",
+   "concept": "single-photon-rabi-frequency",
+   "meaning": "单光子拉比频率，原子与场的一个模的耦合",
+   "anchor": "3.3-eq-3-43",
+   "section": "3.3"
+  },
+  {
+   "sym": "delta",
+   "concept": "detuning",
+   "meaning": "场相对于原子跃迁的失谐 δ = ν − ω",
+   "anchor": "3.4-eq-3-84",
+   "section": "3.4"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "场模 j 的频率 ν_j，或这些模所取代的经典场的频率 ν",
+   "anchor": "3.3-eq-3-44",
+   "section": "3.3"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "拉比频率 Ω = ℰμ/ℏ",
+   "anchor": "3.4-eq-3-84",
+   "section": "3.4"
+  },
+  {
+   "sym": "omega",
+   "concept": "atomic-transition-frequency",
+   "meaning": "原子跃迁频率：两个能级相距 ħω",
+   "anchor": "3.3-eq-3-44",
+   "section": "3.3"
+  },
+  {
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 节的衰变，以场的真空模为连续谱",
+   "anchor": "3.4-drv-optical-bloch-equations",
+   "section": "3.4"
+  },
+  {
+   "sym": "n_bar",
+   "concept": "mean-thermal-photon-number",
+   "meaning": "热模 j 中的平均光子数",
+   "anchor": "3.3-drv-thermal-correlator",
+   "section": "3.3"
+  },
+  {
+   "sym": "rho_11",
+   "concept": "density-matrix-populations",
+   "ref": "lvl-1",
+   "meaning": "能级 |1⟩ 的布居；ρ₁₁⁽⁰⁾ 是弱场作用之前它的值",
+   "anchor": "3.4-drv-optical-bloch-equations",
+   "section": "3.4"
+  },
+  {
+   "sym": "rho_22",
+   "concept": "density-matrix-populations",
+   "meaning": "能级 |2⟩ 的布居",
+   "anchor": "3.3-drv-decaying-atom-density-matrix",
+   "section": "3.3"
+  },
+  {
+   "sym": "rho_22",
+   "concept": "density-matrix-populations",
+   "ref": "lvl-2",
+   "meaning": "能级 |2⟩ 的布居；ρ₂₂⁽⁰⁾ 是弱场作用之前它的值",
+   "anchor": "3.4-drv-optical-bloch-equations",
+   "section": "3.4"
+  },
+  {
+   "sym": "rho_12",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |1⟩ 与 |2⟩ 之间的相干性",
+   "anchor": "3.3-drv-decaying-atom-density-matrix",
+   "section": "3.3"
+  },
+  {
+   "sym": "rho_12",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |1⟩ 与 |2⟩ 之间的相干性",
+   "anchor": "3.4-drv-optical-bloch-equations",
+   "section": "3.4"
+  },
+  {
+   "sym": "rho_21",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |2⟩ 与 |1⟩ 之间的相干性，即 ρ₁₂ 的复共轭",
+   "anchor": "3.3-drv-decaying-atom-density-matrix",
+   "section": "3.3"
+  },
+  {
+   "sym": "rho_21",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |2⟩ 与 |1⟩ 之间的相干性，即 ρ₁₂ 的复共轭",
+   "anchor": "3.4-drv-optical-bloch-equations",
+   "section": "3.4"
+  },
+  {
+   "sym": "c_1",
+   "concept": "probability-amplitude",
+   "meaning": "基态 |1⟩ 的概率幅",
+   "anchor": "3.3-decay",
+   "section": "3.3"
+  },
+  {
+   "sym": "gamma_12",
+   "concept": "coherence-decay-rate",
+   "meaning": "相干性 ρ₁₂ 的衰变率",
+   "anchor": "3.4-coherence-decay",
+   "section": "3.4"
+  },
+  {
+   "sym": "c_2",
+   "concept": "probability-amplitude",
+   "meaning": "激发态 |2⟩ 的概率幅",
+   "anchor": "3.3-decay",
+   "section": "3.3"
+  },
+  {
+   "sym": "gamma_21",
+   "concept": "coherence-decay-rate",
+   "meaning": "相干性 ρ₂₁ 的衰变率，等于 γ₁₂",
+   "anchor": "3.4-eq-3-92",
+   "section": "3.4"
+  },
+  {
+   "sym": "c_k",
+   "concept": "probability-amplitude",
+   "meaning": "原子处于 |1⟩ 且模 k 中有一个光子的概率幅",
+   "anchor": "3.3-decay",
+   "section": "3.3"
+  },
+  {
+   "sym": "gamma_1",
+   "type": "rate",
+   "ref": "lvl-1",
+   "meaning": "布居衰变出态 |1⟩ 的速率",
+   "anchor": "3.4-coherence-decay",
+   "section": "3.4"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "anchor": "3.3-decay",
+   "section": "3.3"
+  },
+  {
+   "sym": "gamma_2",
+   "type": "rate",
+   "ref": "lvl-2",
+   "meaning": "布居衰变出态 |2⟩ 的速率",
+   "anchor": "3.4-coherence-decay",
+   "section": "3.4"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "腔的体积，场在其中被量子化",
+   "anchor": "3.3-sharply-peaked",
+   "section": "3.3"
+  },
+  {
+   "sym": "gamma_d",
+   "concept": "dephasing-rate",
+   "meaning": "退相干率或退相位率：使布居不变的相干性衰变",
+   "anchor": "3.4-dephasing",
+   "section": "3.4"
+  },
+  {
+   "sym": "delta_nu",
+   "type": "frequency",
+   "meaning": "场与相干性的一个傅里叶分量的频率 δν，从场的频率 ν 量起",
+   "anchor": "3.4-eq-3-95",
+   "section": "3.4"
+  },
+  {
+   "sym": "Gamma_21",
+   "type": "rate",
+   "meaning": "复速率 Γ₂₁ = γ₂₁ − iδ",
+   "anchor": "3.4-pumping-rate",
+   "section": "3.4"
+  },
+  {
+   "sym": "R_opt",
+   "concept": "optical-pumping-rate",
+   "meaning": "外加场的光抽运率 R_opt",
+   "anchor": "3.4-drv-steady-state-population",
+   "section": "3.4"
+  }
+ ]
+}

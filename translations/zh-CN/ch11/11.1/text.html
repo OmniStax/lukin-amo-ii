@@ -1,0 +1,36 @@
+<section id="opening">
+<p>定性地说，高温下的气体应表现得像经典气体，每个原子都像具有确定位置和动量的点粒子。在低温下，原子最好描述为<span data-concept="de-broglie-wavelength">物质波包</span>，其大小由<span data-concept="de-broglie-wavelength" id="debroglie">德布罗意波长</span>决定</p>
+<div class="equation" id="eq-11-1">$$\klambdadB = \sqrt{\frac{2\pi\hbar^2}{\km k_B\kT}}. \tag{11.1}$$</div>
+<p>当<span data-concept="de-broglie-wavelength">原子的波包</span>开始在位置上重叠时，原子的量子统计就变得重要。<span data-concept="bec-criterion" id="criterion">定量计算表明，以经典行为为主和以量子力学行为为主之间的转变发生</span>于<span data-concept="atom-number-density" id="density">密度$\kndens$</span> 与<span data-concept="critical-temperature">温度$\kTc$</span> 满足</p>
+<div class="equation" id="eq-11-2">$$\kndens\ \klambdadB(\kTc)^3 = \zeta(3/2) \approx 2.612, \tag{11.2}$$</div>
+<p>或</p>
+<div class="equation" id="eq-11-3">$$k_B\kTc = \frac{2\pi\hbar^2}{\km\lambda_{dB}^2} = \frac{2\pi\hbar^2}{\km}\left(\frac{\kndens}{2.612}\right)^{2/3}. \tag{11.3}$$</div>
+<p>对于低于<span data-concept="critical-temperature" id="critical-temperature">这一临界温度</span>的玻色原子，$0 &lt; \kT &lt; \kTc$，将有宏观数量的原子占据最低能态——即使在有限温度下也是如此。这种所谓的<span data-concept="bose-condensation" id="bose-condensation">玻色凝聚</span>只有在原子云既稠密又低温时才会发生，这意味着<span data-concept="bec-criterion">相空间密度</span>必须很大。</p>
+<figure class="sim" id="sim-degeneracy">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>一片穿过均匀⁸⁷Rb原子气体的薄切片，气体<span data-concept="atom-number-density">密度</span>为$\kndens$，每个原子带着自己的<span data-concept="de-broglie-wavelength">物质波包</span>，一个直径为$\klambdadB$的圆盘。切片下方的两条横条将$\klambdadB$与原子间距$\kndens^{-1/3}$作比较。冷却气体，波包就会膨胀；提高密度，原子就会挤到一起。相邻原子的波包在$\kndens\klambdadB^3$达到 2.612 处重叠，在<span data-concept="critical-temperature">临界温度</span> $\kTc$处。低于该温度时，原子离开热云进入<span data-concept="bose-condensation">凝聚体</span>，一个遍布整个气体的单一波，图线按<a href="#eq-11-9">式 (11.9)</a>跟踪它们所占的份额$\kNgs/N$，旁边是谐振阱中更陡的上升，<a href="#eq-11-10">式 (11.10)</a>，取相同的$\kTc$。</span></div>
+</figure>
+</section>
+
+<section id="bose-einstein-statistics">
+<h2>11.1.1 玻色-爱因斯坦统计法</h2>
+<p><span data-concept="bose-einstein-distribution" id="be-statistics">玻色-爱因斯坦统计法</span>描述具有整数自旋的<span data-concept="indistinguishability-statistics">不可分辨粒子</span>的行为，因而决定了总能量为$\kEtot$的$N$个全同玻色原子的系综将如何在可能的能态之间分布。</p>
+<p>值得注意<span data-concept="indistinguishability-statistics" id="distinguishability">可分辨性在决定这一分布中所起的作用</span>。由统计力学可知，原子的某种排布的权重由形成该排布的方式数给出——或者在某种意义上，由该排布有多随机给出。粒子的可分辨性在决定这一权重中起着关键作用。例如，考虑 10 个粒子在两个态之间分布。当粒子可分辨时，$\{5, 5\}$排布的统计权重是$\{10, 0\}$排布的统计权重的 252 倍。当粒子<span data-concept="indistinguishability-statistics">不可分辨</span>时，这两种构型的权重相等。这说明了失去分辨粒子的能力后，统计所发生的巨大变化。</p>
+<p>在巨正则系综中，总能量为$\kEtot$的$N$个玻色粒子将按照<span data-concept="bose-einstein-distribution">玻色-爱因斯坦分布</span>分布在一组能级$\kepsi$上，</p>
+<div class="equation" id="eq-11-4">$$\kni = \frac{1}{e^{(\kepsi - \kmuchem)/k_B\kT} - 1}, \tag{11.4}$$</div>
+<p>其中$\kni$是占据能级$\kepsi$的粒子数，且</p>
+<div class="equation" id="eq-11-5">$$N = \sum_i \kni \tag{11.5}$$</div>
+<div class="equation" id="eq-11-6">$$\kEtot = \sum_i \kepsi \kni. \tag{11.6}$$</div>
+<p>这一集合$\{\kni\}$代表了把能量$\kEtot$分配给占据能态$\{\kepsi\}$的$N$个原子的最随机方式。在足够低的温度下，把很大一部分原子放入基态$\kepszero$，并让其余原子占据较高的能态，就得到最随机的分布。<span data-concept="ground-state-occupation-bookkeeping" id="bookkeeping">因此，在把这些求和转换为积分时，重要的是记录占据基态$\kepszero$的原子</span>，使得</p>
+<div class="equation" id="eq-11-7">$$N = \frac{1}{e^{(\kepszero - \kmuchem)/k_B\kT} - 1} + \int\frac{g(\keps)}{e^{(\kepsi - \kmuchem)/k_B\kT} - 1}d\keps \tag{11.7}$$<sup class="fn" data-note="c-eq-11-7"></sup></div>
+<div class="equation" id="eq-11-8">$$\kEtot = \frac{\kepszero}{e^{(\kepszero - \kmuchem)/k_B\kT} - 1} + \int\keps\frac{g(\keps)}{e^{(\kepsi - \kmuchem)/k_B\kT} - 1}d\keps, \tag{11.8}$$<sup class="fn" data-note="c-eq-11-8"></sup></div>
+<p>其中$g(\keps)$是适合该问题几何形状的<span data-concept="ground-state-occupation-bookkeeping">态密度</span>。</p>
+</section>
+
+<section id="bec-ideal-gas">
+<h2>11.1.2 理想气体中的 BEC</h2>
+<p>对于无相互作用且不受约束的玻色子，上面概述的教科书式处理得出<span data-concept="ideal-gas-condensate-fraction" id="gs-occupation">宏观的基态占有数</span></p>
+<div class="equation" id="eq-11-9">$$\kNgs = N\left(1 - \left(\frac{\kT}{\kTc}\right)^{3/2}\right), \tag{11.9}$$</div>
+<p>其中$N$是原子总数，$\kTc$是<span data-concept="critical-temperature">凝聚温度</span>。对于原子被约束在三维谐振子阱中的稍微更现实的情形，同样可以求出温度依赖关系：</p>
+<div class="equation" id="eq-11-10">$$\kNgs = N\left(1 - \left(\frac{\kT}{\kTc}\right)^3\right). \tag{11.10}$$</div>
+<p>然而在现实中，即使是<span data-concept="dilute-quantum-gas">稀薄原子气体</span>也存在相互作用，而且即使很弱的相互作用也会对<span data-concept="bose-condensation">凝聚体</span>的动力学产生很大影响。</p>
+</section>

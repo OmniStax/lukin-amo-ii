@@ -1,0 +1,503 @@
+{
+ "id": "2",
+ "dir": "ch02",
+ "title": "原子分子光物理和量子光学中的基本过程",
+ "sections": [
+  {
+   "id": "2.1",
+   "title": "原子跃迁"
+  },
+  {
+   "id": "2.2",
+   "title": "束缚态到连续谱的跃迁"
+  },
+  {
+   "id": "2.3",
+   "title": "量子化电磁场"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "anchor": "2.2-eq-2-42",
+   "section": "2.2"
+  },
+  {
+   "sym": "nu",
+   "concept": "optical-frequency",
+   "meaning": "外加场的频率",
+   "anchor": "2.2-model",
+   "section": "2.2"
+  },
+  {
+   "sym": "omega_k",
+   "type": "frequency",
+   "ref": "continuum-k",
+   "meaning": "连续谱态 |k⟩ 的频率，其能量为 ℏω_k",
+   "anchor": "2.2-model",
+   "section": "2.2",
+   "redefines": true
+  },
+  {
+   "sym": "Omega_k",
+   "concept": "rabi-frequency",
+   "ref": "continuum-k",
+   "meaning": "外加场把连续谱态 |k⟩ 与束缚态 |1⟩ 耦合的拉比频率",
+   "anchor": "2.2-model",
+   "section": "2.2",
+   "redefines": true
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "anchor": "2.2-eq-2-43",
+   "section": "2.2"
+  },
+  {
+   "sym": "c_1",
+   "concept": "probability-amplitude",
+   "ref": "bound-1",
+   "meaning": "基态 |1⟩ 的概率幅",
+   "anchor": "2.2-eq-2-43",
+   "section": "2.2"
+  },
+  {
+   "sym": "c_k",
+   "concept": "probability-amplitude",
+   "ref": "continuum-k",
+   "meaning": "连续谱态 |k⟩ 的概率幅",
+   "anchor": "2.2-eq-2-43",
+   "section": "2.2"
+  },
+  {
+   "sym": "delta_k",
+   "concept": "detuning",
+   "ref": "continuum-k",
+   "meaning": "外加场相对连续谱态 |k⟩ 的失谐 ν − ω_k",
+   "anchor": "2.2-drv-continuum-decay",
+   "section": "2.2"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "anchor": "2.2-drv-continuum-decay",
+   "section": "2.2"
+  },
+  {
+   "sym": "gamma",
+   "concept": "continuum-decay-rate",
+   "meaning": "束缚态布居衰变到连续谱中的速率",
+   "anchor": "2.2-decay",
+   "section": "2.2"
+  },
+  {
+   "sym": "Delta_Stark",
+   "concept": "continuum-stark-shift",
+   "meaning": "连续谱态的交流斯塔克效应引起的束缚态能量移位",
+   "anchor": "2.2-decay",
+   "section": "2.2"
+  },
+  {
+   "sym": "p_1",
+   "concept": "born-rule",
+   "ref": "bound-1",
+   "meaning": "基态 |1⟩ 的布居",
+   "anchor": "2.2-decay-law",
+   "section": "2.2"
+  },
+  {
+   "sym": "q_j",
+   "concept": "field-quadratures",
+   "meaning": "场的模 j 的坐标，即单位质量谐振子的位置；场量子化后它是一个算符",
+   "anchor": "2.3-mode-expansion",
+   "section": "2.3"
+  },
+  {
+   "sym": "p_j",
+   "concept": "field-quadratures",
+   "meaning": "场的模 j 的动量算符，与其坐标共轭",
+   "anchor": "2.3-eq-2-64",
+   "section": "2.3"
+  },
+  {
+   "sym": "E_bar",
+   "concept": "single-photon-field",
+   "meaning": "与模 j 的单个光子相联系的电场",
+   "anchor": "2.3-one-photon-field",
+   "section": "2.3"
+  },
+  {
+   "sym": "E_hat",
+   "concept": "quantized-electric-field",
+   "meaning": "电场算符，偏振分量 α",
+   "anchor": "2.3-eq-2-72",
+   "section": "2.3"
+  },
+  {
+   "sym": "E_plus",
+   "concept": "quantized-electric-field",
+   "meaning": "电场算符的正频分量，正比于湮没算符",
+   "anchor": "2.3-eq-2-72",
+   "section": "2.3"
+  },
+  {
+   "sym": "V_af",
+   "concept": "atom-field-interaction",
+   "meaning": "原子与量子化场之间的相互作用",
+   "anchor": "2.3-drv-atom-field-coupling",
+   "section": "2.3"
+  },
+  {
+   "sym": "g",
+   "concept": "single-photon-rabi-frequency",
+   "meaning": "单光子拉比频率，即原子与场的一个模的耦合",
+   "anchor": "2.3-drv-atom-field-coupling",
+   "section": "2.3"
+  },
+  {
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 节的衰变，以场的真空模作为连续谱",
+   "anchor": "2.3-decay-rate",
+   "redefines": true,
+   "section": "2.3"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "场的模 j 的频率 ν_j，或这些模所取代的经典场的 ν",
+   "anchor": "2.3-eq-2-58",
+   "redefines": true,
+   "section": "2.3"
+  },
+  {
+   "sym": "nu_k",
+   "type": "frequency",
+   "meaning": "光子模 k 的频率",
+   "anchor": "2.3-ww-states",
+   "section": "2.3",
+   "redefines": true
+  },
+  {
+   "sym": "k",
+   "type": "wavevector",
+   "meaning": "场的模的波矢量",
+   "anchor": "2.3-eigenmodes",
+   "section": "2.3"
+  },
+  {
+   "sym": "omega",
+   "concept": "atomic-transition-frequency",
+   "meaning": "原子跃迁频率：两个能级相距 ħω",
+   "unit": "rad/s",
+   "section": "2.1",
+   "anchor": "2.1-transition-frequency"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "场在其中被量子化的腔的体积",
+   "anchor": "2.3-eigenmodes",
+   "section": "2.3"
+  },
+  {
+   "sym": "nu",
+   "concept": "optical-frequency",
+   "meaning": "外加场的频率",
+   "unit": "rad/s",
+   "section": "2.1",
+   "anchor": "2.1-optical-frequency"
+  },
+  {
+   "sym": "omega",
+   "concept": "atomic-transition-frequency",
+   "meaning": "原子跃迁频率：两个能级相距 ħω",
+   "anchor": "2.3-eq-2-78",
+   "section": "2.3"
+  },
+  {
+   "sym": "E_env",
+   "concept": "slowly-varying-envelope",
+   "meaning": "外加场的缓变包络",
+   "unit": "V/m",
+   "section": "2.1",
+   "anchor": "2.1-optical-frequency"
+  },
+  {
+   "sym": "mu",
+   "type": "dipole",
+   "meaning": "该跃迁的偶极矩阵元 μ = μ₂₁ = ⟨2|d̂|1⟩",
+   "anchor": "2.3-coupling",
+   "section": "2.3"
+  },
+  {
+   "sym": "E_field",
+   "meaning": "外加的经典电场",
+   "type": "electric-field",
+   "unit": "V/m",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-1"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "拉比频率 Ω = ℰμ/ℏ",
+   "anchor": "2.3-rwa-terms",
+   "section": "2.3"
+  },
+  {
+   "sym": "k",
+   "meaning": "外加场的波矢量",
+   "type": "wavevector",
+   "unit": "m⁻¹",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-1"
+  },
+  {
+   "sym": "c_1",
+   "concept": "probability-amplitude",
+   "meaning": "无光子的基态 |1, 0⟩ 的概率幅",
+   "anchor": "2.3-dipole-decays",
+   "redefines": true,
+   "section": "2.3"
+  },
+  {
+   "sym": "t",
+   "meaning": "时间",
+   "type": "time",
+   "unit": "s",
+   "section": "2.1"
+  },
+  {
+   "sym": "c_2",
+   "concept": "probability-amplitude",
+   "meaning": "无光子的激发态 |2, 0⟩ 的概率幅",
+   "anchor": "2.3-eq-2-90",
+   "section": "2.3",
+   "redefines": true
+  },
+  {
+   "sym": "r",
+   "meaning": "电子的位置算符",
+   "type": "length",
+   "unit": "m",
+   "section": "2.1",
+   "anchor": "2.1-optical-frequency"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "anchor": "2.3-eq-2-90",
+   "section": "2.3"
+  },
+  {
+   "sym": "mu",
+   "meaning": "该跃迁的偶极矩阵元 μ = μ₂₁ = ⟨2|d̂|1⟩",
+   "type": "dipole",
+   "unit": "C·m",
+   "section": "2.1",
+   "anchor": "2.1-detuning"
+  },
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "anchor": "2.3-drv-field-hamiltonian-ladder",
+   "section": "2.3"
+  },
+  {
+   "sym": "H",
+   "concept": "hamiltonian",
+   "meaning": "系统的哈密顿量",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-2"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "anchor": "2.3-eq-2-55",
+   "section": "2.3"
+  },
+  {
+   "sym": "psi",
+   "concept": "state-vector",
+   "meaning": "系统的态矢量，是其希尔伯特空间的一个元素",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-3"
+  },
+  {
+   "sym": "E_field",
+   "type": "electric-field",
+   "meaning": "自由场的电场，无源",
+   "anchor": "2.3-eq-2-55",
+   "section": "2.3"
+  },
+  {
+   "sym": "B",
+   "type": "magnetic-field",
+   "meaning": "自由场的磁场",
+   "anchor": "2.3-eq-2-56",
+   "section": "2.3"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "场中带电粒子的质量",
+   "anchor": "2.3-canonical",
+   "section": "2.3"
+  },
+  {
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "场中带电粒子的动量算符",
+   "anchor": "2.3-canonical",
+   "section": "2.3"
+  },
+  {
+   "sym": "c_1",
+   "concept": "probability-amplitude",
+   "ref": "lvl-1",
+   "meaning": "基态 |1⟩ 的概率幅",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-3"
+  },
+  {
+   "sym": "c_2",
+   "concept": "probability-amplitude",
+   "ref": "lvl-2",
+   "meaning": "激发态 |2⟩ 的概率幅",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-3"
+  },
+  {
+   "sym": "c_tilde_2",
+   "concept": "rotating-frame",
+   "ref": "lvl-2",
+   "meaning": "在以 ν 转动的参考系中 |2⟩ 的缓变振幅，c₂ = c̃₂e^{−iνt}",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-5"
+  },
+  {
+   "sym": "delta",
+   "concept": "detuning",
+   "meaning": "场相对原子跃迁的失谐 δ = ν − ω",
+   "unit": "rad/s",
+   "section": "2.1",
+   "anchor": "2.1-detuning"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "拉比频率 Ω = ℰμ/ℏ",
+   "unit": "rad/s",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-8"
+  },
+  {
+   "sym": "p_1",
+   "concept": "born-rule",
+   "ref": "lvl-1",
+   "meaning": "基态 |1⟩ 的布居",
+   "section": "2.1",
+   "anchor": "2.1-rabi-oscillations"
+  },
+  {
+   "sym": "p_2",
+   "concept": "born-rule",
+   "ref": "lvl-2",
+   "meaning": "激发态 |2⟩ 的布居",
+   "section": "2.1",
+   "anchor": "2.1-rabi-oscillations"
+  },
+  {
+   "sym": "tau",
+   "meaning": "重新归一化的时间 τ = ∫|Ω|dt，即外加场下的面积",
+   "section": "2.1",
+   "anchor": "2.1-pulse-area",
+   "concept": "pulse-area"
+  },
+  {
+   "sym": "H_tilde",
+   "concept": "rotating-frame-hamiltonian",
+   "meaning": "转动参考系中的有效哈密顿量",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-23"
+  },
+  {
+   "sym": "epsilon_pm",
+   "concept": "dressed-state-energies",
+   "meaning": "缀饰态 |±⟩ 的能量",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-24"
+  },
+  {
+   "sym": "epsilon_p",
+   "concept": "dressed-state-energies",
+   "ref": "dressed-plus",
+   "meaning": "缀饰态 |+⟩ 的能量",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-26"
+  },
+  {
+   "sym": "epsilon_m",
+   "concept": "dressed-state-energies",
+   "ref": "dressed-minus",
+   "meaning": "缀饰态 |−⟩ 的能量",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-25"
+  },
+  {
+   "sym": "S_tilde",
+   "concept": "bloch-sphere",
+   "meaning": "态在转动参考系中的布洛赫矢量，S̃ = {S̃ₓ, S̃ᵧ, S̃_z}",
+   "section": "2.1",
+   "anchor": "2.1-bloch-vector"
+  },
+  {
+   "sym": "Omega_vec",
+   "meaning": "布洛赫矢量绕其进动的驱动矢量 Ω(t) = {−2 Re Ω, −2 Im Ω*, −δ}",
+   "type": "coupling",
+   "unit": "rad/s",
+   "section": "2.1",
+   "anchor": "2.1-bloch-vector"
+  },
+  {
+   "sym": "Omega_k",
+   "concept": "rabi-frequency",
+   "meaning": "把 |1⟩ 与激发态 |k⟩ 耦合的场的拉比频率 Ω_k = ℰ_kμ_k/ℏ",
+   "unit": "rad/s",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-34"
+  },
+  {
+   "sym": "omega_k",
+   "meaning": "从 |1⟩ 到激发态 |k⟩ 的跃迁频率",
+   "type": "frequency",
+   "unit": "rad/s",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-34"
+  },
+  {
+   "sym": "nu_k",
+   "meaning": "与第 k 个跃迁近共振的场的频率",
+   "type": "frequency",
+   "unit": "rad/s",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-34"
+  },
+  {
+   "sym": "Delta",
+   "meaning": "同一跃迁上两个场的拍频 Δ = ν_a − ν_b",
+   "type": "frequency",
+   "unit": "rad/s",
+   "section": "2.1",
+   "anchor": "2.1-eq-2-40"
+  }
+ ]
+}

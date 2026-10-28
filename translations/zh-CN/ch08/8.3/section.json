@@ -1,0 +1,397 @@
+{
+ "id": "8.3",
+ "chapter": "8",
+ "title": "多普勒冷却",
+ "short": "多普勒冷却",
+ "lead": "光如何能冷却原子而不只是使其减速：来自两束对传光束的依赖速度的力，它的<span data-concept=\"friction-coefficient\">摩擦系数</span>和<span data-concept=\"capture-range\">俘获范围</span>，三维的<span data-concept=\"optical-molasses\">光学黏团</span>，<span data-concept=\"magneto-optical-trap\">磁光阱</span>，以及冷却为何必须止于一个极限。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-doppler-force",
+   "kind": "sim",
+   "number": "8.1",
+   "folds": [
+    "8.2"
+   ],
+   "originals": [
+    "/media/ch08/fig-8-1.png",
+    "/media/ch08/fig-8-2.png"
+   ],
+   "original_caption": "（图 8.1）用于多普勒冷却的对传光束。（图 8.2）有限速度下的多普勒冷却力。对于红失谐的光束，速度为正的原子受到负的力，反之亦然。以临界速度±v_c运动的原子受到最大的力。",
+   "draws": [
+    "velocity",
+    "force",
+    "frequency",
+    "friction",
+    "wavevector",
+    "rate",
+    "mass"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-molasses",
+   "kind": "sim",
+   "draws": [
+    "velocity",
+    "frequency",
+    "friction",
+    "time",
+    "wavevector",
+    "rate",
+    "coupling",
+    "mass"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-mot",
+   "kind": "sim",
+   "number": "8.3",
+   "originals": [
+    "/media/ch08/fig-8-3.png"
+   ],
+   "original_caption": "磁光阱。上图：红失谐激光束与磁场的典型构型。下图：J=0 → J = 1 原子跃迁的陷俘力。",
+   "draws": [
+    "length",
+    "frequency",
+    "force",
+    "magnetic-field",
+    "wavevector",
+    "rate"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "beam-plus",
+   "label": "沿+z传播的光束",
+   "figures": [
+    "sim-doppler-force",
+    "sim-mot"
+   ]
+  },
+  {
+   "id": "beam-minus",
+   "label": "沿−z传播的光束",
+   "figures": [
+    "sim-doppler-force",
+    "sim-mot"
+   ]
+  },
+  {
+   "id": "lvl-ground",
+   "label": "J = 0基态",
+   "figures": [
+    "sim-mot"
+   ]
+  },
+  {
+   "id": "lvl-m-minus",
+   "label": "J = 1的m = −1子能级",
+   "figures": [
+    "sim-mot"
+   ]
+  },
+  {
+   "id": "lvl-m-zero",
+   "label": "J = 1的m = 0子能级",
+   "figures": [
+    "sim-mot"
+   ]
+  },
+  {
+   "id": "lvl-m-plus",
+   "label": "J = 1的m = +1子能级",
+   "figures": [
+    "sim-mot"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "doppler-cooling",
+   "concept": "doppler-cooling",
+   "verb": "introduces"
+  },
+  {
+   "span": "zero-velocity-rate",
+   "concept": "zero-velocity-excitation-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "friction-coefficient",
+   "concept": "friction-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "optical-molasses",
+   "concept": "optical-molasses",
+   "verb": "introduces"
+  },
+  {
+   "span": "friction-largest",
+   "concept": "maximum-friction-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "capture-range",
+   "concept": "capture-range",
+   "verb": "introduces"
+  },
+  {
+   "span": "mot-idea",
+   "concept": "magneto-optical-trap",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "dissipative-force",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "atomic-recoil",
+   "verb": "uses"
+  },
+  {
+   "span": "doppler-picture",
+   "concept": "recoil-shifted-resonance",
+   "verb": "uses"
+  },
+  {
+   "span": "doppler-picture",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "friction-largest",
+   "concept": "coherence-decay-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "friction-largest",
+   "concept": "optical-pumping-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "friction-largest",
+   "concept": "spontaneous-emission-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-8-33",
+   "concept": "recoil-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "rate-omega-r",
+   "concept": "semiclassical-force-validity",
+   "verb": "uses"
+  },
+  {
+   "span": "mot-config",
+   "concept": "zeeman-effect",
+   "verb": "uses"
+  },
+  {
+   "span": "mot-config",
+   "concept": "polarization-selection-rules",
+   "verb": "uses"
+  },
+  {
+   "span": "limit-kicks",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-doppler-force-expansion",
+   "concept": "low-velocity-doppler-force",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "footnotes": [
+  {
+   "id": "c-eta-sign",
+   "kind": "correction",
+   "html": "书中写作$\\frac{d}{dt}\\kpcm = -\\keta\\kpcm$，其中$\\keta$为正。由<a href=\"#eq-8-29\">式 (8.29)</a>–<a href=\"#drv-friction-coefficient\">(8.30)</a>，$\\keta$与$\\kdelta$同号，当光束使原子冷却（$\\kdelta < 0$）时为负，所以运动方程为$\\frac{d}{dt}\\kpcm = \\keta\\kpcm$；在此处以及式 (8.31)–(8.33)中，$\\keta$代表其大小$|\\keta|$，它在$\\kdelta = -\\kgammaonetwo$附近最大。"
+  },
+  {
+   "id": "c-cooling-timescale",
+   "kind": "correction",
+   "html": "书中把$\\komegaR \\sim 10$ kHz称为时标。它是冷却的速率；冷却的时标是$1/\\komegaR$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "doppler-force-expansion",
+   "what": "慢速运动原子所受的耗散力",
+   "source": "现代原子与光学物理 II，8.3 多普勒冷却，光学黏团",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "原子运动缓慢，$\\mathbf{k}\\cdot\\mathbf{v} \\ll \\delta, \\gamma_{12}$。",
+       "src": "8.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kFmag} \\approx \\mk{R}{\\hbar\\kk\\frac{2\\kgammaonetwo|\\kOmega|^2}{\\kgammaonetwo^2 + (\\kdelta - \\kk\\cdot\\kv)^2}}",
+      "src": "(8.23)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kFmag} \\approx \\mk{R}{\\hbar\\kk\\frac{2\\kgammaonetwo|\\kOmega|^2}{\\kgammaonetwo^2 + \\kdelta^2 - 2\\kdelta\\kk\\cdot\\kv}}",
+       "uses": [
+        0
+       ],
+       "cap": "到$\\mathbf{k}\\cdot\\mathbf{v}$的一阶，$(\\delta - \\mathbf{k}\\cdot\\mathbf{v})^2 \\approx \\delta^2 - 2\\delta\\,\\mathbf{k}\\cdot\\mathbf{v}$。"
+      },
+      {
+       "tex": "\\mk{F}{\\kFmag} \\approx \\mk{R}{\\hbar\\kk\\frac{2\\kgammaonetwo|\\kOmega|^2}{\\kgammaonetwo^2 + \\kdelta^2}\\left(1 + \\frac{2\\kdelta\\kk\\cdot\\kv}{\\kgammaonetwo^2 + \\kdelta^2}\\right)}",
+       "uses": [
+        0
+       ],
+       "cap": "对小的$x$，$1/(A - x) \\approx (1 + x/A)/A$。"
+      },
+      {
+       "tex": "\\mk{F}{\\kFmag} \\approx \\mk{R}{\\hbar\\kk\\underbrace{\\frac{2\\kgammaonetwo|\\kOmega|^2}{\\kgammaonetwo^2 + \\kdelta^2}}_{\\kRoptzero}\\left(1 + \\frac{2\\kdelta\\kk\\cdot\\kv}{\\kgammaonetwo^2 + \\kdelta^2}\\right)}",
+       "uses": [],
+       "cap": "给零速度时的光激发率命名，$R^0_{opt}$。"
+      }
+     ],
+     "num": "(8.28)"
+    }
+   ]
+  },
+  {
+   "id": "friction-coefficient",
+   "what": "多普勒摩擦系数",
+   "source": "现代原子与光学物理 II，8.3 多普勒冷却，光学黏团",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kFmag \\approx \\hbar\\kk\\kRoptzero\\left(1 + \\frac{2\\kdelta\\kk\\cdot\\kv}{\\kgammaonetwo^2 + \\kdelta^2}\\right),\\quad \\kRoptzero = \\frac{2\\kgammaonetwo|\\kOmega|^2}{\\kgammaonetwo^2 + \\kdelta^2}",
+       "src": "(8.28)"
+      },
+      {
+       "text": "两束光沿$\\pm z$对传，$\\mathbf{k} = \\pm k\\hat{z}$，所以$\\mathbf{k}\\cdot\\mathbf{v} = \\pm kv_z$。",
+       "src": "8.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{S}{\\kFp + \\kFm} = \\mk{p}{\\hbar\\kkmag\\kRoptzero\\left(1 + \\frac{2\\kdelta\\kkmag\\kvz}{\\kgammaonetwo^2 + \\kdelta^2}\\right)} - \\mk{m}{\\hbar\\kkmag\\kRoptzero\\left(1 - \\frac{2\\kdelta\\kkmag\\kvz}{\\kgammaonetwo^2 + \\kdelta^2}\\right)}",
+      "uses": [0, 1]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{S}{\\kFp + \\kFm} = \\mk{R}{\\frac{4\\hbar\\kkmag^2\\kdelta\\kRoptzero}{\\kgammaonetwo^2 + \\kdelta^2}\\kvz}",
+       "uses": [],
+       "cap": "与速度无关的力相互抵消。",
+       "map": {
+        "p": "R",
+        "m": "R"
+       }
+      },
+      {
+       "tex": "\\mk{S}{\\kFp + \\kFm} = \\mk{R}{\\frac{8\\hbar\\kkmag^2}{\\km}\\frac{\\kdelta\\kgammaonetwo|\\kOmega|^2}{(\\kgammaonetwo^2 + \\kdelta^2)^2}\\km\\kvz}",
+       "uses": [
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\keta \\km \\kvz} = \\mk{S}{\\kFp + \\kFm}",
+      "src": "(8.29)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\keta \\km \\kvz} = \\mk{S}{\\frac{8\\hbar\\kkmag^2}{\\km}\\frac{\\kdelta\\kgammaonetwo|\\kOmega|^2}{(\\kgammaonetwo^2 + \\kdelta^2)^2}\\km\\kvz}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\keta} = \\mk{S}{\\frac{8\\hbar\\kkmag^2}{\\km}\\frac{\\kdelta\\kgammaonetwo|\\kOmega|^2}{(\\kgammaonetwo^2 + \\kdelta^2)^2}}",
+       "uses": []
+      }
+     ],
+     "num": "(8.30)"
+    }
+   ]
+  }
+ ]
+}

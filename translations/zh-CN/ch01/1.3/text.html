@@ -1,0 +1,143 @@
+<section id="opening">
+<p class="cite-target">原子物理学涉及的物理系统包括中性原子、离子和分子，也包括较为现代的“人造原子”，例如在半导体异质结结构中制备的量子点。这些系统的结构决定了它们与外加场的相互作用，无论这些场是电场、磁场、振荡场、静场、经典场还是量子场。这些相互作用使我们能够通过外加场操控系统，或者反过来，利用物质来控制电磁场。这类技术是原子物理学的核心，但要应用它们，我们必须了解所考虑系统的物理结构。</p>
+</section>
+
+<section id="hydrogen">
+<h2>1.3.1 例：氢原子</h2>
+<p class="cite-target">最简单的可考虑系统之一是氢，它由一个被库仑力束缚在一个质子上的电子构成。<span data-concept="hydrogen-hamiltonian">系统的能量</span>由下式给出</p>
+<div class="equation" id="eq-1-14">$$\kH = \frac{\kp^2}{2\km} - \frac{e^2}{\kr}, \tag{1.14}$$</div>
+<p>其中$\kp$表示电子的（取算符值的）动量，$\kr$表示电子与质子之间的距离。</p>
+<p id="hydrogen-levels">该系统的<span data-concept="schrodinger-equation">薛定谔方程</span>的<span data-concept="stationary-states">定态解</span>有两类。有<span data-concept="hydrogen-energy-levels">能量为$\kEn = -\frac{\kRinf}{n^2}$的无穷多个分立束缚态，以及能量为$E &gt; 0$的连续的非束缚态集合</span>。</p>
+<p id="rinf-invitation">常量$\kRinf$称为<span data-concept="rydberg-constant" id="rydberg-constant">里德伯常量</span>；虽然它的数值可以在任何一本量子力学教科书中查到，但知道如何从基本原理推导出它的表达式是一个很好的练习。</p>
+<div class="exercises" data-place="rinf-invitation"></div>
+<p id="estimate">为了估计<span data-concept="rydberg-constant">结合能$\kRinf$</span>，我们注意到在基态中，<span data-concept="heisenberg-uncertainty-principle">海森伯不等式</span>近似地按等式成立。具体地说，动量的不确定度$\Delta p$与位置的不确定度$\Delta r$满足$\Delta p \cdot \Delta r \sim \hbar$。由于束缚态的动量平均值必为零，我们可以在<span data-concept="hamiltonian">哈密顿量</span>中用$\Delta p^2 \sim (\hbar/\Delta r)^2$代替$\langle p^2\rangle$。同样，平均距离$\langle r\rangle$也应近似为$\Delta r$。</p>
+<figure class="dv" id="drv-rydberg-estimate"></figure>
+<p>事实上，这个结果恰好等于无穷重原子核的精确基态能量。</p>
+</section>
+
+<section id="degeneracies">
+<h2>1.3.2 能级简并</h2>
+<p class="cite-target">尽管我们已经列出了氢原子束缚态的能量，但还没有讨论这些态是否<span data-concept="degeneracy-and-symmetry">简并</span>。具体地说，假设有一个算符$\hat{A}$与<span data-concept="hamiltonian">哈密顿量</span>$\kH$<span data-concept="commutator">对易</span>，即$[\hat{A}, \kH] = 0$。于是我们可以找到一组共同的本征矢量$|\kEn, A_l\rangle$，使得</p>
+<div class="equation" id="eq-1-17">$$\hat{A}|\kEn, A_l\rangle = A_l|\kEn, A_l\rangle \tag{1.17}$$</div>
+<div class="equation" id="eq-1-18">$$\kH|\kEn, A_l\rangle = \kEn|\kEn, A_l\rangle. \tag{1.18}$$</div>
+<p id="degeneracy-symmetry">所有态$|\kEn, A_l\rangle$的能量$\kEn$都相同，并且与$A_l$无关。这种<span data-concept="degeneracy-and-symmetry">能级简并</span>与使$A$在哈密顿量演化下保持不变的底层对称性相联系。考虑变换$\hat{S}(a) = e^{i\hat{A}a}$对$\kH$的本征态的作用。若$[\hat{A}, \kH] = 0$，则能级在变换$\hat{S}(a)$下不变。由此可见，<span data-concept="degeneracy-and-symmetry">简并与系统的对称性之间存在联系</span>，即在某一组幺正变换下的不变性。</p>
+<p>对于氢原子，<span data-concept="hydrogen-hamiltonian">哈密顿量</span><a href="#eq-1-14">式 (1.14)</a>与总角动量$\kL^2$和角动量的z分量$\kL_z$、电子自旋角动量$\kS^2$和$\kS_z$，以及核自旋角动量$\kI^2$和$\kI_z$<span data-concept="commutator">对易</span>。</p>
+<p id="principal-n">能量只依赖于<span data-concept="principal-quantum-number">主量子数</span>$n$，具有相同<span data-concept="principal-quantum-number">主量子数</span>$n$的所有角动量态$l = 0, \cdots, n-1$都是允许的，且具有相同的能量。同样，角动量z分量$\kL_z$的本征值为$l_z = -l, \cdots, l$的所有态，以及电子自旋和核自旋的子能级，也具有相同的能量。</p>
+<p>然而，在真实的氢原子中，由于<span data-concept="hamiltonian">哈密顿量</span>的修正，<span data-concept="degeneracy-and-symmetry">简并</span>被消除。</p>
+</section>
+
+<section id="l-degeneracy">
+<h2>1.3.3 氢原子哈密顿量的修正：$L$简并的解除</h2>
+<p class="cite-target" id="l-lifting">势对$1/r$的偏离导致<span data-concept="l-degeneracy-lifting">关于$l$的简并被解除</span>。在多电子原子中，内壳层电子倾向于屏蔽核电荷，因此在<span data-concept="principal-quantum-number">主量子数</span>$n$固定时，价电子的大$l$态比小$l$态束缚得更松（因为离原子核更远的电子态受到更强的屏蔽效应）。例如，在Na这样的碱金属原子中，壳层结构为$(1s)^2(2s)^2(2p)^6(3s)$，<span data-concept="hamiltonian">哈密顿量</span>可以写成$\kH = \frac{p^2}{2\km} - \frac{e^2}{r} + V'(r)$，其中当$r \to \infty$时$V'(r) \to 0$，但当$r \to 0$时$V'(r) \neq 0$。<span data-concept="l-degeneracy-lifting">此时能量是主量子数和总角动量二者的函数，$E = E(n, l)$</span>。</p>
+<p>然而值得注意的是，（对于给定的价壳层组态）内层电子的影响随<span data-concept="principal-quantum-number">主量子数$n$</span>的增大而减小。因此大n态的不同$l$态之间的能量分裂减小。$n$非常大的态称为“<span data-concept="rydberg-states" id="rydberg-states">里德伯态</span>”，表现出近乎类氢的光谱。</p>
+</section>
+
+<section id="fine-structure-block">
+<h2>1.3.4 精细结构：$J$简并的解除</h2>
+<p class="cite-target">相对论修正导致氢原子能级出现所谓的<span data-concept="fine-structure" id="fine-structure">精细结构</span>分裂。<span data-concept="fine-structure">精细结构</span>有三项贡献，它们对某一能级的净效应只取决于与该能级相联系的<span data-concept="total-electronic-angular-momentum" id="total-j">电子总角动量$J = L + S$</span>。因此，相对论效应打破了每个<span data-concept="principal-quantum-number">主能级$n$</span>的简并，使不同的$J$值具有不同的能量。</p>
+<p><span data-concept="fine-structure">精细结构</span>的第一项贡献是对动能的相对论修正。第二项贡献称为<span data-concept="spin-orbit-coupling" id="spin-orbit">自旋轨道项</span>，在物理上表示电子的内禀磁偶极子（即电子的自旋）与原子内部磁场之间的相互作用，该磁场与电子的轨道角动量有关。最后一项修正称为<span data-concept="darwin-term" id="darwin">达尔文项</span>，是对势能的相对论修正。<span data-concept="darwin-term">达尔文项</span>只在原点起作用，因此只对$L = 0$的态不为零。</p>
+<p>为了说明这类相对论效应如何导致不同$J$的能级分裂，我们在下面考察<span data-concept="spin-orbit-coupling">自旋轨道耦合</span>。关于动能和<span data-concept="darwin-term">达尔文项</span>的细节，可以参阅任何一本量子力学入门教材。</p>
+<p><span data-concept="spin-orbit-coupling">自旋轨道效应</span>的相互作用能为：</p>
+<div class="equation" id="eq-1-19">$$\kVSL = \kASO\kS \cdot \kL. \tag{1.19}$$</div>
+<p id="good-numbers">$\kVSL$与$S^2, L^2, J^2$和$J_z$对易，其中$\kJ = \kS + \kL$，因此我们现在用$J^2$和$J_z$而不是$L_z$和$S_z$来标记原子态（它们与$\kVSL$不对易，因而不是好量子数）。作为例子，考虑钠（Na）。<span data-ref="na-3s">Na的基态</span>轨道角动量为零（$|\kL| \equiv L = 0$），因此没有<span data-concept="fine-structure">精细结构</span>，因为$J = S$只能取一个值。对于<span data-ref="na-3p">第一激发态（$L = 1$）</span>，<span data-ref="na-3p32">$J = 1 + 1/2 = 3/2$</span>或<span data-ref="na-3p12">$J = 1 - 1/2 = 1/2$</span>。<span data-ref="na-3p12">$J = 1/2$</span>态与<span data-ref="na-3p32">$J = 3/2$</span>态之间的能量分裂是多少？</p>
+<figure class="dv" id="drv-fine-structure-splitting"></figure>
+<p id="d-lines">传统上，从<span data-ref="na-3s">Na的${}^3S_{1/2}$<sup class="fn" data-note="c-term-symbols"></sup>基态</span>到<span data-ref="na-3p12">${}^3P_{1/2}$激发态</span>的跃迁称为<span data-concept="d1-d2-lines">D1 线</span>，而从<span data-ref="na-3s">Na的${}^3S_{1/2}$基态</span>到<span data-ref="na-3p32">${}^3P_{3/2}$激发态</span>的跃迁称为<span data-concept="d1-d2-lines">D2 线</span>。</p>
+<figure class="sim" id="sim-fine-hyperfine">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>钠的n = 3能级画成一架阶梯，<span data-type="energy">能量</span>向上，对类氢能级的每一项修正占一列：在l上解除简并的屏蔽、按J分裂<span data-ref="na-3p">3p</span>的<span data-concept="spin-orbit-coupling">自旋轨道耦合</span>，以及按F分裂每个J能级的、与核自旋I = 3/2的<span data-concept="hyperfine-interaction">超精细相互作用</span>。选择包含多少项修正，观察每个能级分裂进入下一列。每一次分裂都放大绘制并标出其大小，因为每一次都比前一次小数百到一千倍；<span data-concept="d1-d2-lines">D1 线与 D2 线</span>用它们的光的黄色绘制。</span></div>
+</figure>
+<h3>关于类氢原子波函数的说明</h3>
+<p id="parity">类氢原子的波函数可以写成$\kpsi_{nlm}(\rho, \theta, \phi) = R_{nl}(\rho)Y_{lm}(\theta, \phi)$，其中$R_{nl}(\rho)$包含径向依赖关系，角向依赖关系则包含在球谐函数中</p>
+<div class="equation" id="eq-1-24">$$Y_{lm}(\theta, \phi) = P_l^m(\cos\theta)e^{im\phi}, \tag{1.24}$$</div>
+<p>其中$P_l^m(\cos\theta)$是$l$次$m$阶连带勒让德多项式。需要记住：(1) 当$\rho \to 0$时，$R_{nl} \sim \rho^l$，除非$l = 0$，否则它趋于零；(2) 在宇称变换（$\kr \to -\kr$，即$\phi \to \phi + \pi$，$\theta \to \pi - \theta$）下，$Y_{lm}(\pi - \theta, \phi + \pi) = (-1)^l Y_{lm}(\theta, \phi)$。由此以及径向函数$R_{nl}(\rho)$对宇称变换不敏感这一事实，我们看到<span data-concept="wavefunction-parity">$\kpsi_{nlm}$波函数的宇称为$(-1)^l$</span>。</p>
+</section>
+
+<section id="hyperfine-block">
+<h2>1.3.5 超精细相互作用</h2>
+<p class="cite-target">价电子的磁偶极子与核自旋$\kI$的相互作用称为<span data-concept="hyperfine-interaction" id="hyperfine">超精细相互作用</span>。磁矩为$\mathbf{m}_N$的原子核所产生的磁场为</p>
+<div class="equation" id="eq-1-25">$$\kB(\mathbf{R}) = \frac{\mu_0}{4\pi}\left(\frac{3\mathbf{n}(\mathbf{n} \cdot \mathbf{m}_N) - \mathbf{m}_N}{R^3} + \frac{8\pi}{3}\mathbf{m}_N\delta(\mathbf{R})\right), \tag{1.25}$$</div>
+<p>其中$\mathbf{R}$是到原子核的矢量距离，$\mathbf{n}$是沿$\mathbf{R}$方向的单位矢量。第二项是很强的接触项，只对$l = 0$的态不为零，而第一项是较弱的长程（$\sim 1/R^3$）项，对所有其他$l$都不为零。结果是，<span data-concept="hyperfine-interaction">超精细相互作用</span>通常对$r$较小的$S$态最强。相互作用能可近似为</p>
+<div class="equation" id="eq-1-26">$$\kVHFS = \kAHFS\kI \cdot \kJ \tag{1.26}$$</div>
+<p>同时考虑<span data-concept="fine-structure">精细</span>和<span data-concept="hyperfine-interaction">超精细相互作用</span>时，合适的守恒量子数是<span data-concept="total-angular-momentum-f" id="total-f">总角动量$\kF$</span>，其定义为</p>
+<div class="equation" id="eq-1-27">$$\kF = \kI + \kS + \kL. \tag{1.27}$$</div>
+<h3>碱金属基态的结构</h3>
+<p id="alkali-ground">作为例子，考虑氢的基态，其中$L = 0$，$I = 1/2$，$S = 1/2$。由于$L = 0$，$F^2 = I^2 + S^2 + 2\kS \cdot \kI$，且$\kHHFS  = (\kAHFS/2)(F^2 - I^2 - S^2)$。$F = 0, 1$的允许值给出<span data-concept="hyperfine-interaction">超精细移位</span>$\kHHFS(F = 1, F = 0) = (\kAHFS/4, -\kAHFS/4)$<sup class="fn" data-note="c-h-shifts"></sup>。<span data-concept="alkali-ground-hyperfine">因此氢的基态有<span data-ref="h-f0 h-f1">两个能级</span>，能量相差$\kAHFS/2$<sup class="fn" data-note="c-h-splitting"></sup>，分别对应<span data-ref="h-f0">$F = 0$</span>和<span data-ref="h-f1">1</span></span>。类似地，可以算出<span data-concept="alkali-ground-hyperfine">${}^{23}Na$和${}^{87}Rb$（其$L = 0$，$I = 3/2$，$S = 1/2$）的基态由<span data-ref="na-f1 na-f2">两个能级</span><span data-ref="na-f1">$F = 1$</span>和<span data-ref="na-f2">$F = 2$</span>构成，相距$3\kAHFS/2$<sup class="fn" data-note="c-na-splitting"></sup></span>。</p>
+</section>
+
+<section id="zeeman-block">
+<h2>1.3.6 与静态外磁场的相互作用</h2>
+<p class="cite-target" id="zeeman">在静态外磁场存在时，能级会发生移位，这种方式称为<span data-concept="zeeman-effect">塞曼效应</span>。在$L = 0$的情形下，移位可以精确算出，而对于$L \neq 0$的态则需要近似。磁矩$\mu$在恒定磁场$\kB$中的相互作用为</p>
+<div class="equation" id="eq-1-28">$$H = -\mu \cdot \kB, \tag{1.28}$$</div>
+<p>该公式对电子和原子核都适用。若设磁场沿$\hat{z}$方向，则有</p>
+<div class="equation" id="eq-1-29">$$H = -\mu_z \kBz. \tag{1.29}$$</div>
+<p>因此，对于沿$\hat{z}$方向的静场，$L = 0$态的能量（<span data-concept="zeeman-effect">塞曼</span>）移位为</p>
+<div class="equation" id="eq-1-30">$$\kHZ = -\kmue S_Z B_Z - \kmuN I_Z B_Z, \tag{1.30}$$</div>
+<p id="bohr-magneton">其中$\kmue = -g_J\kmuB$，$\kmuN = g_I\kmuB$，$g_J$是束缚于原子核的电子的、与电子自旋相联系的<span data-concept="lande-g-factor" id="lande">朗德 g 因子</span>，$g_I$是与核自旋相联系的<span data-concept="lande-g-factor">朗德 g 因子</span>，$\kmuB$是<span data-concept="bohr-magneton">玻尔磁子</span>，且$\kmue \gg \kmuN$。</p>
+<p id="field-regimes">我们可以区分两种情形：<span data-concept="zeeman-field-regimes">(1) 强场，此时$m_S$和$m_I$是好量子数；(2) 弱场，此时$F$和$m_F$是好量子数</span>。一般地，我们可以用所谓的<span data-concept="clebsch-gordan-coefficients" id="clebsch-gordan">CG 系数</span>$C(J_1, J_2, J; j_1, j_2, m_J)$把两组基（$|J, m_J\rangle$和$|j_1, j_2\rangle$，其中$\kJ = \hat{J}_1 + \hat{J}_2$且$[J_1, J_2] = 0$）联系起来，其由下式定义</p>
+<div class="equation" id="eq-1-31">$$|J, m_J\rangle = \sum_{j_1, j_2}\langle J_1J_2j_1j_2|Jm_J\rangle|J_1J_2j_1j_2\rangle \tag{1.31}$$</div>
+<div class="equation" id="eq-1-32">$$\equiv \sum_{j_1, j_2} C(J_1, J_2, J; j_1, j_2, m_J)|J_1J_2j_1j_2\rangle. \tag{1.32}$$</div>
+<p><span data-concept="clebsch-gordan-coefficients">CG 系数</span>可用来把$|F, m_F\rangle$基与$|I, S; m_I, m_S\rangle$基（简记为$|m_I, m_S\rangle$）联系起来。例如，令$J_1 = S = 1/2$，$J_2 = I = 1/2$，$J = J_1 + J_2 = F$（我们假设$L = 0$），则有</p>
+<div class="equation" id="eq-1-33">$$|1, 1\rangle = |1/2, 1/2\rangle \tag{1.33}$$</div>
+<div class="equation" id="eq-1-34">$$|1, 0\rangle = \frac{1}{\sqrt{2}}(|1/2, -1/2\rangle + |-1/2, 1/2\rangle) \tag{1.34}$$</div>
+<div class="equation" id="eq-1-35">$$|0, 0\rangle = \frac{1}{\sqrt{2}}(|1/2, -1/2\rangle - |-1/2, 1/2\rangle) \tag{1.35}$$</div>
+<div class="equation" id="eq-1-36">$$|1, -1\rangle = |-1/2, -1/2\rangle \tag{1.36}$$</div>
+<p id="weak-zeeman">我们主要关心磁场较小的情形，此时<span data-concept="zeeman-effect">塞曼效应</span>可以当作对<span data-concept="fine-structure">精细</span>和<span data-concept="hyperfine-interaction">超精细相互作用</span>的微扰处理。在这种情形下，我们用$|F, m_F\rangle$基作为零级波函数，可以证明<span data-concept="weak-field-zeeman-shift">塞曼移位$\kdEZ$</span>与外加磁场成正比，关系为</p>
+<div class="equation" id="eq-1-37">$$\kdEZ = g_F\kmuB m_F \kBz, \tag{1.37}$$</div>
+<p>其中$\kmuB$是<span data-concept="bohr-magneton">玻尔磁子</span>，$g_F$是存在核自旋时的<span data-concept="lande-g-factor">朗德 g 因子</span>，由下式给出</p>
+<div class="equation" id="eq-1-38">$$g_F = g_J\frac{F(F+1) + J(J+1) - I(I+1)}{2F(F+1)}. \tag{1.38}$$</div>
+<p>类似地，$g_J$是不考虑核自旋时的<span data-concept="lande-g-factor">朗德 g 因子</span>，由下式给出</p>
+<div class="equation" id="eq-1-39">$$g_J = 1 + \frac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)}. \tag{1.39}$$</div>
+<p><em>注：关于这些主题，一本很好的参考书是瓦尼耶和奥杜安的“Quantum Physics of Atomic Frequency Standards”。</em></p>
+<figure class="sim" id="sim-zeeman-levels">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span><span data-type="energy">基态每个|F, m<sub>F</sub>⟩能级的能量</span>随<span data-type="magnetic-field">磁场B<sub>z</sub></span>变化画出，每个能级带有它出发时的F所对应的颜色，<span data-concept="weak-field-zeeman-shift">弱场移位</span>的直线以虚线画在精确曲线旁。设定<span data-type="magnetic-field">磁场</span>并选择原子。在弱场中，两个F族以符号相反的g<sub>F</sub>散开；随着磁场增大，m<sub>F</sub>相同的能级彼此弯曲分开，并重新聚成强场的m<sub>S</sub> = +½和m<sub>S</sub> = −½两组能级，每组按m<sub>I</sub>分裂。上方能级族顶端m<sub>F</sub> = F的能级用较大的圆点画出，在任何磁场下都沿其直线移动。</span></div>
+</figure>
+</section>
+
+<section id="optical-block">
+<h2>1.3.7 与光场的相互作用</h2>
+<p class="cite-target" id="dipole-energy">本节考虑孤立中性原子与光场的相互作用。这样的原子本身没有净电荷，也没有永久电偶极矩。然而，在静电场$\kEfield$存在时，原子确实会产生电偶极矩$\mathbf{d}$，它随后可以与电场相互作用，<span data-concept="dipole-interaction">相互作用能$U$</span>为</p>
+<div class="equation" id="eq-1-40">$$\kU = -\mathbf{d} \cdot \kEfield. \tag{1.40}$$</div>
+<p>在我们对这一相互作用的半经典处理中，我们用量子力学处理原子，因此把$\hat{d}$看作算符，但用经典方式处理电磁场，因此把$\kEfield$看作复数矢量。这种<span data-concept="dipole-interaction">偶极相互作用</span>有两种效应：(1) 当场与原子跃迁非共振时，主要效应是原子能级发生能量移位（$\sim E^2$）；(2) 当场与某个原子跃迁近共振时，主要效应是原子能级之间的跃迁。</p>
+<h3>选择定则</h3>
+<p><span data-concept="dipole-interaction">偶极相互作用</span>的<span data-concept="hamiltonian">哈密顿量</span>可以用原子的一组完备态基$\{|a\rangle\}$写成：</p>
+<div class="equation" id="eq-1-41">$$\kH = -\kd \cdot \kEfield \tag{1.41}$$</div>
+<div class="equation" id="eq-1-42">$$= \sum_{aa'}|a'\rangle\langle a|\langle a'|\kd|a\rangle \cdot \kEfield. \tag{1.42}$$</div>
+<p>注意，量子态$|a\rangle$是用量子数$n_a, l_a, s_a$等作完整描述的简写。只有当<span data-concept="dipole-matrix-element" id="matrix-element">矩阵元</span>满足下式时，态$|a\rangle$与$|b\rangle$之间才可能发生跃迁</p>
+<div class="equation" id="eq-1-43">$$\mu_{a'a} \equiv \langle a'|\kd|a\rangle \neq 0. \tag{1.43}$$</div>
+<p>对使$\mu_{a'a} \neq 0$的态$|a\rangle, |a'\rangle$有许多限制；这些限制称为<span data-concept="selection-rules" id="selection-rules">选择定则</span>。例如，<span data-concept="wavefunction-parity">宇称</span>论证限制了允许发生跃迁的$L$值。由于标量</p>
+<div class="equation" id="eq-1-44">$$\mu_{a'a} \propto \int \psi_{L'}\ r\ \psi_L dV \tag{1.44}$$</div>
+<p>在宇称操作$r \to -r$，$\psi_L \to (-1)^L\psi_L$下不变，所以只有当$(-1)^{L+L'+1} = 1$时$\mu$才不为零，由此得到<span data-concept="selection-rules">选择定则</span></p>
+<div class="equation" id="eq-1-45">$$\Delta L = \pm 1. \tag{1.45}$$</div>
+<p>当然，这一论证实际上只说明$\Delta L$为奇数。要证明它必须恰为$\pm 1$，可以对下面方程的两边取矩阵元</p>
+<div class="equation" id="eq-1-46">$$[L^2, [L^2, \kr]] = 2\hbar^2(\kr L^2 + L^2\kr) \tag{1.46}$$</div>
+<p>（在$\langle\alpha', L', m_L'|$与$|\alpha, L, m_L\rangle$之间）。由此可以导出要求$\Delta L = \pm 1$。</p>
+<p>自旋方面的论证很简单：由于偶极算符$\hat{d} = e\kr$不含自旋自由度，必有</p>
+<div class="equation" id="eq-1-47">$$\Delta S = 0. \tag{1.47}$$</div>
+<p>$J$和$F$的定则为</p>
+<div class="equation" id="eq-1-48">$$\Delta J = \pm 1, 0 \tag{1.48}$$</div>
+<div class="equation" id="eq-1-49">$$\Delta F = \pm 1, 0. \tag{1.49}$$</div>
+<p>这些定则的例外是，$J = 0 \to J' = 0$的跃迁和$F = 0 \to F' = 0$的跃迁是禁戒的，因为这些跃迁必然意味着$\Delta L = 0$。</p>
+<p>在转向磁量子数的<span data-concept="selection-rules">选择定则</span>之前，考虑一些关于跃迁强度的实用说明是有益的。一般地，</p>
+<div class="equation" id="eq-1-50">$$\hat{\epsilon}_q \cdot \kr = \sqrt{\frac{4\pi}{3}}\rho Y_{1q}(\theta, \phi), \tag{1.50}$$</div>
+<p>其中$\rho = |r|$。因此</p>
+<div class="equation" id="eq-1-51">$$\langle a|\hat{\epsilon}_q \cdot \kr|a'\rangle = \text{径向部分} \cdot \text{角向部分}, \tag{1.51}$$</div>
+<p>其中径向部分$\bar{\rho}$设定大小尺度，角向部分可以用维格纳-埃卡特定理求出（例如参见樱井纯的“Modern Quantum Mechanics”）。例如，类氢原子发生$1S \to 2P$跃迁时的径向分量为</p>
+<div class="equation" id="eq-1-52">$$\bar{\rho} = \int R_{nl}\rho R_{n'l+1}dV \tag{1.52}$$</div>
+<div class="equation" id="eq-1-53">$$\Rightarrow \bar{\rho} = 1.3\, a_B(1S \to 2P) \tag{1.53}$$</div>
+<p>其中$a_B$是玻尔半径。</p>
+<p>在没有精细结构或超精细结构的原子中，跃迁矩阵元的角向部分为</p>
+<div class="equation" id="eq-1-54">$$\langle L', m_L'|Y_{1q}|L, m_L\rangle = \langle Y_{L'm_L'}|Y_{1q}|Y_{L,m_L}\rangle, \tag{1.54}$$</div>
+<p>它可以用所谓的3j 符号表示（参见瓦尼耶或梅特卡夫），而后者本身又与<span data-concept="clebsch-gordan-coefficients">CG 系数</span>相关。要确定具有<span data-concept="fine-structure">精细</span>结构和<span data-concept="hyperfine-interaction">超精细</span>结构的原子的角向部分，需要用到<span data-concept="clebsch-gordan-coefficients">CG 系数</span>。对于<span data-concept="fine-structure">精细结构</span>，能级被<span data-concept="spin-orbit-coupling">自旋轨道相互作用</span>分裂，因此$L$不再是好量子数，而被$J$取代。然而，光场仍然只与态的轨道角动量$L$耦合。于是，要计算角向矩阵元，就必须用<span data-concept="clebsch-gordan-coefficients">CG 系数</span>把$|J, m_J\rangle$态用$|L, m_L\rangle|S, m_S\rangle$态表示出来。对于具有超精细结构、以$F$为好量子数的原子，必须（两次）使用类似的步骤（例如参见梅特卡夫和范德斯特拉滕的“Laser Cooling and Trapping”）。</p>
+<p id="circular-basis">现在转向磁量子数的<span data-concept="selection-rules">选择定则</span>，它们与入射电场的偏振有关。我们可以把电场写成线偏振分量之和</p>
+<div class="equation" id="eq-1-55">$$\kEfield = \hat{\epsilon}_\mathbf{x}\mathbf{E}_\mathbf{x} + \hat{\epsilon}_\mathbf{y}\mathbf{E}_\mathbf{y} + \hat{\epsilon}_\mathbf{z}\mathbf{E}_\mathbf{z}, \tag{1.55}$$</div>
+<p><span data-concept="spherical-polarization-basis">或写成右旋和左旋圆偏振分量与$\hat{z}$线偏振分量之和</span></p>
+<div class="equation" id="eq-1-56">$$\kEfield = \hat{\epsilon}_+\mathbf{E}_+ + \hat{\epsilon}_-\mathbf{E}_- + \hat{\epsilon}_\mathbf{z}\mathbf{E}_\mathbf{z}, \tag{1.56}$$</div>
+<p>其中</p>
+<div class="equation" id="eq-1-57">$$\hat{\epsilon}_\pm = \mp(\hat{\epsilon}_x \pm i\hat{\epsilon}_y)/\sqrt{2}. \tag{1.57}$$</div>
+<p id="m-selection">由<a href="#eq-1-54">式 1.54</a>和关于球谐函数的知识，立即可以看出<span data-concept="polarization-selection-rules">$m_L$选择定则</span>为</p>
+<div class="equation" id="eq-1-58">$$\sigma^+ \quad \text{光} \quad (\Rightarrow q = +1) \quad \Rightarrow \Delta m_L = +1 \tag{1.58}$$</div>
+<div class="equation" id="eq-1-59">$$\sigma^- \quad \text{光} \quad (\Rightarrow q = -1) \quad \Rightarrow \Delta m_L = -1 \tag{1.59}$$</div>
+<div class="equation" id="eq-1-60">$$\hat{z} \quad \text{光} \quad (\Rightarrow q = 0) \quad \Rightarrow \Delta m_L = 0, \tag{1.60}$$</div>
+<p>同样的<span data-concept="selection-rules">选择定则</span>也适用于$m_J$和$m_F$，但有一条额外的限制。对于$J = J'$，$m_J = 0$的$\Delta m_J = 0$是禁戒的，因为</p>
+<div class="equation" id="eq-1-61">$$\langle J, m_J|z|J, m_J\rangle \sim m_J \tag{1.61}$$</div>
+<p>（这里的$J$可以代表$J$或$F$）。注意，<a href="#eq-1-61">式 1.61</a>成立是因为该矩阵元中的所有函数都关于$z$对称。</p>
+</section>

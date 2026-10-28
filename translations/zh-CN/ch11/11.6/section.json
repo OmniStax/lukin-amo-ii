@@ -1,0 +1,195 @@
+{
+ "id": "11.6",
+ "chapter": "11",
+ "title": "玻色凝聚体的一级相干性",
+ "short": "一级相干性",
+ "lead": "凝聚体的经典<span data-concept=\"condensate-first-order-coherence\">一级相干性</span>：一同释放的两团云干涉成条纹，热云中的相干性只达到约一个<span data-concept=\"de-broglie-wavelength\">德布罗意波长</span>，而凝聚体的相干性遍及整团云，如<span data-concept=\"atom-laser\">原子激光器</span>所测量的那样，并且原子数固定的两个凝聚体只有在探测到其原子时才获得相对相位。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "图 11.12 由模型计算得出；书中的图像再现已发表的数据，此处不予显示。",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-two-condensates",
+   "kind": "sim",
+   "number": "11.11",
+   "originals": [
+    "/media/ch11/fig-11-11.png"
+   ],
+   "original_caption": "通过让相距$\\Delta R_s$的两个经典相干凝聚体膨胀并干涉，可以观察到间距为$\\Delta R \\sim \\hbar\\tau/\\Delta R_s m$的条纹。MIT 的实验（参见安德鲁斯等，Science 275, p637 (2000)）观察到了这些条纹。两个 BEC 在阱中用相衬成像拍摄，让其膨胀并干涉，在飞行时间吸收图像中产生了干涉条纹。",
+   "draws": [
+    "density",
+    "length",
+    "phase",
+    "time",
+    "mass"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-spatial-coherence",
+   "kind": "sim",
+   "number": "11.12",
+   "withheld": "图 11.12 再现已发表的实验数据，本书不得复制这些数据。",
+   "draws": [
+    "temperature",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "first-order",
+   "concept": "condensate-first-order-coherence",
+   "verb": "introduces"
+  },
+  {
+   "span": "fringes",
+   "concept": "condensate-interference-fringes",
+   "verb": "introduces"
+  },
+  {
+   "span": "atom-laser",
+   "concept": "atom-laser",
+   "verb": "introduces"
+  },
+  {
+   "span": "ssb",
+   "concept": "relative-phase-symmetry-breaking",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-clouds",
+   "concept": "time-of-flight-imaging",
+   "verb": "uses"
+  },
+  {
+   "span": "two-clouds",
+   "concept": "gross-pitaevskii-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "two-clouds",
+   "concept": "matter-wave-symmetry-breaking",
+   "verb": "uses"
+  },
+  {
+   "span": "two-clouds",
+   "concept": "de-broglie-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "two-clouds",
+   "concept": "bose-condensation",
+   "verb": "uses"
+  },
+  {
+   "span": "two-clouds",
+   "concept": "zeeman-effect",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry-breaking",
+   "concept": "critical-temperature",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry-breaking",
+   "concept": "ideal-gas-condensate-fraction",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [
+  {
+   "id": "bec-1",
+   "label": "凝聚体 1",
+   "figures": [
+    "sim-two-condensates"
+   ]
+  },
+  {
+   "id": "bec-2",
+   "label": "凝聚体 2",
+   "figures": [
+    "sim-two-condensates"
+   ]
+  },
+  {
+   "id": "condensate",
+   "label": "云中的凝聚原子",
+   "figures": [
+    "sim-spatial-coherence"
+   ]
+  },
+  {
+   "id": "thermal",
+   "label": "云中的热原子",
+   "figures": [
+    "sim-spatial-coherence"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "footnote-1",
+   "kind": "book",
+   "number": "1",
+   "html": "磁场梯度的产生是因为阱的中心被重力从磁场最小值处移开，因此未陷俘态具有依赖于位置的<span data-concept=\"zeeman-effect\">塞曼能量</span>。"
+  },
+  {
+   "id": "c-fig-11-11",
+   "kind": "correction",
+   "figure": "sim-two-condensates",
+   "html": "图注把年份印作 2000。安德鲁斯<em>等</em>的“Observation of interference between two Bose condensates”于 1997 年发表在 Science 275, 637。"
+  }
+ ]
+}

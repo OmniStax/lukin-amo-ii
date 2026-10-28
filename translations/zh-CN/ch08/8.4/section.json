@@ -1,0 +1,1168 @@
+{
+ "id": "8.4",
+ "chapter": "8",
+ "title": "耗散与量子噪声：海森伯-朗之万方法",
+ "short": "海森伯-朗之万方法",
+ "lead": "耗散如何带来噪声：<span data-concept=\"langevin-equation\">布朗运动</span>的经典<span data-concept=\"langevin-equation\">朗之万</span>描述，包括其中的摩擦、扩散和<span data-concept=\"einstein-relation\">爱因斯坦关系</span>，以及它的量子对应，即<span data-concept=\"heisenberg-langevin-equation\">海森伯-朗之万方程</span>，其中热库给每一个衰变都加上一个<span data-concept=\"quantum-langevin-force\">量子朗之万力</span>。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-brownian",
+   "kind": "sim",
+   "draws": [
+    "momentum",
+    "friction",
+    "diffusion",
+    "time",
+    "mass",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "langevin-equation-name",
+   "concept": "langevin-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "diffusion-coefficient-name",
+   "concept": "diffusion-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein-relation-name",
+   "concept": "einstein-relation",
+   "verb": "introduces"
+  },
+  {
+   "span": "random-walk-name",
+   "concept": "random-walk",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-langevin-force-name",
+   "concept": "quantum-langevin-force",
+   "verb": "introduces"
+  },
+  {
+   "span": "heisenberg-langevin-equation-name",
+   "concept": "heisenberg-langevin-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "master-equivalence",
+   "concept": "heisenberg-langevin-master-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "generalized-einstein-relation",
+   "concept": "generalized-einstein-relation",
+   "verb": "introduces"
+  },
+  {
+   "span": "langevin-equation",
+   "concept": "friction-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-8-50",
+   "concept": "heisenberg-picture",
+   "verb": "uses"
+  },
+  {
+   "span": "naive-damping",
+   "concept": "optical-bloch-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "naive-damping",
+   "concept": "commutator",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-8-53",
+   "concept": "system-reservoir-hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-8-55",
+   "concept": "single-photon-rabi-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "coherent-field",
+   "concept": "rabi-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "markov",
+   "concept": "wigner-weisskopf",
+   "verb": "uses"
+  },
+  {
+   "span": "markov",
+   "concept": "born-markov-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-8-70",
+   "concept": "master-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "einstein-analogue",
+   "concept": "markovian-environment",
+   "verb": "uses"
+  },
+  {
+   "span": "hl-opening",
+   "concept": "semiclassical-light-force",
+   "verb": "uses"
+  },
+  {
+   "span": "hl-opening",
+   "concept": "light-force-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "hl-opening",
+   "concept": "doppler-cooling",
+   "verb": "uses"
+  },
+  {
+   "span": "einstein-analogue",
+   "concept": "einstein-relation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "quantum-langevin-force",
+   "concept": "langevin-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "generalized-einstein",
+   "concept": "diffusion-coefficient",
+   "verb": "reinforces"
+  },
+  {
+   "span": "drv-mean-square-momentum",
+   "concept": "langevin-momentum-spread",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-naive-commutator-decay",
+   "concept": "naive-operator-damping",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-system-operator-equation",
+   "concept": "system-reservoir-operator-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-reservoir-operator",
+   "concept": "reservoir-operator-solution",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-markov-decay",
+   "concept": "spontaneous-emission-rate",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-quantum-langevin-moments",
+   "concept": "mean-thermal-photon-number",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [],
+ "footnotes": [
+  {
+   "id": "c-eq-8-45",
+   "kind": "correction",
+   "html": "书中说，对$\\keta\\kt \\ll 1$，动量平方只是指数式衰减。到$\\keta\\kt$的一阶，式 (8.44) 给出$\\overline{\\kpcm^2} \\approx \\overline{\\kpcm(0)^2}(1 - 2\\keta\\kt) + 2\\kDdiff\\kt$：只有从平衡之上出发的粒子，即$\\overline{\\kpcm(0)^2} > \\kDdiff/\\keta$，动量平方才会下降，而当$\\overline{\\kpcm(0)^2} \\gg \\kDdiff/\\keta$时式 (8.45) 成立；从静止出发的粒子得到$\\overline{\\kpcm^2} = 2\\kDdiff\\kt$。"
+  },
+  {
+   "id": "c-eq-8-49",
+   "kind": "correction",
+   "html": "书中印出的是$\\overline{\\kpcm^2} = \\kDdiff\\kt$。当$\\keta \\rightarrow 0$时，$\\frac{\\kDdiff}{\\keta}(1 - e^{-2\\keta\\kt}) \\rightarrow 2\\kDdiff\\kt$，所以式 (8.44) 给出$\\overline{\\kpcm^2} = \\overline{\\kpcm(0)^2} + 2\\kDdiff\\kt$，对从静止出发的粒子则为$2\\kDdiff\\kt$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "einstein-relation",
+   "what": "爱因斯坦关系",
+   "source": "现代原子与光学物理 II，8.4.1 布朗运动",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "E_\\mathrm{kinetic} \\rightarrow \\frac{\\kDdiff}{2\\km\\keta}",
+       "src": "(8.47)"
+      },
+      {
+       "text": "在热平衡时，对一维系统有$E_\\mathrm{kinetic} = (1/2)k_BT$。",
+       "src": "8.4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{E_\\mathrm{kinetic}} = \\mk{R}{\\frac{\\kDdiff}{2\\km\\keta}}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\frac{1}{2}k_B\\kT} = \\mk{R}{\\frac{\\kDdiff}{2\\km\\keta}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{R}{\\kDdiff} = \\mk{E}{\\km\\keta k_B\\kT}",
+       "uses": []
+      }
+     ],
+     "num": "(8.48)"
+    }
+   ]
+  },
+  {
+   "id": "fluctuation-dissipation-theorem",
+   "what": "量子涨落耗散定理",
+   "source": "现代原子与光学物理 II，8.4.2 海森伯-朗之万方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\frac{d}{d\\kt}\\hat{A}_\\mu = \\hat{d}_\\mu + \\kFnoise_\\mu",
+       "src": "(8.71)"
+      },
+      {
+       "tex": "\\langle\\kFnoise_\\mu(\\kt)\\kFnoise_\\nu(\\kt')\\rangle = 2\\kDdiff_{\\mu\\nu}\\delta(\\kt-\\kt')",
+       "src": "(8.72)"
+      },
+      {
+       "text": "由因果性，$\\hat A_\\mu(t - \\Delta t)$与$\\hat{\\mathcal F}_\\nu(t)$不关联，且$\\langle\\hat{\\mathcal F}_\\nu(t)\\rangle = 0$。",
+       "src": "8.4.2"
+      },
+      {
+       "text": "$\\hat d_\\mu$是确定性的，所以它的项至多正比于取为很小的$\\Delta t$。",
+       "src": "8.4.2"
+      },
+      {
+       "text": "积分区域端点处的 δ 函数带因子$1/2$计入，如维格纳-韦斯科普夫理论中那样。",
+       "src": "2.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\hat{A}_\\mu(\\kt)} = \\mk{a}{\\hat{A}_\\mu(\\kt-\\Delta \\kt)} + \\mk{i}{\\int_{\\kt-\\Delta \\kt}^{\\kt} d\\kt'\\left(\\hat{d}_\\mu(\\kt') + \\kFnoise_\\mu(\\kt')\\right)}",
+      "uses": [
+       0
+      ],
+      "why": "对式 (8.71) 从$t - \\Delta t$到$t$积分。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\hat{A}_\\mu(\\kt)\\kFnoise_\\nu(\\kt)\\rangle} = \\mk{a}{\\langle\\hat{A}_\\mu(\\kt-\\Delta \\kt)\\kFnoise_\\nu(\\kt)\\rangle} + \\mk{i}{\\int_{\\kt-\\Delta \\kt}^{\\kt} d\\kt'\\left(\\langle\\hat{d}_\\mu(\\kt')\\kFnoise_\\nu(\\kt)\\rangle + \\langle\\kFnoise_\\mu(\\kt')\\kFnoise_\\nu(\\kt)\\rangle\\right)}",
+       "uses": [],
+       "cap": "从右边乘以$\\hat{\\mathcal F}_\\nu(t)$并取平均。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\hat{A}_\\mu(\\kt)\\kFnoise_\\nu(\\kt)\\rangle} = \\mk{i}{\\int_{\\kt-\\Delta \\kt}^{\\kt} d\\kt'\\left(\\langle\\hat{d}_\\mu(\\kt')\\kFnoise_\\nu(\\kt)\\rangle + \\langle\\kFnoise_\\mu(\\kt')\\kFnoise_\\nu(\\kt)\\rangle\\right)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\hat{A}_\\mu(\\kt)\\kFnoise_\\nu(\\kt)\\rangle} = \\mk{i}{\\int_{\\kt-\\Delta \\kt}^{\\kt} d\\kt'\\langle\\kFnoise_\\mu(\\kt')\\kFnoise_\\nu(\\kt)\\rangle}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\hat{A}_\\mu(\\kt)\\kFnoise_\\nu(\\kt)\\rangle} = \\mk{i}{\\int_{\\kt-\\Delta \\kt}^{\\kt} d\\kt'\\,2\\kDdiff_{\\mu\\nu}\\delta(\\kt'-\\kt)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\hat{A}_\\mu(\\kt)\\kFnoise_\\nu(\\kt)\\rangle} = \\mk{i}{\\kDdiff_{\\mu\\nu}}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(8.75)",
+     "note": "书中在式 (8.74) 的最后一项印的是$\\hat F_\\mu(t')$。它应是式 (8.71) 的朗之万算符$\\hat{\\mathcal F}_\\mu(t')$，其与$\\hat{\\mathcal F}_\\nu(t)$的关联是式 (8.72)；$\\hat F$是力算符。"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\frac{d}{d\\kt}\\hat{A}_\\mu = \\hat{d}_\\mu + \\kFnoise_\\mu",
+       "src": "(8.71)"
+      },
+      {
+       "tex": "\\langle\\kFnoise_\\mu(\\kt)\\kFnoise_\\nu(\\kt')\\rangle = 2\\kDdiff_{\\mu\\nu}\\delta(\\kt-\\kt')",
+       "src": "(8.72)"
+      },
+      {
+       "text": "由因果性，$\\hat A_\\mu(t - \\Delta t)$与$\\hat{\\mathcal F}_\\nu(t)$不关联，且$\\langle\\hat{\\mathcal F}_\\nu(t)\\rangle = 0$。",
+       "src": "8.4.2"
+      },
+      {
+       "text": "$\\hat d_\\mu$是确定性的，所以它的项至多正比于取为很小的$\\Delta t$。",
+       "src": "8.4.2"
+      },
+      {
+       "text": "积分区域端点处的 δ 函数带因子$1/2$计入，如维格纳-韦斯科普夫理论中那样。",
+       "src": "2.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\hat{A}_\\mu(\\kt)} = \\mk{a}{\\hat{A}_\\mu(\\kt-\\Delta \\kt)} + \\mk{i}{\\int_{\\kt-\\Delta \\kt}^{\\kt} d\\kt'\\left(\\hat{d}_\\mu(\\kt') + \\kFnoise_\\mu(\\kt')\\right)}",
+      "uses": [
+       0
+      ],
+      "why": "对式 (8.71) 从$t - \\Delta t$到$t$积分。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\kFnoise_\\nu(\\kt)\\hat{A}_\\mu(\\kt)\\rangle} = \\mk{a}{\\langle\\kFnoise_\\nu(\\kt)\\hat{A}_\\mu(\\kt-\\Delta \\kt)\\rangle} + \\mk{i}{\\int_{\\kt-\\Delta \\kt}^{\\kt} d\\kt'\\left(\\langle\\kFnoise_\\nu(\\kt)\\hat{d}_\\mu(\\kt')\\rangle + \\langle\\kFnoise_\\nu(\\kt)\\kFnoise_\\mu(\\kt')\\rangle\\right)}",
+       "uses": [],
+       "cap": "从左边乘以$\\hat{\\mathcal F}_\\nu(t)$并取平均。"
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kFnoise_\\nu(\\kt)\\hat{A}_\\mu(\\kt)\\rangle} = \\mk{i}{\\int_{\\kt-\\Delta \\kt}^{\\kt} d\\kt'\\left(\\langle\\kFnoise_\\nu(\\kt)\\hat{d}_\\mu(\\kt')\\rangle + \\langle\\kFnoise_\\nu(\\kt)\\kFnoise_\\mu(\\kt')\\rangle\\right)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kFnoise_\\nu(\\kt)\\hat{A}_\\mu(\\kt)\\rangle} = \\mk{i}{\\int_{\\kt-\\Delta \\kt}^{\\kt} d\\kt'\\langle\\kFnoise_\\nu(\\kt)\\kFnoise_\\mu(\\kt')\\rangle}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kFnoise_\\nu(\\kt)\\hat{A}_\\mu(\\kt)\\rangle} = \\mk{i}{\\int_{\\kt-\\Delta \\kt}^{\\kt} d\\kt'\\,2\\kDdiff_{\\nu\\mu}\\delta(\\kt-\\kt')}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kFnoise_\\nu(\\kt)\\hat{A}_\\mu(\\kt)\\rangle} = \\mk{i}{\\kDdiff_{\\nu\\mu}}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(8.76)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\frac{d}{d\\kt}\\hat{A}_\\mu = \\hat{d}_\\mu + \\kFnoise_\\mu",
+       "src": "(8.71)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\langle\\hat{A}_\\mu\\hat{A}_\\nu\\rangle} = \\mk{n}{\\langle\\hat{A}_\\mu\\frac{d\\hat{A}_\\nu}{d\\kt}\\rangle} + \\mk{m}{\\langle\\frac{d\\hat{A}_\\mu}{d\\kt}\\hat{A}_\\nu\\rangle}",
+      "uses": [],
+      "why": "乘积法则。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\langle\\hat{A}_\\mu\\hat{A}_\\nu\\rangle} = \\mk{n}{\\langle\\hat{A}_\\mu(d_\\nu + \\kFnoise_\\nu)\\rangle} + \\mk{m}{\\langle(d_\\mu + \\kFnoise_\\mu)\\hat{A}_\\nu\\rangle}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\langle\\hat{A}_\\mu\\hat{A}_\\nu\\rangle} = \\mk{n}{\\langle\\hat{A}_\\mu\\hat{d}_\\nu\\rangle + \\kDdiff_{\\mu\\nu}} + \\mk{m}{\\langle\\hat{d}_\\mu\\hat{A}_\\nu\\rangle + \\kDdiff_{\\mu\\nu}}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "式 (8.76) 交换标号后给出$\\langle\\hat{\\mathcal F}_\\mu\\hat A_\\nu\\rangle = D_{\\mu\\nu}$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\langle\\hat{A}_\\mu\\hat{A}_\\nu\\rangle - \\langle\\hat{A}_\\mu\\hat{d}_\\nu\\rangle - \\langle\\hat{d}_\\mu\\hat{A}_\\nu\\rangle} = \\mk{A}{2\\langle\\hat{A}_\\mu\\kFnoise_\\nu\\rangle} = \\mk{D}{2\\kDdiff_{\\mu\\nu}}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "n": [
+         "L",
+         "D"
+        ],
+        "m": [
+         "L",
+         "D"
+        ]
+       }
+      }
+     ],
+     "num": "(8.78)"
+    }
+   ]
+  },
+  {
+   "id": "heisenberg-langevin-equation",
+   "what": "海森伯-朗之万方程",
+   "source": "现代原子与光学物理 II，8.4.2 海森伯-朗之万方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kfhat(\\kt) = -i\\sum_j \\kg_j\\hat{a}_j(0)e^{-i(\\knu_j-\\komega)\\kt}",
+       "src": "(8.63)"
+      },
+      {
+       "tex": "\\int_0^{\\kt} d\\kt'\\sum_j|\\kg_j|^2e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\kShat(\\kt') \\rightarrow \\frac{\\kgamma}{2}\\kShat(\\kt)",
+       "src": "(8.62)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\hat{R}(\\kt)} = i\\hbar\\left(\\mk{f}{-i\\sum_j \\kg_j\\hat{a}_j(0)e^{-i(\\knu_j-\\komega)\\kt}} + \\mk{s}{\\int_0^{\\kt} d\\kt'\\sum_j|\\kg_j|^2e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\kShat(\\kt')}\\right)",
+      "src": "(8.61)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\hat{R}(\\kt)} = i\\hbar\\left(\\mk{f}{\\kfhat(\\kt)} + \\mk{s}{\\int_0^{\\kt} d\\kt'\\sum_j|\\kg_j|^2e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\kShat(\\kt')}\\right)",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\hat{R}(\\kt)} = i\\hbar\\left(\\mk{s}{\\frac{\\kgamma}{2}\\kShat(\\kt)} + \\mk{f}{\\kfhat(\\kt)}\\right)",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(8.68)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{A}]} + \\mk{r1}{\\frac{i}{\\hbar}\\hat{R}^\\dagger[\\hat{A}, \\kShat]} + \\mk{r2}{\\frac{i}{\\hbar}[\\hat{A}, \\kShat^\\dagger]\\hat{R}}",
+      "src": "(8.57)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{A}]} + \\mk{r1}{\\frac{i}{\\hbar}(-i\\hbar)\\left(\\frac{\\kgamma}{2}\\kShat^\\dagger + \\kfhat^\\dagger\\right)[\\hat{A}, \\kShat]} + \\mk{r2}{\\frac{i}{\\hbar}[\\hat{A}, \\kShat^\\dagger](i\\hbar)\\left(\\frac{\\kgamma}{2}\\kShat + \\kfhat\\right)}",
+       "uses": [
+        0
+       ],
+       "cap": "式 (8.68) 的伴随是$\\hat R^\\dagger = -i\\hbar(\\frac{\\gamma}{2}\\hat S^\\dagger + \\hat f^\\dagger)$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{A}]} + \\mk{r1}{\\left(\\frac{\\kgamma}{2}\\kShat^\\dagger + \\kfhat^\\dagger\\right)[\\hat{A}, \\kShat]} - \\mk{r2}{[\\hat{A}, \\kShat^\\dagger]\\left(\\frac{\\kgamma}{2}\\kShat + \\kfhat\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(8.69)"
+    }
+   ]
+  },
+  {
+   "id": "langevin-solution",
+   "what": "朗之万方程的解",
+   "source": "现代原子与光学物理 II，8.4.1 布朗运动",
+   "nodes": [
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\kpcm} = \\mk{R}{-\\keta \\kpcm} + \\mk{f}{\\kft(\\kt)}",
+      "src": "(8.34)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\left(e^{\\keta\\kt}\\kpcm\\right)} = \\mk{f}{e^{\\keta\\kt}\\kft(\\kt)}",
+       "uses": [],
+       "cap": "乘以$e^{\\eta t}$把阻力项并入导数：$\\frac{d}{dt}(e^{\\eta t}p) = e^{\\eta t}(\\dot p + \\eta p)$。",
+       "map": {
+        "R": "L"
+       }
+      },
+      {
+       "tex": "\\mk{L}{e^{\\keta\\kt}\\kpcm(\\kt) - \\kpcm(0)} = \\mk{f}{\\int_0^{\\kt} d\\kt' e^{\\keta\\kt'}\\kft(\\kt')}",
+       "uses": [],
+       "cap": "从$0$到$t$积分。"
+      },
+      {
+       "tex": "\\mk{L}{\\kpcm(\\kt)} = \\mk{a}{\\kpcm(0)e^{-\\keta \\kt}} + \\mk{f}{\\int_0^{\\kt} d\\kt' \\kft(\\kt')e^{-\\keta(\\kt-\\kt')}}",
+       "uses": []
+      }
+     ],
+     "num": "(8.39)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "动量在远大于碰撞率的时标上取平均。",
+       "src": "8.4.1"
+      },
+      {
+       "tex": "\\langle \\kft(\\kt)\\rangle = 0",
+       "src": "(8.35)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kpcm(\\kt)} = \\mk{a}{\\kpcm(0)e^{-\\keta \\kt}} + \\mk{f}{\\int_0^{\\kt} d\\kt' \\kft(\\kt')e^{-\\keta(\\kt-\\kt')}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\overline{\\kpcm(\\kt)}} = \\mk{a}{\\overline{\\kpcm(0)}e^{-\\keta \\kt}} + \\mk{f}{\\int_0^{\\kt} d\\kt' \\overline{\\kft(\\kt')}e^{-\\keta(\\kt-\\kt')}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\overline{\\kpcm(\\kt)}} = \\mk{a}{\\overline{\\kpcm(0)}e^{-\\keta \\kt}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(8.40)"
+    }
+   ]
+  },
+  {
+   "id": "long-time-momentum",
+   "what": "长时间下的动量展宽",
+   "source": "现代原子与光学物理 II，8.4.1 布朗运动",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "在长时间下，$\\eta t \\gg 1$。",
+       "src": "8.4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\overline{\\kpcm^2(\\kt)}} = \\mk{a}{\\overline{\\kpcm(0)^2}e^{-2\\keta \\kt}} + \\mk{R}{\\frac{\\kDdiff}{\\keta}\\left(1 - e^{-2\\keta \\kt}\\right)}",
+      "uses": [],
+      "src": "(8.44)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\mathop{\\mathrm{lim}}\\limits_{\\kt\\rightarrow\\infty}\\overline{\\kpcm(\\kt)^2}} \\rightarrow \\mk{R}{\\frac{\\kDdiff}{\\keta}}",
+       "uses": [
+        0
+       ],
+       "cap": "黏滞项被指数式阻尼。",
+       "map": {
+        "a": "R"
+       }
+      }
+     ],
+     "num": "(8.46)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "动能为$p^2/2m$。",
+       "src": "(8.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{E_\\mathrm{kinetic}} = \\mk{p}{\\frac{\\overline{\\kpcm^2}}{2\\km}}",
+      "uses": [1]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{E_\\mathrm{kinetic}} = \\mk{p}{\\frac{\\overline{\\kpcm^2}}{2\\km}} \\rightarrow \\mk{R}{\\frac{\\kDdiff}{2\\km\\keta}}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(8.47)"
+    }
+   ]
+  },
+  {
+   "id": "markov-decay",
+   "what": "作为衰变的源项",
+   "source": "现代原子与光学物理 II，8.4.2 海森伯-朗之万方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "原子算符$\\hat S(t)$随时间缓慢变化，并且热库带宽很宽。",
+       "src": "8.4.2"
+      },
+      {
+       "tex": "\\int_0^{\\kt} e^{-i\\kdeltak(\\kt'-\\kt)}d\\kt' = \\pi\\delta(\\kdeltak) + i\\mathcal{P}\\frac{1}{\\kdeltak}",
+       "src": "2.2"
+      },
+      {
+       "text": "主值部分，能量的移位，并入重正化的原子频率之中。",
+       "src": "2.3"
+      },
+      {
+       "tex": "\\kgamma = 2\\pi\\sum_{\\kk,\\alpha}|\\kg_{\\kk,\\alpha}|^2\\delta(\\knuk - \\komega)",
+       "src": "(2.80)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\int_0^{\\kt} d\\kt'\\sum_j|\\kg_j|^2e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\kShat(\\kt')} \\approx \\mk{R}{\\sum_j|\\kg_j|^2\\int_0^{\\kt} d\\kt' e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\,\\kShat(\\kt)}",
+      "uses": [0],
+      "why": "$\\hat S$变化缓慢，所以它按当前值提到积分之外。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\int_0^{\\kt} d\\kt'\\sum_j|\\kg_j|^2e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\kShat(\\kt')} \\rightarrow \\mk{R}{\\sum_j|\\kg_j|^2\\left(\\pi\\delta(\\knu_j-\\komega) - i\\mathcal{P}\\frac{1}{\\knu_j-\\komega}\\right)\\kShat(\\kt)}",
+       "uses": [
+        1
+       ],
+       "cap": "在长时间下，积分就是 2.2 节中的积分，其中$\\delta_k$换成$-(\\nu_j - \\omega)$。"
+      },
+      {
+       "tex": "\\mk{L}{\\int_0^{\\kt} d\\kt'\\sum_j|\\kg_j|^2e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\kShat(\\kt')} \\rightarrow \\mk{R}{\\pi\\sum_j|\\kg_j|^2\\delta(\\knu_j-\\komega)\\,\\kShat(\\kt)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\int_0^{\\kt} d\\kt'\\sum_j|\\kg_j|^2e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\kShat(\\kt')} \\rightarrow \\mk{R}{\\frac{\\kgamma}{2}\\kShat(\\kt)}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(8.62)"
+    }
+   ]
+  },
+  {
+   "id": "mean-square-momentum",
+   "what": "布朗粒子的方均动量",
+   "source": "现代原子与光学物理 II，8.4.1 布朗运动",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "{\\kpcm(\\kt)} = {\\kpcm(0)e^{-\\keta \\kt}} + {\\int_0^{\\kt} d\\kt' \\kft(\\kt')e^{-\\keta(\\kt-\\kt')}}",
+       "src": "(8.39)"
+      },
+      {
+       "tex": "\\langle \\kft(\\kt)\\rangle = 0",
+       "src": "(8.35)"
+      },
+      {
+       "tex": "\\langle \\kft(\\kt)\\kft(\\kt')\\rangle = 2\\kDdiff g(\\kt-\\kt')",
+       "src": "(8.36)"
+      },
+      {
+       "tex": "g(\\kt-\\kt') \\rightarrow \\delta(\\kt-\\kt')",
+       "src": "(8.38)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\overline{\\kpcm^2(\\kt)}} = \\mk{R}{\\langle\\kpcm(\\kt)^2\\rangle}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\overline{\\kpcm^2(\\kt)}} = \\mk{R}{\\langle\\left(\\kpcm(0)e^{-\\keta \\kt} + \\int_0^{\\kt} d\\kt' \\kft(\\kt')e^{-\\keta(\\kt-\\kt')}\\right)^2\\rangle}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\overline{\\kpcm^2(\\kt)}} = \\mk{a}{\\overline{\\kpcm(0)^2}e^{-2\\keta \\kt}} + \\mk{n}{\\int_0^{\\kt}\\int_0^{\\kt} d\\kt'd\\kt''\\langle \\kft(\\kt')\\kft(\\kt'')\\rangle e^{-\\keta(\\kt-\\kt')}e^{-\\keta(\\kt-\\kt'')}}",
+       "uses": [
+        1
+       ],
+       "cap": "取平方：$f$的线性项为零，因为平均朗之万力为零。",
+       "map": {
+        "R": [
+         "a",
+         "n"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\overline{\\kpcm^2(\\kt)}} = \\mk{a}{\\overline{\\kpcm(0)^2}e^{-2\\keta \\kt}} + \\mk{n}{\\int_0^{\\kt}\\int_0^{\\kt} d\\kt'd\\kt'' 2\\kDdiff\\delta(\\kt'-\\kt'')e^{-\\keta(\\kt-\\kt')}e^{-\\keta(\\kt-\\kt'')}}",
+       "uses": [
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\overline{\\kpcm^2(\\kt)}} = \\mk{a}{\\overline{\\kpcm(0)^2}e^{-2\\keta \\kt}} + \\mk{n}{2\\kDdiff\\int_0^{\\kt} d\\kt' e^{-2\\keta(\\kt-\\kt')}}",
+       "uses": [],
+       "cap": "δ 函数使$t'' = t'$。"
+      },
+      {
+       "tex": "\\mk{L}{\\overline{\\kpcm^2(\\kt)}} = \\mk{a}{\\overline{\\kpcm(0)^2}e^{-2\\keta \\kt}} + \\mk{n}{\\frac{\\kDdiff}{\\keta}\\left(1 - e^{-2\\keta \\kt}\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(8.44)"
+    }
+   ]
+  },
+  {
+   "id": "naive-commutator-decay",
+   "what": "朴素退相位下对易式的衰变",
+   "source": "现代原子与光学物理 II，8.4.2 海森伯-朗之万方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "朴素的退相位项：对每个相干性，$\\dot{\\hat\\sigma}_{\\alpha,\\beta} \\sim -\\gamma_{\\alpha,\\beta}\\hat\\sigma_{\\alpha,\\beta}$。",
+       "src": "8.4.2"
+      },
+      {
+       "text": "相干性及其共轭以同一速率衰变，$\\gamma_{\\beta,\\alpha} = \\gamma_{\\alpha,\\beta}$。",
+       "src": "(3.93)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}[\\hat{\\sigma}_{\\beta,\\alpha}, \\hat{\\sigma}_{\\alpha,\\beta}]} = \\mk{a}{[\\frac{d}{d\\kt}\\hat{\\sigma}_{\\beta,\\alpha}, \\hat{\\sigma}_{\\alpha,\\beta}]} + \\mk{b}{[\\hat{\\sigma}_{\\beta,\\alpha}, \\frac{d}{d\\kt}\\hat{\\sigma}_{\\alpha,\\beta}]}",
+      "src": "(8.51)",
+      "uses": [],
+      "why": "乘积法则。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}[\\hat{\\sigma}_{\\beta,\\alpha}, \\hat{\\sigma}_{\\alpha,\\beta}]} = \\mk{a}{[-\\gamma_{\\beta,\\alpha}\\hat{\\sigma}_{\\beta,\\alpha}, \\hat{\\sigma}_{\\alpha,\\beta}]} + \\mk{b}{[\\hat{\\sigma}_{\\beta,\\alpha}, -\\gamma_{\\alpha,\\beta}\\hat{\\sigma}_{\\alpha,\\beta}]}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}[\\hat{\\sigma}_{\\beta,\\alpha}, \\hat{\\sigma}_{\\alpha,\\beta}]} = \\mk{R}{-(\\gamma_{\\beta,\\alpha} + \\gamma_{\\alpha,\\beta})[\\hat{\\sigma}_{\\beta,\\alpha}, \\hat{\\sigma}_{\\alpha,\\beta}]}",
+       "uses": [],
+       "map": {
+        "a": "R",
+        "b": "R"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}[\\hat{\\sigma}_{\\beta,\\alpha}, \\hat{\\sigma}_{\\alpha,\\beta}]} = \\mk{R}{-2\\gamma_{\\alpha,\\beta}[\\hat{\\sigma}_{\\beta,\\alpha}, \\hat{\\sigma}_{\\alpha,\\beta}]}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(8.52)",
+     "note": "书中印出的速率是$-\\gamma_{\\alpha,\\beta}$。式 (8.51) 的两项各有贡献，所以对易式以$\\gamma_{\\alpha,\\beta} + \\gamma_{\\beta,\\alpha} = 2\\gamma_{\\alpha,\\beta}$衰变。"
+    }
+   ]
+  },
+  {
+   "id": "quantum-langevin-moments",
+   "what": "量子朗之万力的二阶矩",
+   "source": "现代原子与光学物理 II，8.4.2 海森伯-朗之万方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kfhat(\\kt) = -i\\sum_j \\kg_j\\hat{a}_j(0)e^{-i(\\knu_j-\\komega)\\kt}",
+       "src": "(8.63)"
+      },
+      {
+       "text": "热库最初处于热态：$\\langle\\hat a_j^\\dagger(0)\\hat a_{j'}(0)\\rangle = n(\\nu_j)\\delta_{jj'}$。",
+       "src": "3.1"
+      },
+      {
+       "text": "在马尔可夫近似下，$n$在宽的热库上变化很小，这把$\\sum_j|g_j|^2 e^{-i(\\nu_j - \\omega)\\tau}$变成$2\\pi\\sum_j|g_j|^2\\delta(\\nu_j - \\omega)\\,\\delta(\\tau)$。",
+       "src": "8.4.2"
+      },
+      {
+       "tex": "\\kgamma = 2\\pi\\sum_{\\kk,\\alpha}|\\kg_{\\kk,\\alpha}|^2\\delta(\\knuk - \\komega)",
+       "src": "(2.80)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\kfhat(\\kt)^\\dagger\\kfhat(\\kt')\\rangle} = \\mk{R}{\\left\\langle\\left(i\\sum_j \\kg_j^*\\hat{a}_j(0)^\\dagger e^{i(\\knu_j-\\komega)\\kt}\\right)\\left(-i\\sum_{j'} \\kg_{j'}\\hat{a}_{j'}(0)e^{-i(\\knu_{j'}-\\komega)\\kt'}\\right)\\right\\rangle}",
+      "uses": [0],
+      "why": "式 (8.63) 及其伴随。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\kfhat(\\kt)^\\dagger\\kfhat(\\kt')\\rangle} = \\mk{R}{\\sum_{j,j'}\\kg_j^*\\kg_{j'}\\langle\\hat{a}_j(0)^\\dagger\\hat{a}_{j'}(0)\\rangle e^{i(\\knu_j-\\komega)\\kt}e^{-i(\\knu_{j'}-\\komega)\\kt'}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kfhat(\\kt)^\\dagger\\kfhat(\\kt')\\rangle} = \\mk{R}{\\sum_j|\\kg_j|^2n(\\knu_j)e^{-i(\\knu_j-\\komega)(\\kt'-\\kt)}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kfhat(\\kt)^\\dagger\\kfhat(\\kt')\\rangle} = \\mk{R}{n(\\komega)\\kgamma\\delta(\\kt-\\kt')}",
+       "uses": [
+        2,
+        3
+       ]
+      }
+     ],
+     "num": "(8.66)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kfhat(\\kt) = -i\\sum_j \\kg_j\\hat{a}_j(0)e^{-i(\\knu_j-\\komega)\\kt}",
+       "src": "(8.63)"
+      },
+      {
+       "text": "热库最初处于热态：$\\langle\\hat a_j^\\dagger(0)\\hat a_{j'}(0)\\rangle = n(\\nu_j)\\delta_{jj'}$。",
+       "src": "3.1"
+      },
+      {
+       "text": "在马尔可夫近似下，$n$在宽的热库上变化很小，这把$\\sum_j|g_j|^2 e^{-i(\\nu_j - \\omega)\\tau}$变成$2\\pi\\sum_j|g_j|^2\\delta(\\nu_j - \\omega)\\,\\delta(\\tau)$。",
+       "src": "8.4.2"
+      },
+      {
+       "tex": "\\kgamma = 2\\pi\\sum_{\\kk,\\alpha}|\\kg_{\\kk,\\alpha}|^2\\delta(\\knuk - \\komega)",
+       "src": "(2.80)"
+      },
+      {
+       "tex": "[\\hat{a}_j, \\hat{a}_j^\\dagger] = 1",
+       "src": "2.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\langle\\kfhat(\\kt)\\kfhat(\\kt')^\\dagger\\rangle} = \\mk{R}{\\left\\langle\\left(-i\\sum_j \\kg_j\\hat{a}_j(0)e^{-i(\\knu_j-\\komega)\\kt}\\right)\\left(i\\sum_{j'} \\kg_{j'}^*\\hat{a}_{j'}(0)^\\dagger e^{i(\\knu_{j'}-\\komega)\\kt'}\\right)\\right\\rangle}",
+      "uses": [0],
+      "why": "式 (8.63) 及其伴随。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\langle\\kfhat(\\kt)\\kfhat(\\kt')^\\dagger\\rangle} = \\mk{R}{\\sum_{j,j'}\\kg_j\\kg_{j'}^*\\langle\\hat{a}_j(0)\\hat{a}_{j'}(0)^\\dagger\\rangle e^{-i(\\knu_j-\\komega)\\kt}e^{i(\\knu_{j'}-\\komega)\\kt'}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kfhat(\\kt)\\kfhat(\\kt')^\\dagger\\rangle} = \\mk{R}{\\sum_j|\\kg_j|^2\\left(n(\\knu_j) + 1\\right)e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}}",
+       "uses": [
+        1,
+        4
+       ],
+       "cap": "$\\hat a_j\\hat a_j^\\dagger = \\hat a_j^\\dagger\\hat a_j + 1$."
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\kfhat(\\kt)\\kfhat(\\kt')^\\dagger\\rangle} = \\mk{R}{\\left(n(\\komega) + 1\\right)\\kgamma\\delta(\\kt-\\kt')}",
+       "uses": [
+        2,
+        3
+       ]
+      }
+     ],
+     "num": "(8.67)"
+    }
+   ]
+  },
+  {
+   "id": "reservoir-operator",
+   "what": "由系统驱动的热库算符",
+   "source": "现代原子与光学物理 II，8.4.2 海森伯-朗之万方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "在以$\\omega$转动的参考系中，式 (2.69) 的场哈密顿量为$\\hat H_R = \\sum_j \\hbar(\\nu_j - \\omega)\\hat a_j^\\dagger\\hat a_j$。",
+       "src": "(2.69)"
+      },
+      {
+       "tex": "\\kHSR = -\\hat{R}^\\dagger\\kShat - \\kShat^\\dagger\\hat{R}",
+       "src": "(8.54)"
+      },
+      {
+       "tex": "\\hat{R} = \\sum_j \\hbar \\kg_j\\hat{a}_j",
+       "src": "(8.55)"
+      },
+      {
+       "tex": "[\\hat{a}_j, \\hat{a}_j^\\dagger] = 1",
+       "src": "2.3"
+      },
+      {
+       "text": "系统算符和热库算符对易；$\\hat A$是系统算符。",
+       "src": "8.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\hat{a}}_j} = \\mk{R}{\\frac{i}{\\hbar}[\\kHR + \\kHSR, \\hat{a}_j]}",
+      "src": "(8.59)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\hat{a}}_j} = \\mk{z}{\\frac{i}{\\hbar}[\\kHR, \\hat{a}_j]} + \\mk{s}{\\frac{i}{\\hbar}[\\kHSR, \\hat{a}_j]}",
+       "uses": [],
+       "map": {
+        "R": [
+         "z",
+         "s"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\hat{a}}_j} = \\mk{z}{-i(\\knu_j-\\komega)\\hat{a}_j} + \\mk{s}{\\frac{i}{\\hbar}[\\kHSR, \\hat{a}_j]}",
+       "uses": [
+        0,
+        3
+       ],
+       "cap": "$[\\hat a_j^\\dagger\\hat a_j, \\hat a_j] = -\\hat a_j$."
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\hat{a}}_j} = \\mk{z}{-i(\\knu_j-\\komega)\\hat{a}_j} + \\mk{s}{\\frac{i}{\\hbar}\\left(-[\\hat{R}^\\dagger, \\hat{a}_j]\\kShat\\right)}",
+       "uses": [
+        1,
+        4
+       ],
+       "cap": "$\\hat a_j$与$\\hat S$和$\\hat R$对易；只有$\\hat R^\\dagger$不对易。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\hat{a}}_j} = \\mk{z}{-i(\\knu_j-\\komega)\\hat{a}_j} + \\mk{s}{i\\kg_j^*\\kShat}",
+       "uses": [
+        2,
+        3
+       ],
+       "cap": "$\\hat R^\\dagger = \\sum_j\\hbar g_j^*\\hat a_j^\\dagger$, and $[\\hat a_j^\\dagger, \\hat a_j] = -1$."
+      }
+     ],
+     "num": "(8.60)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\hat{a}}_j} = \\mk{z}{-i(\\knu_j-\\komega)\\hat{a}_j} + \\mk{s}{i\\kg_j^*\\kShat}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\left(e^{i(\\knu_j-\\komega)\\kt}\\hat{a}_j\\right)} = \\mk{s}{i\\kg_j^*e^{i(\\knu_j-\\komega)\\kt}\\kShat(\\kt)}",
+       "uses": [],
+       "cap": "乘以$e^{i(\\nu_j - \\omega)t}$把自由演化并入导数。",
+       "map": {
+        "z": "L"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\hat{a}_j(\\kt)} = \\mk{a0}{\\hat{a}_j(0)e^{-i(\\knu_j-\\komega)\\kt}} + \\mk{s}{i\\kg_j^*\\int_0^{\\kt} d\\kt' e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\kShat(\\kt')}",
+       "uses": [],
+       "cap": "从$0$到$t$积分，再乘回$e^{-i(\\nu_j - \\omega)t}$。"
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\hat{R} = \\sum_j \\hbar \\kg_j\\hat{a}_j",
+       "src": "(8.55)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\hat{R}(\\kt)} = \\mk{R}{\\sum_j \\hbar \\kg_j\\hat{a}_j(\\kt)}",
+      "uses": [1]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\hat{R}(\\kt)} = \\mk{z}{\\sum_j \\hbar\\kg_j\\hat{a}_j(0)e^{-i(\\knu_j-\\komega)\\kt}} + \\mk{s}{i\\hbar\\int_0^{\\kt} d\\kt'\\sum_j|\\kg_j|^2e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\kShat(\\kt')}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "R": [
+         "z",
+         "s"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\hat{R}(\\kt)} = \\mk{T}{i\\hbar\\left(-i\\sum_j \\kg_j\\hat{a}_j(0)e^{-i(\\knu_j-\\komega)\\kt} + \\int_0^{\\kt} d\\kt'\\sum_j|\\kg_j|^2e^{-i(\\knu_j-\\komega)(\\kt-\\kt')}\\kShat(\\kt')\\right)}",
+       "uses": [],
+       "map": {
+        "z": "T",
+        "s": "T"
+       }
+      }
+     ],
+     "num": "(8.61)"
+    }
+   ]
+  },
+  {
+   "id": "system-operator-equation",
+   "what": "系统算符的运动方程",
+   "source": "现代原子与光学物理 II，8.4.2 海森伯-朗之万方法",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = \\kHS + \\kHR + \\kHSR",
+       "src": "(8.53)"
+      },
+      {
+       "tex": "\\kHSR = -\\hat{R}^\\dagger\\kShat - \\kShat^\\dagger\\hat{R}",
+       "src": "(8.54)"
+      },
+      {
+       "text": "系统算符和热库算符对易；$\\hat A$是系统算符。",
+       "src": "8.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{R}{\\frac{i}{\\hbar}[\\kH, \\hat{A}]}",
+      "src": "(8.50)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{A}]} + \\mk{z}{\\frac{i}{\\hbar}[\\kHR, \\hat{A}]} + \\mk{s}{\\frac{i}{\\hbar}[\\kHSR, \\hat{A}]}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "R": [
+         "h",
+         "z",
+         "s"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{A}]} + \\mk{s}{\\frac{i}{\\hbar}[\\kHSR, \\hat{A}]}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{A}]} + \\mk{s}{\\frac{i}{\\hbar}[-\\hat{R}^\\dagger\\kShat - \\kShat^\\dagger\\hat{R}, \\hat{A}]}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{A}]} - \\mk{r1}{\\frac{i}{\\hbar}\\hat{R}^\\dagger[\\kShat, \\hat{A}]} - \\mk{r2}{\\frac{i}{\\hbar}[\\kShat^\\dagger, \\hat{A}]\\hat{R}}",
+       "uses": [
+        2
+       ],
+       "cap": "热库算符与$\\hat A$对易，从每个对易式中提出。",
+       "map": {
+        "s": [
+         "r1",
+         "r2"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{A}]} + \\mk{r1}{\\frac{i}{\\hbar}\\hat{R}^\\dagger[\\hat{A}, \\kShat]} + \\mk{r2}{\\frac{i}{\\hbar}[\\hat{A}, \\kShat^\\dagger]\\hat{R}}",
+       "uses": []
+      }
+     ],
+     "num": "(8.57)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "取$\\hat A = \\hat\\sigma_{12}$和$\\hat S = \\hat\\sigma_{12}$。",
+       "src": "8.4.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{A}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{A}]} + \\mk{r1}{\\frac{i}{\\hbar}\\hat{R}^\\dagger[\\hat{A}, \\kShat]} + \\mk{r2}{\\frac{i}{\\hbar}[\\hat{A}, \\kShat^\\dagger]\\hat{R}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{\\sigma}_{12}]} + \\mk{r1}{\\frac{i}{\\hbar}\\hat{R}^\\dagger[\\hat{\\sigma}_{12}, \\hat{\\sigma}_{12}]} + \\mk{r2}{\\frac{i}{\\hbar}[\\hat{\\sigma}_{12}, \\hat{\\sigma}_{21}]\\hat{R}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{\\sigma}_{12}]} + \\mk{r2}{\\frac{i}{\\hbar}[\\hat{\\sigma}_{12}, \\hat{\\sigma}_{21}]\\hat{R}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\frac{d}{d\\kt}\\hat{\\sigma}_{12}} = \\mk{h}{\\frac{i}{\\hbar}[\\kHS, \\hat{\\sigma}_{12}]} + \\mk{r2}{\\frac{i}{\\hbar}\\left(\\hat{\\sigma}_{11} - \\hat{\\sigma}_{22}\\right)\\hat{R}}",
+       "uses": [],
+       "cap": "$[\\hat\\sigma_{12}, \\hat\\sigma_{21}] = |1\\rangle\\langle 1| - |2\\rangle\\langle 2| = \\hat\\sigma_{11} - \\hat\\sigma_{22}$."
+      }
+     ],
+     "num": "(8.58)"
+    }
+   ]
+  }
+ ]
+}

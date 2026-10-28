@@ -1,0 +1,1612 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "F_force",
+   "latex": "\\mathbf{F}",
+   "macro": "\\kFforce"
+  },
+  {
+   "sym": "omega_R",
+   "latex": "\\omega_R",
+   "macro": "\\komegaR"
+  },
+  {
+   "sym": "V_eff",
+   "latex": "V_\\mathrm{eff}",
+   "macro": "\\kVeff"
+  },
+  {
+   "sym": "R_opt_0",
+   "latex": "R^0_\\mathrm{opt}",
+   "macro": "\\kRoptzero"
+  },
+  {
+   "sym": "eta",
+   "latex": "\\eta",
+   "macro": "\\keta"
+  },
+  {
+   "sym": "v_c",
+   "latex": "v_c",
+   "macro": "\\kvc"
+  },
+  {
+   "sym": "D_diff",
+   "latex": "D",
+   "macro": "\\kDdiff"
+  },
+  {
+   "sym": "f_hat",
+   "latex": "\\hat{f}",
+   "macro": "\\kfhat"
+  },
+  {
+   "sym": "F_noise",
+   "latex": "\\hat{\\mathcal{F}}",
+   "macro": "\\kFnoise"
+  },
+  {
+   "sym": "T_D",
+   "latex": "T_D",
+   "macro": "\\kTD"
+  },
+  {
+   "sym": "tau_P",
+   "latex": "\\tau_P",
+   "macro": "\\ktauP"
+  },
+  {
+   "sym": "Delta_rho",
+   "latex": "\\Delta\\rho",
+   "macro": "\\kDeltarho"
+  },
+  {
+   "sym": "eta_S",
+   "latex": "\\eta_S",
+   "macro": "\\ketaS"
+  },
+  {
+   "sym": "T_S",
+   "latex": "T_S",
+   "macro": "\\kTS"
+  },
+  {
+   "sym": "T_R",
+   "latex": "T_R",
+   "macro": "\\kTR"
+  },
+  {
+   "sym": "p_cm",
+   "latex": "p",
+   "macro": "\\kpcm"
+  },
+  {
+   "sym": "omega_res",
+   "latex": "\\omega_\\mathrm{res}",
+   "macro": "\\komegares"
+  },
+  {
+   "sym": "F_mag",
+   "latex": "F",
+   "macro": "\\kFmag"
+  },
+  {
+   "sym": "v_mag",
+   "latex": "v",
+   "macro": "\\kvmag"
+  },
+  {
+   "sym": "F_p",
+   "latex": "F_+",
+   "macro": "\\kFp"
+  },
+  {
+   "sym": "F_m",
+   "latex": "F_-",
+   "macro": "\\kFm"
+  },
+  {
+   "sym": "Omega_tilde",
+   "latex": "\\tilde{\\Omega}",
+   "macro": "\\kOmegatilde"
+  },
+  {
+   "sym": "r_dist",
+   "latex": "r",
+   "macro": "\\krdist"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "moving-atom-hamiltonian",
+   "kind": "definition",
+   "section": "8.1",
+   "name": "运动原子的哈密顿量",
+   "symbol": "H",
+   "type": "energy",
+   "statement": "在激光中运动的原子的哈密顿量，把质心动能 p̂²/2m 与外部势 V(r̂) 加到场项和原子-场项上，并且在旋转波近似下，激光耦合 Ω(r̂) = |Ω(r̂)|e^{iφ(r̂)} 依赖于位置算符。",
+   "forms": [
+    {
+     "id": "eq-8-1",
+     "latex": "\\hat{H} = \\hat{H}_F + \\hat{H}_{AF} + \\frac{\\hat{p}^2}{2m} + V(\\hat{r})",
+     "anchor": "8.1-eq-8-1"
+    },
+    {
+     "id": "eq-8-2",
+     "latex": "\\hat{H}_{AL} = -\\hbar\\Omega(\\hat{r})|2\\rangle\\langle 1| - \\hbar\\Omega(\\hat{r})^*|1\\rangle\\langle 2|",
+     "anchor": "8.1-eq-8-2"
+    },
+    {
+     "id": "eq-8-3",
+     "latex": "\\Omega(\\hat{r}) = |\\Omega(\\hat{r})|e^{i\\phi(\\hat{r})}",
+     "anchor": "8.1-eq-8-3"
+    }
+   ]
+  },
+  {
+   "id": "atomic-recoil",
+   "kind": "result",
+   "section": "8.1",
+   "name": "原子反冲",
+   "terms": [
+    "原子反冲"
+   ],
+   "type": "momentum",
+   "statement": "相位为 k·r 的平面波把 |p⟩|1⟩ 耦合到 |p + ℏk⟩|2⟩：吸收一个光子使原子的质心动量改变 ℏk，同时也改变其内态。",
+   "forms": [
+    {
+     "id": "eq-8-6",
+     "latex": "\\hat{H}_{AL} = -\\hbar|\\Omega(\\hat{r})| \\int \\left(|2\\rangle|p + \\hbar k\\rangle\\langle p|\\langle 1| + |1\\rangle|p\\rangle\\langle p + \\hbar k|\\langle 2|\\right) dp",
+     "anchor": "8.1-drv-plane-wave-coupling"
+    },
+    {
+     "id": "eq-8-5",
+     "latex": "e^{ik\\cdot\\hat{r}} = \\int dp'|p' + \\hbar k\\rangle\\langle p'|",
+     "anchor": "8.1-drv-plane-wave-coupling"
+    }
+   ]
+  },
+  {
+   "id": "recoil-frequency",
+   "kind": "definition",
+   "section": "8.1",
+   "name": "反冲频率",
+   "terms": [
+    "反冲能",
+    "反冲移位"
+   ],
+   "symbol": "omega_R",
+   "type": "frequency",
+   "statement": "反冲频率 ω_R 是受一个光子冲击的原子的动能 (ℏk)²/2m 除以 ℏ。",
+   "forms": [
+    {
+     "id": "eq-8-recoil-frequency",
+     "latex": "\\hbar\\omega_R = \\frac{(\\hbar k)^2}{2m}",
+     "anchor": "8.2-recoil-energy"
+    }
+   ]
+  },
+  {
+   "id": "recoil-shifted-resonance",
+   "kind": "result",
+   "section": "8.1",
+   "name": "共振的多普勒频移与反冲移位",
+   "terms": [
+    "多普勒频移"
+   ],
+   "type": "frequency",
+   "statement": "跃迁 |p⟩|1⟩ → |p + ℏk⟩|2⟩ 在 ω₁₂ 经多普勒频移 pk/m = vk 和反冲移位 ℏk²/2m 移动后的频率处共振。",
+   "symbol": "omega_res",
+   "forms": [
+    {
+     "id": "eq-8-8",
+     "latex": "\\omega_\\mathrm{res} = \\omega_{12} + \\frac{pk}{m} + \\frac{\\hbar k^2}{2m}",
+     "anchor": "8.1-drv-recoil-shifted-resonance"
+    },
+    {
+     "id": "eq-8-7",
+     "latex": "\\omega_\\mathrm{res} = \\omega_{12} + \\frac{(p + \\hbar k)^2}{2m\\hbar} - \\frac{p^2}{2m\\hbar}",
+     "anchor": "8.1-drv-recoil-shifted-resonance"
+    }
+   ]
+  },
+  {
+   "id": "light-force-operator",
+   "kind": "result",
+   "section": "8.2",
+   "name": "力算符",
+   "symbol": "F",
+   "type": "force",
+   "statement": "在海森伯绘景中，原子所受的力是其动量与哈密顿量的对易式，对于激光耦合为 ℏ∇Ω|2⟩⟨1| + h.c.。",
+   "forms": [
+    {
+     "id": "eq-8-10",
+     "latex": "\\hat{F} = -[\\nabla, \\hat{H}(\\hat{r})] = \\hbar\\nabla\\Omega|2\\rangle\\langle 1| + \\hbar\\nabla\\Omega^*|1\\rangle\\langle 2|",
+     "anchor": "8.2-drv-light-force-operator"
+    },
+    {
+     "id": "eq-8-9",
+     "latex": "\\frac{d}{dt}\\hat{p} = \\frac{1}{i\\hbar}[\\hat{p}, \\hat{H}] = \\hat{F}",
+     "anchor": "8.2-eq-8-9"
+    },
+    {
+     "id": "eq-8-13",
+     "latex": "[\\hat{p}, \\hat{O}(r)] = -i\\hbar\\nabla\\hat{O}(r)",
+     "anchor": "8.2-force-operator"
+    }
+   ]
+  },
+  {
+   "id": "semiclassical-light-force",
+   "kind": "result",
+   "section": "8.2",
+   "name": "反应光力与耗散光力",
+   "terms": [
+    "半经典",
+    "反应性的",
+    "耗散性的"
+   ],
+   "symbol": "F_mag",
+   "type": "force",
+   "statement": "把原子当作感受平均力的经典小球，光力分为来自相位梯度和 Im(ρ₂₁/Ω) 的耗散部分，以及来自强度梯度和 Re(ρ₂₁/Ω) 的反应部分。",
+   "forms": [
+    {
+     "id": "eq-8-18",
+     "latex": "F = 2\\hbar|\\Omega|^2\\nabla\\phi\\ \\mathrm{Im}\\left(\\frac{\\rho_{21}}{\\Omega}\\right) + \\hbar\\nabla|\\Omega|^2\\mathrm{Re}\\left(\\frac{\\rho_{21}}{\\Omega}\\right)",
+     "anchor": "8.2-drv-semiclassical-light-force"
+    },
+    {
+     "id": "eq-8-14",
+     "latex": "F = \\langle\\hat{F}\\rangle = \\hbar\\nabla\\Omega\\rho_{12} + \\hbar\\nabla\\Omega^*\\rho_{21}",
+     "anchor": "8.2-drv-semiclassical-light-force"
+    },
+    {
+     "id": "eq-8-15",
+     "latex": "\\langle|1\\rangle\\langle 2|\\rangle = \\mathrm{Tr}[\\rho|1\\rangle\\langle 2|] = \\rho_{21}",
+     "anchor": "8.2-drv-semiclassical-light-force"
+    }
+   ]
+  },
+  {
+   "id": "semiclassical-force-validity",
+   "kind": "result",
+   "section": "8.2",
+   "name": "半经典力的有效性",
+   "statement": "经典运动的原子所受的定常态力，对于比 1/γ₁₂ 和 1/δ 长、比反冲时间短的时间成立，ω_R ≪ 1/t ≪ max(γ₁₂, δ)。",
+   "forms": [
+    {
+     "id": "eq-8-19",
+     "latex": "\\omega_R \\ll 1/t \\ll \\max(\\gamma_{12}, \\delta)",
+     "anchor": "8.2-eq-8-19"
+    }
+   ]
+  },
+  {
+   "id": "dipole-force",
+   "kind": "result",
+   "section": "8.2",
+   "name": "偶极力",
+   "terms": [
+    "偶极力"
+   ],
+   "symbol": "V_eff",
+   "type": "force",
+   "statement": "远离共振时，力是反应性的，即交流斯塔克偏移 ℏ|Ω|²/δ 的梯度；它是保守的，δ < 0 时把原子吸引到场的极大处，δ > 0 时吸引到极小处。",
+   "forms": [
+    {
+     "id": "eq-8-20",
+     "latex": "F = -\\hbar\\nabla\\left(\\frac{|\\Omega|^2}{\\delta}\\right)",
+     "anchor": "8.2-eq-8-20"
+    },
+    {
+     "id": "eq-8-21",
+     "latex": "V_\\mathrm{eff} = \\hbar\\sum_i \\frac{|\\Omega_i|^2}{\\delta_i}|i\\rangle\\langle i|",
+     "anchor": "8.2-eq-8-21"
+    }
+   ]
+  },
+  {
+   "id": "dipole-trap",
+   "kind": "idea",
+   "section": "8.2",
+   "name": "偶极阱",
+   "terms": [
+    "偶极阱"
+   ],
+   "statement": "紧聚焦的红失谐光束把原子吸引到其光强最大的区域，并以很少的自发发射把它们束缚住。"
+  },
+  {
+   "id": "optical-lattice",
+   "kind": "idea",
+   "section": "8.2",
+   "name": "光学格子",
+   "terms": [
+    "光学格子",
+    "原子晶体"
+   ],
+   "statement": "驻波形成周期性偶极势，势阱间隔约 λ/2，正交光束增加维度：原子与光的模型晶体。"
+  },
+  {
+   "id": "dissipative-force",
+   "kind": "result",
+   "section": "8.2",
+   "name": "耗散力",
+   "terms": [
+    "耗散力"
+   ],
+   "symbol": "F_force",
+   "type": "force",
+   "statement": "在平面波中力是耗散的：每吸收一个光子冲击 ℏk，自发光子射入 4π，所以力是 ℏk 乘以散射率，低光强时为 ℏkR_opt，失谐中含多普勒频移 kv。",
+   "forms": [
+    {
+     "id": "eq-8-23",
+     "latex": "\\mathbf{F} \\approx \\hbar\\mathbf{k}\\frac{2\\gamma_{12}|\\Omega|^2}{\\gamma_{12}^2 + (\\delta - kv)^2} = \\hbar\\mathbf{k}R_\\mathrm{opt}",
+     "anchor": "8.2-drv-dissipative-force"
+    },
+    {
+     "id": "eq-8-24",
+     "latex": "\\mathbf{F} = \\hbar\\mathbf{k}\\gamma\\rho_{22}",
+     "anchor": "8.2-drv-scattering-force"
+    },
+    {
+     "id": "eq-8-22",
+     "latex": "\\mathrm{Im}\\left(\\frac{\\rho_{21}}{\\Omega}\\right) \\approx \\frac{\\gamma_{12}}{\\gamma_{12}^2 + (\\delta - kv)^2}",
+     "anchor": "8.2-drv-dissipative-force"
+    }
+   ]
+  },
+  {
+   "id": "maximum-dissipative-force",
+   "kind": "result",
+   "section": "8.2",
+   "name": "最大耗散力",
+   "type": "force",
+   "statement": "随着跃迁饱和，耗散力达到 ℏkγ/2，因为原子至多只有一半的时间处于激发态。",
+   "forms": [
+    {
+     "id": "eq-8-27",
+     "latex": "\\mathbf{F}_\\mathrm{max} = \\hbar\\mathbf{k}\\frac{\\gamma}{2}",
+     "anchor": "8.2-drv-maximum-dissipative-force"
+    },
+    {
+     "id": "eq-8-26",
+     "latex": "\\mathbf{F} = \\hbar\\mathbf{k}\\frac{\\gamma R_{opt}}{\\gamma + 2R_{opt}}",
+     "anchor": "8.2-drv-maximum-dissipative-force"
+    },
+    {
+     "id": "eq-8-25",
+     "latex": "\\mathrm{Im}\\left(\\frac{\\rho_{21}}{\\Omega}\\right) = \\frac{\\gamma_{12}}{\\gamma_{12}^2 + (\\delta - kv)^2}\\frac{\\gamma}{\\gamma + 2R_{opt}}",
+     "anchor": "8.2-eq-8-25"
+    }
+   ]
+  },
+  {
+   "id": "atomic-beam-slowing",
+   "kind": "idea",
+   "section": "8.2",
+   "name": "原子束减速",
+   "terms": [
+    "啁啾的"
+   ],
+   "statement": "使原子束减速需要约 10⁴ 次冲击，历时数毫秒、行程约一米；原子的多普勒频移变化时，只有激光有啁啾，或变化的磁场使它产生塞曼移位，原子才保持共振。"
+  },
+  {
+   "id": "doppler-cooling",
+   "kind": "idea",
+   "section": "8.3",
+   "name": "多普勒冷却",
+   "terms": [
+    "多普勒冷却",
+    "冷却"
+   ],
+   "statement": "冷却需要依赖速度的力，使热原子比冷原子减速更多；多普勒冷却从耗散力中的多普勒频移得到这种力。"
+  },
+  {
+   "id": "zero-velocity-excitation-rate",
+   "kind": "definition",
+   "section": "8.3",
+   "name": "零速度激发率",
+   "symbol": "R_opt_0",
+   "type": "rate",
+   "statement": "R⁰_opt 是静止原子的光激发率，2γ₁₂|Ω|²/(γ₁₂² + δ²)。",
+   "forms": [
+    {
+     "id": "eq-8-zero-velocity-rate",
+     "latex": "R_\\mathrm{opt}^0 = \\frac{2\\gamma_{12}|\\Omega|^2}{\\gamma_{12}^2 + \\delta^2}",
+     "anchor": "8.3-zero-velocity-rate"
+    }
+   ]
+  },
+  {
+   "id": "low-velocity-doppler-force",
+   "kind": "result",
+   "section": "8.3",
+   "name": "低速时的多普勒力",
+   "type": "force",
+   "statement": "对于 k·v ≪ δ, γ₁₂，耗散力是与速度无关的冲击 ℏkR⁰_opt，加上一个含 (k·v) 的项，其符号不依赖于 k 的符号。",
+   "forms": [
+    {
+     "id": "eq-8-28",
+     "latex": "F \\approx \\hbar\\mathbf{k}R_\\mathrm{opt}^0\\left(1 + \\frac{2\\delta\\mathbf{k}\\cdot\\mathbf{v}}{\\gamma_{12}^2 + \\delta^2}\\right)",
+     "anchor": "8.3-drv-doppler-force-expansion"
+    }
+   ]
+  },
+  {
+   "id": "friction-coefficient",
+   "kind": "definition",
+   "section": "8.3",
+   "name": "摩擦系数",
+   "terms": [
+    "摩擦系数",
+    "黏性力"
+   ],
+   "symbol": "eta",
+   "type": "friction",
+   "statement": "两束对传光束抵消了冲击，只留下黏性力 ηmv_z，摩擦系数 η 正比于 δ：红失谐冷却，蓝失谐加热。",
+   "forms": [
+    {
+     "id": "eq-8-30",
+     "latex": "\\eta = \\frac{8\\hbar k^2}{m}\\frac{\\delta\\gamma_{12}|\\Omega|^2}{(\\gamma_{12}^2 + \\delta^2)^2}",
+     "anchor": "8.3-drv-friction-coefficient"
+    },
+    {
+     "id": "eq-8-29",
+     "latex": "F = F_+ + F_- = \\eta m v_z",
+     "anchor": "8.3-eq-8-29"
+    }
+   ]
+  },
+  {
+   "id": "optical-molasses",
+   "kind": "idea",
+   "section": "8.3",
+   "name": "光学黏团",
+   "terms": [
+    "光学黏团"
+   ],
+   "statement": "三对正交的、对传的红失谐光束沿每个轴给出独立的黏性力，在三维上冷却原子。"
+  },
+  {
+   "id": "maximum-friction-coefficient",
+   "kind": "result",
+   "section": "8.3",
+   "name": "最大摩擦系数",
+   "type": "friction",
+   "statement": "摩擦系数在 δ ∼ γ₁₂ 附近最大，在辐射增宽的谱线上饱和时达到 ω_R/2，所以原子损失动量的速率为反冲频率量级。",
+   "forms": [
+    {
+     "id": "eq-8-33",
+     "latex": "\\eta_\\mathrm{max} = \\frac{1}{2}\\omega_R",
+     "anchor": "8.3-eq-8-33"
+    },
+    {
+     "id": "eq-8-31",
+     "latex": "\\eta = \\frac{\\hbar k^2}{m}\\frac{R_\\mathrm{opt}^0(\\delta = 0)}{\\gamma_{12}}",
+     "anchor": "8.3-eq-8-31"
+    },
+    {
+     "id": "eq-8-32",
+     "latex": "\\eta \\to \\frac{\\hbar k^2}{8m}\\frac{\\gamma}{\\gamma_{12}}",
+     "anchor": "8.3-eq-8-32"
+    }
+   ]
+  },
+  {
+   "id": "capture-range",
+   "kind": "definition",
+   "section": "8.3",
+   "name": "俘获范围",
+   "terms": [
+    "俘获范围",
+    "临界速度",
+    "俘获速度"
+   ],
+   "symbol": "v_c",
+   "type": "velocity",
+   "statement": "俘获范围 −v_c < v < v_c 是被有效冷却的速度带，v_c 是力最大处；v_c 约为主导速率（γ₁₂、Ω 或 δ）除以 k。",
+   "forms": [
+    {
+     "id": "eq-8-capture-range",
+     "latex": "F_\\mathrm{max} = |F(\\pm v_c)|",
+     "anchor": "8.3-capture-range"
+    }
+   ]
+  },
+  {
+   "id": "magneto-optical-trap",
+   "kind": "idea",
+   "section": "8.3",
+   "name": "磁光阱",
+   "terms": [
+    "磁光阱",
+    "MOT"
+   ],
+   "statement": "磁场梯度使能级随位置发生塞曼移位，J = 0 → J = 1 跃迁上的交叉圆偏振黏团光束于是把原子推回中心，同时冷却它。"
+  },
+  {
+   "id": "langevin-equation",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "朗之万方程",
+   "terms": [
+    "朗之万方程",
+    "朗之万力",
+    "布朗运动"
+   ],
+   "symbol": "f_t",
+   "type": "force",
+   "statement": "重粒子的布朗运动是黏滞阻力 −ηp 加上零均值的涨落朗之万力 f(t)，在快速碰撞极限下其关联为 2Dδ(t − t′)。",
+   "forms": [
+    {
+     "id": "eq-8-34",
+     "latex": "\\frac{d}{dt}p = -\\eta p + f(t)",
+     "anchor": "8.4-eq-8-34"
+    },
+    {
+     "id": "eq-8-35",
+     "latex": "\\langle f(t)\\rangle = 0",
+     "anchor": "8.4-eq-8-35"
+    },
+    {
+     "id": "eq-8-36",
+     "latex": "\\langle f(t)f(t')\\rangle = 2Dg(t-t')",
+     "anchor": "8.4-eq-8-36"
+    },
+    {
+     "id": "eq-8-38",
+     "latex": "g(t-t') \\rightarrow \\delta(t-t')",
+     "anchor": "8.4-eq-8-38"
+    }
+   ]
+  },
+  {
+   "id": "diffusion-coefficient",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "扩散系数",
+   "terms": [
+    "扩散系数",
+    "扩散常量"
+   ],
+   "symbol": "D_diff",
+   "type": "diffusion",
+   "statement": "扩散系数 D 通过 ⟨f(t)f(t′)⟩ = 2Dg(t − t′) 度量涨落力的强度，其中 g 归一化为单位面积。",
+   "forms": [
+    {
+     "id": "eq-8-37",
+     "latex": "\\int_{-\\infty}^{\\infty} g(t-t')dt = 1",
+     "anchor": "8.4-eq-8-37"
+    }
+   ]
+  },
+  {
+   "id": "langevin-momentum-spread",
+   "kind": "result",
+   "section": "8.4",
+   "name": "朗之万力下的动量展宽",
+   "type": "momentum",
+   "statement": "平均动量按 e^{−ηt} 衰减，不受噪声影响，而方均动量弛豫到 D/η，即动能 D/2mη。",
+   "forms": [
+    {
+     "id": "eq-8-44",
+     "latex": "\\overline{p^2(t)} = \\overline{p(0)^2}e^{-2\\eta t} + \\frac{D}{\\eta}\\left(1 - e^{-2\\eta t}\\right)",
+     "anchor": "8.4-drv-mean-square-momentum"
+    },
+    {
+     "id": "eq-8-39",
+     "latex": "p(t) = p(0)e^{-\\eta t} + \\int_0^t dt' f(t')e^{-\\eta(t-t')}",
+     "anchor": "8.4-drv-langevin-solution"
+    },
+    {
+     "id": "eq-8-40",
+     "latex": "\\overline{p(t)} = \\overline{p(0)}e^{-\\eta t}",
+     "anchor": "8.4-drv-langevin-solution"
+    },
+    {
+     "id": "eq-8-46",
+     "latex": "\\lim_{t\\rightarrow\\infty}\\overline{p(t)^2} \\rightarrow \\frac{D}{\\eta}",
+     "anchor": "8.4-drv-long-time-momentum"
+    },
+    {
+     "id": "eq-8-47",
+     "latex": "E_\\mathrm{kinetic} = \\frac{\\overline{p^2}}{2m} \\rightarrow \\frac{D}{2m\\eta}",
+     "anchor": "8.4-drv-long-time-momentum"
+    }
+   ]
+  },
+  {
+   "id": "einstein-relation",
+   "kind": "result",
+   "section": "8.4",
+   "name": "爱因斯坦关系",
+   "terms": [
+    "爱因斯坦关系"
+   ],
+   "type": "diffusion",
+   "statement": "热平衡时，阻尼与扩散的平衡固定了温度，D = mηk_BT：有限温度下的耗散总是带来涨落。",
+   "forms": [
+    {
+     "id": "eq-8-48",
+     "latex": "D = m\\eta k_BT",
+     "anchor": "8.4-drv-einstein-relation"
+    }
+   ]
+  },
+  {
+   "id": "random-walk",
+   "kind": "result",
+   "section": "8.4",
+   "name": "无规行走",
+   "terms": [
+    "无规行走"
+   ],
+   "statement": "没有摩擦时，粒子只受到冲击，其方均动量随时间线性增长，不会达到平衡。",
+   "forms": [
+    {
+     "id": "eq-8-49",
+     "latex": "\\overline{p^2} = Dt",
+     "anchor": "8.4-eq-8-49"
+    }
+   ]
+  },
+  {
+   "id": "naive-operator-damping",
+   "kind": "result",
+   "section": "8.4",
+   "name": "无噪声的阻尼算符",
+   "statement": "在原子算符的海森伯方程中加入衰变项 −γσ̂，会使它们的对易式按指数式衰减，这是不符合物理的。",
+   "forms": [
+    {
+     "id": "eq-8-52",
+     "latex": "\\frac{d}{dt}[\\hat{\\sigma}_{\\beta,\\alpha}, \\hat{\\sigma}_{\\alpha,\\beta}] = -\\gamma_{\\alpha,\\beta}[\\hat{\\sigma}_{\\beta,\\alpha}, \\hat{\\sigma}_{\\alpha,\\beta}]",
+     "anchor": "8.4-drv-naive-commutator-decay"
+    },
+    {
+     "id": "eq-8-50",
+     "latex": "\\frac{d}{dt}\\hat{\\sigma}_{\\alpha,\\beta} = \\frac{i}{\\hbar}[\\hat{H}, \\hat{\\sigma}_{\\alpha,\\beta}]",
+     "anchor": "8.4-eq-8-50"
+    }
+   ]
+  },
+  {
+   "id": "system-reservoir-operator-equation",
+   "kind": "result",
+   "section": "8.4",
+   "name": "与热库耦合的系统算符",
+   "statement": "当 H_SR = −R̂†Ŝ − Ŝ†R̂ 时，任一系统算符 Â 的演化由其系统哈密顿量加上含热库算符 R̂ 的项给出，对于辐射场中的二能级原子，R̂ 是作用于 Ŝ = σ̂₁₂ 的 Σ ℏg_j â_j。",
+   "forms": [
+    {
+     "id": "eq-8-57",
+     "latex": "\\frac{d}{dt}\\hat{A} = \\frac{i}{\\hbar}[\\hat{H}_S, \\hat{A}] + \\frac{i}{\\hbar}\\hat{R}^\\dagger[\\hat{A}, \\hat{S}] + \\frac{i}{\\hbar}[\\hat{A}, \\hat{S}^\\dagger]\\hat{R}",
+     "anchor": "8.4-drv-system-operator-equation"
+    },
+    {
+     "id": "eq-8-54",
+     "latex": "\\hat{H}_{SR} = -\\hat{R}^\\dagger\\hat{S} - \\hat{S}^\\dagger\\hat{R}",
+     "anchor": "8.4-eq-8-54"
+    },
+    {
+     "id": "eq-8-55",
+     "latex": "\\hat{R} = \\sum_j \\hbar g_j\\hat{a}_j",
+     "anchor": "8.4-eq-8-55"
+    },
+    {
+     "id": "eq-8-56",
+     "latex": "\\hat{S} = \\hat{\\sigma}_{12} = |1\\rangle\\langle 2|",
+     "anchor": "8.4-eq-8-56"
+    },
+    {
+     "id": "eq-8-58",
+     "latex": "\\frac{d}{dt}\\hat{\\sigma}_{12} = \\frac{i}{\\hbar}[\\hat{H}_S, \\hat{\\sigma}_{12}] + \\frac{i}{\\hbar}\\left(\\hat{\\sigma}_{11} - \\hat{\\sigma}_{22}\\right)\\hat{R}",
+     "anchor": "8.4-drv-system-operator-equation"
+    }
+   ]
+  },
+  {
+   "id": "reservoir-operator-solution",
+   "kind": "result",
+   "section": "8.4",
+   "name": "马尔可夫近似下的热库算符",
+   "statement": "对场模积分，热库算符是一个自由场项加一个源项，对缓变的系统和宽的热库，源项成为衰变 (γ/2)Ŝ。",
+   "forms": [
+    {
+     "id": "eq-8-61",
+     "latex": "\\hat{R}(t) = i\\hbar\\left(-i\\sum_j g_j\\hat{a}_j(0)e^{-i(\\nu_j-\\omega)t} + \\int_0^t dt'\\sum_j|g_j|^2e^{-i(\\nu_j-\\omega)(t-t')}\\hat{S}(t')\\right)",
+     "anchor": "8.4-drv-reservoir-operator"
+    },
+    {
+     "id": "eq-8-60",
+     "latex": "\\dot{\\hat{a}}_j = -i(\\nu_j - \\omega)\\hat{a}_j + ig_j^*\\hat{S}",
+     "anchor": "8.4-drv-reservoir-operator"
+    },
+    {
+     "id": "eq-8-62",
+     "latex": "\\int_0^t dt'\\sum_j|g_j|^2e^{-i(\\nu_j-\\omega)(t-t')}\\hat{S}(t') \\rightarrow \\frac{\\gamma}{2}\\hat{S}(t)",
+     "anchor": "8.4-drv-markov-decay"
+    }
+   ]
+  },
+  {
+   "id": "quantum-langevin-force",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "量子朗之万力",
+   "terms": [
+    "量子朗之万力",
+    "量子朗之万算符",
+    "朗之万噪声算符"
+   ],
+   "symbol": "f_hat",
+   "statement": "量子朗之万力 f̂(t) 是初始场模的自由演化：在热库中其均值为零，其二阶矩是 δ 关联的，正规编序时为 n(ω)γ，反正规编序时为 (n(ω) + 1)γ。",
+   "forms": [
+    {
+     "id": "eq-8-63",
+     "latex": "\\hat{f}(t) = -i\\sum_j g_j\\hat{a}_j(0)e^{-i(\\nu_j-\\omega)t}",
+     "anchor": "8.4-eq-8-63"
+    },
+    {
+     "id": "eq-8-66",
+     "latex": "\\langle\\hat{f}(t)^\\dagger\\hat{f}(t')\\rangle = n(\\omega)\\gamma\\delta(t-t')",
+     "anchor": "8.4-drv-quantum-langevin-moments"
+    },
+    {
+     "id": "eq-8-67",
+     "latex": "\\langle\\hat{f}(t)\\hat{f}(t')^\\dagger\\rangle = \\left(n(\\omega) + 1\\right)\\gamma\\delta(t-t')",
+     "anchor": "8.4-drv-quantum-langevin-moments"
+    },
+    {
+     "id": "eq-8-64",
+     "latex": "\\langle\\hat{f}(t)^\\dagger\\hat{f}(t')\\rangle = \\sum_{j,j'}g_j^*g_{j'}\\langle\\hat{a}_j(0)^\\dagger\\hat{a}_{j'}(0)\\rangle e^{i(\\nu_j-\\omega)t}e^{-i(\\nu_{j'}-\\omega)t'}",
+     "anchor": "8.4-drv-quantum-langevin-moments"
+    }
+   ]
+  },
+  {
+   "id": "heisenberg-langevin-equation",
+   "kind": "result",
+   "section": "8.4",
+   "name": "海森伯-朗之万方程",
+   "terms": [
+    "海森伯-朗之万方程",
+    "海森伯-朗之万方法"
+   ],
+   "statement": "把 R̂ = iℏ((γ/2)Ŝ + f̂) 代入系统方程，得到海森伯-朗之万方程：每一项耗散 (γ/2)Ŝ 都伴有涨落 f̂。",
+   "forms": [
+    {
+     "id": "eq-8-69",
+     "latex": "\\frac{d}{dt}\\hat{A} = \\frac{i}{\\hbar}[\\hat{H}_S, \\hat{A}] + \\left(\\frac{\\gamma}{2}\\hat{S}^\\dagger + \\hat{f}^\\dagger\\right)[\\hat{A}, \\hat{S}] - [\\hat{A}, \\hat{S}^\\dagger]\\left(\\frac{\\gamma}{2}\\hat{S} + \\hat{f}\\right)",
+     "anchor": "8.4-drv-heisenberg-langevin-equation"
+    },
+    {
+     "id": "eq-8-68",
+     "latex": "\\hat{R}(t) = i\\hbar\\left(\\frac{\\gamma}{2}\\hat{S}(t) + \\hat{f}(t)\\right)",
+     "anchor": "8.4-drv-heisenberg-langevin-equation"
+    }
+   ]
+  },
+  {
+   "id": "heisenberg-langevin-master-equation",
+   "kind": "result",
+   "section": "8.4",
+   "name": "与主方程的等价性",
+   "statement": "对于真空热库，海森伯-朗之万方程的期望值与真空中原子的主方程逐项一致。",
+   "forms": [
+    {
+     "id": "eq-8-70",
+     "latex": "\\frac{d}{dt}\\langle\\hat{A}\\rangle = \\frac{i}{\\hbar}\\langle[\\hat{H}_S, \\hat{A}]\\rangle + \\frac{\\gamma}{2}\\left(2\\langle\\hat{S}^\\dagger\\hat{A}\\hat{S}\\rangle - \\langle\\hat{A}\\hat{S}^\\dagger\\hat{S}\\rangle - \\langle\\hat{S}^\\dagger\\hat{S}\\hat{A}\\rangle\\right)",
+     "anchor": "8.4-eq-8-70"
+    }
+   ]
+  },
+  {
+   "id": "generalized-einstein-relation",
+   "kind": "result",
+   "section": "8.4",
+   "name": "广义爱因斯坦关系",
+   "terms": [
+    "广义爱因斯坦关系",
+    "量子涨落耗散定理",
+    "涨落耗散定理",
+    "白噪声"
+   ],
+   "symbol": "F_noise",
+   "statement": "把海森伯-朗之万方程写成 dÂ_μ/dt = d̂_μ + 𝓕̂_μ，其中 ⟨𝓕̂_μ𝓕̂_ν⟩ = 2D_μνδ(t − t′)，则对任何与马尔可夫热库耦合的系统，扩散系数仅由确定性演化得出。",
+   "forms": [
+    {
+     "id": "eq-8-73",
+     "latex": "2D_{\\mu\\nu} = \\frac{d}{dt}\\langle\\hat{A}_\\mu\\hat{A}_\\nu\\rangle - \\langle\\hat{A}_\\mu\\hat{d}_\\nu\\rangle - \\langle\\hat{d}_\\mu\\hat{A}_\\nu\\rangle",
+     "anchor": "8.4-eq-8-73"
+    },
+    {
+     "id": "eq-8-71",
+     "latex": "\\frac{d}{dt}\\hat{A}_\\mu = \\hat{d}_\\mu + \\hat{\\mathcal{F}}_\\mu",
+     "anchor": "8.4-eq-8-71"
+    },
+    {
+     "id": "eq-8-72",
+     "latex": "\\langle\\hat{\\mathcal{F}}_\\mu(t)\\hat{\\mathcal{F}}_\\nu(t')\\rangle = 2D_{\\mu\\nu}\\delta(t-t')",
+     "anchor": "8.4-eq-8-72"
+    },
+    {
+     "id": "eq-8-75",
+     "latex": "\\langle\\hat{A}_\\mu(t)\\hat{\\mathcal{F}}_\\nu(t)\\rangle = D_{\\mu\\nu}",
+     "anchor": "8.4-drv-fluctuation-dissipation-theorem"
+    }
+   ]
+  },
+  {
+   "id": "laser-cooling-noise-force",
+   "kind": "result",
+   "section": "8.5",
+   "name": "激光冷却原子所受的噪声力",
+   "terms": [
+    "噪声力"
+   ],
+   "symbol": "F_noise",
+   "statement": "对于真空辐射热浴中的二能级原子，σ̂₁₂ 的海森伯-朗之万方程带有噪声力 𝓕̂₁₂ = (σ̂₂₂ − σ̂₁₁)f̂，其唯一不为零的矩是 γδ(t − t′)；它使光力围绕其均值涨落。",
+   "forms": [
+    {
+     "id": "eq-8-83",
+     "latex": "\\hat{\\mathcal{F}}_{12}(t) = \\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)\\hat{f}(t)",
+     "anchor": "8.5-eq-8-83"
+    },
+    {
+     "id": "eq-8-79",
+     "latex": "\\hat{F} = -i\\hbar k\\Omega^*\\hat{\\sigma}_{12} + h.c.",
+     "anchor": "8.5-eq-8-79"
+    },
+    {
+     "id": "eq-8-80",
+     "latex": "\\hat{F} = \\langle\\hat{F}\\rangle + \\delta\\hat{F}",
+     "anchor": "8.5-eq-8-80"
+    },
+    {
+     "id": "eq-8-82",
+     "latex": "\\frac{d}{dt}\\hat{\\sigma}_{12} = \\frac{i}{\\hbar}[\\hat{H}_S, \\hat{\\sigma}_{12}] - \\frac{\\gamma}{2}\\hat{\\sigma}_{12} + \\left(\\hat{\\sigma}_{22} - \\hat{\\sigma}_{11}\\right)\\hat{f}(t)",
+     "anchor": "8.5-drv-coherence-noise"
+    },
+    {
+     "id": "eq-8-84",
+     "latex": "\\langle\\hat{\\mathcal{F}}_{12}(t)\\hat{\\mathcal{F}}_{12}(t')^\\dagger\\rangle = \\gamma\\delta(t-t')",
+     "anchor": "8.5-drv-noise-moment"
+    }
+   ]
+  },
+  {
+   "id": "force-fluctuations",
+   "kind": "result",
+   "section": "8.5",
+   "name": "涨落的光力",
+   "type": "force",
+   "statement": "绝热消除 σ̂₁₂ 后，涨落力是经 γ/2 − iδ 滤波的噪声力，δ 关联，强度为 (ℏk)²|Ω̃|²γ/((γ/2)² + δ²)，Ω̃ = 2Ω 计入两束光和吸收。",
+   "forms": [
+    {
+     "id": "eq-8-90",
+     "latex": "\\langle\\delta\\hat{F}(t)\\delta\\hat{F}(t')\\rangle = (\\hbar k)^2\\frac{|\\tilde{\\Omega}|^2\\gamma}{(\\gamma/2)^2 + \\delta^2}\\delta(t-t')",
+     "anchor": "8.5-drv-fluctuating-force"
+    },
+    {
+     "id": "eq-8-85",
+     "latex": "\\frac{d}{dt}\\hat{\\sigma}_{12} = \\frac{i}{\\hbar}[\\hat{H}_{AL}, \\hat{\\sigma}_{12}] - (\\frac{\\gamma}{2} - i\\delta)\\hat{\\sigma}_{12} + \\hat{\\mathcal{F}}_{12}(t)",
+     "anchor": "8.5-drv-noise-moment"
+    },
+    {
+     "id": "eq-8-88",
+     "latex": "\\hat{\\sigma}_{12} = \\frac{\\hat{\\mathcal{F}}_{12}(t)}{\\gamma/2 - i\\delta} + \\frac{i}{\\hbar(\\gamma/2 - i\\delta)}[\\hat{H}_{AL}, \\hat{\\sigma}_{12}]",
+     "anchor": "8.5-drv-fluctuating-force"
+    },
+    {
+     "id": "eq-8-89",
+     "latex": "\\delta\\hat{F} = -i\\hbar k\\Omega^*\\frac{\\hat{\\mathcal{F}}_{12}(t)}{\\gamma/2 - i\\delta} + h.c.",
+     "anchor": "8.5-drv-fluctuating-force"
+    }
+   ]
+  },
+  {
+   "id": "laser-cooling-diffusion",
+   "kind": "result",
+   "section": "8.5",
+   "name": "激光冷却中的动量扩散",
+   "terms": [
+    "动量扩散"
+   ],
+   "symbol": "D_diff",
+   "type": "diffusion",
+   "statement": "多普勒冷却的动量扩散常量是 2(ℏk)²R⁰_opt：动量空间中的无规行走，步长为 ℏk，步频为自发发射率。",
+   "forms": [
+    {
+     "id": "eq-8-92",
+     "latex": "D = 2(\\hbar k)^2R^0_\\mathrm{opt}",
+     "anchor": "8.5-drv-diffusion-constant"
+    },
+    {
+     "id": "eq-8-91",
+     "latex": "D = (\\hbar k)^2\\frac{|\\tilde{\\Omega}|^2\\gamma/2}{(\\gamma/2)^2 + \\delta^2}",
+     "anchor": "8.5-drv-diffusion-constant"
+    }
+   ]
+  },
+  {
+   "id": "doppler-limit",
+   "kind": "result",
+   "section": "8.5",
+   "name": "多普勒冷却极限",
+   "terms": [
+    "多普勒极限",
+    "多普勒冷却极限"
+   ],
+   "symbol": "T_D",
+   "type": "temperature",
+   "statement": "通过爱因斯坦关系，抽运率从温度中消去，k_BT_D = ℏ(δ² + γ₁₂²)/2δ，在 δ ≈ γ₁₂ 处最小，此时 k_BT_D = ℏγ₁₂：仅由谱线宽度决定的多普勒极限。",
+   "forms": [
+    {
+     "id": "eq-8-96",
+     "latex": "k_BT_D = \\hbar\\gamma_{12}",
+     "anchor": "8.5-drv-doppler-limit"
+    },
+    {
+     "id": "eq-8-95",
+     "latex": "k_BT_D = \\frac{\\hbar\\left(\\delta^2 + \\gamma_{12}^2\\right)}{2\\delta}",
+     "anchor": "8.5-drv-doppler-limit"
+    },
+    {
+     "id": "eq-8-94",
+     "latex": "k_BT_D = \\frac{D}{m\\eta}",
+     "anchor": "8.5-drv-doppler-limit"
+    },
+    {
+     "id": "eq-8-93",
+     "latex": "\\eta = \\frac{4R_\\mathrm{opt}}{m}\\frac{\\hbar k^2\\delta}{\\delta^2 + \\gamma_{12}^2}",
+     "anchor": "8.5-drv-doppler-limit"
+    }
+   ]
+  },
+  {
+   "id": "laser-attenuation",
+   "kind": "idea",
+   "section": "8.5",
+   "name": "稠密样品中的激光衰减",
+   "terms": [
+    "激光衰减",
+    "光学厚"
+   ],
+   "statement": "光学厚的样品会使穿过它的冷却光束衰减，所以力获得空间梯度：额外的偶极力和依赖于位置的冷却。"
+  },
+  {
+   "id": "photon-reabsorption",
+   "kind": "idea",
+   "section": "8.5",
+   "name": "自发光子再吸收",
+   "terms": [
+    "自发光子再吸收"
+   ],
+   "statement": "被邻近原子再吸收的自发光子使其离开发射体，这是约一个波长之内原子之间的有效排斥。"
+  },
+  {
+   "id": "sub-doppler-cooling",
+   "kind": "idea",
+   "section": "8.6",
+   "name": "亚多普勒冷却",
+   "terms": [
+    "亚多普勒"
+   ],
+   "statement": "碱金属原子被冷却到多普勒极限以下十倍，其方式对光束的偏振敏感，并因大失谐而有利，指向原子的多能级结构和交流斯塔克偏移。"
+  },
+  {
+   "id": "polarization-gradient",
+   "kind": "result",
+   "section": "8.6",
+   "name": "偏振梯度",
+   "terms": [
+    "偏振梯度",
+    "lin⊥lin"
+   ],
+   "type": "electric-field",
+   "statement": "具有交叉线偏振的两束对传光束 (lin⊥lin) 形成两个交叉圆偏振的驻波，二者彼此相移 π/2，所以圆偏振随位置变化。",
+   "forms": [
+    {
+     "id": "eq-8-98",
+     "latex": "\\mathbf{E} = E_0e^{i\\nu t}\\left((\\hat{x} + i\\hat{y})\\cos kz + i(\\hat{x} - i\\hat{y})\\sin kz\\right) + c.c.",
+     "anchor": "8.6-drv-lin-perp-lin-field"
+    },
+    {
+     "id": "eq-8-97",
+     "latex": "\\mathbf{E} = E_0e^{i\\nu t}\\left(\\hat{x}e^{ikz} + i\\hat{y}e^{-ikz}\\right) + c.c.",
+     "anchor": "8.6-drv-lin-perp-lin-field"
+    }
+   ]
+  },
+  {
+   "id": "ground-state-light-shift-potential",
+   "kind": "result",
+   "section": "8.6",
+   "name": "基态子能级的光致频移势",
+   "type": "energy",
+   "statement": "在 J = 1/2 → J′ = 3/2 跃迁上，不等的 CG 系数使两个基态子能级具有不同的交流斯塔克偏移，在 lin⊥lin 场中它们成为势 ℏ|Ω|²/δ(1 − (2/3)sin²kz) 和 ℏ|Ω|²/δ(1 − (2/3)cos²kz)，彼此移位四分之一波长。",
+   "forms": [
+    {
+     "id": "eq-8-106",
+     "latex": "\\hat{H}^\\mathrm{eff}_{AL} = \\hbar\\frac{|\\Omega|^2}{\\delta}\\left(1 - \\frac{2}{3}\\sin^2 kz\\right)|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}| + \\hbar\\frac{|\\Omega|^2}{\\delta}\\left(1 - \\frac{2}{3}\\cos^2 kz\\right)|-\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|",
+     "anchor": "8.6-drv-sisyphus-light-shifts"
+    },
+    {
+     "id": "eq-8-99",
+     "latex": "\\Delta^{\\sigma_+}_{1/2} = \\frac{|\\Omega_+|^2}{\\delta}, \\quad \\Delta^{\\sigma_+}_{-1/2} = \\frac{|\\Omega_+|^2}{3\\delta}",
+     "anchor": "8.6-eq-8-99"
+    },
+    {
+     "id": "eq-8-101",
+     "latex": "\\Delta^{\\sigma_-}_{1/2} = \\frac{|\\Omega_-|^2}{3\\delta}, \\quad \\Delta^{\\sigma_-}_{-1/2} = \\frac{|\\Omega_-|^2}{\\delta}",
+     "anchor": "8.6-eq-8-101"
+    },
+    {
+     "id": "eq-8-103",
+     "latex": "\\Omega_+ = \\Omega\\cos kz, \\quad \\Omega_- = \\Omega\\sin kz",
+     "anchor": "8.6-eq-8-103"
+    }
+   ]
+  },
+  {
+   "id": "sisyphus-cooling",
+   "kind": "idea",
+   "section": "8.6",
+   "name": "西西弗斯冷却",
+   "terms": [
+    "西西弗斯"
+   ],
+   "statement": "局域偏振把运动的原子光抽运到光致频移后较低的子能级，所以它不断爬坡，并把势能损失给自发光子。"
+  },
+  {
+   "id": "sisyphus-pumping-rate",
+   "kind": "result",
+   "section": "8.6",
+   "name": "基态子能级间的光抽运",
+   "symbol": "tau_P",
+   "type": "time",
+   "statement": "基态布居的速率方程使布居差 Δρ 以速率 1/τ_P = (2/9)R_opt 弛豫到其局域定常值 cos 2kz。",
+   "forms": [
+    {
+     "id": "eq-8-113",
+     "latex": "\\frac{1}{\\tau_P} = \\frac{2}{9}R_\\mathrm{opt}",
+     "anchor": "8.6-drv-population-relaxation"
+    },
+    {
+     "id": "eq-8-110",
+     "latex": "\\frac{d}{dt}\\rho_{\\frac{1}{2}\\frac{1}{2}} = -\\frac{2}{9}R_\\mathrm{opt}\\sin^2(kz)\\rho_{\\frac{1}{2}\\frac{1}{2}} + \\frac{2}{9}R_\\mathrm{opt}\\cos^2(kz)\\rho_{-\\frac{1}{2}-\\frac{1}{2}}",
+     "anchor": "8.6-eq-8-110"
+    },
+    {
+     "id": "eq-8-112",
+     "latex": "\\frac{d}{dt}\\Delta\\rho = -\\frac{2}{9}R_\\mathrm{opt}\\left(\\Delta\\rho - \\cos(2kz)\\right)",
+     "anchor": "8.6-drv-population-relaxation"
+    },
+    {
+     "id": "eq-8-114",
+     "latex": "\\Delta\\rho_{SS} = \\cos(2kz)",
+     "anchor": "8.6-drv-population-relaxation"
+    }
+   ]
+  },
+  {
+   "id": "sisyphus-force",
+   "kind": "result",
+   "section": "8.6",
+   "name": "西西弗斯冷却力",
+   "type": "force",
+   "statement": "若布居跟随其定常态，基态子能级上的反应力平均为零；运动原子的布居滞后 τ_P，给出依赖速度的平均力。",
+   "forms": [
+    {
+     "id": "eq-8-122",
+     "latex": "\\langle F\\rangle = \\frac{2}{3}\\hbar k^2v\\tau_P\\frac{|\\Omega|^2}{\\delta}",
+     "anchor": "8.6-drv-lag-force"
+    },
+    {
+     "id": "eq-8-109",
+     "latex": "F_\\mathrm{reactive} = \\frac{2}{3}\\hbar k\\frac{|\\Omega|^2}{\\delta}\\sin(2kz)\\left(|\\tfrac{1}{2}\\rangle\\langle\\tfrac{1}{2}| - |-\\tfrac{1}{2}\\rangle\\langle -\\tfrac{1}{2}|\\right)",
+     "anchor": "8.6-drv-sisyphus-reactive-force"
+    },
+    {
+     "id": "eq-8-116",
+     "latex": "F^{SS}_\\mathrm{reactive} = \\frac{1}{3}\\hbar k\\frac{|\\Omega|^2}{\\delta}\\sin(4kz)",
+     "anchor": "8.6-drv-steady-state-force"
+    },
+    {
+     "id": "eq-8-117",
+     "latex": "\\frac{d}{dt}\\Delta\\rho = -\\frac{1}{\\tau_P}\\left(\\Delta\\rho - \\cos(2kvt)\\right)",
+     "anchor": "8.6-eq-8-117"
+    },
+    {
+     "id": "eq-8-120",
+     "latex": "\\Delta\\rho \\approx \\cos 2k(z - v\\tau_P)",
+     "anchor": "8.6-drv-population-lag"
+    }
+   ]
+  },
+  {
+   "id": "sisyphus-friction",
+   "kind": "result",
+   "section": "8.6",
+   "name": "西西弗斯摩擦系数",
+   "symbol": "eta_S",
+   "type": "friction",
+   "statement": "精确求解滞后的布居，得到俘获速度 v_c = 1/2kτ_P 的平均力，在低功率下摩擦系数 η_S = 3(ℏk²/m)(δ/γ)，与光强无关。",
+   "forms": [
+    {
+     "id": "eq-8-127",
+     "latex": "\\eta_S = 3\\frac{\\hbar k^2}{m}\\frac{\\delta}{\\gamma}",
+     "anchor": "8.6-eq-8-127"
+    },
+    {
+     "id": "eq-8-125",
+     "latex": "\\langle F_\\mathrm{reactive}\\rangle = \\frac{1}{3}\\hbar k\\frac{|\\Omega|^2}{\\delta}\\frac{v/v_c}{1 + (v/v_c)^2} = \\eta_Svm",
+     "anchor": "8.6-drv-sisyphus-solution"
+    },
+    {
+     "id": "eq-8-124",
+     "latex": "v_c = \\frac{1}{2k\\tau_P} = \\frac{\\lambda}{18\\pi}R_\\mathrm{opt}",
+     "anchor": "8.6-drv-sisyphus-solution"
+    },
+    {
+     "id": "eq-8-123",
+     "latex": "\\Delta\\rho = \\frac{1}{1 + (v/v_c)^2}\\cos(2kz) + \\frac{v/v_c}{1 + (v/v_c)^2}\\sin(2kz)",
+     "anchor": "8.6-drv-sisyphus-solution"
+    },
+    {
+     "id": "eq-8-126",
+     "latex": "\\eta_S = 3\\frac{\\hbar k^2}{m}\\frac{\\delta}{\\gamma}\\left(\\frac{1}{1 + (v/v_c)^2}\\right)",
+     "anchor": "8.6-drv-sisyphus-friction"
+    }
+   ]
+  },
+  {
+   "id": "doppler-sisyphus-comparison",
+   "kind": "result",
+   "section": "8.6",
+   "name": "多普勒冷却与西西弗斯冷却的比较",
+   "statement": "在低功率和大失谐下，多普勒摩擦按 |Ω|²/δ³ 趋于零，而西西弗斯摩擦随 δ 增长，但西西弗斯俘获速度随抽运率 |Ω|²γ/δ² 缩小。",
+   "forms": [
+    {
+     "id": "eq-8-128",
+     "latex": "\\eta_D = 8\\frac{\\hbar k^2}{m}\\frac{\\gamma_{12}|\\Omega|^2}{\\delta^3}",
+     "anchor": "8.6-eq-8-128"
+    },
+    {
+     "id": "eq-8-129",
+     "latex": "\\eta_S = 3\\frac{\\hbar k^2}{m\\gamma}\\delta",
+     "anchor": "8.6-eq-8-129"
+    },
+    {
+     "id": "eq-8-130",
+     "latex": "v^S_c \\sim \\frac{\\lambda}{18\\pi}\\frac{|\\Omega|^2}{\\delta^2}\\gamma",
+     "anchor": "8.6-eq-8-130"
+    }
+   ]
+  },
+  {
+   "id": "sisyphus-nonadiabaticity",
+   "kind": "idea",
+   "section": "8.6",
+   "name": "西西弗斯冷却中的非绝热性",
+   "statement": "西西弗斯冷却需要布居滞后于原子的位置：绝热跟随它的布居在下坡得到的，正是在上坡失去的。"
+  },
+  {
+   "id": "sisyphus-limit",
+   "kind": "result",
+   "section": "8.6",
+   "name": "西西弗斯冷却极限",
+   "symbol": "T_S",
+   "type": "temperature",
+   "statement": "自发冲击和涨落偶极力的扩散，通过爱因斯坦关系与 η_S 相平衡，得到 k_BT_S ≈ ℏ|Ω|²/8δ：与光致频移势的深度同量级。",
+   "forms": [
+    {
+     "id": "eq-8-133",
+     "latex": "k_BT_S = \\frac{D_{sp} + D_{dp}}{m|\\eta_S|} \\approx \\frac{\\hbar|\\Omega|^2}{8\\delta}",
+     "anchor": "8.6-drv-sisyphus-limit"
+    },
+    {
+     "id": "eq-8-131",
+     "latex": "D_{sp} = (\\hbar k)^2\\frac{|\\Omega|^2\\gamma/2}{(\\gamma/2)^2 + \\delta^2}",
+     "anchor": "8.6-eq-8-131"
+    },
+    {
+     "id": "eq-8-132",
+     "latex": "D_{dp} = \\left\\langle 2\\hbar^2k^2\\frac{\\delta^2}{\\gamma}\\frac{\\Omega^2/2}{\\delta^2 + (\\gamma/2)^2}\\sin^4(2kz)\\right\\rangle = \\frac{3(\\hbar k)^2\\delta^2}{4\\gamma}\\frac{\\Omega^2/2}{\\delta^2 + (\\gamma/2)^2}",
+     "anchor": "8.6-eq-8-132"
+    }
+   ]
+  },
+  {
+   "id": "recoil-limit",
+   "kind": "result",
+   "section": "8.6",
+   "name": "反冲极限",
+   "symbol": "T_R",
+   "type": "temperature",
+   "statement": "局域在一个势阱中的原子，动量不确定度为 2πℏ/λ 量级，所以经典分析止于反冲能 ℏω_R，它远低于多普勒极限。",
+   "forms": [
+    {
+     "id": "eq-8-135",
+     "latex": "E^\\mathrm{kinetic}_\\mathrm{min} \\sim \\hbar\\omega_R",
+     "anchor": "8.6-eq-8-135"
+    },
+    {
+     "id": "eq-8-134",
+     "latex": "\\delta p \\approx \\frac{2\\pi\\hbar}{\\lambda}",
+     "anchor": "8.6-eq-8-134"
+    }
+   ]
+  },
+  {
+   "id": "sub-recoil-cooling",
+   "kind": "idea",
+   "section": "8.6",
+   "name": "亚反冲冷却",
+   "terms": [
+    "亚反冲"
+   ],
+   "statement": "冷却到 ω_R 以下需要对运动作量子处理，并使用双光子跃迁或暗共振。"
+  },
+  {
+   "id": "laser-cooling",
+   "kind": "idea",
+   "section": "8.1",
+   "name": "激光冷却",
+   "terms": [
+    "激光冷却"
+   ],
+   "statement": "光能冷却原子：它的力不仅使原子减速，还使其速度分布变窄，直到由每种方案的加热所设的极限。"
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "moving-atom-hamiltonian",
+   "prereq": "rotating-wave-approximation"
+  },
+  {
+   "concept": "atomic-recoil",
+   "prereq": "moving-atom-hamiltonian"
+  },
+  {
+   "concept": "recoil-frequency",
+   "prereq": "atomic-recoil"
+  },
+  {
+   "concept": "recoil-shifted-resonance",
+   "prereq": "recoil-frequency"
+  },
+  {
+   "concept": "light-force-operator",
+   "prereq": "heisenberg-picture"
+  },
+  {
+   "concept": "light-force-operator",
+   "prereq": "moving-atom-hamiltonian"
+  },
+  {
+   "concept": "semiclassical-light-force",
+   "prereq": "light-force-operator"
+  },
+  {
+   "concept": "semiclassical-light-force",
+   "prereq": "density-operator-expectation"
+  },
+  {
+   "concept": "semiclassical-light-force",
+   "prereq": "density-matrix-coherences"
+  },
+  {
+   "concept": "semiclassical-light-force",
+   "prereq": "susceptibility"
+  },
+  {
+   "concept": "semiclassical-force-validity",
+   "prereq": "semiclassical-light-force"
+  },
+  {
+   "concept": "semiclassical-force-validity",
+   "prereq": "recoil-frequency"
+  },
+  {
+   "concept": "semiclassical-force-validity",
+   "prereq": "steady-state-coherence"
+  },
+  {
+   "concept": "semiclassical-force-validity",
+   "prereq": "heisenberg-uncertainty-principle"
+  },
+  {
+   "concept": "dipole-force",
+   "prereq": "semiclassical-force-validity"
+  },
+  {
+   "concept": "dipole-force",
+   "prereq": "ac-stark-shift"
+  },
+  {
+   "concept": "dipole-force",
+   "prereq": "dressed-states"
+  },
+  {
+   "concept": "dipole-trap",
+   "prereq": "dipole-force"
+  },
+  {
+   "concept": "optical-lattice",
+   "prereq": "dipole-force"
+  },
+  {
+   "concept": "dissipative-force",
+   "prereq": "semiclassical-force-validity"
+  },
+  {
+   "concept": "dissipative-force",
+   "prereq": "steady-state-population"
+  },
+  {
+   "concept": "maximum-dissipative-force",
+   "prereq": "dissipative-force"
+  },
+  {
+   "concept": "maximum-dissipative-force",
+   "prereq": "saturation"
+  },
+  {
+   "concept": "atomic-beam-slowing",
+   "prereq": "maximum-dissipative-force"
+  },
+  {
+   "concept": "atomic-beam-slowing",
+   "prereq": "recoil-shifted-resonance"
+  },
+  {
+   "concept": "atomic-beam-slowing",
+   "prereq": "zeeman-effect"
+  },
+  {
+   "concept": "doppler-cooling",
+   "prereq": "dissipative-force"
+  },
+  {
+   "concept": "doppler-cooling",
+   "prereq": "recoil-shifted-resonance"
+  },
+  {
+   "concept": "zero-velocity-excitation-rate",
+   "prereq": "optical-pumping-rate"
+  },
+  {
+   "concept": "low-velocity-doppler-force",
+   "prereq": "doppler-cooling"
+  },
+  {
+   "concept": "low-velocity-doppler-force",
+   "prereq": "zero-velocity-excitation-rate"
+  },
+  {
+   "concept": "friction-coefficient",
+   "prereq": "low-velocity-doppler-force"
+  },
+  {
+   "concept": "optical-molasses",
+   "prereq": "friction-coefficient"
+  },
+  {
+   "concept": "maximum-friction-coefficient",
+   "prereq": "friction-coefficient"
+  },
+  {
+   "concept": "maximum-friction-coefficient",
+   "prereq": "saturation"
+  },
+  {
+   "concept": "capture-range",
+   "prereq": "friction-coefficient"
+  },
+  {
+   "concept": "magneto-optical-trap",
+   "prereq": "optical-molasses"
+  },
+  {
+   "concept": "magneto-optical-trap",
+   "prereq": "weak-field-zeeman-shift"
+  },
+  {
+   "concept": "magneto-optical-trap",
+   "prereq": "polarization-selection-rules"
+  },
+  {
+   "concept": "langevin-equation",
+   "prereq": "friction-coefficient"
+  },
+  {
+   "concept": "diffusion-coefficient",
+   "prereq": "langevin-equation"
+  },
+  {
+   "concept": "langevin-momentum-spread",
+   "prereq": "diffusion-coefficient"
+  },
+  {
+   "concept": "einstein-relation",
+   "prereq": "langevin-momentum-spread"
+  },
+  {
+   "concept": "random-walk",
+   "prereq": "langevin-momentum-spread"
+  },
+  {
+   "concept": "naive-operator-damping",
+   "prereq": "heisenberg-picture"
+  },
+  {
+   "concept": "naive-operator-damping",
+   "prereq": "optical-bloch-equations"
+  },
+  {
+   "concept": "system-reservoir-operator-equation",
+   "prereq": "naive-operator-damping"
+  },
+  {
+   "concept": "reservoir-operator-solution",
+   "prereq": "system-reservoir-operator-equation"
+  },
+  {
+   "concept": "quantum-langevin-force",
+   "prereq": "reservoir-operator-solution"
+  },
+  {
+   "concept": "quantum-langevin-force",
+   "prereq": "langevin-equation"
+  },
+  {
+   "concept": "heisenberg-langevin-equation",
+   "prereq": "quantum-langevin-force"
+  },
+  {
+   "concept": "heisenberg-langevin-master-equation",
+   "prereq": "heisenberg-langevin-equation"
+  },
+  {
+   "concept": "generalized-einstein-relation",
+   "prereq": "heisenberg-langevin-equation"
+  },
+  {
+   "concept": "generalized-einstein-relation",
+   "prereq": "einstein-relation"
+  },
+  {
+   "concept": "laser-cooling-noise-force",
+   "prereq": "generalized-einstein-relation"
+  },
+  {
+   "concept": "force-fluctuations",
+   "prereq": "laser-cooling-noise-force"
+  },
+  {
+   "concept": "force-fluctuations",
+   "prereq": "adiabatic-elimination"
+  },
+  {
+   "concept": "laser-cooling-diffusion",
+   "prereq": "force-fluctuations"
+  },
+  {
+   "concept": "laser-cooling-diffusion",
+   "prereq": "random-walk"
+  },
+  {
+   "concept": "doppler-limit",
+   "prereq": "laser-cooling-diffusion"
+  },
+  {
+   "concept": "doppler-limit",
+   "prereq": "maximum-friction-coefficient"
+  },
+  {
+   "concept": "laser-attenuation",
+   "prereq": "doppler-cooling"
+  },
+  {
+   "concept": "laser-attenuation",
+   "prereq": "absorption-coefficient"
+  },
+  {
+   "concept": "photon-reabsorption",
+   "prereq": "doppler-cooling"
+  },
+  {
+   "concept": "sub-doppler-cooling",
+   "prereq": "doppler-limit"
+  },
+  {
+   "concept": "sub-doppler-cooling",
+   "prereq": "ac-stark-shift"
+  },
+  {
+   "concept": "polarization-gradient",
+   "prereq": "sub-doppler-cooling"
+  },
+  {
+   "concept": "polarization-gradient",
+   "prereq": "spherical-polarization-basis"
+  },
+  {
+   "concept": "ground-state-light-shift-potential",
+   "prereq": "polarization-gradient"
+  },
+  {
+   "concept": "ground-state-light-shift-potential",
+   "prereq": "dipole-force"
+  },
+  {
+   "concept": "ground-state-light-shift-potential",
+   "prereq": "clebsch-gordan-coefficients"
+  },
+  {
+   "concept": "sisyphus-cooling",
+   "prereq": "ground-state-light-shift-potential"
+  },
+  {
+   "concept": "sisyphus-cooling",
+   "prereq": "optical-pumping"
+  },
+  {
+   "concept": "sisyphus-pumping-rate",
+   "prereq": "sisyphus-cooling"
+  },
+  {
+   "concept": "sisyphus-pumping-rate",
+   "prereq": "rate-equations"
+  },
+  {
+   "concept": "sisyphus-force",
+   "prereq": "sisyphus-pumping-rate"
+  },
+  {
+   "concept": "sisyphus-force",
+   "prereq": "adiabatic-expansion"
+  },
+  {
+   "concept": "sisyphus-friction",
+   "prereq": "sisyphus-force"
+  },
+  {
+   "concept": "sisyphus-friction",
+   "prereq": "capture-range"
+  },
+  {
+   "concept": "doppler-sisyphus-comparison",
+   "prereq": "sisyphus-friction"
+  },
+  {
+   "concept": "sisyphus-nonadiabaticity",
+   "prereq": "sisyphus-force"
+  },
+  {
+   "concept": "sisyphus-nonadiabaticity",
+   "prereq": "adiabatic-theorem"
+  },
+  {
+   "concept": "sisyphus-limit",
+   "prereq": "sisyphus-friction"
+  },
+  {
+   "concept": "recoil-limit",
+   "prereq": "sisyphus-limit"
+  },
+  {
+   "concept": "sub-recoil-cooling",
+   "prereq": "recoil-limit"
+  },
+  {
+   "concept": "sub-recoil-cooling",
+   "prereq": "dark-resonance"
+  },
+  {
+   "concept": "doppler-cooling",
+   "prereq": "laser-cooling"
+  }
+ ]
+}

@@ -1,0 +1,173 @@
+<section id="linear">
+<h2>线性放大</h2>
+<p class="cite-target" id="amp-noise">我们已经看到噪声如何抑制受衰变作用的场模的量子关联。<span data-concept="linear-amplifier-noise">线性放大</span>同样会给场的初态增加噪声，因为它总是涉及<span data-concept="spontaneous-emission">自发发射</span>过程。线性放大器的增益及与之相关的噪声，可以用由反转的<span data-concept="two-level-atom">二能级原子</span>或反转的谐振子构成的气体来建模。对于增益系数$\ksigmagain &gt; 1$，可以导出一个非常一般的结果：</p>
+<div class="equation" id="eq-9-135">$$\hat{a}_\mathrm{out} = \sqrt{\ksigmagain}\hat{a}_\mathrm{in} + \sqrt{\ksigmagain - 1}\hat{b}^\dagger, \tag{9.135}$$</div>
+<p>其中噪声算符$\hat{b}^\dagger$类似于真空噪声，但其作用相当不同，因为它来自<span data-concept="spontaneous-emission">自发发射</span>过程。与其他噪声算符一样，它保证场算符的<span data-concept="commutator">对易关系</span>不随时间增长或衰减。额外的噪声与指出任意的量子态不能被复制的<span data-concept="linear-amplifier-noise">量子不可克隆定理</span>有关。同样，我们在这里发现，量子态不可能在放大时不因附加噪声而丢失一些信息。</p>
+</section>
+
+<section id="nonlinear">
+<h2>9.4.1 非线性放大</h2>
+<p class="cite-target">我们已经看到，非线性光学现象产生光的<span data-concept="nonclassical-light">非经典</span>态，而<span data-concept="dissipation-destroys-nonclassicality">损耗则起着破坏非经典关联的作用</span>。这两种相互竞争的机制之间的相互作用，可以用一个具体的例子来说明：<span data-concept="squeezed-state">压缩光</span>的产生。我们将首先说明如何通过无损耗的下转换过程产生<span data-concept="squeezed-state">压缩态</span>，然后讨论损耗和噪声的影响。</p>
+<h3>简并参量下转换</h3>
+<p id="degenerate">我们对<span data-concept="parametric-processes">参量下转换</span>的半经典描述，描述了由<span data-ref="pump">强抽运场$\kEenv_0$</span>产生一对场<span data-ref="generated">$\kEenv_1$和$\kEenv_2$</span>，其中$\knu_1 + \knu_2 = \knu_0$且$\kDeltakmis = 0$。远离原子共振时，驱动<span data-ref="generated">$\kEenv_1$和$\kEenv_2$</span>的极化强度既包含线性电极化率，也包含<span data-concept="nonlinear-susceptibility">非线性电极化率</span>：</p>
+<div class="equation" id="eq-9-136">$$\kPnl_1 \sim \frac{\kchiII}{2}\kEenv_0\kEenv_2^* + \frac{\kchi_1}{2}\kEenv_1 \tag{9.136}$$</div>
+<div class="equation" id="eq-9-137">$$\kPnl_2 \sim \frac{\kchiII}{2}\kEenv_0\kEenv_1^* + \frac{\kchi_2}{2}\kEenv_2. \tag{9.137}$$</div>
+<p id="opo">产生<span data-concept="squeezed-state">压缩光</span>的一种方法，是对约束在腔中的场使用<span data-concept="degenerate-opo">参量下转换的简并形式</span>。<span data-ref="pump">频率为$\knu_0$的抽运场</span>驱动腔内的非线性介质，腔的频率$\knu_c = \knu_0/2$决定<span data-ref="generated">$\kEenv_1$和$\kEenv_2$</span>的频率，$\knu_1 = \knu_2 = \knu_c$。假设<span data-concept="light-polarization">偏振</span>相匹配，<span data-ref="generated">两个较低频率的场相同，$\kEenv_1 = \kEenv_2$</span>。腔中这种<span data-concept="degenerate-opo">参量下转换</span>的简并形式常被称为<span data-concept="degenerate-opo">“简并光学参量振荡器”（OPO）</span>。</p>
+<p>以腔频率振荡的<span data-concept="macroscopic-polarization">极化强度</span>（它产生<span data-ref="generated">场$\kEenv_1 = \kEenv_2$</span>）包含来自两个相干性的效应</p>
+<div class="equation" id="eq-9-138">$$\kPnl = \kmu_{31}\krhothreeone + \kmu_{23}\rho_{23} \tag{9.138}$$</div>
+<div class="equation" id="eq-9-139">$$\sim \kchiII\kEenv_0\kEenv_1^* + \frac{\kchi_1 + \kchi_2}{2}\kEenv_1. \tag{9.139}$$</div>
+<p>腔内<span data-ref="generated">场$\kEenv_1$</span>的演化方程将含有来自这一<span data-concept="macroscopic-polarization">极化强度</span>的驱动项。在<span data-concept="phase-matching">相位匹配条件</span>下，</p>
+<div class="equation" id="eq-9-140">$$\frac{\partial\kEenv_1}{\partial \kt} = i\kbetagain\kEenv_1^* \tag{9.140}$$</div>
+<div class="equation" id="eq-9-141">$$\frac{\partial\kEenv_1^*}{\partial \kt} = -i\kbetagain^*\kEenv_1, \tag{9.141}$$</div>
+<p>其中$\kbetagain$把抽运功率和<span data-concept="nonlinear-susceptibility">非线性电极化率</span>合并为一个常量。这些方程看起来可能类似于场在线性介质中的传播，那里$\dot{\kEenv} \sim \kbetagain\kEenv$。然而在这种情形下，场的演化与其复共轭的演化不同，所以我们需要仔细跟踪相位。</p>
+<figure class="sim" id="fig-opo" data-figure="9.9" data-original="/media/ch09/fig-9-9.png" data-original-caption="光学参量振荡器由具有级联能级构型的原子构成，原子位于共振频率为 ν_c = ν₀/2 的腔内。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.9</span><span>具有级联能级<span data-ref="lvl-1">$|1\rangle$</span>、<span data-ref="lvl-3">$|3\rangle$</span>、<span data-ref="lvl-2">$|2\rangle$</span>的原子充满一个光学腔。<span data-ref="pump">$\knu_0$处的抽运$\kEenv_0$</span>把<span data-ref="lvl-1">$|1\rangle$</span>驱动到<span data-ref="lvl-2">$|2\rangle$</span>，原子再通过发射<span data-ref="generated">$\knu_c = \knu_0/2$处的腔场$\kEenv$</span>的两个光子返回，每个光子都远离居间态<span data-ref="lvl-3">$|3\rangle$</span>。</span></div>
+</figure>
+<h3>依赖相位的放大</h3>
+<p id="phase-gain-def">由于$\kbetagain$的相位是任意的（只有<span data-ref="generated">$\kEenv_1$</span>与$\kbetagain$的相对相位才起作用），我们可以自由地选取它为纯虚数，$\kbetagain = i\kbetatilde$。为了使演化方程解耦，我们将在简正模式基$\kEpm = \kEenv_1 \pm \kEenv_1^*$中工作。</p>
+<figure class="dv" id="drv-phase-dependent-amplification"></figure>
+<p id="phase-gain"><span data-concept="phase-dependent-amplification">一个简正模式被放大，而另一个被去放大</span>，且增益显含<span data-ref="generated">$\kEenv_1$</span>相对于$\kbetagain \propto$ <span data-ref="pump">$\kEenv_0$</span>的初始相位。当<span data-ref="generated">$\kEenv_1$</span>为实数时，对于$\kbetatilde &gt; 0$，场被衰减，而如果<span data-ref="generated">$\kEenv_1$</span>为虚数，则场被放大。</p>
+<h3>量子力学方法</h3>
+<p>我们希望能把对<span data-concept="degenerate-opo">简并参量下转换</span>的经典描述转换成量子力学的版本。最简单的做法是把腔内电场的值换成腔内光子的<span data-concept="creation-annihilation-operators">湮没算符</span>$\kEenv \to \hat{a}$。这样一种朴素的代换，对于由线性运动方程描述的无损耗系统事实上是成立的，所以在这种情形下它恰好行得通。然而，它一般并不成立，我们可以用一种更严格的方法来说明这个简单情形是如何出现的。</p>
+<p id="hl-approach">我们的量子力学处理将描述宏观场的产生。因此我们将使用<span data-concept="heisenberg-langevin-equation">海森伯-朗之万方法</span>，它与我们已经导出的经典描述直接对应。支配腔模与原子之间相互作用的<span data-concept="hamiltonian">哈密顿量</span>为</p>
+<div class="equation" id="eq-9-144">$$\kH = -\hbar\hat{a}^\dagger\sum_j \left(\kg_j\hat{\sigma}_{32}^{(j)} + \kg_j\hat{\sigma}_{13}^{(j)}\right) + h.c., \tag{9.144}$$</div>
+<p>而<span data-ref="pump">抽运</span>的驱动项为$\kH_{pump} = -\kOmega_0\hat{\sigma}_{21} + h.c.$。在腔没有损耗的情况下，场模$\hat{a}$的运动<span data-concept="heisenberg-langevin-equation">朗之万方程</span>为</p>
+<div class="equation" id="eq-9-145">$$\frac{d\hat{a}}{d\kt} = i\sum_j \left(\kg_j\hat{\sigma}_{32}^{(j)} + \kg_j\hat{\sigma}_{13}^{(j)}\right). \tag{9.145}$$</div>
+<p>对于<span data-concept="atomic-polarization">原子极化强度</span>也可以求出相应的方程。例如，<span data-concept="atomic-polarization">原子极化强度</span>$\sigma_{13}^{(j)}$满足</p>
+<div class="equation" id="eq-9-146">$$\dot{\sigma}_{13}^{(j)} = -(\kgammaonethree + i\kdelta)\hat{\sigma}_{13}^{(j)} - i\kg_j\hat{a}^\dagger\hat{\sigma}_{12}^{(j)} + i\kg_j\hat{a}(\hat{\sigma}_{11} - \hat{\sigma}_{33}) - i\kOmega_0\hat{\sigma}_{23} + \kFnoise_{13}, \tag{9.146}$$<sup class="fn" data-note="c-eq-9-146"></sup></div>
+<p id="adiabatic">其中$\kdelta$是相对于<span data-ref="lvl-3">居间态</span>的<span data-concept="detuning">失谐</span>。如果<span data-concept="detuning">失谐</span>足够大，我们可以忽略原子的衰变和与之相关的噪声项$\kgammaonethree \to 0, \kFnoise_{13} \to 0$。此外，如果假定<span data-ref="pump">抽运场</span>很强且是经典的，那么算符$\hat{\sigma}_{21}$基本上等于其经典期望值$\hat{\sigma}_{12} = \kOmega_0/\kDelta$<sup class="fn" data-note="c-sigma-21"></sup>（其中$\kDelta$是<span data-ref="pump">经典抽运场</span>相对于<span data-ref="lvl-1">$|1\rangle$</span> $\to$ <span data-ref="lvl-2">$|2\rangle$</span>跃迁的<span data-concept="detuning">失谐</span>）。有了$\hat{\sigma}_{21}$的这个值，项$-i\kOmega_0\hat{\sigma}_{23} \approx -i(|\kOmega_0|^2/\kDelta)\hat{\sigma}_{13}$可以通过把它吸收进$\kdelta$的定义而消去。利用<span data-concept="adiabatic-elimination">绝热消除</span>，我们得到</p>
+<div class="equation" id="eq-9-147">$$\hat{\sigma}_{13}^{(j)} = -\frac{\kOmega_0}{\kDelta\kdelta}\kg_j\hat{a}^\dagger - \frac{\kg_j\hat{a}}{\kdelta}. \tag{9.147}$$</div>
+<p>这个原子算符类似于<span data-concept="atomic-polarization">极化强度</span>的经典表达式，而$\kg_j\hat{a}^\dagger$起着<span data-ref="generated">产生场$\kEenv_1$</span>的经典<span data-concept="rabi-frequency">拉比频率</span>的作用。<a href="#eq-9-145">式 9.145</a>中的另一项取决于</p>
+<div class="equation" id="eq-9-148">$$\hat{\sigma}_{32} \approx \frac{\kOmega_0}{\kDelta}\hat{\sigma}_{31} \approx -\frac{\kOmega_0}{\kDelta\kdelta}\kg_j\hat{a}^\dagger. \tag{9.148}$$</div>
+<figure class="dv" id="drv-two-photon-drive"></figure>
+<p>场算符的厄米共轭出现在方程的右边，正如复共轭出现在经典运动方程中一样。注意，我们的系统涉及经典抽运、线性算符方程和大的<span data-concept="detuning">失谐</span>，所以<span data-concept="heisenberg-langevin-equation">海森伯-朗之万方法</span>给出的结果，与我们用朴素代换所得到的结果完全相同。如果系统涉及非线性算符项，那么从经典描述过渡到量子描述时，就会出现编序歧义。</p>
+<figure class="dv" id="drv-squeezing-equations"></figure>
+<p>这组方程可以由<span data-concept="opo-heisenberg-langevin">一个有效哈密顿量</span>导出</p>
+<div class="equation" id="eq-9-152">$$\kHeff = \frac{\hbar}{2}\left(\kbetagain\hat{a}^2 + \kbetagain^*(\hat{a}^\dagger)^2\right). \tag{9.152}$$</div>
+<p>从物理上说，<span data-concept="opo-heisenberg-langevin">该有效哈密顿量</span>描述光子对的吸收或发射，这恰如我们对<span data-concept="degenerate-opo">简并下转换过程</span>所预期的。尽管我们本来可以猜出它的形式，但现在我们已经从微观考虑把它导出了。</p>
+<h3>非简并参量下转换</h3>
+<p>通过类似的计算，<span data-concept="nondegenerate-pdc">非简并参量下转换过程</span>满足运动方程</p>
+<div class="equation" id="eq-9-153">$$\frac{d\hat{a}_2}{d\kt} = -i\kbetagain^*\hat{a}_1^\dagger \tag{9.153}$$</div>
+<div class="equation" id="eq-9-154">$$\frac{d\hat{a}_1^\dagger}{d\kt} = i\kbetagain\hat{a}_2, \tag{9.154}$$</div>
+<p>它们可以由<span data-concept="nondegenerate-pdc">一个有效哈密顿量</span>来描述</p>
+<div class="equation" id="eq-9-155">$$\kHeff = \hbar\left(\kbetagain\hat{a}_1\hat{a}_2 + \kbetagain^*\hat{a}_1^\dagger\hat{a}_2^\dagger\right). \tag{9.155}$$</div>
+<p>这里，$\hat{a}_1$和$\hat{a}_2$是被该过程放大的两个<span data-concept="phase-matching">相位匹配的</span>场<span data-concept="cavity-modes">模</span>。当真空场在这个<span data-concept="nondegenerate-pdc">有效哈密顿量</span>下演化时，它产生出一个态。</p>
+<figure class="dv" id="drv-pair-state"></figure>
+<p id="pair-limits">区分这一过程中的两种极限是有益的：$\kxipdc &lt; 1$和$\kxipdc \gg 1$。在第一种情形下，光子的发射主要是自发过程，这导致光子对的关联产生。在第二种情形下，受激发射起重要作用，该系统可用作<span data-concept="degenerate-opo">光学参量振荡器</span>来产生光的<span data-concept="squeezed-state">压缩态</span>。</p>
+<p id="number-correlations"><span data-concept="nondegenerate-pdc">非简并参量下转换</span>产生的态表现出<span data-concept="photon-number-correlations">关联的光子统计学</span>。尽管每个模（即对另一个模求阵迹之后）处于<span data-concept="thermal-photon-distribution">热态</span>，其分布函数为（例如参见沃尔斯和米尔本，5.2.5）</p>
+<div class="equation" id="eq-9-158">$$p(n) = \frac{\tanh^2\kxipdc}{\cosh^2\kxipdc} \tag{9.158}$$<sup class="fn" data-note="c-eq-9-158"></sup></div>
+<p>两个<span data-concept="cavity-modes">模</span>之间的光子数之差恰好为零：</p>
+<div class="equation" id="eq-9-159">$$\Delta\hat{n}|\kpsi\rangle = (\hat{n}_1 - \hat{n}_2)|\kpsi\rangle = 0. \tag{9.159}$$</div>
+<p>这是<span data-concept="nonclassical-light">非经典</span>光子关联的一个例子：光子数之差被抑制到远低于光子<span data-concept="photon-number-correlations">散粒噪声极限</span>$\langle(\hat{n}_1 - \hat{n}_2)^2\rangle = n_1 + n_2$，这正是在<span data-concept="beamsplitter-transformation">分束器</span>上把一束光一分为二所得到的结果。</p>
+<p id="heralded">在<span data-concept="nondegenerate-pdc">参量下转换</span>中产生的关联光子有多种应用。通过只测量两个<span data-concept="cavity-modes">模</span>之一，它们可用于<span data-concept="heralded-single-photons">标示单光子的产生</span>。以第一个模中的一次探测事件为条件，第二个模中应当恰好有一个光子。一种稍微复杂一些的应用，利用<span data-concept="cavity-modes">模</span>的某种内部性质，例如<span data-concept="light-polarization">偏振</span>，来编码一个纠缠态。在这种情形下，所得到的态可能类似于</p>
+<div class="equation" id="eq-9-160">$$|\kpsi\rangle = |\mathrm{vac}\rangle + \frac{\kxipdc}{\sqrt{2}}\left(|1_H, 1_V\rangle + |1_V, 1_H\rangle\right) + \mathcal{O}(\kxipdc^2). \tag{9.160}$$</div>
+<p id="post-selection">只要产生光子的概率$\sim \kxipdc \ll 1$，系统要么处于真空，要么处于纠缠的双光子态。与许多单光子过程的情形一样，这一纠缠态的产生是概率性的。此外，任何实际系统中固有的损耗都会破坏纠缠态。然而，通过把所有后续测量都以两个光子都被探测到为条件（这一过程称为<span data-concept="post-selection">“后选择”</span>），我们就只在产生了两个光子且二者都没有丢失的情形下使用我们的态。以这种方式，人们可以设计出容忍概率性过程且对损耗不敏感的少光子实验。</p>
+</section>
+
+<section id="squeezed">
+<h2>9.4.2 压缩态</h2>
+<p class="cite-target">在$\kxipdc \gg 1$的情形下，<span data-concept="degenerate-opo">简并参量下转换</span>可以导致<span data-concept="squeezed-state">压缩态</span>的产生。回到$\hat{a}_1 = \hat{a}_2 = \hat{a}$的情形，我们现在允许<span data-ref="pump">驱动场</span>具有任意的相位$\ktheta$，于是增益系数变为</p>
+<div class="equation" id="eq-9-161">$$\kbetagain = \kbetatilde e^{i(\ktheta - \pi/2)}. \tag{9.161}$$</div>
+<p>利用这一相位对场算符加权，我们定义腔模的<span data-concept="quadrature-operators">正交分量</span></p>
+<div class="equation" id="eq-9-162">$$\kxquad = \frac{1}{\sqrt{2}}\left(\hat{a}e^{i\ktheta/2} + \hat{a}^\dagger e^{-i\ktheta/2}\right) \tag{9.162}$$</div>
+<div class="equation" id="eq-9-163">$$\kpquad = \frac{1}{\sqrt{2}i}\left(\hat{a}e^{i\ktheta/2} - \hat{a}^\dagger e^{-i\ktheta/2}\right), \tag{9.163}$$</div>
+<p>它们是算符运动方程的“简正模式”。</p>
+<p>对于$\kbetatilde &gt; 0$，$x$<span data-concept="quadrature-operators">正交分量</span>被放大，而$p$分量被衰减。</p>
+<p>因此，如果腔模从<span data-concept="coherent-state">相干态</span>出发，则<span data-concept="quadrature-operators">正交分量</span>的方差将朝相反的方向变化。</p>
+<figure class="dv" id="drv-quadrature-squeezing"></figure>
+<p id="squeezed-def">注意，该场仍处于<span data-concept="coherent-state-uncertainty">最小不确定态</span>，因为$\langle\Delta\kpquad^2\rangle\langle\Delta\kxquad^2\rangle = 1/4$，但其噪声性质相对于初始<span data-concept="coherent-state">相干态</span>被<span data-concept="squeezed-state">“压缩”</span>了。</p>
+<figure class="sim" id="sim-squeezing" data-figure="9.10" data-original="/media/ch09/fig-9-10.png" data-original-caption="真空态、相干态和压缩态中噪声的相空间表示。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.10</span><span>三个态的噪声，画在<span data-concept="quadrature-operators">正交分量</span>$\kxquad$和$\kpquad$的平面上，各自的轮廓画在一个标准偏差处：原点处的真空和<span data-concept="coherent-state">相干态</span>$|\kalphacoh\rangle$（$|\kalphacoh| = 1.5$），二者均为虚线；以及用阴影表示的、下转换器在经过时间$\kt$之后由该相干态制成的<span data-concept="squeezed-state">压缩态</span>。随着$\kbetatilde\kt$增大，圆盘沿$\kxquad$拉长、沿$\kpquad$变窄，其面积不变，其中心也朝同样的方向移动，$\langle\kxquad\rangle$增大而$\langle\kpquad\rangle$减小。转动$\arg\kalphacoh$可使该态相对于抽运从另一个相位出发。平面旁边是压缩态的场$\kxquad\cos\knu_c\kt + \kpquad\sin\knu_c\kt$，它连同其噪声带运行两个周期；每个周期有两次，该噪声带比相干态的（虚线）更窄。</span></div>
+</figure>
+<p>在数学上，<span data-concept="squeezed-state">压缩态</span>可以表示为<span data-concept="opo-heisenberg-langevin">有效哈密顿量</span>的<span data-concept="time-evolution-operator">时间演化算符</span>作用在初始<span data-concept="coherent-state">相干态</span>$|\kalphacoh\rangle$上：</p>
+<div class="equation" id="eq-9-170">$$|\kpsi\rangle_{Sq} = e^{-i(\kbetagain^*(\hat{a}^\dagger)^2 + \kbetagain\hat{a}^2)\kt/2}|\kalphacoh\rangle. \tag{9.170}$$</div>
+<p><span data-concept="squeezed-state">压缩态</span>的这一形式定义使得它的所有性质都可以被计算。注意，如果我们从真空$\kalphacoh = 0$出发，<span data-concept="opo-heisenberg-langevin">有效哈密顿量</span>就会成对地增加和减少光子，所以最终的<span data-concept="squeezed-state">压缩态</span>将只包含偶数个光子的叠加。显然，这样的态与<span data-concept="coherent-state">相干态</span>非常不同。</p>
+</section>
+
+<section id="loss">
+<h2>9.4.3 损耗的影响</h2>
+<p class="cite-target">我们的分析预言，随着时间推移，<span data-concept="squeezed-state">压缩态</span>的一个<span data-concept="quadrature-operators">正交分量</span>将消失，而另一个将发散。从实际的角度看，我们预期这样的发散会被阻尼掉，所以为了得到对<span data-concept="squeezed-state">压缩光</span>产生的真实描述，考虑衰变过程是重要的。</p>
+<h3>阻尼腔中压缩光的产生</h3>
+<p id="damped"><span data-concept="damped-squeezing">我们将只考虑腔的损耗</span>，它是最容易纳入我们分析的噪声类型。场算符的<span data-concept="cavity-langevin-equation">朗之万方程</span>因<span data-concept="cavity-loss-rate">衰变率$\kkappa$</span>和与之相关的噪声算符$\kFnoise$而被修改，</p>
+<div class="equation" id="eq-9-171">$$\frac{d\hat{a}}{d\kt} = -i\kbetagain^*\hat{a}^\dagger - \frac{\kkappa}{2}\hat{a} + \kFnoise \tag{9.171}$$</div>
+<div class="equation" id="eq-9-172">$$\frac{d\hat{a}^\dagger}{d\kt} = i\kbetagain\hat{a} - \frac{\kkappa}{2}\hat{a}^\dagger + \kFnoise^\dagger. \tag{9.172}$$</div>
+<p>腔的衰变对应于光子通过半透明反射镜进出腔、泄漏到外部世界。腔外的场<span data-concept="cavity-modes">模</span>（许多<span data-concept="cavity-modes">模</span>）现在充当我们所考虑的单个腔模的<span data-concept="open-system">热库</span>。当腔外的场初始处于真空态$\knbar = 0$时，<span data-concept="cavity-noise-correlations">噪声算符关联函数</span>为</p>
+<div class="equation" id="eq-9-173">$$\langle\kFnoise(\kt)\kFnoise^\dagger(\kt')\rangle = \kkappa\delta(\kt - \kt'). \tag{9.173}$$</div>
+<p>利用<a href="#eq-9-162">式 (9.162)</a>和<a href="#eq-9-163">式 (9.163)</a>中定义的简正模式，我们可以改写<span data-concept="cavity-langevin-equation">朗之万方程</span>。</p>
+<figure class="dv" id="drv-damped-quadrature-equations"></figure>
+<p>这里厄米噪声算符$\kFnoise_{x,p}$是$\kFnoise$和$\kFnoise^\dagger$的线性组合，类似于<span data-concept="quadrature-operators">正交分量算符</span>：</p>
+<div class="equation" id="eq-9-176">$$\kFnoise_x = \frac{1}{\sqrt{2}}\left(\kFnoise e^{i\ktheta/2} + \kFnoise^\dagger e^{-i\ktheta/2}\right) \tag{9.176}$$</div>
+<div class="equation" id="eq-9-177">$$\kFnoise_p = \frac{1}{\sqrt{2}i}\left(\kFnoise e^{i\ktheta/2} - \kFnoise^\dagger e^{-i\ktheta/2}\right), \tag{9.177}$$</div>
+<p>它们的关联函数可直接由$\kFnoise$的关联函数得出。</p>
+<figure class="dv" id="drv-damped-squeezing"></figure>
+<p>在大时间极限下，$\kpquad$的不确定度趋近于一个渐近的非零值，这表明损耗降低了<span data-concept="squeezed-state">压缩态</span>的量子关联。</p>
+<h3>定常态压缩</h3>
+<p>当<span data-concept="cavity-loss-rate">腔阻尼率</span>远大于压缩系数$\kkappa \gg \kbetagain$时，<sup class="fn" data-note="c-beta-kappa"></sup>两个方差都趋近于经典值$1/2$。如此强的损耗使<span data-concept="squeezed-state">压缩态</span>坍缩成经典的<span data-concept="coherent-state">相干态</span>。一般来说，量子关联产生于非线性相干相互作用与耗散之间的平衡。我们希望确定这种竞争的定常态结果。</p>
+<p id="undepleted">然而，在强抽运情形$\kbetagain &gt; \kkappa/2$下，我们遇到了非物理的结果，因为预言的腔光子数无限增长，$\langle\hat{a}^\dagger\hat{a}\rangle \to \infty$。我们的分析不足以描述这一情形下的定常态行为，因为我们作了<span data-concept="undepleted-pump-approximation">未耗尽抽运近似</span>。对于有限的相互作用时间，这一近似也许足够，但定常态解需要一种完整的处理，用非线性算符方程来考虑这些修正。</p>
+<p>我们的解在中间情形$\kbetagain &lt; \kkappa/2$下表现良好，其中</p>
+<div class="equation" id="eq-9-184">$$\langle\Delta\kxquad^2\rangle \to \frac{\kkappa}{2(\kkappa - 2\kbetatilde)} \tag{9.184}$$</div>
+<div class="equation" id="eq-9-185">$$\langle\Delta\kpquad^2\rangle \to \frac{\kkappa}{2(\kkappa + 2\kbetatilde)}. \tag{9.185}$$</div>
+<p id="threshold">特别要注意，在<span data-concept="steady-state-squeezing">阈值抽运率$\kbetagain = \kkappa/2$</span>处，最大压缩只有50%。这一极限来自以速率$\kkappa$泄漏进腔内的外部真空场，它污染了<span data-concept="nonclassical-light">非经典</span>态。</p>
+<h3>输出场中的压缩</h3>
+<p id="output-field">从我们迄今的结果看，似乎在定常态中只能期望看到50%的压缩。然而，这一限制并不是故事的结尾。<span data-concept="output-squeezing">在实验中，人们观察的不是腔内的场，而是泄漏到连续谱中的那一部分。</span>输出场可以用<span data-concept="input-output-relation">输入输出关系</span>的量子力学版本求得</p>
+<div class="equation" id="eq-9-186">$$\text{经典}: \kEcav_\mathrm{out} = -r\kEcav_\mathrm{in} + t\kEcav_\mathrm{cavity} \tag{9.186}$$</div>
+<div class="equation" id="eq-9-187">$$\text{量子}: \kEhat_\mathrm{out} = -\frac{\kFnoise}{\sqrt{\kkappa}} + \sqrt{\kkappa}\hat{a}. \tag{9.187}$$</div>
+<p>这里我们清楚地看到，噪声算符是由光子进出腔的泄漏造成的。由于输出场是<span data-concept="cavity-noise-correlations">输入场</span>被反射的部分与透射的腔场之和，我们需要考虑这两个分量之间的干涉项。我们感兴趣的是连续波情形，所以在傅里叶域中工作是方便的，在其中<span data-concept="input-output-relation">输入输出关系</span>给出</p>
+<div class="equation" id="eq-9-188">$$\kEhat_\mathrm{out}(\komega) = -\frac{\kFnoise(\komega)}{\sqrt{\kkappa}} + \sqrt{\kkappa}\hat{a}(\komega). \tag{9.188}$$</div>
+<p>动量<span data-concept="quadrature-operators">正交分量</span>满足类似的方程</p>
+<div class="equation" id="eq-9-189">$$\kPquad_\mathrm{out}(\komega) = -\frac{\kFnoise_p(\komega)}{\sqrt{\kkappa}} + \sqrt{\kkappa}\kPquad(\komega). \tag{9.189}$$</div>
+<p>由<a href="#drv-damped-quadrature-equations">式 (9.175)</a>，我们知道腔内的<span data-concept="quadrature-operators">正交分量</span>，因此可以求解外部场。</p>
+<figure class="dv" id="drv-output-squeezing"></figure>
+<p>特别是，当$\kbetagain \to \kkappa/2$且$\komega \to 0$时，两个分量发生相消干涉，$\kPquad_\mathrm{out}(0) \to 0$。因此输出场可以被完美地<span data-concept="squeezed-state">压缩</span>！</p>
+<p>对于输出场的某个傅里叶分量与腔频率之间的有限失谐，输出只是部分被<span data-concept="squeezed-state">压缩</span>。压缩具有宽度$\sim \kkappa$的洛伦兹线型（见<a href="#sim-output-squeezing">图 9.11</a>）。在实际实验中，人们会观察中间的频率，在那里经典噪声可以被抑制，而又存在有限的压缩。</p>
+<figure class="sim" id="sim-output-squeezing" data-figure="9.11" data-original="/media/ch09/fig-9-11.png" data-original-caption="输出场的动量正交分量中的压缩，相对于相干态的噪声（称为“标准量子极限”）。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.11</span><span>输出场的动量<span data-concept="quadrature-operators">正交分量</span>$\kPquad_\mathrm{out}$在每个傅里叶频率$\komega$处的噪声，来自<a href="#drv-output-squeezing">式 (9.191)</a>，相对于<span data-concept="coherent-state">相干态</span>的噪声，即取为1的<span data-concept="output-squeezing">“标准量子极限”</span>。把$\kbetatilde/\kkappa$升向位于二分之一的<span data-concept="steady-state-squeezing">阈值</span>，凹陷在$\komega = 0$处加深到零，宽度为$\kkappa$量级；虚线是腔内的压缩，<a href="#eq-9-185">式 (9.185)</a>，它不会低于二分之一。移动$\komega$可读出某一频率处的噪声。</span></div>
+</figure>
+<h3>零拍探测</h3>
+<p id="homodyne">只有存在某种测量压缩的手段，<span data-concept="squeezed-state">压缩态</span>的产生才能得到评估。由于<span data-concept="quadrature-operators">正交分量</span>以光频振荡，对压缩的直接探测是一项极其困难的任务。取而代之，人们使用一种称为<span data-concept="homodyne-detection">“零拍探测”</span>的技术，把<span data-ref="signal">信号</span>变换到较低的频率，在那里可以使用标准电子学。</p>
+<p><span data-concept="homodyne-detection">零拍探测</span>采用处于<span data-concept="coherent-state">相干态</span>$\bar{\beta}e^{i\kphi}$的<span data-ref="lo">强经典场$\hat{b}_{LO}$</span>，中心频率与<span data-ref="signal">信号</span>相同。当<span data-ref="lo">这个所谓的<span data-concept="local-oscillator">“本地振荡器”</span>场</span>与<span data-ref="signal">信号</span>在50/50 <span data-concept="beamsplitter-transformation">分束器</span>上混合时，两个输出场为</p>
+<div class="equation" id="eq-9-192">$$\hat{a}_\mathrm{out}^{(1)} = \frac{1}{\sqrt{2}}\left(\hat{a} + i\hat{b}_{LO}\right) \tag{9.192}$$</div>
+<div class="equation" id="eq-9-193">$$\hat{a}_\mathrm{out}^{(2)} = \frac{1}{\sqrt{2}}\left(i\hat{a} + \hat{b}_{LO}\right). \tag{9.193}$$</div>
+<p>光电探测器测量两个场的光强，它与<span data-concept="beamsplitter-transformation">分束器</span>每一臂中的光子数成正比。</p>
+<figure class="dv" id="drv-homodyne-intensities"></figure>
+<figure class="sim" id="fig-homodyne" data-figure="9.12" data-original="/media/ch09/fig-9-12.png" data-original-caption="量子场â的零拍探测示意图。本地振荡器b̂_LO在分束器上与信号混合，两个输出场相减，从而给出对â的正交分量的相位敏感测量。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.12</span><span><span data-ref="signal">信号$\hat{a}$</span>和<span data-ref="lo">本地振荡器$\hat{b}_{LO}$</span>在50/50 <span data-concept="beamsplitter-transformation">分束器</span>上相遇；每个输出端的光电探测器把其光子数变成电流，读出差电流$\hat{n}_-$。它的平均值跟随<span data-ref="signal">信号</span>在<span data-ref="lo">振荡器</span>的相位$\kphi$处的<span data-concept="quadrature-operators">正交分量</span>$\kPquad_{\kphi}$，它的噪声就是该正交分量的噪声；扫描$\kphi$依次读出每个正交分量，<a href="#sim-squeezing">图 9.10</a>在一个周期内描出的带。</span></div>
+</figure>
+<p>通过测量差电流（它与光子数之差成正比），人们可以消去<span data-concept="mean-photon-number">平均光子数</span>，只探测<span data-ref="signal">信号</span>与<span data-ref="lo"><span data-concept="local-oscillator">本地振荡器</span></span>之间的拍频。</p>
+<p>对于<span data-ref="signal">信号</span>与<span data-ref="lo"><span data-concept="local-oscillator">本地振荡器</span></span>的初态$|\kpsi\rangle = |\kpsi\rangle_a|\beta\rangle$，只要$\bar{\beta} \gg 1$很大，这个差电流就提供了<span data-ref="signal">信号</span>的<span data-concept="quadrature-operators">正交分量</span>的一种度量。</p>
+<figure class="dv" id="drv-homodyne-difference"></figure>
+<h3>在精密测量中的应用</h3>
+<p>精密测量在量子力学上可能受到经典激光中涨落的限制。用<span data-concept="squeezed-state">压缩光</span>取代激光束可以改进某些测量，而精度上的潜在增益正是研究压缩最初的动机。</p>
+<figure class="sim" id="sim-phase-shift" data-figure="9.13" data-original="/media/ch09/fig-9-13.png" data-original-caption="测量相移φ的三种方法。(a) 使用相干态，p̂中的正交分量方差决定了可测量的φ的最小值。(b) 使用⟨ΔP²⟩ &lt; 1/2的压缩态，可以做出更精确的测量。(c) 只需使用更大的相干场就能获得类似的精度改进，这比产生压缩态要容易得多。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.13</span><span>相移$\delta\kphi$使态绕原点转动，并使其$\kpquad$<span data-concept="quadrature-operators">正交分量</span>移动$\langle\kxquad\rangle\delta\kphi$；平面旁边是测量由之抽取结果的$\kpquad$的两个分布，分别在相移之前和之后。一旦二者相距超过它们的宽度，相移就被分辨出来。选择态：如(a)中的<span data-concept="coherent-state">相干态</span>，如(b)中在$\kpquad$上被<span data-concept="squeezed-state">压缩</span>的同一个场，或如(c)中强度为两倍的<span data-concept="coherent-state">相干态</span>。</span></div>
+</figure>
+<p id="interferometry">假设一次干涉测量需要求出两个场之间的相位差（见<a href="#sim-phase-shift">图 9.13</a>和<a href="#fig-interferometer">图 9.14</a>）。如果这些场具有<span data-concept="squeezed-interferometry">压缩参数$\krsq$</span>，则信号</p>
+<div class="equation" id="eq-9-200">$$\Delta P = \langle x\rangle\delta\kphi \tag{9.200}$$</div>
+<p>只能在噪声范围内进行测量</p>
+<div class="equation" id="eq-9-201">$$\langle\Delta P^2\rangle = \frac{1}{2}e^{-2\krsq}. \tag{9.201}$$</div>
+<figure class="dv" id="drv-squeezed-phase-sensitivity"></figure>
+<p>显然，非零的<span data-concept="squeezed-interferometry">压缩参数</span>使这一测量的灵敏度得到改进。</p>
+<figure class="sim" id="fig-interferometer" data-figure="9.14" data-original="/media/ch09/fig-9-14.png" data-original-caption="测量相移δφ的一种实验构型，利用压缩光来提高精度（见PRL 59 278 (1987)和PRL 59 2153 (1987)。">
+  <div class="sim-head"><span class="eyebrow">Figure 9.14</span><span><span data-ref="sq-in"><span data-concept="squeezed-state">压缩</span>真空态$\hat{a}_i$</span>和<span data-ref="coh-in"><span data-concept="coherent-state">相干态</span>$\hat{b}_i$</span>进入一台马赫-曾德尔干涉仪：第一个<span data-concept="beamsplitter-transformation">分束器</span>把它们混合，一条臂把相位移动$\kphi = \pi/2 + \delta\kphi$，第二个<span data-concept="beamsplitter-transformation">分束器</span>把两条臂重新合并为$\hat{a}_f$和$\hat{b}_f$，两个光电流之差给出$\delta\kphi$。</span></div>
+</figure>
+<p>例如，考虑<a href="#fig-interferometer">图 9.14</a>所示的干涉仪。初态<span data-ref="coh-in">$\hat{b}_i$</span>和<span data-ref="sq-in">$\hat{a}_i$</span>分别是<span data-ref="coh-in"><span data-concept="coherent-state">相干态</span>$|\beta\rangle$</span>和<span data-ref="sq-in"><span data-concept="squeezed-state">压缩真空态</span>$e^{\krsq/2(\hat{a}^2 - (\hat{a}^\dagger)^2)}|0\rangle$</span>。把这些场在<span data-concept="beamsplitter-transformation">分束器</span>上混合之后，在重新合并于第二个<span data-concept="beamsplitter-transformation">分束器</span>之前，一条臂中被引入相移$\kphi = \pi/2 + \delta\kphi$。光电探测器测量第二个<span data-concept="beamsplitter-transformation">分束器</span>的两束输出光中光子数之差，</p>
+<div class="equation" id="eq-9-203">$$\hat{n}_- = \hat{b}_f^\dagger\hat{b}_f - \hat{a}_f^\dagger\hat{a}_f \tag{9.203}$$</div>
+<div class="equation" id="eq-9-204">$$= \cos\kphi\left(\hat{b}_i^\dagger\hat{b}_i - \hat{a}_i^\dagger\hat{a}_i\right) - i\sin\kphi\left(\hat{a}_i^\dagger\hat{b}_i - \hat{b}_i^\dagger\hat{a}_i\right). \tag{9.204}$$</div>
+<p>这个量的平均值和方差给出相位差$\delta\kphi$和测量的精度</p>
+<div class="equation" id="eq-9-205">$$\langle\hat{n}_-\rangle \sim \bar{\beta}\delta\kphi\langle\hat{b}_i^\dagger\hat{b}_i\rangle \tag{9.205}$$<sup class="fn" data-note="c-eq-9-205"></sup></div>
+<div class="equation" id="eq-9-206">$$\langle\Delta\hat{n}_-^2\rangle_{(\delta\kphi \approx 0)} \sim \bar{\beta}^2\langle\Delta P^2\rangle_a \to 0. \tag{9.206}$$</div>
+<p>20世纪80年代末的实验证明了用<span data-concept="squeezed-state">压缩光</span>可以提高干涉测量的灵敏度。然而，这些想法从未找到实际应用，因为（粗略地说）只需增大相干输入场的强度就可以做出类似的改进（见<a href="#sim-phase-shift">图 9.13c</a>）。提高激光功率比产生<span data-concept="squeezed-state">压缩光</span>容易得多，所以产生<span data-concept="squeezed-state">压缩光</span>的最初动机在实践中并未被证明是有用的。不过要注意，高度<span data-concept="squeezed-state">压缩态</span>仍可能找到应用，例如在量子信息领域，或用于引力波探测，在这些场合增加光子数行不通。</p>
+<h3>原子中的压缩</h3>
+<p id="spin-squeezing">我们在光子激发的背景下考虑过的许多概念，将直接应用于原子物理学。特别是，可以考虑<span data-concept="spin-squeezing">原子系综中的自旋压缩</span>，其中总自旋或<span data-concept="spin-squeezing">“集体”</span>自旋被定义为$N$个单个自旋的矢量和</p>
+<div class="equation" id="eq-9-207">$$\kScoll = \sum_i^N S_i. \tag{9.207}$$</div>
+<p>如果我们考虑由$S_i = 1/2$的原子构成的自旋极化样品，则我们得到<span data-concept="spin-squeezing">集体</span>自旋投影$\kScoll_z = N/2$。尽管正交投影的<span data-concept="expectation-value">期望值</span>为零，$\langle\kScoll_x\rangle = \langle\kScoll_y\rangle = 0$，它们的涨落不为零，因为</p>
+<div class="equation" id="eq-9-208">$$\langle\kScoll_x^2\rangle = \langle\kScoll_y^2\rangle = \frac{N}{2}. \tag{9.208}$$<sup class="fn" data-note="c-eq-9-208"></sup></div>
+<p>正交投影中的这一不确定度称为<span data-concept="spin-squeezing">“原子散粒噪声。”</span>然而，与<span data-concept="squeezed-state">压缩光</span>类似，可以利用原子间的有效相互作用，把一个自旋投影压缩到这个散粒噪声极限以下，代价是另一个投影中的涨落增大：</p>
+<div class="equation" id="eq-9-209">$$\langle\kScoll_x^2\rangle &lt; \frac{N}{2} \tag{9.209}$$</div>
+<div class="equation" id="eq-9-210">$$\langle\kScoll_y^2\rangle &gt; \frac{N}{2}. \tag{9.210}$$</div>
+<h3>原子-光子关联</h3>
+<p id="atom-photon">概率性纠缠产生与<span data-concept="post-selection">后选择</span>的想法（我们最初是在<span data-concept="nondegenerate-pdc">参量下转换</span>中遇到它们的）也可以应用于<span data-concept="atom-photon-entanglement">原子-光子纠缠</span>。作为一个具体的例子，考虑$N$原子<span data-concept="raman-transition">拉曼散射</span>的情形，其中</p>
+<div class="equation" id="eq-9-211">$$\kH = \kg\hat{a}^\dagger\sum_i^N S_i^\dagger + \kg^*\hat{a}\sum_i^N S_i \tag{9.211}$$</div>
+<div class="equation" id="eq-9-212">$$= \kg\hat{a}^\dagger\kScoll^\dagger + \kg^*\hat{a}\kScoll. \tag{9.212}$$</div>
+<p>这个<span data-concept="hamiltonian">哈密顿量</span>与<span data-concept="nondegenerate-pdc">非简并参量下转换的有效哈密顿量</span>惊人地相似，并且它导致完全同一类的概率性纠缠态。通过以探测到纠缠光子为条件，人们可以投影掉真空态和光子损失。这一技术有可能实现不同原子系综的纠缠，这与量子信息科学中的许多应用有关。</p>
+</section>

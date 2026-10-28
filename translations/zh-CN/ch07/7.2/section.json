@@ -1,0 +1,366 @@
+{
+ "id": "7.2",
+ "chapter": "7",
+ "title": "二能级系统的绝热性",
+ "short": "二能级绝热性",
+ "lead": "<span data-concept=\"detuning\">失谐</span>和<span data-concept=\"rabi-frequency\">拉比频率</span>随时间变化的<span data-concept=\"two-level-atom\">二能级系统</span>：它的<span data-concept=\"time-dependent-dressed-states\">含时缀饰态</span>和<span data-concept=\"mixing-angle\">混合角</span>，<span data-concept=\"adiabatic-return\">绝热返回</span>和<span data-concept=\"rapid-adiabatic-passage\">快速绝热通道</span>，系统跟随其瞬时基态的条件，以及线性扫过共振的<span data-concept=\"landau-zener\">可精确求解的朗道-齐纳模型</span>。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "本节没有印出任何邀请，MIT 8.422 的习题也没有对应到第 7 章。",
+ "figures": [
+  {
+   "id": "sim-adiabatic",
+   "kind": "sim",
+   "number": "7.1",
+   "originals": [
+    "/media/ch07/fig-7-1.png"
+   ],
+   "original_caption": "绝热通道与绝热返回的比较。含时参数 Δ 和 Ω 给出瞬时本征能量 ϵ±。假设系统跟随瞬时基态，它将处于态 |1⟩ 和 |2⟩ 的混合中，占有概率分别为 P₁ 和 P₂。显然，绝热通道可以导致态转移，而绝热返回使系统留在其初始态。",
+   "draws": [
+    "frequency",
+    "coupling",
+    "energy",
+    "population",
+    "time",
+    "phase"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "td-dressed",
+   "concept": "time-dependent-dressed-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "mixing-angle",
+   "concept": "mixing-angle",
+   "verb": "introduces"
+  },
+  {
+   "span": "return",
+   "concept": "adiabatic-return",
+   "verb": "introduces"
+  },
+  {
+   "span": "rap",
+   "concept": "rapid-adiabatic-passage",
+   "verb": "introduces"
+  },
+  {
+   "span": "adiabaticity-2l",
+   "concept": "two-level-adiabaticity-condition",
+   "verb": "introduces"
+  },
+  {
+   "span": "landau-zener",
+   "concept": "landau-zener",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-7-11",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "opening-p",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "opening-p",
+   "concept": "detuning",
+   "verb": "uses"
+  },
+  {
+   "span": "opening-p",
+   "concept": "rabi-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "opening-p",
+   "concept": "bare-states",
+   "verb": "uses"
+  },
+  {
+   "span": "diagonalize",
+   "concept": "instantaneous-eigenstates",
+   "verb": "uses"
+  },
+  {
+   "span": "td-dressed",
+   "concept": "dressed-states",
+   "verb": "uses"
+  },
+  {
+   "span": "td-dressed",
+   "concept": "dressed-state-energies",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-7-17",
+   "concept": "adiabaticity-condition",
+   "verb": "uses"
+  },
+  {
+   "span": "rap-motivation",
+   "concept": "adiabatic-theorem",
+   "verb": "uses"
+  },
+  {
+   "span": "rap-motivation",
+   "concept": "rabi-oscillations",
+   "verb": "uses"
+  },
+  {
+   "span": "rap-motivation",
+   "concept": "born-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "return",
+   "concept": "superposition",
+   "verb": "uses"
+  },
+  {
+   "span": "passage-p",
+   "concept": "rapid-adiabatic-passage",
+   "verb": "reinforces"
+  },
+  {
+   "span": "rapid",
+   "concept": "rapid-adiabatic-passage",
+   "verb": "reinforces"
+  },
+  {
+   "span": "lz-correction",
+   "concept": "landau-zener",
+   "verb": "reinforces"
+  },
+  {
+   "span": "drv-two-level-adiabaticity",
+   "concept": "nonadiabatic-coupling",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-pulse-area-condition",
+   "concept": "pulse-area",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [
+  {
+   "id": "lvl-1",
+   "label": "裸态 |1⟩",
+   "figures": [
+    "sim-adiabatic"
+   ]
+  },
+  {
+   "id": "lvl-2",
+   "label": "裸态 |2⟩",
+   "figures": [
+    "sim-adiabatic"
+   ]
+  },
+  {
+   "id": "dressed-plus",
+   "label": "瞬时本征态 |+⟩",
+   "figures": [
+    "sim-adiabatic"
+   ]
+  },
+  {
+   "id": "dressed-minus",
+   "label": "瞬时基态 |−⟩",
+   "figures": [
+    "sim-adiabatic"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-fig-9-3-cited",
+   "kind": "correction",
+   "html": "原书引用了图 (9.3)，并且没有闭合括号。所指的图是图 7.1。"
+  },
+  {
+   "id": "c-omega-over-delta",
+   "kind": "correction",
+   "html": "从接近$-\\infty$变到接近$\\infty$的比值是$\\kDelta/\\kOmega$。当$\\kDelta$扫过共振时，$\\kOmega/\\kDelta$从接近0经过$\\pm\\infty$再回到接近0，而$\\tan 2\\ktheta = -2\\kOmega/\\kDelta$使混合角转过$\\pi/2$。"
+  },
+  {
+   "id": "c-eq-7-21",
+   "kind": "correction",
+   "html": "按原书印出的形式，$\\epsilon$具有作用量倒数的量纲。式 (7.19) 与1比较的无量纲比值是$\\epsilon = \\hbar\\dot{\\ktheta}/|\\kepsp - \\kepsm|$。"
+  },
+  {
+   "id": "c-theta-dot",
+   "kind": "correction",
+   "html": "取$\\kDelta = \\kalpha\\kt$和$\\kOmega = \\kOmega_0$，式 (7.16) 给出$\\dot{\\ktheta} = \\kalpha\\kOmega_0/(\\kalpha^2\\kt^2 + 4\\kOmega_0^2)$，它在共振处为$\\kalpha/4\\kOmega_0$，而不是$\\kalpha/2\\kOmega_0$。在分裂为$2\\hbar\\kOmega_0$时，小参数为$\\epsilon \\approx \\kalpha/8\\kOmega_0^2$。"
+  },
+  {
+   "id": "c-eq-7-23",
+   "kind": "correction",
+   "html": "$\\kPLZ - 1$为负。由式 (7.22)，非绝热修正恰好是$1 - \\kPLZ = e^{-2\\pi|\\kOmega_0|^2/|\\kalpha|}$。用$\\epsilon$表示，取原书的$\\epsilon \\approx \\kalpha/4\\kOmega_0^2$时它是$e^{-\\pi/2\\epsilon}$，取$\\epsilon \\approx \\kalpha/8\\kOmega_0^2$时是$e^{-\\pi/4\\epsilon}$。"
+  },
+  {
+   "id": "c-fig-7-1",
+   "kind": "correction",
+   "html": "在原书的“绝热通道”分图中，从1出发的曲线标为$P_2$，上升到1的曲线标为$P_1$。对于图注和正文所描述的从$|1\\rangle$到$|2\\rangle$的转移，下降的曲线是$\\kPone$，上升的曲线是$\\kPtwo$，正如“绝热返回”分图的颜色所示。",
+   "figure": "sim-adiabatic"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "two-level-adiabaticity",
+   "what": "二能级系统的绝热条件",
+   "source": "现代原子与光学物理 II，7.2 二能级系统的绝热性，7.2.2 二能级系统的绝热条件",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|-\\rangle = \\sin\\ktheta(\\kt)|1\\rangle - \\cos\\ktheta(\\kt)|2\\rangle",
+       "src": "(7.14)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|+\\rangle} = \\mk{R}{\\cos\\ktheta(\\kt)|1\\rangle + \\sin\\ktheta(\\kt)|2\\rangle}",
+      "src": "(7.13)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{|\\dot{+}\\rangle} = \\mk{R}{\\dot{\\ktheta}(\\kt)\\left(-\\sin\\ktheta(\\kt)|1\\rangle + \\cos\\ktheta(\\kt)|2\\rangle\\right)}",
+       "uses": [],
+       "cap": "对时间求导：只有混合角改变。"
+      },
+      {
+       "tex": "\\mk{L}{|\\dot{+}\\rangle} = \\mk{R}{-\\dot{\\ktheta}(\\kt)|-\\rangle}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\langle\\dot{+}|-\\rangle} = \\mk{R}{-\\dot{\\ktheta}(\\kt)}",
+       "uses": [],
+       "cap": "$\\langle -|-\\rangle = 1$，且$\\dot{\\theta}$为实数。"
+      }
+     ],
+     "num": "(7.18)",
+     "note": "原书印出$\\langle\\dot{+}|-\\rangle = \\dot{\\ktheta}(\\kt)$；对 (7.13) 求导并投影到 (7.14) 上，得到$-\\dot{\\ktheta}(\\kt)$。进入 (7.19) 的只有其大小。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\frac{\\mk{n}{\\hbar|\\langle\\epsilon_l|\\dot{\\epsilon}_k\\rangle|}}{\\mk{d}{|\\keps_k - \\keps_l|}} \\ll \\mk{o}{1}",
+      "src": "(7.10)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\frac{\\mk{n}{\\hbar|\\langle -|\\dot{+}\\rangle|}}{\\mk{d}{|\\kepsp(\\kt) - \\kepsm(\\kt)|}} \\ll \\mk{o}{1}",
+       "uses": [],
+       "cap": "对这两个缀饰态，$k = +$，$l = -$。"
+      },
+      {
+       "tex": "\\frac{\\mk{n}{\\hbar|-\\dot{\\ktheta}(\\kt)|}}{\\mk{d}{|\\kepsp(\\kt) - \\kepsm(\\kt)|}} \\ll \\mk{o}{1}",
+       "uses": [
+        0
+       ],
+       "cap": "$\\langle -|\\dot{+}\\rangle$是$\\langle\\dot{+}|-\\rangle$的复共轭，后者为实数。"
+      },
+      {
+       "tex": "\\mk{n}{\\hbar\\dot{\\ktheta}(\\kt)} \\ll \\mk{d}{|\\kepsp(\\kt) - \\kepsm(\\kt)|}",
+       "uses": [],
+       "cap": "两边同乘以分裂；在扫描中混合角向一个方向转动，因此$|\\dot{\\theta}| = \\dot{\\theta}$。"
+      }
+     ],
+     "num": "(7.19)"
+    }
+   ]
+  },
+  {
+   "id": "pulse-area-condition",
+   "what": "以脉冲面积表示的绝热条件",
+   "source": "现代原子与光学物理 II，7.2 二能级系统的绝热性，7.2.2 二能级系统的绝热条件",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "能量差在$\\kDelta$扫过共振时最小：$\\kepsp(\\kt) - \\kepsm(\\kt) \\geq 2\\hbar\\kOmega(\\kt)$。",
+       "src": "7.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{n}{\\hbar\\dot{\\ktheta}(\\kt)} \\ll \\mk{d}{|\\kepsp(\\kt) - \\kepsm(\\kt)|}",
+      "src": "(7.19)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{n}{\\hbar\\dot{\\ktheta}(\\kt)} \\ll \\mk{d}{2\\hbar\\kOmega(\\kt)}",
+       "uses": [
+        0
+       ],
+       "cap": "与最小分裂相比较，该条件在每一时刻都成立。"
+      },
+      {
+       "tex": "\\mk{n}{\\dot{\\ktheta}(\\kt)} \\ll \\mk{d}{2\\kOmega(\\kt)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{n}{\\int_{-\\infty}^{\\infty} d\\kt\\,\\dot{\\ktheta}(\\kt)} \\ll \\mk{d}{\\int_{-\\infty}^{\\infty} d\\kt\\, 2\\kOmega(\\kt)} = \\mk{A}{\\kAarea}",
+       "uses": [],
+       "cap": "对整个脉冲积分；右边是脉冲面积$A$。"
+      }
+     ],
+     "num": "(7.20)"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,528 @@
+{
+ "id": "10.4",
+ "chapter": "10",
+ "title": "离子阱量子计算",
+ "short": "离子阱量子计算",
+ "lead": "陷俘离子如何成为量子计算机：同一个阱中的两个离子通过库仑斥力共享它们的运动，它分为<span data-concept=\"ion-normal-modes\">质心模式和伸缩模式</span>；内部能级充当<span data-concept=\"qubit\">量子比特</span>，共享的运动承载双量子比特<span data-concept=\"pi-phase-gate\">相位门</span>所需的相互作用。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-ion-string",
+   "kind": "sim",
+   "number": "10.7",
+   "draws": [
+    "frequency",
+    "length",
+    "time"
+   ],
+   "conventions": [
+    "Ca"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ],
+   "withheld": "图 10.7 是一幅来源不明的栅格图像，本书不得复制。"
+  },
+  {
+   "id": "fig-gate-levels",
+   "kind": "figure",
+   "number": "10.8",
+   "originals": [
+    "/media/ch10/fig-10-8.png"
+   ],
+   "original_caption": "用于实现相位门的四个能级。偶极容许跃迁用来冷却离子，而辅助态用来实现量子比特态的相移。",
+   "draws": [
+    "coupling",
+    "rate",
+    "state"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-phase-gate",
+   "kind": "sim",
+   "number": "10.9",
+   "originals": [
+    "/media/ch10/fig-10-9.png"
+   ],
+   "original_caption": "条件相位门分三步实现。第一步把量子比特 m 的态写到离子的集体运动上。第二步通过对辅助能级施加 2π 脉冲，有条件地改变量子比特 n 的相位，仅当量子比特 m 处于激发态且量子比特 n 处于基态时，这才改变符号。第三步把集体运动写回量子比特 m，由于两个连续的 π 脉冲而引起整体的符号改变。末态保持不变，除非两个量子比特都处于激发态，此时它乘以整体的负号。",
+   "draws": [
+    "coupling"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "ion-string",
+   "concept": "ion-string",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-10-31",
+   "concept": "two-ion-motion",
+   "verb": "introduces"
+  },
+  {
+   "span": "normal-modes",
+   "concept": "ion-normal-modes",
+   "verb": "introduces"
+  },
+  {
+   "span": "qubit",
+   "concept": "qubit",
+   "verb": "introduces"
+  },
+  {
+   "span": "universal",
+   "concept": "universal-gate-set",
+   "verb": "introduces"
+  },
+  {
+   "span": "phase-gate",
+   "concept": "pi-phase-gate",
+   "verb": "introduces"
+  },
+  {
+   "span": "requirements",
+   "concept": "phase-gate-requirements",
+   "verb": "introduces"
+  },
+  {
+   "span": "procedure",
+   "concept": "ion-trap-phase-gate",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "motional-state-engineering",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-10-31",
+   "concept": "trapped-ion-model",
+   "verb": "uses"
+  },
+  {
+   "span": "normal-modes",
+   "concept": "trap-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "qubit",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "qubit",
+   "concept": "superposition",
+   "verb": "uses"
+  },
+  {
+   "span": "architecture",
+   "concept": "carrier-transition",
+   "verb": "uses"
+  },
+  {
+   "span": "requirements",
+   "concept": "sideband-cooling",
+   "verb": "uses"
+  },
+  {
+   "span": "auxiliary",
+   "concept": "light-polarization",
+   "verb": "uses"
+  },
+  {
+   "span": "procedure",
+   "concept": "internal-motional-swap",
+   "verb": "uses"
+  },
+  {
+   "span": "sim-phase-gate",
+   "concept": "sideband-couplings",
+   "verb": "uses"
+  },
+  {
+   "span": "fig-gate-levels",
+   "concept": "selection-rules",
+   "verb": "uses"
+  },
+  {
+   "span": "fig-gate-levels",
+   "concept": "quantum-jump",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-two-ion-hamiltonian",
+   "concept": "two-ion-laser-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-two-ion-hamiltonian",
+   "concept": "lamb-dicke-hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-two-ion-hamiltonian",
+   "concept": "lamb-dicke-parameter",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [
+  {
+   "id": "mode-cm",
+   "label": "质心模式",
+   "figures": [
+    "sim-ion-string"
+   ]
+  },
+  {
+   "id": "mode-s",
+   "label": "伸缩模式",
+   "figures": [
+    "sim-ion-string"
+   ]
+  },
+  {
+   "id": "lvl-g",
+   "label": "基态 |g⟩",
+   "figures": [
+    "fig-gate-levels",
+    "sim-phase-gate"
+   ]
+  },
+  {
+   "id": "lvl-e",
+   "label": "激发态 |e⟩",
+   "figures": [
+    "fig-gate-levels",
+    "sim-phase-gate"
+   ]
+  },
+  {
+   "id": "lvl-aux",
+   "label": "辅助能级",
+   "figures": [
+    "fig-gate-levels",
+    "sim-phase-gate"
+   ]
+  },
+  {
+   "id": "ion-m",
+   "label": "第 m 个离子",
+   "figures": [
+    "sim-phase-gate"
+   ]
+  },
+  {
+   "id": "ion-n",
+   "label": "第 n 个离子",
+   "figures": [
+    "sim-phase-gate"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-fig-10-8",
+   "kind": "correction",
+   "figure": "fig-gate-levels",
+   "html": "书中的图 10.8 把量子比特的激发态标为$|r_0\\rangle$，把辅助能级标为$|r_1\\rangle$。正文称前者为$|e\\rangle = |1\\rangle$，称后者为辅助离子能级。"
+  },
+  {
+   "id": "c-fig-10-9",
+   "kind": "correction",
+   "figure": "sim-phase-gate",
+   "html": "书中的图 10.9 用$|r_0, n\\rangle$表示正文称为$|e\\rangle|n\\rangle$的态，即带有$n$个声子的激发态离子，用$|r_1, n\\rangle$表示带有$n$个声子的辅助能级。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "two-ion-expansion",
+   "what": "平衡位置附近两个离子的运动",
+   "source": "现代原子与光学物理 II，10.4 离子阱量子计算，10.4.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "离子位于阱轴上$\\krdist_i = \\langle\\krdist_i\\rangle + \\kxdisp_i$处，其中$\\langle\\krdist_1\\rangle = -\\kasep/2$和$\\langle\\krdist_2\\rangle = \\kasep/2$。",
+       "src": "10.4.1"
+      },
+      {
+       "text": "位移$\\kxdisp_i$很小，所以略去它们二阶以上的项。",
+       "src": "10.4.1"
+      },
+      {
+       "text": "在平衡位置，阱对每个离子的拉力$\\km\\knu^2\\kasep/2$与库仑斥力$e^2/4\\pi\\epsilon_0\\kasep^2$相平衡。",
+       "src": "10.4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH_{motion}} = \\mk{p}{\\sum_i\\frac{\\kpcm_i^2}{2\\km}} + \\mk{t}{\\sum_i\\frac{\\km}{2}\\knu^2\\krdist_i^2} + \\mk{c}{\\frac{e^2}{4\\pi\\epsilon_0|\\krdist_1 - \\krdist_2|}}",
+      "src": "(10.31)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kH_{motion}} = \\mk{p}{\\sum_i\\frac{\\kpcm_i^2}{2\\km}} + \\mk{t}{\\frac{\\km\\knu^2}{2}\\left((\\kxdisp_1 - \\kasep/2)^2 + (\\kxdisp_2 + \\kasep/2)^2\\right)} + \\mk{c}{\\frac{e^2}{4\\pi\\epsilon_0(\\kasep + \\kxdisp_2 - \\kxdisp_1)}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{H}{\\kH_{motion}} \\approx \\mk{p}{\\sum_i\\frac{\\kpcm_i^2}{2\\km}} + \\mk{t}{\\frac{\\km\\knu^2}{2}\\left((\\kxdisp_1 - \\kasep/2)^2 + (\\kxdisp_2 + \\kasep/2)^2\\right)} + \\mk{c}{\\frac{e^2}{4\\pi\\epsilon_0\\kasep}\\left(1 - \\frac{\\kxdisp_2 - \\kxdisp_1}{\\kasep} + \\frac{(\\kxdisp_2 - \\kxdisp_1)^2}{\\kasep^2}\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\frac{1}{a + u} \\approx \\frac{1}{a}\\left(1 - \\frac{u}{a} + \\frac{u^2}{a^2}\\right)$，当$u = x_2 - x_1$很小时。"
+      },
+      {
+       "tex": "\\mk{H}{\\kH_{motion}} \\approx \\mk{p}{\\sum_i\\frac{\\kpcm_i^2}{2\\km}} + \\mk{t}{\\frac{\\km\\knu^2}{2}(\\kxdisp_1^2 + \\kxdisp_2^2)} + \\mk{l}{\\left(\\frac{\\km\\knu^2\\kasep}{2} - \\frac{e^2}{4\\pi\\epsilon_0\\kasep^2}\\right)(\\kxdisp_2 - \\kxdisp_1)} + \\mk{c}{\\frac{e^2}{4\\pi\\epsilon_0\\kasep^3}(\\kxdisp_2 - \\kxdisp_1)^2}",
+       "uses": [],
+       "cap": "展开并略去常数项，它们不影响运动。",
+       "map": {
+        "t": [
+         "t",
+         "l"
+        ],
+        "c": [
+         "l",
+         "c"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{H}{\\kH_{motion}} = \\mk{p}{\\sum_i\\frac{\\kpcm_i^2}{2\\km}} + \\mk{t}{\\frac{\\km\\knu^2}{2}\\left(\\kxdisp_1^2 + \\kxdisp_2^2 + (\\kxdisp_2 - \\kxdisp_1)^2\\right)}",
+       "uses": [
+        2
+       ],
+       "cap": "平衡条件$m\\nu^2a/2 = e^2/4\\pi\\epsilon_0a^2$消去线性项，并把$e^2/4\\pi\\epsilon_0a^3$变成$m\\nu^2/2$。",
+       "map": {
+        "l": "t",
+        "c": "t"
+       }
+      }
+     ],
+     "num": "(10.32)"
+    }
+   ]
+  },
+  {
+   "id": "two-ion-normal-modes",
+   "what": "两个陷俘离子的简正模式",
+   "source": "现代原子与光学物理 II，10.4 离子阱量子计算，10.4.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kXcm = \\frac{1}{\\sqrt{2}}(\\kxdisp_1 + \\kxdisp_2),\\quad \\kxdisp = \\frac{1}{\\sqrt{2}}(\\kxdisp_2 - \\kxdisp_1)",
+       "src": "(10.33), (10.34)"
+      },
+      {
+       "tex": "\\kPcm = \\frac{1}{\\sqrt{2}}(\\kpcm_1 + \\kpcm_2),\\quad \\kpcm = \\frac{1}{\\sqrt{2}}(\\kpcm_2 - \\kpcm_1)",
+       "src": "(10.35), (10.36)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH_{motion}} = \\mk{p}{\\sum_i\\frac{\\kpcm_i^2}{2\\km}} + \\mk{t}{\\frac{\\km\\knu^2}{2}\\left(\\kxdisp_1^2 + \\kxdisp_2^2 + (\\kxdisp_2 - \\kxdisp_1)^2\\right)}",
+      "src": "(10.32)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kH_{motion}} = \\mk{p}{\\sum_i\\frac{\\kpcm_i^2}{2\\km}} + \\mk{t}{\\frac{\\km\\knu^2}{2}\\left(\\kXcm^2 + \\kxdisp^2 + 2\\kxdisp^2\\right)}",
+       "uses": [
+        0
+       ],
+       "cap": "$x_1^2 + x_2^2 = X^2 + x^2$和$x_2 - x_1 = \\sqrt{2}\\,x$。"
+      },
+      {
+       "tex": "\\mk{H}{\\kH_{motion}} = \\mk{p}{\\sum_i\\frac{\\kpcm_i^2}{2\\km}} + \\mk{t}{\\frac{\\km\\knu^2}{2}\\left(\\kXcm^2 + 3\\kxdisp^2\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{H}{\\kH_{motion}} = \\mk{p}{\\frac{\\kPcm^2 + \\kpcm^2}{2\\km}} + \\mk{t}{\\frac{\\km\\knu^2}{2}\\left(\\kXcm^2 + 3\\kxdisp^2\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "同样，$p_1^2 + p_2^2 = P^2 + p^2$。"
+      },
+      {
+       "tex": "\\mk{H}{\\kH_{motion}} = \\mk{X}{\\left(\\frac{\\kPcm^2}{2\\km} + \\frac{\\km}{2}\\knu^2 \\kXcm^2\\right)} + \\mk{x}{\\left(\\frac{\\kpcm^2}{2\\km} + \\frac{\\km}{2}3\\knu^2 \\kxdisp^2\\right)}",
+       "uses": [],
+       "map": {
+        "p": [
+         "X",
+         "x"
+        ],
+        "t": [
+         "X",
+         "x"
+        ]
+       }
+      }
+     ],
+     "num": "(10.37)"
+    }
+   ]
+  },
+  {
+   "id": "two-ion-hamiltonian",
+   "what": "激光中两个陷俘离子的哈密顿量",
+   "source": "现代原子与光学物理 II，10.4 离子阱量子计算，10.4.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\hat{x} = \\sqrt{\\frac{\\hbar}{2\\km\\knu}}\\left(\\hat{a} + \\hat{a}^\\dagger\\right)",
+       "src": "(10.2)"
+      },
+      {
+       "tex": "{\\kH_{motion}} = {\\left(\\frac{\\kPcm^2}{2\\km} + \\frac{\\km}{2}\\knu^2 \\kXcm^2\\right)} + {\\left(\\frac{\\kpcm^2}{2\\km} + \\frac{\\km}{2}3\\knu^2 \\kxdisp^2\\right)}",
+       "src": "(10.37)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kkmag\\kxdisp_{1,2}} = \\mk{R}{\\frac{\\kkmag}{\\sqrt{2}}(\\kXcm \\mp \\kxdisp)}",
+      "src": "(10.33), (10.34)",
+      "uses": [],
+      "why": "把 (10.33) 与 (10.34) 相加和相减，得到$x_1$和$x_2$。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kkmag\\kxdisp_{1,2}} = \\mk{R}{\\frac{\\kkmag}{\\sqrt{2}}\\left(\\sqrt{\\frac{\\hbar}{2\\km\\knu}}(\\hat{a}_{cm}+\\hat{a}_{cm}^\\dagger) \\mp \\sqrt{\\frac{\\hbar}{2\\km\\knus}}(\\hat{a}_{s}+\\hat{a}_{s}^\\dagger)\\right)}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "(10.37) 的每个括号都是质量为$m$的振子，质心模式在$\\nu$，伸缩模式在$\\sqrt{3}\\nu$，所以 (10.2) 对每一个在各自的频率下成立。"
+      },
+      {
+       "tex": "\\mk{L}{\\kkmag\\kxdisp_{1,2}} = \\mk{R}{\\eta_{cm}(\\hat{a}_{cm}+\\hat{a}_{cm}^\\dagger) \\mp \\eta_s(\\hat{a}_{s}+\\hat{a}_{s}^\\dagger)}",
+       "uses": [],
+       "cap": "记$\\eta_{cm} = k\\sqrt{\\hbar/4m\\nu}$和$\\eta_s = k\\sqrt{\\hbar/4m\\sqrt{3}\\nu}$，这两个模式的兰姆-迪克参数。"
+      }
+     ],
+     "note": "书中在 (10.39) 里使用了$\\eta_{cm}$和$\\eta_s$，但没有定义它们。用 (10.12) 的单离子参数$\\ketaLD = \\kkmag\\kazero$表示，$\\eta_{cm} = \\ketaLD/\\sqrt{2}$，$\\eta_s = \\ketaLD/(\\sqrt{2}\\cdot 3^{1/4}) \\approx 0.54\\,\\ketaLD$。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "{\\kH_{motion}} = {\\left(\\frac{\\kPcm^2}{2\\km} + \\frac{\\km}{2}\\knu^2 \\kXcm^2\\right)} + {\\left(\\frac{\\kpcm^2}{2\\km} + \\frac{\\km}{2}3\\knu^2 \\kxdisp^2\\right)}",
+       "src": "(10.37)"
+      },
+      {
+       "tex": "\\kH_\\mathrm{motion} = \\hbar\\knu\\hat{a}^\\dagger\\hat{a}",
+       "src": "(10.4)"
+      },
+      {
+       "tex": "\\kH_{int} = -\\sum_i\\left(\\hbar\\kDelta_i|e\\rangle_{ii}\\langle e| + \\hbar\\kOmega_i\\left(|e\\rangle_{ii}\\langle g|e^{i\\kkmag \\kxdisp_i} + h.c.\\right)\\right)",
+       "src": "(10.38)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH} = \\mk{M}{\\kH_{motion}} + \\mk{I}{\\kH_{int}}",
+      "src": "10.4.1",
+      "uses": [],
+      "why": "完整的哈密顿量是两个离子的运动及其与光的耦合。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kH} = \\mk{M}{\\hbar\\knu\\hat{a}_{cm}^\\dagger\\hat{a}_{cm} + \\hbar\\knus\\hat{a}_s^\\dagger\\hat{a}_s} + \\mk{I}{\\kH_{int}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "(10.37) 的每个模式都是一个振子，如 (10.4) 中那样为$\\hbar\\nu\\hat{a}_{cm}^\\dagger\\hat{a}_{cm}$和$\\hbar\\sqrt{3}\\nu\\hat{a}_s^\\dagger\\hat{a}_s$。"
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{H}{\\kH} = {} & \\mk{M}{\\hbar\\knu\\hat{a}_{cm}^\\dagger\\hat{a}_{cm} + \\hbar\\knus\\hat{a}_s^\\dagger\\hat{a}_s} \\mk{D}{- \\sum_i\\hbar\\kDelta_i|e\\rangle_{ii}\\langle e|} \\\\ & \\mk{one}{-\\hbar\\kOmega_1\\left(|e\\rangle_{11}\\langle g|e^{i\\kkmag\\kxdisp_1} + h.c.\\right)} \\\\ & \\mk{two}{-\\hbar\\kOmega_2\\left(|e\\rangle_{22}\\langle g|e^{i\\kkmag\\kxdisp_2} + h.c.\\right)}\\end{aligned}",
+       "uses": [
+        3
+       ],
+       "map": {
+        "I": [
+         "D",
+         "one",
+         "two"
+        ]
+       }
+      },
+      {
+       "tex": "\\begin{aligned}\\mk{H}{\\kH} = {} & \\mk{M}{\\hbar\\knu\\hat{a}_{cm}^\\dagger\\hat{a}_{cm} + \\hbar\\knus\\hat{a}_s^\\dagger\\hat{a}_s} \\mk{D}{- \\sum_i\\hbar\\kDelta_i|e\\rangle_{ii}\\langle e|} \\\\ & \\mk{one}{-\\hbar\\kOmega_1\\left(|e\\rangle_{11}\\langle g|e^{i\\eta_{cm}(\\hat{a}_{cm}+\\hat{a}_{cm}^\\dagger)}e^{-i\\eta_s(\\hat{a}_{s}+\\hat{a}_{s}^\\dagger)} + h.c.\\right)} \\\\ & \\mk{two}{-\\hbar\\kOmega_2\\left(|e\\rangle_{22}\\langle g|e^{i\\eta_{cm}(\\hat{a}_{cm}+\\hat{a}_{cm}^\\dagger)}e^{i\\eta_s(\\hat{a}_{s}+\\hat{a}_{s}^\\dagger)} + h.c.\\right)}.\\end{aligned}",
+       "uses": [
+        0
+       ],
+       "cap": "两个模式的算符对易，所以$e^{A \\mp B} = e^Ae^{\\mp B}$。"
+      }
+     ],
+     "num": "(10.39)"
+    }
+   ]
+  }
+ ]
+}

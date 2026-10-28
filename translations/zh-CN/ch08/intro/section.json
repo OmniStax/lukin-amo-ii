@@ -1,0 +1,30 @@
+{
+ "id": "intro",
+ "chapter": "8",
+ "title": "引言",
+ "short": "引言",
+ "lead": "",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "“semi-/classical”在行末被断开，现连写为“semiclassical”，即第 8.2 节标题的拼写。",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "figures": []
+}

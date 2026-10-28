@@ -1,0 +1,57 @@
+<section id="formalism">
+<p>两个小组最终趋同的描述，始于<span data-concept="lindblad-master-equation">主方程的最一般形式</span>，</p>
+<div class="equation" id="eq-6-1">$$\frac{d\krhoS}{d\kt} = \frac{1}{i\hbar}[\kH_S, \krhoS] + \mathcal{L}(\krhoS), \tag{6.1}$$</div>
+<p>其中<span data-concept="lindblad-master-equation">刘维尔算符</span>可以表示为</p>
+<div class="equation" id="eq-6-2">$$\mathcal{L}(\krhoS) = -\sum_k \frac{\kgammak}{2}\left(\kchatk^\dagger\kchatk\krhoS + \krhoS\kchatk^\dagger\kchatk - 2\kchatk\krhoS\kchatk^\dagger\right). \tag{6.2}$$</div>
+<p>可以证明，<a href="#eq-6-1">式 (6.1)</a>是物理学所允许的<span data-concept="lindblad-master-equation">主方程的最一般形式</span>，并且它还有一个额外的优点，即记法紧凑。由于它是最一般的形式，它必定包含我们通过假设某种<span data-concept="open-system">环境</span>而推导出的<span data-concept="master-equation">主方程</span>。为了看出这一点，把（原则上任意的）算符$\kchatk$取为</p>
+<div class="equation" id="eq-6-3">$$\hat{c}_{2k} = \sqrt{\knbar+1}\,\hat{S}_k \tag{6.3}$$</div>
+<div class="equation" id="eq-6-4">$$\hat{c}_{2k+1} = \sqrt{\knbar}\,\hat{S}_k^\dagger, \tag{6.4}$$</div>
+<p>此时衰变项和吸收项都包含在<a href="#eq-6-1">式 (6.1)</a>中。</p>
+<p>将<a href="#eq-6-1">式 (6.1)</a>与$\mathcal{L}(\krhoS)$的定义结合起来，并展开$\krhoS = \sum_\alpha p_\alpha|\kpsi_\alpha\rangle\langle\kpsi_\alpha|$，我们可以把<span data-concept="lindblad-master-equation">主方程</span>改写成一种富有启发性的形式。</p>
+<figure class="dv" id="drv-master-equation-pure-states"></figure>
+<p>前两项可以用<span data-concept="effective-hamiltonian" id="effective-hamiltonian">有效哈密顿量</span>改写，</p>
+<div class="equation" id="eq-6-7">$$\kHeff = \kH_S - i\hbar\sum_k \frac{\kgammak}{2}\kchatk^\dagger\kchatk. \tag{6.7}$$</div>
+<figure class="dv" id="drv-effective-hamiltonian-master-equation"></figure>
+<p>前两项的这种形式类似于按$\kHeff$演化的<span data-concept="pure-and-mixed-states">纯态</span>的<span data-concept="master-equation">主方程</span>；最后一项我们将解释为一个“<span data-concept="quantum-jump" id="quantum-jump">量子跳跃</span>”算符，它以某一概率把$|\kpsi_\alpha\rangle$变为另一个态<span id="jump-state">$|\phi_{k,\alpha}\rangle = \kchatk|\kpsi_\alpha\rangle$</span>。</p>
+<p>对应于<a href="#drv-effective-hamiltonian-master-equation">式 (6.8)</a>前两项的<span data-concept="schrodinger-equation">薛定谔方程</span>是</p>
+<div class="equation" id="eq-6-9">$$i\hbar\frac{d}{d\kt}|\kpsi_\alpha\rangle = \kHeff|\kpsi_\alpha\rangle, \tag{6.9}$$</div>
+<p>并且由于我们感兴趣的是用<a href="#drv-effective-hamiltonian-master-equation">式 (6.8)</a>来描述随机演化，我们将把它写成离散时间，</p>
+<div class="equation" id="eq-6-10">$$|\kpsi_\alpha(\kt+\delta\kt)\rangle = \left(1 + \frac{\kHeff\delta\kt}{i\hbar}\right)|\kpsi_\alpha(\kt)\rangle. \tag{6.10}$$</div>
+<p>注意，$|\tilde{\kpsi}_\alpha(\kt+\delta\kt)\rangle$<sup class="fn" data-note="c-tilde"></sup>没有归一化，因为<span data-concept="effective-hamiltonian">有效哈密顿量</span>不是厄米的。</p>
+<figure class="dv" id="drv-no-jump-norm"></figure>
+<p>为了简化记号，我们定义</p>
+<div class="equation" id="eq-6-14">$$\kdeltapk = \delta\kt\,\kgammak\langle\kpsi_\alpha|\kchatk^\dagger\kchatk|\kpsi_\alpha\rangle \tag{6.14}$$</div>
+<div class="equation" id="eq-6-15">$$\kdeltap = \delta\kt\sum_k \kgammak\langle\kpsi_\alpha|\kchatk^\dagger\kchatk|\kpsi_\alpha\rangle. \tag{6.15}$$</div>
+<figure class="dv" id="drv-no-jump-probability"></figure>
+<p>现在我们知道了$\kt+\delta\kt$时刻态的正确归一化：</p>
+<div class="equation" id="eq-6-17">$$|\tilde{\kpsi}_\alpha(\kt+\delta\kt)\rangle = \frac{1 + \kHeff\delta\kt/i\hbar}{\sqrt{1-\kdeltap}}|\kpsi_\alpha(\kt)\rangle. \tag{6.17}$$</div>
+<p>这个归一化的态对应于仅在<span data-concept="lindblad-master-equation">主方程</span>前两项的影响下演化的系统的态，即<span data-concept="no-jump-evolution">从未跳跃</span>到某个$|\phi_{k,\alpha}\rangle$中的系统。</p>
+<p>“<span data-concept="quantum-jump">量子跳跃</span>”态$|\phi_{k,\alpha}\rangle$也没有归一化，因为</p>
+<div class="equation" id="eq-6-18">$$\langle\phi_{k,\alpha}|\phi_{k,\alpha}\rangle = \langle\kpsi_\alpha|\kchatk^\dagger\kchatk|\kpsi_\alpha\rangle = \frac{\kdeltapk}{\kgammak\delta\kt}. \tag{6.18}$$</div>
+<p>同样，我们将定义一个归一化的态</p>
+<div class="equation" id="eq-6-19">$$|\tilde{\phi}_{k,\alpha}\rangle = \sqrt{\frac{\kgammak\delta\kt}{\kdeltapk}}|\phi_{k,\alpha}\rangle \tag{6.19}$$</div>
+<p>以明确地追踪概率守恒。</p>
+<p>与<span data-concept="schrodinger-equation">薛定谔方程</span>一样，<span data-concept="lindblad-master-equation">主方程</span>也可以对离散时间$\delta\kt$写出。</p>
+<figure class="dv" id="drv-jump-decomposition"></figure>
+<p>把<span data-concept="master-equation">主方程</span>改写成这种形式，我们就可以利用<span data-concept="stochastic-master-equation">概率解释</span>来获得对所得系统动力学的直观认识——并发展数值方法。<a href="#drv-jump-decomposition">式 (6.21)</a>有两项，它们导致经过时间$\delta\kt$之后的两种可能结果：</p>
+<p>(1) 以概率$(1-\kdeltap)$，系统按$\kHeff$演化，并保持在态$|\tilde{\kpsi}_\alpha\rangle$。</p>
+<p>(2) 以概率$\kdeltap$，系统<span data-concept="quantum-jump">跳跃</span>到另一个态；具体地说，它<span data-concept="quantum-jump">跳跃</span>到态$|\tilde{\phi}_{k,\alpha}\rangle$，概率为$\kdeltapk$。</p>
+<p><span data-concept="monte-carlo-wavefunction" id="statistical-picture">态矢量演化的这种统计图像</span>提供了一个清晰的模拟流程，它只需要计算<span data-concept="state-vector">态矢量</span>（而不是<span data-concept="density-matrix">密度矩阵</span>）的各个元素。一个<span data-concept="monte-carlo-procedure">示例算法</span>概括在<a href="#table-6-1">表 (6.1)</a>中。</p>
+<div class="book-table" id="table-6-1">
+  <div class="tcap"><span class="eyebrow">Table 6.1</span><span><span data-concept="monte-carlo-procedure">蒙特卡罗流程</span></span></div>
+  <table>
+    <tbody>
+      <tr><td>(1) 选取初态$|\kpsi_\alpha\rangle$</td></tr>
+      <tr><td>(2) 选取一个随机数r</td></tr>
+      <tr><td>(3) 对于适当的时间间隔$\delta\kt$，计算$\kdeltap$。若$\kdeltap &lt; r$，将$|\kpsi_\alpha\rangle$替换为$(1 - i\delta\kt\kHeff/\hbar)|\kpsi_\alpha\rangle/\sqrt{1-\kdeltap}$。若$\sum_{k=1}^{K}\kdeltapk \leq r &lt; \sum_{k=1}^{K+1}\kdeltapk$，将$|\kpsi_\alpha\rangle$替换为$|\tilde{\phi}_{k,\alpha}\rangle$<sup class="fn" data-note="c-table-step-3"></sup></td></tr>
+      <tr><td>(4) 重复步骤 (2) 和 (3)，持续所需的时间长度。</td></tr>
+      <tr><td>(5) 将步骤 (1-4) 重复N次，以产生结果的分布。</td></tr>
+      <tr><td>(6) 如有必要，对所有可能的初态$|\kpsi_\alpha\rangle$重复步骤 (1-5)。</td></tr>
+      <tr><td>(7) <span data-concept="density-matrix">密度矩阵</span>演化：$\krhoS(\kt) = \sum_\alpha p_\alpha|\kpsi_\alpha(\kt)\rangle\langle\kpsi_\alpha(\kt)|/N$。<sup class="fn" data-note="c-table-step-7"></sup></td></tr>
+    </tbody>
+  </table>
+</div>
+<figure class="sim" id="sim-monte-carlo">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>表中的流程运行于一个经由一个通道$\hat{c} = |1\rangle\langle 2|$以速率$\kgamma$从$|2\rangle$衰变到$|1\rangle$、并且可以在拉比频率$\kOmega$下共振驱动的二能级原子上。每条轨迹都从同一个态出发，在<span data-concept="effective-hamiltonian">有效哈密顿量</span>下演化，直到某个随机数使它<span data-concept="quantum-jump">跳跃</span>到$|1\rangle$。淡色曲线是单条轨迹，实线曲线是$\kptwo$对全部$N$条轨迹的平均，虚线曲线是<span data-concept="master-equation">主方程</span>。增大$N$，平均值就稳定到<span data-concept="master-equation">主方程</span>上；驱动原子，每条轨迹持续振荡，而它们的平均值被阻尼。时间以$1/\kgamma$为单位，$|\kOmega|$以$\kgamma$为单位。</span></div>
+</figure>
+</section>

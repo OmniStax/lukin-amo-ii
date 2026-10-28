@@ -1,0 +1,158 @@
+<section id="opening">
+<p>原子物理学中，<span data-concept="trapping-and-cooling" id="trapping-cooling">陷俘与冷却之间有着密切的联系</span>。要陷俘原子，原子必须足够冷；一旦它们被陷俘，就有可能把它们冷却得更低，因为阱切断了它们与外界的热接触。因此，我们将从讨论原子陷俘背后的一些基本考虑开始。</p>
+</section>
+
+<section id="atom-surface">
+<h2>11.3.1 原子-表面相互作用</h2>
+<p>实验利用磁阱、电阱或重力阱使原子与其环境隔离。特别是，阱使原子不会与固体表面或液体表面接触。原子损失是与原子-表面碰撞相关的首要问题，因为原子倾向于黏附在固体上。然而，这种倾向会因原子的类型和所考虑的表面的类型而异。</p>
+<p>原子在表面上方的有效势通常支持许多能够陷俘原子的束缚态。此外，固体和液体有大量的振动模式和转动模式，所以一旦被陷俘在表面附近，原子会很快弛豫到该势的基态。在$&gt;$ 1 mK的高温下，<span data-concept="surface-sticking" id="sticking">原子黏附的概率基本上等于 1</span>。不同原子-固体对的典型<span data-concept="surface-sticking">结合能</span>列于<a href="#table-11-1">表 11.1</a>。</p>
+<div class="book-table" id="table-11-1">
+  <div class="tcap"><span class="eyebrow">Table 11.1</span><span>典型的表面<span data-concept="surface-sticking">结合能</span></span></div>
+  <table>
+    <tbody>
+      <tr><td>He-NaCl</td><td class="num">$\sim 60K$</td></tr>
+      <tr><td>Ne-LiF</td><td class="num">$\sim 130K$</td></tr>
+      <tr><td>Kr-石墨</td><td class="num">$\sim 1000K$</td></tr>
+      <tr><td><sup>3</sup>He-H<sub>2</sub></td><td class="num">$\sim 10K$</td></tr>
+      <tr><td>H-<sup>4</sup>He</td><td class="num">$\sim 1K$</td></tr>
+      <tr><td>Cs-<sup>4</sup>He</td><td class="num">$\sim 1.5K$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>原子一旦黏附到表面上，就与固体热化，并在表面上保持黏附<span data-concept="surface-resonance-time" id="resonance-time">某个特征共振时间$\ktauR$</span>。为求出这个<span data-concept="surface-resonance-time">共振时间</span>，我们考虑平衡条件：附着到表面上的原子数必须等于离开表面的原子数。</p>
+<p>若黏附概率为 s，<span data-concept="atom-number-density">原子密度为$\kndens$</span>，平均原子速度为$\kvbar$，则流向表面的通量$\Phi = (1/4)\kndens\kvbar s$必须与原子离开表面的速率$\sigma/\ktauR$相等，其中$\sigma$是面<span data-concept="atom-number-density">密度</span>。假设气体与表面处于热平衡，它们的<span data-concept="chemical-potential">化学势</span>必须相等，因而</p>
+<div class="equation" id="eq-11-11">$$\frac{\sigma}{\kndens} = \klambdaDB e^{\kEB/(k_B\kT)}, \tag{11.11}$$</div>
+<p>其中$\klambdaDB$是原子的<span data-concept="de-broglie-wavelength">德布罗意波长</span>，$\kEB$是原子与表面的<span data-concept="surface-sticking">结合能</span>，$\kT$是表面的温度。</p>
+<figure class="dv" id="drv-surface-resonance-time"></figure>
+<p><span data-concept="surface-resonance-time">共振时间</span>对<span data-concept="surface-sticking">结合能</span>呈指数敏感，所以只有<span data-concept="surface-sticking">结合能</span>小于或接近温度的那些原子-固体对，才会有相当小的<span data-concept="surface-resonance-time">共振时间</span>。随着壁的温度降到<span data-concept="surface-sticking">结合能</span>之下，$\ktauR$增大。最终，原子开始堆积在表面之上，这会显著地改变表面的性质。若$\mathcal{L}$是原子之间的距离，以原子直径$d$为单位，则在低到使$\mathcal{L} &lt; 1$的温度下就会发生堆积。</p>
+<div class="book-table" id="table-11-2">
+  <div class="tcap"><span class="eyebrow">Table 11.2</span><span>取$\kndens \sim 10^{13}\mathrm{cm}^{-3}$并采用最低<span data-concept="surface-sticking">结合能</span>$\kEB \sim 1K$时的典型表面密度。注意面密度在$10^{14}$附近饱和；超过这一值，原子就在自身之上堆积。</span></div>
+  <table>
+    <thead><tr><th>$\kT$</th><th>$\sigma(cm)^{-2}$</th><th>$\mathcal{L}(d)$</th></tr></thead>
+    <tbody>
+      <tr><td class="num">$10K$</td><td class="num">$10^{11}$</td><td class="num">$&gt; 100$</td></tr>
+      <tr><td class="num">$1K$</td><td class="num">$3\ 10^{13}$</td><td class="num">$2 - 20$</td></tr>
+      <tr><td class="num">$0.1K$</td><td class="num">$2\ 10^{16}$</td><td class="num">$&lt; 1$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>在高面密度下，化学活性原子会开始彼此反应，形成分子，这些分子随后便永久地从化学亚稳原子的系综中损失掉。</p>
+<p>若原子不具反应性，物质将聚集成多个单层，气相中的原子<span data-concept="atom-number-density">密度</span>将与固相处于热平衡。于是，气态非反应性原子的<span data-concept="atom-number-density">密度</span>就是该原子种类在表面温度下的蒸气压。这一观察说明了为什么真空室在烘烤除气之后能达到低得多的压强。烘烤除气产生较低的“有效蒸气压”，因为表面的<span data-concept="surface-sticking">结合能</span>对撞击腔室壁的其他原子变得可见，所以无论腔室温度下的蒸气压如何，它们都会黏附。</p>
+<p>原则上，只要<span data-concept="surface-resonance-time">共振时间</span>在所需温度下相当短，就应当可以利用冷的腔室壁来冷却原子。然而实际上，几乎没有哪种原子（He 上的 H 是一例）能被冷却到有用的温度$\sim 1K$，只有少数特殊的原子对能被冷却到$\sim 100K$以下。因此，表面冷却技术迄今只用于氢原子。</p>
+</section>
+
+<section id="trap-depths">
+<h2>11.3.2 阱深</h2>
+<p>要陷俘原子系综，原子必须足够冷，使得它们无法爬上构成原子阱的势垒。它们必须有多冷？<span data-concept="trap-depth" id="trap-depth">阱的深度可以用它所能约束的原子的最高温度来表示</span>，典型的<span data-concept="trap-depth">阱深</span>列于<a href="#table-11-3">表 11.3</a>。</p>
+<div class="book-table" id="table-11-3">
+  <div class="tcap"><span class="eyebrow">Table 11.3</span><span>实际实验室条件下的<span data-concept="trap-depth">阱深</span>。</span></div>
+  <table>
+    <thead><tr><th>阱的类型</th><th>实验室场强</th><th>原子的<span data-concept="trap-depth">阱深</span></th><th>分子的<span data-concept="trap-depth">阱深</span></th></tr></thead>
+    <tbody>
+      <tr><td>磁</td><td class="num">$0.1 - 4T$</td><td class="num">60mK $-$ 15K</td><td class="num">60mK-10K</td></tr>
+      <tr><td>电</td><td class="num">1-100MV/cm<sup class="fn" data-note="c-table-11-3-electric"></sup></td><td class="num">1$\mu$K-1mK</td><td class="num">1$\mu$K-1K</td></tr>
+      <tr><td>重力</td><td class="num">980cm/s<sup>2</sup></td><td class="num">0.1 mK/m-10mK/m<sup class="fn" data-note="c-table-11-3-gravity"></sup></td><td class="num">0.1 mK/m-10mK/m</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<section id="initial-cooling">
+<h2>11.3.3 初始冷却</h2>
+<p>可以采用多种方法把原子冷却到<span data-concept="trap-depth">阱深</span>以下。从<a href="#table-11-3">表 11.3</a>可以看出，确实可以利用冷的 He 表面把氢冷却到$\sim$ 1K，并把它直接俘获在<span data-concept="magnetic-trap">磁阱</span>中。然而，这种方法几乎不适用于其他任何原子。因此，大多数陷俘冷原子的实验在开启阱之前先使用一个<span data-concept="laser-cooling">激光冷却</span>阶段。</p>
+<h3>激光冷却</h3>
+<p id="laser-cooling">我们已经详细考虑了<span data-concept="doppler-cooling">多普勒</span>冷却和<span data-concept="sub-doppler-cooling">亚多普勒</span>冷却背后的机制。实验上，它们通常依次实施：先用多种<span data-concept="doppler-cooling">多普勒冷却</span>技术的组合把原子俘获在<span data-concept="magneto-optical-trap">磁光阱</span>中，然后关闭磁阱，以便进行<span data-concept="polarization-gradient">偏振梯度冷却</span>。利用这些技术，在典型的碱金属原子中可以达到$\sim 10^{11}\mathrm{cm}^{-3}$的原子<span data-concept="atom-number-density">密度</span>和$\sim 50\mu$K的温度。然而，要达到<span data-concept="bose-condensation">玻色凝聚</span>，<span data-concept="bec-criterion">相空间密度</span>仍须提高许多个数量级。进一步的冷却是通过把原子转移到不含任何共振光场的阱中来完成的，例如<span data-concept="magnetic-trap">磁阱</span>或远非共振的光学<span data-concept="dipole-trap">偶极力阱</span>。</p>
+<h3>缓冲气体冷却</h3>
+<p><span data-concept="laser-cooling">激光冷却</span>有其局限，因为它只对具有循环跃迁的原子效果良好（对分子则不起作用），而且至多只能产生含$\sim 10^{10}$个原子的冷云。对其他各种原子和分子，实际上可以使用一种略有不同的表面冷却。我们已经看到，原子通常会在很长的时间内束缚在冷表面上。然而，<span data-concept="buffer-gas-cooling" id="buffer-gas">如果腔室中含有足够的冷缓冲气体，原子在到达腔室壁之前就能被冷却到缓冲气体的温度</span>。实验上，这一温度由所需的蒸气压决定。例如，氦<span data-concept="buffer-gas-cooling">缓冲气体</span>可以把原子从 1000K 冷却到$\sim 1K$，同时保持足够的蒸气压，使原子平均自由程远小于典型的腔室尺寸。原子冷却之后，<span data-concept="buffer-gas-cooling">缓冲气体</span>可以被抽走，并通过磁陷俘使原子与腔室壁热隔离。我们顺带指出，也存在脉冲冷却机制，它们对一系列电极定时，使原子或分子脉冲始终在爬升势梯度，从而使该脉冲减速。</p>
+<figure class="sim" id="fig-buffer-gas" data-figure="11.2" data-original="/media/ch11/fig-11-2.png" data-original-caption="缓冲气体冷却可用于把任何原子或分子制备到接近 1K，这足以陷俘几乎所有顺磁原子和分子。">
+  <div class="sim-head"><span class="eyebrow">Figure 11.2</span><span><span data-concept="buffer-gas-cooling">缓冲气体冷却</span>可用于把任何原子或分子制备到接近 1K，这足以陷俘几乎所有顺磁原子和分子。</span></div>
+</figure>
+</section>
+
+<section id="traps">
+<h2>11.3.4 光阱与磁阱</h2>
+<p id="dipole-trap">最后的冷却步骤必须在不激发原子跃迁的阱中进行。一种可能的方案是<span data-concept="dipole-trap">利用原子偶极力把原子约束在红失谐激光束的焦点上</span>。实验上，常用大功率 CO<sub>2</sub>激光器来完成这一任务，因为它的波长$\sim 10\mu$m与大多数光学跃迁远<span data-concept="detuning">失谐</span>。</p>
+<p><span data-concept="magnetic-trap" id="magnetic-trap">磁阱利用磁偶极相互作用来约束角动量非零的原子</span>。从量子力学上讲，磁量子数为$m_F$的原子态沿磁场$\kBz$的轴的能量为</p>
+<div class="equation" id="eq-11-13">$$H = g_F\kmuB m_F\kBz. \tag{11.13}$$</div>
+<p>由于麦克斯韦方程组禁止静磁场极大值，这种偶极力只能用于<span data-concept="magnetic-trap">弱场趋近态</span>。</p>
+<p>为使原子保持被<span data-concept="magnetic-trap">磁阱</span>约束，原子在阱中运动时，<span data-concept="adiabatic-spin-following" id="adiabatic-following">其自旋必须绝热地跟随磁场方向</span>。只要磁场的角度$\ktheta$变化得足够缓慢，使得</p>
+<div class="equation" id="eq-11-14">$$\frac{d\ktheta}{d\kt} \ll \frac{\kmuB\kBz}{\hbar} = \komegaLarmor, \tag{11.14}$$</div>
+<p>原子就将保持在<span data-concept="magnetic-trap">弱场趋近态</span>。如果磁场的角度变化过快，就会出现<span data-concept="adiabatic-spin-following">自旋反转</span>（或“<span data-concept="adiabatic-spin-following">马约拉纳反转</span>”<sup class="fn" data-note="c-majorana"></sup>），把原子从被陷俘的态中逐出。</p>
+<p>人们能想到的最简单的<span data-concept="magnetic-trap">磁阱</span>是<span data-concept="quadrupole-trap" id="quadrupole">四极阱</span>，其中反亥姆霍兹线圈在其中心产生磁场极小值。磁场在各方向$i = x, y, z$上都是线性的：$B_i = \tilde{B}_ix_i$，其中$\sum|\tilde{B}_i| = 0$。<sup class="fn" data-note="c-quadrupole-sum"></sup>然而，这样的阱在其中心处磁场为零，在那里<span data-concept="adiabatic-spin-following">绝热跟随判据</span>无法满足。因此这种阱的作用就好像在中心有一个孔！通过让磁场零点的位置随时间变化，可以堵住<span data-concept="quadrupole-trap">四极阱</span>中的孔。<span data-concept="quadrupole-trap">时间轨道势</span>（TOP）阱利用时间平均的四极场来模拟对原子的谐振约束。</p>
+<p>或者，可以构建磁场极小值非零的<span data-concept="magnetic-trap">磁阱</span>，方法是把二维<span data-concept="quadrupole-trap">四极阱</span>与亥姆霍兹线圈结合起来，以提供轴向约束。<span data-concept="ioffe-pritchard-trap" id="ioffe-pritchard">这种所谓的“约费-普里查德”阱</span>以最早分别用它来约束等离子体和原子的研究者命名。在阱的中心附近，势近似为谐振势，磁场为</p>
+<div class="equation" id="eq-11-15">$$\kB = B_0\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} + B_1\begin{pmatrix} x \\ -y \\ 0 \end{pmatrix} + \frac{B_2}{2}\begin{pmatrix} -xz \\ -yz \\ z^2 - \frac{1}{2}\left(x^2 + y^2\right) \end{pmatrix}. \tag{11.15}$$</div>
+</section>
+
+<section id="evaporative-cooling">
+<h2>11.3.5 蒸发冷却</h2>
+<p>一旦原子被约束在阱中，就可以对它们施加进一步的冷却技术。<span data-concept="evaporative-cooling" id="evaporative-cooling-def">蒸发冷却</span>提供了达到超冷温度的最有效方法，也是制备量子简并气体的唯一技术。<span data-concept="evaporative-cooling">蒸发冷却</span>背后的物理机制非常简单：从阱顶“<span data-concept="evaporative-cooling">蒸发逸出</span>”的那些原子，其能量必定多于留下的原子。剩下的原子一旦重新热化，它们的温度就应当下降。</p>
+<figure class="sim" id="sim-evaporation" data-figure="11.3" data-original="/media/ch11/fig-11-3.png" data-original-caption="蒸发冷却。只有最热的原子具有足够的能量逃出阱的约束势并黏附到壁上。剩下的原子重新热化后，达到较低的温度。通过降低阱势，可以达到相继更低的温度，而冷却率不会显著减慢。">
+  <div class="sim-head"><span class="eyebrow">Figure 11.3</span><span><a href="#evaporation-theory">11.3.6 节</a>的<span data-concept="linear-trap-atom-number">线性阱</span>中的原子按能量$E$分布为$E^{7/2}e^{-E/k_B\kT}$，所以它们的平均能量为$\frac{9}{2}k_B\kT$，<a href="#eq-11-32">式 (11.32)</a>。阱只容纳低于其<span data-concept="trap-depth">深度</span>$E_{th} = \ketaev k_B\kT$的原子。每一轮中，最热的、高于该深度的原子<span data-concept="evaporative-cooling">蒸发逸出</span>，其余的原子在较低的温度下重新热化；然后深度随$\kT$一起下降，进入下一轮，较淡的曲线保留先前的温度。若改为保持深度不变，则每一轮切掉的原子更少，冷却也更少。拖动$\ketaev$可以切得更深入云内，或更靠近云的边缘。书中的图画的是动能；这里$E$是原子在阱中的全部能量，即深度所切割的能量。</span></div>
+</figure>
+<h3>历史</h3>
+<p><span data-concept="evaporative-cooling">蒸发冷却</span>是哈拉尔德·赫斯于 20世纪80年代在汤姆·格雷塔克和丹·克莱普纳的小组中工作时发明的。该方法最初是用原子氢演示和发展的。大约五年后，它被应用于碱金属，并最终成为制备量子简并物质的标准方法。</p>
+<h3>理想化的蒸发冷却</h3>
+<p>在一个完美的世界里，如果<span data-concept="evaporative-cooling">蒸发</span>是影响被陷俘原子的唯一过程，那么只要等得足够久，就可以用<span data-concept="evaporative-cooling">蒸发冷却</span>把原子冷却到任意低的温度。然而，冷却率会随时间降低，所以更有效的冷却机制是缓慢降低原子阱的势垒，使冷却率保持相当大（见<a href="#sim-evaporation">图 11.4</a><sup class="fn" data-note="c-fig-11-4-cited"></sup>）。</p>
+<p>或者，可以把原子共振激发到一个未陷俘的，从而选出最热的原子将其从阱中移出。通过缓慢改变共振能量，可以先从阱中逐出最热的原子，并依次切除越来越冷的原子，直到达到所需的温度。这一技术通常利用原子超精细能级之间的射频耦合来完成。在<span data-concept="magnetic-trap">磁阱</span>中，只有<span data-concept="magnetic-trap">弱场趋近态</span>会被陷俘，因此对强场趋近态的共振激发可用来有选择地移除某些原子。虽然所有原子无论动能如何都有相同的超精细结构，但<span data-concept="magnetic-trap">磁阱</span>会引起与空间位置有关的塞曼分裂。因此，<span data-concept="rf-knife" id="rf-knife">这种所谓的“射频刀”</span>可用来切除阱边缘的原子，射频频率的缓慢改变可使刀扫向更靠近阱中心的地方，更冷的原子留在那里。</p>
+<figure class="sim" id="sim-rf-knife" data-figure="11.4" data-original="/media/ch11/fig-11-4.png" data-original-caption="可以把射频刀设想为一个朗道-齐纳过程，其中射频场的频率决定回避交叉的位置，射频场的大小决定其宽度。因此，射频刀实际上起到限制阱深的作用。">
+  <div class="sim-head"><span class="eyebrow">Figure 11.4</span><span>在<span data-concept="magnetic-trap">磁阱</span>中，陷俘态的能量随远离中心的场而升高，未陷俘态的能量则下降。射频场给未陷俘态加上一个光子$h\knu_{RF}$，在两者相遇处，即$h\knu_{RF} = 2\kmumag B(x)$处，它把二者耦合成一个回避交叉，即<span data-concept="landau-zener" id="rf-landau-zener">朗道-齐纳</span>交叉。缓慢运动的原子沿着较粗的下方曲线运动，所以交叉处的隆起限定了<span data-concept="trap-depth">阱深</span>，能量更高的原子则作为未陷俘的原子越过隆起滚出。向下拖动$\knu_{RF}$可使<span data-concept="rf-knife">刀</span>向中心移动；增大$\kOmega_{RF}$可加宽间隙。能量除以$h$并以 MHz 为单位给出，所对应的阱的底部位于$\kmumag B_0/h$ = 1 MHz。</span></div>
+</figure>
+<h3>竞争过程</h3>
+<p><span data-concept="evaporative-cooling">蒸发冷却</span>并不是影响被陷俘原子的唯一过程。<span data-concept="trap-loss-processes" id="competing">三体复合、非弹性散射以及与背景气体的碰撞共同作用，限制了被陷俘原子的寿命</span>。因此，<span data-concept="evaporative-cooling">蒸发冷却</span>必须进行得足够快，使原子在整个过程中都留在阱中，但又必须足够慢，使原子在热原子被逐出之后有时间重新热化。</p>
+<h3>三体复合</h3>
+<p>陷俘实验中使用的几乎每一个原子都处于<span data-concept="gas-bec-metastability">亚稳态</span>。给定足够的时间，碱金属原子会形成分子并最终形成金属晶体，而稀有气体通常被陷俘在亚稳的超精细态中。乍一看，这一观察令人非常担忧，因为这意味着我们陷俘的是一个本质上不稳定的对象。然而存在一个漏洞：为了弛豫到它们的（分子）基态，两个原子需要第三个物体带走多余的能量和动量。如果原子<span data-concept="atom-number-density">密度</span>足够低，三个原子同时相互作用的概率可以相当小。然而，这些考虑把可用的原子<span data-concept="atom-number-density">密度</span>限制在$\sim 10^{15}\mathrm{cm}^{-3}$。</p>
+<h3>非弹性碰撞</h3>
+<p><span data-concept="magnetic-trap">磁阱</span>只约束某些自旋种类，所以任何使原子自旋反转的碰撞过程都会导致损失。这些所谓的“<span data-concept="trap-loss-processes">偶极的</span>”或“<span data-concept="trap-loss-processes">非弹性</span>”过程只需要两个原子。幸运的是，对碱金属而言，二体过程在低温下并不构成太大的问题。</p>
+<h3>背景气体</h3>
+<p>最后，原子可能因与真空室中背景气体的碰撞而从阱中损失。吸附在腔室壁上的任何物质都可能蒸发并把原子撞出阱外。碱金属原子对这些过程非常敏感，因此要成功地把<span data-concept="evaporative-cooling">蒸发冷却</span>进行到量子简并，需要超高真空$\sim 10^{-11} - 10^{-12}$托。</p>
+</section>
+
+<section id="evaporation-theory">
+<h2>11.3.6 蒸发冷却理论</h2>
+<p id="linear-trap">为了定量地考察<span data-concept="evaporative-cooling">蒸发冷却</span>如何起作用，我们将假设一个特定的<span data-concept="magnetic-trap">磁阱</span>模型，并计入二体<span data-concept="trap-loss-processes">非弹性</span>过程。如果<span data-concept="magnetic-trap">磁阱</span>由反亥姆霍兹线圈构成，则<span data-concept="linear-trap-atom-number">在中心附近可以把阱近似为球形线性势</span></p>
+<div class="equation" id="eq-11-16">$$B(\rho) = \frac{B_0}{\rho_0}\rho, \tag{11.16}$$</div>
+<p>其中$\rho$是到阱中心的距离，$\rho_0$是阱的大小，$B_0$是阱的最大场。如果阱中心的原子<span data-concept="atom-number-density">密度</span>为$\knzero$，则热平衡时的<span data-concept="atom-number-density">密度</span>分布为</p>
+<div class="equation" id="eq-11-17">$$\kndens(\rho) = \knzero e^{-\kmumag|B(\rho)|/k_B\kT}, \tag{11.17}$$</div>
+<p>其中$\kmumag$是被陷俘原子的磁矩。</p>
+<figure class="dv" id="drv-linear-trap-atom-number"></figure>
+<p>我们把积分的上限取为$\infty$而不是$\rho_0$，因为当$\ketaev &gt; 5$时，阱边缘附近的原子<span data-concept="atom-number-density">密度</span>小到可以忽略。量$\kVgeo$表示阱的几何体积，而$\ketaev^3$是以阱底<span data-concept="atom-number-density">密度</span>为参照的<span data-concept="atom-number-density">密度</span>的<span data-concept="linear-trap-atom-number">压缩因子</span>。</p>
+<h3>计入二体过程</h3>
+<p><span data-concept="two-body-loss" id="two-body">二体损失发生的速率必定与原子密度的平方成正比</span>，</p>
+<div class="equation" id="eq-11-22">$$\dot{\kndens} = -\kgin\kndens^2, \tag{11.22}$$</div>
+<p>其中$\kgin$是<span data-concept="trap-loss-processes">非弹性</span>过程的<span data-concept="two-body-loss">速率常数</span>。原则上$\kgin$可以依赖于磁场、温度等，但为了我们讨论的目的，我们假定它是常量。</p>
+<figure class="dv" id="drv-dipolar-loss-rate"></figure>
+<p>注意，这个表达式中出现了一个 1/8 的因子（相对于<a href="#drv-linear-trap-atom-number">式 (11.21)</a>），这是因为对<span data-concept="atom-number-density">密度</span>的非线性依赖。</p>
+<h3>蒸发本身</h3>
+<p><span data-concept="evaporative-cooling">蒸发</span>背后的基本思想是：阱边缘的原子离开系统，黏附在腔室壁上。</p>
+<figure class="dv" id="drv-evaporation-flux"></figure>
+<p>我们还必须计入其余原子的<span data-concept="evaporation-rate">热化率</span>$\kGammath$，它由原子云内的弹性碰撞速率$\ksigmael$决定</p>
+<div class="equation" id="eq-11-29">$$\kGammath \propto \knzero^2\kvbar\ksigmael. \tag{11.29}$$<sup class="fn" data-note="c-eq-11-29"></sup></div>
+<p id="evaporation-rate">原子从云中蒸发的速率于是由热化能够补充热原子（它们随后蒸发）储备的速率决定。<span data-concept="evaporation-rate">蒸发率</span>近似为</p>
+<div class="equation" id="eq-11-30">$$\dot{N}_v = -\knzero^2\kvbar\ksigmael e^{-\ketaev}\kVgeo\ketaev^{\sim 1.5}. \tag{11.30}$$</div>
+<p id="loss-ratio">一个重要的无量纲量是<span data-concept="evaporation-figure-of-merit">蒸发损失与非弹性损失之比</span>，</p>
+<div class="equation" id="eq-11-31">$$\frac{\dot{N}_v}{\dot{N}_d} \approx e^{-\ketaev}\ketaev^{4.5}\frac{g_{el}}{\kgin}. \tag{11.31}$$</div>
+<p>为建立完整的模型，我们现在必须考虑被阱损失的原子的平均能量。初始平均能量为</p>
+<div class="equation" id="eq-11-32">$$\bar{E} = \bar{K} + \bar{U} = \frac{9}{2}k_B\kT \tag{11.32}$$</div>
+<p>蒸发的原子通常具有的能量量级为阱的阈值能量加上热能，即</p>
+<div class="equation" id="eq-11-33">$$E_v = \bar{K} + \bar{U}_v \sim E_{th} + (3/2)k_B\kT, \tag{11.33}$$</div>
+<p>而由于<span data-concept="trap-loss-processes">非弹性</span>碰撞损失的原子则具有</p>
+<div class="equation" id="eq-11-34">$$E_d = \bar{K} + \bar{U}_d \sim 6/2k_B\kT. \tag{11.34}$$</div>
+<p>显然，因<span data-concept="two-body-loss">偶极弛豫</span>而损失的原子起的是加热而不是冷却样品的作用，在定常态下，可以预期<span data-concept="trap-loss-processes">偶极的</span>加热率应当与<span data-concept="evaporative-cooling">蒸发冷却</span>率相匹配，即$\frac{\dot{N}_v}{\dot{N}_d} \sim 1$。因此，弹性散射率与<span data-concept="trap-loss-processes">非弹性</span>散射率之比对<span data-concept="evaporative-cooling">蒸发冷却</span>的成功变得至关重要。在许多系统中，最典型的是碱金属，有利的比值$\kgin \ll g_{el}$使得<span data-concept="evaporative-cooling">蒸发冷却</span>到量子简并成为可能。</p>
+</section>
+
+<section id="probing">
+<h2>11.3.7 探测原子系综</h2>
+<p>冷原子系综的空间分布和动量分布可以用近共振激光来探测。通过对原子云在共振激光束中留下的阴影成像，可以测量温度和原子数，而无需收集荧光光子。</p>
+<p>原子云通过其复<span data-concept="refractive-index">折射率</span>影响入射激光束，</p>
+<div class="equation" id="eq-11-35">$$\knref = \sqrt{1 + 4\pi\frac{N}{V}\alpha}, \tag{11.35}$$</div>
+<p>其中$\alpha$是原子的极化率。通常，人们测量<span data-concept="refractive-index">折射率</span>的实部（折射部分）或虚部（吸收部分），后一种测量更为常见。</p>
+<p id="absorption-imaging"><span data-concept="absorption-imaging">吸收成像测量原子系综的与空间位置有关的透射系数</span>，</p>
+<div class="equation" id="eq-11-36">$$t = e^{-\kdOD/2} \tag{11.36}$$</div>
+<p>它按<span data-concept="absorption-imaging">光学深度</span>$\kdOD$的指数变化，</p>
+<div class="equation" id="eq-11-37">$$\kdOD = \frac{n_c\sigma_0}{1 + \delta^2}, \tag{11.37}$$</div>
+<p>其中$n_c = \int\frac{N}{V}dz$是沿视线积分的柱密度，$\sigma_0$是<span data-concept="absorption-cross-section">截面</span>，$\delta = (\omega - \omega_0)/(\Gamma/2)$是归一化<span data-concept="detuning">失谐</span>。<span data-concept="absorption-imaging">吸收成像</span>通常在共振处进行，那里没有使图像畸变的折射效应。<span data-concept="absorption-imaging">吸收成像</span>的一个问题是，玻色凝聚体的<span data-concept="absorption-imaging">光学深度</span>极大，量级为$\kdOD \sim 300$，所以被陷俘的凝聚体会完全吸收共振光。取而代之，使用<span data-concept="time-of-flight-imaging" id="tof">飞行时间成像</span>。原子云从阱中释放，任其膨胀和下落。几毫秒之后，原子云已把其初始速度（或动量）分布映射到粒子的位置上，从而可以对阱内的动量分布进行<span data-concept="absorption-imaging">吸收成像</span>。这一动量分布的形状使人能够把抛物线形的凝聚体与原子云的高斯热成分区分开。</p>
+<p>非共振成像可以通过测量相位来完成</p>
+<div class="equation" id="eq-11-38">$$\kphi = -\delta\frac{\kdOD}{2}, \tag{11.38}$$</div>
+<p>是原子云通过使图像与参考光束干涉（或者在实际中，在光路中放置合适的相位板）印刻在激光束上的。由于激光与原子云不共振，这种成像可以在阱内进行；此外，被激光激发的原子很少，所以可以用“<span data-concept="phase-contrast-imaging" id="phase-contrast">相衬成像</span>”对单个凝聚体拍摄多幅图像。</p>
+<p>这些成像技术提供了对原子分布的定量测量。最近甚至已经证明，这类图像可以是受散粒噪声限制的，其噪声由对每个相机像素有贡献的原子的有限数目决定。</p>
+</section>

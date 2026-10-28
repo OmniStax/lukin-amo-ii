@@ -1,0 +1,157 @@
+{
+ "id": "1.2",
+ "chapter": "1",
+ "title": "量子力学回顾",
+ "short": "量子力学回顾",
+ "lead": "对本课程所依据的量子力学作一简要回顾：<span data-concept=\"state-vector\">态矢量</span>及其在基中的展开，<span data-concept=\"superposition\">叠加</span>与干涉，<span data-concept=\"observable\">可观测量</span>与不确定性原理，以及系统在薛定谔绘景和海森伯绘景中如何随时间演化。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [],
+ "coverage": [
+  {
+   "span": "states",
+   "concept": "state-vector",
+   "verb": "introduces"
+  },
+  {
+   "span": "states",
+   "concept": "probability-amplitude",
+   "verb": "introduces"
+  },
+  {
+   "span": "states",
+   "concept": "born-rule",
+   "verb": "introduces"
+  },
+  {
+   "span": "superpositions",
+   "concept": "superposition",
+   "verb": "introduces"
+  },
+  {
+   "span": "superpositions",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "superpositions",
+   "concept": "born-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "observables",
+   "concept": "observable",
+   "verb": "introduces"
+  },
+  {
+   "span": "observables",
+   "concept": "expectation-value",
+   "verb": "introduces"
+  },
+  {
+   "span": "observables",
+   "concept": "state-vector",
+   "verb": "uses"
+  },
+  {
+   "span": "observables",
+   "concept": "born-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "uncertainty-principle",
+   "concept": "commutator",
+   "verb": "introduces"
+  },
+  {
+   "span": "uncertainty-principle",
+   "concept": "heisenberg-uncertainty-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "uncertainty-principle",
+   "concept": "expectation-value",
+   "verb": "uses"
+  },
+  {
+   "span": "schrodinger-picture",
+   "concept": "hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "schrodinger-picture",
+   "concept": "schrodinger-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "schrodinger-picture",
+   "concept": "stationary-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "schrodinger-picture",
+   "concept": "evolution-in-energy-eigenbasis",
+   "verb": "introduces"
+  },
+  {
+   "span": "schrodinger-picture",
+   "concept": "time-evolution-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "schrodinger-picture",
+   "concept": "state-vector",
+   "verb": "uses"
+  },
+  {
+   "span": "schrodinger-picture",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "heisenberg-picture",
+   "concept": "heisenberg-picture",
+   "verb": "introduces"
+  },
+  {
+   "span": "heisenberg-picture",
+   "concept": "observable",
+   "verb": "uses"
+  },
+  {
+   "span": "heisenberg-picture",
+   "concept": "commutator",
+   "verb": "uses"
+  },
+  {
+   "span": "heisenberg-picture",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": []
+}

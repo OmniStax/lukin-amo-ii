@@ -1,0 +1,677 @@
+{
+ "id": "7.3",
+ "chapter": "7",
+ "title": "多能级系统中的绝热过程",
+ "short": "多能级系统中的绝热过程",
+ "lead": "三能级原子和四能级原子中的<span data-concept=\"adiabatic-theorem\">绝热跟随</span>：共振三能级原子的<span data-concept=\"three-level-dressed-states\">缀饰态</span>及其<span data-concept=\"dark-state\">暗态</span>，具有反直觉脉冲顺序的<span data-concept=\"stirap\">受激拉曼绝热通道</span>，以及四能级系统中构成<span data-concept=\"adiabatic-atomic-beamsplitter\">原子分束器</span>的两个简并暗态。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "图 7.3 的实验曲线没有复现；该编号下的图根据模型计算出同样的两组扫描。",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "sim-stirap",
+   "kind": "sim",
+   "number": "7.2",
+   "originals": [
+    "/media/ch07/fig-7-2.png"
+   ],
+   "original_caption": "在三能级系统中实现 STIRAP 的一种可能的脉冲序列。两个脉冲的定时使混合角从 0 平滑地变化到 π/2，从而使布居在下亚稳态之间转移。",
+   "draws": [
+    "coupling",
+    "phase",
+    "energy",
+    "population",
+    "time",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-stirap-scans",
+   "kind": "sim",
+   "number": "7.3",
+   "draws": [
+    "population",
+    "frequency",
+    "phase",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ],
+   "withheld": "图 7.3 复现的是已发表的实验数据，本书不得复制。"
+  },
+  {
+   "id": "sim-four-level",
+   "kind": "sim",
+   "number": "7.4",
+   "originals": [
+    "/media/ch07/fig-7-4.png"
+   ],
+   "original_caption": "所考虑的四能级系统。在我们的计算中，假定所有外加场都与相应的原子跃迁共振。",
+   "draws": [
+    "coupling",
+    "amplitude",
+    "state",
+    "phase"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "lvl-1",
+   "label": "态|1⟩",
+   "figures": [
+    "sim-stirap"
+   ]
+  },
+  {
+   "id": "lvl-2",
+   "label": "态|2⟩",
+   "figures": [
+    "sim-stirap",
+    "sim-stirap-scans"
+   ]
+  },
+  {
+   "id": "lvl-3",
+   "label": "激发态|3⟩",
+   "figures": [
+    "sim-stirap"
+   ]
+  },
+  {
+   "id": "pump",
+   "label": "抽运场Ω₁",
+   "figures": [
+    "sim-stirap",
+    "sim-stirap-scans"
+   ]
+  },
+  {
+   "id": "stokes",
+   "label": "斯托克斯场Ω₂",
+   "figures": [
+    "sim-stirap",
+    "sim-stirap-scans"
+   ]
+  },
+  {
+   "id": "dark",
+   "label": "暗态|Φ₀⟩",
+   "figures": [
+    "sim-stirap"
+   ]
+  },
+  {
+   "id": "four-1",
+   "label": "四能级系统的亚稳态|1⟩",
+   "figures": [
+    "sim-four-level"
+   ]
+  },
+  {
+   "id": "four-2",
+   "label": "四能级系统的激发态|2⟩",
+   "figures": [
+    "sim-four-level"
+   ]
+  },
+  {
+   "id": "four-3",
+   "label": "四能级系统的亚稳态|3⟩",
+   "figures": [
+    "sim-four-level"
+   ]
+  },
+  {
+   "id": "four-4",
+   "label": "四能级系统的亚稳态|4⟩",
+   "figures": [
+    "sim-four-level"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "dressed3",
+   "concept": "three-level-dressed-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "stirap",
+   "concept": "stirap",
+   "verb": "introduces"
+  },
+  {
+   "span": "dark4",
+   "concept": "four-level-dark-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "beamsplitter",
+   "concept": "adiabatic-atomic-beamsplitter",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "three-level-configurations",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "adiabatic-theorem",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "dark-state",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "electromagnetically-induced-transparency",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "lambda-detunings",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "rabi-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "bare-states",
+   "verb": "uses"
+  },
+  {
+   "span": "dark-par",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "dark-par",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "stirap-sec",
+   "concept": "instantaneous-eigenstates",
+   "verb": "uses"
+  },
+  {
+   "span": "stirap-sec",
+   "concept": "mixing-angle",
+   "verb": "uses"
+  },
+  {
+   "span": "stirap-sec",
+   "concept": "superposition",
+   "verb": "uses"
+  },
+  {
+   "span": "counter",
+   "concept": "dark-state-preparation",
+   "verb": "uses"
+  },
+  {
+   "span": "four-level",
+   "concept": "bright-state",
+   "verb": "uses"
+  },
+  {
+   "span": "four-level",
+   "concept": "nonadiabatic-coupling",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "footnotes": [
+  {
+   "id": "c-d13",
+   "kind": "correction",
+   "html": "书中印的是$|D_{13}\\rangle$。当$\\kOmegaone = 0$时，剩下的三能级系统是$|2\\rangle$、$|3\\rangle$、$|4\\rangle$，所以它的暗态是$|D_{34}\\rangle$，下一句正是这样称呼它的。"
+  },
+  {
+   "id": "c-omega4",
+   "kind": "correction",
+   "html": "书中印的是$\\kOmegafour$。第一步中关闭的场是$\\kOmegaone$；开启它不影响$|D_{34}\\rangle$，因为该态在$|1\\rangle$上没有成分，也不与$|2\\rangle$耦合。"
+  },
+  {
+   "id": "c-fig-7-4",
+   "kind": "correction",
+   "figure": "sim-four-level",
+   "html": "书中的图 7.4 把激发能级标为$|4\\rangle$，与右边的下能级的标记相同。正文中的激发态是$|2\\rangle$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "lambda-dressed-states",
+   "what": "共振Λ型系统的缀饰态",
+   "source": "现代原子与光学物理 II，7.3 多能级系统中的绝热过程",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\tan\\ktheta = \\frac{\\kOmegaone}{\\kOmegatwo}",
+       "src": "(7.28)"
+      },
+      {
+       "tex": "\\kOmega = \\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}",
+       "src": "(7.29)"
+      },
+      {
+       "tex": "|B\\rangle = \\frac{\\kOmegaone|1\\rangle + \\kOmegatwo|2\\rangle}{\\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}}",
+       "src": "(7.59)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH} = \\mk{d}{-\\kDelta|3\\rangle\\langle 3|} \\mk{a}{- \\kOmegaone\\left(|3\\rangle\\langle 1| + |1\\rangle\\langle 3|\\right)} \\mk{b}{- \\kOmegatwo\\left(|3\\rangle\\langle 2| + |2\\rangle\\langle 3|\\right)}",
+      "src": "(7.24)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kH} = \\mk{d}{-\\kDelta|3\\rangle\\langle 3|} \\mk{c}{- |3\\rangle\\left(\\kOmegaone\\langle 1| + \\kOmegatwo\\langle 2|\\right) - \\left(\\kOmegaone|1\\rangle + \\kOmegatwo|2\\rangle\\right)\\langle 3|}",
+       "uses": [],
+       "map": {
+        "a": "c",
+        "b": "c"
+       }
+      },
+      {
+       "tex": "\\mk{H}{\\kH} = \\mk{d}{-\\kDelta|3\\rangle\\langle 3|} \\mk{c}{- \\kOmega|3\\rangle\\left(\\sin\\ktheta\\langle 1| + \\cos\\ktheta\\langle 2|\\right) - \\kOmega\\left(\\sin\\ktheta|1\\rangle + \\cos\\ktheta|2\\rangle\\right)\\langle 3|}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "由$\\tan\\theta = \\Omega_1/\\Omega_2$且场为实数，得$\\Omega_1 = \\Omega\\sin\\theta$，$\\Omega_2 = \\Omega\\cos\\theta$。"
+      },
+      {
+       "tex": "\\mk{H}{\\kH} = \\mk{d}{-\\kDelta|3\\rangle\\langle 3|} \\mk{c}{- \\kOmega\\left(|3\\rangle\\langle B| + |B\\rangle\\langle 3|\\right)}",
+       "uses": [
+        2
+       ],
+       "cap": "由 (7.59)，$|B\\rangle = \\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$。"
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\tan\\ktheta = \\frac{\\kOmegaone}{\\kOmegatwo}",
+       "src": "(7.28)"
+      },
+      {
+       "tex": "\\kOmega = \\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}",
+       "src": "(7.29)"
+      },
+      {
+       "tex": "|B\\rangle = \\frac{\\kOmegaone|1\\rangle + \\kOmegatwo|2\\rangle}{\\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}}",
+       "src": "(7.59)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH} = \\mk{d}{-\\kDelta|3\\rangle\\langle 3|} \\mk{c}{- \\kOmega\\left(|3\\rangle\\langle B| + |B\\rangle\\langle 3|\\right)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kH(a|1\\rangle + b|2\\rangle)} = \\mk{c}{-\\kOmega|3\\rangle\\langle B|(a|1\\rangle + b|2\\rangle)}",
+       "uses": [],
+       "cap": "作用于沿$|3\\rangle$没有分量的下能级态时，只有项$|3\\rangle\\langle B|$起作用。"
+      },
+      {
+       "tex": "\\mk{H}{\\kH(a|1\\rangle + b|2\\rangle)} = \\mk{c}{-\\kOmega(a\\sin\\ktheta + b\\cos\\ktheta)|3\\rangle}",
+       "uses": [
+        1,
+        2,
+        3
+       ],
+       "cap": "由$\\tan\\theta = \\Omega_1/\\Omega_2$且场为实数，得$\\Omega_1 = \\Omega\\sin\\theta$，$\\Omega_2 = \\Omega\\cos\\theta$，所以$|B\\rangle = \\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$。"
+      },
+      {
+       "tex": "\\mk{P}{|\\Phi_0\\rangle} = \\mk{S}{\\cos\\ktheta|1\\rangle - \\sin\\ktheta|2\\rangle},\\quad \\mk{e}{\\kepszero} = \\mk{c}{0}",
+       "uses": [],
+       "cap": "取$a = \\cos\\theta$，$b = -\\sin\\theta$使括号为零：这是本征值为零的归一化本征态。",
+       "map": {
+        "H": [
+         "P",
+         "e"
+        ]
+       }
+      }
+     ],
+     "num": "(7.26), (7.31)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kepspm(\\kt) = \\frac{\\hbar}{2}\\left(-\\kDelta(\\kt) \\pm \\sqrt{\\kDelta(\\kt)^2 + 4\\kOmega(\\kt)^2}\\right)",
+       "src": "(7.15)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH} = \\mk{d}{-\\kDelta|3\\rangle\\langle 3|} \\mk{c}{- \\kOmega\\left(|3\\rangle\\langle B| + |B\\rangle\\langle 3|\\right)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kH} = \\mk{c}{-\\begin{pmatrix} 0 & \\kOmega \\\\ \\kOmega & \\kDelta \\end{pmatrix}}",
+       "uses": [],
+       "cap": "在基$|B\\rangle$、$|3\\rangle$中，哈密顿量将二者互相映射。",
+       "map": {
+        "d": "c"
+       }
+      },
+      {
+       "tex": "\\mk{H}{\\kepspm} = \\mk{c}{\\frac{1}{2}\\left(-\\kDelta \\pm \\sqrt{4\\kOmega^2 + \\kDelta^2}\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "这就是 (7.12) 的矩阵，其中$|B\\rangle$对应$|1\\rangle$，$|3\\rangle$对应$|2\\rangle$，$\\Omega$为常数且$\\hbar = 1$。"
+      }
+     ],
+     "num": "(7.30), (7.32)",
+     "note": "书中 (7.30) 和 (7.32) 的根号下印的是$\\kOmega^2$；(7.24) 的本征值带有$4\\kOmega^2$，正如二能级原子的 (7.15) 那样，并且在共振时为$\\pm\\kOmega$。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 2
+      },
+      {
+       "tex": "|B\\rangle = \\frac{\\kOmegaone|1\\rangle + \\kOmegatwo|2\\rangle}{\\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}}",
+       "src": "(7.59)"
+      },
+      {
+       "tex": "\\tan\\ktheta = \\frac{\\kOmegaone}{\\kOmegatwo}",
+       "src": "(7.28)"
+      },
+      {
+       "tex": "\\kOmega = \\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}",
+       "src": "(7.29)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{|\\Phi_+\\rangle} = \\mk{S}{\\sin\\kphi|B\\rangle + \\cos\\kphi|3\\rangle}",
+      "uses": [],
+      "why": "能量为$\\epsilon_+$的本征态位于$|B\\rangle$、$|3\\rangle$这一对态中；其中的归一化态用角$\\phi$表示。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{-\\kOmega\\cos\\kphi} = \\mk{b}{\\kepsp\\sin\\kphi}",
+       "uses": [
+        0
+       ],
+       "cap": "$\\hat{H}|\\Phi_+\\rangle = \\epsilon_+|\\Phi_+\\rangle$中$|B\\rangle$的部分：$\\langle B|\\hat{H}|3\\rangle = -\\Omega$，$\\langle B|\\hat{H}|B\\rangle = 0$。"
+      },
+      {
+       "tex": "\\mk{a}{\\tan\\kphi} = \\mk{b}{-\\frac{\\kOmega}{\\kepsp}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{a}{\\tan 2\\kphi} = \\mk{b}{\\frac{-2\\kOmega/\\kepsp}{1 - \\kOmega^2/\\kepsp^2}}",
+       "uses": [],
+       "cap": "$\\tan 2\\phi = 2\\tan\\phi/(1 - \\tan^2\\phi)$."
+      },
+      {
+       "tex": "\\mk{a}{\\tan 2\\kphi} = \\mk{b}{\\frac{2\\kOmega}{\\kDelta}}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\epsilon_+$是$\\epsilon^2 + \\Delta\\epsilon - \\Omega^2 = 0$的解，所以$1 - \\Omega^2/\\epsilon_+^2 = -\\Delta/\\epsilon_+$。"
+      },
+      {
+       "tex": "\\mk{Q}{|\\Phi_+\\rangle} = \\mk{T}{\\sin\\ktheta\\sin\\kphi|1\\rangle + \\cos\\ktheta\\sin\\kphi|2\\rangle + \\cos\\kphi|3\\rangle},\\quad \\mk{a}{\\tan 2\\kphi} = \\mk{b}{\\frac{2\\kOmega}{\\kDelta}}",
+       "uses": [
+        2,
+        3,
+        4
+       ],
+       "cap": "由$\\tan\\theta = \\Omega_1/\\Omega_2$且场为实数，得$\\Omega_1 = \\Omega\\sin\\theta$，$\\Omega_2 = \\Omega\\cos\\theta$，所以$|B\\rangle = \\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$。"
+      }
+     ],
+     "num": "(7.25), (7.29)",
+     "note": "书中印的是$\\tan 2\\kphi = -\\kOmega/\\kDelta$。取 (7.24) 的耦合$-\\kOmegaone$、$-\\kOmegatwo$以及 (7.25) 和 (7.27) 的符号，该角满足$\\tan 2\\kphi = 2\\kOmega/\\kDelta$，正如 (7.15) 的因子 2 所提示的。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "tex": "|B\\rangle = \\frac{\\kOmegaone|1\\rangle + \\kOmegatwo|2\\rangle}{\\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}}",
+       "src": "(7.59)"
+      },
+      {
+       "tex": "\\tan\\ktheta = \\frac{\\kOmegaone}{\\kOmegatwo}",
+       "src": "(7.28)"
+      },
+      {
+       "tex": "\\kOmega = \\sqrt{|\\kOmegaone|^2 + |\\kOmegatwo|^2}",
+       "src": "(7.29)"
+      },
+      {
+       "text": "厄米哈密顿量的能量不同的本征态相互正交。",
+       "src": "1.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{|\\Phi_-\\rangle} = \\mk{S}{\\cos\\kphi|B\\rangle - \\sin\\kphi|3\\rangle}",
+      "uses": [
+       0,
+       4
+      ],
+      "why": "这一对态$|B\\rangle$、$|3\\rangle$中的另一个本征态，与$|\\Phi_+\\rangle = \\sin\\phi|B\\rangle + \\cos\\phi|3\\rangle$正交。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{|\\Phi_-\\rangle} = \\mk{S}{\\sin\\ktheta\\cos\\kphi|1\\rangle + \\cos\\ktheta\\cos\\kphi|2\\rangle - \\sin\\kphi|3\\rangle}",
+       "uses": [
+        1,
+        2,
+        3
+       ],
+       "cap": "由$\\tan\\theta = \\Omega_1/\\Omega_2$且场为实数，得$\\Omega_1 = \\Omega\\sin\\theta$，$\\Omega_2 = \\Omega\\cos\\theta$，所以$|B\\rangle = \\sin\\theta|1\\rangle + \\cos\\theta|2\\rangle$。"
+      }
+     ],
+     "num": "(7.27)"
+    }
+   ]
+  },
+  {
+   "id": "tripod-dark-states",
+   "what": "四能级系统的两个暗态",
+   "source": "现代原子与光学物理 II，7.3 多能级系统中的绝热过程，7.3.2 四能级系统",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "每个场$\\kOmega_i$都把亚稳态$|i\\rangle$耦合到激发态$|2\\rangle$，处于共振且拉比频率为实数，如 (7.24) 的各场那样。",
+       "src": "7.3"
+      },
+      {
+       "text": "暗态是不与激发态耦合的亚稳态叠加。",
+       "src": "7.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH} = \\mk{R}{-\\kOmegaone\\left(|2\\rangle\\langle 1| + |1\\rangle\\langle 2|\\right) - \\kOmegathree\\left(|2\\rangle\\langle 3| + |3\\rangle\\langle 2|\\right) - \\kOmegafour\\left(|2\\rangle\\langle 4| + |4\\rangle\\langle 2|\\right)}",
+      "src": "7.3",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kH(a_1|1\\rangle + a_3|3\\rangle + a_4|4\\rangle)} = \\mk{R}{-(\\kOmegaone a_1 + \\kOmegathree a_3 + \\kOmegafour a_4)|2\\rangle}",
+       "uses": [],
+       "cap": "作用于亚稳能级上的态时：每个以$\\langle 2|$结尾的项都给出零。"
+      },
+      {
+       "tex": "\\mk{R}{\\kOmegaone a_1 + \\kOmegathree a_3 + \\kOmegafour a_4} = \\mk{z}{0}",
+       "uses": [
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{R}{\\kOmegaone a_1 + \\kOmegathree a_3 + \\kOmegafour a_4} = \\mk{z}{0}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{R}{\\kOmegathree a_3 + \\kOmegafour a_4} = \\mk{z}{0}",
+       "uses": [],
+       "cap": "沿$|1\\rangle$没有分量的暗态：$a_1 = 0$。"
+      },
+      {
+       "tex": "\\mk{R}{\\kOmegathree\\sin\\kphi - \\kOmegafour\\cos\\kphi} = \\mk{z}{0}",
+       "uses": [],
+       "cap": "把归一化的概率幅写成$a_3 = \\sin\\phi$和$a_4 = -\\cos\\phi$。"
+      },
+      {
+       "tex": "\\mk{P}{|\\Phi_2\\rangle} = \\mk{S}{\\sin\\kphi|3\\rangle - \\cos\\kphi|4\\rangle},\\quad \\mk{t}{\\tan\\kphi} = \\mk{v}{\\frac{\\kOmegafour}{\\kOmegathree}}",
+       "uses": [],
+       "map": {
+        "R": [
+         "t",
+         "v"
+        ],
+        "z": "v"
+       }
+      }
+     ],
+     "num": "(7.36), (7.38)",
+     "note": "书中印的是$\\tan\\kphi = \\kOmegathree/\\kOmegafour$。要使$|\\Phi_2\\rangle$成为暗态，它必须与亮组合$\\kOmegaone|1\\rangle + \\kOmegathree|3\\rangle + \\kOmegafour|4\\rangle$正交，这要求$\\tan\\kphi = \\kOmegafour/\\kOmegathree$；取该角时$|\\Phi_1\\rangle$也是暗态，并且 (7.37) 成立。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{R}{\\kOmegaone a_1 + \\kOmegathree a_3 + \\kOmegafour a_4} = \\mk{z}{0}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{R}{\\kOmegaone\\cos\\ktheta - \\sin\\ktheta\\left(\\kOmegathree\\cos\\kphi + \\kOmegafour\\sin\\kphi\\right)} = \\mk{z}{0}",
+       "uses": [
+        1
+       ],
+       "cap": "取$a_1 = \\cos\\theta$，其余部分沿$-(\\cos\\phi|3\\rangle + \\sin\\phi|4\\rangle)$，这是$|3\\rangle$与$|4\\rangle$中与$|\\Phi_2\\rangle$正交的组合。"
+      },
+      {
+       "tex": "\\mk{R}{\\kOmegaone\\cos\\ktheta - \\sin\\ktheta\\sqrt{|\\kOmegathree|^2 + |\\kOmegafour|^2}} = \\mk{z}{0}",
+       "uses": [
+        1
+       ],
+       "cap": "由$\\tan\\phi = \\Omega_4/\\Omega_3$，得$\\cos\\phi = \\Omega_3/\\sqrt{\\Omega_3^2 + \\Omega_4^2}$，$\\sin\\phi = \\Omega_4/\\sqrt{\\Omega_3^2 + \\Omega_4^2}$。"
+      },
+      {
+       "tex": "\\mk{P}{|\\Phi_1\\rangle} = \\mk{S}{\\cos\\ktheta|1\\rangle - \\sin\\ktheta\\cos\\kphi|3\\rangle - \\sin\\ktheta\\sin\\kphi|4\\rangle},\\quad \\mk{t}{\\tan\\ktheta} = \\mk{v}{\\frac{\\kOmegaone}{\\sqrt{|\\kOmegathree|^2 + |\\kOmegafour|^2}}}",
+       "uses": [],
+       "map": {
+        "R": [
+         "t",
+         "v"
+        ],
+        "z": "v"
+       }
+      }
+     ],
+     "num": "(7.35), (7.37)"
+    }
+   ]
+  }
+ ]
+}

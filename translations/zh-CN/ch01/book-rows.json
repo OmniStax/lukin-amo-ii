@@ -1,0 +1,1035 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "psi",
+   "latex": "\\psi",
+   "macro": "\\kpsi"
+  },
+  {
+   "sym": "c_n",
+   "latex": "c_n",
+   "macro": "\\kcn"
+  },
+  {
+   "sym": "P_n",
+   "latex": "P_n",
+   "macro": "\\kPn"
+  },
+  {
+   "sym": "H",
+   "latex": "\\hat{H}",
+   "macro": "\\kH"
+  },
+  {
+   "sym": "E_n",
+   "latex": "E_n",
+   "macro": "\\kEn"
+  },
+  {
+   "sym": "R_inf",
+   "latex": "R_\\infty",
+   "macro": "\\kRinf"
+  },
+  {
+   "sym": "A_SO",
+   "latex": "A",
+   "macro": "\\kASO"
+  },
+  {
+   "sym": "A_HFS",
+   "latex": "A_{HFS}",
+   "macro": "\\kAHFS"
+  },
+  {
+   "sym": "L",
+   "latex": "\\hat{L}",
+   "macro": "\\kL"
+  },
+  {
+   "sym": "S",
+   "latex": "\\hat{S}",
+   "macro": "\\kS"
+  },
+  {
+   "sym": "I",
+   "latex": "\\hat{I}",
+   "macro": "\\kI"
+  },
+  {
+   "sym": "J",
+   "latex": "\\hat{J}",
+   "macro": "\\kJ"
+  },
+  {
+   "sym": "F",
+   "latex": "\\hat{F}",
+   "macro": "\\kF"
+  },
+  {
+   "sym": "B",
+   "latex": "\\mathbf{B}",
+   "macro": "\\kB"
+  },
+  {
+   "sym": "mu_B",
+   "latex": "\\mu_B",
+   "macro": "\\kmuB"
+  },
+  {
+   "sym": "d",
+   "latex": "\\hat{\\mathbf{d}}",
+   "macro": "\\kd"
+  },
+  {
+   "sym": "E_field",
+   "latex": "\\mathbf{E}",
+   "macro": "\\kEfield"
+  },
+  {
+   "sym": "t",
+   "latex": "t",
+   "macro": "\\kt"
+  },
+  {
+   "sym": "m",
+   "latex": "m",
+   "macro": "\\km"
+  },
+  {
+   "sym": "p",
+   "latex": "\\hat{p}",
+   "macro": "\\kp"
+  },
+  {
+   "sym": "r",
+   "latex": "\\hat{r}",
+   "macro": "\\kr"
+  },
+  {
+   "sym": "B_z",
+   "latex": "B_z",
+   "macro": "\\kBz"
+  },
+  {
+   "sym": "mu_e",
+   "latex": "\\mu_e",
+   "macro": "\\kmue"
+  },
+  {
+   "sym": "mu_N",
+   "latex": "\\mu_N",
+   "macro": "\\kmuN"
+  },
+  {
+   "sym": "Delta_E_Z",
+   "latex": "\\Delta E_Z",
+   "macro": "\\kdEZ"
+  },
+  {
+   "sym": "V_SL",
+   "latex": "V_{SL}",
+   "macro": "\\kVSL"
+  },
+  {
+   "sym": "V_HFS",
+   "latex": "V_{HFS}",
+   "macro": "\\kVHFS"
+  },
+  {
+   "sym": "H_HFS",
+   "latex": "H_{HFS}",
+   "macro": "\\kHHFS"
+  },
+  {
+   "sym": "H_Z",
+   "latex": "H_Z",
+   "macro": "\\kHZ"
+  },
+  {
+   "sym": "U",
+   "latex": "U",
+   "macro": "\\kU"
+  },
+  {
+   "sym": "Delta_r",
+   "latex": "\\Delta r",
+   "macro": "\\kDeltar"
+  },
+  {
+   "sym": "Delta_p",
+   "latex": "\\Delta p",
+   "macro": "\\kDeltap"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "coherent-and-dissipative-dynamics",
+   "kind": "idea",
+   "section": "1.1",
+   "name": "相干与耗散动力学并重",
+   "statement": "原子物理学通过相干演化与环境退相干和耗散的统一图景来研究；要理解所研究系统的动力学，二者必须在同等地位上处理。"
+  },
+  {
+   "id": "simple-quantum-systems",
+   "kind": "idea",
+   "section": "1.1",
+   "name": "简单系统",
+   "terms": [
+    "简单"
+   ],
+   "statement": "理论上的理解首先建立在简单系统之上，即只有少数几个态、少数几个粒子或少数几个量子起作用的系统；更复杂的系统则通过把这些基本构件组合起来加以理解。"
+  },
+  {
+   "id": "state-vector",
+   "kind": "definition",
+   "section": "1.2",
+   "name": "态矢量",
+   "symbol": "psi",
+   "type": "state",
+   "statement": "对系统最完整的了解包含在态矢量中，它是希尔伯特空间的一个元素，可以在任意规范正交基中展开。",
+   "forms": [
+    {
+     "id": "eq-1-1",
+     "latex": "|\\psi\\rangle = \\sum_n |n\\rangle\\langle n|\\psi\\rangle",
+     "anchor": "1.2-eq-1-1"
+    }
+   ]
+  },
+  {
+   "id": "probability-amplitude",
+   "kind": "definition",
+   "section": "1.2",
+   "name": "展开系数",
+   "symbol": "c_n",
+   "type": "amplitude",
+   "statement": "态在某一基矢态上的投影给出该态在这组基中的展开系数。",
+   "forms": [
+    {
+     "id": "eq-cn",
+     "latex": "c_n = \\langle n|\\psi\\rangle",
+     "anchor": "1.2-states"
+    }
+   ]
+  },
+  {
+   "id": "born-rule",
+   "kind": "axiom",
+   "section": "1.2",
+   "name": "基矢态的概率",
+   "symbol": "P_n",
+   "type": "population",
+   "statement": "发现系统处于某一基矢态的概率等于其展开系数模的平方。",
+   "forms": [
+    {
+     "id": "eq-pn",
+     "latex": "P_n = |c_n|^2",
+     "anchor": "1.2-states"
+    }
+   ]
+  },
+  {
+   "id": "superposition",
+   "kind": "result",
+   "section": "1.2",
+   "name": "叠加与干涉",
+   "statement": "对于态的叠加，某一基矢态的概率是概率幅之和的绝对值平方，而不是概率之和；二者之差即干涉项。",
+   "forms": [
+    {
+     "id": "eq-1-4",
+     "latex": "P_n = \\frac{1}{2}\\left|c_n^{(1)} + c_n^{(2)}\\right|^2 \\neq \\frac{1}{2}(P_n^{(1)} + P_n^{(2)})",
+     "anchor": "1.2-eq-1-4"
+    }
+   ]
+  },
+  {
+   "id": "observable",
+   "kind": "definition",
+   "section": "1.2",
+   "name": "可观测量",
+   "statement": "可观测量由作用在希尔伯特空间的态上的厄米算符表示。",
+   "forms": [
+    {
+     "id": "eq-1-5",
+     "latex": "\\langle\\psi_1|\\hat{O}|\\psi_2\\rangle = (\\langle\\psi_2|\\hat{O}|\\psi_1\\rangle)^*",
+     "anchor": "1.2-eq-1-5"
+    }
+   ]
+  },
+  {
+   "id": "expectation-value",
+   "kind": "definition",
+   "section": "1.2",
+   "name": "期望值",
+   "statement": "可观测量在某一态中的期望值，是其本征值以各本征态的概率为权重的平均值。",
+   "forms": [
+    {
+     "id": "eq-1-6",
+     "latex": "\\langle\\hat{O}\\rangle = \\langle\\psi|\\hat{O}|\\psi\\rangle",
+     "anchor": "1.2-eq-1-6"
+    },
+    {
+     "id": "eq-1-8",
+     "latex": "\\langle\\hat{O}\\rangle = \\sum_n \\mathcal{O}_n|c_n|^2 = \\sum_n \\mathcal{O}_n p_n",
+     "anchor": "1.2-eq-1-8"
+    }
+   ]
+  },
+  {
+   "id": "commutator",
+   "kind": "definition",
+   "section": "1.2",
+   "name": "对易式",
+   "statement": "一般来说，算符并不对易；当它们的对易式不为零时，它们没有相同的本征态。",
+   "forms": [
+    {
+     "id": "eq-1-9",
+     "latex": "[\\hat{A}, \\hat{B}] = i\\hat{C}",
+     "anchor": "1.2-eq-1-9"
+    }
+   ]
+  },
+  {
+   "id": "heisenberg-uncertainty-principle",
+   "kind": "result",
+   "section": "1.2",
+   "name": "海森伯不确定性原理",
+   "statement": "对任意两个算符，它们的不确定度之积至少是其对易式期望值的一半。",
+   "forms": [
+    {
+     "id": "eq-1-10",
+     "latex": "\\Delta A \\cdot \\Delta B \\geq \\frac{1}{2}\\langle[\\hat{A}, \\hat{B}]\\rangle",
+     "anchor": "1.2-eq-1-10"
+    }
+   ]
+  },
+  {
+   "id": "hamiltonian",
+   "kind": "definition",
+   "section": "1.2",
+   "name": "哈密顿量",
+   "symbol": "H",
+   "type": "energy",
+   "statement": "哈密顿量是系统能量的算符，它生成系统的时间演化；其本征态就是定态。"
+  },
+  {
+   "id": "schrodinger-equation",
+   "kind": "axiom",
+   "section": "1.2",
+   "name": "薛定谔方程",
+   "terms": [
+    "薛定谔方程"
+   ],
+   "statement": "在薛定谔绘景中，态矢量按照薛定谔方程随时间演化，而算符则不随时间变化。",
+   "forms": [
+    {
+     "id": "eq-1-11",
+     "latex": "i\\hbar\\frac{d}{dt}|\\psi\\rangle = \\hat{H}|\\psi\\rangle",
+     "anchor": "1.2-eq-1-11"
+    }
+   ]
+  },
+  {
+   "id": "stationary-states",
+   "kind": "definition",
+   "section": "1.2",
+   "name": "定态",
+   "statement": "薛定谔方程的定态解就是哈密顿量的本征态。",
+   "forms": [
+    {
+     "id": "eq-stationary",
+     "latex": "\\hat{H}|E_n\\rangle = E_n|E_n\\rangle",
+     "anchor": "1.2-schrodinger-picture"
+    }
+   ]
+  },
+  {
+   "id": "evolution-in-energy-eigenbasis",
+   "kind": "result",
+   "section": "1.2",
+   "name": "能量本征基下的时间演化",
+   "statement": "按哈密顿量的本征态展开时，态的每个系数只获得其能量对应的相位。",
+   "forms": [
+    {
+     "id": "eq-1-12",
+     "latex": "|\\psi(t)\\rangle = \\sum_n e^{-iE_nt/\\hbar}c_n|E_n\\rangle",
+     "anchor": "1.2-eq-1-12"
+    }
+   ]
+  },
+  {
+   "id": "time-evolution-operator",
+   "kind": "definition",
+   "section": "1.2",
+   "name": "时间演化算符",
+   "statement": "对时间演化方程作形式上的积分，得到把初态带到时刻 t 的态的算符。",
+   "forms": [
+    {
+     "id": "eq-u",
+     "latex": "|\\psi(t)\\rangle = \\exp[-i\\hat{H}t/\\hbar]|\\psi(0)\\rangle = \\hat{U}(t)|\\psi(0)\\rangle",
+     "anchor": "1.2-schrodinger-picture"
+    }
+   ]
+  },
+  {
+   "id": "heisenberg-picture",
+   "kind": "result",
+   "section": "1.2",
+   "name": "海森伯运动方程",
+   "statement": "在海森伯绘景中，态不演化；可观测量依赖于时间，并按照海森伯运动方程演化。",
+   "forms": [
+    {
+     "id": "eq-1-13",
+     "latex": "i\\hbar\\frac{d}{dt}\\hat{O}(t) = [\\hat{O}, \\hat{H}] + i\\hbar\\frac{\\partial\\hat{O}}{\\partial t}",
+     "anchor": "1.2-eq-1-13"
+    }
+   ]
+  },
+  {
+   "id": "hydrogen-hamiltonian",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "氢原子哈密顿量",
+   "statement": "氢由一个通过库仑力束缚在质子上的电子构成，其能量是电子的动能加上库仑势。",
+   "forms": [
+    {
+     "id": "eq-1-14",
+     "latex": "\\hat{H} = \\frac{\\hat{p}^2}{2m} - \\frac{e^2}{\\hat{r}}",
+     "anchor": "1.3-eq-1-14"
+    }
+   ]
+  },
+  {
+   "id": "hydrogen-energy-levels",
+   "kind": "result",
+   "section": "1.3",
+   "name": "氢原子束缚态能量",
+   "statement": "氢有无穷多个分立的束缚态，能量为 -R∞/n²，还有一个能量为正的连续的非束缚态集合。",
+   "forms": [
+    {
+     "id": "eq-hydrogen-en",
+     "latex": "E_n = -\\frac{R_\\infty}{n^2}",
+     "anchor": "1.3-hydrogen-levels"
+    }
+   ]
+  },
+  {
+   "id": "rydberg-constant",
+   "kind": "result",
+   "section": "1.3",
+   "name": "里德伯常量",
+   "symbol": "R_inf",
+   "terms": [
+    "里德伯常量"
+   ],
+   "type": "energy",
+   "statement": "原子核质量为无穷大时氢基态的结合能。",
+   "forms": [
+    {
+     "id": "eq-1-16",
+     "latex": "E_0 = -R_\\infty \\sim -\\frac{me^4}{2\\hbar^2}",
+     "anchor": "1.3-drv-rydberg-estimate"
+    }
+   ]
+  },
+  {
+   "id": "uncertainty-energy-estimate",
+   "kind": "skill",
+   "section": "1.3",
+   "name": "用不确定性原理估计结合能",
+   "statement": "在基态中把海森伯不等式取为等式，并对所得平均能量关于态的大小求极小，就可估计其结合能。",
+   "forms": [
+    {
+     "id": "eq-1-15",
+     "latex": "E = \\frac{\\hbar^2}{2m\\Delta r^2} - \\frac{e^2}{\\Delta r}",
+     "anchor": "1.3-drv-rydberg-estimate"
+    }
+   ]
+  },
+  {
+   "id": "degeneracy-and-symmetry",
+   "kind": "result",
+   "section": "1.3",
+   "name": "简并与对称性",
+   "statement": "与哈密顿量对易的算符与它有共同的本征矢量，且能量不依赖于该算符的本征值：能级简并来自对称性，即在一组幺正变换下的不变性。",
+   "forms": [
+    {
+     "id": "eq-1-17",
+     "latex": "\\hat{A}|E_n, A_l\\rangle = A_l|E_n, A_l\\rangle",
+     "anchor": "1.3-eq-1-17"
+    },
+    {
+     "id": "eq-1-18",
+     "latex": "\\hat{H}|E_n, A_l\\rangle = E_n|E_n, A_l\\rangle",
+     "anchor": "1.3-eq-1-18"
+    }
+   ]
+  },
+  {
+   "id": "principal-quantum-number",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "主量子数",
+   "statement": "氢原子的能量只依赖于量子数 n；所有角动量态 l = 0, …, n−1 都共有这个 n。"
+  },
+  {
+   "id": "l-degeneracy-lifting",
+   "kind": "result",
+   "section": "1.3",
+   "name": "L 简并的解除",
+   "statement": "势对 1/r 的偏离，例如内层电子对核电荷的屏蔽，使能量成为 n 和 l 两者的函数，l 大的态束缚得更松。",
+   "forms": [
+    {
+     "id": "eq-enl",
+     "latex": "E = E(n, l)",
+     "anchor": "1.3-l-lifting"
+    }
+   ]
+  },
+  {
+   "id": "rydberg-states",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "里德伯态",
+   "terms": [
+    "里德伯态"
+   ],
+   "statement": "n 非常大的态，其不同 l 之间的分裂减小，使它们近乎类氢的光谱。"
+  },
+  {
+   "id": "fine-structure",
+   "kind": "result",
+   "section": "1.3",
+   "name": "精细结构",
+   "terms": [
+    "精细结构"
+   ],
+   "statement": "相对论修正，即动能修正、自旋轨道项和达尔文项，使每个主能级发生分裂，从而不同的 J 具有不同的能量。"
+  },
+  {
+   "id": "total-electronic-angular-momentum",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "电子总角动量",
+   "symbol": "J",
+   "type": "angular-momentum",
+   "statement": "电子的轨道角动量与自旋角动量之和；一旦自旋轨道耦合起作用，就由它的量子数来标记各个态。",
+   "forms": [
+    {
+     "id": "eq-j",
+     "latex": "\\hat{J} = \\hat{S} + \\hat{L}",
+     "anchor": "1.3-good-numbers"
+    }
+   ]
+  },
+  {
+   "id": "spin-orbit-coupling",
+   "kind": "result",
+   "section": "1.3",
+   "name": "自旋轨道相互作用",
+   "terms": [
+    "自旋轨道项"
+   ],
+   "statement": "电子的自旋磁偶极子与原子内部磁场的相互作用，它使 P 态的 J = 3/2 和 J = 1/2 能级分裂 A。",
+   "forms": [
+    {
+     "id": "eq-1-19",
+     "latex": "V_{SL} = A\\hat{S} \\cdot \\hat{L}",
+     "anchor": "1.3-eq-1-19"
+    },
+    {
+     "id": "eq-1-22",
+     "latex": "V_{SL} = A\\hat{S} \\cdot \\hat{L} = (A/2)(J^2 - L^2 - S^2)",
+     "anchor": "1.3-drv-fine-structure-splitting"
+    },
+    {
+     "id": "eq-1-23",
+     "latex": "\\Delta E_{3/2} - \\Delta E_{1/2} = A",
+     "anchor": "1.3-drv-fine-structure-splitting"
+    }
+   ]
+  },
+  {
+   "id": "darwin-term",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "达尔文项",
+   "terms": [
+    "达尔文项"
+   ],
+   "statement": "对势能的一种相对论修正，它只在原点处起作用，因此仅对 L = 0 的态不为零。"
+  },
+  {
+   "id": "d1-d2-lines",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "D1 线与 D2 线",
+   "terms": [
+    "D1 线",
+    "D2 线"
+   ],
+   "statement": "钠基态到激发态 P₁/₂ 和 P₃/₂ 的跃迁。"
+  },
+  {
+   "id": "wavefunction-parity",
+   "kind": "result",
+   "section": "1.3",
+   "name": "类氢波函数的宇称",
+   "statement": "类氢波函数是径向函数乘以球谐函数，其宇称为 (−1)^l。",
+   "forms": [
+    {
+     "id": "eq-1-24",
+     "latex": "Y_{lm}(\\theta, \\phi) = P_l^m(\\cos\\theta)e^{im\\phi}",
+     "anchor": "1.3-eq-1-24"
+    },
+    {
+     "id": "eq-parity",
+     "latex": "Y_{lm}(\\pi - \\theta, \\phi + \\pi) = (-1)^l Y_{lm}(\\theta, \\phi)",
+     "anchor": "1.3-parity"
+    }
+   ]
+  },
+  {
+   "id": "hyperfine-interaction",
+   "kind": "result",
+   "section": "1.3",
+   "name": "超精细相互作用",
+   "terms": [
+    "超精细相互作用"
+   ],
+   "statement": "价电子的磁偶极子与核自旋的相互作用，通过接触项对 S 态最强。",
+   "forms": [
+    {
+     "id": "eq-1-26",
+     "latex": "V_{HFS} = A_{HFS}\\hat{I} \\cdot \\hat{J}",
+     "anchor": "1.3-eq-1-26"
+    },
+    {
+     "id": "eq-1-25",
+     "latex": "\\mathbf{B}(\\mathbf{R}) = \\frac{\\mu_0}{4\\pi}\\left(\\frac{3\\mathbf{n}(\\mathbf{n} \\cdot \\mathbf{m}_N) - \\mathbf{m}_N}{R^3} + \\frac{8\\pi}{3}\\mathbf{m}_N\\delta(\\mathbf{R})\\right)",
+     "anchor": "1.3-eq-1-25"
+    }
+   ]
+  },
+  {
+   "id": "total-angular-momentum-f",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "总角动量 F",
+   "symbol": "F",
+   "type": "angular-momentum",
+   "statement": "在精细相互作用和超精细相互作用下，守恒的量子数是总角动量，即核自旋加上电子的角动量。",
+   "forms": [
+    {
+     "id": "eq-1-27",
+     "latex": "\\hat{F} = \\hat{I} + \\hat{S} + \\hat{L}",
+     "anchor": "1.3-eq-1-27"
+    }
+   ]
+  },
+  {
+   "id": "alkali-ground-hyperfine",
+   "kind": "result",
+   "section": "1.3",
+   "name": "碱金属基态的超精细结构",
+   "statement": "氢基态分裂为 F = 0 和 1，间隔 A_HFS/2；²³Na 和 ⁸⁷Rb 的基态分裂为 F = 1 和 2，间隔 3A_HFS/2。"
+  },
+  {
+   "id": "zeeman-effect",
+   "kind": "result",
+   "section": "1.3",
+   "name": "塞曼效应",
+   "terms": [
+    "塞曼效应"
+   ],
+   "statement": "在静态外磁场中，能级因磁矩与磁场的相互作用而移位。",
+   "forms": [
+    {
+     "id": "eq-1-28",
+     "latex": "H = -\\mu \\cdot \\mathbf{B}",
+     "anchor": "1.3-eq-1-28"
+    },
+    {
+     "id": "eq-1-30",
+     "latex": "H_Z = -\\mu_e S_Z B_Z - \\mu_N I_Z B_Z",
+     "anchor": "1.3-eq-1-30"
+    }
+   ]
+  },
+  {
+   "id": "bohr-magneton",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "玻尔磁子",
+   "symbol": "mu_B",
+   "type": "magnetic-moment",
+   "statement": "原子磁矩的单位，电子磁矩和核磁矩通过各自的 g 因子用它来表示。"
+  },
+  {
+   "id": "zeeman-field-regimes",
+   "kind": "idea",
+   "section": "1.3",
+   "name": "强场与弱场情形",
+   "statement": "在强场中，m_S 和 m_I 是好量子数；在弱场中，F 和 m_F 是好量子数。"
+  },
+  {
+   "id": "clebsch-gordan-coefficients",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "CG 系数",
+   "terms": [
+    "CG 系数"
+   ],
+   "statement": "把耦合基 |J, m_J⟩ 与两个角动量的乘积基联系起来的系数。",
+   "forms": [
+    {
+     "id": "eq-1-31",
+     "latex": "|J, m_J\\rangle = \\sum_{j_1, j_2}\\langle J_1J_2j_1j_2|Jm_J\\rangle|J_1J_2j_1j_2\\rangle",
+     "anchor": "1.3-eq-1-31"
+    }
+   ]
+  },
+  {
+   "id": "weak-field-zeeman-shift",
+   "kind": "result",
+   "section": "1.3",
+   "name": "弱场塞曼移位",
+   "statement": "在低场下，塞曼效应是对精细能级和超精细能级的微扰，|F, m_F⟩ 的移位与磁场成正比。",
+   "forms": [
+    {
+     "id": "eq-1-37",
+     "latex": "\\Delta E_Z = g_F\\mu_B m_F B_z",
+     "anchor": "1.3-eq-1-37"
+    }
+   ]
+  },
+  {
+   "id": "lande-g-factor",
+   "kind": "result",
+   "section": "1.3",
+   "name": "朗德 g 因子",
+   "statement": "标度 J 能级或 F 能级的塞曼移位的因子 g_J 和 g_F。",
+   "forms": [
+    {
+     "id": "eq-1-38",
+     "latex": "g_F = g_J\\frac{F(F+1) + J(J+1) - I(I+1)}{2F(F+1)}",
+     "anchor": "1.3-eq-1-38"
+    },
+    {
+     "id": "eq-1-39",
+     "latex": "g_J = 1 + \\frac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)}",
+     "anchor": "1.3-eq-1-39"
+    }
+   ]
+  },
+  {
+   "id": "dipole-interaction",
+   "kind": "axiom",
+   "section": "1.3",
+   "name": "电偶极相互作用",
+   "statement": "电场中的中性原子产生电偶极矩，该偶极矩与电场相互作用；非共振时能级移位，近共振时发生跃迁。",
+   "forms": [
+    {
+     "id": "eq-1-40",
+     "latex": "U = -\\mathbf{d} \\cdot \\mathbf{E}",
+     "anchor": "1.3-eq-1-40"
+    }
+   ]
+  },
+  {
+   "id": "dipole-matrix-element",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "偶极矩阵元",
+   "type": "dipole",
+   "statement": "只有当偶极算符在两个态之间的矩阵元不为零时，这两个态之间才可能发生跃迁。",
+   "forms": [
+    {
+     "id": "eq-1-43",
+     "latex": "\\mu_{a'a} \\equiv \\langle a'|\\hat{\\mathbf{d}}|a\\rangle \\neq 0",
+     "anchor": "1.3-eq-1-43"
+    }
+   ]
+  },
+  {
+   "id": "selection-rules",
+   "kind": "result",
+   "section": "1.3",
+   "name": "选择定则",
+   "terms": [
+    "选择定则"
+   ],
+   "statement": "对偶极矩阵元不为零的态之间的限制：ΔL = ±1，ΔS = 0，ΔJ 和 ΔF = ±1, 0，且 0 → 0 被禁戒。",
+   "forms": [
+    {
+     "id": "eq-1-45",
+     "latex": "\\Delta L = \\pm 1",
+     "anchor": "1.3-eq-1-45"
+    },
+    {
+     "id": "eq-1-47",
+     "latex": "\\Delta S = 0",
+     "anchor": "1.3-eq-1-47"
+    },
+    {
+     "id": "eq-1-48",
+     "latex": "\\Delta J = \\pm 1, 0",
+     "anchor": "1.3-eq-1-48"
+    },
+    {
+     "id": "eq-1-49",
+     "latex": "\\Delta F = \\pm 1, 0",
+     "anchor": "1.3-eq-1-49"
+    }
+   ]
+  },
+  {
+   "id": "polarization-selection-rules",
+   "kind": "result",
+   "section": "1.3",
+   "name": "磁量子数选择定则",
+   "statement": "磁量子数的变化由光的偏振决定：σ⁺ 为 +1，σ⁻ 为 −1，ẑ 光为 0。",
+   "forms": [
+    {
+     "id": "eq-1-58",
+     "latex": "\\sigma^+ \\Rightarrow \\Delta m_L = +1",
+     "anchor": "1.3-eq-1-58"
+    },
+    {
+     "id": "eq-1-59",
+     "latex": "\\sigma^- \\Rightarrow \\Delta m_L = -1",
+     "anchor": "1.3-eq-1-59"
+    },
+    {
+     "id": "eq-1-60",
+     "latex": "\\hat{z} \\Rightarrow \\Delta m_L = 0",
+     "anchor": "1.3-eq-1-60"
+    }
+   ]
+  },
+  {
+   "id": "spherical-polarization-basis",
+   "kind": "definition",
+   "section": "1.3",
+   "name": "圆偏振分量",
+   "statement": "写成右旋和左旋圆偏振分量以及 ẑ 线偏振分量的电场。",
+   "forms": [
+    {
+     "id": "eq-1-57",
+     "latex": "\\hat{\\epsilon}_\\pm = \\mp(\\hat{\\epsilon}_x \\pm i\\hat{\\epsilon}_y)/\\sqrt{2}",
+     "anchor": "1.3-eq-1-57"
+    }
+   ]
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "probability-amplitude",
+   "prereq": "state-vector"
+  },
+  {
+   "concept": "born-rule",
+   "prereq": "probability-amplitude"
+  },
+  {
+   "concept": "superposition",
+   "prereq": "born-rule"
+  },
+  {
+   "concept": "expectation-value",
+   "prereq": "observable"
+  },
+  {
+   "concept": "expectation-value",
+   "prereq": "born-rule"
+  },
+  {
+   "concept": "heisenberg-uncertainty-principle",
+   "prereq": "commutator"
+  },
+  {
+   "concept": "heisenberg-uncertainty-principle",
+   "prereq": "expectation-value"
+  },
+  {
+   "concept": "commutator",
+   "prereq": "observable"
+  },
+  {
+   "concept": "schrodinger-equation",
+   "prereq": "hamiltonian"
+  },
+  {
+   "concept": "schrodinger-equation",
+   "prereq": "state-vector"
+  },
+  {
+   "concept": "stationary-states",
+   "prereq": "schrodinger-equation"
+  },
+  {
+   "concept": "evolution-in-energy-eigenbasis",
+   "prereq": "stationary-states"
+  },
+  {
+   "concept": "evolution-in-energy-eigenbasis",
+   "prereq": "probability-amplitude"
+  },
+  {
+   "concept": "time-evolution-operator",
+   "prereq": "schrodinger-equation"
+  },
+  {
+   "concept": "heisenberg-picture",
+   "prereq": "schrodinger-equation"
+  },
+  {
+   "concept": "heisenberg-picture",
+   "prereq": "commutator"
+  },
+  {
+   "concept": "hydrogen-hamiltonian",
+   "prereq": "hamiltonian"
+  },
+  {
+   "concept": "hydrogen-energy-levels",
+   "prereq": "hydrogen-hamiltonian"
+  },
+  {
+   "concept": "hydrogen-energy-levels",
+   "prereq": "stationary-states"
+  },
+  {
+   "concept": "rydberg-constant",
+   "prereq": "hydrogen-energy-levels"
+  },
+  {
+   "concept": "uncertainty-energy-estimate",
+   "prereq": "heisenberg-uncertainty-principle"
+  },
+  {
+   "concept": "uncertainty-energy-estimate",
+   "prereq": "hydrogen-hamiltonian"
+  },
+  {
+   "concept": "degeneracy-and-symmetry",
+   "prereq": "commutator"
+  },
+  {
+   "concept": "degeneracy-and-symmetry",
+   "prereq": "stationary-states"
+  },
+  {
+   "concept": "principal-quantum-number",
+   "prereq": "hydrogen-energy-levels"
+  },
+  {
+   "concept": "l-degeneracy-lifting",
+   "prereq": "principal-quantum-number"
+  },
+  {
+   "concept": "l-degeneracy-lifting",
+   "prereq": "degeneracy-and-symmetry"
+  },
+  {
+   "concept": "rydberg-states",
+   "prereq": "l-degeneracy-lifting"
+  },
+  {
+   "concept": "fine-structure",
+   "prereq": "total-electronic-angular-momentum"
+  },
+  {
+   "concept": "fine-structure",
+   "prereq": "degeneracy-and-symmetry"
+  },
+  {
+   "concept": "spin-orbit-coupling",
+   "prereq": "fine-structure"
+  },
+  {
+   "concept": "darwin-term",
+   "prereq": "fine-structure"
+  },
+  {
+   "concept": "d1-d2-lines",
+   "prereq": "spin-orbit-coupling"
+  },
+  {
+   "concept": "wavefunction-parity",
+   "prereq": "hydrogen-energy-levels"
+  },
+  {
+   "concept": "hyperfine-interaction",
+   "prereq": "total-electronic-angular-momentum"
+  },
+  {
+   "concept": "total-angular-momentum-f",
+   "prereq": "hyperfine-interaction"
+  },
+  {
+   "concept": "alkali-ground-hyperfine",
+   "prereq": "total-angular-momentum-f"
+  },
+  {
+   "concept": "zeeman-effect",
+   "prereq": "bohr-magneton"
+  },
+  {
+   "concept": "zeeman-effect",
+   "prereq": "hamiltonian"
+  },
+  {
+   "concept": "zeeman-field-regimes",
+   "prereq": "zeeman-effect"
+  },
+  {
+   "concept": "zeeman-field-regimes",
+   "prereq": "total-angular-momentum-f"
+  },
+  {
+   "concept": "clebsch-gordan-coefficients",
+   "prereq": "total-electronic-angular-momentum"
+  },
+  {
+   "concept": "weak-field-zeeman-shift",
+   "prereq": "zeeman-field-regimes"
+  },
+  {
+   "concept": "weak-field-zeeman-shift",
+   "prereq": "lande-g-factor"
+  },
+  {
+   "concept": "lande-g-factor",
+   "prereq": "total-angular-momentum-f"
+  },
+  {
+   "concept": "dipole-interaction",
+   "prereq": "hamiltonian"
+  },
+  {
+   "concept": "dipole-matrix-element",
+   "prereq": "dipole-interaction"
+  },
+  {
+   "concept": "selection-rules",
+   "prereq": "dipole-matrix-element"
+  },
+  {
+   "concept": "selection-rules",
+   "prereq": "wavefunction-parity"
+  },
+  {
+   "concept": "polarization-selection-rules",
+   "prereq": "selection-rules"
+  },
+  {
+   "concept": "polarization-selection-rules",
+   "prereq": "spherical-polarization-basis"
+  },
+  {
+   "concept": "polarization-selection-rules",
+   "prereq": "clebsch-gordan-coefficients"
+  }
+ ]
+}

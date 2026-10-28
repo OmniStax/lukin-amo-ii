@@ -1,0 +1,2253 @@
+{
+  "types": [],
+  "symbols": [
+    {
+      "sym": "kappa",
+      "latex": "\\kappa",
+      "macro": "\\kkappa"
+    },
+    {
+      "sym": "alpha_coh",
+      "latex": "\\alpha",
+      "macro": "\\kalphacoh"
+    },
+    {
+      "sym": "x_quad",
+      "latex": "\\hat{x}",
+      "macro": "\\kxquad"
+    },
+    {
+      "sym": "p_quad",
+      "latex": "\\hat{p}",
+      "macro": "\\kpquad"
+    },
+    {
+      "sym": "D_shift",
+      "latex": "\\hat{D}(\\alpha)",
+      "macro": "\\kDshift"
+    },
+    {
+      "sym": "P_alpha",
+      "latex": "P(\\alpha)",
+      "macro": "\\kPalpha"
+    },
+    {
+      "sym": "tau_Rabi",
+      "latex": "\\tau_\\mathrm{Rabi}",
+      "macro": "\\ktauRabi"
+    },
+    {
+      "sym": "tau_collapse",
+      "latex": "\\tau_\\mathrm{Collapse}",
+      "macro": "\\ktaucollapse"
+    },
+    {
+      "sym": "tau_revival",
+      "latex": "\\tau_\\mathrm{Revival}",
+      "macro": "\\ktaurevival"
+    },
+    {
+      "sym": "Q_fac",
+      "latex": "Q",
+      "macro": "\\kQfac"
+    },
+    {
+      "sym": "F_fin",
+      "latex": "F",
+      "macro": "\\kFfin"
+    },
+    {
+      "sym": "g2",
+      "latex": "g^{(2)}",
+      "macro": "\\kgtwo"
+    },
+    {
+      "sym": "sigma_gain",
+      "latex": "\\sigma",
+      "macro": "\\ksigmagain"
+    },
+    {
+      "sym": "beta_gain",
+      "latex": "\\beta",
+      "macro": "\\kbetagain"
+    },
+    {
+      "sym": "beta_tilde",
+      "latex": "\\tilde{\\beta}",
+      "macro": "\\kbetatilde"
+    },
+    {
+      "sym": "xi_pdc",
+      "latex": "\\xi",
+      "macro": "\\kxipdc"
+    },
+    {
+      "sym": "r_sq",
+      "latex": "r",
+      "macro": "\\krsq"
+    },
+    {
+      "sym": "S_coll",
+      "latex": "\\mathbf{S}",
+      "macro": "\\kScoll"
+    },
+    {
+      "sym": "c_np1",
+      "latex": "c_{n+1}",
+      "macro": "\\kcnpone"
+    },
+    {
+      "sym": "c_11",
+      "latex": "c_{1,1}",
+      "macro": "\\kconeone"
+    },
+    {
+      "sym": "c_20",
+      "latex": "c_{2,0}",
+      "macro": "\\kctwozero"
+    },
+    {
+      "sym": "E_cav",
+      "latex": "E",
+      "macro": "\\kEcav"
+    },
+    {
+      "sym": "P_quad",
+      "latex": "\\hat{P}",
+      "macro": "\\kPquad"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "fock-states",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "福克态",
+      "terms": [
+        "福克态",
+        "光子数态"
+      ],
+      "type": "state",
+      "statement": "场哈密顿量的本征基由光子数态，即福克态，构成，每个态在其模中含有确定的光子数。",
+      "forms": [
+        {
+          "id": "eq-9-4",
+          "latex": "\\hat{n}_{k,\\alpha}|n_{k,\\alpha}\\rangle = \\hat{a}^\\dagger_{k,\\alpha}\\hat{a}_{k,\\alpha}|n_{k,\\alpha}\\rangle = n_{k,\\alpha}|n_{k,\\alpha}\\rangle",
+          "anchor": "9.1-eq-9-4"
+        },
+        {
+          "id": "eq-9-3",
+          "latex": "\\hat{H} = \\sum_{k,\\alpha}\\hbar\\omega_k\\left(\\hat{a}^\\dagger_{k,\\alpha}\\hat{a}_{k,\\alpha} + \\frac{1}{2}\\right)",
+          "anchor": "9.1-eq-9-3"
+        }
+      ]
+    },
+    {
+      "id": "single-mode-field",
+      "kind": "idea",
+      "section": "9.1",
+      "name": "单模描述",
+      "statement": "量子场的许多性质可以由单个模的演化来理解，这对于高精细度腔的场中的原子在定量上也是正确的。"
+    },
+    {
+      "id": "photon-statistics",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "光子统计学",
+      "terms": [
+        "光子分布",
+        "光子统计学"
+      ],
+      "type": "population",
+      "statement": "一个模中光子数的概率分布，即场的密度矩阵在福克基中的对角元。"
+    },
+    {
+      "id": "thermal-photon-distribution",
+      "kind": "result",
+      "section": "9.1",
+      "name": "单模热态",
+      "type": "population",
+      "statement": "处于热平衡的单个模具有对角的密度矩阵，其光子分布随 n 指数下降，所以零光子最可能，平均值是玻色-爱因斯坦的 n̄，平均场为零。",
+      "forms": [
+        {
+          "id": "eq-9-6",
+          "latex": "\\rho_{nn} = e^{-n\\hbar\\omega/k_B T}\\cdot(1 - e^{-\\hbar\\omega/k_B T})",
+          "anchor": "9.1-eq-9-6"
+        },
+        {
+          "id": "eq-9-5",
+          "latex": "\\hat{\\rho} = \\frac{e^{-\\hat{H}/k_B T}}{\\mathrm{Tr}[e^{-\\hat{H}/k_B T}]}",
+          "anchor": "9.1-eq-9-5"
+        },
+        {
+          "id": "eq-9-7",
+          "latex": "\\overline{n} = \\sum_n n\\rho_{nn} = \\frac{1}{e^{\\hbar\\omega/k_B T} - 1}",
+          "anchor": "9.1-eq-9-7"
+        },
+        {
+          "id": "eq-9-8",
+          "latex": "\\langle\\hat{E}\\rangle \\propto \\langle\\hat{a}\\rangle = 0",
+          "anchor": "9.1-eq-9-8"
+        }
+      ]
+    },
+    {
+      "id": "multimode-thermal-statistics",
+      "kind": "idea",
+      "section": "9.1",
+      "name": "多模热光",
+      "statement": "对许多模求和，每个模最可能为空，热场的总光子数最可能是有限的，其分布看上去是泊松型的；太阳光只有被滤到带宽 Δω 并在短于 1/Δω 的门中探测时，才显示单模统计。"
+    },
+    {
+      "id": "coherent-state",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "相干态",
+      "terms": [
+        "相干态"
+      ],
+      "type": "state",
+      "statement": "光子湮没算符的本征态 |α⟩，即激光的经典相干场的量子态，具有确定的平均电场。",
+      "forms": [
+        {
+          "id": "eq-9-10",
+          "latex": "\\hat{a}|\\alpha\\rangle = \\alpha|\\alpha\\rangle",
+          "anchor": "9.1-eq-9-10"
+        },
+        {
+          "id": "eq-9-9",
+          "latex": "\\langle\\psi|\\hat{E}|\\psi\\rangle = E",
+          "anchor": "9.1-eq-9-9"
+        }
+      ]
+    },
+    {
+      "id": "coherent-amplitude",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "相干振幅",
+      "symbol": "alpha_coh",
+      "type": "quadrature",
+      "statement": "相干态的本征值 α：平均场与它成正比，平均光子数为 |α|²。",
+      "forms": [
+        {
+          "id": "eq-9-12",
+          "latex": "\\langle\\alpha|\\hat{a}^\\dagger\\hat{a}|\\alpha\\rangle = |\\alpha|^2",
+          "anchor": "9.1-eq-9-12"
+        },
+        {
+          "id": "eq-9-11",
+          "latex": "\\langle\\alpha|\\hat{E}|\\alpha\\rangle = \\sqrt{\\frac{\\hbar\\omega}{2\\epsilon_0 V}}\\left(\\alpha e^{i(\\mathbf{k}\\cdot\\mathbf{r} - \\omega t)} + c.c.\\right)",
+          "anchor": "9.1-eq-9-11"
+        }
+      ]
+    },
+    {
+      "id": "quadrature-operators",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "正交分量算符",
+      "terms": [
+        "正交分量算符",
+        "正交分量",
+        "同相",
+        "异相"
+      ],
+      "symbol": "x_quad",
+      "type": "quadrature",
+      "statement": "与振子的位置和动量类似，x̂ 和 p̂ 是 â 和 â† 的厄米组合；场为 x̂ cos ωt + p̂ sin ωt，所以它们是场的同相分量和异相分量。",
+      "forms": [
+        {
+          "id": "eq-9-13",
+          "latex": "\\hat{x} = \\frac{1}{\\sqrt{2}}\\left(\\hat{a} + \\hat{a}^\\dagger\\right)",
+          "anchor": "9.1-eq-9-13"
+        },
+        {
+          "id": "eq-9-14",
+          "latex": "\\hat{p} = \\frac{1}{i\\sqrt{2}}\\left(\\hat{a} - \\hat{a}^\\dagger\\right)",
+          "anchor": "9.1-eq-9-14"
+        },
+        {
+          "id": "eq-9-17",
+          "latex": "\\hat{E} \\propto \\hat{x}\\cos\\omega t + \\hat{p}\\sin\\omega t",
+          "anchor": "9.1-eq-9-17"
+        }
+      ]
+    },
+    {
+      "id": "coherent-state-uncertainty",
+      "kind": "result",
+      "section": "9.1",
+      "name": "相干态的最小不确定度",
+      "terms": [
+        "最经典"
+      ],
+      "statement": "相干态的正交分量方差各为 1/2，是不确定性原理 δxδp ≥ 1/2 所允许的最经典的情形；在相空间中，它是直径为 √2 的圆盘，距原点的距离为 √2|α|。",
+      "forms": [
+        {
+          "id": "eq-9-15",
+          "latex": "\\langle\\delta x^2\\rangle = \\frac{1}{2}",
+          "anchor": "9.1-eq-9-15"
+        },
+        {
+          "id": "eq-9-16",
+          "latex": "\\langle\\delta p^2\\rangle = \\frac{1}{2}",
+          "anchor": "9.1-eq-9-16"
+        }
+      ]
+    },
+    {
+      "id": "local-oscillator",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "本地振荡器",
+      "terms": [
+        "本地振荡器"
+      ],
+      "statement": "与信号混合的参考场 cos ωt，相对于它，x̂ 给出同相分量，p̂ 给出异相分量。",
+      "forms": [
+        {
+          "id": "eq-9-18",
+          "latex": "E_{LO} \\sim \\cos\\omega t",
+          "anchor": "9.1-eq-9-18"
+        }
+      ]
+    },
+    {
+      "id": "shift-operator",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "平移算符",
+      "terms": [
+        "平移算符"
+      ],
+      "symbol": "D_shift",
+      "statement": "算符 D̂(α) = exp(αâ† − α*â) 使态在 x̂、p̂ 平面中平移；作用于真空时它产生相干态，其福克展开由对易式为 c 数的算符的指数恒等式得出。",
+      "forms": [
+        {
+          "id": "eq-9-19",
+          "latex": "\\hat{D}(\\alpha) = e^{\\alpha\\hat{a}^\\dagger - \\alpha^*\\hat{a}}",
+          "anchor": "9.1-eq-9-19"
+        },
+        {
+          "id": "eq-9-20",
+          "latex": "\\hat{D}^{-1}(\\alpha)\\hat{a}\\hat{D}(\\alpha) = \\hat{a} + \\alpha",
+          "anchor": "9.1-eq-9-20"
+        },
+        {
+          "id": "eq-9-21",
+          "latex": "e^{\\hat{A}+\\hat{B}} = e^{\\hat{A}}e^{\\hat{B}}e^{-[\\hat{A},\\hat{B}]/2}",
+          "anchor": "9.1-eq-9-21"
+        },
+        {
+          "id": "eq-9-24",
+          "latex": "\\hat{D}(\\alpha)|0\\rangle = e^{-|\\alpha|^2/2}\\sum_n\\frac{\\alpha^n}{\\sqrt{n!}}|n\\rangle = |\\alpha\\rangle",
+          "anchor": "9.1-drv-shift-operator-on-vacuum"
+        }
+      ]
+    },
+    {
+      "id": "poisson-photon-statistics",
+      "kind": "result",
+      "section": "9.1",
+      "name": "相干态的泊松统计",
+      "terms": [
+        "泊松分布"
+      ],
+      "type": "population",
+      "statement": "相干态的光子数服从泊松分布，方差等于其平均值 |α|²，所以对于大的场，光强变得更加确定。",
+      "forms": [
+        {
+          "id": "eq-9-26",
+          "latex": "\\rho_{nn} = e^{-|\\alpha|^2}\\frac{|\\alpha|^{2n}}{n!}",
+          "anchor": "9.1-drv-coherent-photon-statistics"
+        },
+        {
+          "id": "eq-9-27",
+          "latex": "\\bar{n} = |\\alpha|^2",
+          "anchor": "9.1-drv-coherent-photon-statistics"
+        },
+        {
+          "id": "eq-9-28",
+          "latex": "\\langle\\Delta n^2\\rangle = \\bar{n} = |\\alpha|^2",
+          "anchor": "9.1-drv-coherent-photon-statistics"
+        }
+      ]
+    },
+    {
+      "id": "classical-dipole-radiation",
+      "kind": "result",
+      "section": "9.1",
+      "name": "经典偶极子产生的相干态",
+      "statement": "驱动场的经典振荡偶极子通过平移算符使真空演化，所以它辐射的场是相干态，α = id₀E₀t/2ℏ。",
+      "forms": [
+        {
+          "id": "eq-9-30",
+          "latex": "|\\psi\\rangle = e^{-i\\hat{H}t/\\hbar}|0\\rangle = e^{\\alpha\\hat{a}^\\dagger - \\alpha^*\\hat{a}}|0\\rangle",
+          "anchor": "9.1-eq-9-30"
+        },
+        {
+          "id": "eq-9-29",
+          "latex": "\\hat{H} = -d\\hat{E} = -d_0\\cos\\omega t\\hat{E}",
+          "anchor": "9.1-eq-9-29"
+        }
+      ]
+    },
+    {
+      "id": "multimode-coherent-state",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "多模相干态",
+      "type": "state",
+      "statement": "各模中相干态的乘积，其平均场是经典场，傅里叶分量 E_k ∝ α_k。",
+      "forms": [
+        {
+          "id": "eq-9-31",
+          "latex": "|\\psi\\rangle = \\prod_k|\\alpha_k\\rangle",
+          "anchor": "9.1-eq-9-31"
+        },
+        {
+          "id": "eq-9-33",
+          "latex": "E(r,t) = \\sum_k\\sqrt{\\frac{\\hbar\\omega_k}{2\\epsilon_0 V}}\\alpha_k e^{i(\\mathbf{k}\\cdot\\mathbf{r} - \\omega_k t)} + c.c.",
+          "anchor": "9.1-eq-9-33"
+        }
+      ]
+    },
+    {
+      "id": "coherent-state-overcompleteness",
+      "kind": "result",
+      "section": "9.1",
+      "name": "相干态的超完备性",
+      "terms": [
+        "超完备"
+      ],
+      "statement": "相干态分解恒等算符，(1/π)∫d²α|α⟩⟨α| = 1，但它们不正交，|⟨α|β⟩| = e^{−|α−β|²/2}，所以构成超完备集。",
+      "forms": [
+        {
+          "id": "eq-9-38",
+          "latex": "1 = \\frac{1}{\\pi}\\int d^2\\alpha|\\alpha\\rangle\\langle\\alpha|",
+          "anchor": "9.1-drv-coherent-state-completeness"
+        },
+        {
+          "id": "eq-9-39",
+          "latex": "|\\langle\\alpha|\\beta\\rangle| = e^{-(1/2)|\\alpha-\\beta|^2}",
+          "anchor": "9.1-drv-coherent-state-overlap"
+        },
+        {
+          "id": "eq-9-34",
+          "latex": "\\int|\\alpha\\rangle\\langle\\alpha|d^2\\alpha = \\sum_{m,n}\\int e^{-|\\alpha|^2}\\frac{\\alpha^m\\alpha^{*n}}{\\sqrt{m!n!}}|m\\rangle\\langle n|d^2\\alpha",
+          "anchor": "9.1-drv-coherent-state-completeness"
+        }
+      ]
+    },
+    {
+      "id": "p-representation",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "准概率分布",
+      "terms": [
+        "准概率分布"
+      ],
+      "symbol": "P_alpha",
+      "statement": "密度算符写成 ∫P(α)|α⟩⟨α|d²α；P(α) 总是存在，像概率那样给出正规编序的期望值，但可以为负。",
+      "forms": [
+        {
+          "id": "eq-9-40",
+          "latex": "\\hat{\\rho} = \\int P(\\alpha)|\\alpha\\rangle\\langle\\alpha|d^2\\alpha",
+          "anchor": "9.1-eq-9-40"
+        },
+        {
+          "id": "eq-9-42",
+          "latex": "\\langle\\hat{O}\\rangle = \\int P(\\alpha)O(\\alpha)d^2\\alpha",
+          "anchor": "9.1-eq-9-42"
+        },
+        {
+          "id": "eq-9-43",
+          "latex": "P(\\alpha) = \\frac{e^{|\\alpha|^2}}{\\pi^2}\\int\\langle-\\beta|\\rho|\\beta\\rangle e^{|\\beta|^2}e^{-\\beta\\alpha^* + \\beta^*\\alpha}d^2\\beta",
+          "anchor": "9.1-eq-9-43"
+        }
+      ]
+    },
+    {
+      "id": "nonclassical-light",
+      "kind": "idea",
+      "section": "9.1",
+      "name": "光的非经典态",
+      "terms": [
+        "非经典"
+      ],
+      "statement": "P(α) 的负值与场的非经典性质相关联，标志着量子态与经典态之间的一条边界。"
+    },
+    {
+      "id": "linear-optical-transformations",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "线性光学变换",
+      "terms": [
+        "线性变换"
+      ],
+      "statement": "与入射功率无关的效应，如相移和分束器，在其作用下相干态仍是相干态；相移把 â 变为 âe^{iφ}。",
+      "forms": [
+        {
+          "id": "eq-9-44",
+          "latex": "E \\rightarrow Ee^{i\\phi} \\Rightarrow \\hat{a} \\rightarrow \\hat{a}e^{i\\phi}",
+          "anchor": "9.1-eq-9-44"
+        }
+      ]
+    },
+    {
+      "id": "beamsplitter-transformation",
+      "kind": "result",
+      "section": "9.1",
+      "name": "分束器变换",
+      "terms": [
+        "分束器",
+        "分束器"
+      ],
+      "statement": "透射为 t、反射为 r 的无损耗分束器线性且幺正地混合两个输入湮没算符（|r|² + |t|² = 1），所以两个相干输入离开时仍是相干态。",
+      "forms": [
+        {
+          "id": "eq-9-48",
+          "latex": "\\hat{a}_1^\\mathrm{out} = t\\hat{a}_1^\\mathrm{in} + ir\\hat{a}_2^\\mathrm{in}",
+          "anchor": "9.1-eq-9-48"
+        },
+        {
+          "id": "eq-9-49",
+          "latex": "\\hat{a}_2^\\mathrm{out} = t\\hat{a}_2^\\mathrm{in} + ir\\hat{a}_1^\\mathrm{in}",
+          "anchor": "9.1-eq-9-49"
+        },
+        {
+          "id": "eq-9-45",
+          "latex": "E_1^\\mathrm{out} = tE_1^\\mathrm{in} + irE_2^\\mathrm{in}",
+          "anchor": "9.1-eq-9-45"
+        },
+        {
+          "id": "eq-9-47",
+          "latex": "U = \\begin{pmatrix} t & ir \\\\ ir & t \\end{pmatrix}",
+          "anchor": "9.1-beamsplitter"
+        },
+        {
+          "id": "eq-9-50",
+          "latex": "\\hat{a}_1^\\mathrm{out}|\\alpha_1\\rangle|\\alpha_2\\rangle = (t\\alpha_1 + ir\\alpha_2)|\\alpha_1\\rangle|\\alpha_2\\rangle",
+          "anchor": "9.1-eq-9-50"
+        }
+      ]
+    },
+    {
+      "id": "beamsplitter-unitary",
+      "kind": "result",
+      "section": "9.1",
+      "name": "作为耦合谐振子的分束器",
+      "statement": "分束器变换是两个耦合谐振子的幺正算符 exp(iθâ₁â₂† + iθâ₂â₁†)，θ 由 t 和 r 决定。",
+      "forms": [
+        {
+          "id": "eq-9-52",
+          "latex": "\\hat{U} = e^{i\\theta\\hat{a}_1\\hat{a}_2^\\dagger + i\\theta\\hat{a}_2\\hat{a}_1^\\dagger}",
+          "anchor": "9.1-eq-9-52"
+        },
+        {
+          "id": "eq-9-51",
+          "latex": "\\begin{pmatrix} \\hat{a}_1 \\\\ \\hat{a}_2 \\end{pmatrix}^\\mathrm{out} = \\hat{U}\\begin{pmatrix} \\hat{a}_1 \\\\ \\hat{a}_2 \\end{pmatrix}^\\mathrm{in}",
+          "anchor": "9.1-eq-9-51"
+        }
+      ]
+    },
+    {
+      "id": "cavity-qed",
+      "kind": "idea",
+      "section": "9.2",
+      "name": "腔量子电动力学",
+      "terms": [
+        "腔量子电动力学",
+        "CQED"
+      ],
+      "statement": "单个原子被约束在高精细度腔中，与其单个模相互作用，这是量子场的一种本质上非谐的介质。"
+    },
+    {
+      "id": "jaynes-cummings-model",
+      "kind": "definition",
+      "section": "9.2",
+      "name": "J-C 模型",
+      "terms": [
+        "J-C 模型",
+        "J-C 哈密顿量"
+      ],
+      "type": "energy",
+      "statement": "二能级原子与一个共振腔模在转动参考系中的相干耦合：吸收一个光子使原子升高，原子的弛豫则发射一个光子。",
+      "forms": [
+        {
+          "id": "eq-9-53",
+          "latex": "\\hat{H} = -\\hbar g\\hat{a}|2\\rangle\\langle 1| - \\hbar g^*\\hat{a}^\\dagger|1\\rangle\\langle 2|",
+          "anchor": "9.2-eq-9-53"
+        }
+      ]
+    },
+    {
+      "id": "jaynes-cummings-solution",
+      "kind": "result",
+      "section": "9.2",
+      "name": "J-C 动力学",
+      "type": "amplitude",
+      "statement": "哈密顿量单独耦合每一对 |2⟩|n⟩、|1⟩|n+1⟩，它以 g√(n+1) 振荡；通解是对这些对求和。",
+      "forms": [
+        {
+          "id": "eq-9-58",
+          "latex": "c_{n+1}^{(1)}(t) = ic_n(0)\\sin\\left(g\\sqrt{n+1}t\\right)",
+          "anchor": "9.2-drv-jaynes-cummings-solution"
+        },
+        {
+          "id": "eq-9-59",
+          "latex": "c_n^{(2)}(t) = c_n(0)\\cos\\left(g\\sqrt{n+1}t\\right)",
+          "anchor": "9.2-drv-jaynes-cummings-solution"
+        },
+        {
+          "id": "eq-9-56",
+          "latex": "\\dot{c}_n^{(2)} = ig\\sqrt{n+1}c_{n+1}^{(1)}",
+          "anchor": "9.2-drv-jaynes-cummings-equations"
+        },
+        {
+          "id": "eq-9-57",
+          "latex": "\\dot{c}_{n+1}^{(1)} = ig\\sqrt{n+1}c_n^{(2)}",
+          "anchor": "9.2-drv-jaynes-cummings-equations"
+        },
+        {
+          "id": "eq-9-55",
+          "latex": "|\\psi(t)\\rangle = \\sum_n c_n^{(1)}(t)|1\\rangle_a\\otimes|n\\rangle + c_n^{(2)}(t)|2\\rangle_a\\otimes|n\\rangle",
+          "anchor": "9.2-eq-9-55"
+        }
+      ]
+    },
+    {
+      "id": "vacuum-rabi-oscillations",
+      "kind": "result",
+      "section": "9.2",
+      "name": "真空拉比振荡",
+      "terms": [
+        "真空拉比振荡",
+        "真空拉比频率"
+      ],
+      "type": "state",
+      "statement": "处于激发态的原子在空腔中，以真空拉比频率 g 与一个确定模中的一个光子可逆地交换其激发，这不同于向连续谱的自发发射。",
+      "forms": [
+        {
+          "id": "eq-9-62",
+          "latex": "|\\psi(t)\\rangle = \\cos gt|2\\rangle_a|0\\rangle + i\\sin gt|1\\rangle_a|1\\rangle",
+          "anchor": "9.2-eq-9-62"
+        },
+        {
+          "id": "eq-9-61",
+          "latex": "\\hat{H}_\\mathrm{eff} = -\\hbar g|2\\rangle_a|0\\rangle\\langle 1|_a\\langle 1| - \\hbar g^*|1\\rangle_a|1\\rangle\\langle 2|_a\\langle 0|",
+          "anchor": "9.2-eq-9-61"
+        }
+      ]
+    },
+    {
+      "id": "strong-coupling-regime",
+      "kind": "definition",
+      "section": "9.2",
+      "name": "强耦合情形",
+      "terms": [
+        "强耦合情形",
+        "强耦合情形"
+      ],
+      "statement": "原子-腔耦合 g 压倒耗散的情形：激发态原子把能量交给腔模的速度快于它向自由空间发射的速度，g² > γκ。",
+      "forms": [
+        {
+          "id": "eq-9-124",
+          "latex": "g^2 > \\gamma\\kappa",
+          "section": "9.3",
+          "anchor": "9.3-eq-9-124"
+        }
+      ]
+    },
+    {
+      "id": "coherent-state-rabi-oscillations",
+      "kind": "result",
+      "section": "9.2",
+      "name": "相干场中的拉比振荡",
+      "symbol": "tau_Rabi",
+      "type": "time",
+      "statement": "对于相干场，把 √(n+1) 换成 √n̄，场仍保持相干，并给出原子的经典拉比振荡，周期约为 1/(g|α|)。",
+      "forms": [
+        {
+          "id": "eq-9-67",
+          "latex": "\\tau_\\mathrm{Rabi} \\sim \\frac{1}{g\\sqrt{\\bar{n}}} \\sim \\frac{1}{|\\alpha|g}",
+          "anchor": "9.2-drv-naive-rabi-oscillation"
+        },
+        {
+          "id": "eq-9-65",
+          "latex": "|\\psi(t)\\rangle = \\sum_n e^{-|\\alpha|^2/2}\\frac{\\alpha^n}{\\sqrt{n!}}\\left(i\\sin\\left(g\\sqrt{n+1}t\\right)|1\\rangle_a|n+1\\rangle + \\cos\\left(g\\sqrt{n+1}t\\right)|2\\rangle_a|n\\rangle\\right)",
+          "anchor": "9.2-drv-coherent-field-state"
+        }
+      ]
+    },
+    {
+      "id": "rabi-collapse",
+      "kind": "result",
+      "section": "9.2",
+      "name": "拉比振荡的坍缩",
+      "terms": [
+        "坍缩"
+      ],
+      "symbol": "tau_collapse",
+      "type": "time",
+      "statement": "光子数的展宽 δn 使每个福克分量的相位 g√(n+1)t 各不相同；一旦 gtδn/√n̄ 达到 1，约在 t ∼ 1/g，它们就退相位，拉比振荡衰减消失。",
+      "forms": [
+        {
+          "id": "eq-9-70",
+          "latex": "\\tau_\\mathrm{Collapse} \\sim \\frac{\\sqrt{\\bar{n}}}{\\delta n g} \\sim \\frac{1}{g}",
+          "anchor": "9.2-eq-9-70"
+        },
+        {
+          "id": "eq-9-69",
+          "latex": "\\phi_n \\approx gt\\sqrt{\\bar{n}}\\left(1 + \\frac{\\delta n}{2\\bar{n}}\\right)",
+          "anchor": "9.2-drv-rabi-phase-expansion"
+        }
+      ]
+    },
+    {
+      "id": "rabi-revival",
+      "kind": "result",
+      "section": "9.2",
+      "name": "拉比振荡的恢复",
+      "terms": [
+        "恢复",
+        "坍缩与恢复"
+      ],
+      "symbol": "tau_revival",
+      "type": "time",
+      "statement": "在更长的时间，主要福克态的相位修正达到 π 的倍数，振荡不完美地恢复，约在 2π√n̄/g，这是孤立的量子非线性系统的普遍特征。",
+      "forms": [
+        {
+          "id": "eq-9-71",
+          "latex": "\\tau_\\mathrm{Revival} \\sim 2\\pi\\frac{\\sqrt{\\bar{n}}}{g} \\sim 2\\frac{\\pi|\\alpha|}{g}",
+          "anchor": "9.2-eq-9-71"
+        }
+      ]
+    },
+    {
+      "id": "atom-field-entanglement",
+      "kind": "result",
+      "section": "9.2",
+      "name": "J-C 模型中场的分裂",
+      "type": "state",
+      "statement": "与原子相互作用的相干场分裂为在相空间中沿相反方向转动的两个相干分量，并与原子纠缠，所以场不再保持相干。",
+      "forms": [
+        {
+          "id": "eq-9-77",
+          "latex": "|\\psi(t)\\rangle = \\frac{1}{\\sqrt{2}}\\left(|2\\rangle_a|\\alpha_+\\rangle + |1\\rangle_a|\\alpha_-\\rangle\\right)",
+          "anchor": "9.2-drv-field-splitting"
+        },
+        {
+          "id": "eq-9-78",
+          "latex": "|\\alpha_\\pm\\rangle = \\frac{1}{\\sqrt{2}}\\left(e^{ig\\sqrt{\\bar{n}}t/2}|\\alpha e^{igt/2\\sqrt{\\bar{n}}}\\rangle \\pm e^{-ig\\sqrt{\\bar{n}}t/2}|\\alpha e^{-igt/2\\sqrt{\\bar{n}}}\\rangle\\right)",
+          "anchor": "9.2-drv-field-splitting"
+        }
+      ]
+    },
+    {
+      "id": "schrodinger-cat-state",
+      "kind": "definition",
+      "section": "9.2",
+      "name": "薛定谔猫态",
+      "terms": [
+        "薛定谔猫"
+      ],
+      "type": "state",
+      "statement": "两个宏观上可分辨的相干态的叠加，如 |iα⟩ ± |−iα⟩，其经典相干性指数地小，但具有更高阶的量子相干性，容易被退相干破坏。"
+    },
+    {
+      "id": "beamsplitter-loss-model",
+      "kind": "result",
+      "section": "9.3",
+      "name": "损耗的分束器模型",
+      "statement": "损耗就是一个分束器：信号被 t 衰减，而进入另一个端口的真空增加涨落；相干态 |α⟩ 离开时为 |tα⟩，但福克态不再保持为福克态。",
+      "forms": [
+        {
+          "id": "eq-9-80",
+          "latex": "\\hat{a}_\\mathrm{out} = t\\hat{a}_\\mathrm{in} + i\\sqrt{1-|t|^2}\\hat{b}_\\mathrm{vac}",
+          "anchor": "9.3-eq-9-80"
+        }
+      ]
+    },
+    {
+      "id": "cavity-loss-rate",
+      "kind": "definition",
+      "section": "9.3",
+      "name": "腔损耗率",
+      "terms": [
+        "腔损耗率",
+        "腔衰变率"
+      ],
+      "symbol": "kappa",
+      "type": "rate",
+      "statement": "腔内场能量通过部分透射镜泄漏的速率 κ，由其透射和往返时间决定。",
+      "forms": [
+        {
+          "id": "eq-9-84",
+          "latex": "\\kappa = \\frac{2c(1-r)}{2L} \\approx \\frac{t^2 c}{2L}",
+          "anchor": "9.3-drv-cavity-field-evolution"
+        }
+      ]
+    },
+    {
+      "id": "classical-cavity-evolution",
+      "kind": "result",
+      "section": "9.3",
+      "name": "经典腔场方程",
+      "type": "electric-field",
+      "statement": "计及一次往返，腔内场以 κ/2 衰减并由输入场馈入；其响应是宽度为 κ 的洛伦兹线型，介质增加一个极化驱动。",
+      "forms": [
+        {
+          "id": "eq-9-85",
+          "latex": "\\frac{d}{dt}E(t) = -\\frac{\\kappa}{2}E(t) + \\sqrt{\\frac{\\kappa c}{2L}}E_\\mathrm{in}(t)",
+          "anchor": "9.3-drv-cavity-field-evolution"
+        },
+        {
+          "id": "eq-9-81",
+          "latex": "E(t+\\Delta t) = tE_\\mathrm{in}(t) + rE(t)",
+          "anchor": "9.3-drv-cavity-field-evolution"
+        },
+        {
+          "id": "eq-9-83",
+          "latex": "\\frac{d}{dt}E(t) = -\\frac{(1-r)c}{2L}E(t) + \\frac{tc}{2L}E_\\mathrm{in}(t)",
+          "anchor": "9.3-drv-cavity-field-evolution"
+        },
+        {
+          "id": "eq-9-86",
+          "latex": "E(\\omega) = \\frac{\\sqrt{\\kappa c/2L}}{\\kappa/2 - i\\omega}E_\\mathrm{in}(\\omega)",
+          "anchor": "9.3-drv-cavity-field-evolution"
+        },
+        {
+          "id": "eq-9-87",
+          "latex": "\\frac{d}{dt}E(t) = -\\frac{\\kappa}{2}E(t) + \\sqrt{\\frac{\\kappa c}{2L}}E_\\mathrm{in}(t) + \\frac{i\\bar{\\nu}P}{2\\epsilon_0}",
+          "anchor": "9.3-eq-9-87"
+        }
+      ]
+    },
+    {
+      "id": "input-output-relation",
+      "kind": "definition",
+      "section": "9.3",
+      "name": "输入输出关系",
+      "terms": [
+        "输入输出关系",
+        "输入输出关系"
+      ],
+      "statement": "腔的输出场是反射的输入场加上透射的腔场。",
+      "forms": [
+        {
+          "id": "eq-9-88",
+          "latex": "E_\\mathrm{out} = -rE_\\mathrm{in} + tE",
+          "anchor": "9.3-eq-9-88"
+        }
+      ]
+    },
+    {
+      "id": "cavity-langevin-equation",
+      "kind": "result",
+      "section": "9.3",
+      "name": "量子腔模方程",
+      "statement": "把腔场换成 â，并加上与衰减相伴的噪声，得到海森伯-朗之万方程：â 以 κ/2 衰减，并由噪声算符驱动。",
+      "forms": [
+        {
+          "id": "eq-9-89",
+          "latex": "\\frac{d}{dt}\\hat{a} = \\frac{-\\kappa}{2}\\hat{a} + \\hat{\\mathcal{F}}",
+          "anchor": "9.3-eq-9-89"
+        }
+      ]
+    },
+    {
+      "id": "cavity-reservoir-model",
+      "kind": "result",
+      "section": "9.3",
+      "name": "腔损耗的微观模型",
+      "statement": "反射镜以系数 t_k 把腔模耦合到连续区模 â_k；取 Ŝ = â，这就是自发发射模型，维格纳-韦斯科普夫近似给出衰变率 κ = 2π|t_k|²D(ν) 和噪声算符。",
+      "forms": [
+        {
+          "id": "eq-9-96",
+          "latex": "\\kappa = 2\\pi\\sum_k |t_k|^2\\delta(\\nu-\\nu_k) = 2\\pi|t_k|^2 D(\\nu)",
+          "anchor": "9.3-eq-9-96"
+        },
+        {
+          "id": "eq-9-90",
+          "latex": "\\hat{V}_{SR} = i\\hbar\\sum_k t_k \\hat{a}\\hat{a}_k^\\dagger e^{-i(\\nu-\\nu_k)t} + h.c.",
+          "anchor": "9.3-eq-9-90"
+        },
+        {
+          "id": "eq-9-95",
+          "latex": "\\dot{a}(t) \\approx -\\frac{\\kappa}{2}a(t) + \\hat{\\mathcal{F}}(t)",
+          "anchor": "9.3-eq-9-95"
+        },
+        {
+          "id": "eq-9-97",
+          "latex": "\\hat{\\mathcal{F}} = -\\sum_k t_k\\hat{a}_k(0)e^{i(\\nu-\\nu_k)t}",
+          "anchor": "9.3-eq-9-97"
+        },
+        {
+          "id": "eq-9-94",
+          "latex": "\\dot{a}(t) = -\\sum_k t_k e^{i(\\nu-\\nu_k)t}a_k(0) - |t_k|^2\\int_0^t dt'\\, a(t')e^{i(\\nu-\\nu_k)(t-t')}",
+          "anchor": "9.3-eq-9-94"
+        }
+      ]
+    },
+    {
+      "id": "cavity-noise-correlations",
+      "kind": "result",
+      "section": "9.3",
+      "name": "腔噪声算符",
+      "terms": [
+        "输入场"
+      ],
+      "statement": "腔噪声是通过反射镜漏入的外部场，即输入场；在 n 个光子的热环境中，其关联函数为 (n+1)κδ(t−t′) 和 nκδ(t−t′)。",
+      "forms": [
+        {
+          "id": "eq-9-98",
+          "latex": "\\langle\\hat{\\mathcal{F}}(t)\\hat{\\mathcal{F}}^\\dagger(t')\\rangle = (n+1)\\kappa\\delta(t-t')",
+          "anchor": "9.3-eq-9-98"
+        },
+        {
+          "id": "eq-9-99",
+          "latex": "\\langle\\hat{\\mathcal{F}}^\\dagger(t)\\hat{\\mathcal{F}}(t')\\rangle = n\\kappa\\delta(t-t')",
+          "anchor": "9.3-eq-9-99"
+        },
+        {
+          "id": "eq-9-100",
+          "latex": "\\hat{\\mathcal{F}}(t) = -\\sqrt{\\frac{\\kappa}{D(\\nu)}}\\hat{E}_\\mathrm{in}(t)",
+          "anchor": "9.3-eq-9-100"
+        },
+        {
+          "id": "eq-9-101",
+          "latex": "\\hat{E}_\\mathrm{in}(t) = \\sqrt{\\frac{1}{2\\pi}}\\sum_k e^{i(\\nu-\\nu_k)t}a_k(0)",
+          "anchor": "9.3-eq-9-101"
+        }
+      ]
+    },
+    {
+      "id": "cavity-master-equation",
+      "kind": "result",
+      "section": "9.3",
+      "name": "阻尼腔的主方程",
+      "type": "state",
+      "statement": "取 Ŝ = â，一般的主方程描述腔损耗及其涨落，与海森伯-朗之万描述等价。",
+      "forms": [
+        {
+          "id": "eq-9-102",
+          "latex": "\\frac{d}{dt}\\hat{\\rho} = -\\frac{\\kappa}{2}(n+1)\\left(\\hat{a}^\\dagger\\hat{a}\\rho - \\hat{a}\\rho\\hat{a}^\\dagger\\right) - \\frac{\\kappa}{2}n\\left(\\rho\\hat{a}\\hat{a}^\\dagger - \\hat{a}^\\dagger\\rho\\hat{a}\\right) + h.c.",
+          "anchor": "9.3-eq-9-102"
+        }
+      ]
+    },
+    {
+      "id": "damped-coherent-state",
+      "kind": "result",
+      "section": "9.3",
+      "name": "有耗腔中的相干态",
+      "statement": "衰减到真空中的相干腔场保持相干，|αe^{−κt/2}⟩：其平均值衰减，而正交分量方差保持为 1/2。",
+      "forms": [
+        {
+          "id": "eq-9-104",
+          "latex": "\\langle\\hat{a}(t)\\rangle = e^{-\\kappa t/2}\\langle\\hat{a}(0)\\rangle",
+          "anchor": "9.3-drv-damped-coherent-amplitude"
+        },
+        {
+          "id": "eq-9-103",
+          "latex": "\\hat{a}(t) = e^{-\\kappa t/2}\\hat{a}(0) + \\int_0^t \\hat{\\mathcal{F}}(t')e^{-\\kappa(t-t')/2}dt'",
+          "anchor": "9.3-drv-damped-coherent-amplitude"
+        },
+        {
+          "id": "eq-9-107",
+          "latex": "\\langle\\delta\\hat{x}^2(t)\\rangle = \\langle\\delta\\hat{x}^2(0)\\rangle e^{-\\kappa t} + \\frac{1}{2}\\left(1 - e^{-\\kappa t}\\right)",
+          "anchor": "9.3-drv-damped-quadrature-variance"
+        },
+        {
+          "id": "eq-9-105",
+          "latex": "\\hat{a}(t)|\\alpha\\rangle|0\\rangle_r = e^{-\\kappa t/2}\\alpha|\\alpha\\rangle|0\\rangle_r"
+        }
+      ]
+    },
+    {
+      "id": "dissipation-destroys-nonclassicality",
+      "kind": "result",
+      "section": "9.3",
+      "name": "损耗抹去非经典态",
+      "statement": "无论初态如何，腔损耗都使正交分量方差趋于 1/2，所以压缩态和其他非经典态失去其非经典相干性；产生它们要与耗散竞争。"
+    },
+    {
+      "id": "cavity-driven-by-atoms",
+      "kind": "result",
+      "section": "9.3",
+      "name": "原子驱动的腔模",
+      "statement": "腔中的原子给模的朗之万方程添加一个驱动项，它是介质的极化强度的量子类比；对于许多原子和强场，这种海森伯-朗之万方法近似经典，而对于少数光子和原子，主方程或随机波函数更合适。",
+      "forms": [
+        {
+          "id": "eq-9-108",
+          "latex": "\\frac{d}{dt}\\hat{a} = -\\frac{\\kappa}{2}\\hat{a} + \\hat{\\mathcal{F}} + i\\sum_j g_j^*\\hat{\\sigma}_{\\alpha,\\beta}",
+          "anchor": "9.3-eq-9-108"
+        }
+      ]
+    },
+    {
+      "id": "open-and-closed-cavities",
+      "kind": "definition",
+      "section": "9.3",
+      "name": "开腔与闭腔",
+      "terms": [
+        "开腔",
+        "闭腔"
+      ],
+      "statement": "开腔把模约束在一个维度中 （L ≫ λ），所以原子仍以接近其自由空间速率向自由空间衰变；闭腔把场约束在三个维度中 （L ∼ λ），可以强烈抑制自发发射。"
+    },
+    {
+      "id": "cqed-master-equation",
+      "kind": "result",
+      "section": "9.3",
+      "name": "腔量子电动力学的主方程",
+      "type": "state",
+      "statement": "原子和腔模一起构成系统：腔失谐 δ 的 J-C 演化、κ 的腔损耗和 γ 的原子向自由空间的衰变。",
+      "forms": [
+        {
+          "id": "eq-9-109",
+          "latex": "\\dot{\\hat{\\rho}} = -\\tfrac{i}{\\hbar}[\\hat{H},\\hat{\\rho}] - \\tfrac{\\kappa}{2}\\left(\\hat{a}^\\dagger\\hat{a}\\hat{\\rho} + \\hat{\\rho}\\hat{a}^\\dagger\\hat{a} - 2\\hat{a}\\hat{\\rho}\\hat{a}^\\dagger\\right) - \\tfrac{\\gamma}{2}\\left(\\hat{\\sigma}_{21}\\hat{\\sigma}_{12}\\hat{\\rho} + \\hat{\\rho}\\hat{\\sigma}_{21}\\hat{\\sigma}_{12} - 2\\hat{\\sigma}_{12}\\hat{\\rho}\\hat{\\sigma}_{21}\\right)",
+          "anchor": "9.3-eq-9-109"
+        },
+        {
+          "id": "eq-9-110",
+          "latex": "\\hat{H} = \\hbar\\delta\\hat{a}^\\dagger\\hat{a} + \\hbar g\\hat{a}^\\dagger\\hat{\\sigma}_{12} + \\hbar g^*\\hat{a}\\hat{\\sigma}_{21}",
+          "anchor": "9.3-eq-9-110"
+        }
+      ]
+    },
+    {
+      "id": "jaynes-cummings-ladder",
+      "kind": "result",
+      "section": "9.3",
+      "name": "J-C 阶梯的缀饰态",
+      "terms": [
+        "缀饰态基"
+      ],
+      "statement": "每一对 |1⟩|n⟩、|2⟩|n−1⟩ 是由 g√n 耦合的二能级系统，单独对角化为缀饰态；衰变耦合各流形并使之展宽。"
+    },
+    {
+      "id": "vacuum-rabi-splitting",
+      "kind": "result",
+      "section": "9.3",
+      "name": "真空拉比分裂",
+      "terms": [
+        "真空拉比分裂"
+      ],
+      "type": "coupling",
+      "statement": "在反射中探测，共振的原子-腔系统的最低缀饰态表现为两个峰，相距耦合的两倍 2g，即真空拉比分裂。"
+    },
+    {
+      "id": "collective-enhancement",
+      "kind": "result",
+      "section": "9.3",
+      "name": "集体增强",
+      "terms": [
+        "集体增强"
+      ],
+      "type": "coupling",
+      "statement": "N 个原子位于腔的波腹时，耦合增大到 g√N，真空拉比分裂增大到 2g√N；从经典的角度，原子的色散使腔共振发生移动。"
+    },
+    {
+      "id": "cqed-no-jump-evolution",
+      "kind": "result",
+      "section": "9.3",
+      "name": "腔量子电动力学的无跳跃演化",
+      "terms": [
+        "无跳跃"
+      ],
+      "type": "amplitude",
+      "statement": "从 |2⟩|0⟩ 出发，只有 |1⟩|1⟩ 被相干耦合；用腔损耗和原子衰变的非厄米哈密顿量，无跳跃的概率幅精确演化，当 g ≫ γ, κ 时，它们表现出弱阻尼的真空拉比振荡。",
+      "forms": [
+        {
+          "id": "eq-9-116",
+          "latex": "\\dot{c}_{1,1} = -(\\frac{\\kappa}{2} + i\\delta)c_{1,1} - igc_{2,0}",
+          "anchor": "9.3-eq-9-116"
+        },
+        {
+          "id": "eq-9-117",
+          "latex": "\\dot{c}_{2,0} = -igc_{1,1} - \\frac{\\gamma}{2}c_{2,0}",
+          "anchor": "9.3-eq-9-117"
+        },
+        {
+          "id": "eq-9-115",
+          "latex": "\\hat{H}_{eff} = -i\\frac{\\kappa}{2}\\hat{a}^\\dagger\\hat{a} - i\\frac{\\gamma}{2}\\hat{\\sigma}_{21}\\hat{\\sigma}_{12}",
+          "anchor": "9.3-eq-9-115"
+        },
+        {
+          "id": "eq-9-112",
+          "latex": "|\\psi\\rangle = c_{1,1}|1\\rangle_a|1\\rangle + c_{2,0}|2\\rangle_a|0\\rangle",
+          "anchor": "9.3-eq-9-112"
+        }
+      ]
+    },
+    {
+      "id": "purcell-effect",
+      "kind": "result",
+      "section": "9.3",
+      "name": "珀塞尔效应",
+      "terms": [
+        "珀塞尔效应"
+      ],
+      "symbol": "gamma_eff",
+      "type": "rate",
+      "statement": "腔为过阻尼，g < κ 时，消除光子的概率幅会改变原子的衰变率和兰姆移位；在零失谐的开腔中，衰变增强 4g²/κ。",
+      "forms": [
+        {
+          "id": "eq-9-120",
+          "latex": "\\gamma^\\mathrm{open}_\\mathrm{eff} = \\gamma + 4\\frac{g^2}{\\kappa}",
+          "anchor": "9.3-drv-purcell-rate"
+        },
+        {
+          "id": "eq-9-118",
+          "latex": "c_{1,1} = \\frac{-ig}{\\kappa/2 + i\\delta}c_{2,0}",
+          "anchor": "9.3-drv-purcell-elimination"
+        },
+        {
+          "id": "eq-9-119",
+          "latex": "\\dot{c}_{2,0} = -\\left(\\frac{\\gamma}{2} + \\frac{\\kappa}{2}\\frac{g^2}{\\kappa^2/4 + \\delta^2}\\right)c_{2,0} + i\\frac{g^2\\delta}{\\kappa^2/4 + \\delta^2}c_{2,0}",
+          "anchor": "9.3-drv-purcell-elimination"
+        }
+      ]
+    },
+    {
+      "id": "quality-factor",
+      "kind": "definition",
+      "section": "9.3",
+      "name": "品质因数",
+      "terms": [
+        "品质因数"
+      ],
+      "symbol": "Q_fac",
+      "statement": "腔衰变率是模频率除以品质因数 Q。",
+      "forms": [
+        {
+          "id": "eq-9-122",
+          "latex": "\\kappa = \\frac{\\nu}{Q}",
+          "anchor": "9.3-eq-9-122"
+        }
+      ]
+    },
+    {
+      "id": "cavity-finesse",
+      "kind": "definition",
+      "section": "9.3",
+      "name": "腔精细度",
+      "terms": [
+        "精细度"
+      ],
+      "symbol": "F_fin",
+      "statement": "精细度 F 是光子在漏出之前循环的平均次数；光子寿命 1/κ 是往返时间的 F 倍。",
+      "forms": [
+        {
+          "id": "eq-9-123",
+          "latex": "\\frac{1}{\\kappa} = \\frac{L}{\\pi c}\\cdot F",
+          "anchor": "9.3-eq-9-123"
+        }
+      ]
+    },
+    {
+      "id": "cavity-mode-coupling",
+      "kind": "result",
+      "section": "9.3",
+      "name": "与腔模的耦合",
+      "terms": [
+        "模体积"
+      ],
+      "type": "coupling",
+      "statement": "原子-腔耦合 g 随偶极矩增大，并按模体积平方根的倒数下降。",
+      "forms": [
+        {
+          "id": "eq-9-121",
+          "latex": "g = \\mu\\sqrt{\\frac{\\nu}{\\epsilon_0\\hbar V}}",
+          "anchor": "9.3-eq-9-121"
+        }
+      ]
+    },
+    {
+      "id": "strong-coupling-figure-of-merit",
+      "kind": "result",
+      "section": "9.3",
+      "name": "强耦合的优值",
+      "statement": "比值 g²/κγ 与原子无关，∼ (λ²/d²)F，d 为模直径，对于高反射率的小腔最大；它是在光子离开之前原子遇到光子的机会。",
+      "forms": [
+        {
+          "id": "eq-9-125",
+          "latex": "\\frac{g^2}{\\kappa\\gamma} \\sim \\frac{L\\lambda^2}{V}\\cdot F = \\frac{\\lambda^2}{d^2}\\cdot F",
+          "anchor": "9.3-drv-strong-coupling-figure-of-merit"
+        },
+        {
+          "id": "eq-9-126",
+          "latex": "\\frac{g^2}{\\kappa\\gamma} \\sim \\frac{\\lambda}{L}\\frac{1}{t^2}",
+          "anchor": "9.3-drv-strong-coupling-figure-of-merit"
+        },
+        {
+          "id": "eq-9-127",
+          "latex": "P_\\mathrm{interaction} \\sim \\lambda^2\\cdot L\\cdot\\frac{1}{Ld^2}\\cdot F",
+          "anchor": "9.3-eq-9-127"
+        }
+      ]
+    },
+    {
+      "id": "suppressed-decay",
+      "kind": "result",
+      "section": "9.3",
+      "name": "闭腔中的衰变抑制",
+      "type": "rate",
+      "statement": "在闭腔中 γ = 0，原子只通过腔衰变，当腔远失谐时其衰变率被强烈抑制，当 V ∼ λ³ 时被品质因数所抑制。",
+      "forms": [
+        {
+          "id": "eq-9-128",
+          "latex": "\\gamma^\\mathrm{closed}_\\mathrm{eff} = \\kappa\\frac{g^2}{\\kappa^2/4 + \\delta^2}",
+          "anchor": "9.3-drv-suppressed-decay"
+        },
+        {
+          "id": "eq-9-129",
+          "latex": "\\gamma^\\mathrm{closed}_\\mathrm{eff} \\sim \\frac{g^2}{\\kappa}\\frac{\\kappa^2}{\\omega^2} \\sim \\frac{\\lambda^3}{V}\\frac{\\gamma}{Q}",
+          "anchor": "9.3-drv-suppressed-decay"
+        }
+      ]
+    },
+    {
+      "id": "microwave-cqed",
+      "kind": "idea",
+      "section": "9.3",
+      "name": "里德伯原子的微波腔量子电动力学",
+      "terms": [
+        "圆态"
+      ],
+      "statement": "在微波频率下可以做成闭腔，γ ∝ ω³ 很小而 g ∝ √ω，具有大偶极矩和长达秒量级寿命的圆里德伯态给出相干演化与退相干之比的最高值，前提是去除热光子。"
+    },
+    {
+      "id": "cavity-single-photon-source",
+      "kind": "result",
+      "section": "9.3",
+      "name": "按需单光子",
+      "statement": "与腔强耦合的激发态发射体向腔模的方向发射一个光子，这是一个束缚态到自由态的问题，其波包包络以 2g²/κ 衰减；三能级原子可以对它整形，且这一过程是相干且可逆的。",
+      "forms": [
+        {
+          "id": "eq-9-132",
+          "latex": "c_k \\sim \\frac{t_k g/\\kappa}{g^2/\\kappa + i\\delta_k}",
+          "anchor": "9.3-eq-9-132"
+        },
+        {
+          "id": "eq-9-130",
+          "latex": "\\hat{H}_{c-f} = -\\hbar\\sum_k t_k\\hat{a}_k^\\dagger\\hat{a}e^{i\\delta_k t} + h.c.",
+          "anchor": "9.3-eq-9-130"
+        },
+        {
+          "id": "eq-9-131",
+          "latex": "|\\psi\\rangle = c_{2,0}|2\\rangle_a|0\\rangle|vac\\rangle + c_{1,1}|1\\rangle_a|1\\rangle|vac\\rangle + \\sum_k c_k|1\\rangle_a|0\\rangle|1_k\\rangle",
+          "anchor": "9.3-eq-9-131"
+        }
+      ]
+    },
+    {
+      "id": "hanbury-brown-twiss",
+      "kind": "idea",
+      "section": "9.3",
+      "name": "汉伯里·布朗-特维斯装置",
+      "terms": [
+        "汉伯里·布朗-特维斯",
+        "联合概率"
+      ],
+      "statement": "把信号在分束器上分到两个探测器上，测量联合概率：单个光子绝不会同时在两者上被记录。"
+    },
+    {
+      "id": "second-order-correlation",
+      "kind": "definition",
+      "section": "9.3",
+      "name": "二阶关联函数",
+      "terms": [
+        "二阶关联函数"
+      ],
+      "symbol": "g2",
+      "statement": "场在两点和两个时刻的归一化强度关联 g⁽²⁾，对相干态可以因式分解，并且敏感于比激光的经典相干性更高阶的相干性。",
+      "forms": [
+        {
+          "id": "eq-9-134",
+          "latex": "g^{(2)}(t_1 - t_2) = \\frac{G^{(2)}}{\\langle\\mathcal{E}^\\dagger(r_1,t_1)\\mathcal{E}(r_1,t_1)\\rangle\\langle\\mathcal{E}^\\dagger(r_2,t_2)\\mathcal{E}(r_2,t_2)\\rangle}",
+          "anchor": "9.3-eq-9-134"
+        },
+        {
+          "id": "eq-9-133",
+          "latex": "G^{(2)} = \\langle\\mathcal{E}^\\dagger(r_1,t_1)\\mathcal{E}^\\dagger(r_2,t_2)\\mathcal{E}(r_2,t_2)\\mathcal{E}(r_1,t_1)\\rangle",
+          "anchor": "9.3-eq-9-133"
+        }
+      ]
+    },
+    {
+      "id": "photon-bunching",
+      "kind": "result",
+      "section": "9.3",
+      "name": "群聚与反群聚",
+      "terms": [
+        "群聚",
+        "反群聚"
+      ],
+      "statement": "g⁽²⁾(0) 对相干态为 1，对热态为 2（群聚），对单光子为 0（反群聚）。"
+    },
+    {
+      "id": "linear-amplifier-noise",
+      "kind": "result",
+      "section": "9.4",
+      "name": "线性放大器的噪声",
+      "terms": [
+        "量子不可克隆定理",
+        "线性放大"
+      ],
+      "symbol": "sigma_gain",
+      "statement": "增益 σ > 1 的线性放大器加入来自自发发射的噪声，使对易式保持不变，所以，正如量子不可克隆定理所要求的，量子态不能在不损失信息的情况下被放大。",
+      "forms": [
+        {
+          "id": "eq-9-135",
+          "latex": "\\hat{a}_\\mathrm{out} = \\sqrt{\\sigma}\\hat{a}_\\mathrm{in} + \\sqrt{\\sigma - 1}\\hat{b}^\\dagger",
+          "anchor": "9.4-eq-9-135"
+        }
+      ]
+    },
+    {
+      "id": "degenerate-opo",
+      "kind": "definition",
+      "section": "9.4",
+      "name": "简并光学参量振荡器",
+      "terms": [
+        "简并光学参量振荡器",
+        "OPO",
+        "参量下转换"
+      ],
+      "symbol": "beta_gain",
+      "type": "coupling",
+      "statement": "腔中抽运频率一半处的参量下转换，所以两个产生场就是同一个腔模，由它自己的共轭驱动，增益 β 由抽运和 χ⁽²⁾ 决定。",
+      "forms": [
+        {
+          "id": "eq-9-140",
+          "latex": "\\frac{\\partial\\mathcal{E}_1}{\\partial t} = i\\beta\\mathcal{E}_1^*",
+          "anchor": "9.4-eq-9-140"
+        },
+        {
+          "id": "eq-9-136",
+          "latex": "P_1 \\sim \\frac{\\chi^{(2)}}{2}\\mathcal{E}_0\\mathcal{E}_2^* + \\frac{\\chi_1}{2}\\mathcal{E}_1",
+          "anchor": "9.4-eq-9-136"
+        },
+        {
+          "id": "eq-9-139",
+          "latex": "P \\sim \\chi^{(2)}\\mathcal{E}_0\\mathcal{E}_1^* + \\frac{\\chi_1 + \\chi_2}{2}\\mathcal{E}_1",
+          "anchor": "9.4-eq-9-139"
+        },
+        {
+          "id": "eq-9-141",
+          "latex": "\\frac{\\partial\\mathcal{E}_1^*}{\\partial t} = -i\\beta^*\\mathcal{E}_1",
+          "anchor": "9.4-eq-9-141"
+        }
+      ]
+    },
+    {
+      "id": "phase-dependent-amplification",
+      "kind": "result",
+      "section": "9.4",
+      "name": "依赖相位的放大",
+      "symbol": "beta_tilde",
+      "type": "coupling",
+      "statement": "在简正模式 E₁ ± E₁* 中，一个以速率 β̃ 被放大，另一个被去放大，所以增益依赖于场相对于抽运的相位。",
+      "forms": [
+        {
+          "id": "eq-9-142",
+          "latex": "\\frac{\\partial\\mathcal{E}_+}{\\partial t} = -\\tilde{\\beta}\\mathcal{E}_+",
+          "anchor": "9.4-drv-phase-dependent-amplification"
+        },
+        {
+          "id": "eq-9-143",
+          "latex": "\\frac{\\partial\\mathcal{E}_-}{\\partial t} = \\tilde{\\beta}\\mathcal{E}_-",
+          "anchor": "9.4-drv-phase-dependent-amplification"
+        }
+      ]
+    },
+    {
+      "id": "opo-heisenberg-langevin",
+      "kind": "result",
+      "section": "9.4",
+      "name": "量子简并下转换",
+      "type": "energy",
+      "statement": "对于强经典抽运和大失谐，腔中级联原子的海森伯-朗之万方程经绝热消除得到 dâ/dt = −iβ*â†，即 E → â 的经典方程，它来自光子对吸收和发射的有效哈密顿量。",
+      "forms": [
+        {
+          "id": "eq-9-152",
+          "latex": "\\hat{H}_\\mathrm{eff} = \\frac{\\hbar}{2}\\left(\\beta\\hat{a}^2 + \\beta^*(\\hat{a}^\\dagger)^2\\right)",
+          "anchor": "9.4-eq-9-152"
+        },
+        {
+          "id": "eq-9-150",
+          "latex": "\\frac{d\\hat{a}}{dt} = -i\\beta^*\\hat{a}^\\dagger",
+          "anchor": "9.4-drv-squeezing-equations"
+        },
+        {
+          "id": "eq-9-144",
+          "latex": "\\hat{H} = -\\hbar\\hat{a}^\\dagger\\sum_j \\left(g_j\\hat{\\sigma}_{32}^{(j)} + g_j\\hat{\\sigma}_{13}^{(j)}\\right) + h.c.",
+          "anchor": "9.4-eq-9-144"
+        },
+        {
+          "id": "eq-9-147",
+          "latex": "\\hat{\\sigma}_{13}^{(j)} = -\\frac{\\Omega_0}{\\Delta\\delta}g_j\\hat{a}^\\dagger - \\frac{g_j\\hat{a}}{\\delta}",
+          "anchor": "9.4-eq-9-147"
+        },
+        {
+          "id": "eq-9-149",
+          "latex": "\\frac{d\\hat{a}}{dt} = -2i\\sum_j \\frac{\\Omega_0}{\\Delta\\delta}g_j^2\\hat{a}^\\dagger",
+          "anchor": "9.4-drv-two-photon-drive"
+        }
+      ]
+    },
+    {
+      "id": "nondegenerate-pdc",
+      "kind": "result",
+      "section": "9.4",
+      "name": "非简并下转换",
+      "type": "energy",
+      "statement": "一起被放大的两个相位匹配的模服从 dâ₂/dt = −iβ*â₁†，它来自成对地产生和消灭光子、每个模中一个的有效哈密顿量。",
+      "forms": [
+        {
+          "id": "eq-9-155",
+          "latex": "\\hat{H}_\\mathrm{eff} = \\hbar\\left(\\beta\\hat{a}_1\\hat{a}_2 + \\beta^*\\hat{a}_1^\\dagger\\hat{a}_2^\\dagger\\right)",
+          "anchor": "9.4-eq-9-155"
+        },
+        {
+          "id": "eq-9-153",
+          "latex": "\\frac{d\\hat{a}_2}{dt} = -i\\beta^*\\hat{a}_1^\\dagger",
+          "anchor": "9.4-eq-9-153"
+        }
+      ]
+    },
+    {
+      "id": "photon-pair-state",
+      "kind": "result",
+      "section": "9.4",
+      "name": "下转换产生的光子对",
+      "symbol": "xi_pdc",
+      "type": "state",
+      "statement": "从真空出发，非简并下转换产生 |vac⟩ + ξ|1,1⟩ + ξ²|2,2⟩ + …：对于 ξ < 1 是来自自发发射的关联光子对，对于 ξ ≫ 1 是受激发射和压缩。",
+      "forms": [
+        {
+          "id": "eq-9-157",
+          "latex": "|\\psi\\rangle = |\\mathrm{vac}\\rangle + \\xi|1, 1\\rangle + \\xi^2|2, 2\\rangle + \\ldots",
+          "anchor": "9.4-drv-pair-state"
+        },
+        {
+          "id": "eq-9-156",
+          "latex": "|\\psi\\rangle = e^{-i\\hat{H}_\\mathrm{eff}t/\\hbar}|\\mathrm{vac}\\rangle",
+          "anchor": "9.4-drv-pair-state"
+        }
+      ]
+    },
+    {
+      "id": "photon-number-correlations",
+      "kind": "result",
+      "section": "9.4",
+      "name": "关联的光子数",
+      "terms": [
+        "散粒噪声极限"
+      ],
+      "statement": "每个下转换模单独是热态，但两者的光子数之差恰好为零，远低于在分束器上被分开的光束的散粒噪声极限 n₁ + n₂。",
+      "forms": [
+        {
+          "id": "eq-9-159",
+          "latex": "\\Delta\\hat{n}|\\psi\\rangle = (\\hat{n}_1 - \\hat{n}_2)|\\psi\\rangle = 0",
+          "anchor": "9.4-eq-9-159"
+        },
+        {
+          "id": "eq-9-158",
+          "latex": "p(n) = \\frac{\\tanh^{2n}\\xi}{\\cosh^2\\xi}",
+          "anchor": "9.4-eq-9-158"
+        }
+      ]
+    },
+    {
+      "id": "heralded-single-photons",
+      "kind": "idea",
+      "section": "9.4",
+      "name": "标示单光子",
+      "terms": [
+        "标示单光子"
+      ],
+      "statement": "在一个下转换模中探测到一个光子，就标示另一个模中恰有一个光子。"
+    },
+    {
+      "id": "post-selection",
+      "kind": "definition",
+      "section": "9.4",
+      "name": "后选择",
+      "terms": [
+        "后选择"
+      ],
+      "statement": "把之后的所有测量都以探测到概率性产生的光子对的两个光子为条件，使偏振纠缠态只有在已产生而未丢失时才被使用。",
+      "forms": [
+        {
+          "id": "eq-9-160",
+          "latex": "|\\psi\\rangle = |\\mathrm{vac}\\rangle + \\frac{\\xi}{\\sqrt{2}}\\left(|1_H, 1_V\\rangle + |1_V, 1_H\\rangle\\right) + \\mathcal{O}(\\xi^2)",
+          "anchor": "9.4-eq-9-160"
+        }
+      ]
+    },
+    {
+      "id": "squeezed-state",
+      "kind": "definition",
+      "section": "9.4",
+      "name": "压缩态",
+      "terms": [
+        "压缩的",
+        "压缩态",
+        "压缩态"
+      ],
+      "type": "state",
+      "statement": "简并下转换器放大一个按相位加权的正交分量并衰减另一个，所以相干态的方差向相反方向变化，而它们的乘积保持为 1/4；由真空产生时它只含偶数光子数。",
+      "forms": [
+        {
+          "id": "eq-9-168",
+          "latex": "\\langle\\Delta\\hat{x}^2\\rangle = \\frac{1}{2}e^{2\\tilde{\\beta}t}",
+          "anchor": "9.4-drv-quadrature-squeezing"
+        },
+        {
+          "id": "eq-9-169",
+          "latex": "\\langle\\Delta\\hat{p}^2\\rangle = \\frac{1}{2}e^{-2\\tilde{\\beta}t}",
+          "anchor": "9.4-drv-quadrature-squeezing"
+        },
+        {
+          "id": "eq-9-170",
+          "latex": "|\\psi\\rangle_{Sq} = e^{-i(\\beta^*(\\hat{a}^\\dagger)^2 + \\beta\\hat{a}^2)t/2}|\\alpha\\rangle",
+          "anchor": "9.4-eq-9-170"
+        },
+        {
+          "id": "eq-9-162",
+          "latex": "\\hat{x} = \\frac{1}{\\sqrt{2}}\\left(\\hat{a}e^{i\\theta/2} + \\hat{a}^\\dagger e^{-i\\theta/2}\\right)",
+          "anchor": "9.4-eq-9-162"
+        },
+        {
+          "id": "eq-9-161",
+          "latex": "\\beta = \\tilde{\\beta}e^{i(\\theta - \\pi/2)}",
+          "anchor": "9.4-eq-9-161"
+        },
+        {
+          "id": "eq-9-166",
+          "latex": "\\hat{x}(t) = \\hat{x}(0)e^{\\tilde{\\beta}t}",
+          "anchor": "9.4-drv-quadrature-squeezing"
+        }
+      ]
+    },
+    {
+      "id": "damped-squeezing",
+      "kind": "result",
+      "section": "9.4",
+      "name": "阻尼腔中的压缩",
+      "statement": "腔损耗给每个正交分量添加衰减 κ/2 和真空噪声，所以被压缩的方差趋近 κ/2(κ + 2β̃) 而不是零。",
+      "forms": [
+        {
+          "id": "eq-9-183",
+          "latex": "\\langle\\Delta\\hat{p}^2\\rangle \\to \\frac{\\kappa}{2(\\kappa + 2\\tilde{\\beta})}",
+          "anchor": "9.4-drv-damped-squeezing"
+        },
+        {
+          "id": "eq-9-174",
+          "latex": "\\frac{d\\hat{x}}{dt} = -\\left(\\frac{\\kappa}{2} - \\tilde{\\beta}\\right)\\hat{x} + \\hat{\\mathcal{F}}_x",
+          "anchor": "9.4-drv-damped-quadrature-equations"
+        },
+        {
+          "id": "eq-9-175",
+          "latex": "\\frac{d\\hat{p}}{dt} = -\\left(\\frac{\\kappa}{2} + \\tilde{\\beta}\\right)\\hat{p} + \\hat{\\mathcal{F}}_p",
+          "anchor": "9.4-drv-damped-quadrature-equations"
+        },
+        {
+          "id": "eq-9-178",
+          "latex": "\\langle\\hat{\\mathcal{F}}_x(t)\\hat{\\mathcal{F}}_x(t')\\rangle = \\langle\\hat{\\mathcal{F}}_p(t)\\hat{\\mathcal{F}}_p(t')\\rangle = \\frac{\\kappa}{2}\\delta(t - t')",
+          "anchor": "9.4-drv-damped-squeezing"
+        },
+        {
+          "id": "eq-9-182",
+          "latex": "\\langle\\Delta\\hat{p}^2(t)\\rangle = \\frac{1}{2}e^{-(\\kappa + 2\\tilde{\\beta})t} + \\frac{\\kappa}{2}\\frac{1 - e^{-(\\kappa + 2\\tilde{\\beta})t}}{\\kappa + 2\\tilde{\\beta}}",
+          "anchor": "9.4-drv-damped-squeezing"
+        }
+      ]
+    },
+    {
+      "id": "steady-state-squeezing",
+      "kind": "result",
+      "section": "9.4",
+      "name": "定常态压缩",
+      "terms": [
+        "阈值"
+      ],
+      "statement": "低于阈值，β̃ < κ/2 时，腔内方差达到定常值，压缩在阈值处至多为 50%，受漏入的真空限制；高于阈值，未耗尽抽运分析失效。",
+      "forms": [
+        {
+          "id": "eq-9-185",
+          "latex": "\\langle\\Delta\\hat{p}^2\\rangle \\to \\frac{\\kappa}{2(\\kappa + 2\\tilde{\\beta})}",
+          "anchor": "9.4-eq-9-185"
+        },
+        {
+          "id": "eq-9-184",
+          "latex": "\\langle\\Delta\\hat{x}^2\\rangle \\to \\frac{\\kappa}{2(\\kappa - 2\\tilde{\\beta})}",
+          "anchor": "9.4-eq-9-184"
+        }
+      ]
+    },
+    {
+      "id": "output-squeezing",
+      "kind": "result",
+      "section": "9.4",
+      "name": "输出场中的压缩",
+      "terms": [
+        "标准量子极限"
+      ],
+      "statement": "由量子输入输出关系，反射的真空与透射的腔场发生干涉，所以在阈值和零频率处，输出正交分量相对于标准量子极限被完美压缩，在宽度约为 κ 的洛伦兹线型范围内。",
+      "forms": [
+        {
+          "id": "eq-9-191",
+          "latex": "\\hat{P}_\\mathrm{out}(\\omega) = \\frac{\\hat{\\mathcal{F}}_p(\\omega)}{\\sqrt{\\kappa}}\\left(\\frac{\\kappa}{i\\omega + (\\kappa/2 + \\tilde{\\beta})} - 1\\right)",
+          "anchor": "9.4-drv-output-squeezing"
+        },
+        {
+          "id": "eq-9-187",
+          "latex": "\\hat{E}_\\mathrm{out} = -\\frac{\\hat{\\mathcal{F}}}{\\sqrt{\\kappa}} + \\sqrt{\\kappa}\\hat{a}",
+          "anchor": "9.4-eq-9-187"
+        },
+        {
+          "id": "eq-9-190",
+          "latex": "\\hat{P}(\\omega) = \\frac{\\hat{\\mathcal{F}}_p(\\omega)}{i\\omega + (\\kappa/2 + \\tilde{\\beta})}",
+          "anchor": "9.4-drv-output-squeezing"
+        }
+      ]
+    },
+    {
+      "id": "homodyne-detection",
+      "kind": "definition",
+      "section": "9.4",
+      "name": "零拍探测",
+      "terms": [
+        "零拍探测"
+      ],
+      "statement": "在 50/50 分束器上把信号与相位为 φ 的强本地振荡器混频，并把两路光电流相减，测量信号的正交分量 P_φ，它被振荡器的振幅放大。",
+      "forms": [
+        {
+          "id": "eq-9-198",
+          "latex": "\\langle\\hat{n}_-\\rangle = \\bar{\\beta}\\langle i\\left(\\hat{a}^\\dagger e^{i\\phi} - \\hat{a}e^{-i\\phi}\\right)\\rangle = \\bar{\\beta}\\langle P_\\phi\\rangle",
+          "anchor": "9.4-drv-homodyne-difference"
+        },
+        {
+          "id": "eq-9-199",
+          "latex": "\\langle\\Delta\\hat{n}_-^2\\rangle \\approx \\bar{\\beta}^2\\langle\\Delta P_\\phi^2\\rangle",
+          "anchor": "9.4-drv-homodyne-difference"
+        },
+        {
+          "id": "eq-9-197",
+          "latex": "\\hat{n}_- = i\\left(\\hat{a}^\\dagger\\hat{b}_{LO} - \\hat{b}_{LO}^\\dagger\\hat{a}\\right)",
+          "anchor": "9.4-drv-homodyne-difference"
+        },
+        {
+          "id": "eq-9-192",
+          "latex": "\\hat{a}_\\mathrm{out}^{(1)} = \\frac{1}{\\sqrt{2}}\\left(\\hat{a} + i\\hat{b}_{LO}\\right)",
+          "anchor": "9.4-eq-9-192"
+        }
+      ]
+    },
+    {
+      "id": "squeezed-interferometry",
+      "kind": "result",
+      "section": "9.4",
+      "name": "干涉测量中的压缩光",
+      "terms": [
+        "压缩参数"
+      ],
+      "symbol": "r_sq",
+      "statement": "压缩参数为 r 时，正交分量噪声降为 e^{−2r}/2，所以可测的最小相位降为 e^{−r}/√n；实际上，更强的相干场可以更容易地得到相近的增益。",
+      "forms": [
+        {
+          "id": "eq-9-202",
+          "latex": "\\delta\\phi_\\mathrm{min} \\sim \\frac{1}{\\langle\\hat{x}\\rangle}e^{-r} \\sim \\frac{1}{\\sqrt{n}}e^{-r}",
+          "anchor": "9.4-drv-squeezed-phase-sensitivity"
+        },
+        {
+          "id": "eq-9-201",
+          "latex": "\\langle\\Delta P^2\\rangle = \\frac{1}{2}e^{-2r}",
+          "anchor": "9.4-eq-9-201"
+        },
+        {
+          "id": "eq-9-200",
+          "latex": "\\Delta P = \\langle x\\rangle\\delta\\phi",
+          "anchor": "9.4-eq-9-200"
+        },
+        {
+          "id": "eq-9-204",
+          "latex": "\\hat{n}_- = \\cos\\phi\\left(\\hat{b}_i^\\dagger\\hat{b}_i - \\hat{a}_i^\\dagger\\hat{a}_i\\right) - i\\sin\\phi\\left(\\hat{a}_i^\\dagger\\hat{b}_i - \\hat{b}_i^\\dagger\\hat{a}_i\\right)",
+          "anchor": "9.4-eq-9-204"
+        },
+        {
+          "id": "eq-9-206",
+          "latex": "\\langle\\Delta\\hat{n}_-^2\\rangle_{(\\delta\\phi \\approx 0)} \\sim \\bar{\\beta}^2\\langle\\Delta P^2\\rangle_a \\to 0",
+          "anchor": "9.4-eq-9-206"
+        }
+      ]
+    },
+    {
+      "id": "spin-squeezing",
+      "kind": "definition",
+      "section": "9.4",
+      "name": "自旋压缩",
+      "terms": [
+        "原子散粒噪声",
+        "集体",
+        "自旋压缩"
+      ],
+      "symbol": "S_coll",
+      "type": "angular-momentum",
+      "statement": "对于 N 个极化的自旋-½ 原子，集体自旋的正交投影以原子散粒噪声涨落；相互作用可以以另一个投影为代价把一个投影压缩到该噪声之下。",
+      "forms": [
+        {
+          "id": "eq-9-207",
+          "latex": "\\mathbf{S} = \\sum_i^N S_i",
+          "anchor": "9.4-eq-9-207"
+        },
+        {
+          "id": "eq-9-208",
+          "latex": "\\langle\\mathbf{S}_x^2\\rangle = \\langle\\mathbf{S}_y^2\\rangle = \\frac{N}{4}",
+          "anchor": "9.4-eq-9-208"
+        },
+        {
+          "id": "eq-9-209",
+          "latex": "\\langle\\mathbf{S}_x^2\\rangle < \\frac{N}{4}",
+          "anchor": "9.4-eq-9-209"
+        }
+      ]
+    },
+    {
+      "id": "atom-photon-entanglement",
+      "kind": "result",
+      "section": "9.4",
+      "name": "原子-光子关联",
+      "type": "energy",
+      "statement": "N 原子拉曼散射具有光子模与集体自旋之间非简并下转换的形式，所以探测到光子就标示出一个纠缠的原子激发。",
+      "forms": [
+        {
+          "id": "eq-9-212",
+          "latex": "\\hat{H} = g\\hat{a}^\\dagger\\mathbf{S}^\\dagger + g^*\\hat{a}\\mathbf{S}",
+          "anchor": "9.4-eq-9-212"
+        },
+        {
+          "id": "eq-9-211",
+          "latex": "\\hat{H} = g\\hat{a}^\\dagger\\sum_i^N S_i^\\dagger + g^*\\hat{a}\\sum_i^N S_i",
+          "anchor": "9.4-eq-9-211"
+        }
+      ]
+    },
+    {
+      "id": "mean-photon-number",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "平均光子数",
+      "terms": [
+        "平均光子数",
+        "平均数"
+      ],
+      "symbol": "n_bar",
+      "statement": "一个模中光子的平均数，即其光子分布的平均值：热态为玻色-爱因斯坦平均值，相干态为 |α|²。"
+    }
+  ],
+  "concept_prereqs": [
+    {
+      "concept": "fock-states",
+      "prereq": "field-hamiltonian"
+    },
+    {
+      "concept": "single-mode-field",
+      "prereq": "cavity-modes"
+    },
+    {
+      "concept": "photon-statistics",
+      "prereq": "fock-states"
+    },
+    {
+      "concept": "photon-statistics",
+      "prereq": "density-matrix-populations"
+    },
+    {
+      "concept": "thermal-photon-distribution",
+      "prereq": "photon-statistics"
+    },
+    {
+      "concept": "thermal-photon-distribution",
+      "prereq": "mean-thermal-photon-number"
+    },
+    {
+      "concept": "thermal-photon-distribution",
+      "prereq": "single-mode-field"
+    },
+    {
+      "concept": "multimode-thermal-statistics",
+      "prereq": "thermal-photon-distribution"
+    },
+    {
+      "concept": "coherent-state",
+      "prereq": "fock-states"
+    },
+    {
+      "concept": "coherent-state",
+      "prereq": "quantized-electric-field"
+    },
+    {
+      "concept": "coherent-amplitude",
+      "prereq": "coherent-state"
+    },
+    {
+      "concept": "quadrature-operators",
+      "prereq": "creation-annihilation-operators"
+    },
+    {
+      "concept": "coherent-state-uncertainty",
+      "prereq": "coherent-amplitude"
+    },
+    {
+      "concept": "coherent-state-uncertainty",
+      "prereq": "quadrature-operators"
+    },
+    {
+      "concept": "coherent-state-uncertainty",
+      "prereq": "heisenberg-uncertainty-principle"
+    },
+    {
+      "concept": "local-oscillator",
+      "prereq": "quadrature-operators"
+    },
+    {
+      "concept": "shift-operator",
+      "prereq": "coherent-amplitude"
+    },
+    {
+      "concept": "poisson-photon-statistics",
+      "prereq": "shift-operator"
+    },
+    {
+      "concept": "classical-dipole-radiation",
+      "prereq": "shift-operator"
+    },
+    {
+      "concept": "classical-dipole-radiation",
+      "prereq": "rotating-wave-approximation"
+    },
+    {
+      "concept": "multimode-coherent-state",
+      "prereq": "coherent-amplitude"
+    },
+    {
+      "concept": "coherent-state-overcompleteness",
+      "prereq": "shift-operator"
+    },
+    {
+      "concept": "p-representation",
+      "prereq": "coherent-state-overcompleteness"
+    },
+    {
+      "concept": "p-representation",
+      "prereq": "density-operator"
+    },
+    {
+      "concept": "nonclassical-light",
+      "prereq": "p-representation"
+    },
+    {
+      "concept": "linear-optical-transformations",
+      "prereq": "coherent-state"
+    },
+    {
+      "concept": "beamsplitter-transformation",
+      "prereq": "linear-optical-transformations"
+    },
+    {
+      "concept": "beamsplitter-unitary",
+      "prereq": "beamsplitter-transformation"
+    },
+    {
+      "concept": "cavity-qed",
+      "prereq": "single-mode-field"
+    },
+    {
+      "concept": "jaynes-cummings-model",
+      "prereq": "cavity-qed"
+    },
+    {
+      "concept": "jaynes-cummings-model",
+      "prereq": "single-photon-rabi-frequency"
+    },
+    {
+      "concept": "jaynes-cummings-model",
+      "prereq": "rotating-frame-hamiltonian"
+    },
+    {
+      "concept": "jaynes-cummings-model",
+      "prereq": "fock-states"
+    },
+    {
+      "concept": "jaynes-cummings-solution",
+      "prereq": "jaynes-cummings-model"
+    },
+    {
+      "concept": "jaynes-cummings-solution",
+      "prereq": "rabi-oscillations"
+    },
+    {
+      "concept": "vacuum-rabi-oscillations",
+      "prereq": "jaynes-cummings-solution"
+    },
+    {
+      "concept": "vacuum-rabi-oscillations",
+      "prereq": "wigner-weisskopf"
+    },
+    {
+      "concept": "strong-coupling-regime",
+      "prereq": "vacuum-rabi-oscillations"
+    },
+    {
+      "concept": "coherent-state-rabi-oscillations",
+      "prereq": "jaynes-cummings-solution"
+    },
+    {
+      "concept": "coherent-state-rabi-oscillations",
+      "prereq": "poisson-photon-statistics"
+    },
+    {
+      "concept": "rabi-collapse",
+      "prereq": "coherent-state-rabi-oscillations"
+    },
+    {
+      "concept": "rabi-revival",
+      "prereq": "rabi-collapse"
+    },
+    {
+      "concept": "atom-field-entanglement",
+      "prereq": "rabi-revival"
+    },
+    {
+      "concept": "schrodinger-cat-state",
+      "prereq": "atom-field-entanglement"
+    },
+    {
+      "concept": "schrodinger-cat-state",
+      "prereq": "superposition"
+    },
+    {
+      "concept": "beamsplitter-loss-model",
+      "prereq": "beamsplitter-transformation"
+    },
+    {
+      "concept": "cavity-loss-rate",
+      "prereq": "beamsplitter-loss-model"
+    },
+    {
+      "concept": "classical-cavity-evolution",
+      "prereq": "cavity-loss-rate"
+    },
+    {
+      "concept": "classical-cavity-evolution",
+      "prereq": "macroscopic-polarization"
+    },
+    {
+      "concept": "input-output-relation",
+      "prereq": "classical-cavity-evolution"
+    },
+    {
+      "concept": "cavity-langevin-equation",
+      "prereq": "classical-cavity-evolution"
+    },
+    {
+      "concept": "cavity-langevin-equation",
+      "prereq": "heisenberg-langevin-equation"
+    },
+    {
+      "concept": "cavity-reservoir-model",
+      "prereq": "cavity-langevin-equation"
+    },
+    {
+      "concept": "cavity-noise-correlations",
+      "prereq": "cavity-reservoir-model"
+    },
+    {
+      "concept": "cavity-noise-correlations",
+      "prereq": "generalized-einstein-relation"
+    },
+    {
+      "concept": "cavity-master-equation",
+      "prereq": "cavity-reservoir-model"
+    },
+    {
+      "concept": "damped-coherent-state",
+      "prereq": "cavity-noise-correlations"
+    },
+    {
+      "concept": "damped-coherent-state",
+      "prereq": "coherent-state-uncertainty"
+    },
+    {
+      "concept": "dissipation-destroys-nonclassicality",
+      "prereq": "damped-coherent-state"
+    },
+    {
+      "concept": "dissipation-destroys-nonclassicality",
+      "prereq": "nonclassical-light"
+    },
+    {
+      "concept": "cavity-driven-by-atoms",
+      "prereq": "cavity-langevin-equation"
+    },
+    {
+      "concept": "open-and-closed-cavities",
+      "prereq": "cavity-qed"
+    },
+    {
+      "concept": "open-and-closed-cavities",
+      "prereq": "spontaneous-emission-rate"
+    },
+    {
+      "concept": "cqed-master-equation",
+      "prereq": "jaynes-cummings-model"
+    },
+    {
+      "concept": "cqed-master-equation",
+      "prereq": "cavity-master-equation"
+    },
+    {
+      "concept": "cqed-master-equation",
+      "prereq": "lindblad-master-equation"
+    },
+    {
+      "concept": "jaynes-cummings-ladder",
+      "prereq": "cqed-master-equation"
+    },
+    {
+      "concept": "jaynes-cummings-ladder",
+      "prereq": "dressed-states"
+    },
+    {
+      "concept": "vacuum-rabi-splitting",
+      "prereq": "jaynes-cummings-ladder"
+    },
+    {
+      "concept": "collective-enhancement",
+      "prereq": "vacuum-rabi-splitting"
+    },
+    {
+      "concept": "collective-enhancement",
+      "prereq": "dispersion"
+    },
+    {
+      "concept": "cqed-no-jump-evolution",
+      "prereq": "cqed-master-equation"
+    },
+    {
+      "concept": "cqed-no-jump-evolution",
+      "prereq": "no-jump-evolution"
+    },
+    {
+      "concept": "purcell-effect",
+      "prereq": "cqed-no-jump-evolution"
+    },
+    {
+      "concept": "purcell-effect",
+      "prereq": "open-and-closed-cavities"
+    },
+    {
+      "concept": "purcell-effect",
+      "prereq": "lamb-shift"
+    },
+    {
+      "concept": "quality-factor",
+      "prereq": "cavity-loss-rate"
+    },
+    {
+      "concept": "cavity-finesse",
+      "prereq": "cavity-loss-rate"
+    },
+    {
+      "concept": "cavity-mode-coupling",
+      "prereq": "single-photon-rabi-frequency"
+    },
+    {
+      "concept": "strong-coupling-figure-of-merit",
+      "prereq": "strong-coupling-regime"
+    },
+    {
+      "concept": "strong-coupling-figure-of-merit",
+      "prereq": "cavity-mode-coupling"
+    },
+    {
+      "concept": "strong-coupling-figure-of-merit",
+      "prereq": "cavity-finesse"
+    },
+    {
+      "concept": "strong-coupling-figure-of-merit",
+      "prereq": "absorption-cross-section"
+    },
+    {
+      "concept": "suppressed-decay",
+      "prereq": "purcell-effect"
+    },
+    {
+      "concept": "suppressed-decay",
+      "prereq": "quality-factor"
+    },
+    {
+      "concept": "microwave-cqed",
+      "prereq": "open-and-closed-cavities"
+    },
+    {
+      "concept": "microwave-cqed",
+      "prereq": "rydberg-states"
+    },
+    {
+      "concept": "cavity-single-photon-source",
+      "prereq": "purcell-effect"
+    },
+    {
+      "concept": "cavity-single-photon-source",
+      "prereq": "emitted-photon-wavepacket"
+    },
+    {
+      "concept": "hanbury-brown-twiss",
+      "prereq": "beamsplitter-transformation"
+    },
+    {
+      "concept": "second-order-correlation",
+      "prereq": "hanbury-brown-twiss"
+    },
+    {
+      "concept": "photon-bunching",
+      "prereq": "second-order-correlation"
+    },
+    {
+      "concept": "photon-bunching",
+      "prereq": "poisson-photon-statistics"
+    },
+    {
+      "concept": "photon-bunching",
+      "prereq": "thermal-photon-distribution"
+    },
+    {
+      "concept": "linear-amplifier-noise",
+      "prereq": "beamsplitter-loss-model"
+    },
+    {
+      "concept": "degenerate-opo",
+      "prereq": "difference-frequency-generation"
+    },
+    {
+      "concept": "degenerate-opo",
+      "prereq": "phase-matching"
+    },
+    {
+      "concept": "degenerate-opo",
+      "prereq": "cavity-langevin-equation"
+    },
+    {
+      "concept": "phase-dependent-amplification",
+      "prereq": "degenerate-opo"
+    },
+    {
+      "concept": "opo-heisenberg-langevin",
+      "prereq": "phase-dependent-amplification"
+    },
+    {
+      "concept": "opo-heisenberg-langevin",
+      "prereq": "cavity-driven-by-atoms"
+    },
+    {
+      "concept": "opo-heisenberg-langevin",
+      "prereq": "adiabatic-elimination"
+    },
+    {
+      "concept": "nondegenerate-pdc",
+      "prereq": "opo-heisenberg-langevin"
+    },
+    {
+      "concept": "photon-pair-state",
+      "prereq": "nondegenerate-pdc"
+    },
+    {
+      "concept": "photon-number-correlations",
+      "prereq": "photon-pair-state"
+    },
+    {
+      "concept": "photon-number-correlations",
+      "prereq": "thermal-photon-distribution"
+    },
+    {
+      "concept": "heralded-single-photons",
+      "prereq": "photon-number-correlations"
+    },
+    {
+      "concept": "post-selection",
+      "prereq": "photon-pair-state"
+    },
+    {
+      "concept": "squeezed-state",
+      "prereq": "opo-heisenberg-langevin"
+    },
+    {
+      "concept": "squeezed-state",
+      "prereq": "coherent-state-uncertainty"
+    },
+    {
+      "concept": "damped-squeezing",
+      "prereq": "squeezed-state"
+    },
+    {
+      "concept": "damped-squeezing",
+      "prereq": "cavity-noise-correlations"
+    },
+    {
+      "concept": "steady-state-squeezing",
+      "prereq": "damped-squeezing"
+    },
+    {
+      "concept": "output-squeezing",
+      "prereq": "steady-state-squeezing"
+    },
+    {
+      "concept": "output-squeezing",
+      "prereq": "input-output-relation"
+    },
+    {
+      "concept": "homodyne-detection",
+      "prereq": "local-oscillator"
+    },
+    {
+      "concept": "homodyne-detection",
+      "prereq": "beamsplitter-transformation"
+    },
+    {
+      "concept": "squeezed-interferometry",
+      "prereq": "homodyne-detection"
+    },
+    {
+      "concept": "squeezed-interferometry",
+      "prereq": "squeezed-state"
+    },
+    {
+      "concept": "spin-squeezing",
+      "prereq": "squeezed-state"
+    },
+    {
+      "concept": "atom-photon-entanglement",
+      "prereq": "spin-squeezing"
+    },
+    {
+      "concept": "atom-photon-entanglement",
+      "prereq": "post-selection"
+    },
+    {
+      "concept": "mean-photon-number",
+      "prereq": "photon-statistics"
+    },
+    {
+      "concept": "poisson-photon-statistics",
+      "prereq": "mean-photon-number"
+    }
+  ]
+}

@@ -1,0 +1,1025 @@
+{
+ "id": "8",
+ "dir": "ch08",
+ "title": "激光中的原子运动",
+ "intro": {},
+ "sections": [
+  {
+   "id": "8.1",
+   "title": "将质心运动纳入原子与光的相互作用"
+  },
+  {
+   "id": "8.2",
+   "title": "半经典描述"
+  },
+  {
+   "id": "8.3",
+   "title": "多普勒冷却"
+  },
+  {
+   "id": "8.4",
+   "title": "耗散与量子噪声：海森伯-朗之万方法"
+  },
+  {
+   "id": "8.5",
+   "title": "应用于多普勒冷却的海森伯-朗之万形式体系"
+  },
+  {
+   "id": "8.6",
+   "title": "亚多普勒冷却"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "H",
+   "section": "8.1",
+   "concept": "moving-atom-hamiltonian",
+   "meaning": "在激光中运动的原子的哈密顿量，包括其质心运动",
+   "anchor": "8.1-eq-8-1",
+   "redefines": true
+  },
+  {
+   "sym": "p",
+   "section": "8.1",
+   "type": "momentum",
+   "meaning": "原子质心的动量算符",
+   "unit": "kg·m/s",
+   "anchor": "8.1-two-levels",
+   "redefines": true
+  },
+  {
+   "sym": "p_cm",
+   "section": "8.1",
+   "type": "momentum",
+   "meaning": "原子质心的动量，是其动量算符的本征值",
+   "unit": "kg·m/s",
+   "anchor": "8.1-drv-plane-wave-coupling"
+  },
+  {
+   "sym": "r",
+   "section": "8.1",
+   "type": "length",
+   "meaning": "原子质心的位置算符",
+   "unit": "m",
+   "anchor": "8.1-two-levels",
+   "redefines": true
+  },
+  {
+   "sym": "m",
+   "section": "8.1",
+   "type": "mass",
+   "meaning": "原子的质量",
+   "unit": "kg",
+   "anchor": "8.1-eq-8-1",
+   "redefines": true
+  },
+  {
+   "sym": "k",
+   "section": "8.1",
+   "type": "wavevector",
+   "meaning": "外加场的波矢量",
+   "unit": "m⁻¹",
+   "anchor": "8.1-plane-wave-phase"
+  },
+  {
+   "sym": "k_mag",
+   "section": "8.1",
+   "type": "wavevector",
+   "meaning": "光的波矢量，写成非粗体，使 ħk 成为一个光子给予原子的动量",
+   "unit": "m⁻¹",
+   "anchor": "8.1-drv-plane-wave-coupling"
+  },
+  {
+   "sym": "V",
+   "section": "8.1",
+   "type": "energy",
+   "meaning": "作用在原子质心上的外部势",
+   "unit": "J",
+   "anchor": "8.1-eq-8-1",
+   "redefines": true
+  },
+  {
+   "sym": "Omega",
+   "section": "8.1",
+   "concept": "rabi-frequency",
+   "meaning": "激光在原子位置处的拉比频率 Ω(r̂) = |Ω(r̂)|e^{iφ(r̂)}",
+   "unit": "rad/s",
+   "anchor": "8.1-eq-8-3",
+   "redefines": true
+  },
+  {
+   "sym": "phi",
+   "section": "8.1",
+   "type": "phase",
+   "meaning": "激光在原子位置处的相位 φ(r̂)，平面波时为 k·r",
+   "unit": "rad",
+   "anchor": "8.1-eq-8-3",
+   "redefines": true
+  },
+  {
+   "sym": "omega",
+   "section": "8.1",
+   "concept": "atomic-transition-frequency",
+   "meaning": "原子跃迁频率：两个能级相距 ħω",
+   "unit": "rad/s",
+   "anchor": "8.1-resonance"
+  },
+  {
+   "sym": "omega_R",
+   "section": "8.1",
+   "concept": "recoil-frequency",
+   "meaning": "反冲频率：一个光子的动量给予原子的动能 (ħk)²/2m 除以 ħ",
+   "unit": "rad/s",
+   "anchor": "8.1-recoil-energy"
+  },
+  {
+   "sym": "omega_res",
+   "section": "8.1",
+   "concept": "recoil-shifted-resonance",
+   "meaning": "跃迁 |p⟩|1⟩ → |p + ħk⟩|2⟩ 的共振频率，相对 ω₁₂ 经多普勒频移和反冲移位而移动",
+   "unit": "rad/s",
+   "anchor": "8.1-drv-recoil-shifted-resonance"
+  },
+  {
+   "sym": "gamma",
+   "section": "8.1",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 的衰变，以场的真空模为连续谱",
+   "anchor": "8.1-recoil-scale"
+  },
+  {
+   "sym": "F_mag",
+   "concept": "dissipative-force",
+   "meaning": "原子沿 z 方向所受的耗散力：式 (8.28) 中为一束光的，式 (8.29) 中为两束对传光束合起来的",
+   "unit": "N",
+   "anchor": "8.3-drv-doppler-force-expansion",
+   "section": "8.3",
+   "redefines": true
+  },
+  {
+   "sym": "F_p",
+   "concept": "dissipative-force",
+   "ref": "beam-plus",
+   "meaning": "沿 +z 传播的光束的力",
+   "unit": "N",
+   "anchor": "8.3-eq-8-29",
+   "section": "8.3"
+  },
+  {
+   "sym": "F_m",
+   "concept": "dissipative-force",
+   "ref": "beam-minus",
+   "meaning": "沿 −z 传播的光束的力",
+   "unit": "N",
+   "anchor": "8.3-eq-8-29",
+   "section": "8.3"
+  },
+  {
+   "sym": "R_opt_0",
+   "concept": "zero-velocity-excitation-rate",
+   "meaning": "速度为零的原子的光激发率",
+   "unit": "s⁻¹",
+   "anchor": "8.3-zero-velocity-rate",
+   "section": "8.3"
+  },
+  {
+   "sym": "eta",
+   "concept": "friction-coefficient",
+   "meaning": "两束对传光束的黏性力 F = ηmv_z 的摩擦系数",
+   "unit": "s⁻¹",
+   "anchor": "8.3-friction-coefficient",
+   "section": "8.3"
+  },
+  {
+   "sym": "v_c",
+   "concept": "capture-range",
+   "meaning": "临界速度，冷却力在此最大；俘获范围为 −v_c < v < v_c",
+   "unit": "m/s",
+   "anchor": "8.3-capture-range",
+   "section": "8.3"
+  },
+  {
+   "sym": "omega_R",
+   "concept": "recoil-frequency",
+   "meaning": "反冲频率，ħω_R = (ħk)²/2m",
+   "unit": "rad/s",
+   "section": "8.3"
+  },
+  {
+   "sym": "delta",
+   "concept": "detuning",
+   "meaning": "场相对原子跃迁的失谐 δ = ν − ω",
+   "section": "8.3"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "拉比频率 Ω = ℰμ/ℏ",
+   "section": "8.3"
+  },
+  {
+   "sym": "gamma_12",
+   "concept": "coherence-decay-rate",
+   "meaning": "相干性 ρ₁₂ 的衰变率，均匀谱线宽度",
+   "section": "8.3"
+  },
+  {
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 的衰变，以场的真空模为连续谱",
+   "section": "8.3"
+  },
+  {
+   "sym": "R_opt",
+   "concept": "optical-pumping-rate",
+   "meaning": "外加场的光抽运率 R_opt",
+   "section": "8.3"
+  },
+  {
+   "sym": "k",
+   "type": "wavevector",
+   "meaning": "外加场的波矢量",
+   "unit": "m⁻¹",
+   "section": "8.3"
+  },
+  {
+   "sym": "k_mag",
+   "type": "wavevector",
+   "meaning": "光的波矢量，写成非粗体，使 ħk 成为一个光子给予原子的动量",
+   "unit": "m⁻¹",
+   "section": "8.3"
+  },
+  {
+   "sym": "v",
+   "type": "velocity",
+   "meaning": "原子的速度",
+   "unit": "m/s",
+   "section": "8.3"
+  },
+  {
+   "sym": "v_mag",
+   "type": "velocity",
+   "meaning": "原子沿光束的速度",
+   "unit": "m/s",
+   "section": "8.3"
+  },
+  {
+   "sym": "v_z",
+   "type": "velocity",
+   "meaning": "原子沿光束、z 方向的速度",
+   "unit": "m/s",
+   "section": "8.3"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "原子的质量",
+   "unit": "kg",
+   "section": "8.3"
+  },
+  {
+   "sym": "p_cm",
+   "type": "momentum",
+   "meaning": "原子质心的动量",
+   "unit": "kg·m/s",
+   "section": "8.3"
+  },
+  {
+   "sym": "B",
+   "type": "magnetic-field",
+   "meaning": "阱的磁场，沿其线圈轴为 B₀z ẑ",
+   "unit": "T",
+   "section": "8.3"
+  },
+  {
+   "section": "8.2",
+   "sym": "F",
+   "concept": "light-force-operator",
+   "meaning": "原子所受的力算符，其动量算符的变化率",
+   "unit": "N",
+   "anchor": "8.2-eq-8-9",
+   "redefines": true
+  },
+  {
+   "section": "8.2",
+   "sym": "F_mag",
+   "concept": "semiclassical-light-force",
+   "meaning": "光对作为经典粒子运动的原子的平均力 ⟨F̂⟩",
+   "unit": "N",
+   "anchor": "8.2-drv-semiclassical-light-force"
+  },
+  {
+   "section": "8.2",
+   "sym": "F_force",
+   "concept": "dissipative-force",
+   "meaning": "原子沿光的波矢量 k 所受的耗散力；F_max 为其最大值",
+   "unit": "N",
+   "anchor": "8.2-drv-dissipative-force"
+  },
+  {
+   "section": "8.2",
+   "sym": "V_eff",
+   "concept": "dipole-force",
+   "meaning": "偶极势 ħ|Ω|²/δ，基态的交流斯塔克偏移；多能级时为式 (8.21) 的算符",
+   "unit": "J",
+   "anchor": "8.2-v-eff"
+  },
+  {
+   "section": "8.2",
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "原子质心的动量算符",
+   "unit": "kg·m/s",
+   "anchor": "8.2-eq-8-9"
+  },
+  {
+   "section": "8.2",
+   "sym": "H",
+   "concept": "moving-atom-hamiltonian",
+   "meaning": "在激光中运动的原子的哈密顿量，包括其质心运动",
+   "anchor": "8.2-eq-8-9"
+  },
+  {
+   "section": "8.2",
+   "sym": "r",
+   "type": "length",
+   "meaning": "原子质心的位置算符",
+   "unit": "m",
+   "anchor": "8.2-drv-light-force-operator"
+  },
+  {
+   "section": "8.2",
+   "sym": "m",
+   "type": "mass",
+   "meaning": "原子的质量",
+   "unit": "kg",
+   "anchor": "8.2-recoil-energy"
+  },
+  {
+   "section": "8.2",
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "激光在原子位置处的拉比频率 Ω(r̂) = |Ω(r̂)|e^{iφ(r̂)}",
+   "unit": "rad/s",
+   "anchor": "8.2-drv-light-force-operator"
+  },
+  {
+   "section": "8.2",
+   "sym": "phi",
+   "type": "phase",
+   "meaning": "激光在原子位置处的相位 φ(r̂)，平面波时为 k·r",
+   "unit": "rad",
+   "anchor": "8.2-drv-semiclassical-light-force"
+  },
+  {
+   "section": "8.2",
+   "sym": "k",
+   "type": "wavevector",
+   "meaning": "外加场的波矢量",
+   "unit": "m⁻¹",
+   "anchor": "8.2-drv-dissipative-force"
+  },
+  {
+   "section": "8.2",
+   "sym": "k_mag",
+   "type": "wavevector",
+   "meaning": "光的波矢量，写成非粗体，使 ħk 成为一个光子给予原子的动量",
+   "unit": "m⁻¹",
+   "anchor": "8.2-recoil-energy"
+  },
+  {
+   "section": "8.2",
+   "sym": "omega_R",
+   "concept": "recoil-frequency",
+   "meaning": "反冲频率：一个光子的动量给予原子的动能 (ħk)²/2m 除以 ħ",
+   "unit": "rad/s",
+   "anchor": "8.2-recoil-energy"
+  },
+  {
+   "section": "8.2",
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 的衰变，以场的真空模为连续谱",
+   "unit": "s⁻¹",
+   "anchor": "8.2-drv-scattering-force"
+  },
+  {
+   "section": "8.2",
+   "sym": "rho_12",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |1⟩ 与 |2⟩ 之间的相干性",
+   "anchor": "8.2-drv-semiclassical-light-force"
+  },
+  {
+   "section": "8.2",
+   "sym": "rho_21",
+   "concept": "density-matrix-coherences",
+   "meaning": "能级 |2⟩ 与 |1⟩ 之间的相干性，是 ρ₁₂ 的复共轭",
+   "anchor": "8.2-drv-semiclassical-light-force"
+  },
+  {
+   "section": "8.2",
+   "sym": "rho_22",
+   "concept": "density-matrix-populations",
+   "meaning": "能级 |2⟩ 的布居",
+   "anchor": "8.2-drv-scattering-force"
+  },
+  {
+   "section": "8.2",
+   "sym": "gamma_12",
+   "concept": "coherence-decay-rate",
+   "meaning": "相干性 ρ₁₂ 的衰变率",
+   "unit": "s⁻¹",
+   "anchor": "8.2-validity-estimate"
+  },
+  {
+   "section": "8.2",
+   "sym": "R_opt",
+   "concept": "optical-pumping-rate",
+   "meaning": "外加场的光抽运率 R_opt",
+   "unit": "s⁻¹",
+   "anchor": "8.2-drv-dissipative-force"
+  },
+  {
+   "section": "8.2",
+   "sym": "chi",
+   "concept": "susceptibility",
+   "meaning": "电极化率，极化强度与 ε₀ 乘以场之比",
+   "anchor": "8.2-ratio"
+  },
+  {
+   "section": "8.2",
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "unit": "s",
+   "anchor": "8.2-validity-estimate"
+  },
+  {
+   "section": "8.2",
+   "sym": "lambda",
+   "type": "length",
+   "meaning": "光波长，λ = 2π/k",
+   "unit": "m",
+   "anchor": "8.2-validity-estimate"
+  },
+  {
+   "section": "8.2",
+   "sym": "delta",
+   "concept": "detuning",
+   "meaning": "场相对原子跃迁的失谐 δ = ν − ω",
+   "unit": "rad/s",
+   "anchor": "8.2-validity-estimate"
+  },
+  {
+   "section": "8.2",
+   "sym": "v_mag",
+   "type": "velocity",
+   "meaning": "原子沿光的速度，使 kv 为其多普勒频移",
+   "unit": "m/s",
+   "anchor": "8.2-doppler-term"
+  },
+  {
+   "section": "8.4",
+   "sym": "p_cm",
+   "meaning": "重粒子在较轻粒子热浴中的动量",
+   "redefines": true,
+   "type": "momentum"
+  },
+  {
+   "section": "8.4",
+   "sym": "eta",
+   "concept": "friction-coefficient",
+   "meaning": "重粒子黏滞阻力 −ηp 的摩擦系数",
+   "redefines": true
+  },
+  {
+   "section": "8.4",
+   "sym": "f_t",
+   "concept": "langevin-equation",
+   "meaning": "朗之万力 f(t)：重粒子因与较轻粒子碰撞而受到的无规力",
+   "redefines": true
+  },
+  {
+   "section": "8.4",
+   "sym": "D_diff",
+   "concept": "diffusion-coefficient",
+   "meaning": "扩散系数，朗之万力关联的强度；D_μν 是它对量子朗之万算符的推广"
+  },
+  {
+   "section": "8.4",
+   "sym": "t",
+   "meaning": "时间",
+   "type": "time"
+  },
+  {
+   "section": "8.4",
+   "sym": "m",
+   "meaning": "重粒子的质量",
+   "redefines": true,
+   "type": "mass"
+  },
+  {
+   "section": "8.4",
+   "sym": "T",
+   "meaning": "温度",
+   "type": "temperature"
+  },
+  {
+   "section": "8.4",
+   "sym": "F",
+   "concept": "light-force-operator",
+   "meaning": "原子所受的力算符，其动量算符的变化率"
+  },
+  {
+   "section": "8.4",
+   "sym": "H",
+   "meaning": "系统与热库合在一起的总哈密顿量",
+   "redefines": true,
+   "type": "energy"
+  },
+  {
+   "section": "8.4",
+   "sym": "H_S",
+   "meaning": "系统哈密顿量，只作用于系统",
+   "type": "energy"
+  },
+  {
+   "section": "8.4",
+   "sym": "H_R",
+   "meaning": "热库哈密顿量，只作用于热库",
+   "type": "energy"
+  },
+  {
+   "section": "8.4",
+   "sym": "H_SR",
+   "concept": "system-reservoir-hamiltonian",
+   "meaning": "系统与热库之间的相互作用哈密顿量"
+  },
+  {
+   "section": "8.4",
+   "sym": "S_hat",
+   "meaning": "一般的系统算符，与热库算符双线性耦合；对二能级原子 Ŝ = σ̂₁₂ = |1⟩⟨2|"
+  },
+  {
+   "section": "8.4",
+   "sym": "g",
+   "concept": "single-photon-rabi-frequency",
+   "meaning": "单光子拉比频率，原子与场的一个模的耦合"
+  },
+  {
+   "section": "8.4",
+   "sym": "nu",
+   "meaning": "场的模 j 的频率 ν_j",
+   "type": "frequency"
+  },
+  {
+   "section": "8.4",
+   "sym": "omega",
+   "concept": "atomic-transition-frequency",
+   "meaning": "原子跃迁频率：两个能级相距 ħω"
+  },
+  {
+   "section": "8.4",
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 的衰变，以场的真空模为连续谱"
+  },
+  {
+   "section": "8.4",
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "拉比频率 Ω = ℰμ/ℏ"
+  },
+  {
+   "section": "8.4",
+   "sym": "f_hat",
+   "concept": "quantum-langevin-force",
+   "meaning": "量子朗之万力 f̂(t)，热库初始场模的自由演化"
+  },
+  {
+   "section": "8.4",
+   "sym": "F_noise",
+   "concept": "generalized-einstein-relation",
+   "meaning": "算符 Â_μ 的量子朗之万算符 𝓕̂_μ，均值为零，矩为 δ 关联的 2D_μν"
+  },
+  {
+   "sym": "F",
+   "concept": "light-force-operator",
+   "meaning": "原子所受的力算符，其动量算符的变化率",
+   "unit": "N",
+   "anchor": "8.5-eq-8-79",
+   "section": "8.5"
+  },
+  {
+   "sym": "F_mag",
+   "concept": "semiclassical-light-force",
+   "meaning": "光对作为经典粒子运动的原子的平均力 ⟨F̂⟩",
+   "unit": "N",
+   "anchor": "8.5-drv-fluctuating-force",
+   "redefines": true,
+   "section": "8.5"
+  },
+  {
+   "sym": "F_noise",
+   "concept": "laser-cooling-noise-force",
+   "meaning": "激光驱动的二能级原子的相干性 σ̂₁₂ 上的噪声力 𝓕̂₁₂(t) = (σ̂₂₂ − σ̂₁₁)f̂(t)",
+   "anchor": "8.5-eq-8-83",
+   "redefines": true,
+   "section": "8.5"
+  },
+  {
+   "sym": "f_hat",
+   "concept": "quantum-langevin-force",
+   "meaning": "量子朗之万力 f̂(t)，热库初始场模的自由演化",
+   "anchor": "8.5-drv-coherence-noise",
+   "section": "8.5"
+  },
+  {
+   "sym": "S_hat",
+   "meaning": "一般的系统算符，与热库算符双线性耦合；对二能级原子 Ŝ = σ̂₁₂ = |1⟩⟨2|",
+   "anchor": "8.5-average-fluctuation",
+   "section": "8.5"
+  },
+  {
+   "sym": "H_S",
+   "type": "energy",
+   "meaning": "系统哈密顿量，只作用于系统",
+   "unit": "J",
+   "anchor": "8.5-drv-coherence-noise",
+   "section": "8.5"
+  },
+  {
+   "sym": "H",
+   "concept": "moving-atom-hamiltonian",
+   "meaning": "在激光中运动的原子的哈密顿量，包括其质心运动",
+   "anchor": "8.5-drv-noise-moment",
+   "redefines": true,
+   "section": "8.5"
+  },
+  {
+   "sym": "D_diff",
+   "concept": "laser-cooling-diffusion",
+   "meaning": "激光冷却原子的动量扩散常量，2Dδ(t − t′) = ⟨δF̂(t)δF̂(t′)⟩",
+   "unit": "kg²·m²/s³",
+   "anchor": "8.5-diffusion-constant",
+   "redefines": true,
+   "section": "8.5"
+  },
+  {
+   "sym": "T_D",
+   "concept": "doppler-limit",
+   "meaning": "多普勒温度，多普勒冷却达到的最终温度",
+   "unit": "K",
+   "anchor": "8.5-final-temperature",
+   "section": "8.5"
+  },
+  {
+   "sym": "Omega_tilde",
+   "type": "coupling",
+   "meaning": "拉比频率的两倍，Ω̃ = 2Ω，计入两束对传光束和吸收引起的扩散",
+   "unit": "rad/s",
+   "anchor": "8.5-two-factors",
+   "section": "8.5"
+  },
+  {
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "拉比频率 Ω = ℰμ/ℏ",
+   "unit": "rad/s",
+   "anchor": "8.5-hl-doppler",
+   "section": "8.5"
+  },
+  {
+   "sym": "k_mag",
+   "type": "wavevector",
+   "meaning": "光的波矢量，写成非粗体，使 ħk 成为一个光子给予原子的动量",
+   "unit": "m⁻¹",
+   "anchor": "8.5-hl-doppler",
+   "section": "8.5"
+  },
+  {
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 的衰变，以场的真空模为连续谱",
+   "unit": "s⁻¹",
+   "anchor": "8.5-drv-coherence-noise",
+   "section": "8.5"
+  },
+  {
+   "sym": "gamma_12",
+   "concept": "coherence-decay-rate",
+   "meaning": "相干性 ρ₁₂ 的衰变率，均匀谱线宽度",
+   "unit": "s⁻¹",
+   "anchor": "8.5-drv-doppler-limit",
+   "section": "8.5"
+  },
+  {
+   "sym": "delta",
+   "concept": "detuning",
+   "meaning": "场相对原子跃迁的失谐 δ = ν − ω",
+   "unit": "rad/s",
+   "anchor": "8.5-drv-noise-moment",
+   "section": "8.5"
+  },
+  {
+   "sym": "R_opt",
+   "concept": "optical-pumping-rate",
+   "meaning": "外加场的光抽运率 R_opt",
+   "unit": "s⁻¹",
+   "anchor": "8.5-drv-doppler-limit",
+   "section": "8.5"
+  },
+  {
+   "sym": "R_opt_0",
+   "concept": "zero-velocity-excitation-rate",
+   "meaning": "速度为零的原子的光激发率",
+   "unit": "s⁻¹",
+   "anchor": "8.5-drv-diffusion-constant",
+   "section": "8.5"
+  },
+  {
+   "sym": "eta",
+   "concept": "friction-coefficient",
+   "meaning": "两束对传光束的黏性力 F = ηmv_z 的摩擦系数",
+   "unit": "s⁻¹",
+   "anchor": "8.5-drv-doppler-limit",
+   "redefines": true,
+   "section": "8.5"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "原子的质量",
+   "unit": "kg",
+   "anchor": "8.5-drv-doppler-limit",
+   "redefines": true,
+   "section": "8.5"
+  },
+  {
+   "sym": "p_cm",
+   "type": "momentum",
+   "meaning": "原子质心的动量",
+   "unit": "kg·m/s",
+   "anchor": "8.5-diffusion-physics",
+   "redefines": true,
+   "section": "8.5"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "unit": "s",
+   "anchor": "8.5-drv-coherence-noise",
+   "section": "8.5"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "温度",
+   "unit": "K",
+   "anchor": "8.5-noise-moment",
+   "section": "8.5"
+  },
+  {
+   "sym": "omega",
+   "concept": "atomic-transition-frequency",
+   "meaning": "原子跃迁频率：两个能级相距 ħω",
+   "unit": "rad/s",
+   "anchor": "8.5-noise-moment",
+   "section": "8.5"
+  },
+  {
+   "sym": "lambda",
+   "type": "length",
+   "meaning": "光波长，λ = 2π/k",
+   "unit": "m",
+   "anchor": "8.5-reabsorption",
+   "section": "8.5"
+  },
+  {
+   "sym": "r_dist",
+   "type": "length",
+   "meaning": "到发射光子的原子的距离",
+   "unit": "m",
+   "anchor": "8.5-reabsorption",
+   "section": "8.5"
+  },
+  {
+   "section": "8.6",
+   "sym": "E_field",
+   "concept": "polarization-gradient",
+   "meaning": "两束线偏振交叉的对传光束的 lin⊥lin 场",
+   "unit": "V/m",
+   "anchor": "8.6-drv-lin-perp-lin-field",
+   "redefines": true
+  },
+  {
+   "section": "8.6",
+   "sym": "nu",
+   "concept": "optical-frequency",
+   "meaning": "外加场的频率",
+   "unit": "rad/s"
+  },
+  {
+   "section": "8.6",
+   "sym": "t",
+   "type": "time",
+   "meaning": "时间",
+   "unit": "s"
+  },
+  {
+   "section": "8.6",
+   "sym": "k_mag",
+   "type": "wavevector",
+   "meaning": "光的波矢量，写成非粗体，使 ħk 成为一个光子给予原子的动量",
+   "unit": "m⁻¹"
+  },
+  {
+   "section": "8.6",
+   "sym": "Omega",
+   "concept": "rabi-frequency",
+   "meaning": "每束光的拉比频率 Ω；Ω₊ = Ω cos kz 和 Ω₋ = Ω sin kz 是其 σ₊ 和 σ₋ 部分",
+   "anchor": "8.6-eq-8-103",
+   "redefines": true
+  },
+  {
+   "section": "8.6",
+   "sym": "Omega_p",
+   "concept": "rabi-frequency",
+   "ref": "sigma-plus",
+   "meaning": "σ₊ 驻波的拉比频率 Ω₊ = Ω cos kz",
+   "anchor": "8.6-eq-8-103",
+   "redefines": true
+  },
+  {
+   "section": "8.6",
+   "sym": "Omega_m",
+   "concept": "rabi-frequency",
+   "ref": "sigma-minus",
+   "meaning": "σ₋ 驻波的拉比频率 Ω₋ = Ω sin kz",
+   "anchor": "8.6-eq-8-104",
+   "redefines": true
+  },
+  {
+   "section": "8.6",
+   "sym": "delta",
+   "concept": "detuning",
+   "meaning": "场相对原子跃迁的失谐 δ = ν − ω"
+  },
+  {
+   "section": "8.6",
+   "sym": "gamma",
+   "concept": "spontaneous-emission-rate",
+   "meaning": "自发发射率：2.2 的衰变，以场的真空模为连续谱"
+  },
+  {
+   "section": "8.6",
+   "sym": "gamma_12",
+   "concept": "coherence-decay-rate",
+   "meaning": "相干性 ρ₁₂ 的衰变率，均匀谱线宽度"
+  },
+  {
+   "section": "8.6",
+   "sym": "Delta",
+   "concept": "ac-stark-shift",
+   "meaning": "σ± 光使基态子能级 m 产生的光致频移 Δ^{σ±}_m",
+   "anchor": "8.6-eq-8-99",
+   "redefines": true
+  },
+  {
+   "section": "8.6",
+   "sym": "H",
+   "concept": "ground-state-light-shift-potential",
+   "meaning": "远失谐 lin⊥lin 场的有效原子-激光哈密顿量 Ĥ^eff_AL",
+   "anchor": "8.6-drv-sisyphus-light-shifts",
+   "redefines": true
+  },
+  {
+   "section": "8.6",
+   "sym": "U",
+   "concept": "ground-state-light-shift-potential",
+   "meaning": "基态子能级 m 的光致频移势 U_m(z)，Ĥ^eff_AL 的对角部分",
+   "unit": "J",
+   "redefines": true
+  },
+  {
+   "section": "8.6",
+   "sym": "F_mag",
+   "concept": "sisyphus-force",
+   "meaning": "lin⊥lin 场中原子所受的力：反应力 F_reactive，以及图 8.6 中与多普勒力 F_D 并列的西西弗斯力 F_S",
+   "unit": "N",
+   "anchor": "8.6-drv-sisyphus-reactive-force",
+   "redefines": true
+  },
+  {
+   "section": "8.6",
+   "sym": "R_opt",
+   "concept": "optical-pumping-rate",
+   "meaning": "外加场的光抽运率 R_opt"
+  },
+  {
+   "section": "8.6",
+   "sym": "Delta_rho",
+   "type": "population",
+   "meaning": "两个基态子能级的布居差 ρ_{½½} − ρ_{−½−½}"
+  },
+  {
+   "section": "8.6",
+   "sym": "tau_P",
+   "concept": "sisyphus-pumping-rate",
+   "meaning": "两个基态子能级间的光抽运时间，1/τ_P = (2/9)R_opt",
+   "unit": "s",
+   "anchor": "8.6-drv-population-relaxation"
+  },
+  {
+   "section": "8.6",
+   "sym": "omega_R",
+   "concept": "recoil-frequency",
+   "meaning": "反冲频率，ħω_R = (ħk)²/2m"
+  },
+  {
+   "section": "8.6",
+   "sym": "m",
+   "type": "mass",
+   "meaning": "原子的质量",
+   "unit": "kg"
+  },
+  {
+   "section": "8.6",
+   "sym": "v_mag",
+   "type": "velocity",
+   "meaning": "原子沿光束的速度",
+   "unit": "m/s"
+  },
+  {
+   "section": "8.6",
+   "sym": "v_c",
+   "concept": "capture-range",
+   "meaning": "西西弗斯俘获速度 v_c = 1/2kτ_P；v_c^S 和 v_c^D 分别是西西弗斯俘获速度和多普勒俘获速度",
+   "unit": "m/s",
+   "anchor": "8.6-drv-sisyphus-solution",
+   "redefines": true
+  },
+  {
+   "section": "8.6",
+   "sym": "lambda",
+   "type": "length",
+   "meaning": "光波长，λ = 2π/k",
+   "unit": "m"
+  },
+  {
+   "section": "8.6",
+   "sym": "eta_S",
+   "concept": "sisyphus-friction",
+   "meaning": "平均力 ⟨F_reactive⟩ = η_S vm 的西西弗斯摩擦系数",
+   "unit": "s⁻¹",
+   "anchor": "8.6-drv-sisyphus-solution"
+  },
+  {
+   "section": "8.6",
+   "sym": "eta",
+   "concept": "friction-coefficient",
+   "meaning": "两束对传光束的黏性力 F = ηmv_z 的摩擦系数",
+   "unit": "s⁻¹"
+  },
+  {
+   "section": "8.6",
+   "sym": "D_diff",
+   "concept": "laser-cooling-diffusion",
+   "meaning": "自发发射的动量扩散系数 D_sp 和涨落偶极力的动量扩散系数 D_dp",
+   "anchor": "8.6-eq-8-131",
+   "redefines": true
+  },
+  {
+   "section": "8.6",
+   "sym": "T_S",
+   "concept": "sisyphus-limit",
+   "meaning": "西西弗斯温度，西西弗斯冷却达到的最终温度",
+   "unit": "K",
+   "anchor": "8.6-drv-sisyphus-limit"
+  },
+  {
+   "section": "8.6",
+   "sym": "T_R",
+   "concept": "recoil-limit",
+   "meaning": "反冲温度，具有反冲能的原子的温度",
+   "unit": "K",
+   "anchor": "8.6-recoil-limit"
+  },
+  {
+   "section": "8.6",
+   "sym": "T_D",
+   "concept": "doppler-limit",
+   "meaning": "多普勒温度，多普勒冷却达到的最终温度",
+   "unit": "K"
+  },
+  {
+   "section": "8.6",
+   "sym": "p_cm",
+   "type": "momentum",
+   "meaning": "原子质心的动量",
+   "unit": "kg·m/s"
+  }
+ ]
+}

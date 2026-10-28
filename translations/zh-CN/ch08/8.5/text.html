@@ -1,0 +1,41 @@
+<section id="diffusion">
+<h2>8.5.1 二能级原子激光冷却中的动量扩散</h2>
+<p class="cite-target" id="hl-doppler">现在我们可以应用<span data-concept="heisenberg-langevin-equation">海森伯-朗之万形式体系</span>来处理<span data-concept="doppler-cooling">多普勒冷却模型</span>中的<span data-concept="laser-cooling-diffusion">动量扩散</span>。回忆一下，平面波$\kOmega e^{i\kkmag z}$对原子施加<span data-concept="light-force-operator">一个力</span>，它可以表示为</p>
+<div class="equation" id="eq-8-79">$$\kF = -i\hbar\kkmag\kOmega^*\hat{\sigma}_{12} + h.c. \tag{8.79}$$</div>
+<div class="equation" id="eq-8-80">$$= \langle\kF\rangle + \delta\kF, \tag{8.80}$$</div>
+<p id="average-fluctuation">其中我们把力分解为<span data-concept="semiclassical-light-force">平均力</span>和<span data-concept="force-fluctuations">围绕平均值的涨落</span>。</p>
+<figure class="dv" id="drv-coherence-noise"></figure>
+<p id="noise-intro">第一项只对我们已经计算过的<span data-concept="semiclassical-light-force">平均力</span>有贡献，所以我们把注意力集中在后两项上。特别地，我们认出了<span data-concept="laser-cooling-noise-force" id="noise-force">先前一直缺少的噪声力</span>：</p>
+<div class="equation" id="eq-8-83">$$\kFnoise_{12}(\kt) = \left(\hat{\sigma}_{22} - \hat{\sigma}_{11}\right)\kfhat(\kt). \tag{8.83}$$</div>
+<p id="noise-moment">显然，<span data-concept="laser-cooling-noise-force">平均噪声力</span>为零。对于$k_B\kT \ll \komega$的光学跃迁，辐射场处于真空态$n(\komega) = 0$。</p>
+<figure class="dv" id="drv-noise-moment"></figure>
+<p id="slow-processes">由于我们感兴趣的是相对于$\kgamma$缓慢的过程，我们可以忽略时间导数<sup class="fn" data-note="footnote-2"></sup>，并轻松解出原子相干性。</p>
+<figure class="dv" id="drv-fluctuating-force"></figure>
+<p id="second-moment">同样，<span data-concept="force-fluctuations">这个力</span>显然平均值为零，其二阶矩正比于时间的 δ 函数。</p>
+<p id="two-factors">这里$\kOmegatilde = 2\kOmega$计入了两束对传光束，以及吸收和<span data-concept="spontaneous-emission">自发发射</span>对<span data-concept="laser-cooling-diffusion">扩散的贡献</span>。<sup class="fn" data-note="footnote-3"></sup></p>
+<h3>扩散常量</h3>
+<p id="diffusion-analogy">类比<span data-concept="langevin-equation">布朗运动</span>的扩散模型，我们可以确定<span data-concept="laser-cooling-diffusion" id="diffusion-constant">适当的扩散常量</span> $2\kDdiff\delta(\kt-\kt') = \langle\delta\kF(\kt)\delta\kF(\kt')\rangle$。</p>
+<figure class="dv" id="drv-diffusion-constant"></figure>
+<p id="diffusion-physics"><span data-concept="laser-cooling-diffusion">扩散系数</span>背后的物理相当简单。<span data-concept="laser-cooling-diffusion">动量扩散</span>由<span data-concept="spontaneous-emission">自发发射</span>事件引起，这些事件以速率$\kRoptzero = |\kOmega|^2\kgamma/(\kdelta^2 + (\kgamma/2)^2)$发生。这个过程实际上就像<span data-concept="random-walk">动量空间中的无规行走</span>，其中平均步长为$\delta \kpcm = \hbar \kkmag$，步以速率$\kRoptzero$发生。每个事件<span data-concept="atomic-recoil">使动量改变$\hbar\kkmag = \delta \kpcm$</span>，这平均而言没有影响，但会增加动量的不确定度。<span data-concept="random-walk">平均方均根动量</span>按$\sqrt{\langle \kpcm^2\rangle} = \sqrt{\kDdiff\kt}$增长<sup class="fn" data-note="c-rms-momentum"></sup>。</p>
+</section>
+
+<section id="cooling-limit">
+<h2>8.5.2 多普勒冷却极限</h2>
+<p class="cite-target" id="final-temperature-intro">既然我们现在既知道<span data-concept="laser-cooling-diffusion">扩散系数</span>，又知道与<span data-concept="dissipative-force">耗散力</span>相关的<span data-concept="friction-coefficient">黏性</span>，就可以借助<span data-concept="einstein-relation">爱因斯坦关系</span>来估计<span data-concept="doppler-limit" id="final-temperature">多普勒冷却可达到的最终温度$\kTD$</span>。回忆一下，<span data-concept="friction-coefficient">摩擦系数</span>正比于<span data-concept="optical-pumping-rate">光抽运率</span>，它因此在<span data-concept="doppler-limit">温度</span>的表达式中消去。</p>
+<p id="optimum">在<span data-concept="detuning">最佳失谐</span> $\kdelta \approx \kgammaonetwo$处，<sup class="fn" data-note="c-eq-8-95"></sup><span data-concept="doppler-limit">最终温度</span>就是激发态的谱线宽度。</p>
+<figure class="dv" id="drv-doppler-limit"></figure>
+<p id="radiative">对于辐射增宽的系统，<span data-concept="doppler-limit">最终温度</span>只取决于<span data-concept="spontaneous-emission-rate">自发发射率</span>！这个了不起而又直观的结果，多年来被认为代表了<span data-concept="laser-cooling">激光冷却</span>努力的终极极限。<span data-concept="doppler-limit">多普勒极限</span>的典型值约为$10^{-3}$K，例如Na为0.25 mK，Rb为0.14 mK，这个值虽然很低，但与许多有趣应用所需的温度相比仍相对较热。</p>
+<figure class="sim" id="sim-doppler-limit">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>上方，在同一条对数标度上，原子因<span data-concept="laser-cooling-diffusion">动量扩散</span>而受到的加热，即<a href="#drv-diffusion-constant">式 (8.91)</a> 的$\kDdiff$，以及原子因两束光的<span data-concept="friction-coefficient">摩擦</span>而受到的阻尼，即<a href="#drv-doppler-limit">式 (8.93)</a> 的$\km|\keta|$，随红<span data-concept="detuning">失谐</span> $\kdelta$的变化；下方是它们的比值，即两者达到平衡时的温度$k_B\kTD = \kDdiff/\km|\keta|$。在对数标度上，比值就是距离，因此上方两条曲线之间的间隔就是温度。增大$|\kOmega|$，两条曲线都升高相同的因子$|\kOmega|^2$，间隔保持不变，下方的温度不动：抽运率消去了。拖动$\kdelta$，间隔在$\kdelta = -\kgammaonetwo$处收窄得最多，此处温度达到<span data-concept="doppler-limit">多普勒极限</span> $\hbar\kgammaonetwo$。频率以$\kgammaonetwo$为单位，$\kDdiff$以$(\hbar\kkmag)^2\kgammaonetwo$为单位，$\km|\keta|$以$\hbar\kkmag^2$为单位，$k_B\kTD$以$\hbar\kgammaonetwo$为单位；光束很弱，$|\kOmega| \le 0.5\,\kgammaonetwo$。</span></div>
+</figure>
+<p id="equilibrium">从实际的角度看，室温装置中的原子能够在$\sim$mK的温度下处于热平衡，这似乎很奇怪。这个谜题的解答在于，原子不仅与<span data-concept="thermal-radiation-field">光子热库</span>相互作用，而且还与一束（零温度的）激光相互作用。原子温度是与热的和高度非热的<span data-concept="open-system">热库</span>两者相互作用的结果。</p>
+</section>
+
+<section id="dense-sample">
+<h2>8.5.3 稠密样品的修正</h2>
+<p class="cite-target" id="independent">到目前为止的讨论隐含地假设了样品中的原子是相互独立的。当样品稠密到原子开始相互影响时，这一近似将失效。要把我们的计算应用于这样的稠密样品，就需要考虑两种效应。</p>
+<h3>激光衰减</h3>
+<p id="attenuation"><span data-concept="laser-attenuation" id="optically-thick">光学厚的样品会使任何穿过它传播的激光束衰减</span>，因此<span data-concept="laser-cooling">冷却</span>光束的光强将随着深入样品的距离而减小。相关的力也将具有空间梯度，从而产生<span data-concept="dipole-force">额外的偶极力</span>以及<span data-concept="doppler-cooling">依赖于位置的冷却</span>。</p>
+<h3>自发光子再吸收</h3>
+<p id="reabsorption">当我们考虑一个原子的<span data-concept="spontaneous-emission">自发发射</span>对附近原子的影响时，会出现一种更微妙的效应。如果附近的原子重新吸收了自发发射的光子，它将受到<span data-concept="atomic-recoil">一个离开第一个原子的动量冲击</span>。<span data-concept="photon-reabsorption" id="reabsorption-force">因此，自发光子再吸收会导致原子之间出现有效的斥力</span>。在稀薄样品中我们能够忽略这些效应，因为自发光子场随距离减弱。自发光子产生强度$\propto \klambda^2/\krdist^2$的向外球面波，因此对距离超过一个波长的原子几乎没有影响。可以从这类定性的考虑推导出所得到的力。或者，也可以尝试推广<span data-concept="heisenberg-langevin-equation">海森伯-朗之万方法</span>，以计入原子-原子散射事件。于是，<span data-concept="reservoir-operator-solution">热库算符$\hat{R}$的源项</span>将涉及对所有原子的求和，使得<span data-concept="quantum-langevin-force">作用在一个原子上的朗之万力</span>依赖于其他原子。这一计算的结果将是<span data-concept="heisenberg-langevin-equation">多原子海森伯-朗之万方程</span>，或者是<span data-concept="master-equation">多原子主方程</span>（例如参见格罗斯、阿罗什，PHYS REP 93 (5): 301-396 1982）。这样一种推广的理论方法超出了本课程的范围，稠密样品中耦合的原子动力学仍是当前的研究课题（例如参见卡斯坦、西拉克和莱温斯坦，PRL 80 (24): 5305-5308 1998）。</p>
+</section>

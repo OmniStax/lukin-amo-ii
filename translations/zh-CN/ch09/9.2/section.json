@@ -1,0 +1,891 @@
+{
+ "id": "9.2",
+ "chapter": "9",
+ "title": "单模辐射场与二能级原子的相互作用",
+ "short": "J-C 模型",
+ "lead": "单个<span data-concept=\"two-level-atom\">二能级原子</span>与腔的一个模耦合：<span data-concept=\"jaynes-cummings-model\">J-C 模型</span>及其精确解，空腔中激发态原子的<span data-concept=\"vacuum-rabi-oscillations\">真空拉比振荡</span>，以及对于<span data-concept=\"coherent-state\">相干</span>场，<span data-concept=\"rabi-oscillations\">拉比振荡</span>的<span data-concept=\"rabi-revival\">坍缩与恢复</span>和场分裂为<span data-concept=\"schrodinger-cat-state\">薛定谔猫</span>。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "没有习题属于本节：书中此处没有印出邀请，而 MIT 8.422 中关于猫态的习题，即习题集 1 的第 2(d) 题和第 3(ii) 题，编入 9.3 节和 9.4 节。",
+ "figures": [
+  {
+   "id": "sim-collapse-revival",
+   "kind": "sim",
+   "number": "9.3",
+   "originals": [
+    "/media/ch09/fig-9-3.png"
+   ],
+   "original_caption": "初始处于相干态且 α = 4 的腔场的拉比振荡的坍缩与恢复。",
+   "draws": [
+    "population",
+    "time",
+    "coupling",
+    "state",
+    "quadrature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "cavity-qed",
+   "concept": "cavity-qed",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-9-53",
+   "concept": "jaynes-cummings-model",
+   "verb": "introduces"
+  },
+  {
+   "span": "jc-pairs",
+   "concept": "jaynes-cummings-solution",
+   "verb": "introduces"
+  },
+  {
+   "span": "vacuum-rabi",
+   "concept": "vacuum-rabi-oscillations",
+   "verb": "introduces"
+  },
+  {
+   "span": "strong-coupling",
+   "concept": "strong-coupling-regime",
+   "verb": "introduces"
+  },
+  {
+   "span": "classical-rabi",
+   "concept": "coherent-state-rabi-oscillations",
+   "verb": "introduces"
+  },
+  {
+   "span": "collapse",
+   "concept": "rabi-collapse",
+   "verb": "introduces"
+  },
+  {
+   "span": "revival",
+   "concept": "rabi-revival",
+   "verb": "introduces"
+  },
+  {
+   "span": "cat",
+   "concept": "schrodinger-cat-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "linear-optical-transformations",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "single-mode-field",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "cavity-qed",
+   "concept": "cavity-finesse",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-9-53",
+   "concept": "rotating-frame",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-9-54",
+   "concept": "fock-states",
+   "verb": "uses"
+  },
+  {
+   "span": "vacuum-rabi",
+   "concept": "rabi-oscillations",
+   "verb": "uses"
+  },
+  {
+   "span": "strong-coupling",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "strong-coupling",
+   "concept": "wigner-weisskopf",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-9-63",
+   "concept": "coherent-state",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-9-63",
+   "concept": "coherent-amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "naive",
+   "concept": "poisson-photon-statistics",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-field-splitting",
+   "concept": "atom-field-entanglement",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-jaynes-cummings-equations",
+   "concept": "schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-jaynes-cummings-equations",
+   "concept": "probability-amplitude",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [
+  {
+   "id": "comp-plus",
+   "label": "分量|αe^{+igt/2√n̄}⟩",
+   "figures": [
+    "sim-collapse-revival"
+   ]
+  },
+  {
+   "id": "comp-minus",
+   "label": "分量|αe^{−igt/2√n̄}⟩",
+   "figures": [
+    "sim-collapse-revival"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-eq-11-6-cited",
+   "kind": "correction",
+   "html": "书中在此引用了式 (11.6)，并在下面推导基态和激发态的贡献时又引用了两次。每次所指的方程都是式 (9.65)，即相干场的通解。"
+  },
+  {
+   "id": "c-coherence",
+   "kind": "correction",
+   "html": "两个分量的内积为$\\langle i\\kalphacoh|-i\\kalphacoh\\rangle = e^{-2|\\kalphacoh|^2}$，所以经典相干性$|\\langle\\hat{a}\\rangle|$至多为$|\\kalphacoh|e^{-2|\\kalphacoh|^2}$量级；书中的$e^{-|\\kalphacoh|^2}$在指数中缺少因子 2。无论哪种情形，它都是指数级小的。"
+  },
+  {
+   "id": "c-fig-9-3",
+   "kind": "correction",
+   "figure": "sim-collapse-revival",
+   "html": "书中的图把恢复标为$\\ktaurevival = \\kalphacoh/\\kg$。式 (9.71) 给出$\\ktaurevival \\sim 2\\pi|\\kalphacoh|/\\kg$，当$\\kalphacoh = 4$时约为$25/\\kg$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "jaynes-cummings-equations",
+   "what": "概率幅的 J-C 方程",
+   "source": "现代原子与光学物理 II，9.2.1 J-C 模型",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|n\\rangle = \\frac{(\\hat{a}^\\dagger)^n}{\\sqrt{n!}}|0\\rangle",
+       "src": "(11.205)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{k}{|n+1\\rangle} = \\mk{R}{\\frac{(\\hat{a}^\\dagger)^{n+1}}{\\sqrt{(n+1)!}}|0\\rangle}",
+      "src": "(11.205)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{k}{|n+1\\rangle} = \\mk{R}{\\frac{\\hat{a}^\\dagger(\\hat{a}^\\dagger)^n}{\\sqrt{(n+1)!}}|0\\rangle}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{k}{|n+1\\rangle} = \\mk{c}{\\frac{\\sqrt{n!}}{\\sqrt{(n+1)!}}}\\mk{a}{\\hat{a}^\\dagger|n\\rangle}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "R": [
+         "c",
+         "a"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{k}{|n+1\\rangle} = \\mk{c}{\\frac{1}{\\sqrt{n+1}}}\\mk{a}{\\hat{a}^\\dagger|n\\rangle}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{a}{\\hat{a}^\\dagger|n\\rangle} = \\mk{c}{\\sqrt{n+1}}\\mk{k}{|n+1\\rangle}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = -\\hbar \\kg\\hat{a}|2\\rangle\\langle 1| - \\hbar \\kg^*\\hat{a}^\\dagger|1\\rangle\\langle 2|",
+       "src": "(9.53)"
+      },
+      {
+       "tex": "|\\kpsi(\\kt)\\rangle = \\sum_n \\kcn^{(1)}(\\kt)|1\\rangle_a\\otimes|n\\rangle + \\kcn^{(2)}(\\kt)|2\\rangle_a\\otimes|n\\rangle",
+       "src": "(9.55)"
+      },
+      {
+       "step": 0
+      },
+      {
+       "text": "原子态和福克态是规范正交的。",
+       "src": "9.1, 9.2.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\kH|\\kpsi\\rangle}",
+      "src": "(1.11)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\,{}_a\\langle 2|\\langle n|\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{{}_a\\langle 2|\\langle n|\\kH|\\kpsi\\rangle}",
+       "uses": [],
+       "cap": "取两边与$\\langle 2|_a\\langle n|$的内积。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcn}^{(2)}} = \\mk{R}{-\\hbar\\kg\\langle n|\\hat{a}|n+1\\rangle\\,\\kcnpone^{(1)}}",
+       "uses": [
+        0,
+        1,
+        3
+       ],
+       "cap": "这些态是规范正交的，所以左边取出$c_n^{(2)}$；$\\hat{H}$中只有$-\\hbar g\\hat{a}|2\\rangle\\langle 1|$到达$\\langle 2|_a$，来自分量$c_{n+1}^{(1)}|1\\rangle_a|n+1\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcn}^{(2)}} = \\mk{R}{-\\hbar\\kg\\sqrt{n+1}\\,\\kcnpone^{(1)}}",
+       "uses": [
+        2
+       ],
+       "cap": "$\\langle n|\\hat{a}$是$\\hat{a}^\\dagger|n\\rangle = \\sqrt{n+1}\\,|n+1\\rangle$的伴随。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcn}^{(2)}} = \\mk{R}{i\\kg\\sqrt{n+1}\\,\\kcnpone^{(1)}}",
+       "uses": [],
+       "cap": "除以$i\\hbar$，其中$-1/i = i$。"
+      }
+     ],
+     "num": "(9.56)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = -\\hbar \\kg\\hat{a}|2\\rangle\\langle 1| - \\hbar \\kg^*\\hat{a}^\\dagger|1\\rangle\\langle 2|",
+       "src": "(9.53)"
+      },
+      {
+       "tex": "|\\kpsi(\\kt)\\rangle = \\sum_n \\kcn^{(1)}(\\kt)|1\\rangle_a\\otimes|n\\rangle + \\kcn^{(2)}(\\kt)|2\\rangle_a\\otimes|n\\rangle",
+       "src": "(9.55)"
+      },
+      {
+       "step": 0
+      },
+      {
+       "text": "原子态和福克态是规范正交的。",
+       "src": "9.1, 9.2.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{\\kH|\\kpsi\\rangle}",
+      "src": "(1.11)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\,{}_a\\langle 1|\\langle n+1|\\frac{d}{d\\kt}|\\kpsi\\rangle} = \\mk{R}{{}_a\\langle 1|\\langle n+1|\\kH|\\kpsi\\rangle}",
+       "uses": [],
+       "cap": "取两边与$\\langle 1|_a\\langle n+1|$的内积。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcnpone}^{(1)}} = \\mk{R}{-\\hbar\\kg^*\\langle n+1|\\hat{a}^\\dagger|n\\rangle\\,\\kcn^{(2)}}",
+       "uses": [
+        0,
+        1,
+        3
+       ],
+       "cap": "$\\hat{H}$中只有$-\\hbar g^*\\hat{a}^\\dagger|1\\rangle\\langle 2|$到达$\\langle 1|_a$，来自分量$c_n^{(2)}|2\\rangle_a|n\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dot{\\kcnpone}^{(1)}} = \\mk{R}{-\\hbar\\kg^*\\sqrt{n+1}\\,\\kcn^{(2)}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcnpone}^{(1)}} = \\mk{R}{i\\kg^*\\sqrt{n+1}\\,\\kcn^{(2)}}",
+       "uses": [],
+       "cap": "除以$i\\hbar$，其中$-1/i = i$。"
+      },
+      {
+       "tex": "\\mk{L}{\\dot{\\kcnpone}^{(1)}} = \\mk{R}{i\\kg\\sqrt{n+1}\\,\\kcn^{(2)}}",
+       "uses": [],
+       "cap": "取耦合为实数，$g^* = g$，如式 (9.57) 所写。"
+      }
+     ],
+     "num": "(9.57)"
+    }
+   ]
+  },
+  {
+   "id": "jaynes-cummings-solution",
+   "what": "J-C 概率幅",
+   "source": "现代原子与光学物理 II，9.2.1 J-C 模型",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dot{\\kcnpone}^{(1)} = i\\kg\\sqrt{n+1}\\,\\kcn^{(2)}",
+       "src": "(9.57)"
+      },
+      {
+       "text": "概率幅按正弦和余弦演化：$\\ddot{x} = -\\omega^2 x$的解是$\\cos\\omega t$与$\\sin\\omega t$之和。",
+       "src": "2.1.1"
+      },
+      {
+       "text": "原子一开始处于激发态，所以$\\kcn^{(2)}(0) = \\kcn(0)$且$\\kcnpone^{(1)}(0) = 0$。",
+       "src": "(9.54)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dot{\\kcn}^{(2)}} = \\mk{R}{i\\kg\\sqrt{n+1}\\,\\kcnpone^{(1)}}",
+      "src": "(9.56)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\ddot{\\kcn}^{(2)}} = \\mk{R}{i\\kg\\sqrt{n+1}\\,\\dot{\\kcnpone}^{(1)}}",
+       "uses": [],
+       "cap": "再微分一次。"
+      },
+      {
+       "tex": "\\mk{L}{\\ddot{\\kcn}^{(2)}} = \\mk{R}{i\\kg\\sqrt{n+1}\\cdot i\\kg\\sqrt{n+1}\\,\\kcn^{(2)}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\ddot{\\kcn}^{(2)}} = \\mk{R}{-\\kg^2(n+1)\\,\\kcn^{(2)}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\kcn^{(2)}(\\kt)} = \\mk{a}{A\\cos(\\kg\\sqrt{n+1}\\kt)} + \\mk{b}{B\\sin(\\kg\\sqrt{n+1}\\kt)}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "R": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\kcn^{(2)}(\\kt)} = \\mk{a}{\\kcn(0)\\cos(\\kg\\sqrt{n+1}\\kt)} + \\mk{b}{B\\sin(\\kg\\sqrt{n+1}\\kt)}",
+       "uses": [
+        2
+       ],
+       "cap": "在$t = 0$时，$c_n^{(2)}(0) = A = c_n(0)$。"
+      },
+      {
+       "tex": "\\mk{L}{\\kcn^{(2)}(\\kt)} = \\mk{a}{\\kcn(0)\\cos\\left(\\kg\\sqrt{n+1}\\kt\\right)}",
+       "uses": [
+        2
+       ],
+       "cap": "$\\dot{c}_n^{(2)}(0) = Bg\\sqrt{n+1}$，而式 (9.56) 给出$\\dot{c}_n^{(2)}(0) = ig\\sqrt{n+1}\\,c_{n+1}^{(1)}(0) = 0$，所以$B = 0$。"
+      }
+     ],
+     "num": "(9.59)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\dot{\\kcn}^{(2)} = i\\kg\\sqrt{n+1}\\,\\kcnpone^{(1)}",
+       "src": "(9.56)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kcn^{(2)}(\\kt)} = \\mk{a}{\\kcn(0)\\cos\\left(\\kg\\sqrt{n+1}\\kt\\right)}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dot{\\kcn}^{(2)}(\\kt)} = \\mk{a}{-\\kg\\sqrt{n+1}\\,\\kcn(0)\\sin\\left(\\kg\\sqrt{n+1}\\kt\\right)}",
+       "uses": [],
+       "cap": "微分。"
+      },
+      {
+       "tex": "\\mk{L}{i\\kg\\sqrt{n+1}\\,\\kcnpone^{(1)}(\\kt)} = \\mk{a}{-\\kg\\sqrt{n+1}\\,\\kcn(0)\\sin\\left(\\kg\\sqrt{n+1}\\kt\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\kcnpone^{(1)}(\\kt)} = \\mk{a}{i\\kcn(0)\\sin\\left(\\kg\\sqrt{n+1}\\kt\\right)}",
+       "uses": [],
+       "cap": "除以$ig\\sqrt{n+1}$，其中$-1/i = i$。"
+      }
+     ],
+     "num": "(9.58)"
+    }
+   ]
+  },
+  {
+   "id": "coherent-field-state",
+   "what": "相干场中原子的态",
+   "source": "现代原子与光学物理 II，9.2.2 初始真空场：真空拉比振荡",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|\\kalphacoh\\rangle = e^{-|\\kalphacoh|^2/2}\\sum_n\\frac{\\kalphacoh^n}{\\sqrt{n!}}|n\\rangle",
+       "src": "(9.24)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|\\kpsi_0\\rangle} = \\mk{R}{|2\\rangle_a\\otimes|\\kalphacoh\\rangle}",
+      "src": "(9.63)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{|\\kpsi_0\\rangle} = \\mk{R}{|2\\rangle_a\\otimes\\sum_n\\underbrace{e^{-|\\kalphacoh|^2/2}\\frac{\\kalphacoh^n}{\\sqrt{n!}}}_{\\kcn(0)}|n\\rangle}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(9.64)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "哈密顿量把态$|2\\rangle_a|n\\rangle$耦合到态$|1\\rangle_a|n+1\\rangle$并耦合回来。",
+       "src": "9.2.1"
+      },
+      {
+       "tex": "\\kcnpone^{(1)}(\\kt) = i\\kcn(0)\\sin\\left(\\kg\\sqrt{n+1}\\kt\\right)",
+       "src": "(9.58)"
+      },
+      {
+       "tex": "\\kcn^{(2)}(\\kt) = \\kcn(0)\\cos\\left(\\kg\\sqrt{n+1}\\kt\\right)",
+       "src": "(9.59)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|\\kpsi(\\kt)\\rangle} = \\mk{R}{\\sum_n \\kcn^{(1)}(\\kt)|1\\rangle_a\\otimes|n\\rangle + \\kcn^{(2)}(\\kt)|2\\rangle_a\\otimes|n\\rangle}",
+      "src": "(9.55)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\kt)\\rangle} = \\sum_n\\left(\\mk{s}{\\kcnpone^{(1)}(\\kt)|1\\rangle_a|n+1\\rangle} + \\mk{c}{\\kcn^{(2)}(\\kt)|2\\rangle_a|n\\rangle}\\right)",
+       "uses": [
+        1
+       ],
+       "cap": "从$|2\\rangle_a$出发，只能到达$|2\\rangle_a|n\\rangle$、$|1\\rangle_a|n+1\\rangle$这样的态对，所以$c_0^{(1)}$保持为零，第一个求和对$|n+1\\rangle$进行。",
+       "map": {
+        "R": [
+         "s",
+         "c"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\kt)\\rangle} = \\sum_n\\left(\\mk{s}{i\\kcn(0)\\sin\\left(\\kg\\sqrt{n+1}\\kt\\right)|1\\rangle_a|n+1\\rangle} + \\mk{c}{\\kcn(0)\\cos\\left(\\kg\\sqrt{n+1}\\kt\\right)|2\\rangle_a|n\\rangle}\\right)",
+       "uses": [
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\kt)\\rangle} = \\sum_n \\mk{cn}{e^{-|\\kalphacoh|^2/2}\\frac{\\kalphacoh^n}{\\sqrt{n!}}}\\left(\\mk{s}{i\\sin\\left(\\kg\\sqrt{n+1}\\kt\\right)|1\\rangle_a|n+1\\rangle} + \\mk{c}{\\cos\\left(\\kg\\sqrt{n+1}\\kt\\right)|2\\rangle_a|n\\rangle}\\right)",
+       "uses": [
+        0
+       ],
+       "map": {
+        "s": [
+         "s",
+         "cn"
+        ],
+        "c": [
+         "c",
+         "cn"
+        ]
+       }
+      }
+     ],
+     "num": "(9.65)"
+    }
+   ]
+  },
+  {
+   "id": "naive-rabi-oscillation",
+   "what": "朴素近似的经典拉比振荡",
+   "source": "现代原子与光学物理 II，9.2.2 初始真空场：真空拉比振荡",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "对于大的$\\knbar$，泊松分布具有很窄的宽度$\\Delta n/\\knbar = 1/\\sqrt{\\knbar}$，并且在承载该求和的范围$n\\in[\\knbar - \\Delta n, \\knbar + \\Delta n]$内有$\\sqrt{n+1} \\approx \\sqrt{\\knbar}$。",
+       "src": "9.2.2"
+      },
+      {
+       "tex": "|\\kalphacoh\\rangle = e^{-|\\kalphacoh|^2/2}\\sum_n\\frac{\\kalphacoh^n}{\\sqrt{n!}}|n\\rangle",
+       "src": "(9.24)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|\\kpsi(\\kt)\\rangle} = \\sum_n \\mk{cn}{e^{-|\\kalphacoh|^2/2}\\frac{\\kalphacoh^n}{\\sqrt{n!}}}\\left(\\mk{s}{i\\sin\\left(\\kg\\sqrt{n+1}\\kt\\right)|1\\rangle_a|n+1\\rangle} + \\mk{c}{\\cos\\left(\\kg\\sqrt{n+1}\\kt\\right)|2\\rangle_a|n\\rangle}\\right)",
+      "src": "(9.65)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\kt)\\rangle} \\approx \\sum_n \\mk{cn}{e^{-|\\kalphacoh|^2/2}\\frac{\\kalphacoh^n}{\\sqrt{n!}}}\\left(\\mk{s}{i\\sin\\left(\\kg\\sqrt{\\knbar}\\kt\\right)|1\\rangle_a|n+1\\rangle} + \\mk{c}{\\cos\\left(\\kg\\sqrt{\\knbar}\\kt\\right)|2\\rangle_a|n\\rangle}\\right)",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\kt)\\rangle} \\approx \\sum_n \\mk{cn}{e^{-|\\kalphacoh|^2/2}\\frac{\\kalphacoh^n}{\\sqrt{n!}}}\\left(\\mk{s}{i\\sin\\left(\\kg\\sqrt{\\knbar}\\kt\\right)|1\\rangle_a|n\\rangle} + \\mk{c}{\\cos\\left(\\kg\\sqrt{\\knbar}\\kt\\right)|2\\rangle_a|n\\rangle}\\right)",
+       "uses": [
+        0
+       ],
+       "cap": "在同一范围内，相邻福克态的概率幅几乎相等，$|c_{n-1}(0)/c_n(0)| = \\sqrt{n}/|\\alpha| \\approx 1$，所以$|n+1\\rangle$被替换为$|n\\rangle$。"
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\kt)\\rangle} = \\left(\\mk{s}{i\\sin\\left(\\kg\\sqrt{\\knbar}\\kt\\right)|1\\rangle_a} + \\mk{c}{\\cos\\left(\\kg\\sqrt{\\knbar}\\kt\\right)|2\\rangle_a}\\right)\\otimes\\mk{cn}{|\\kalphacoh\\rangle}",
+       "uses": [
+        1
+       ],
+       "cap": "对$n$剩下的求和就是式 (9.24) 的相干态。"
+      }
+     ],
+     "num": "(9.66)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\knbar = |\\kalphacoh|^2",
+       "src": "(9.27)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{T}{\\ktauRabi} \\sim \\mk{R}{\\frac{1}{\\kg\\sqrt{\\knbar}}}",
+      "uses": [
+       0
+      ],
+      "why": "原子概率幅以角频率$g\\sqrt{\\bar{n}}$振荡。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{T}{\\ktauRabi} \\sim \\mk{R}{\\frac{1}{\\kg\\sqrt{\\knbar}}} \\sim \\mk{R2}{\\frac{1}{|\\kalphacoh|\\kg}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(9.67)"
+    }
+   ]
+  },
+  {
+   "id": "rabi-phase-expansion",
+   "what": "每个福克分量的相位",
+   "source": "现代原子与光学物理 II，9.2.2 初始真空场：真空拉比振荡",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "$\\knbar$很大，且$n = \\knbar + \\delta n$，其中$\\delta n/\\knbar$很小。",
+       "src": "9.2.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kphi_n} = \\mk{R}{\\kg\\sqrt{n+1}\\kt}",
+      "uses": [],
+      "why": "式 (9.65) 中正弦和余弦的相位。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kphi_n} \\approx \\mk{R}{\\kg\\sqrt{\\knbar + \\delta n}\\,\\kt}",
+       "uses": [
+        0
+       ],
+       "cap": "对于大的$\\bar{n}$，略去$n + 1$中的$1$。"
+      },
+      {
+       "tex": "\\mk{p}{\\kphi_n} \\approx \\mk{R}{\\kg\\kt\\sqrt{\\knbar}\\left(1 + \\frac{\\delta n}{2\\knbar}\\right)}",
+       "uses": [],
+       "cap": "到$\\delta n/\\bar{n}$的一阶，$\\sqrt{1 + \\delta n/\\bar{n}} \\approx 1 + \\delta n/2\\bar{n}$。"
+      },
+      {
+       "tex": "\\mk{p}{\\kphi_n} \\approx \\mk{R}{\\kg\\kt\\sqrt{\\knbar}\\left(\\frac{\\knbar + n}{2\\knbar}\\right)}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(9.69)"
+    }
+   ]
+  },
+  {
+   "id": "field-splitting",
+   "what": "场分裂为两个相干态",
+   "source": "现代原子与光学物理 II，9.2.2 初始真空场：真空拉比振荡",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kphi_n = \\kg\\sqrt{n+1}\\kt",
+       "src": "(9.68)"
+      },
+      {
+       "tex": "\\kphi_n \\approx \\kg\\kt\\sqrt{\\knbar}\\left(\\frac{\\knbar + n}{2\\knbar}\\right)",
+       "src": "(9.72)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{i\\sin(\\kg\\sqrt{n+1}\\kt)} = \\mk{R}{i\\sin\\kphi_n}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{i\\sin(\\kg\\sqrt{n+1}\\kt)} = \\mk{R}{\\frac{1}{2}\\left(e^{i\\kphi_n} - e^{-i\\kphi_n}\\right)}",
+       "uses": [],
+       "cap": "$\\sin\\phi = (e^{i\\phi} - e^{-i\\phi})/2i$。"
+      },
+      {
+       "tex": "\\mk{s}{i\\sin(\\kg\\sqrt{n+1}\\kt)} \\approx \\mk{R}{\\frac{1}{2}\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}e^{i\\kg n\\kt/2\\sqrt{\\knbar}} - e^{-i\\kg\\sqrt{\\knbar}\\kt/2}e^{-i\\kg n\\kt/2\\sqrt{\\knbar}}\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "式 (9.72) 分成$\\phi_n \\approx g\\sqrt{\\bar{n}}t/2 + gnt/2\\sqrt{\\bar{n}}$。"
+      }
+     ],
+     "num": "(9.74)",
+     "note": "书中印的式 (9.74) 没有式 (9.73) 的因子$\\frac{1}{2}$；式 (9.76) 的$\\frac{1}{2}$即来自它。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "|\\kalphacoh\\rangle = e^{-|\\kalphacoh|^2/2}\\sum_n\\frac{\\kalphacoh^n}{\\sqrt{n!}}|n\\rangle",
+       "src": "(9.24)"
+      },
+      {
+       "text": "在$n$的相关范围内，$|n+1\\rangle$被替换为$|n\\rangle$，如式 (9.66)。",
+       "src": "(9.66)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|1\\rangle_a\\,{}_a\\langle 1|\\kpsi(\\kt)\\rangle} = \\mk{R}{\\sum_n e^{-|\\kalphacoh|^2/2}\\frac{\\kalphacoh^n}{\\sqrt{n!}}\\,i\\sin(\\kg\\sqrt{n+1}\\kt)|1\\rangle_a|n+1\\rangle}",
+      "src": "(9.65)",
+      "uses": [],
+      "why": "式 (9.65) 的基态部分。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{|1\\rangle_a\\,{}_a\\langle 1|\\kpsi(\\kt)\\rangle} \\approx \\mk{R}{\\sum_n e^{-|\\kalphacoh|^2/2}\\frac{\\kalphacoh^n}{\\sqrt{n!}}\\,\\frac{1}{2}\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}e^{i\\kg n\\kt/2\\sqrt{\\knbar}} - e^{-i\\kg\\sqrt{\\knbar}\\kt/2}e^{-i\\kg n\\kt/2\\sqrt{\\knbar}}\\right)|1\\rangle_a|n+1\\rangle}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{|1\\rangle_a\\,{}_a\\langle 1|\\kpsi(\\kt)\\rangle} \\approx \\mk{R}{\\sum_n e^{-|\\kalphacoh|^2/2}\\frac{\\kalphacoh^n}{\\sqrt{n!}}\\,\\frac{1}{2}\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}e^{i\\kg n\\kt/2\\sqrt{\\knbar}} - e^{-i\\kg\\sqrt{\\knbar}\\kt/2}e^{-i\\kg n\\kt/2\\sqrt{\\knbar}}\\right)|1\\rangle_a|n\\rangle}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{|1\\rangle_a\\,{}_a\\langle 1|\\kpsi(\\kt)\\rangle} \\approx \\mk{R}{\\frac{1}{2}|1\\rangle_a\\otimes\\sum_n e^{-|\\kalphacoh|^2/2}\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}\\frac{(\\kalphacoh e^{i\\kg\\kt/2\\sqrt{\\knbar}})^n}{\\sqrt{n!}} - e^{-i\\kg\\sqrt{\\knbar}\\kt/2}\\frac{(\\kalphacoh e^{-i\\kg\\kt/2\\sqrt{\\knbar}})^n}{\\sqrt{n!}}\\right)|n\\rangle}",
+       "uses": [],
+       "cap": "$\\alpha^n e^{\\pm ignt/2\\sqrt{\\bar{n}}} = (\\alpha e^{\\pm igt/2\\sqrt{\\bar{n}}})^n$。"
+      },
+      {
+       "tex": "\\mk{L}{|1\\rangle_a\\,{}_a\\langle 1|\\kpsi(\\kt)\\rangle} \\approx \\mk{R}{\\frac{1}{2}|1\\rangle_a\\otimes\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle - e^{-i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{-i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "每个求和都是式 (9.24) 的相干态，其振幅为$\\alpha e^{\\pm igt/2\\sqrt{\\bar{n}}}$，大小为$|\\alpha|$。"
+      }
+     ],
+     "num": "(9.76)",
+     "note": "书中式 (9.76) 的第一行漏掉了右矢$|n\\rangle$，其第二行仍保留一个$\\sum_n$，尽管该求和已经构成了相干态。"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kphi_n = \\kg\\sqrt{n+1}\\kt",
+       "src": "(9.68)"
+      },
+      {
+       "tex": "\\kphi_n \\approx \\kg\\kt\\sqrt{\\knbar}\\left(\\frac{\\knbar + n}{2\\knbar}\\right)",
+       "src": "(9.72)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\cos(\\kg\\sqrt{n+1}\\kt)} = \\mk{R}{\\cos\\kphi_n}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\cos(\\kg\\sqrt{n+1}\\kt)} = \\mk{R}{\\frac{1}{2}\\left(e^{i\\kphi_n} + e^{-i\\kphi_n}\\right)}",
+       "uses": [],
+       "cap": "$\\cos\\phi = (e^{i\\phi} + e^{-i\\phi})/2$。"
+      },
+      {
+       "tex": "\\mk{s}{\\cos(\\kg\\sqrt{n+1}\\kt)} \\approx \\mk{R}{\\frac{1}{2}\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}e^{i\\kg n\\kt/2\\sqrt{\\knbar}} + e^{-i\\kg\\sqrt{\\knbar}\\kt/2}e^{-i\\kg n\\kt/2\\sqrt{\\knbar}}\\right)}",
+       "uses": [
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "|\\kalphacoh\\rangle = e^{-|\\kalphacoh|^2/2}\\sum_n\\frac{\\kalphacoh^n}{\\sqrt{n!}}|n\\rangle",
+       "src": "(9.24)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|2\\rangle_a\\,{}_a\\langle 2|\\kpsi(\\kt)\\rangle} = \\mk{R}{\\sum_n e^{-|\\kalphacoh|^2/2}\\frac{\\kalphacoh^n}{\\sqrt{n!}}\\cos(\\kg\\sqrt{n+1}\\kt)|2\\rangle_a|n\\rangle}",
+      "src": "(9.65)",
+      "uses": [],
+      "why": "式 (9.65) 的激发态部分。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{|2\\rangle_a\\,{}_a\\langle 2|\\kpsi(\\kt)\\rangle} \\approx \\mk{R}{\\sum_n e^{-|\\kalphacoh|^2/2}\\frac{\\kalphacoh^n}{\\sqrt{n!}}\\,\\frac{1}{2}\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}e^{i\\kg n\\kt/2\\sqrt{\\knbar}} + e^{-i\\kg\\sqrt{\\knbar}\\kt/2}e^{-i\\kg n\\kt/2\\sqrt{\\knbar}}\\right)|2\\rangle_a|n\\rangle}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{|2\\rangle_a\\,{}_a\\langle 2|\\kpsi(\\kt)\\rangle} \\approx \\mk{R}{\\frac{1}{2}|2\\rangle_a\\otimes\\sum_n e^{-|\\kalphacoh|^2/2}\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}\\frac{(\\kalphacoh e^{i\\kg\\kt/2\\sqrt{\\knbar}})^n}{\\sqrt{n!}} + e^{-i\\kg\\sqrt{\\knbar}\\kt/2}\\frac{(\\kalphacoh e^{-i\\kg\\kt/2\\sqrt{\\knbar}})^n}{\\sqrt{n!}}\\right)|n\\rangle}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{|2\\rangle_a\\,{}_a\\langle 2|\\kpsi(\\kt)\\rangle} \\approx \\mk{R}{\\frac{1}{2}|2\\rangle_a\\otimes\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle + e^{-i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{-i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle\\right)}",
+       "uses": [
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 3
+      },
+      {
+       "tex": "|\\alpha_+\\rangle = \\frac{1}{\\sqrt{2}}\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle + e^{-i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{-i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle\\right)",
+       "src": "(9.78)"
+      },
+      {
+       "tex": "|\\alpha_-\\rangle = \\frac{1}{\\sqrt{2}}\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle - e^{-i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{-i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle\\right)",
+       "src": "(9.79)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|\\kpsi(\\kt)\\rangle} = \\mk{g}{|1\\rangle_a\\,{}_a\\langle 1|\\kpsi(\\kt)\\rangle} + \\mk{e}{|2\\rangle_a\\,{}_a\\langle 2|\\kpsi(\\kt)\\rangle}",
+      "uses": [],
+      "why": "原子有两个态$|1\\rangle$和$|2\\rangle$。"
+     },
+     "steps": [
+      {
+       "tex": "\\begin{aligned}\\mk{L}{|\\kpsi(\\kt)\\rangle} \\approx {} &\\mk{g}{\\frac{1}{2}|1\\rangle_a\\otimes\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle - e^{-i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{-i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle\\right)} \\\\ &+ \\mk{e}{\\frac{1}{2}|2\\rangle_a\\otimes\\left(e^{i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle + e^{-i\\kg\\sqrt{\\knbar}\\kt/2}|\\kalphacoh e^{-i\\kg\\kt/2\\sqrt{\\knbar}}\\rangle\\right)}\\end{aligned}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\kt)\\rangle} = \\frac{1}{\\sqrt{2}}\\left(\\mk{e}{|2\\rangle_a|\\alpha_+\\rangle} + \\mk{g}{|1\\rangle_a|\\alpha_-\\rangle}\\right)",
+       "uses": [
+        2,
+        3
+       ],
+       "cap": "$\\frac{1}{2} = \\frac{1}{\\sqrt{2}}\\cdot\\frac{1}{\\sqrt{2}}$，一个因子进入$|\\alpha_\\pm\\rangle$中的每一个。"
+      }
+     ],
+     "num": "(9.77)"
+    }
+   ]
+  }
+ ]
+}

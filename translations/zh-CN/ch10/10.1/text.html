@@ -1,0 +1,13 @@
+<section id="ion-traps">
+<p>与中性原子不同，离子通过库仑力对外加电场的响应非常强烈。这使得可以制造极紧的阱。然而，由于<span data-concept="ion-trap-principle" id="static-minimum">无法产生静电场的极小值，不能用静电场约束离子</span>。为绕开这一问题，人们已找到两种解决办法，一种利用磁场，另一种利用射频电场，来提供三维约束。</p>
+<p><span data-concept="penning-trap" id="penning">彭宁阱</span>利用带电粒子在磁场中的<span data-concept="penning-trap">回旋运动</span>，在二维上约束离子。第三个维度借助带电端盖约束，如图 10.1 所示。离子绕磁力线作通常的<span data-concept="penning-trap">回旋运动</span>；此外，与电场相关的轴向约束产生沿磁场方向的运动；最后，正交的电场和磁场产生更大尺度的<span data-concept="penning-trap">磁控运动</span>。</p>
+<figure class="sim" id="sim-penning" data-figure="10.1">
+  <div class="sim-head"><span class="eyebrow">Figure 10.1</span><span>⁹Be⁺ 离子处于<span data-concept="penning-trap">彭宁阱</span>中。磁场$\kB$指向上方，上下两端的带电端盖沿磁场方向约束离子。离子的路径是三种运动之和：以$\komegaplus$进行的快速<span data-concept="penning-trap">回旋</span>圈，以$\komegaz$进行的沿$\kB$的往返，以及由正交的电场和磁场驱动的、以$\komegaminus$进行的缓慢<span data-concept="penning-trap">磁控</span>圆周。增大$\kB$，回旋圈变快而磁控圆周变慢；增大端盖电压$U_0$，往返和磁控漂移都变快。端盖距中心 1 mm，三种运动的大小是为便于观看而选取的。</span></div>
+</figure>
+<p><span data-concept="paul-trap" id="paul">保罗阱</span>利用高频电场模拟电场极小值，提供三维约束。为理解其工作原理，考虑<span data-concept="quadrupole-potential" id="quadrupole">一个四极电场</span>，其势为</p>
+<div class="equation" id="eq-10-1">$$\Phi = \phi_0\left(\alpha x^2 + \beta y^2 + \gamma z^2\right). \tag{10.1}$$</div>
+<p>由拉普拉斯方程，<span id="laplace">$\alpha + \beta + \gamma = 0$</span>，因此取$\alpha = -\beta, \gamma = 0$，可以产生一个二维势，它在一个方向上是约束的，在另一个方向上是排斥的。如果现在让这个势随时间旋转<sup class="fn" data-note="c-rotates"></sup>，离子将跟随阱的运动（离子的所谓“<span data-concept="micromotion" id="micromotion">微运动</span>”）。特别地，原子的位置与阱异相 180 度，使得当靠近阱的中心时，它将感受到排斥势，而当原子远离阱的中心时，它将感受到约束势。对许多个周期取平均，这种振荡阱的净效应是在两个维度上约束离子。加入带电端盖，这一效应可用于三维，如图 10.2 所示。</p>
+<figure class="sim" id="sim-paul" data-figure="10.2">
+  <div class="sim-head"><span class="eyebrow">Figure 10.2</span><span><a href="#eq-10-1">式 (10.1)</a>的势，其中$\alpha = -\beta = \cos \kOmegaRF \kt$且$\gamma = 0$，画成$x$和$y$平面上的曲面：一个鞍面，沿$x$方向约束而沿$y$方向排斥，然后每个驱动半周期交换这两者。⁴⁰Ca⁺ 离子从偏离中心处静止出发。它在驱动频率下抖动，即<span data-concept="micromotion">微运动</span>，叠加在以<span data-concept="trap-frequency">阱频率</span>$\knu$进行的、使它保持在中心附近的缓慢摆动之上。下方的条带跟踪$x$（实线）和$y$（虚线），在$x$受约束处加阴影：离子在有阴影的半周期里离中心最远。减慢驱动，离子就被抛出；在$\kOmegaRF = 0$时鞍面保持不动，离子沿$y$方向滚落。若鞍面保持不动，它会使离子沿$x$方向以 2π × 4 MHz 摆动。曲面没有画出的沿$z$的带电端盖使它成为三维的<span data-concept="paul-trap">保罗阱</span>。</span></div>
+</figure>
+</section>

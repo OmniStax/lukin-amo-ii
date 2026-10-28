@@ -1,0 +1,683 @@
+{
+ "id": "5.3",
+ "chapter": "5",
+ "title": "参量过程",
+ "short": "参量过程",
+ "lead": "<span data-concept=\"parametric-processes\">参量过程</span>，其中原子只介导光场的混合：具有破缺反演对称性的<span data-concept=\"three-level-configurations\">级联系统</span>如何产生和频，所产生的场如何与它的两个抽运场一起传播，<span data-concept=\"wavevector-mismatch\">波矢量失配</span>为何支配其增长，<span data-concept=\"phase-matching\">相位匹配</span>如何在气体和晶体中设计实现，什么限制了增长，以及向差频过程和三阶过程的推进。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [
+  {
+   "id": "fig-cascade-sfg",
+   "kind": "figure",
+   "number": "5.6",
+   "originals": [
+    "/media/ch05/fig-5-6.png"
+   ],
+   "original_caption": "左：用于和频产生的级联能级系统。右：级联能级系统在氢原子中的物理实现。直流场使 |2s⟩ 和 |2p⟩ 态混合，从而单光子跃迁和双光子跃迁都是偶极容许的。这一直流斯塔克偏移破坏了氢原子的反演对称性，从而使二阶非线性过程成为可能。",
+   "draws": [
+    "electric-field",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  },
+  {
+   "id": "sim-phase-matching",
+   "kind": "sim",
+   "number": "5.7",
+   "originals": [
+    "/media/ch05/fig-5-7.png"
+   ],
+   "original_caption": "当相位匹配条件不满足时，和频场只在 ∼ π/Δk 的距离内增长，随后相消干涉开始出现。",
+   "draws": [
+    "electric-field",
+    "wavevector",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    },
+    {
+     "model": "claude-sonnet-5-5",
+     "effort": "medium",
+     "part": "翻译"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "parametric",
+   "concept": "parametric-processes",
+   "verb": "introduces"
+  },
+  {
+   "span": "sfg",
+   "concept": "sum-frequency-generation",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-61",
+   "concept": "second-order-susceptibility",
+   "verb": "introduces"
+  },
+  {
+   "span": "undepleted",
+   "concept": "undepleted-pump-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-68",
+   "concept": "sum-frequency-propagation",
+   "verb": "introduces"
+  },
+  {
+   "span": "phase-matching-def",
+   "concept": "phase-matching",
+   "verb": "introduces"
+  },
+  {
+   "span": "coherence-length-def",
+   "concept": "coherence-length",
+   "verb": "introduces"
+  },
+  {
+   "span": "competing",
+   "concept": "competing-processes",
+   "verb": "introduces"
+  },
+  {
+   "span": "pm-methods",
+   "concept": "phase-matching-methods",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-5-81",
+   "concept": "parametric-saturation",
+   "verb": "introduces"
+  },
+  {
+   "span": "dfg",
+   "concept": "difference-frequency-generation",
+   "verb": "introduces"
+  },
+  {
+   "span": "cascade-intro",
+   "concept": "three-level-configurations",
+   "verb": "uses"
+  },
+  {
+   "span": "hydrogen",
+   "concept": "selection-rules",
+   "verb": "uses"
+  },
+  {
+   "span": "hydrogen",
+   "concept": "wavefunction-parity",
+   "verb": "uses"
+  },
+  {
+   "span": "sfg",
+   "concept": "density-matrix-coherences",
+   "verb": "uses"
+  },
+  {
+   "span": "sfg",
+   "concept": "macroscopic-polarization",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-62",
+   "concept": "effective-raman-coupling",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-62",
+   "concept": "many-excited-states-raman",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-62",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-62",
+   "concept": "ac-stark-shift",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-66",
+   "concept": "slowly-varying-envelope-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-66",
+   "concept": "slowly-varying-envelope",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-67",
+   "concept": "susceptibility",
+   "verb": "uses"
+  },
+  {
+   "span": "pm-methods-eit",
+   "concept": "electromagnetically-induced-transparency",
+   "verb": "uses"
+  },
+  {
+   "span": "pm-methods-eit",
+   "concept": "lambda-system",
+   "verb": "uses"
+  },
+  {
+   "span": "pm-crystals",
+   "concept": "light-polarization",
+   "verb": "uses"
+  },
+  {
+   "span": "kerr",
+   "concept": "kerr-effect",
+   "verb": "uses"
+  },
+  {
+   "span": "eq-5-82",
+   "concept": "third-order-susceptibility",
+   "verb": "reinforces"
+  },
+  {
+   "span": "drv-cascade-susceptibility",
+   "concept": "cascade-nonlinear-susceptibility",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-sfg-propagation",
+   "concept": "wavevector-mismatch",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-maximal-sum-frequency-field",
+   "concept": "cascade-sfg-output",
+   "verb": "introduces"
+  },
+  {
+   "span": "drv-maximal-sum-frequency-field",
+   "concept": "dipole-matrix-element",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [
+  {
+   "id": "lvl-1",
+   "label": "下态 |1⟩，氢中的 |1s⟩",
+   "figures": [
+    "fig-cascade-sfg"
+   ]
+  },
+  {
+   "id": "lvl-2",
+   "label": "上态 |2⟩，氢中 2s 与 2p 经斯塔克混合的混杂态",
+   "figures": [
+    "fig-cascade-sfg"
+   ]
+  },
+  {
+   "id": "lvl-i",
+   "label": "居间态 |i⟩",
+   "figures": [
+    "fig-cascade-sfg"
+   ]
+  },
+  {
+   "id": "field-1",
+   "label": "频率为 ν₁ 的外加场 ℰ₁",
+   "figures": [
+    "fig-cascade-sfg"
+   ]
+  },
+  {
+   "id": "field-2",
+   "label": "频率为 ν₂ 的外加场 ℰ₂",
+   "figures": [
+    "fig-cascade-sfg"
+   ]
+  },
+  {
+   "id": "field-3",
+   "label": "频率为 ν₃ 的和频场 ℰ₃",
+   "figures": [
+    "fig-cascade-sfg"
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-eq-5-71",
+   "kind": "correction",
+   "html": "书中把编号 (5.71) 印在 (5.70) 下面的一个空行上；并没有缺少方程。"
+  },
+  {
+   "id": "c-k-i",
+   "kind": "correction",
+   "html": "书中印的是 $\\knu_i\\kchi_i/2c = \\knref_i\\knu_i/c$。由 $\\knref_i = 1 + \\kchi_i/2$，有 $\\knu_i\\kchi_i/2c = (\\knref_i - 1)\\knu_i/c$，即介质对波矢量 $\\kkmag_i = \\knref_i\\knu_i/c$ 的增添部分。差值 $\\kDeltakmis = \\kkmag_1 + \\kkmag_2 - \\kkmag_3$ 仍然成立，因为当 $\\knu_3 = \\knu_1 + \\knu_2$ 时，真空部分 $\\knu_i/c$ 相互抵消。"
+  },
+  {
+   "id": "c-delta-k",
+   "kind": "correction",
+   "html": "书中印的是 $\\kDeltakmis \\approx \\frac{\\knu_3}{c}(\\knref_3 - 1) \\approx 2\\frac{\\knu_3}{c}\\kchi_3^{(1)}$。由 $\\knref_3 - 1 = \\kchi_3^{(1)}/2$，且 $\\kchi_3$ 占主导，式 (5.75) 给出 $\\kDeltakmis \\approx -\\frac{\\knu_3}{c}(\\knref_3 - 1) = -\\frac{1}{2}\\frac{\\knu_3}{c}\\kchi_3^{(1)}$。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "cascade-susceptibility",
+   "what": "级联系统的二阶电极化率",
+   "source": "现代原子与光学物理 II，5.3 参量过程，5.3.1 例子：级联系统，级联能级构型中的非线性极化",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\krhotwoone = -\\frac{\\kOmegaeff}{\\kdeltaeff}",
+       "src": "(5.63)"
+      },
+      {
+       "tex": "\\kOmegaeff = \\sum_i \\frac{\\kmu_{1i}\\kmu_{2i}}{\\kDelta_i\\hbar^2}\\kEone\\kEtwo",
+       "src": "(5.62)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{\\kPnl_3} = \\mk{n}{\\frac{N}{\\kV}\\kmu^*}\\mk{r}{\\krhotwoone}",
+      "src": "(5.64)",
+      "uses": [],
+      "why": "单位体积内 $N/V$ 个原子的极化强度，每个原子带有相干性 $\\rho_{21}$，如 (4.29) 中那样。"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{\\kPnl_3} = \\mk{n}{\\frac{N}{\\kV}\\kmu^*}\\mk{r}{\\left(-\\frac{\\kOmegaeff}{\\kdeltaeff}\\right)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kPnl_3} = \\mk{n}{\\frac{N}{\\kV}\\kmu^*}\\mk{r}{\\left(-\\frac{1}{\\kdeltaeff}\\sum_i \\frac{\\kmu_{1i}\\kmu_{2i}}{\\kDelta_i\\hbar^2}\\kEone\\kEtwo\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kPnl_3} = \\mk{R}{-\\frac{N}{\\kV}\\kmu^*\\frac{1}{\\hbar^2}\\sum_i \\frac{\\kmu_{1i}\\kmu_{2i}}{\\kdeltaeff\\kDelta_i}\\kEone\\kEtwo}",
+       "uses": [],
+       "map": {
+        "n": "R",
+        "r": "R"
+       }
+      }
+     ],
+     "num": "(5.64)",
+     "note": "书中印的 $\\kPnl_3$ 没有 (5.63) 的 $\\krhotwoone = -\\kOmegaeff/\\kdeltaeff$ 所带的负号。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\kchiII} = \\frac{\\mk{P}{\\kPnl_{\\knu_1+\\knu_2}}}{\\mk{d}{\\epsilon_0\\kEone\\kEtwo}}",
+      "src": "(5.61)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\kchiII} = \\frac{\\mk{P}{-\\frac{N}{\\kV}\\kmu^*\\frac{1}{\\hbar^2}\\sum_i \\frac{\\kmu_{1i}\\kmu_{2i}}{\\kdeltaeff\\kDelta_i}\\kEone\\kEtwo}}{\\mk{d}{\\epsilon_0\\kEone\\kEtwo}}",
+       "uses": [
+        0
+       ],
+       "cap": "$P_3$ 是和频 $\\nu_3 = \\nu_1 + \\nu_2$ 处的极化强度。"
+      },
+      {
+       "tex": "\\mk{c}{\\kchiII} = \\mk{P}{-\\frac{N}{\\kV}\\kmu^*\\frac{1}{\\epsilon_0\\hbar^2}\\sum_i \\frac{\\kmu_{1i}\\kmu_{2i}}{\\kdeltaeff\\kDelta_i}}",
+       "uses": [],
+       "map": {
+        "d": "P"
+       }
+      }
+     ],
+     "num": "(5.65)",
+     "note": "书中印的 $\\kchiII$ 没有负号，这个负号是从 (5.64) 带来的。"
+    }
+   ]
+  },
+  {
+   "id": "sfg-propagation",
+   "what": "和频产生的传播方程",
+   "source": "现代原子与光学物理 II，5.3 参量过程，5.3.2 和频产生",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEenv_i = \\tilde{\\kEenv}_i e^{i\\knu_i\\kchi_i \\kzprop/2c}",
+       "src": "(5.72)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{\\partial}{\\partial \\kzprop}\\kEenv_{1,2}} = \\mk{R}{\\frac{i\\knu_{1,2}}{2c}\\kchi_{1,2}\\kEenv_{1,2}}",
+      "src": "(5.67)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{\\partial}{\\partial \\kzprop}\\left(\\tilde{\\kEenv}_{1,2}e^{i\\knu_{1,2}\\kchi_{1,2}\\kzprop/2c}\\right)} = \\mk{R}{\\frac{i\\knu_{1,2}}{2c}\\kchi_{1,2}\\tilde{\\kEenv}_{1,2}e^{i\\knu_{1,2}\\kchi_{1,2}\\kzprop/2c}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{e^{i\\knu_{1,2}\\kchi_{1,2}\\kzprop/2c}\\frac{\\partial}{\\partial \\kzprop}\\tilde{\\kEenv}_{1,2}} + \\mk{l}{\\frac{i\\knu_{1,2}\\kchi_{1,2}}{2c}\\tilde{\\kEenv}_{1,2}e^{i\\knu_{1,2}\\kchi_{1,2}\\kzprop/2c}} = \\mk{R}{\\frac{i\\knu_{1,2}}{2c}\\kchi_{1,2}\\tilde{\\kEenv}_{1,2}e^{i\\knu_{1,2}\\kchi_{1,2}\\kzprop/2c}}",
+       "uses": [],
+       "cap": "乘积法则，在均匀介质中 $\\partial e^{i\\nu\\chi z/2c}/\\partial z = (i\\nu\\chi/2c)\\,e^{i\\nu\\chi z/2c}$。",
+       "map": {
+        "L": [
+         "L",
+         "l"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{e^{i\\knu_{1,2}\\kchi_{1,2}\\kzprop/2c}\\frac{\\partial}{\\partial \\kzprop}\\tilde{\\kEenv}_{1,2}} = \\mk{R}{0}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\partial}{\\partial \\kzprop}\\tilde{\\kEenv}_{1,2}} = \\mk{R}{0}",
+       "uses": [],
+       "cap": "指数函数永不为零。"
+      }
+     ],
+     "num": "(5.73)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kEenv_i = \\tilde{\\kEenv}_i e^{i\\knu_i\\kchi_i \\kzprop/2c}",
+       "src": "(5.72)"
+      },
+      {
+       "tex": "\\kDeltakmis = \\frac{\\knu_1\\kchi_1}{2c} + \\frac{\\knu_2\\kchi_2}{2c} - \\frac{\\knu_3\\kchi_3}{2c}",
+       "src": "(5.75)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{\\partial}{\\partial \\kzprop}\\kEthree} = \\mk{N}{\\frac{i\\knu_3}{2c}\\kchiII\\kEone\\kEtwo} + \\mk{R}{\\frac{i\\knu_3}{2c}\\kchi_3\\kEthree}",
+      "src": "(5.68)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{\\partial}{\\partial \\kzprop}\\left(\\tilde{\\kEenv}_{3}e^{i\\knu_{3}\\kchi_{3}\\kzprop/2c}\\right)} = \\mk{N}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}e^{i(\\knu_1\\kchi_1 + \\knu_2\\kchi_2)\\kzprop/2c}} + \\mk{R}{\\frac{i\\knu_3}{2c}\\kchi_3\\tilde{\\kEenv}_{3}e^{i\\knu_{3}\\kchi_{3}\\kzprop/2c}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{e^{i\\knu_{3}\\kchi_{3}\\kzprop/2c}\\frac{\\partial}{\\partial \\kzprop}\\tilde{\\kEenv}_{3}} + \\mk{l}{\\frac{i\\knu_3\\kchi_3}{2c}\\tilde{\\kEenv}_{3}e^{i\\knu_{3}\\kchi_{3}\\kzprop/2c}} = \\mk{N}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}e^{i(\\knu_1\\kchi_1 + \\knu_2\\kchi_2)\\kzprop/2c}} + \\mk{R}{\\frac{i\\knu_3}{2c}\\kchi_3\\tilde{\\kEenv}_{3}e^{i\\knu_{3}\\kchi_{3}\\kzprop/2c}}",
+       "uses": [],
+       "cap": "乘积法则，与抽运场的情形相同。",
+       "map": {
+        "L": [
+         "L",
+         "l"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{e^{i\\knu_{3}\\kchi_{3}\\kzprop/2c}\\frac{\\partial}{\\partial \\kzprop}\\tilde{\\kEenv}_{3}} = \\mk{N}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}e^{i(\\knu_1\\kchi_1 + \\knu_2\\kchi_2)\\kzprop/2c}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\partial}{\\partial \\kzprop}\\tilde{\\kEenv}_{3}} = \\mk{N}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}e^{i(\\knu_1\\kchi_1/2c + \\knu_2\\kchi_2/2c - \\knu_3\\kchi_3/2c)\\kzprop}}",
+       "uses": [],
+       "cap": "除以 $e^{i\\nu_3\\chi_3 z/2c}$，即从右边的指数中减去它的指数。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{\\partial}{\\partial \\kzprop}\\tilde{\\kEenv}_{3}} = \\mk{N}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}e^{i\\kDeltakmis \\kzprop}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(5.74)"
+    }
+   ]
+  },
+  {
+   "id": "sum-frequency-output",
+   "what": "离开介质的和频场",
+   "source": "现代原子与光学物理 II，5.3 参量过程，5.3.2 和频产生，相位匹配",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\frac{\\partial}{\\partial \\kzprop}\\tilde{\\kEenv}_{1,2} = 0",
+       "src": "(5.73)"
+      },
+      {
+       "text": "产生场从零开始：$\\tilde{\\kEenv}_3(0) = \\kEthree(0) = 0$。",
+       "src": "5.3, (5.72)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\frac{\\partial}{\\partial \\kzprop}\\tilde{\\kEenv}_{3}} = \\mk{R}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}e^{i\\kDeltakmis \\kzprop}}",
+      "src": "(5.74)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\kLmed) - \\tilde{\\kEenv}_{3}(0)} = \\mk{R}{\\int_0^{\\kLmed} \\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}e^{i\\kDeltakmis \\kzprop}\\,d\\kzprop}",
+       "uses": [],
+       "cap": "对介质长度 $L$ 积分。"
+      },
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\kLmed)} = \\mk{R}{\\int_0^{\\kLmed} \\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}e^{i\\kDeltakmis \\kzprop}\\,d\\kzprop}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\kLmed)} = \\mk{p}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}\\mk{b}{\\int_0^{\\kLmed} e^{i\\kDeltakmis \\kzprop}\\,d\\kzprop}",
+       "uses": [
+        0
+       ],
+       "cap": "抽运振幅 $\\tilde{\\mathcal{E}}_1$ 和 $\\tilde{\\mathcal{E}}_2$ 沿 $z$ 不变，所以可以提到积分号外。",
+       "map": {
+        "R": [
+         "p",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\kLmed)} = \\mk{b}{\\left(\\frac{e^{i\\kDeltakmis \\kLmed} - 1}{i\\kDeltakmis}\\right)}\\mk{p}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+       "uses": [],
+       "cap": "$\\int_0^L e^{i\\Delta k z}\\,dz = (e^{i\\Delta k L} - 1)/i\\Delta k$。"
+      }
+     ],
+     "num": "(5.76)",
+     "note": "书中印的 (5.76) 的第一个积分没有 $d\\kzprop$。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "相位匹配条件：$\\kDeltakmis = 0$。",
+       "src": "5.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\kLmed)} = \\mk{b}{\\left(\\frac{e^{i\\kDeltakmis \\kLmed} - 1}{i\\kDeltakmis}\\right)}\\mk{p}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\kLmed)} = \\mk{p}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}\\mk{b}{\\kLmed}",
+       "uses": [
+        1
+       ],
+       "cap": "当 $\\Delta k \\to 0$ 时，$e^{i\\Delta k L} - 1 \\to i\\Delta k L$，所以括号趋于 $L$。"
+      }
+     ],
+     "num": "(5.77)"
+    }
+   ]
+  },
+  {
+   "id": "maximal-sum-frequency-field",
+   "what": "没有相位匹配时最大的和频场",
+   "source": "现代原子与光学物理 II，5.3 参量过程，5.3.2 和频产生，级联系统中的和频产生",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "在 $\\kDeltakmis \\neq 0$ 时，$\\kEthree$ 在距离 $\\kzprop = \\pi/\\kDeltakmis$ 之后达到其最大振幅。",
+       "src": "5.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\kLmed)} = \\mk{b}{\\left(\\frac{e^{i\\kDeltakmis \\kLmed} - 1}{i\\kDeltakmis}\\right)}\\mk{p}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+      "src": "(5.76)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\frac{\\pi}{\\kDeltakmis})} = \\mk{b}{\\left(\\frac{e^{i\\pi} - 1}{i\\kDeltakmis}\\right)}\\mk{p}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+       "uses": [
+        0
+       ],
+       "cap": "$|e^{i\\Delta k L} - 1| = 2|\\sin(\\Delta k L/2)|$，在 $\\Delta k L = \\pi$ 时最大。"
+      },
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\frac{\\pi}{\\kDeltakmis})} = \\mk{b}{\\left(\\frac{-2}{i\\kDeltakmis}\\right)}\\mk{p}{\\frac{i\\knu_3}{2c}\\kchiII\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+       "uses": [],
+       "cap": "$e^{i\\pi} = -1$。"
+      },
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\frac{\\pi}{\\kDeltakmis})} = \\mk{b}{-\\frac{\\knu_3}{c\\kDeltakmis}}\\mk{c}{\\kchiII}\\mk{E}{\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+       "uses": [],
+       "map": {
+        "p": [
+         "b",
+         "c",
+         "E"
+        ]
+       }
+      }
+     ],
+     "num": "(5.78)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kDeltakmis = \\frac{\\knu_1\\kchi_1}{2c} + \\frac{\\knu_2\\kchi_2}{2c} - \\frac{\\knu_3\\kchi_3}{2c}",
+       "src": "(5.75)"
+      },
+      {
+       "text": "对于远失谐的双光子跃迁，近共振的电极化率 $\\kchi_3$ 主导 $\\kDeltakmis$。",
+       "src": "5.3"
+      },
+      {
+       "tex": "\\kchi_3 \\approx \\frac{N}{\\kV}\\frac{1}{\\epsilon_0\\hbar}\\frac{|\\kmu_{12}|^2}{\\kdeltaeff}",
+       "src": "(5.70)"
+      },
+      {
+       "tex": "\\kchiII = -\\frac{N}{\\kV}\\kmu^*\\frac{1}{\\epsilon_0\\hbar^2}\\sum_i \\frac{\\kmu_{1i}\\kmu_{2i}}{\\kdeltaeff\\kDelta_i}",
+       "src": "(5.65)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\frac{\\pi}{\\kDeltakmis})} = \\mk{b}{-\\frac{\\knu_3}{c\\kDeltakmis}}\\mk{c}{\\kchiII}\\mk{E}{\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\frac{\\pi}{\\kDeltakmis})} \\approx \\mk{b}{-\\frac{\\knu_3}{c}\\left(-\\frac{2c}{\\knu_3\\kchi_3}\\right)}\\mk{c}{\\kchiII}\\mk{E}{\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "由于 $\\chi_3$ 占主导，(5.75) 给出 $\\Delta k \\approx -\\nu_3\\chi_3/2c$。"
+      },
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\frac{\\pi}{\\kDeltakmis})} \\approx \\mk{b}{\\frac{2}{\\kchi_3}}\\mk{c}{\\kchiII}\\mk{E}{\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\frac{\\pi}{\\kDeltakmis})} \\approx \\mk{b}{\\frac{2\\epsilon_0\\hbar\\kdeltaeff}{(N/\\kV)|\\kmu_{12}|^2}}\\mk{c}{\\kchiII}\\mk{E}{\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\frac{\\pi}{\\kDeltakmis})} \\approx \\mk{b}{\\frac{2\\epsilon_0\\hbar\\kdeltaeff}{(N/\\kV)|\\kmu_{12}|^2}}\\mk{c}{\\left(-\\frac{N}{\\kV}\\kmu^*\\frac{1}{\\epsilon_0\\hbar^2}\\sum_i \\frac{\\kmu_{1i}\\kmu_{2i}}{\\kdeltaeff\\kDelta_i}\\right)}\\mk{E}{\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\tilde{\\kEenv}_{3}(\\frac{\\pi}{\\kDeltakmis})} \\approx \\mk{c}{-2\\,\\overbrace{\\kmu_{12}^*\\sum_i \\frac{\\kmu_{1i}\\kmu_{2i}}{\\kdeltaeff\\kDelta_i}}^{\\sim\\kchiII}} \\cdot \\mk{b}{\\underbrace{\\frac{\\kdeltaeff}{\\hbar|\\kmu_{12}|^2}}_{\\sim 1/\\kchi_3^{(1)}}}\\mk{E}{\\tilde{\\kEenv}_{1}\\tilde{\\kEenv}_{2}}",
+       "uses": [],
+       "cap": "(5.64) 的偶极 $\\mu$ 是 $|1\\rangle$ 到 $|2\\rangle$ 跃迁的偶极，即 $\\mu_{12}$；$N/V$、$\\epsilon_0$ 和一个 $\\hbar$ 相消。"
+      }
+     ],
+     "num": "(5.79)",
+     "note": "书中印的前置因子是 $-\\frac{1}{2}$，来自它的 $\\kDeltakmis \\approx 2\\frac{\\knu_3}{c}\\kchi_3^{(1)}$，以及没有负号的 $\\kchiII$。由 (5.75) 的 $\\kDeltakmis \\approx -\\frac{\\knu_3}{2c}\\kchi_3$ 和 (5.65) 的符号，前置因子是 $-2$。"
+    }
+   ]
+  }
+ ]
+}

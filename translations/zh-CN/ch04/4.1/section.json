@@ -1,0 +1,403 @@
+{
+ "id": "4.1",
+ "chapter": "4",
+ "title": "缓变包络近似",
+ "short": "缓变包络",
+ "lead": "描述光如何在原子介质中传播：<span data-concept=\"wave-equation-with-polarization\">波动方程</span>，以原子的<span data-concept=\"macroscopic-polarization\">极化</span>为其源，以及<span data-concept=\"slowly-varying-envelope-approximation\">缓变包络近似</span>，它把场和极化强度写成载波上的包络，并给出包络的传播方程，针对单一载波，也针对<span data-concept=\"optical-frequency-comb\">光频梳</span>的谐波。",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   },
+   {
+    "model": "claude-sonnet-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-10-26",
+ "exercises_lead": "",
+ "exercise_notes": "",
+ "figures": [],
+ "coverage": [
+  {
+   "span": "maxwell",
+   "concept": "maxwell-equations-with-polarization",
+   "verb": "introduces"
+  },
+  {
+   "span": "wave-equation",
+   "concept": "wave-equation-with-polarization",
+   "verb": "introduces"
+  },
+  {
+   "span": "svea",
+   "concept": "slowly-varying-envelope-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "sv-polarization",
+   "concept": "slowly-varying-polarization",
+   "verb": "introduces"
+  },
+  {
+   "span": "evolution-equation",
+   "concept": "svea-propagation-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "eq-4-25",
+   "concept": "plane-wave-propagation-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-level-polarization",
+   "concept": "independent-atoms",
+   "verb": "introduces"
+  },
+  {
+   "span": "comb",
+   "concept": "optical-frequency-comb",
+   "verb": "introduces"
+  },
+  {
+   "span": "multimode",
+   "concept": "multimode-svea",
+   "verb": "introduces"
+  },
+  {
+   "span": "envelope",
+   "concept": "slowly-varying-envelope",
+   "verb": "uses"
+  },
+  {
+   "span": "carrier",
+   "concept": "optical-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "two-level-polarization",
+   "concept": "two-level-atom",
+   "verb": "uses"
+  },
+  {
+   "span": "two-level-polarization",
+   "concept": "rotating-frame",
+   "verb": "uses"
+  },
+  {
+   "span": "two-level-polarization",
+   "concept": "dipole-matrix-element",
+   "verb": "uses"
+  },
+  {
+   "span": "drv-wave-equation",
+   "concept": "macroscopic-polarization",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "referents": [],
+ "footnotes": [
+  {
+   "id": "c-eq-4-28",
+   "kind": "correction",
+   "html": "书中对每个谐波都在两个系数中写$\\kkbar$。每个谐波有自己的波矢量$k_n = \\knu_n/c$，即式 (4.26) 中的$nk$，所以$\\kEenv_n$的方程应为$\\frac{1}{2ik_n}\\nabla_\\perp^2\\kEenv_n + \\frac{\\partial}{\\partial z}\\kEenv_n + \\frac{1}{c}\\frac{\\partial}{\\partial \\kt}\\kEenv_n = \\frac{ik_n}{2\\epsilon_0}\\kPenv_n$；用$\\kkbar$时，只有在光频梳的带宽比$\\knubar$小得多时才成立，对任意短的脉冲不成立。"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "wave-equation",
+   "what": "可极化介质中的波动方程",
+   "source": "现代原子与光学物理 II，4.1 缓变包络近似",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\nabla \\times \\kB = \\frac{1}{c^2}\\frac{\\partial}{\\partial \\kt}\\left(\\kEfield + \\frac{1}{\\epsilon_0}\\kPpol\\right)",
+       "src": "(4.6)"
+      },
+      {
+       "text": "在不存在非束缚电荷时，$\\nabla \\cdot \\kEfield = 0$。",
+       "src": "4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\nabla \\times \\kEfield} = \\mk{R}{-\\frac{\\partial\\kB}{\\partial \\kt}}",
+      "src": "(4.5)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\nabla \\times (\\nabla \\times \\kEfield)} = \\mk{R}{-\\frac{\\partial}{\\partial \\kt}(\\nabla \\times \\kB)}",
+       "uses": [],
+       "cap": "对两边取旋度；旋度只作用于位置，所以它与$\\partial/\\partial t$可交换次序。"
+      },
+      {
+       "tex": "\\mk{L}{\\nabla \\times (\\nabla \\times \\kEfield)} = \\mk{R}{-\\frac{1}{c^2}\\frac{\\partial^2}{\\partial \\kt^2}\\left(\\kEfield + \\frac{1}{\\epsilon_0}\\kPpol\\right)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{div}{\\nabla(\\nabla \\cdot \\kEfield)} - \\mk{lap}{\\nabla^2\\kEfield} = \\mk{R}{-\\frac{1}{c^2}\\frac{\\partial^2}{\\partial \\kt^2}\\left(\\kEfield + \\frac{1}{\\epsilon_0}\\kPpol\\right)}",
+       "uses": [],
+       "cap": "恒等式$\\nabla \\times (\\nabla \\times \\mathbf{A}) = \\nabla(\\nabla \\cdot \\mathbf{A}) - \\nabla^2\\mathbf{A}$。",
+       "map": {
+        "L": [
+         "div",
+         "lap"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{lap}{-\\nabla^2\\kEfield} = \\mk{R}{-\\frac{1}{c^2}\\frac{\\partial^2}{\\partial \\kt^2}\\left(\\kEfield + \\frac{1}{\\epsilon_0}\\kPpol\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{lap}{-\\nabla^2\\kEfield} = \\mk{Et}{-\\frac{1}{c^2}\\frac{\\partial^2\\kEfield}{\\partial \\kt^2}} - \\mk{Pt}{\\frac{1}{\\epsilon_0 c^2}\\frac{\\partial^2\\kPpol}{\\partial \\kt^2}}",
+       "uses": [],
+       "map": {
+        "R": [
+         "Et",
+         "Pt"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{lap}{\\nabla^2\\kEfield} - \\mk{Et}{\\frac{1}{c^2}\\frac{\\partial^2\\kEfield}{\\partial \\kt^2}} = \\mk{Pt}{\\frac{1}{\\epsilon_0 c^2}\\frac{\\partial^2\\kPpol}{\\partial \\kt^2}}",
+       "uses": []
+      }
+     ],
+     "num": "(4.10)",
+     "src": "4.1",
+     "note": "脚注 1 在 (4.7) 中印的是$\\nabla(\\nabla \\cdot \\kEenv)$，即包络的散度。恒等式给出的是场的散度$\\nabla(\\nabla \\cdot \\kEfield)$，它就是为零的那一项；脚注把结果编号为 (4.9)。"
+    }
+   ]
+  },
+  {
+   "id": "svea-propagation",
+   "what": "缓变振幅的传播方程",
+   "source": "现代原子与光学物理 II，4.1 缓变包络近似",
+   "nodes": [
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{E}{\\kEfield} = \\mk{R}{\\kEenv e^{i\\kkbar z - i\\knubar \\kt} + c.c.}",
+      "src": "(4.11)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\nabla^2\\kEfield} = \\mk{R}{\\left(\\nabla^2\\kEenv + 2i\\kkbar\\frac{\\partial}{\\partial z}\\kEenv - \\kkbar^2\\kEenv\\right)e^{i\\kkbar z - i\\knubar \\kt} + c.c.}",
+       "uses": [],
+       "cap": "每个作用在$e^{i\\bar{k}z}$上的$\\partial/\\partial z$都会带下一个$i\\bar{k}$，所以乘积的拉普拉斯算符给出交叉项$2i\\bar{k}\\,\\partial\\mathcal{E}/\\partial z$和$-\\bar{k}^2\\mathcal{E}$。"
+      }
+     ],
+     "num": "(4.14)"
+    },
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{E}{\\kEfield} = \\mk{R}{\\kEenv e^{i\\kkbar z - i\\knubar \\kt} + c.c.}",
+      "src": "(4.11)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\frac{\\partial^2}{\\partial \\kt^2}\\kEfield} = \\mk{R}{\\left(\\frac{\\partial^2}{\\partial \\kt^2}\\kEenv - 2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kEenv - \\knubar^2\\kEenv\\right)e^{i\\kkbar z - i\\knubar \\kt} + c.c.}",
+       "uses": [],
+       "cap": "每个作用在$e^{-i\\bar{\\nu}t}$上的$\\partial/\\partial t$都会带下一个$-i\\bar{\\nu}$。"
+      }
+     ],
+     "num": "(4.15)"
+    },
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{E}{\\kPpol} = \\mk{R}{\\kPenv e^{i\\kkbar z - i\\knubar \\kt} + c.c.}",
+      "src": "(4.12)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\frac{\\partial^2}{\\partial \\kt^2}\\kPpol} = \\mk{R}{\\left(\\frac{\\partial^2}{\\partial \\kt^2}\\kPenv - 2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kPenv - \\knubar^2\\kPenv\\right)e^{i\\kkbar z - i\\knubar \\kt} + c.c.}",
+       "uses": [],
+       "cap": "和场的情形一样，每个作用在$e^{-i\\bar{\\nu}t}$上的$\\partial/\\partial t$都会带下一个$-i\\bar{\\nu}$。"
+      }
+     ],
+     "num": "(4.16)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\nabla^2\\kEfield} - \\mk{T}{\\frac{1}{c^2}\\frac{\\partial^2\\kEfield}{\\partial \\kt^2}} = \\mk{P}{\\frac{1}{\\epsilon_0 c^2}\\frac{\\partial^2\\kPpol}{\\partial \\kt^2}}",
+      "src": "(4.10)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\left(\\nabla^2\\kEenv + 2i\\kkbar\\frac{\\partial}{\\partial z}\\kEenv - \\kkbar^2\\kEenv\\right)e^{i\\kkbar z - i\\knubar \\kt} + c.c.} - \\mk{T}{\\frac{1}{c^2}\\left(\\frac{\\partial^2}{\\partial \\kt^2}\\kEenv - 2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kEenv - \\knubar^2\\kEenv\\right)e^{i\\kkbar z - i\\knubar \\kt} + c.c.} = \\mk{P}{\\frac{1}{\\epsilon_0 c^2}\\left(\\frac{\\partial^2}{\\partial \\kt^2}\\kPenv - 2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kPenv - \\knubar^2\\kPenv\\right)e^{i\\kkbar z - i\\knubar \\kt} + c.c.}",
+       "uses": [
+        0,
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\nabla^2\\kEenv} + \\mk{z}{2i\\kkbar\\frac{\\partial}{\\partial z}\\kEenv} - \\mk{k}{\\kkbar^2\\kEenv} - \\frac{1}{c^2}\\Big(\\mk{t2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kEenv} - \\mk{t1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kEenv} - \\mk{n}{\\knubar^2\\kEenv}\\Big) = \\frac{1}{\\epsilon_0 c^2}\\Big(\\mk{P2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kPenv} - \\mk{P1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kPenv} - \\mk{P0}{\\knubar^2\\kPenv}\\Big)",
+       "uses": [],
+       "cap": "含$e^{i\\bar{k}z - i\\bar{\\nu}t}$的项与它们的复共轭振荡方向相反，所以每一组各自平衡，公因子约去。",
+       "map": {
+        "L": [
+         "L",
+         "z",
+         "k"
+        ],
+        "T": [
+         "t2",
+         "t1",
+         "n"
+        ],
+        "P": [
+         "P2",
+         "P1",
+         "P0"
+        ]
+       }
+      }
+     ],
+     "num": "(4.17)–(4.18)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "tex": "\\knubar = c\\kkbar",
+       "src": "4.1"
+      },
+      {
+       "text": "$\\nabla_\\perp^2 = \\frac{\\partial^2}{\\partial x^2} + \\frac{\\partial^2}{\\partial y^2}$，所以$\\nabla^2 = \\nabla_\\perp^2 + \\frac{\\partial^2}{\\partial z^2}$。",
+       "src": "4.1"
+      },
+      {
+       "tex": "|\\knubar\\kPenv| \\gg |\\frac{\\partial}{\\partial \\kt}\\kPenv|",
+       "src": "(4.19)"
+      },
+      {
+       "tex": "|\\knubar\\kEenv| \\gg |\\frac{\\partial}{\\partial \\kt}\\kEenv|",
+       "src": "(4.20)"
+      },
+      {
+       "tex": "|\\kkbar\\kEenv| \\gg |\\frac{\\partial}{\\partial z}\\kEenv|",
+       "src": "(4.21)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\nabla^2\\kEenv} + \\mk{z}{2i\\kkbar\\frac{\\partial}{\\partial z}\\kEenv} - \\mk{k}{\\kkbar^2\\kEenv} - \\frac{1}{c^2}\\Big(\\mk{t2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kEenv} - \\mk{t1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kEenv} - \\mk{n}{\\knubar^2\\kEenv}\\Big) = \\frac{1}{\\epsilon_0 c^2}\\Big(\\mk{P2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kPenv} - \\mk{P1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kPenv} - \\mk{P0}{\\knubar^2\\kPenv}\\Big)",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\nabla^2\\kEenv} + \\mk{z}{2i\\kkbar\\frac{\\partial}{\\partial z}\\kEenv} - \\frac{1}{c^2}\\Big(\\mk{t2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kEenv} - \\mk{t1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kEenv}\\Big) = \\frac{1}{\\epsilon_0 c^2}\\Big(\\mk{P2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kPenv} - \\mk{P1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kPenv} - \\mk{P0}{\\knubar^2\\kPenv}\\Big)",
+       "uses": [
+        1
+       ],
+       "cap": "取$\\bar{\\nu} = c\\bar{k}$，项$-\\bar{k}^2\\mathcal{E}$和$\\bar{\\nu}^2\\mathcal{E}/c^2$相消。"
+      },
+      {
+       "tex": "\\mk{L}{\\nabla_\\perp^2\\kEenv} + \\mk{zz}{\\frac{\\partial^2}{\\partial z^2}\\kEenv} + \\mk{z}{2i\\kkbar\\frac{\\partial}{\\partial z}\\kEenv} - \\frac{1}{c^2}\\Big(\\mk{t2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kEenv} - \\mk{t1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kEenv}\\Big) = \\frac{1}{\\epsilon_0 c^2}\\Big(\\mk{P2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kPenv} - \\mk{P1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kPenv} - \\mk{P0}{\\knubar^2\\kPenv}\\Big)",
+       "uses": [
+        2
+       ],
+       "map": {
+        "L": [
+         "L",
+         "zz"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\nabla_\\perp^2\\kEenv} + \\mk{z}{2i\\kkbar\\frac{\\partial}{\\partial z}\\kEenv} - \\frac{1}{c^2}\\Big(\\mk{t2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kEenv} - \\mk{t1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kEenv}\\Big) = \\frac{1}{\\epsilon_0 c^2}\\Big(\\mk{P2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kPenv} - \\mk{P1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kPenv} - \\mk{P0}{\\knubar^2\\kPenv}\\Big)",
+       "uses": [
+        5
+       ],
+       "cap": "$\\mathcal{E}$上的每个$\\partial/\\partial z$带来一个相对$\\bar{k}$很小的因子，所以$\\partial^2\\mathcal{E}/\\partial z^2$与$2i\\bar{k}\\,\\partial\\mathcal{E}/\\partial z$相比可以忽略。"
+      },
+      {
+       "tex": "\\mk{L}{\\nabla_\\perp^2\\kEenv} + \\mk{z}{2i\\kkbar\\frac{\\partial}{\\partial z}\\kEenv} + \\mk{t1}{\\frac{1}{c^2}2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kEenv} = \\frac{1}{\\epsilon_0 c^2}\\Big(\\mk{P2}{\\frac{\\partial^2}{\\partial \\kt^2}\\kPenv} - \\mk{P1}{2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kPenv} - \\mk{P0}{\\knubar^2\\kPenv}\\Big)",
+       "uses": [
+        4
+       ],
+       "cap": "同样，$\\partial^2\\mathcal{E}/\\partial t^2$与$2i\\bar{\\nu}\\,\\partial\\mathcal{E}/\\partial t$相比可以忽略。"
+      },
+      {
+       "tex": "\\mk{L}{\\nabla_\\perp^2\\kEenv} + \\mk{z}{2i\\kkbar\\frac{\\partial}{\\partial z}\\kEenv} + \\mk{t1}{\\frac{1}{c^2}2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kEenv} = \\mk{P0}{-\\frac{1}{\\epsilon_0 c^2}\\knubar^2\\kPenv}",
+       "uses": [
+        3
+       ],
+       "cap": "$\\mathcal{P}$的两个时间导数与$\\bar{\\nu}^2\\mathcal{P}$相比都很小。"
+      }
+     ],
+     "num": "(4.23)",
+     "note": "书中把编号 (4.22) 印在 (4.21) 下方的一个空行上；并没有缺少任何方程。"
+    },
+    {
+     "assumes": [
+      {
+       "step": 4
+      },
+      {
+       "tex": "\\knubar = c\\kkbar",
+       "src": "4.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\nabla_\\perp^2\\kEenv} + \\mk{z}{2i\\kkbar\\frac{\\partial}{\\partial z}\\kEenv} + \\mk{t1}{\\frac{1}{c^2}2i\\knubar\\frac{\\partial}{\\partial \\kt}\\kEenv} = \\mk{P0}{-\\frac{1}{\\epsilon_0 c^2}\\knubar^2\\kPenv}",
+      "uses": []
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\frac{1}{2i\\kkbar}\\nabla_\\perp^2\\kEenv} + \\mk{z}{\\frac{\\partial}{\\partial z}\\kEenv} + \\mk{t1}{\\frac{\\knubar}{c^2\\kkbar}\\frac{\\partial}{\\partial \\kt}\\kEenv} = \\mk{P0}{-\\frac{\\knubar^2}{2i\\kkbar\\epsilon_0 c^2}\\kPenv}",
+       "uses": [],
+       "cap": "除以$2i\\bar{k}$。"
+      },
+      {
+       "tex": "\\mk{L}{\\frac{1}{2i\\kkbar}\\nabla_\\perp^2\\kEenv} + \\mk{z}{\\frac{\\partial}{\\partial z}\\kEenv} + \\mk{t1}{\\frac{1}{c}\\frac{\\partial}{\\partial \\kt}\\kEenv} = \\mk{P0}{\\frac{i\\kkbar}{2\\epsilon_0}\\kPenv}",
+       "uses": [
+        1
+       ],
+       "cap": "取$\\bar{\\nu} = c\\bar{k}$，并且$-1/i = i$。"
+      }
+     ],
+     "num": "(4.13), (4.24)"
+    }
+   ]
+  }
+ ]
+}

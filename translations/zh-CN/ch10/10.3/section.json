@@ -1,0 +1,171 @@
+{
+  "id": "10.3",
+  "chapter": "10",
+  "title": "量子态工程",
+  "short": "量子态工程",
+  "lead": "<span data-concept=\"atomic-transition-frequency\">裸共振</span>和<span data-concept=\"sideband-couplings\">红边带</span>上的激光脉冲如何能把陷俘离子从其基态带到其运动的任意选定态，从单次<span data-concept=\"internal-motional-swap\">内态到运动上的交换</span>，到逐个梯级地构建<span data-concept=\"motional-state-engineering\">福克态的任意叠加</span>的步骤。",
+  "objectives": [],
+  "summary_html": "",
+  "notes": "",
+  "ai": {
+    "text": [
+      {
+        "model": "claude-opus-5-5",
+        "effort": "high"
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "effort": "medium"
+      }
+    ],
+    "figures": [
+      {
+        "model": "claude-opus-5-5",
+        "effort": "high"
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "effort": "medium"
+      }
+    ]
+  },
+  "built": "2026-10-26",
+  "exercises_lead": "",
+  "exercise_notes": "",
+  "figures": [
+    {
+      "id": "sim-state-prep",
+      "kind": "sim",
+      "draws": [
+        "coupling",
+        "phase",
+        "population",
+        "time"
+      ],
+      "ai": [
+        {
+          "model": "claude-opus-5-5",
+          "effort": "high",
+          "part": "built"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "effort": "medium",
+          "part": "翻译"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "span": "arbitrary",
+      "concept": "motional-state-engineering",
+      "verb": "introduces"
+    },
+    {
+      "span": "unitary-series",
+      "concept": "pulse-sequence-unitary",
+      "verb": "introduces"
+    },
+    {
+      "span": "swap",
+      "concept": "internal-motional-swap",
+      "verb": "introduces"
+    },
+    {
+      "span": "procedure",
+      "concept": "motional-state-preparation",
+      "verb": "introduces"
+    },
+    {
+      "span": "opening",
+      "concept": "ion-hilbert-space",
+      "verb": "uses"
+    },
+    {
+      "span": "opening",
+      "concept": "probability-amplitude",
+      "verb": "uses"
+    },
+    {
+      "span": "opening",
+      "concept": "fock-states",
+      "verb": "uses"
+    },
+    {
+      "span": "opening",
+      "concept": "coherent-state",
+      "verb": "uses"
+    },
+    {
+      "span": "opening",
+      "concept": "squeezed-state",
+      "verb": "uses"
+    },
+    {
+      "span": "opening",
+      "concept": "schrodinger-cat-state",
+      "verb": "uses"
+    },
+    {
+      "span": "arbitrary-state",
+      "concept": "sideband-couplings",
+      "verb": "uses"
+    },
+    {
+      "span": "arbitrary-state",
+      "concept": "atomic-transition-frequency",
+      "verb": "uses"
+    },
+    {
+      "span": "arbitrary-state",
+      "concept": "pulse-area",
+      "verb": "uses"
+    },
+    {
+      "span": "arbitrary-state",
+      "concept": "probability-amplitude",
+      "verb": "uses"
+    },
+    {
+      "span": "arbitrary-state",
+      "concept": "motional-state-engineering",
+      "verb": "uses"
+    },
+    {
+      "span": "arbitrary-state",
+      "concept": "pulse-sequence-unitary",
+      "verb": "uses"
+    }
+  ],
+  "exercises": [],
+  "exercise_concepts": [],
+  "referents": [
+    {
+      "id": "lvl-g",
+      "label": "基态|g⟩",
+      "figures": [
+        "sim-state-prep"
+      ]
+    },
+    {
+      "id": "lvl-e",
+      "label": "激发态|e⟩",
+      "figures": [
+        "sim-state-prep"
+      ]
+    }
+  ],
+  "footnotes": [
+    {
+      "id": "c-step-1",
+      "kind": "correction",
+      "html": "仅在第一轮成立。红边带脉冲还会以各自的$\\eta\\kOmega\\sqrt{n}$转动每一个较低的对$|g\\rangle|n\\rangle \\leftrightarrow |e\\rangle|n-1\\rangle$，而步骤 (2) 的裸共振脉冲会在每一个梯级上把$|g\\rangle|n\\rangle$与$|e\\rangle|n\\rangle$混合，因此在后面各轮中$|e\\rangle|N-1\\rangle$已经带有概率幅，一个$\\pi$脉冲会把它交换回$|g\\rangle|N\\rangle$。清空$|g\\rangle|N\\rangle$的脉冲，其面积和相位要使这一对的两个概率幅完全转到$|e\\rangle|N-1\\rangle$上，由该轮的整个态算出（C. K. 劳和J. H. 埃伯利，Phys. Rev. Lett. 76, 1055 (1996)）；它从不比$\\pi$脉冲更长。"
+    },
+    {
+      "id": "c-step-2",
+      "kind": "correction",
+      "html": "仅有长度还不够：$|g\\rangle|N-1\\rangle$已经带有概率幅，只有当激光的相位$\\kphi$也选定时，裸共振脉冲才会把$|e\\rangle|N-1\\rangle$清空到它之中，使两个概率幅在$|g\\rangle|N-1\\rangle$上相加。"
+    }
+  ]
+}
